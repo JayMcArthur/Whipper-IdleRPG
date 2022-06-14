@@ -183,7 +183,7 @@ function optimize() {
         for (var tmp_possible_i = 0; tmp_possible_i < tmp_possibles.length; tmp_possible_i++) {
             var tmp_possible = tmp_possibles[tmp_possible_i]
             if (contains(possibles, tmp_possible) || contains(done_possibles,tmp_possible)) {
-                continue
+
             }
             else {
                 possibles.push(tmp_possible)
