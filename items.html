@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Whipper - Idle RPG</title>
     <meta charset="UTF-8">
-    <title>WIP Items</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="assets/favicon/icon.png">
+    <link rel="icon" type="image/png" sizes="1024x1024" href="assets/favicon/icon.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/icon.png" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://kit.fontawesome.com/3fe7bed0c0.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#content1').load("sheets/Weapons.html");
+        })
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('#content2').load("sheets/Armor.html");
+        })
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('#content3').load("sheets/Rings.html");
+        })
+    </script>
 </head>
+
 <body>
 <div class="w3-top">
     <div class="w3-bar color-medium w3-card">
         <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
            href="javascript:void(0)" onclick="toggleMenu()" title="Toggle Navigation Menu"><i
                 class="fa fa-bars"></i></a>
-        <img class="w3-bar-item" height="46" alt='' src='assets/images/logo.png'/>
+        <img class="w3-bar-item" height="48" alt='' src='assets/images/logo.png'/>
         <a href="index.html#" class="w3-bar-item w3-button w3-padding-large text-bold">Whipper</a>
-        <a href="index.html#screenshots" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Screenshots</a>
-        <a href="index.html#download" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Download</a>
         <a href="whatsnew.html#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">What's New</a>
-        <a href="privacypolicy.html#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Privacy Policy</a>
         <div class="w3-dropdown-hover" style="outline: none;">
             <button class="w3-button w3-padding-large w3-hide-small" style="outline: none;">Wiki</button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4 color-medium">
@@ -33,16 +58,15 @@
                 <a href="itemcompare.html" class="w3-bar-item w3-button">Item Comparison</a>
             </div>
         </div>
+        <a href="privacypolicy.html#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Privacy Policy</a>
         <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contact</a>
     </div>
 </div>
 
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 <div id="navDemo" class="w3-bar-block color-light w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-    <a href="index.html#screenshots" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Screenshots</a>
-    <a href="index.html#download" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Download</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Whipper</a>
     <a href="whatsnew.html#" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">What's New</a>
-    <a href="privacypolicy.html#" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Privacy Policy</a>
     <a href="items.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Items</a>
     <a href="enchantments.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Enchantments</a>
     <a href="monsters.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Monsters</a>
@@ -50,9 +74,19 @@
     <a href="guide.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Guide</a>
     <a href="buildtest.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Build Tester</a>
     <a href="itemcompare.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Item Comparison</a>
+    <a href="privacypolicy.html#" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Privacy Policy</a>
     <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Contact</a>
 </div>
 
-<p>WIP Items</p>
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+    <p class="w3-justify text-color">
+        TODO
+    </p>
+    <div id="content1"></div>
+    <div id="content2"></div>
+    <div id="content3"></div>
+</div>
+
 </body>
 </html>
