@@ -1,0 +1,67 @@
+{
+  "materials": [
+    {
+      "id": 1,
+      "nameId": "カタクナール",
+      "icon": "mate01",
+      "efficacyId": "強化値を+1できる緑色の液体",
+      "use": 1
+    },
+    {
+      "id": 2,
+      "nameId": "カタクナールX",
+      "icon": "mate02",
+      "efficacyId": "強化値を+3できる橙色の液体",
+      "use": 1
+    },
+    {
+      "id": 3,
+      "nameId": "カタクナールZ",
+      "icon": "mate03",
+      "efficacyId": "強化値を+5できる紫色の液体",
+      "use": 1
+    },
+    {
+      "id": 4,
+      "nameId": "銀の組成液",
+      "icon": "mate04",
+      "efficacyId": "装備品同士を結合できる銀色の液体",
+      "use": 2
+    },
+    {
+      "id": 5,
+      "nameId": "金の組成液",
+      "icon": "mate05",
+      "efficacyId": "装備品同士を無傷で結合できる金色の液体",
+      "use": 2
+    },
+    {
+      "id": 10,
+      "nameId": "白の鍵",
+      "icon": "mate10",
+      "efficacyId": "異世界への扉を開く鍵",
+      "use": 3
+    },
+    {
+      "id": 20,
+      "nameId": "アイテム図鑑",
+      "icon": "log_book",
+      "efficacyId": "アイテムの解析結果を記録できる図鑑",
+      "use": 4
+    },
+    {
+      "id": 21,
+      "nameId": "ボイドレポート",
+      "icon": "mate21",
+      "efficacyId": "解析値を+1できる科学者の遺文",
+      "use": 5
+    },
+    {
+      "id": 22,
+      "nameId": "ロゼッタストーン",
+      "icon": "mate22",
+      "efficacyId": "解析値を+10できる古代文明の遺物",
+      "use": 5
+    }
+  ]
+}
