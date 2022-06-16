@@ -17,25 +17,9 @@
     <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <script src="https://kit.fontawesome.com/3fe7bed0c0.js" crossorigin="anonymous"></script>
-    <script src="js/jquery.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('#content1').load("sheets/Weapons.html");
-        })
-    </script>
-    <script>
-        $(document).ready(function(){
-            $('#content2').load("sheets/Armor.html");
-        })
-    </script>
-    <script>
-        $(document).ready(function(){
-            $('#content3').load("sheets/Rings.html");
-        })
-    </script>
 </head>
 
-<body>
+<body onload="getTable()">
 <div class="w3-top">
     <div class="w3-bar color-medium w3-card">
         <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
@@ -83,13 +67,89 @@
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
-    <p class="w3-justify text-color">
-        TODO
-    </p>
-    <div id="content1"></div>
-    <div id="content2"></div>
-    <div id="content3"></div>
+    <div class="w3-container w3-content w3-center w3-padding-16" style="max-width:800px">
+        <select class="text-color color-medium" id="itemtype" onchange="change_item_type(this.value)">
+            <option value="">Choose an option</option>
+            <option value="1">Weapons</option>
+            <option value="2">Armor</option>
+            <option value="3">Rings</option>
+        </select>
+    </div>
+    <div id="Table" class="w3-container w3-content w3-center"/>
 </div>
 
 </body>
+<script>
+    let equips;
+
+    function getTable() {
+        let request = new XMLHttpRequest();
+        request.open("GET","json/equips.json",false);
+        request.send(null);
+        equips = JSON.parse(request.responseText)["equips"];
+    }
+    function getItemByID(id){
+        return equips.filter(
+            function(equip){return equip.id === id}
+        )[0]
+    }
+    function change_item_type(sel) {
+        let col = [
+            "ID", "Icon", "Name", "Evolution", "ATK / DEF", "Upgrade limit", "HP", "HP_↑", "STR", "STR_↑", "VIT", "VIT_↑"
+        ]
+
+        let table = document.createElement("table");
+        table.className = "styled-table";
+
+        let tr = table.insertRow(-1);
+        for (let i = 0; i < col.length; i++) {
+            let th = document.createElement("th");
+            th.innerHTML = col[i];
+            tr.appendChild(th);
+        }
+        tr.id = "StickyHeader"
+
+        for (let i = 0; i < equips.length; i++) {
+            if (equips[i]["itemType"] !== parseInt(sel)) {
+                continue;
+            }
+
+            let tr = table.insertRow(-1);
+            let tabCell_1 = tr.insertCell(-1);
+            tabCell_1.innerHTML = equips[i]["id"];
+            let tabCell_2 = tr.insertCell(-1);
+            let img = document.createElement('img');
+            img.src = "assets/icons/" + equips[i]["icon"] + ".png";
+            tabCell_2.appendChild(img)
+            let tabCell_3 = tr.insertCell(-1);
+            tabCell_3.innerHTML = equips[i]["nameId"];
+            let tabCell_4 = tr.insertCell(-1);
+            if (equips[i]["next"] === 0){
+                tabCell_4.innerHTML = "None";
+            } else {
+                tabCell_4.innerHTML = getItemByID(equips[i]["next"])["nameId"];
+            }
+            let tabCell_5 = tr.insertCell(-1);
+            tabCell_5.innerHTML = equips[i]["param"];
+            let tabCell_6 = tr.insertCell(-1);
+            tabCell_6.innerHTML = equips[i]["maxLv"];
+            let tabCell_7 = tr.insertCell(-1);
+            tabCell_7.innerHTML = equips[i]["hp"];
+            let tabCell_8 = tr.insertCell(-1);
+            tabCell_8.innerHTML = equips[i]["lvHp"];
+            let tabCell_9 = tr.insertCell(-1);
+            tabCell_9.innerHTML = equips[i]["atk"];
+            let tabCell_10 = tr.insertCell(-1);
+            tabCell_10.innerHTML = equips[i]["lvAtk"];
+            let tabCell_11 = tr.insertCell(-1);
+            tabCell_11.innerHTML = equips[i]["def"];
+            let tabCell_12 = tr.insertCell(-1);
+            tabCell_12.innerHTML = equips[i]["lvDef"];
+        }
+
+        let divContainer = document.getElementById("Table")
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table)
+    }
+</script>
 </html>
