@@ -2,65 +2,65 @@
   "materials": [
     {
       "id": 1,
-      "nameId": "カタクナール",
+      "nameId": "Hardener",
       "icon": "mate01",
-      "efficacyId": "強化値を+1できる緑色の液体",
+      "efficacyId": "A green liquid with +1 enhancement value",
       "use": 1
     },
     {
       "id": 2,
-      "nameId": "カタクナールX",
+      "nameId": "HardenerX",
       "icon": "mate02",
-      "efficacyId": "強化値を+3できる橙色の液体",
+      "efficacyId": "An orange liquid with +3 enhancement value",
       "use": 1
     },
     {
       "id": 3,
-      "nameId": "カタクナールZ",
+      "nameId": "HardenerZ",
       "icon": "mate03",
-      "efficacyId": "強化値を+5できる紫色の液体",
+      "efficacyId": "A purple liquid with +5 enhancement value",
       "use": 1
     },
     {
       "id": 4,
-      "nameId": "銀の組成液",
+      "nameId": "Silver Essence",
       "icon": "mate04",
-      "efficacyId": "装備品同士を結合できる銀色の液体",
+      "efficacyId": "A silver liquid that binds equipment together",
       "use": 2
     },
     {
       "id": 5,
-      "nameId": "金の組成液",
+      "nameId": "Gold Essence",
       "icon": "mate05",
-      "efficacyId": "装備品同士を無傷で結合できる金色の液体",
+      "efficacyId": "A gold liquid that binds equipment together without damaging them",
       "use": 2
     },
     {
       "id": 10,
-      "nameId": "白の鍵",
+      "nameId": "White Key",
       "icon": "mate10",
-      "efficacyId": "異世界への扉を開く鍵",
+      "efficacyId": "A key that opens the door to another world",
       "use": 3
     },
     {
       "id": 20,
-      "nameId": "アイテム図鑑",
+      "nameId": "Item Book",
       "icon": "log_book",
-      "efficacyId": "アイテムの解析結果を記録できる図鑑",
+      "efficacyId": "A book that can record the analysis results of items",
       "use": 4
     },
     {
       "id": 21,
-      "nameId": "ボイドレポート",
+      "nameId": "Void Report",
       "icon": "mate21",
-      "efficacyId": "解析値を+1できる科学者の遺文",
+      "efficacyId": "Scientist's will with +1 analysis value",
       "use": 5
     },
     {
       "id": 22,
-      "nameId": "ロゼッタストーン",
+      "nameId": "Rosetta Stone",
       "icon": "mate22",
-      "efficacyId": "解析値を+10できる古代文明の遺物",
+      "efficacyId": "Relics of ancient civilization with +5 analysis value",
       "use": 5
     }
   ]

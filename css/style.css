@@ -15,21 +15,30 @@ html, body {height: 100%}
 .privacy-par {text-align: left;}
 .privacy-bullet {text-align: left;}
 .bluestacks-par, .stars-par, .students-par {text-align: left;}
-.bluestacks-textarea, .stars-input {display: block; margin: auto; border: 1px solid #444; width: 100%; resize: none; margin-bottom: 2%; padding-left: 5px; outline: none;}
-.bluestacks-buttons {display: block; margin: auto; width: 100%;}
-.bluestacks-button, .stars-button {
-  display: block;
-  width: 100%;
-  margin: auto;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: 1px solid #444;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  background-color:#2f2f2f;
+  color: #ccc;
 }
+.styled-table thead tr {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.styled-table th, .styled-table td {
+  padding: 12px 15px;
+}
+.styled-table tbody tr {
+  border-bottom: thin solid #333;
+}
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #434343;
+}
+
 .stars-button:disabled, .students-button:disabled {
     color: #777;
     background-color: #282828;
