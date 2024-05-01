@@ -67,7 +67,7 @@
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
-    <div class="w3-container w3-content w3-center w3-padding-16" style="max-width:800px">
+    <div class="w3-container w3-content w3-center w3-padding-16" style="max-width:1300px">
         <select class="text-color color-medium" id="itemtype" onchange="change_item_type(this.value)">
             <option value="">Choose an option</option>
             <option value="1">Weapons</option>
@@ -75,27 +75,38 @@
             <option value="3">Rings</option>
         </select>
     </div>
-    <div id="Table" class="w3-container w3-content w3-center"/>
+    <div id="Table" class="w3-container w3-center"/>
 </div>
 
 </body>
 <script>
     let equips;
+    let customs;
 
     function getTable() {
         let request = new XMLHttpRequest();
-        request.open("GET","json/equips.json",false);
+        request.open("GET","json/equips_EN.json",false);
         request.send(null);
         equips = JSON.parse(request.responseText)["equips"];
+
+        request = new XMLHttpRequest();
+        request.open("GET","json/customs_EN.json",false);
+        request.send(null);
+        customs = JSON.parse(request.responseText)["customs"];
     }
     function getItemByID(id){
         return equips.filter(
             function(equip){return equip.id === id}
         )[0]
     }
+    function getCustomById(id){
+        return customs.filter(
+            function(custom){return custom.id === id}
+        )[0]
+    }
     function change_item_type(sel) {
         let col = [
-            "ID", "Icon", "Name", "Evolution", "ATK / DEF", "Upgrade limit", "HP", "HP_↑", "STR", "STR_↑", "VIT", "VIT_↑"
+            "ID", "Icon", "Name", "Evolution", "ATK / DEF", "Upgrade limit", "HP", "HP_↑", "STR", "STR_↑", "VIT", "VIT_↑", 'equipKind', 'attackKind', 'SET', 'specialized', 'ability'
         ]
 
         let table = document.createElement("table");
@@ -122,12 +133,12 @@
             img.src = "assets/icons/" + equips[i]["icon"] + ".png";
             tabCell_2.appendChild(img)
             let tabCell_3 = tr.insertCell(-1);
-            tabCell_3.innerHTML = equips[i]["nameId"];
+            tabCell_3.innerHTML = equips[i]["nameId_EN"];
             let tabCell_4 = tr.insertCell(-1);
             if (equips[i]["next"] === 0){
                 tabCell_4.innerHTML = "None";
             } else {
-                tabCell_4.innerHTML = getItemByID(equips[i]["next"])["nameId"];
+                tabCell_4.innerHTML = getItemByID(equips[i]["next"])["nameId_EN"];
             }
             let tabCell_5 = tr.insertCell(-1);
             tabCell_5.innerHTML = equips[i]["param"];
@@ -145,6 +156,24 @@
             tabCell_11.innerHTML = equips[i]["def"];
             let tabCell_12 = tr.insertCell(-1);
             tabCell_12.innerHTML = equips[i]["lvDef"];
+            let tabCell_13 = tr.insertCell(-1);
+            tabCell_13.innerHTML = equips[i]["equipKind"];
+            let tabCell_14 = tr.insertCell(-1);
+            tabCell_14.innerHTML = equips[i]["attackKind"];
+            let tabCell_15 = tr.insertCell(-1);
+            if (equips[i]["set_EN"] !== undefined) {
+                tabCell_15.innerHTML = equips[i]["set_EN"];
+            } else {
+                tabCell_15.innerHTML = "N/A";
+            }
+            let tabCell_16 = tr.insertCell(-1);
+            tabCell_16.innerHTML = equips[i]["specialized"];
+            let tabCell_17 = tr.insertCell(-1);
+            if (equips[i]["ability"] > 0) {
+                tabCell_17.innerHTML = getCustomById(equips[i]["ability"])["nameId_EN"];
+            } else {
+                tabCell_17.innerHTML = "None";
+            }
         }
 
         let divContainer = document.getElementById("Table")

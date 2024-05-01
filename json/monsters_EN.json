@@ -11,7 +11,8 @@
       "item1": 101,
       "prob1": 10,
       "item2": 201,
-      "prob2": 6
+      "prob2": 6,
+      "nameId_EN": "Slime"
     },
     {
       "id": 2,
@@ -24,7 +25,8 @@
       "item1": 102,
       "prob1": 10,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Goblin"
     },
     {
       "id": 3,
@@ -37,7 +39,8 @@
       "item1": 202,
       "prob1": 10,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Hornet"
     },
     {
       "id": 4,
@@ -50,7 +53,8 @@
       "item1": 203,
       "prob1": 10,
       "item2": 303,
-      "prob2": 6
+      "prob2": 6,
+      "nameId_EN": "Killer Bee"
     },
     {
       "id": 5,
@@ -63,7 +67,8 @@
       "item1": 302,
       "prob1": 10,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Scolopendrid"
     },
     {
       "id": 6,
@@ -76,7 +81,8 @@
       "item1": 103,
       "prob1": 8,
       "item2": 304,
-      "prob2": 6
+      "prob2": 6,
+      "nameId_EN": "Thief"
     },
     {
       "id": 7,
@@ -89,7 +95,8 @@
       "item1": 301,
       "prob1": 10,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Big Bat"
     },
     {
       "id": 8,
@@ -102,7 +109,8 @@
       "item1": 104,
       "prob1": 8,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Giant Bat"
     },
     {
       "id": 9,
@@ -115,7 +123,8 @@
       "item1": 204,
       "prob1": 8,
       "item2": 201,
-      "prob2": 6
+      "prob2": 6,
+      "nameId_EN": "Albino slime"
     },
     {
       "id": 10,
@@ -128,7 +137,8 @@
       "item1": 104,
       "prob1": 8,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Red Goblin"
     },
     {
       "id": 11,
@@ -141,7 +151,8 @@
       "item1": 304,
       "prob1": 8,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Baby Dragon"
     },
     {
       "id": 12,
@@ -154,7 +165,8 @@
       "item1": 104,
       "prob1": 8,
       "item2": 105,
-      "prob2": 6
+      "prob2": 6,
+      "nameId_EN": "Clockwork Soldier"
     },
     {
       "id": 13,
@@ -167,7 +179,8 @@
       "item1": 204,
       "prob1": 8,
       "item2": 205,
-      "prob2": 6
+      "prob2": 6,
+      "nameId_EN": "Death Machine"
     },
     {
       "id": 14,
@@ -180,7 +193,8 @@
       "item1": 106,
       "prob1": 8,
       "item2": 108,
-      "prob2": 6
+      "prob2": 6,
+      "nameId_EN": "Death Machine 2"
     },
     {
       "id": 15,
@@ -193,7 +207,8 @@
       "item1": 206,
       "prob1": 8,
       "item2": 208,
-      "prob2": 5
+      "prob2": 5,
+      "nameId_EN": "Death Machine 3"
     },
     {
       "id": 16,
@@ -206,7 +221,8 @@
       "item1": 107,
       "prob1": 8,
       "item2": 210,
-      "prob2": 4
+      "prob2": 4,
+      "nameId_EN": "Chimera"
     },
     {
       "id": 17,
@@ -219,7 +235,8 @@
       "item1": 305,
       "prob1": 3,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Fairy"
     },
     {
       "id": 18,
@@ -232,7 +249,8 @@
       "item1": 109,
       "prob1": 10,
       "item2": 111,
-      "prob2": 6
+      "prob2": 6,
+      "nameId_EN": "Fairy Hunter"
     },
     {
       "id": 19,
@@ -245,7 +263,8 @@
       "item1": 301,
       "prob1": 8,
       "item2": 207,
-      "prob2": 5
+      "prob2": 5,
+      "nameId_EN": "Fire Fairy"
     },
     {
       "id": 20,
@@ -258,7 +277,8 @@
       "item1": 302,
       "prob1": 8,
       "item2": 207,
-      "prob2": 5
+      "prob2": 5,
+      "nameId_EN": "Ice Fairy"
     },
     {
       "id": 21,
@@ -271,7 +291,8 @@
       "item1": 304,
       "prob1": 8,
       "item2": 114,
-      "prob2": 4
+      "prob2": 4,
+      "nameId_EN": "Lightning Fairy"
     },
     {
       "id": 22,
@@ -284,7 +305,8 @@
       "item1": 113,
       "prob1": 5,
       "item2": 305,
-      "prob2": 5
+      "prob2": 5,
+      "nameId_EN": "Arc Fairy"
     },
     {
       "id": 23,
@@ -297,7 +319,8 @@
       "item1": 110,
       "prob1": 8,
       "item2": 306,
-      "prob2": 5
+      "prob2": 5,
+      "nameId_EN": "Clay Golem"
     },
     {
       "id": 24,
@@ -310,7 +333,8 @@
       "item1": 112,
       "prob1": 8,
       "item2": 306,
-      "prob2": 5
+      "prob2": 5,
+      "nameId_EN": "Iron Golem"
     },
     {
       "id": 25,
@@ -323,7 +347,8 @@
       "item1": 115,
       "prob1": 5,
       "item2": 209,
-      "prob2": 5
+      "prob2": 5,
+      "nameId_EN": "Emerald Golem"
     },
     {
       "id": 26,
@@ -336,7 +361,8 @@
       "item1": 117,
       "prob1": 6,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Ghost Knight"
     },
     {
       "id": 27,
@@ -349,7 +375,8 @@
       "item1": 211,
       "prob1": 8,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Ghost Wizard"
     },
     {
       "id": 28,
@@ -362,7 +389,8 @@
       "item1": 213,
       "prob1": 6,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Ghost Paladin"
     },
     {
       "id": 29,
@@ -375,7 +403,8 @@
       "item1": 131,
       "prob1": 8,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "False Medium"
     },
     {
       "id": 30,
@@ -388,7 +417,8 @@
       "item1": 129,
       "prob1": 5,
       "item2": 307,
-      "prob2": 3
+      "prob2": 3,
+      "nameId_EN": "Mist Dragon"
     },
     {
       "id": 31,
@@ -401,7 +431,8 @@
       "item1": 116,
       "prob1": 7,
       "item2": 124,
-      "prob2": 4
+      "prob2": 4,
+      "nameId_EN": "Sura Buddha"
     },
     {
       "id": 32,
@@ -414,7 +445,8 @@
       "item1": 124,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Tower Bandit"
     },
     {
       "id": 33,
@@ -427,7 +459,8 @@
       "item1": 122,
       "prob1": 6,
       "item2": 143,
-      "prob2": 4
+      "prob2": 4,
+      "nameId_EN": "Death Machine 4"
     },
     {
       "id": 34,
@@ -440,7 +473,8 @@
       "item1": 211,
       "prob1": 6,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Security"
     },
     {
       "id": 35,
@@ -453,7 +487,8 @@
       "item1": 135,
       "prob1": 6,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Mecha Shinobi"
     },
     {
       "id": 36,
@@ -466,7 +501,8 @@
       "item1": 218,
       "prob1": 6,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Mecha-Samurai"
     },
     {
       "id": 37,
@@ -479,7 +515,8 @@
       "item1": 140,
       "prob1": 6,
       "item2": 141,
-      "prob2": 4
+      "prob2": 4,
+      "nameId_EN": "Guardians"
     },
     {
       "id": 38,
@@ -492,7 +529,8 @@
       "item1": 307,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Dragon Clone"
     },
     {
       "id": 39,
@@ -505,7 +543,8 @@
       "item1": 215,
       "prob1": 6,
       "item2": 307,
-      "prob2": 4
+      "prob2": 4,
+      "nameId_EN": "Saint Dragon"
     },
     {
       "id": 40,
@@ -518,7 +557,8 @@
       "item1": 144,
       "prob1": 6,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Medusa"
     },
     {
       "id": 41,
@@ -531,7 +571,8 @@
       "item1": 221,
       "prob1": 6,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Huge Slime"
     },
     {
       "id": 42,
@@ -544,7 +585,8 @@
       "item1": 222,
       "prob1": 6,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Perfect Chimera"
     },
     {
       "id": 43,
@@ -557,7 +599,8 @@
       "item1": 144,
       "prob1": 7,
       "item2": 146,
-      "prob2": 5
+      "prob2": 5,
+      "nameId_EN": "Hydra"
     },
     {
       "id": 44,
@@ -570,7 +613,8 @@
       "item1": 0,
       "prob1": 0,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Dragon Zombie"
     },
     {
       "id": 45,
@@ -583,7 +627,8 @@
       "item1": 151,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Ruby Golem"
     },
     {
       "id": 46,
@@ -596,7 +641,8 @@
       "item1": 152,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Diamond Golem"
     },
     {
       "id": 47,
@@ -609,7 +655,8 @@
       "item1": 306,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Summoner"
     },
     {
       "id": 48,
@@ -622,7 +669,8 @@
       "item1": 142,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Summon Warrior"
     },
     {
       "id": 49,
@@ -635,7 +683,8 @@
       "item1": 227,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Summon Priest"
     },
     {
       "id": 50,
@@ -648,7 +697,8 @@
       "item1": 306,
       "prob1": 5,
       "item2": 308,
-      "prob2": 3
+      "prob2": 3,
+      "nameId_EN": "Grand Summoner"
     },
     {
       "id": 51,
@@ -661,7 +711,8 @@
       "item1": 228,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Metal Lizard"
     },
     {
       "id": 52,
@@ -674,7 +725,8 @@
       "item1": 309,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Crispy"
     },
     {
       "id": 53,
@@ -687,7 +739,8 @@
       "item1": 229,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Cream"
     },
     {
       "id": 54,
@@ -700,7 +753,8 @@
       "item1": 310,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Poison Goblin"
     },
     {
       "id": 55,
@@ -713,7 +767,8 @@
       "item1": 155,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Dancing Sword"
     },
     {
       "id": 56,
@@ -726,7 +781,8 @@
       "item1": 156,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Black Dot"
     },
     {
       "id": 57,
@@ -739,7 +795,8 @@
       "item1": 156,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Red Dot"
     },
     {
       "id": 58,
@@ -752,7 +809,8 @@
       "item1": 157,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Blue Dot"
     },
     {
       "id": 59,
@@ -765,7 +823,8 @@
       "item1": 157,
       "prob1": 5,
       "item2": 231,
-      "prob2": 4
+      "prob2": 4,
+      "nameId_EN": "White Point"
     },
     {
       "id": 60,
@@ -778,7 +837,8 @@
       "item1": 221,
       "prob1": 5,
       "item2": 310,
-      "prob2": 4
+      "prob2": 4,
+      "nameId_EN": "Poison Slime"
     },
     {
       "id": 61,
@@ -791,7 +851,8 @@
       "item1": 160,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "White Snake"
     },
     {
       "id": 62,
@@ -804,7 +865,8 @@
       "item1": 161,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Offenser"
     },
     {
       "id": 63,
@@ -817,7 +879,8 @@
       "item1": 162,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Gladiator"
     },
     {
       "id": 64,
@@ -830,7 +893,8 @@
       "item1": 233,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Mist"
     },
     {
       "id": 65,
@@ -843,7 +907,8 @@
       "item1": 163,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Tyrant"
     },
     {
       "id": 66,
@@ -856,7 +921,8 @@
       "item1": 234,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Defenser"
     },
     {
       "id": 67,
@@ -869,7 +935,8 @@
       "item1": 235,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Yowa Tank"
     },
     {
       "id": 68,
@@ -882,7 +949,8 @@
       "item1": 237,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Infantry"
     },
     {
       "id": 69,
@@ -895,7 +963,8 @@
       "item1": 150,
       "prob1": 5,
       "item2": 164,
-      "prob2": 3
+      "prob2": 3,
+      "nameId_EN": "Sniper"
     },
     {
       "id": 70,
@@ -908,7 +977,8 @@
       "item1": 311,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Medic"
     },
     {
       "id": 71,
@@ -921,7 +991,8 @@
       "item1": 237,
       "prob1": 5,
       "item2": 235,
-      "prob2": 4
+      "prob2": 4,
+      "nameId_EN": "Missile Man"
     },
     {
       "id": 72,
@@ -934,7 +1005,8 @@
       "item1": 235,
       "prob1": 5,
       "item2": 236,
-      "prob2": 3
+      "prob2": 3,
+      "nameId_EN": "Tsuyo Tank"
     },
     {
       "id": 73,
@@ -947,7 +1019,8 @@
       "item1": 165,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Cyborg"
     },
     {
       "id": 74,
@@ -960,7 +1033,8 @@
       "item1": 240,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Blackmore"
     },
     {
       "id": 75,
@@ -973,7 +1047,8 @@
       "item1": 167,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Sose"
     },
     {
       "id": 76,
@@ -986,7 +1061,8 @@
       "item1": 312,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Subliminal"
     },
     {
       "id": 77,
@@ -999,7 +1075,8 @@
       "item1": 170,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Gachi Tank"
     },
     {
       "id": 78,
@@ -1012,7 +1089,8 @@
       "item1": 172,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Emperador Dragon"
     },
     {
       "id": 79,
@@ -1025,7 +1103,8 @@
       "item1": 241,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Death Cloud"
     },
     {
       "id": 80,
@@ -1038,7 +1117,8 @@
       "item1": 173,
       "prob1": 5,
       "item2": 174,
-      "prob2": 3
+      "prob2": 3,
+      "nameId_EN": "Black Box"
     },
     {
       "id": 81,
@@ -1051,7 +1131,8 @@
       "item1": 313,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Alice"
     },
     {
       "id": 82,
@@ -1064,7 +1145,8 @@
       "item1": 176,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Knight of Skulls"
     },
     {
       "id": 83,
@@ -1077,7 +1159,8 @@
       "item1": 314,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Force"
     },
     {
       "id": 84,
@@ -1090,7 +1173,8 @@
       "item1": 315,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Oculus"
     },
     {
       "id": 85,
@@ -1103,7 +1187,8 @@
       "item1": 243,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Kashmir"
     },
     {
       "id": 86,
@@ -1116,7 +1201,8 @@
       "item1": 177,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Electric sheep"
     },
     {
       "id": 87,
@@ -1129,7 +1215,8 @@
       "item1": 178,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "God of Thunder"
     },
     {
       "id": 88,
@@ -1142,7 +1229,8 @@
       "item1": 179,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Glyph"
     },
     {
       "id": 89,
@@ -1155,7 +1243,8 @@
       "item1": 180,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Aoshiki-2"
     },
     {
       "id": 90,
@@ -1168,7 +1257,8 @@
       "item1": 242,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Wind God"
     },
     {
       "id": 91,
@@ -1181,7 +1271,8 @@
       "item1": 316,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Enigma"
     },
     {
       "id": 92,
@@ -1194,7 +1285,8 @@
       "item1": 317,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Thesaurus"
     },
     {
       "id": 93,
@@ -1207,7 +1299,8 @@
       "item1": 181,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "God Dragon"
     },
     {
       "id": 94,
@@ -1220,7 +1313,8 @@
       "item1": 245,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Man-Made Golem"
     },
     {
       "id": 95,
@@ -1233,7 +1327,8 @@
       "item1": 182,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Knight of Romanticism"
     },
     {
       "id": 96,
@@ -1246,7 +1341,8 @@
       "item1": 183,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Knight of the Gentile"
     },
     {
       "id": 97,
@@ -1259,7 +1355,8 @@
       "item1": 318,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Period"
     },
     {
       "id": 98,
@@ -1272,7 +1369,8 @@
       "item1": 184,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Zod"
     },
     {
       "id": 99,
@@ -1285,7 +1383,8 @@
       "item1": 246,
       "prob1": 10,
       "item2": 320,
-      "prob2": 6
+      "prob2": 6,
+      "nameId_EN": "Thousand hands"
     },
     {
       "id": 100,
@@ -1298,7 +1397,8 @@
       "item1": 148,
       "prob1": 10,
       "item2": 214,
-      "prob2": 6
+      "prob2": 6,
+      "nameId_EN": "God of Death"
     },
     {
       "id": 101,
@@ -1311,7 +1411,8 @@
       "item1": 247,
       "prob1": 6,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Clawra"
     },
     {
       "id": 102,
@@ -1324,7 +1425,8 @@
       "item1": 137,
       "prob1": 6,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Cheshire"
     },
     {
       "id": 103,
@@ -1337,7 +1439,8 @@
       "item1": 155,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "March Hare"
     },
     {
       "id": 104,
@@ -1350,7 +1453,8 @@
       "item1": 133,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Mad Hatter"
     },
     {
       "id": 105,
@@ -1363,7 +1467,8 @@
       "item1": 128,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Sleeping Rat"
     },
     {
       "id": 106,
@@ -1376,7 +1481,8 @@
       "item1": 248,
       "prob1": 6,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "King"
     },
     {
       "id": 107,
@@ -1389,7 +1495,8 @@
       "item1": 304,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Queen"
     },
     {
       "id": 108,
@@ -1402,7 +1509,8 @@
       "item1": 185,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Jack"
     },
     {
       "id": 109,
@@ -1415,7 +1523,8 @@
       "item1": 186,
       "prob1": 7,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Judgment"
     },
     {
       "id": 110,
@@ -1428,7 +1537,8 @@
       "item1": 249,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Warrior"
     },
     {
       "id": 111,
@@ -1441,7 +1551,8 @@
       "item1": 187,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Wizard"
     },
     {
       "id": 112,
@@ -1454,7 +1565,8 @@
       "item1": 188,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Martial artist"
     },
     {
       "id": 113,
@@ -1467,7 +1579,8 @@
       "item1": 321,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Dancer"
     },
     {
       "id": 114,
@@ -1480,7 +1593,8 @@
       "item1": 0,
       "prob1": 0,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Knight Commander"
     },
     {
       "id": 115,
@@ -1493,7 +1607,8 @@
       "item1": 0,
       "prob1": 0,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Neighboring knight"
     },
     {
       "id": 116,
@@ -1506,7 +1621,8 @@
       "item1": 0,
       "prob1": 0,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Arms dealer"
     },
     {
       "id": 117,
@@ -1519,7 +1635,8 @@
       "item1": 0,
       "prob1": 0,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Villager"
     },
     {
       "id": 118,
@@ -1532,7 +1649,8 @@
       "item1": 0,
       "prob1": 0,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Strong villager"
     },
     {
       "id": 119,
@@ -1545,7 +1663,8 @@
       "item1": 0,
       "prob1": 0,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "The Chosen One"
     },
     {
       "id": 120,
@@ -1558,7 +1677,8 @@
       "item1": 119,
       "prob1": 5,
       "item2": 120,
-      "prob2": 4
+      "prob2": 4,
+      "nameId_EN": "Gatekeeper"
     },
     {
       "id": 121,
@@ -1571,7 +1691,8 @@
       "item1": 163,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Cyclops"
     },
     {
       "id": 122,
@@ -1584,7 +1705,8 @@
       "item1": 322,
       "prob1": 4,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Third Eye"
     },
     {
       "id": 123,
@@ -1597,7 +1719,8 @@
       "item1": 232,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Last Slime"
     },
     {
       "id": 124,
@@ -1610,7 +1733,8 @@
       "item1": 250,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Last Goblin"
     },
     {
       "id": 125,
@@ -1623,7 +1747,8 @@
       "item1": 189,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Spirit"
     },
     {
       "id": 126,
@@ -1636,7 +1761,8 @@
       "item1": 147,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Lilith"
     },
     {
       "id": 127,
@@ -1649,7 +1775,8 @@
       "item1": 251,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Ghost Armor"
     },
     {
       "id": 128,
@@ -1662,7 +1789,8 @@
       "item1": 252,
       "prob1": 5,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Dark Dragon"
     },
     {
       "id": 129,
@@ -1675,7 +1803,8 @@
       "item1": 319,
       "prob1": 7,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Demon King"
     },
     {
       "id": 130,
@@ -1688,7 +1817,8 @@
       "item1": 319,
       "prob1": 7,
       "item2": 0,
-      "prob2": 0
+      "prob2": 0,
+      "nameId_EN": "Puppet King"
     },
     {
       "id": 131,
@@ -1701,7 +1831,8 @@
       "item1": 190,
       "prob1": 7,
       "item2": 323,
-      "prob2": 4
+      "prob2": 4,
+      "nameId_EN": "Emperor Teba"
     }
   ]
 }

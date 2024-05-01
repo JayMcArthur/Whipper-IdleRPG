@@ -7,7 +7,9 @@
       "modLv": 1,
       "dispLv": 1,
       "value": 5,
-      "nextModId": 2
+      "nextModId": 2,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 2,
@@ -16,7 +18,9 @@
       "modLv": 2,
       "dispLv": 2,
       "value": 10,
-      "nextModId": 3
+      "nextModId": 3,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 3,
@@ -25,7 +29,9 @@
       "modLv": 3,
       "dispLv": 3,
       "value": 15,
-      "nextModId": 4
+      "nextModId": 4,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 4,
@@ -34,7 +40,9 @@
       "modLv": 4,
       "dispLv": 4,
       "value": 25,
-      "nextModId": 5
+      "nextModId": 5,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 5,
@@ -43,7 +51,9 @@
       "modLv": 5,
       "dispLv": 5,
       "value": 40,
-      "nextModId": 6
+      "nextModId": 6,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 6,
@@ -52,7 +62,9 @@
       "modLv": 6,
       "dispLv": 6,
       "value": 65,
-      "nextModId": 7
+      "nextModId": 7,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 7,
@@ -61,7 +73,9 @@
       "modLv": 7,
       "dispLv": 7,
       "value": 105,
-      "nextModId": 8
+      "nextModId": 8,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 8,
@@ -70,7 +84,9 @@
       "modLv": 8,
       "dispLv": 8,
       "value": 170,
-      "nextModId": 55
+      "nextModId": 55,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 9,
@@ -79,7 +95,9 @@
       "modLv": 1,
       "dispLv": 1,
       "value": 1,
-      "nextModId": 10
+      "nextModId": 10,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 10,
@@ -88,7 +106,9 @@
       "modLv": 2,
       "dispLv": 2,
       "value": 2,
-      "nextModId": 11
+      "nextModId": 11,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 11,
@@ -97,7 +117,9 @@
       "modLv": 3,
       "dispLv": 3,
       "value": 3,
-      "nextModId": 12
+      "nextModId": 12,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 12,
@@ -106,7 +128,9 @@
       "modLv": 4,
       "dispLv": 4,
       "value": 6,
-      "nextModId": 13
+      "nextModId": 13,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 13,
@@ -115,7 +139,9 @@
       "modLv": 5,
       "dispLv": 5,
       "value": 12,
-      "nextModId": 14
+      "nextModId": 14,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 14,
@@ -124,7 +150,9 @@
       "modLv": 6,
       "dispLv": 6,
       "value": 24,
-      "nextModId": 15
+      "nextModId": 15,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 15,
@@ -133,7 +161,9 @@
       "modLv": 7,
       "dispLv": 7,
       "value": 48,
-      "nextModId": 16
+      "nextModId": 16,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 16,
@@ -142,7 +172,9 @@
       "modLv": 8,
       "dispLv": 8,
       "value": 96,
-      "nextModId": 57
+      "nextModId": 57,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 17,
@@ -151,7 +183,9 @@
       "modLv": 1,
       "dispLv": 1,
       "value": 1,
-      "nextModId": 18
+      "nextModId": 18,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 18,
@@ -160,7 +194,9 @@
       "modLv": 2,
       "dispLv": 2,
       "value": 2,
-      "nextModId": 19
+      "nextModId": 19,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 19,
@@ -169,7 +205,9 @@
       "modLv": 3,
       "dispLv": 3,
       "value": 3,
-      "nextModId": 20
+      "nextModId": 20,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 20,
@@ -178,7 +216,9 @@
       "modLv": 4,
       "dispLv": 4,
       "value": 6,
-      "nextModId": 21
+      "nextModId": 21,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 21,
@@ -187,7 +227,9 @@
       "modLv": 5,
       "dispLv": 5,
       "value": 12,
-      "nextModId": 22
+      "nextModId": 22,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 22,
@@ -196,7 +238,9 @@
       "modLv": 6,
       "dispLv": 6,
       "value": 24,
-      "nextModId": 23
+      "nextModId": 23,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 23,
@@ -205,7 +249,9 @@
       "modLv": 7,
       "dispLv": 7,
       "value": 48,
-      "nextModId": 24
+      "nextModId": 24,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 24,
@@ -214,7 +260,9 @@
       "modLv": 8,
       "dispLv": 8,
       "value": 96,
-      "nextModId": 59
+      "nextModId": 59,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 25,
@@ -223,7 +271,9 @@
       "modLv": 2,
       "dispLv": 1,
       "value": 1,
-      "nextModId": 26
+      "nextModId": 26,
+      "nameId_EN": "Agility",
+      "summaryId_EN": "Increases the SPD base value by {value}."
     },
     {
       "id": 26,
@@ -232,7 +282,9 @@
       "modLv": 4,
       "dispLv": 2,
       "value": 5,
-      "nextModId": 27
+      "nextModId": 27,
+      "nameId_EN": "Agility",
+      "summaryId_EN": "Increases the SPD base value by {value}."
     },
     {
       "id": 27,
@@ -241,7 +293,9 @@
       "modLv": 6,
       "dispLv": 3,
       "value": 10,
-      "nextModId": 61
+      "nextModId": 61,
+      "nameId_EN": "Agility",
+      "summaryId_EN": "Increases the SPD base value by {value}."
     },
     {
       "id": 28,
@@ -250,7 +304,9 @@
       "modLv": 3,
       "dispLv": 1,
       "value": 1,
-      "nextModId": 29
+      "nextModId": 29,
+      "nameId_EN": "Lucky",
+      "summaryId_EN": "Increases the LUK base value by {value}."
     },
     {
       "id": 29,
@@ -259,7 +315,9 @@
       "modLv": 5,
       "dispLv": 2,
       "value": 2,
-      "nextModId": 30
+      "nextModId": 30,
+      "nameId_EN": "Lucky",
+      "summaryId_EN": "Increases the LUK base value by {value}."
     },
     {
       "id": 30,
@@ -268,7 +326,9 @@
       "modLv": 7,
       "dispLv": 3,
       "value": 3,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Lucky",
+      "summaryId_EN": "Increases the LUK base value by {value}."
     },
     {
       "id": 31,
@@ -277,7 +337,9 @@
       "modLv": 3,
       "dispLv": 1,
       "value": 1,
-      "nextModId": 32
+      "nextModId": 32,
+      "nameId_EN": "Strength Training",
+      "summaryId_EN": "Increases the STR growth value by {value}."
     },
     {
       "id": 32,
@@ -286,7 +348,9 @@
       "modLv": 5,
       "dispLv": 2,
       "value": 2,
-      "nextModId": 33
+      "nextModId": 33,
+      "nameId_EN": "Strength Training",
+      "summaryId_EN": "Increases the STR growth value by {value}."
     },
     {
       "id": 33,
@@ -295,7 +359,9 @@
       "modLv": 7,
       "dispLv": 3,
       "value": 3,
-      "nextModId": 34
+      "nextModId": 34,
+      "nameId_EN": "Strength Training",
+      "summaryId_EN": "Increases the STR growth value by {value}."
     },
     {
       "id": 34,
@@ -304,7 +370,9 @@
       "modLv": 9,
       "dispLv": 4,
       "value": 5,
-      "nextModId": 35
+      "nextModId": 35,
+      "nameId_EN": "Strength Training",
+      "summaryId_EN": "Increases the STR growth value by {value}."
     },
     {
       "id": 35,
@@ -313,7 +381,9 @@
       "modLv": 11,
       "dispLv": 5,
       "value": 8,
-      "nextModId": 36
+      "nextModId": 36,
+      "nameId_EN": "Strength Training",
+      "summaryId_EN": "Increases the STR growth value by {value}."
     },
     {
       "id": 36,
@@ -322,7 +392,9 @@
       "modLv": 13,
       "dispLv": 6,
       "value": 13,
-      "nextModId": 37
+      "nextModId": 37,
+      "nameId_EN": "Strength Training",
+      "summaryId_EN": "Increases the STR growth value by {value}."
     },
     {
       "id": 37,
@@ -331,7 +403,9 @@
       "modLv": 15,
       "dispLv": 7,
       "value": 18,
-      "nextModId": 38
+      "nextModId": 38,
+      "nameId_EN": "Strength Training",
+      "summaryId_EN": "Increases the STR growth value by {value}."
     },
     {
       "id": 38,
@@ -340,7 +414,9 @@
       "modLv": 17,
       "dispLv": 8,
       "value": 25,
-      "nextModId": 609
+      "nextModId": 609,
+      "nameId_EN": "Strength Training",
+      "summaryId_EN": "Increases the STR growth value by {value}."
     },
     {
       "id": 39,
@@ -349,7 +425,9 @@
       "modLv": 4,
       "dispLv": 1,
       "value": 1,
-      "nextModId": 40
+      "nextModId": 40,
+      "nameId_EN": "Defense Training",
+      "summaryId_EN": "Increases the VIT growth value by {value}."
     },
     {
       "id": 40,
@@ -358,7 +436,9 @@
       "modLv": 6,
       "dispLv": 2,
       "value": 2,
-      "nextModId": 41
+      "nextModId": 41,
+      "nameId_EN": "Defense Training",
+      "summaryId_EN": "Increases the VIT growth value by {value}."
     },
     {
       "id": 41,
@@ -367,7 +447,9 @@
       "modLv": 8,
       "dispLv": 3,
       "value": 3,
-      "nextModId": 42
+      "nextModId": 42,
+      "nameId_EN": "Defense Training",
+      "summaryId_EN": "Increases the VIT growth value by {value}."
     },
     {
       "id": 42,
@@ -376,7 +458,9 @@
       "modLv": 10,
       "dispLv": 4,
       "value": 5,
-      "nextModId": 43
+      "nextModId": 43,
+      "nameId_EN": "Defense Training",
+      "summaryId_EN": "Increases the VIT growth value by {value}."
     },
     {
       "id": 43,
@@ -385,7 +469,9 @@
       "modLv": 12,
       "dispLv": 5,
       "value": 8,
-      "nextModId": 44
+      "nextModId": 44,
+      "nameId_EN": "Defense Training",
+      "summaryId_EN": "Increases the VIT growth value by {value}."
     },
     {
       "id": 44,
@@ -394,7 +480,9 @@
       "modLv": 14,
       "dispLv": 6,
       "value": 13,
-      "nextModId": 45
+      "nextModId": 45,
+      "nameId_EN": "Defense Training",
+      "summaryId_EN": "Increases the VIT growth value by {value}."
     },
     {
       "id": 45,
@@ -403,7 +491,9 @@
       "modLv": 16,
       "dispLv": 7,
       "value": 18,
-      "nextModId": 46
+      "nextModId": 46,
+      "nameId_EN": "Defense Training",
+      "summaryId_EN": "Increases the VIT growth value by {value}."
     },
     {
       "id": 46,
@@ -412,7 +502,9 @@
       "modLv": 18,
       "dispLv": 8,
       "value": 25,
-      "nextModId": 709
+      "nextModId": 709,
+      "nameId_EN": "Defense Training",
+      "summaryId_EN": "Increases the VIT growth value by {value}."
     },
     {
       "id": 47,
@@ -421,7 +513,9 @@
       "modLv": 3,
       "dispLv": 1,
       "value": 2,
-      "nextModId": 48
+      "nextModId": 48,
+      "nameId_EN": "Endurance Training",
+      "summaryId_EN": "Increases the HP growth value by {value}."
     },
     {
       "id": 48,
@@ -430,7 +524,9 @@
       "modLv": 5,
       "dispLv": 2,
       "value": 4,
-      "nextModId": 49
+      "nextModId": 49,
+      "nameId_EN": "Endurance Training",
+      "summaryId_EN": "Increases the HP growth value by {value}."
     },
     {
       "id": 49,
@@ -439,7 +535,9 @@
       "modLv": 7,
       "dispLv": 3,
       "value": 7,
-      "nextModId": 50
+      "nextModId": 50,
+      "nameId_EN": "Endurance Training",
+      "summaryId_EN": "Increases the HP growth value by {value}."
     },
     {
       "id": 50,
@@ -448,7 +546,9 @@
       "modLv": 9,
       "dispLv": 4,
       "value": 11,
-      "nextModId": 51
+      "nextModId": 51,
+      "nameId_EN": "Endurance Training",
+      "summaryId_EN": "Increases the HP growth value by {value}."
     },
     {
       "id": 51,
@@ -457,7 +557,9 @@
       "modLv": 11,
       "dispLv": 5,
       "value": 16,
-      "nextModId": 52
+      "nextModId": 52,
+      "nameId_EN": "Endurance Training",
+      "summaryId_EN": "Increases the HP growth value by {value}."
     },
     {
       "id": 52,
@@ -466,7 +568,9 @@
       "modLv": 13,
       "dispLv": 6,
       "value": 25,
-      "nextModId": 53
+      "nextModId": 53,
+      "nameId_EN": "Endurance Training",
+      "summaryId_EN": "Increases the HP growth value by {value}."
     },
     {
       "id": 53,
@@ -475,7 +579,9 @@
       "modLv": 15,
       "dispLv": 7,
       "value": 35,
-      "nextModId": 54
+      "nextModId": 54,
+      "nameId_EN": "Endurance Training",
+      "summaryId_EN": "Increases the HP growth value by {value}."
     },
     {
       "id": 54,
@@ -484,7 +590,9 @@
       "modLv": 17,
       "dispLv": 8,
       "value": 50,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Endurance Training",
+      "summaryId_EN": "Increases the HP growth value by {value}."
     },
     {
       "id": 55,
@@ -493,7 +601,9 @@
       "modLv": 9,
       "dispLv": 9,
       "value": 275,
-      "nextModId": 56
+      "nextModId": 56,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 56,
@@ -502,7 +612,9 @@
       "modLv": 10,
       "dispLv": 10,
       "value": 445,
-      "nextModId": 111
+      "nextModId": 111,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 57,
@@ -511,7 +623,9 @@
       "modLv": 9,
       "dispLv": 9,
       "value": 192,
-      "nextModId": 58
+      "nextModId": 58,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 58,
@@ -520,7 +634,9 @@
       "modLv": 10,
       "dispLv": 10,
       "value": 384,
-      "nextModId": 211
+      "nextModId": 211,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 59,
@@ -529,7 +645,9 @@
       "modLv": 9,
       "dispLv": 9,
       "value": 192,
-      "nextModId": 60
+      "nextModId": 60,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 60,
@@ -538,7 +656,9 @@
       "modLv": 10,
       "dispLv": 10,
       "value": 384,
-      "nextModId": 311
+      "nextModId": 311,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 61,
@@ -547,7 +667,9 @@
       "modLv": 7,
       "dispLv": 4,
       "value": 15,
-      "nextModId": 62
+      "nextModId": 62,
+      "nameId_EN": "Agility",
+      "summaryId_EN": "Increases the SPD base value by {value}."
     },
     {
       "id": 62,
@@ -556,7 +678,9 @@
       "modLv": 8,
       "dispLv": 5,
       "value": 20,
-      "nextModId": 63
+      "nextModId": 63,
+      "nameId_EN": "Agility",
+      "summaryId_EN": "Increases the SPD base value by {value}."
     },
     {
       "id": 63,
@@ -565,7 +689,9 @@
       "modLv": 10,
       "dispLv": 6,
       "value": 30,
-      "nextModId": 64
+      "nextModId": 64,
+      "nameId_EN": "Agility",
+      "summaryId_EN": "Increases the SPD base value by {value}."
     },
     {
       "id": 64,
@@ -574,7 +700,9 @@
       "modLv": 12,
       "dispLv": 7,
       "value": 45,
-      "nextModId": 65
+      "nextModId": 65,
+      "nameId_EN": "Agility",
+      "summaryId_EN": "Increases the SPD base value by {value}."
     },
     {
       "id": 65,
@@ -583,7 +711,9 @@
       "modLv": 14,
       "dispLv": 8,
       "value": 70,
-      "nextModId": 409
+      "nextModId": 409,
+      "nameId_EN": "Agility",
+      "summaryId_EN": "Increases the SPD base value by {value}."
     },
     {
       "id": 66,
@@ -592,7 +722,9 @@
       "modLv": 50,
       "dispLv": 0,
       "value": 0,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "First Strike",
+      "summaryId_EN": "Can always attack first in battle."
     },
     {
       "id": 67,
@@ -601,7 +733,9 @@
       "modLv": 50,
       "dispLv": 0,
       "value": 20,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Double Strike",
+      "summaryId_EN": "{value}% chance to attack twice"
     },
     {
       "id": 68,
@@ -610,7 +744,9 @@
       "modLv": 50,
       "dispLv": 0,
       "value": 20,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "One Strike",
+      "summaryId_EN": "Critical hit chance increases by {value}%"
     },
     {
       "id": 111,
@@ -619,7 +755,9 @@
       "modLv": 12,
       "dispLv": 11,
       "value": 500,
-      "nextModId": 112
+      "nextModId": 112,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 112,
@@ -628,7 +766,9 @@
       "modLv": 14,
       "dispLv": 12,
       "value": 750,
-      "nextModId": 113
+      "nextModId": 113,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 113,
@@ -637,7 +777,9 @@
       "modLv": 16,
       "dispLv": 13,
       "value": 1000,
-      "nextModId": 114
+      "nextModId": 114,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 114,
@@ -646,7 +788,9 @@
       "modLv": 18,
       "dispLv": 14,
       "value": 1500,
-      "nextModId": 115
+      "nextModId": 115,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 115,
@@ -655,7 +799,9 @@
       "modLv": 20,
       "dispLv": 15,
       "value": 2000,
-      "nextModId": 116
+      "nextModId": 116,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 116,
@@ -664,7 +810,9 @@
       "modLv": 22,
       "dispLv": 16,
       "value": 2500,
-      "nextModId": 117
+      "nextModId": 117,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 117,
@@ -673,7 +821,9 @@
       "modLv": 24,
       "dispLv": 17,
       "value": 3000,
-      "nextModId": 118
+      "nextModId": 118,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 118,
@@ -682,7 +832,9 @@
       "modLv": 26,
       "dispLv": 18,
       "value": 4000,
-      "nextModId": 119
+      "nextModId": 119,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 119,
@@ -691,7 +843,9 @@
       "modLv": 28,
       "dispLv": 19,
       "value": 5000,
-      "nextModId": 120
+      "nextModId": 120,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 120,
@@ -700,7 +854,9 @@
       "modLv": 30,
       "dispLv": 20,
       "value": 6000,
-      "nextModId": 121
+      "nextModId": 121,
+      "nameId_EN": "Endurance",
+      "summaryId_EN": "Increases the HP base value by {value}."
     },
     {
       "id": 211,
@@ -709,7 +865,9 @@
       "modLv": 12,
       "dispLv": 11,
       "value": 500,
-      "nextModId": 212
+      "nextModId": 212,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 212,
@@ -718,7 +876,9 @@
       "modLv": 14,
       "dispLv": 12,
       "value": 750,
-      "nextModId": 213
+      "nextModId": 213,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 213,
@@ -727,7 +887,9 @@
       "modLv": 16,
       "dispLv": 13,
       "value": 1000,
-      "nextModId": 214
+      "nextModId": 214,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 214,
@@ -736,7 +898,9 @@
       "modLv": 18,
       "dispLv": 14,
       "value": 1500,
-      "nextModId": 215
+      "nextModId": 215,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 215,
@@ -745,7 +909,9 @@
       "modLv": 20,
       "dispLv": 15,
       "value": 2000,
-      "nextModId": 216
+      "nextModId": 216,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 216,
@@ -754,7 +920,9 @@
       "modLv": 22,
       "dispLv": 16,
       "value": 2500,
-      "nextModId": 217
+      "nextModId": 217,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 217,
@@ -763,7 +931,9 @@
       "modLv": 24,
       "dispLv": 17,
       "value": 3000,
-      "nextModId": 218
+      "nextModId": 218,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 218,
@@ -772,7 +942,9 @@
       "modLv": 26,
       "dispLv": 18,
       "value": 4000,
-      "nextModId": 219
+      "nextModId": 219,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 219,
@@ -781,7 +953,9 @@
       "modLv": 28,
       "dispLv": 19,
       "value": 5000,
-      "nextModId": 220
+      "nextModId": 220,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 220,
@@ -790,7 +964,9 @@
       "modLv": 30,
       "dispLv": 20,
       "value": 6000,
-      "nextModId": 221
+      "nextModId": 221,
+      "nameId_EN": "Strength",
+      "summaryId_EN": "Increases the STR base value by {value}."
     },
     {
       "id": 311,
@@ -799,7 +975,9 @@
       "modLv": 12,
       "dispLv": 11,
       "value": 500,
-      "nextModId": 312
+      "nextModId": 312,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 312,
@@ -808,7 +986,9 @@
       "modLv": 14,
       "dispLv": 12,
       "value": 750,
-      "nextModId": 313
+      "nextModId": 313,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 313,
@@ -817,7 +997,9 @@
       "modLv": 16,
       "dispLv": 13,
       "value": 1000,
-      "nextModId": 314
+      "nextModId": 314,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 314,
@@ -826,7 +1008,9 @@
       "modLv": 18,
       "dispLv": 14,
       "value": 1500,
-      "nextModId": 315
+      "nextModId": 315,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 315,
@@ -835,7 +1019,9 @@
       "modLv": 20,
       "dispLv": 15,
       "value": 2000,
-      "nextModId": 316
+      "nextModId": 316,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 316,
@@ -844,7 +1030,9 @@
       "modLv": 22,
       "dispLv": 16,
       "value": 2500,
-      "nextModId": 317
+      "nextModId": 317,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 317,
@@ -853,7 +1041,9 @@
       "modLv": 24,
       "dispLv": 17,
       "value": 3000,
-      "nextModId": 318
+      "nextModId": 318,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 318,
@@ -862,7 +1052,9 @@
       "modLv": 26,
       "dispLv": 18,
       "value": 4000,
-      "nextModId": 319
+      "nextModId": 319,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 319,
@@ -871,7 +1063,9 @@
       "modLv": 28,
       "dispLv": 19,
       "value": 5000,
-      "nextModId": 320
+      "nextModId": 320,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 320,
@@ -880,7 +1074,9 @@
       "modLv": 30,
       "dispLv": 20,
       "value": 6000,
-      "nextModId": 321
+      "nextModId": 321,
+      "nameId_EN": "Sturdy",
+      "summaryId_EN": "Increases the VIT base value by {value}."
     },
     {
       "id": 409,
@@ -889,7 +1085,9 @@
       "modLv": 16,
       "dispLv": 9,
       "value": 95,
-      "nextModId": 410
+      "nextModId": 410,
+      "nameId_EN": "Agility",
+      "summaryId_EN": "Increases the SPD base value by {value}."
     },
     {
       "id": 410,
@@ -898,7 +1096,9 @@
       "modLv": 18,
       "dispLv": 10,
       "value": 135,
-      "nextModId": 411
+      "nextModId": 411,
+      "nameId_EN": "Agility",
+      "summaryId_EN": "Increases the SPD base value by {value}."
     },
     {
       "id": 411,
@@ -907,7 +1107,9 @@
       "modLv": 20,
       "dispLv": 11,
       "value": 175,
-      "nextModId": 412
+      "nextModId": 412,
+      "nameId_EN": "Agility",
+      "summaryId_EN": "Increases the SPD base value by {value}."
     },
     {
       "id": 412,
@@ -916,7 +1118,9 @@
       "modLv": 22,
       "dispLv": 12,
       "value": 215,
-      "nextModId": 413
+      "nextModId": 413,
+      "nameId_EN": "Agility",
+      "summaryId_EN": "Increases the SPD base value by {value}."
     },
     {
       "id": 413,
@@ -925,7 +1129,9 @@
       "modLv": 24,
       "dispLv": 13,
       "value": 270,
-      "nextModId": 414
+      "nextModId": 414,
+      "nameId_EN": "Agility",
+      "summaryId_EN": "Increases the SPD base value by {value}."
     },
     {
       "id": 414,
@@ -934,7 +1140,9 @@
       "modLv": 26,
       "dispLv": 14,
       "value": 325,
-      "nextModId": 415
+      "nextModId": 415,
+      "nameId_EN": "Agility",
+      "summaryId_EN": "Increases the SPD base value by {value}."
     },
     {
       "id": 415,
@@ -943,7 +1151,9 @@
       "modLv": 28,
       "dispLv": 15,
       "value": 380,
-      "nextModId": 416
+      "nextModId": 416,
+      "nameId_EN": "Agility",
+      "summaryId_EN": "Increases the SPD base value by {value}."
     },
     {
       "id": 509,
@@ -952,7 +1162,9 @@
       "modLv": 19,
       "dispLv": 9,
       "value": 60,
-      "nextModId": 510
+      "nextModId": 510,
+      "nameId_EN": "Endurance Training",
+      "summaryId_EN": "Increases the HP growth value by {value}."
     },
     {
       "id": 510,
@@ -961,7 +1173,9 @@
       "modLv": 21,
       "dispLv": 10,
       "value": 70,
-      "nextModId": 511
+      "nextModId": 511,
+      "nameId_EN": "Endurance Training",
+      "summaryId_EN": "Increases the HP growth value by {value}."
     },
     {
       "id": 511,
@@ -970,7 +1184,9 @@
       "modLv": 23,
       "dispLv": 11,
       "value": 85,
-      "nextModId": 512
+      "nextModId": 512,
+      "nameId_EN": "Endurance Training",
+      "summaryId_EN": "Increases the HP growth value by {value}."
     },
     {
       "id": 512,
@@ -979,7 +1195,9 @@
       "modLv": 25,
       "dispLv": 12,
       "value": 95,
-      "nextModId": 513
+      "nextModId": 513,
+      "nameId_EN": "Endurance Training",
+      "summaryId_EN": "Increases the HP growth value by {value}."
     },
     {
       "id": 513,
@@ -988,7 +1206,9 @@
       "modLv": 27,
       "dispLv": 13,
       "value": 120,
-      "nextModId": 514
+      "nextModId": 514,
+      "nameId_EN": "Endurance Training",
+      "summaryId_EN": "Increases the HP growth value by {value}."
     },
     {
       "id": 514,
@@ -997,7 +1217,9 @@
       "modLv": 29,
       "dispLv": 14,
       "value": 150,
-      "nextModId": 515
+      "nextModId": 515,
+      "nameId_EN": "Endurance Training",
+      "summaryId_EN": "Increases the HP growth value by {value}."
     },
     {
       "id": 515,
@@ -1006,7 +1228,9 @@
       "modLv": 31,
       "dispLv": 15,
       "value": 180,
-      "nextModId": 516
+      "nextModId": 516,
+      "nameId_EN": "Endurance Training",
+      "summaryId_EN": "Increases the HP growth value by {value}."
     },
     {
       "id": 609,
@@ -1015,7 +1239,9 @@
       "modLv": 19,
       "dispLv": 9,
       "value": 35,
-      "nextModId": 610
+      "nextModId": 610,
+      "nameId_EN": "Strength Training",
+      "summaryId_EN": "Increases the STR growth value by {value}."
     },
     {
       "id": 610,
@@ -1024,7 +1250,9 @@
       "modLv": 21,
       "dispLv": 10,
       "value": 50,
-      "nextModId": 611
+      "nextModId": 611,
+      "nameId_EN": "Strength Training",
+      "summaryId_EN": "Increases the STR growth value by {value}."
     },
     {
       "id": 611,
@@ -1033,7 +1261,9 @@
       "modLv": 23,
       "dispLv": 11,
       "value": 70,
-      "nextModId": 612
+      "nextModId": 612,
+      "nameId_EN": "Strength Training",
+      "summaryId_EN": "Increases the STR growth value by {value}."
     },
     {
       "id": 612,
@@ -1042,7 +1272,9 @@
       "modLv": 25,
       "dispLv": 12,
       "value": 95,
-      "nextModId": 613
+      "nextModId": 613,
+      "nameId_EN": "Strength Training",
+      "summaryId_EN": "Increases the STR growth value by {value}."
     },
     {
       "id": 613,
@@ -1051,7 +1283,9 @@
       "modLv": 27,
       "dispLv": 13,
       "value": 120,
-      "nextModId": 614
+      "nextModId": 614,
+      "nameId_EN": "Strength Training",
+      "summaryId_EN": "Increases the STR growth value by {value}."
     },
     {
       "id": 614,
@@ -1060,7 +1294,9 @@
       "modLv": 29,
       "dispLv": 14,
       "value": 150,
-      "nextModId": 615
+      "nextModId": 615,
+      "nameId_EN": "Strength Training",
+      "summaryId_EN": "Increases the STR growth value by {value}."
     },
     {
       "id": 615,
@@ -1069,7 +1305,9 @@
       "modLv": 31,
       "dispLv": 15,
       "value": 180,
-      "nextModId": 616
+      "nextModId": 616,
+      "nameId_EN": "Strength Training",
+      "summaryId_EN": "Increases the STR growth value by {value}."
     },
     {
       "id": 709,
@@ -1078,7 +1316,9 @@
       "modLv": 20,
       "dispLv": 9,
       "value": 35,
-      "nextModId": 710
+      "nextModId": 710,
+      "nameId_EN": "Defense Training",
+      "summaryId_EN": "Increases the VIT growth value by {value}."
     },
     {
       "id": 710,
@@ -1087,7 +1327,9 @@
       "modLv": 22,
       "dispLv": 10,
       "value": 50,
-      "nextModId": 711
+      "nextModId": 711,
+      "nameId_EN": "Defense Training",
+      "summaryId_EN": "Increases the VIT growth value by {value}."
     },
     {
       "id": 711,
@@ -1096,7 +1338,9 @@
       "modLv": 24,
       "dispLv": 11,
       "value": 70,
-      "nextModId": 712
+      "nextModId": 712,
+      "nameId_EN": "Defense Training",
+      "summaryId_EN": "Increases the VIT growth value by {value}."
     },
     {
       "id": 712,
@@ -1105,7 +1349,9 @@
       "modLv": 26,
       "dispLv": 12,
       "value": 95,
-      "nextModId": 713
+      "nextModId": 713,
+      "nameId_EN": "Defense Training",
+      "summaryId_EN": "Increases the VIT growth value by {value}."
     },
     {
       "id": 713,
@@ -1114,7 +1360,9 @@
       "modLv": 28,
       "dispLv": 13,
       "value": 120,
-      "nextModId": 714
+      "nextModId": 714,
+      "nameId_EN": "Defense Training",
+      "summaryId_EN": "Increases the VIT growth value by {value}."
     },
     {
       "id": 714,
@@ -1123,7 +1371,9 @@
       "modLv": 30,
       "dispLv": 14,
       "value": 150,
-      "nextModId": 715
+      "nextModId": 715,
+      "nameId_EN": "Defense Training",
+      "summaryId_EN": "Increases the VIT growth value by {value}."
     },
     {
       "id": 715,
@@ -1132,7 +1382,9 @@
       "modLv": 32,
       "dispLv": 15,
       "value": 180,
-      "nextModId": 716
+      "nextModId": 716,
+      "nameId_EN": "Defense Training",
+      "summaryId_EN": "Increases the VIT growth value by {value}."
     },
     {
       "id": 803,
@@ -1141,7 +1393,9 @@
       "modLv": 51,
       "dispLv": 0,
       "value": 70,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Three Paths",
+      "summaryId_EN": "{value}% chance for critical damage to be tripled"
     },
     {
       "id": 804,
@@ -1150,7 +1404,9 @@
       "modLv": 51,
       "dispLv": 0,
       "value": 20,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Four Leaves",
+      "summaryId_EN": "{value}% chance for enemy drops to double"
     },
     {
       "id": 805,
@@ -1159,7 +1415,9 @@
       "modLv": 51,
       "dispLv": 0,
       "value": 30,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Five Lights",
+      "summaryId_EN": "{value}% chance to double experience points"
     },
     {
       "id": 806,
@@ -1168,7 +1426,9 @@
       "modLv": 51,
       "dispLv": 0,
       "value": 20,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Sixth Sense",
+      "summaryId_EN": "{value}% chance to dodge an attack"
     },
     {
       "id": 807,
@@ -1177,7 +1437,9 @@
       "modLv": 51,
       "dispLv": 0,
       "value": 20,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Seven Blessings",
+      "summaryId_EN": "Increase in probability-based abilities"
     },
     {
       "id": 901,
@@ -1186,7 +1448,9 @@
       "modLv": 51,
       "dispLv": 1,
       "value": 30,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Secrets of Slashing",
+      "summaryId_EN": "Equip a slashing weapon"
     },
     {
       "id": 911,
@@ -1195,7 +1459,9 @@
       "modLv": 51,
       "dispLv": 1,
       "value": 30,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Secrets of Bludgeoning",
+      "summaryId_EN": "Equip a bludgeoning weapon"
     },
     {
       "id": 921,
@@ -1204,7 +1470,9 @@
       "modLv": 51,
       "dispLv": 1,
       "value": 30,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Secrets of Piercing",
+      "summaryId_EN": "Equip a piercing weapon"
     },
     {
       "id": 931,
@@ -1213,7 +1481,9 @@
       "modLv": 51,
       "dispLv": 1,
       "value": 30,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Secrets of Projectiles",
+      "summaryId_EN": "Equip a projectile weapon"
     },
     {
       "id": 941,
@@ -1222,7 +1492,9 @@
       "modLv": 51,
       "dispLv": 0,
       "value": 0,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Poison",
+      "summaryId_EN": "Inflict poison with each attack"
     },
     {
       "id": 951,
@@ -1231,7 +1503,9 @@
       "modLv": 51,
       "dispLv": 0,
       "value": 10,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Solitude",
+      "summaryId_EN": "Increase all abilities when not equipping a set"
     },
     {
       "id": 961,
@@ -1240,7 +1514,9 @@
       "modLv": 51,
       "dispLv": 0,
       "value": 0,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Unyielding",
+      "summaryId_EN": "Stay at 1 HP once during an adventure and deliver a critical hit on the next attack"
     },
     {
       "id": 971,
@@ -1249,7 +1525,9 @@
       "modLv": 51,
       "dispLv": 1,
       "value": 20,
-      "nextModId": 972
+      "nextModId": 972,
+      "nameId_EN": "Attack Power Boost",
+      "summaryId_EN": "Weapon attack power increased by {value}%"
     },
     {
       "id": 972,
@@ -1258,7 +1536,9 @@
       "modLv": 51,
       "dispLv": 2,
       "value": 30,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Attack Power Boost",
+      "summaryId_EN": "Weapon attack power increased by {value}%"
     },
     {
       "id": 981,
@@ -1267,7 +1547,9 @@
       "modLv": 51,
       "dispLv": 1,
       "value": 20,
-      "nextModId": 982
+      "nextModId": 982,
+      "nameId_EN": "Defense Power Boost",
+      "summaryId_EN": "Shield defense power increased by {value}%"
     },
     {
       "id": 982,
@@ -1276,7 +1558,9 @@
       "modLv": 51,
       "dispLv": 2,
       "value": 30,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Defense Power Boost",
+      "summaryId_EN": "Shield defense power increased by {value}%"
     },
     {
       "id": 1001,
@@ -1285,7 +1569,9 @@
       "modLv": 99,
       "dispLv": 1,
       "value": 2,
-      "nextModId": 1002
+      "nextModId": 1002,
+      "nameId_EN": "Upgrade Boost",
+      "summaryId_EN": "Upgrade increase by {value} times"
     },
     {
       "id": 1002,
@@ -1294,7 +1580,9 @@
       "modLv": 99,
       "dispLv": 2,
       "value": 4,
-      "nextModId": 1003
+      "nextModId": 1003,
+      "nameId_EN": "Upgrade Boost",
+      "summaryId_EN": "Upgrade increase by {value} times"
     },
     {
       "id": 1003,
@@ -1303,7 +1591,9 @@
       "modLv": 99,
       "dispLv": 3,
       "value": 8,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Upgrade Boost",
+      "summaryId_EN": "Upgrade increase by {value} times"
     },
     {
       "id": 1101,
@@ -1312,7 +1602,9 @@
       "modLv": 99,
       "dispLv": 1,
       "value": 100,
-      "nextModId": 1102
+      "nextModId": 1102,
+      "nameId_EN": "Exceed upgrade limit",
+      "summaryId_EN": "Upgrade limit increased by {value}"
     },
     {
       "id": 1102,
@@ -1321,7 +1613,9 @@
       "modLv": 99,
       "dispLv": 2,
       "value": 1000,
-      "nextModId": 1103
+      "nextModId": 1103,
+      "nameId_EN": "Exceed upgrade limit",
+      "summaryId_EN": "Upgrade limit increased by {value}"
     },
     {
       "id": 1103,
@@ -1330,7 +1624,9 @@
       "modLv": 99,
       "dispLv": 3,
       "value": 5000,
-      "nextModId": 1104
+      "nextModId": 1104,
+      "nameId_EN": "Exceed upgrade limit",
+      "summaryId_EN": "Upgrade limit increased by {value}"
     },
     {
       "id": 1104,
@@ -1339,7 +1635,9 @@
       "modLv": 99,
       "dispLv": 4,
       "value": 99999,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "Exceed upgrade limit",
+      "summaryId_EN": "Upgrade limit increased by {value}"
     },
     {
       "id": 2101,
@@ -1348,7 +1646,9 @@
       "modLv": 99,
       "dispLv": 1,
       "value": 10,
-      "nextModId": 2102
+      "nextModId": 2102,
+      "nameId_EN": "HP Boost",
+      "summaryId_EN": "HP increased by {value}%"
     },
     {
       "id": 2102,
@@ -1357,7 +1657,9 @@
       "modLv": 99,
       "dispLv": 2,
       "value": 30,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "HP Boost",
+      "summaryId_EN": "HP increased by {value}%"
     },
     {
       "id": 2201,
@@ -1366,7 +1668,9 @@
       "modLv": 99,
       "dispLv": 1,
       "value": 10,
-      "nextModId": 2202
+      "nextModId": 2202,
+      "nameId_EN": "STR Boost",
+      "summaryId_EN": "STR increased by {value}%"
     },
     {
       "id": 2202,
@@ -1375,7 +1679,9 @@
       "modLv": 99,
       "dispLv": 2,
       "value": 30,
-      "nextModId": 2204
+      "nextModId": 2204,
+      "nameId_EN": "STR Boost",
+      "summaryId_EN": "STR increased by {value}%"
     },
     {
       "id": 2203,
@@ -1384,7 +1690,9 @@
       "modLv": 99,
       "dispLv": 3,
       "value": 50,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "STR Boost",
+      "summaryId_EN": "STR increased by {value}%"
     },
     {
       "id": 2301,
@@ -1393,7 +1701,9 @@
       "modLv": 99,
       "dispLv": 1,
       "value": 10,
-      "nextModId": 2302
+      "nextModId": 2302,
+      "nameId_EN": "VIT Boost",
+      "summaryId_EN": "VIT increased by {value}%"
     },
     {
       "id": 2302,
@@ -1402,7 +1712,9 @@
       "modLv": 99,
       "dispLv": 2,
       "value": 30,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "VIT Boost",
+      "summaryId_EN": "VIT increased by {value}%"
     },
     {
       "id": 2401,
@@ -1411,7 +1723,9 @@
       "modLv": 99,
       "dispLv": 1,
       "value": 10,
-      "nextModId": 2402
+      "nextModId": 2402,
+      "nameId_EN": "SPD Boost",
+      "summaryId_EN": "SPD increased by {value}%"
     },
     {
       "id": 2402,
@@ -1420,7 +1734,9 @@
       "modLv": 99,
       "dispLv": 2,
       "value": 30,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "SPD Boost",
+      "summaryId_EN": "SPD increased by {value}%"
     },
     {
       "id": 2501,
@@ -1429,7 +1745,9 @@
       "modLv": 99,
       "dispLv": 1,
       "value": 10,
-      "nextModId": 2502
+      "nextModId": 2502,
+      "nameId_EN": "LUK Boost",
+      "summaryId_EN": "LUK increased by {value}%"
     },
     {
       "id": 2502,
@@ -1438,7 +1756,9 @@
       "modLv": 99,
       "dispLv": 2,
       "value": 30,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "LUK Boost",
+      "summaryId_EN": "LUK increased by {value}%"
     },
     {
       "id": 2601,
@@ -1447,7 +1767,9 @@
       "modLv": 99,
       "dispLv": 1,
       "value": 10,
-      "nextModId": 2602
+      "nextModId": 2602,
+      "nameId_EN": "All Stats Boost",
+      "summaryId_EN": "All stats increased by {value}%"
     },
     {
       "id": 2602,
@@ -1456,7 +1778,9 @@
       "modLv": 99,
       "dispLv": 2,
       "value": 30,
-      "nextModId": 0
+      "nextModId": 0,
+      "nameId_EN": "All Stats Boost",
+      "summaryId_EN": "All stats increased by {value}%"
     }
   ]
 }
