@@ -1439,7 +1439,7 @@
       "value": 20,
       "nextModId": 0,
       "nameId_EN": "Seven Blessings",
-      "summaryId_EN": "Increase in probability-based abilities"
+      "summaryId_EN": "Increase in probability-based abilities (+{value}%)"
     },
     {
       "id": 901,
@@ -1450,7 +1450,7 @@
       "value": 30,
       "nextModId": 0,
       "nameId_EN": "Secrets of Slashing",
-      "summaryId_EN": "Equip a slashing weapon"
+      "summaryId_EN": "Equip a slashing weapon ({value})"
     },
     {
       "id": 911,
@@ -1461,7 +1461,7 @@
       "value": 30,
       "nextModId": 0,
       "nameId_EN": "Secrets of Bludgeoning",
-      "summaryId_EN": "Equip a bludgeoning weapon"
+      "summaryId_EN": "Equip a bludgeoning weapon ({value})"
     },
     {
       "id": 921,
@@ -1472,7 +1472,7 @@
       "value": 30,
       "nextModId": 0,
       "nameId_EN": "Secrets of Piercing",
-      "summaryId_EN": "Equip a piercing weapon"
+      "summaryId_EN": "Equip a piercing weapon ({value})"
     },
     {
       "id": 931,
@@ -1483,7 +1483,7 @@
       "value": 30,
       "nextModId": 0,
       "nameId_EN": "Secrets of Projectiles",
-      "summaryId_EN": "Equip a projectile weapon"
+      "summaryId_EN": "Equip a projectile weapon ({value})"
     },
     {
       "id": 941,
@@ -1494,7 +1494,7 @@
       "value": 0,
       "nextModId": 0,
       "nameId_EN": "Poison",
-      "summaryId_EN": "Inflict poison with each attack"
+      "summaryId_EN": "Inflict poison with each attack ({value})"
     },
     {
       "id": 951,
@@ -1505,7 +1505,7 @@
       "value": 10,
       "nextModId": 0,
       "nameId_EN": "Solitude",
-      "summaryId_EN": "Increase all abilities when not equipping a set"
+      "summaryId_EN": "Increase all abilities when not equipping a set ({value})"
     },
     {
       "id": 961,

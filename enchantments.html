@@ -25,7 +25,7 @@
     </script>
 </head>
 
-<body>
+<body onload="getTable()">
 <div class="w3-top">
     <div class="w3-bar color-medium w3-card">
         <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
@@ -73,10 +73,72 @@
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
-    <p class="w3-justify text-color">
-        TODO
-    </p>
-    <div id="content"></div>
+    <div id="Table" class="w3-container w3-center"></div>
 </div>
 </body>
+<script>
+    let customs;
+
+    function getTable() {
+        let request = new XMLHttpRequest();
+        request.open("GET","json/customs_EN.json",false);
+        request.send(null);
+        customs = JSON.parse(request.responseText)["customs"];
+
+        loadTable();
+    }
+    function getCustomByID(id){
+        return customs.filter(
+            function(custom){return custom.id === id}
+        )[0]
+    }
+    function loadTable() {
+        let col = [
+            "ID", "Name", "Summary", "Next Mod", "Mod Lvl"
+        ]
+
+        let table = document.createElement("table");
+        table.className = "styled-table";
+
+        let tr = table.insertRow(-1);
+        for (let i = 0; i < col.length; i++) {
+            let th = document.createElement("th");
+            th.innerHTML = col[i];
+            tr.appendChild(th);
+        }
+        tr.id = "StickyHeader"
+
+        for (let i = 0; i < customs.length; i++) {
+            let tr = table.insertRow(-1);
+            let tabCell_1 = tr.insertCell(-1);
+            tabCell_1.innerHTML = customs[i]["id"];
+            let tabCell_2 = tr.insertCell(-1);
+            tabCell_2.innerHTML = customs[i]["nameId_EN"];
+            tabCell_2.innerHTML += ' ';
+            tabCell_2.innerHTML += customs[i]["dispLv"];
+            let tabCell_3 = tr.insertCell(-1);
+            tabCell_3.innerHTML = customs[i]["summaryId_EN"].replace("{value}", customs[i]["value"]);
+            let tabCell_4 = tr.insertCell(-1);
+            if (customs[i]["nextModId"] > 0) {
+                let next = getCustomByID(customs[i]["nextModId"])
+                if (next == undefined) {
+                    tabCell_4.innerHTML = "Coming Soon"
+                } else {
+                    tabCell_4.innerHTML = next["nameId_EN"];
+                    tabCell_4.innerHTML += ' ';
+                    tabCell_4.innerHTML += next["dispLv"];
+                }
+            } else {
+                tabCell_4.innerHTML = "N/A";
+            }
+            let tabCell_5 = tr.insertCell(-1);
+            tabCell_5.innerHTML = customs[i]["modLv"];
+
+        }
+
+        let divContainer = document.getElementById("Table")
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table)
+    }
+</script>
 </html>
