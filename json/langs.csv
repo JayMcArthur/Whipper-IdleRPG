@@ -1,0 +1,917 @@
+str,en_US,ja_JP,zh_CN,ko,zh_TW
+探索先選択,Select destination,探索先選択,选择目的地,목적지 선택,選擇探索地點
+ダンジョン,Dungeon,ダンジョン,迷宫,던전,迷宮
+targetFloor,Target floor,目的階,目标层,목표 층,目標樓層
+帰還時刻,Return time,帰還時刻,返回时间,귀환 시각,返回時間
+階,F,階,层,층,層
+時間,h,時間,小时,시간,小時
+分,min,分,分,분,分
+冒険に出す,Go to dungeon,冒険に出す,开始探索,모험을 떠난다,開始冒險
+言語,Language,言語,语言,언어,語言
+Whipperでは画面上に広告が表示されます,Whipper will display ads on the screen.,Whipperでは画面上に広告が表示されます,Whipper会在屏幕上显示广告,Whipper 에서는 화면 위에 광고가 표시 됩니다,Whipper 會在螢幕上播放廣告
+次の画面でトラッキングを許可すると,Allowing tracking on the next screen will make it easier for you to see ads that match your preferences.,次の画面でトラッキングを許可すると、あなたの好みに合った広告が表示されやすくなります,得到你的许可后，接下来会根据你的喜好显示广告,다음 화면에서 추적을 허용하면 당신이 선호하는 광고가 표시되기 쉽습니다,在下一個畫面中允許追蹤的話，會根據你的偏好顯示廣告
+次へ,Continue,次へ,继续,다음으로,繼續
+データバックアップ／復元,Data backup / restore,データバックアップ／復元,数据备份/恢复,데이터 백업/복원,資料備份／復原
+機種変更の手順,Model change procedure,機種変更の手順,更换设备的步骤,모델 변경 절차,更改設備的順序
+現在の端末でセーブデータをバックアップします,Back up your save data on your current device,現在の端末でセーブデータをバックアップします,在当前设备上备份您的保存数据,현재 기기에서 저장 데이터를 백업합니다.,在目前設備上備份存檔資料
+iCloudやGoogleドライブにセーブデータを設置します,Place saved data in iCloud or Google Drive,iCloudやGoogleドライブにセーブデータを設置します,将保存的数据放入 iCloud 或 Google Drive,iCloud 또는 Google 드라이브에 저장된 데이터 저장,在 iCloud 或 Google 雲端硬碟中設置存檔資料
+新しい端末でセーブデータを復元します,Restore save data on new device,新しい端末でセーブデータを復元します,在新设备上恢复保存数据,새 기기에서 저장 데이터를 복원합니다.,在新設備上恢復存檔資料
+バックアップ,Backup,バックアップ,备份,백업,備份
+復元,Restore,復元,恢复,복원,恢復
+バックアップから復元,Restore from backup,バックアップから復元,从备份恢复,백업에서 복원,從備份資料恢復
+復元中です,Restoring...{@}Please do not close the app.,復元中です...{@}アプリを閉じないでください。,正在恢复...{@}请不要关闭应用程序。,복원 중...{@}앱을 닫지 마십시오.,恢復中……{@}請勿關閉應用程式。
+復元が完了しました,Restoration is complete.{@}Please restart the app.,復元が完了しました。{@}アプリを再起動してください。,恢复完成。{@}请重新启动应用程序。,복원이 완료되었습니다.{@}앱을 다시 시작합니다.,恢復完成。{@}請重新啟動應用程式。
+復元に失敗しました,Restoration failed.,復元に失敗しました。,恢复失败。,복원에 실패했습니다.,恢復失敗。
+新しいバージョンが利用可能です,A new version is available!,新しいバージョンが利用可能です!,有新版本可用！,새 버전을 사용할 수 있습니다!,有新版本可用。
+更新,Update,更新,更新,업데이트,更新
+ダンジョン階へ,Go to {dungeon} {floor}F.,{dungeon} {floor}階へ,前往{dungeon}第{floor}层,{dungeon} {floor}층으로,前往{dungeon}第{floor}層
+ダンジョン到着,Arrive at {dungeon}.,{dungeon}に到着,到达{dungeon},{dungeon}에 도착,到達{dungeon}
+ダンジョン内部に侵入,Enter the dungeon.,ダンジョン内部に侵入,进入迷宫内部,던전 내부에 침입,進入迷宮內部
+階の探索(魔物の巣),Start exploring {floor}F (Demon's Nest).,{floor}階の探索(魔物の巣),开始第{floor}层的探索(魔物巢穴),{floor}층을 탐색 (마물의 둥지),開始第{floor}層的探索(魔物巢穴)
+階は魔物の巣だった！,{floor}F was a demon's nest!,{floor}階は魔物の巣だった！,第{floor}层是魔物的巢穴！,{floor}층은 마물의 둥지였다!,第{floor}層是魔物的巢穴！
+は身構えた,{player} braced himself.,{player}は身構えた,{player}进入战斗准备,{player}는 자세를 잡았다,{player}進入戰鬥準備
+階の探索(宝物庫),Start exploring {floor}F (Treasure Room).,{floor}階の探索(宝物庫),开始第{floor}层的探索(宝物库),{floor}층을 탐색 (보물방),開始第{floor}層的探索(寶物庫)
+階は宝物庫だった！,{floor}F was a treasure room!,{floor}階は宝物庫だった！,第{floor}层是宝物库！,{floor}층은 보물방이었다!,第{floor}層是寶物庫！
+宝探しを楽しむことにした,Let's enjoy a treasure hunt!,宝探しを楽しむことにした,享受夺宝的乐趣吧,즐거운 보물찾기!,享受尋寶的樂趣吧！
+階の探索(オアシス),Start exploring {floor}F (Oasis).,{floor}階の探索(オアシス),开始第{floor}层的探索(绿洲),{floor}층을 탐색 (오아시스),開始第{floor}層的探索(綠洲)
+階は泉が湧き出るオアシスだった,{floor}F was an oasis with a spring gushing out of it.,{floor}階は泉が湧き出るオアシスだった,第{floor}层是泉水涌出的绿洲,{floor}층은 분수가 솟는 오아시스였다,第{floor}層是泉水湧出的綠洲
+少し休んでいくことにした,Let's get some rest.,少し休んでいくことにした,稍微休息一下,조금 쉬어가기로 했다,稍微休息一下
+階の探索,Start exploring {floor}F.,{floor}階の探索,开始第{floor}层的探索,{floor}층을 탐색,開始第{floor}層的探索
+階に足を踏み入れた,Stepped into {floor}F.,{floor}階に足を踏み入れた,踏入第{floor}层,{floor}층에 발을 내딛었다,踏入第{floor}層
+魔物の声が聞こえてくる,The demon's voice echoed throughout the floor.,魔物の声が聞こえてくる,魔物的声音响彻整个楼层,마물의 소리가 들려온다,魔物的聲音響徹整個樓層
+宝箱を見つけた,Found a treasure chest.,宝箱を見つけた,发现宝箱,보물을 발견했다,發現了寶箱
+は宝箱を開けた,{player} opened the treasure chest.,{player}は宝箱を開けた,{player}发现宝箱,{player}은(는) 보물을 열었다,{player}打開了寶箱
+が入っていた,{item} was in it.,{item}が入っていた,发现里面有『{item}』,{item}이(가) 들어있다,發現裡面有『{item}』
+はアイテムを袋に入れた,{player} put the items into the bag.,{player}はアイテムを袋に入れた,{player}把它收入囊中,{player}은(는) 아이템을 주머니에 넣었다,{player}把它收入包包中
+水が湧き出ている,Water is gushing out.,水が湧き出ている,泉水涌出,물이 솟아나고 있다,泉水湧出
+は泉に近づいて水を一口飲んだ,{player} approached the spring and took a sip of the water.,{player}は泉に近づいて水を一口飲んだ,{player}靠近泉水，喝了一口,{player}은(는) 샘에 다가가 물을 한 모금 마셨다,{player}靠近泉水，喝了一口
+体力回復の泉だった,It was a fountain of recovery.,体力回復の泉だった,这是恢复体力(HP)的泉水,체력 회복의 샘이었다,這是恢復體力(HP)的泉水
+力上昇の泉だった,It was a fountain of STR.,力上昇の泉だった,这是提升力量(STR)的泉水,힘 상승의 샘이었다,這是提升力量(STR)的泉水
+頑丈さ上昇の泉だった,It was a fountain of VIT.,頑丈さ上昇の泉だった,这是提升耐力(VIT)的泉水,방어력 상승의 샘이었다,這是提升耐力(VIT)的泉水
+速度上昇の泉だった,It was a fountain of SPD.,速度上昇の泉だった,这是提升速度(SPD)的泉水,속도 상승의 샘이었다,這是提升速度(SPD)的泉水
+運上昇の泉だった,It was a fountain of LUK.,運上昇の泉だった,这是提升幸运(LUK)的泉水,운 상승의 샘이었다,這是提升幸運(LUK)的泉水
+泉を見つけた,Found a Fountain.,泉を見つけた,发现泉水,샘을 발견했다,發現了泉水
+ダンジョン階の探索成功,{dungeon} {floor}F adventure succeeded!,{dungeon} {floor}階の探索成功,{dungeon}第{floor}层的探索成功,{dungeon} {floor}층 탐색 성공!,{dungeon}第{floor}層的探索成功
+個のアイテムを入手した！,Got {num} items!,{num}個のアイテムを入手した！,得到了{num}个物品！,{num}개의 아이템을 획득했다!,得到了{num}個物品！
+を手に入れた,Got {item}!,{item}を手に入れた,得到了『{item}』,{item}을(를) 획득했다,得到了『{item}』
+探索時間ボーナス！,Adventure time bonus!,探索時間ボーナス！,探索时间奖励！,탐색시간 보너스!,探索時間獎勵！
+時間以上の探索,{hour}h or more of adventure!,{hour}時間以上の探索,{hour}小时以上的探索,{hour}시간 이상의 탐색,{hour}小時以上的探索
+扉の近くに何かが落ちている,Something has fallen near the door.,扉の近くに何かが落ちている,有东西落在大门附近,문 옆에 무엇인가 떨어져 있다,有東西落在大門附近
+近づいてそれを拾い上げた,Approached it and picked it up.,近づいてそれを拾い上げた,走上前去，捡起来,다가가서 그것을 집어 들었다,走上前去，撿起來
+言葉によって形状が変化する不思議な鍵だ,It's a strange key that changes shape depending on your words.,言葉によって形状が変化する不思議な鍵だ,这是一把奇怪的钥匙，它会根据你说的话改变外形,내 말에 따라 모양이 변하는 신기한 열쇠다,這是一把不可思議的鑰匙，它會根據你說的話改變外形
+残された人類へ,"A.D. 2122.{@}From Teba, leader of the Survival Task Force,{@}{@}To the remaining humanity.",A.D.2122{@}生存対策本部リーダー テバより{@}{@}残された人類へ,A.D. 2122.{@}来自生存对策本部的领袖Teba{@}{@}写给幸存的人类,A.D.2122{@}생존대책본부 리더 테바로부터{@}{@}남겨진 인류에게,A.D. 2122.{@}來自生存對策本部的領袖 Teba {@}{@}寫給倖存的人類
+WNEA,“W.N.E..A..”,“W.N.E..A..”,“W.N.E..A..”,“W.N.E..A..”,“W.N.E..A..”
+ODRD,“.O.D.R...D”,“.O.D.R...D”,“.O.D.R...D”,“.O.D.R...D”,“.O.D.R...D”
+DELA,“...DE.LA..”,“...DE.LA..”,“...DE.LA..”,“...DE.LA..”,“...DE.LA..”
+WOND,“WO......ND”,“WO......ND”,“WO......ND”,“WO......ND”,“WO......ND”
+受信メール,Received Email,受信メール,收到的邮件,수신 이메일,收到的郵件
+拾ったメモ,Picked-up Note,拾ったメモ,捡到的便条,줍은 메모,撿到的便條
+遭難者の手記,Survivor's Log,遭難者の手記,遇难者的日记,조난자의 수기,遇難者的日記
+研究所長の書き置き,Director's Note,研究所長の書き置き,研究所长的遗言,연구소장의 유언,研究所長的遺言
+偽霊媒師の独白,Impostor Medium's Monologue,偽霊媒師の独白,假灵媒的独白,가짜 무당의 독백,假靈媒的獨白
+戦況報告書,Combat Report,戦況報告書,战况报告,전황 보고서,戰況報告
+迷いの森メモ,"How long has it been since I wandered into this forest?{@}I was able to escape from the demons, but now I'm going to be lost in the forest...{@}We've already run out of food, we'll have to take food from the other lost people.",この森に迷い込んでどれくらい経っただろう{@}魔物からは逃げきれたが、今度は森で遭難するはめになるとは…{@}もう食料も尽きた{@}他の遭難者から食料を奪うしかない,我不知道迷失在这片森林多久了。{@}好不容易逃离魔爪，如今又深陷这片森林。{@}粮食消耗殆尽，我们只好从遇难者的遗体上搜寻食物。,이 숲에서 헤맨 것이 얼마나 됐을까.{@}마물에게서 도망쳤지만 이번엔 숲에서 조난하게 되다니…{@}식량도 모두 떨어졌다.{@}다른 조난자의 식량을 빼앗는 수밖에 없다.,我這片森林裡迷失了多久了呢？{@}好不容易逃離魔物的追殺，如今又深陷這片森林……{@}糧食消耗殆盡，我只能從其他遇難者身上搶奪食物。
+黄昏の洋館メモ,"One of our researchers was killed by a synthetic beast today. {@}Modern technology could not control the man-made weapon...{@}This laboratory will be abandoned once and for all.{@}I leave hope for the next generation.{@}A.D. 2099, Artificial Life Research Institute, Director Boid.",今日も合成獣により研究員の一人が殺害された{@}現代の技術では人造兵器をコントロールすることは出来なかった{@}この研究所はただ今をもって放棄する{@}次の世代に望みを託す{@}A.D.2099 人工生命研究所長 ボイド,今天我们一名研究人员遭到了合成兽的杀害。{@}现代技术还无法掌控人造兵器。{@}这家研究所彻底废弃了。{@}我只能寄希望于下一代了。{@}A.D.2099 人工生命研究所长 博伊德,오늘도 연구원 한 명이 합성수에게 살해당했다.{@}현대의 기술로는 인조병기를 조종할 수 없었다.{@}이 연구소는 포기한다.{@}다음 세대에게 맡기겠다.{@}A.D.2099 인공생명연구소장 보이드,今天也有一名研究人員遭到了合成獸的殺害。{@}現代技術還無法掌控人造兵器。{@}這家研究所徹底廢棄了。{@}我只能將希望寄託於下一代了。{@}A.D.2099 人工生命研究所長 博伊德
+濃霧の古戦場メモ,"I can beat these guys if I hit them, and they're not ghosts... {@}It's okay if I call myself a psychic medium because it'll make it easier to get a job... {@}Let's beat them quickly and get the money and go home... {@}I can't believe humans used to fight each other.",こいつら叩けば倒せるし、幽霊じゃないよなぁ{@}霊媒師って名乗れば仕事とりやすいからいいけどさ{@}さっさと倒して金貰って帰ろう{@}昔は人間同士で争っていたなんて信じられないよ,"这些家伙我还是能够应付的，他们不是幽灵。{@}如果自称灵媒师就好了，因为这样可以更容易找到工作。{@}赶紧解决它们，拿完钱回家。{@}我无法相信昔日的人类会互相残杀。""",이 녀석들 때리면 죽는 걸 보니 유령은 아닌 것 같아.{@}영매사라고 하면 일을 구하기 쉬우니까 좋긴한데{@}빨리 해치워서 보수 받고 돌아가자.{@}옛날엔 사람들끼리 싸웠다는게 안 믿겨져.,這些傢伙我還是能夠應付的，他們不是幽靈。{@}如果自稱靈媒師就好了，因為這樣可以更容易找到工作。{@}趕緊解決它們，拿完錢回家。{@}我不敢相信昔日的人類會互相殘殺。
+朽ちかけた紙切れ,Decaying piece of paper,朽ちかけた紙切れ,腐烂的纸片,썩은 종이 조각을,腐爛的紙片
+発見済のキーワード,Discovered keywords,発見済のキーワード,发现的关键字,발견된 키워드,發現的關鍵字
+朽ちかけた紙切れ 1,Decaying piece of paper 1,朽ちかけた紙切れ 1,腐烂的纸片 1,썩은 종이 조각을 1,腐爛的紙片 1
+朽ちかけた紙切れ 2,Decaying piece of paper 2,朽ちかけた紙切れ 2,腐烂的纸片 2,썩은 종이 조각을 2,腐爛的紙片 2
+朽ちかけた紙切れ 3,Decaying piece of paper 3,朽ちかけた紙切れ 3,腐烂的纸片 3,썩은 종이 조각을 3,腐爛的紙片 3
+朽ちかけた紙切れ 4,Decaying piece of paper 4,朽ちかけた紙切れ 4,腐烂的纸片 4,썩은 종이 조각을 4,腐爛的紙片 4
+朽ちかけた紙切れを見つけた,Found a decaying piece of paper.,朽ちかけた紙切れを見つけた,发现腐烂的纸片,썩은 종이 조각을 발견했다,發現了腐爛的紙片
+かすれた手書きの文字が書かれている,Faint handwriting is written on it.,かすれた手書きの文字が書かれている,上面的字迹早已模糊不清,희미한 손 글씨가 쓰여있다,上面的字跡早已模糊不清
+文字を読んだとたん、紙切れは朽ち落ちてしまった,"As soon as read the words, the piece of paper fell into decay.",文字を読んだとたん、紙切れは朽ち落ちてしまった,刚要阅读文字，纸片就化为了灰烬,글씨를 모두 읽자 종이 조각이 부서져 버렸다,剛要閱讀文字，紙片就化為了灰燼
+書類の束を見つけた,Found a bundle of papers.,書類の束を見つけた,发现一沓文件,서류 더미를 찾았다.,發現了一沓文件
+床に散乱する書類の中から数枚を拾い上げた,Picked up a few sheets from the papers scattered on the floor.,床に散乱する書類の中から数枚を拾い上げた,捡起几张散乱在楼层的纸张,바닥에 흩어진 서류 중에서 몇 장을 집어 들었다,從散落在地板上的文件中撿起幾張
+戦況報告書A.D.2195,"“War report, A.D.2195”",“戦況報告書　A.D.2195”,“战况报告书　A.D.2195”,“전황 보고서　A.D.2195”,“戰況報告書　A.D.2195“
+戦況報告書A.D.2195内容,"We have suffered many casualties in our battles with the demon race, and with most of the earth taken by the demon race, we humans spend our days hiding in The Rift of Dimension... {@}In order to reverse this overwhelming disadvantage, we will concentrate all of our national power into developing battle androids.{@}And let them fight in place of humans, and reclaim our earth!",これまでに魔族との戦いでたくさんの犠牲者を出してきました{@}地上の大半を魔族に奪われ、我々人類は次元の裂け目に潜む日々…{@}圧倒的不利なこの状況を覆すため、国力の全てを戦闘用アンドロイドの開発に集中させます{@}そしてアンドロイドを人類の代わりに戦わせ、我々の地上を取り戻すのです,我们在与魔族的战争中伤亡惨重{@}它们已经占领了地球的大部分地区，而我们人类则终日躲在次元的裂缝中...{@}为了扭转这种压倒性的劣势，我们将举国之力开发战斗机器人，{@}让它们代表我们战斗，帮助我们夺回我们的地球!,지금까지 마족과의 전투로 많은 희생자가 나왔습니다.{@}지상의 대부분을 마족에게 빼앗기고 차원의 균열에 숨어 사는 나날…{@}압도적으로 불리한 상황을 뒤집기위해 모든 국력을 전투용 안드로이드 개발에 집중하겠습니다.{@}그리고 안드로이드에게 인류 대신 싸우게 하고 지상을 되찾겠습니다.,至今為止，我們在與魔族的戰爭中傷亡慘重{@}它們已經占領了地球的大部分地區，而我們人類則終日躲在次元的裂縫中……{@}為了扭轉這種壓倒性的劣勢，我們將集中國力開發戰鬥機器人，{@}讓它們代替人類戰鬥，幫助我們奪回地球！
+戦況報告書A.D.2200,"“War report, A.D.2200”",“戦況報告書　A.D.2200”,“战况报告书　A.D.2200”,“전황 보고서　A.D.2200”,“戰況報告書　A.D.2200“
+戦況報告書A.D.2200内容,"We have finally succeeded in developing a combat android.{@}Although it is still only a prototype, it has a fighting ability that exceeds that of humans and a high learning capacity.{@}If we can mass produce it, our long war against the demon race will end in victory for humanity.{@}The first android will be named “Teba” after the first king.{@}We plan to put Teba through all kinds of stress tests in preparation for future mass production.",ついに、戦闘用アンドロイドの開発に成功いたしました{@}まだプロトタイプではありますが、人間を超える戦闘力と高い学習能力を備えます{@}これを量産することができれば、長きにわたる魔族との戦いも、我々人類の勝利で終わるでしょう{@}最初のアンドロイドの名前は、初代王の名前をとり、『テバ』と名付けます{@}これから将来の量産化に向けて、テバにはありとあらゆる負荷テストを行う予定です,"我们终于成功地开发出了战斗机器人{@}虽然它还是一个原型，但它的战斗力比人类强，而且有很强的学习能力{@}如果我们能大规模生产，与魔族的持久战将以我们人类的胜利而告终{@}初代机器人将以第一个国王的名字命名为""Teba""{@}我们将Teba经历各种压力测试，为将来的大规模生产做准备。",드디어 전투용 안드로이드 개발에 성공했습니다.{@}프로토타입에 지나지 않지만 인간을 뛰어 넘는 전투력과 학습 능력을 갖추고 있습니다.{@}이것을 양산할 수 있으면 오랜 마족과의 싸움도 우리 인류의 승리로 끝날 것입니다.{@}첫 안드로이드의 이름을 초대 왕을 따라 『테바』 라고 짓겠습니다.{@}앞으로의 양산화를 위해 테바에게 온갖 부하 테스트를 실시할 예정입니다.,我們終於成功地開發出了戰鬥機器人{@}雖然還是原型，但具有超越人類的戰鬥力和強大的學習能力{@}如果能量產的話，那麼與魔族曠日持久的戰爭也將以我們人類的勝利而告終{@}第一個機器人的名字，取自第一位國王的名字，命名為『Teba』{@}為了未來的量產，我們計畫對 Teba 進行所有可能的負載測試。
+戦況報告書A.D.2203,"“War report, A.D.2203”",“戦況報告書　A.D.2203”,“战况报告书　A.D.2203”,“전황 보고서　A.D.2203”,“戰況報告書　A.D.2203”
+戦況報告書A.D.2203内容,"After several years of stress testing Teba, we were ready to put the android into mass production.{@}During the stress testing, Teba showed signs of aggression towards the guards, so we had to give it a few electric shocks.{@}As a precaution, a chip has been implanted in Teba to make it incapable of attacking humans.",数年にわたるテバの負荷テストが完了し、アンドロイド量産化の準備が整いました{@}負荷テストの最中、テバが監視員に対して攻撃的な態度を示したので、制電を数回行いました{@}再発防止策として、テバにはチップを埋め込み、人間を攻撃をできないように改良してあります,经过多年的负载测试，我们已经准备好进行大规模生产Teba。{@}在负载测试中，Teba对监视员表现出攻击性，所以我们给它做了多次电击。{@}为了防止这种情况再次发生，我们在它身上植入了芯片，使它不能攻击人类。,수년에 걸친 테바의 부하 테스트가 완료되어 안드로이드를 양산할 준비가 되었습니다.{@}부하 테스트 도중 테바가 감시원에게 공격적인 태도를 보였기때문에 몇 차례 전기 충격을 주었습니다.{@}재발방지책으로 테바에게 칩을 심어 인간을 공격할 수 없도록 개선했습니다.,經過多年的 Teba 負載測試，我們已準備好開始大規模生產機器人{@}在負載測試期間，由於 Teba 對觀察員表現出攻擊性，我們進行了幾次電力控制{@}為了防止這種情況再次發生，我們在 Teba 中植入了晶片，並對其進行了改良，使其無法攻擊人類。
+戦況報告書A.D.2205,"“War report, A.D.2205”",“戦況報告書　A.D.2205”,“战况报告书　A.D.2205”,“전황 보고서　A.D.2205”,“戰況報告書　A.D.2205”
+戦況報告書A.D.2205内容,"The mass-produced androids currently in production have been found to have a flaw. {@}Due to a storage malfunction, they are unable to continue to store memories and are unable to act autonomously. {@}It seems that reducing the cost of parts for mass production has been a detriment. {@}However, by writing Teba's learned data into ROM and using humans to give precise instructions, it could be operated as a pure combat machine.",現在生産中の量産型アンドロイドに欠陥が見つかりました{@}ストレージの不具合により記憶の継続が行えず、自律行動が出来ないようです{@}量産化のため部品のコストを削減したことが仇になったようです{@}しかしテバの学習済データをROMに書き込み、人間が的確な指示を出すことで、純粋な戦闘機体として運用できるでしょう{@}人類勝利の時まで、安心してお待ちください,我们发现目前批量生产的机器人有个缺陷。{@}由于存储问题，它们不能继续存储记忆，这意味着它们不能自主行动。{@}这是因量产而削减零件成本带来的弊端吧。{@}但是，如果把Teba的学习数据写入ROM，并由人类发出正确的指令，它们就可以作为纯战斗机器来操作了。{@}请安心等待人类的胜利时刻吧。,현재 생산 중인 양산 안드로이드에게 결함이 발견되었습니다.{@}저장장치의 오류로 기억을 유지하지 못해 자율 행동이 불가능한 것 같습니다.{@}양산을 위한 비용 절감이 원인으로 보입니다.{@}하지만 테바의 학습 데이터를 ROM에 입력하고 인간이 정확한 지시를 내리면 순수한 전투 기체로 운용할 수 있을 것입니다.{@}안심하고 인류의 승리를 기다려 주십시오.,我們發現目前正在生產的量產型機器人存在缺陷。{@}由於記憶體故障，無法繼續進行記憶，因此無法自主行動。{@}這是為了實現量產而削減零件的成本，所帶來的弊端。{@}但是如果把 Teba 的訓練資料寫入 ROM，並且由人類給出正確的指令，就可以把它作為一個純粹的戰鬥機器來使用吧。{@}請安心等待人類勝利的時刻到來。
+真新しい紙切れを見つけた,Found a brand new scrap of paper,真新しい紙切れを見つけた,找到一张崭新的纸片,새 종이 조각을 발견했다,找到一張嶄新的紙片
+生存者の日記,Survivor's Diary,生存者の日記,幸存者的日记,생존자의 일기,幸存者的日記
+生存者の日記内容1,"A.D. 2214... Uh, what day is it today?",A.D.2214...ええと、今日は何日だっけ,A.D.2214年...呃，今天是几号来着？,"서기 2214년... 음, 오늘은 몇 일이지?",公元2214年...呃，今天是幾號來著？
+生存者の日記内容2,"Ah, why do I have to go through this...{@}While I was in class, suddenly monsters appeared in the castle, and some of my classmates... Ah, I don't want to remember!{@}I had only seen monsters in history textbooks before{@}I ran and ran mindlessly, and when I realized it, I was in this grassland",あぁなんでぼくがこんな目に...{@}授業を受けていたらいきなり城に魔物が現れて、何人かのクラスメイトが...あぁ思い出したくない!{@}魔物なんて歴史の教科書でしか見たことなかったのに{@}ぼくは無我夢中で逃げて逃げて逃げ続けて、気付いたらこの草原にいた,啊，为什么我要遭遇这些...{@}当我在上课时，突然有怪物出现在城堡里，一些同学...啊，我不想回忆！{@}以前我只在历史课本上看到过怪物{@}我不顾一切地逃跑，当我意识到时，我已经在这片草原上,"아, 왜 나만 이런 일을 겪어야 하나...{@}수업을 받고 있었는데 갑자기 성에 괴물이 나타나서 몇몇 동창생들이... 아, 생각하고 싶지 않아!{@}괴물은 역사 교과서에서만 봤었는데{@}나는 정신없이 도망쳐서, 깨달았을 때는 이 초원에 있었다",啊，為什麼我要遭遇這些...{@}當我在上課時，突然有怪物出現在城堡裡，一些同學...啊，我不想回憶！{@}以前我只在歷史課本上看到過怪物{@}我不顧一切地逃跑，當我意識到時，我已經在這片草原上
+生存者の日記内容3,"The fog is getting thicker... Maybe it's because I ran too much, my head hurts{@}The guys who ended up here like me left a few hours ago{@}It might be pointless to wait for help here{@}{@}They said they were making a base underground...{@}I need to catch up with them before nightfall... Ah, my head hurts",霧が濃くなってきた...走りすぎたせいか頭も痛い{@}ぼくと同じくここに辿り着いた奴らは、数時間前に旅立って行った{@}ここで助けを待っていても無駄かもしれない{@}{@}あいつらはたしか、地下に拠点を作ると言っていた...{@}夜になる前に早くあいつらに追いつかないと...あぁ頭が痛い,雾越来越浓...可能是因为跑得太多，头也疼了{@}和我一样到达这里的家伙们几小时前就离开了。{@}在这里等待救援可能是徒劳的。{@}{@}他们说过要在地下建立基地...{@}得在天黑前赶上他们...啊，头疼。,"안개가 짙어지고 있다... 너무 많이 뛰어서인지 머리도 아프다{@}나처럼 이곳에 도착한 녀석들은 몇 시간 전에 떠났다{@}여기서 도움을 기다리는 건 헛될지도 모른다{@}{@}그들은 지하에 기지를 만들기로 했다고 했다...{@}밤이 되기 전에 그들을 따라잡아야 해... 아, 머리가 아파",霧越來越濃...可能是因為跑得太多，頭也疼了{@}和我一樣到達這裡的傢伙們幾小時前就離開了{@}在這裡等待救援可能是徒勞的{@}{@}他們說過要在地下建立基地...{@}得在天黑前趕上他們...啊，頭疼
+看守の回想,Guard's Recollection,看守の回想,看守的回忆,경비원의 회상,看守的回憶
+看守の回想内容1,"A few hours before the kingdom's collapse, the monitoring system detected that Teba had switched to combat mode{@}Thanks to that, I was able to quickly realize the danger and help as many people from the castle escape as possible{@}...By now, Teba is probably learning from the fight with the monsters and getting stronger{@}{@}Before thinking about anything unnecessary, the first priority is to get out of this forest",王国崩壊の数時間前、テバが戦闘モードに切り替わったことを監視システムが検知した{@}そのおかげで私は危険にいち早く気付き、できる限り城の人々を逃すことができた{@}...今頃テバは、魔物との戦闘を学習しさらに強くなっているのだろうか{@}{@}余計なことを考える前にまずはこの森を抜け出すことが先決だ,王国崩溃前几小时，监控系统检测到Teba切换到战斗模式。{@}多亏了那一刻，我迅速意识到了危险，并尽可能帮助城堡里的人们逃离。{@}...现在，Teba可能正在从与怪物的战斗中学习并变得更强。{@}{@}在考虑任何不必要的事情之前，首先要做的是走出这片森林。,"왕국 붕괴 몇 시간 전, 감시 시스템이 테바가 전투 모드로 전환된 것을 감지했다{@}그 덕분에 위험을 빨리 인식하고 성 안의 사람들을 가능한 한 많이 탈출시킬 수 있었다{@}...지금쯤 테바는 괴물과의 싸움에서 배우며 더욱 강해지고 있을 것이다{@}{@}필요 없는 생각을 하기 전에 우선 이 숲을 빠져나가는 것이 급선무다",王國崩潰前幾小時，監控系統檢測到Teba切換到戰鬥模式{@}多虧了那一刻，我迅速意識到了危險，並盡可能幫助城堡裡的人們逃離{@}...現在，Teba可能正在從與怪物的戰鬥中學習並變得更強{@}{@}在考慮任何不必要的事情之前，首先要做的是走出這片森林
+看守の回想内容2,"...However, the purple flowers spread out before me are so beautiful that they don't seem real{@}For me, who has always lived surrounded by castle walls, this scenery is too vivid",...しかし、いま目の前に広がる紫色の花々は、現実とは思えないほど美しい{@}生まれてからずっと城壁に囲まれて過ごしてきた私にとっては、この景色は鮮やかすぎる,...然而，眼前展开的紫色花朵，美得让人难以置信。{@}对于我这个一直生活在城墙围绕中的人来说，这风景太过亮丽。,"...하지만, 지금 눈앞에 펼쳐진 자주색 꽃들은 현실이라고 믿기 어려울 정도로 아름답다{@}태어나서 계속 성벽에 둘러싸여 살아온 나에게 이 풍경은 너무도 선명하다",...然而，眼前展開的紫色花朵，美得讓人難以置信{@}對於我這個一直生活在城牆圍繞中的人來說，這風景太過生動
+生き残るために、Vault-0へ,"To survive, to Vault-0",生き残るために、Vault-0へ,为了生存，前往『Vault-0』,"생존을 위해, Vault-0으로",為了生存，前往Vault-0
+生き残るために、Vault-0へ内容,"To all survivors{@}{@}We have created a shelter called 'Vault-0' deep in the depths of a cave{@}{@}Here, comrades who have escaped from monsters are gathered{@}Together, we support each other and are building a new life{@}{@}Vault-0 welcomes you, the survivor{@}May this place become your new home{@}{@}Representative of Vault-0, Airam",生存者の皆さまへ{@}{@}私たちは、深い洞穴の奥底に『Vault-0』というシェルターを作りました{@}{@}ここには魔物から逃れてきた仲間達がいます{@}共に支え合い、新しい生活を築いていこうとしています{@}{@}Vault-0は生存者のあなたを歓迎します{@}ここが、あなたの新しい家となりますように{@}{@}Vault-0 代表 アイラム,生存者的各位，{@}{@}我们在一个深洞中建立了名为『Vault-0』的避难所。{@}{@}这里聚集了逃离怪物的同伴们，{@}我们共同支持彼此，建立新的生活。{@}{@}『Vault-0』欢迎您，生存者。{@}愿这成为您的新家！{@}{@}『Vault-0』代表 Airam,생존자 여러분께{@}{@}우리는 깊은 동굴의 심연에 'Vault-0'이라는 쉘터를 만들었습니다{@}{@}여기에는 괴물로부터 도망친 동료들이 모여 있습니다{@}함께 서로를 지지하며 새로운 생활을 만들어 가고 있습니다{@}{@}Vault-0은 생존자 여러분을 환영합니다{@}이곳이 여러분의 새로운 집이 되기를 바랍니다{@}{@}Vault-0 대표 아이람,生存者的各位{@}{@}我們在一個深洞中建立了名為“Vault-0”的避難所{@}{@}這裡聚集了逃離怪物的同伴們{@}我們共同支持彼此，正在建立新的生活{@}{@}Vault-0歡迎您，生存者{@}願這成為您的新家{@}{@}Vault-0代表 Airam
+瘴気中毒に関する研究報告,Research Report on Miasma Poisoning,瘴気中毒に関する研究報告,瘴气中毒研究报告,장기 중독에 관한 연구 보고,瘴氣中毒研究報告
+瘴気中毒に関する研究報告内容1,"The miasma emitted by the recently discovered ore 'Unobtanium' is being utilized as a new energy source in engineering. However, it has been found that inhalation by humans can lead to the following health damages",近年見つかった鉱石『アンオブタニウム』が発する瘴気は、新たなエネルギー源として工学的な利用が進んでいます。しかし一方、人体が吸い込むことで以下のような健康被害が現れることが分かっています,近年发现的『超导矿石』（Unobtanium）发出的瘴气正在作为一种新的能源在工程上被利用。然而，另一方面，人体吸入后已知会出现以下健康损害。,"최근 발견된 광석 '언옵타늄'이 방출하는 장기는 새로운 에너지원으로 공학적으로 활용되고 있습니다. 그러나 한편으로, 인체가 흡입함으로써 다음과 같은 건강 피해가 나타나는 것으로 알려져 있습니다",近年發現的礦石‘安奧布坦尼姆’發出的瘴氣正在作為一種新的能源在工程上被利用。然而，另一方面，人體吸入後已知會出現以下健康損害
+瘴気中毒に関する研究報告内容2,"Stage 1: Central nervous system dysfunction period{@}Symptoms include headache, loss of appetite, and memory impairment. Complete recovery is possible at this stage by cutting off contact with the miasma",第1期 中枢神経系への機能障害の時期{@}頭痛、食欲の低下、記憶力の低下等の症状がみられます。この段階ならば瘴気との接触を絶つことで完治可能です,第一阶段：中枢神经系统功能障碍期{@}症状包括头痛、食欲下降、记忆力下降等。在这个阶段，切断与瘴气的接触可以完全治愈。,"제1기: 중추신경계 기능 장애 시기{@}두통, 식욕 저하, 기억력 저하 등의 증상이 나타납니다. 이 단계에서는 장기와의 접촉을 끊음으로써 완치가 가능합니다",第一階段：中樞神經系統功能障礙期{@}症狀包括頭痛、食慾下降、記憶力下降等。在這個階段，切斷與瘴氣的接觸可以完全治愈
+瘴気中毒に関する研究報告内容3,"Stage 2: Toxic encephalopathy period{@}Symptoms include reduced facial expression, walking disability, and speech disorders",第2期 中毒性脳症の時期{@}表情減退、歩行障害、言語障害等の症状がみられます,第二阶段：中毒性脑症期{@}症状包括表情减退、行走障碍、语言障碍等。,"제2기: 독성 뇌병증 시기{@}표정 감퇴, 보행 장애, 언어 장애 등의 증상이 나타납니다",第二階段：中毒性腦症期{@}症狀包括表情減退、行走障礙、語言障礙等
+瘴気中毒に関する研究報告内容4,Stage 3: Initial mutation{@}Symptoms include reduced intelligence and limb mutations. Recovery is difficult once this stage is reached,第3期 初期変異{@}知能の低下、四肢の変異等の症状がみられます。この段階に達すると回復は困難です,第三阶段：初期变异{@}症状包括智能下降、肢体变异等。一旦达到这个阶段，恢复将是困难的。,"제3기: 초기 변이{@}지능 저하, 사지 변이 등의 증상이 나타납니다. 이 단계에 도달하면 회복이 어렵습니다",第三階段：初期變異{@}症狀包括智能下降、肢體變異等。一旦達到這個階段，恢復將是困難的
+瘴気中毒に関する研究報告内容5,"Stage 4: Final mutation{@}Symptoms include loss of intellect, complete mutation and enlargement of the entire body. The hardness of the mutated parts is proportional to the amount of miasma accumulated",第4期 末期変異{@}知性の消失、全身の完全変異および肥大化がみられます。変異部位の硬度は瘴気の蓄積量に比例します,第四阶段：末期变异{@}症状包括智性消失、全身的完全变异及肥大。变异部位的硬度与瘴气的积累量成比例。,"제4기: 말기 변이{@}지성의 상실, 전신의 완전 변이 및 비대가 나타납니다. 변이 부위의 경도는 장기 축적량에 비례합니다",第四階段：末期變異{@}症狀包括智性消失、全身的完全變異及肥大。變異部位的硬度與瘴氣的積累量成比例
+合成獣に関する研究報告,Effects and Promotion of Synthetic Beast Research,合成獣研究の効果と推進,合成兽研究的效果与推进,합성수 연구의 효과 및 추진,合成獸研究的效果與推進
+合成獣に関する研究報告内容1,"In the latest miasma research, studies on 'Synthetic Beasts' artificially created from individuals in the fourth stage of miasma poisoning are being advanced{@}Among the synthetic beasts, especially dangerous individuals are called 'Juggernauts', feared among researchers for their overwhelming power and uncontrollable nature{@}However, the robust musculature and environmental adaptability of the Juggernauts will greatly contribute to the advancement of medicine, pharmacology, and biology",最新の瘴気研究において、瘴気中毒第4期の個体同士を人工的に合成させた『合成獣』の研究が進められています{@}合成獣の中でも、特に危険度の高い個体は『ジャガーノート』と呼ばれ、その圧倒的な力と制御不能な性質から、研究者たちの間で恐れられています{@}しかし、ジャガーノートの持つ丈夫な筋骨および環境適応能力は、医学・薬学・生物学の発展に大きく寄与するでしょう,在最新的瘴气研究中，我们正在推进将瘴气中毒第四阶段的个体人工合成的『合成兽』的研究。{@}在合成兽中，特别是危险度高的个体被称为『Juggernaut』，因其压倒性的力量和无法控制的性质而被研究者们所畏惧。{@}然而，Juggernaut的坚固肌肉和环境适应能力将极大地促进医学、药学和生物学的发展。,"최신의 장기 연구에서는, 장기 중독 4기 개체들을 인공적으로 합성하여 '합성수' 연구가 진행되고 있습니다{@}합성수 중에서도 특히 위험도가 높은 개체는 '자가노트'라 불리며, 그 압도적인 힘과 제어할 수 없는 성질로 연구자들 사이에서 두려움의 대상이 되고 있습니다{@}그러나, 자가노트가 가진 튼튼한 근골과 환경 적응력은 의학, 약학, 생물학의 발전에 크게 기여할 것입니다",在最新的瘴氣研究中，正在推進將瘴氣中毒第四期的個體人工合成的‘合成獸’的研究{@}在合成獸中，特別是危險度高的個體被稱為‘Juggernaut’，因其壓倒性的力量和無法控制的性質而被研究者們所畏懼{@}然而，Juggernaut的堅固肌肉和環境適應能力將極大地促進醫學、藥學和生物學的發展
+合成獣に関する研究報告内容2,"...{@}For these reasons, we strongly request an increase in budget for the Artificial Life Research Institute, especially for the research on synthetic beasts, particularly Juggernauts{@}We are confident that this research will greatly contribute to the future of humanity",...{@}以上の理由から、我々は人工生命研究所に対し、合成獣、特にジャガーノートの研究を推進するための予算増額を強く求めます{@}この研究が人類の未来に大きく貢献することを確信しています,...{@}基于以上原因，我们强烈要求对人工生命研究所，特别是合成兽，尤其是Juggernaut的研究增加预算。{@}我们相信这项研究将极大地贡献于人类的未来。,"...{@}이상의 이유로, 우리는 인공생명 연구소에 대해, 합성수, 특히 자가노트 연구를 위한 예산 증액을 강력히 요구합니다{@}이 연구가 인류의 미래에 크게 기여할 것임을 확신합니다",...{@}基於以上原因，我們強烈要求對人工生命研究所，特別是合成獸，尤其是Juggernaut的研究增加預算{@}我們相信這項研究將極大地貢獻於人類的未來
+アンオブタニウム,Unobtanium,アンオブタニウム,超导矿石（Unobtanium）,언옵타늄,安奧布坦尼姆
+よくわかる鉱物図鑑,"Well-understood Mineral Guide, July Edition",よくわかる鉱物図鑑7月号,易于理解的矿物图鉴7月号,잘 이해되는 광물 도감 7월호,易於理解的礦物圖鑑7月號
+よくわかる鉱物図鑑内容,"In a certain country, an ancient battlefield. This place became the stage for humanity's final war{@} The nuclear wars of the 2050s left deep scars on humanity but also brought about a 'miracle' that advanced scientific development{@} The ore 'Obtanium' mined here, altered by radiation, began emitting a mist-like gas{@} This is the miraculous mineral 'Unobtanium'{@} Later, humanity succeeded in creating a perpetual motion machine using Unobtanium as a catalyst{@} July 2070 issue",某国、古戦場。ここは人類の最終戦争の舞台となった場所です{@}A.D.2050年代に起きた核戦争は人類に大きな傷跡を残しましたが、同時に科学の発展に進歩をもたらす『奇跡』を生みました{@}ここで採掘される鉱石『オブタニウム』が放射線の影響で性質変化し、霧状の気体を放つようになりました{@}これが奇跡の鉱物『アンオブタニウム』です{@}後に人類は、アンオブタニウムを触媒とした永久機関を作り出すことに成功します{@}A.D.2070 7月号,某国，古战场。这里成为了人类最终战争的舞台。{@}2050年代的核战争给人类留下了深刻的创伤，同时也带来了推动科学发展的“奇迹”。{@}这里开采的『超导矿石』因辐射影响发生了性质变化，开始释放雾状气体。{@}这就是奇迹矿物Unobtanium。{@}后来，人类成功制造了使用超导矿石作为催化剂的永动机。{@}A.D.2070年7月号,"어느 나라, 고대 전쟁터. 이곳은 인류의 최종 전쟁 무대가 되었습니다{@}2050년대에 일어난 핵전쟁은 인류에게 큰 상처를 남겼지만, 동시에 과학 발전을 촉진하는 '기적'을 가져왔습니다{@}여기서 채굴된 '옵타늄' 광석은 방사능의 영향으로 성질이 변하여 안개 모양의 기체를 방출하기 시작했습니다{@}이것이 기적의 광물 '언옵타늄'입니다{@}나중에 인류는 언옵타늄을 촉매로 사용하여 영구 기관을 만드는 데 성공했습니다{@}2070년 7월호",某國，古戰場。這裡成為了人類最終戰爭的舞台{@}2050年代的核戰爭給人類留下了深刻的創傷，同時也帶來了推動科學發展的「奇蹟」{@}這裡開採的「奧布坦尼姆」礦石因輻射影響發生了性質變化，開始釋放霧狀氣體{@}這就是奇蹟礦物「安奧布坦尼姆」{@}後來，人類成功製造了使用安奧布坦尼姆作為催化劑的永動機{@}2070年7月號
+初代王の遺書,The First King's Testament,初代王の遺書,第一代国王的遗书,첫 번째 왕의 유언,第一代國王的遺書
+初代王の遺書内容1,"We humans have lost everything due to our own mistakes{@} Fortunately, this gate remains{@} Beyond it, we may no longer see the lush greenery and colorful flowers that were once taken for granted{@} Yet, this is the only means left for humanity to survive{@} Hoping that one day humanity will reclaim this land...",我々人類は自らの過ちによって全てを失った{@}しかしこの扉が残ったのは幸いだった{@}扉の先では、今まで当たり前のように存在した青々とした草木や、色とりどりの花々を目にすることはできないだろう{@}しかし人類が生き延びるための手段はこれしか残されていない{@}人類がいつの日かこの大地を取り戻すことを願っている...,我们人类因自己的错误失去了一切，{@}但幸运的是这扇门还在。{@}门的另一边，我们可能再也看不到曾经司空见惯的繁茂绿植和五彩斑斓的花朵。{@}然而，这是人类生存下去的唯一手段。{@}希望有一天人类能够夺回这片土地...,우리 인류는 자신의 실수로 모든 것을 잃었습니다{@}하지만 다행히 이 문은 남아 있었습니다{@}문 너머에서는 이제 당연하게 존재했던 푸른 식물과 다채로운 꽃들을 볼 수 없을 것입니다{@}하지만 인류가 살아남기 위한 수단은 이것밖에 남지 않았습니다{@}언젠가 인류가 이 땅을 되찾을 수 있기를 바라며...,我們人類因自己的錯誤失去了一切{@}但幸運的是這扇門還在{@}門的另一邊，我們可能再也看不到曾經司空見慣的繁茂綠植和五彩繽紛的花朵{@}然而，這是人類生存下去的唯一手段{@}希望有一天人類能夠奪回這片土地...
+初代王の遺書内容2,"Now, it is my duty as the king to protect this gate{@} Any demons that approach will become rust on my scythe",さて、扉を守るのは王である私の役目だ{@}扉に近づく魔物は私の鎌の錆びにしてやろう,现在，保护这扇门，作为国王的我责无旁贷。{@}靠近这扇门的魔物，都将成为我镰刀下的锈迹。,"자, 문을 지키는 것은 왕으로서 나의 임무입니다{@}문에 접근하는 악마들은 내 낫의 녹이 될 것입니다",現在，保護這扇門是作為國王的我責無旁貸{@}靠近這扇門的魔物，我會讓它們變成我的鐮刀的鏽跡
+テバの基本性能,Teba's Basic Capabilities,テバの基本性能,Teba的基本性能,테바의 기본 성능,Teba的基本性能
+テバの基本性能内容1,"Teba, the first android with self-learning capabilities, was developed based on the behavioral data of our nation's first king{@} Its capabilities are specialized in combat, and it enhances its attack abilities through repeated learning from battles with others",テバは自己学習機能を備えたアンドロイドの初号機であり、我が国の初代王の行動データを元に開発された{@}テバの能力は戦闘に特化されており、他者との戦闘を繰り返し学習することで、攻撃能力を高めていくことができる,Teba是第一款配备自我学习功能的安卓机器人，基于我国第一代国王的行为数据开发。{@}它专注于战斗，通过与他人的战斗重复学习，可以提高其攻击能力。,"테바는 자가 학습 기능을 갖춘 첫 번째 안드로이드로, 우리 나라 초대 왕의 행동 데이터를 바탕으로 개발되었습니다{@}전투에 특화되어 있으며, 타인과의 전투를 반복하면서 공격 능력을 향상시킬 수 있습니다",Teba是第一款裝備自我學習功能的安卓機器人，基於我國第一代國王的行為數據開發{@}它專注於戰鬥，通過與他人的戰鬥重複學習，可以提高其攻擊能力
+テバの基本性能内容2,"Teba's special ability 'Level Up'{@} During combat, its level increases, enhancing its attack power{@} The rate of level-up is accelerating, and in recent training, it has become able to level up with each attack",テバの特殊能力『レベルアップ』{@}戦闘中にレベルが上がり、攻撃力が上昇する{@}レベルアップの速度は徐々に早まっており、直近の訓練では1回の攻撃毎にレベルを上げることが出来るようになっている,Teba的特殊能力『升级』{@}战斗中等级提升，攻击力增强。{@}升级速度逐渐加快，在最近的训练中，已经能够在每次攻击中提升等级。,"테바의 특수 능력 '레벨 업'{@}전투 중에 레벨이 상승하여 공격력이 향상됩니다{@}레벨업 속도가 점점 빨라지고 있으며, 최근 훈련에서는 각 공격마다 레벨을 올릴 수 있게 되었습니다",Teba的特殊能力「升級」{@}戰鬥中等級提升，攻擊力增強{@}升級速度逐漸加快，在最近的訓練中，已經能夠在每次攻擊中提升等級
+テバの思考,Teba's Thinking,テバの思考,Teba的思考方式,테바의 사고,Teba的思考
+テバの思考内容1,Teba was deemed unnecessary for human-like functions as it is designed to learn from combat data,テバは戦闘データを学習するための機体であるため、人間的な機能は不要であると判断された,Teba不需要具备人类般的功能，因为它是为了学习战斗数据而设计的。,"테바는 전투 데이터를 학습하기 위한 기체이기 때문에, 인간과 같은 기능은 필요 없다고 판단되었습니다",Teba被認為不需要人類般的功能，因為它是為了學習戰鬥數據而設計的
+テバの思考内容2,"However, as Teba repeatedly communicated with the people in the castle, it learned human thinking and began to imitate human emotional expressions",しかしテバが城の人間達とコミュニケーションを繰り返すうちに、人間の思考を学習し、人間の感情を模倣した言動をするようになった,然而，随着Teba与城堡里的人们反复沟通，它学习了人类的思考并开始模仿人类的情感表达。,하지만 테바가 성 안의 사람들과 반복해서 소통하면서 인간의 사고를 학습하고 인간의 감정을 모방하는 말투와 행동을 하게 되었습니다,然而，隨著Teba與城堡裡的人們反覆溝通，它學習了人類的思考並開始模仿人類的情感表達
+テバの思考内容3,"What Teba possesses as 'thoughts and emotions' are considered noise in its learning process, so it is important not to be misled by its words and actions during surveillance duties",テバがもつ『思考や感情のようなもの』は学習の過程におけるノイズであるため、監視業務においてはテバの言動に惑わされないよう注意すること,Teba所具有的『思考和情感』在其学习过程中被视为噪声，因此在监视工作中要注意不被其言行所误导。,"테바가 가진 '생각과 감정 같은 것들'은 학습 과정에서의 노이즈로 간주되므로, 감시 업무 중에는 테바의 말과 행동에 현혹되지 않도록 주의해야 합니다",Teba所具有的「思考和情感」在其學習過程中被視為噪音，因此在監視工作中要注意不被其言行所誤導
+テバの制止手段,Teba's Restraint Methods,テバの制止手段,Teba的制止手段,테바의 제지 방법,Teba的制止手段
+テバの制止手段内容1,"The chip embedded in Teba has a powerful safety lock function, enabling it to prohibit any attacks against all humanity{@} Therefore, it can be said that the daily duties of you, the overseers, are mostly free from danger",テバに埋め込まれているチップは強力なセーフティロック機能を有しており、テバの全人類に対する攻撃を禁止することができる{@}そのため、君たち監視員の日頃の業務には、危険が伴うことはほとんどないと言っていい,Teba内置的芯片具有强大的安全锁功能，可以禁止其对全人类的攻击{@}因此，可以说你们监视员的日常工作几乎不涉及危险。,"테바에 내장된 칩은 강력한 안전 잠금 기능을 갖추고 있어, 테바의 전 인류에 대한 공격을 금지할 수 있습니다{@}따라서 여러분 감시관의 일상 업무는 대부분 위험이 동반되지 않는다고 할 수 있습니다",Teba內置的晶片具有強大的安全鎖功能，可以禁止其對全人類的攻擊{@}因此，可以說你們監視員的日常工作幾乎不涉及危險
+テバの制止手段内容2,"However, you must not carelessly approach Teba while it is in combat mode{@} The range of its scythe attacks is very wide{@} The danger is apparent considering which generation of overseers you belong to",ただしテバが戦闘モードの間は無闇に近づいてはならない{@}テバの振るう鎌の攻撃範囲はとても広い{@}その危険性は、君たちが何代目の監視員かを考えれば分かるだろう,然而，当Teba处于战斗模式时，你们不得随便接近。{@}Teba挥舞的镰刀攻击范围非常广泛{@}你们也是好几代的监视员了，其危险性是不言而喻。,하지만 테바가 전투 모드일 때는 함부로 접근해서는 안 됩니다{@}테바가 휘두르는 낫의 공격 범위는 매우 넓습니다{@}여러분이 몇 대째 감시관인지를 생각하면 그 위험성을 알 수 있을 것입니다,然而，當Teba處於戰鬥模式時，你們不得無謂接近{@}Teba揮舞的鐮刀攻擊範圍非常廣泛{@}考慮到你們是哪一代監視員，其危險性是顯而易見的
+テバの制止手段内容3,"In emergencies, overseers can restrain Teba by inducing fear through whip attacks, a method Teba has been trained to respond to{@} This is why overseers are also known as 'Whipper'",緊急時に監視員がテバを制止できるように、ムチでの攻撃に対してテバが恐怖を感じるように学習させてある{@}君たち監視員が、別名『Whipper（ムチを持つ者）』と呼ばれるのはこれが由来だ,为了确保监视员在紧急情况下能够制止Teba，我们已经训练出Teba对鞭打攻击产生的恐惧感。{@}这就是你们监视员被称为『Whipper』（持鞭者）的原因。,"비상 상황에서 감시관이 테바를 제어할 수 있도록, 채찍 공격에 대해 테바가 두려움을 느끼도록 학습시켜 두었습니다{@}감시관들이 'Whipper(채찍을 든 자)'라고 불리는 이유가 여기에 있습니다",為了在緊急情況下，監視員能夠制止Teba，已經訓練Teba對鞭打攻擊感到恐懼{@}這就是你們監視員被稱為「Whipper（持鞭者）」的原因
+量産型アンドロイドの特性,Characteristics of Mass-Produced Androids,量産型アンドロイドの特性,量产型型机器人的特性,대량 생산형 안드로이드의 특성,批量生產型安卓的特性
+量産型アンドロイドの特性内容1,"Mass-produced androids are developed based on Teba's learning data{@} Unlike autonomous models like Teba, they are designed to operate in pairs with administrators to reduce costs",量産型アンドロイドはテバの学習データを元に開発されている{@}量産型アンドロイドは、コスト削減のため、テバのような自律行動型ではなく、管理者とバディを組んで運用することが想定されている,量产型机器人是基于Teba的学习数据而开发的。{@}为了降低成本，这些机器人不像Teba那样是自主行动型的，而是设计为与管理员结对操作。,"대량 생산형 안드로이드는 테바의 학습 데이터를 바탕으로 개발되었습니다{@}비용 절감을 위해, 테바처럼 자율적으로 움직이는 모델이 아니라, 관리자와 함께 운영될 것으로 예상됩니다",批量生產型安卓基於Teba的學習數據開發{@}為了降低成本，這些安卓不像Teba那樣是自主行動型的，而是設計為與管理員成對操作
+量産型アンドロイドの特性内容2,"Therefore, mass-produced androids can output combat logs in a text format that humans can interpret{@} Administrators can issue appropriate commands by analyzing these logs",そのため、量産型アンドロイドは戦闘ログを人間が解釈可能なテキスト形式で出力することができる{@}管理者はログを読み解くことで適切な指示を出すことが出来るだろう,因此，量产型机器人能够以人类可以解译的文本形式输出战斗日志{@}管理员可以通过解读这些日志发出适当的指令。,"따라서, 대량 생산형 안드로이드는 전투 로그를 인간이 해석 가능한 텍스트 형식으로 출력할 수 있습니다{@}관리자는 이 로그를 해석함으로써 적절한 지시를 내릴 수 있을 것입니다",因此，批量生產型安卓能夠以人類可以解釋的文字格式輸出戰鬥日誌{@}管理員可以通過解讀這些日誌發出適當的指令
+号外,Extra Edition A.D. 2207 Winter,号外 A.D.2207 冬,号外 A.D.2207 冬,호외 A.D.2207 겨울,號外 A.D.2207 冬
+号外内容1,'The Future Crossroads - The Fate of the Android Development Budget',「未来の分岐点―アンドロイド開発予算の行方」,「未来的分岐点——机器人开发预算的去向」,'미래의 분기점 - 안드로이드 개발 예산의 향방',「未來的分岐點——安卓開發預算的去向」
+号外内容2,"The sudden demise of the previous king has enveloped the kingdom in chaos and sorrow{@}{@}The late king had positioned the reconquest of the surface as a fervent aspiration of the kingdom, and had been promoting android development as a trump card{@}The development was reaching its climax, with the design of mass-produced androids completed and set to enter production next year{@}{@}However, the accession of the new king has cast dark clouds over the future of this project",先王陛下の突然の崩御により、王国は混乱と悲しみに包まれています{@}{@}先王陛下は、地上奪還を王国の悲願と位置づけ、その切り札としてアンドロイド開発を推進してこられました{@}開発も佳境に入っており、量産型アンドロイドの設計が完了し、来年から量産体制に入るところでした{@}{@}しかし、新王の即位により、そのプロジェクトの行方に暗雲が立ち込めています,先王突然驾崩，王国陷入混乱与悲伤中。{@}{@}先王将夺回地面定为王国的夙愿，推动机器人开发作为实现这一目标的王牌。{@}开发已进入高潮，量产型机器人的设计已完成，并计划明年开始生产{@}{@}然而，新王的即位给该项目的前景蒙上了阴影。,"이전 왕의 갑작스런 서거로 인해 왕국은 혼란과 슬픔에 휩싸였습니다{@}{@}고 왕은 지상 재탈환을 왕국의 염원으로 위치 지으며, 그 핵심 카드로 안드로이드 개발을 추진했습니다{@}개발은 고비에 이르렀고, 대량 생산형 안드로이드의 설계가 완료되어 내년부터 생산에 들어갈 예정이었습니다{@}{@}그러나 새 왕의 즉위로 인해 이 프로젝트의 미래에 어두운 구름이 드리워졌습니다",先王突然駕崩，王國陷入混亂與悲傷中{@}{@}故王將地面奪回定位為王國的熱望，並推動了作為王牌的安卓開發{@}開發已進入高潮，批量生產型安卓的設計已完成，並計劃明年開始生產{@}{@}然而，新王的即位給該項目的前景蒙上了陰影
+号外内容3,"In his accession speech, the new king vowed to carry on the legacy of his predecessor, yet according to insiders, he has been skeptical about android development{@} An anonymous court insider stated, 'The new king seems more interested in the budget size than the military significance of android development'{@} Indeed, before his accession, the new king had been advancing plans for the construction of a lavish new royal palace, reportedly targeting the android development budget as a funding source",即位の辞で、新王は先王の遺志を継承することを誓いましたが、宮中の関係者によると、新王は以前からアンドロイド開発に懐疑的だったと言います。{@}ある宮中関係者は匿名を条件に語りました{@}「新王は、アンドロイド開発の軍事的意義よりも、その予算規模に興味を持っているようだ」{@}実際、新王は即位前から、豪華な新王宮の建設計画を進めており、その資金源としてアンドロイド開発予算を狙っているとの噂が流れていました,在即位演说中，新王誓言继承先王的遗志。但据宫中人士透露，新王一直对机器人开发持怀疑态度。{@}一位匿名的宫中人士表示：新王似乎对机器人开发的预算规模比其军事意义更感兴趣。{@}坊间流传，新王在即位前已经推进建设豪华新王宫的计划，为此盯上了机器人的开发预算。,"즉위 연설에서, 새 왕은 전 왕의遺志를 이어받겠다고 맹세했지만, 궁중 관계자에 따르면 새 왕은 이전부터 안드로이드 개발에 회의적이었다고 합니다{@}익명의 궁중 관계자는 '새 왕은 안드로이드 개발의 군사적 중요성보다는 그 예산 규모에 더 관심이 있는 것 같다'고 말했습니다{@}실제로, 즉위 전에 새 왕은 호화로운 새 왕궁 건설 계획을 추진하고 있었으며, 그 자금 출처로 안드로이드 개발 예산을 겨냥하고 있었다는 소문이 돌았습니다",在即位演說中，新王誓言繼承前王的遺志，但據宮中人士透露，新王一直對安卓開發持懷疑態度{@}一位匿名的宮中人士表示，'新王似乎對安卓開發的預算規模比其軍事意義更感興趣'{@}實際上，在即位前，新王已推動建設豪華新王宮的計劃，據說目標是安卓開發預算
+号外内容4,"The military strongly advocates for the continuation of android development to achieve the reconquest of the surface, but depending on the new king's intentions, significant cuts in the development plans and budget reductions may be unavoidable{@} A high-ranking military official stated, 'We hope the new king will continue the late king's legacy and support android development'",軍部は、地上奪還の実現に向けて、アンドロイド開発の継続を強く求めていますが、新王の意向次第では、開発計画の大幅な縮小や、予算の削減が避けられないかもしれません{@}ある軍部の高官は、「新王には、先王の遺志を継ぎ、アンドロイド開発を支援していただきたい」と訴えています,军部强烈主张继续推进机器人开发，以实现地面夺回。但根据新王的意向，可能无法避免大幅削减开发计划和预算。{@}一位高级军官表示：我们希望新王能继承先王的遗志，继续支持开发机器人。,"군부는 지상 재탈환을 실현하기 위해 안드로이드 개발의 지속을 강력히 주장하고 있지만, 새 왕의 의도에 따라 개발 계획의 큰 축소나 예산 삭감이 피할 수 없을 수도 있습니다{@}어느 군부 고위 관리는 '새 왕께서는 전 왕의 유지를 이어받아 안드로이드 개발을 지원해 주시길 바란다'고 호소했습니다",軍部強烈主張繼續推進安卓開發，以實現地面奪回，但根據新王的意向，可能無法避免大幅削減開發計劃和預算{@}一位高級軍官表示，'我們希望新王能繼承先王的遺志，支持安卓開發'
+号外内容5,The death of the previous king and the accession of the new king will likely be a turning point for the kingdom's future. The direction of the android development budget will significantly influence the fate of the kingdom,先王の死と新王の即位は、王国の未来の分岐点となるでしょう。アンドロイド開発予算の行方が、王国の運命を左右することになりそうです,先王的去世和新王的即位可能会成为王国未来的转折点。机器人开发预算的去向将极大影响王国的命运。,이전 왕의 사망과 새 왕의 즉위는 왕국의 미래에 있어 중대한 분기점이 될 것입니다. 안드로이드 개발 예산의 방향이 왕국의 운명을 크게 좌우할 것입니다,前王的去世和新王的即位可能會成為王國未來的轉折點。安卓開發預算的去向將極大影響王國的命運
+遺物について,Relics,遺物,遗物,유물,遺物
+遺物について内容1,"It is known that there once was a civilization on this planet{@} The ancient people apparently possessed smithing skills far superior to those of today{@} Weapons, armor, and rings excavated from various places are now called 'Relics'",この星にはかつて文明があったことが分かっている{@}彼ら古代人は鍛造技術においては現代をはるかに上回る技術を持っていたようだ{@}各地で掘り出される武器や防具、指輪などは現代では『遺物』と呼ばれている,已知这颗星球曾存在文明，{@}这些古代人的锻造技术显然远超现代，{@}从各地挖掘出来的武器、防具和戒指现在被称为『遗物』。,"이 행성에는 과거 문명이 있었다는 것이 알려져 있습니다{@}그들 고대인들은 오늘날보다 훨씬 우수한 대장 기술을 가지고 있었다고 합니다{@}여러 지역에서 발굴된 무기, 방어구, 반지 등은 현재 '유물'이라고 불립니다",已知這顆星球曾存在文明{@}這些古代人的鍛造技術顯然遠超現代{@}從各地挖掘出來的武器、防具和戒指現在被稱為「遺物」
+遺物について内容2,Some relics also possess abilities{@} Recent studies have shown that these ability-bearing relics contain components equivalent to miasma,遺物の中には能力付きのものも存在する{@}近年の研究で、能力付き遺物は瘴気と同等の成分を含有していることが分かっている,遗物中也存在具有能力的物品。{@}近年的研究表明，这些具有能力的遗物含有与瘴气相当的成分。,"유물 중에는 능력이 부여된 것들도 있습니다{@}최근 연구에서, 이러한 능력이 있는 유물은 샤기와 동등한 성분을 함유하고 있다는 것이 밝혀졌습니다",遺物中也存在具有能力的物品{@}近年的研究表明，這些具有能力的遺物含有與瘴氣相當的成分
+遺物について内容3,"Ancient people seem to have used special potions to enhance and synthesize relics, but such artisanal skills have been lost in modern times{@} The relics remaining in the kingdom are only display items, and only a few bottles of the potion remain in storage{@} Without a return to the surface, research on relics will likely not advance",古代人は特殊な薬剤を使用して遺物を強化・合成していたようだが、現代においてはそのような職人的技術は失われている{@}王国に残存する遺物は展示品のみで、薬剤も保管庫に残る数本しか存在しない{@}地上に戻ることができなければ、今後も遺物の研究が進むことはないだろう,古人似乎曾使用特殊药剂来强化和合成遗物，但如此工匠技术在现代已经失传。{@}王国中剩余的遗物仅为展品，仓库中也仅存几瓶药剂。{@}如果不能返回地面，关于遗物的研究可能不会有进展。,"고대인들은 특수한 약제를 사용하여 유물을 강화하고 합성했던 것으로 보입니다만, 현대에는 그러한 장인 기술이 사라졌습니다{@}왕국에 남아 있는 유물은 전시품만 있고, 약제도 창고에 몇 병만 남아 있습니다{@}지상으로 돌아가지 못한다면, 앞으로도 유물 연구는 진전되지 않을 것입니다",古人似乎曾使用特殊藥劑來強化和合成遺物，但如此工匠技術在現代已經失傳{@}王國中剩餘的遺物僅為展品，倉庫中也僅存幾瓶藥劑{@}如果不能返回地面，關於遺物的研究可能不會有進展
+巨人の腕について,Giant's Arm,巨人の腕,巨人之腕,거인의 팔,巨人的臂膀
+巨人の腕について内容1,"Are you aware that many artifacts shaped like arms, called 'Giant's Arms,' have been unearthed all over the world?{@} These arms contain a large amount of material equivalent to miasma and were strictly managed within the kingdom's storage{@} For many years, despite being recognized as unknown artifacts, the true nature of these 'Giant's Arms' remained undiscovered",地上各地で出土された遺物の中に、『巨人の腕』と呼ばれる腕の形をした金属が多数あることをご存じだろうか{@}これらの腕には瘴気と同等の成分が大量に含まれており、王国の保管庫内で厳重管理されていた{@}長年にわたり、未知の遺物として認識されながらも、この『巨人の腕』の正体は誰も解明できずにいた,你知道吗？全世界各地出土的遗物中，有许多被称为『巨人之腕』的手臂形状的金属。{@}这些手臂含有大量与瘴气相当的成分，在王国的仓库内严格管理。{@}多年来，尽管被认为是未知的遗物，但这些『巨人之腕』的真正身份仍未被发现。,"전 세계 곳곳에서 발굴된 유물 중 '거인의 팔'이라고 불리는 팔 모양의 금속이 많이 있다는 것을 알고 계십니까?{@} 이 팔들은 샤스와 동등한 성분을 대량 함유하고 있으며, 왕국의 창고 내에서 엄격하게 관리되었습니다{@} 오랜 기간 동안 미지의 유물로 인식되어 왔음에도 불구하고, 이 '거인의 팔'의 정체는 아무도 밝혀내지 못했습니다",你知道嗎？全世界各地出土的遺物中，有許多被稱為「巨人的臂膀」的手臂形狀的金屬{@}這些手臂含有大量與瘴氣相當的成分，在王國的倉庫內嚴格管理{@}多年來，儘管被認為是未知的遺物，但這些「巨人的臂膀」的真正身份仍未被發現
+巨人の腕について内容2,"However, in recent years, the rapid advancement in the deciphering of ancient texts has led to a groundbreaking new theory about the true identity of these arms{@} It has been discovered that the marks carved into the arms were actually serial numbers indicating the models{@} Moreover, it was found that the same serial numbers were inscribed on several discovered arms",しかし近年、古代文字の解読技術が飛躍的に進歩したことで、腕の正体に関する画期的な新説が浮上する{@}腕に刻まれていた傷跡が、実は機体番号を示す刻印であることが判明したのだ{@}さらに驚くべきことに、発見された複数の腕に、同じ機体番号が刻まれていたのである,然而，近年来，古文字解读技术的飞跃性进展，使得关于这些手臂真实身份的划时代新发现浮出水面。{@}这些手臂上刻有的痕迹，实际上是机体编号。{@}更令人惊讶的是，被发现的多个手臂上都刻有相同的编号。,그러나 최근 고대 문자 해독 기술의 급속한 진보로 인해 이 팔의 정체에 관한 혁신적인 새 이론이 제기되었습니다{@} 이 팔에 새겨진 흔적이 실제로는 기체 번호를 나타내는 각인임이 밝혀졌습니다{@} 더욱 놀라운 것은 발견된 여러 팔에 동일한 기체 번号が 각인되어 있었다는 것입니다,然而，近年來，古文字解讀技術的飛躍性進展，使得關於這些手臂真實身份的劃時代新說浮出水面{@}被發現，這些手臂上刻有的痕迹，實際上是顯示型號的系列號{@}更令人驚訝的是，發現的多個手臂上都刻有相同的系列號
+巨人の腕について内容3,"In other words, these arms were not parts of different statues but belonged to a single colossal statue with many arms{@} It is estimated that at least ten arms, all bearing the same serial number, belonged to this giant statue{@} In ancient times, this multi-armed giant was likely used to perform physical labor and dangerous tasks, essentially acting as a human surrogate",つまり、これらの腕は異なる像の一部ではなく、何本もの腕を持つ一体の巨大な像に属するものだったのだ{@}同じ機体番号が刻まれた腕の数を集計すると、少なくとも10本以上の腕を持つ巨像が存在していたことが推測される{@}古代においてこの多腕の巨像は、人間に代わって肉体労働や危険な作業などを請け負う、いわば人間の分身として機能していた可能性が高い,换言之，这些手臂并非属于不同的雕像，而是属于一个拥有许多手臂的巨大雕像{@}据估计，这座雕像至少有十多个刻有相同机体编号的手臂。{@}在古代，这种多臂巨像很大可能被用来承担人类的体力劳动和危险工作，实际上实现了人类般的功能。,"다시 말해, 이 팔들은 다른 조각상의 부분이 아니라 여러 팔을 가진 하나의 거대한 조각상에 속해 있었습니다{@} 같은 기체 번호가 새겨진 팔의 수를 집계하면, 최소한 10개 이상의 팔을 가진 거인상이 존재했을 것으로 추정됩니다{@} 고대에 이 다중 팔 거인은 사람을 대신하여 육체 노동이나 위험한 작업을 수행하는, 일종의 인간 대용으로 기능했을 가능성이 높습니다",換言之，這些手臂並非屬於不同的雕像，而是屬於一個擁有許多手臂的巨大雕像{@}據估計，至少有十多個手臂，都刻有相同的機體編號，屬於這座巨大的雕像{@}在古代，這種多臂巨像很可能被用來承擔人類的體力勞動和危險工作，實際上充當了人類的替代者
+巨人の腕について内容4,"Inspired by this ancient giant, the kingdom began to fully engage in the research of androids",そして、この古代の巨像から着想を得て、王国におけるアンドロイドの研究が本格化することとなった,受这座古代巨像的启发，王国开始全面开展机器人的研究。,이 고대 거인상에서 영감을 받아 왕국에서는 안드로이드 연구를 본격화하기 시작했습니다,受這座古代巨像的啟發，王國開始全面開展安卓研究
+ダンジョン階の探索失敗,{dungeon} {floor}F adventure failed.,{dungeon} {floor}階の探索失敗,{dungeon}第{floor}层的探索失败,{dungeon} {floor}층 탐색 실패,{dungeon}第{floor}層的探索失敗
+個のアイテムを失った,Lost {num} items.,{num}個のアイテムを失った,失去了{num}个物品,{num}개의 아이템을 잃어 버렸다,失去了{num}個物品
+を失った,Lost {item}.,{item}を失った,失去了『{item}』,{item}을(를) 잃어 버렸다,失去了『{item}』
+と対峙した,Confronted {monster}.,{monster}と対峙した,遭遇到了{monster},{monster}과(와) 만났다,遭遇到了{monster}
+の会心の一撃！,{player}'s heart attack!,{player}の会心の一撃！,{player}触发会心一击！,{player}의 치명적인 일격!,{player}觸發會心一擊！
+ターゲットにダメージ,{target} was damaged by {damage}.,{target}に{damage}のダメージ,{target}受到{damage}点伤害,{target}에게 {damage}의 대미지,{target}受到了{damage}點傷害
+ターゲットの攻撃,{target}'s attack!,{target}の攻撃,{target}发动攻击,{target}의 공격,{target}的攻擊
+の痛恨の一撃！,A blow that hurts {monster}!,{monster}の痛恨の一撃！,{monster}触发痛恨一击！,{monster}의 통한의 일격!,{monster}觸發痛恨一擊！
+を倒した,{monster} was defeated.,{monster}を倒した,{monster}被打败了,{monster}을(를) 쓰러트렸다,{monster}被打敗了
+の経験値を得た,Gained {exp} experience!,{exp}の経験値を得た,获得{exp}点经验,{exp}의 경험치를 얻었다,獲得了{exp}點經驗值
+のレベルが上がった,{player}'s level has been increased.,{player}のレベルが上がった,{player}升级了,{player}의 레벨이 올랐다,{player}升級了
+はアイテムを落とした,{monster} dropped an item!,{monster}はアイテムを落とした,{monster}掉落了物品,{monster}은(는) 아이템을 떨어트렸다,{monster}掉落了物品
+は気絶した,{player} fainted.,{player}は気絶した,{player}晕了过去,{player}은(는) 기절했다,{player}暈了過去
+に倒された,Defeated by {monster}.,{monster}に倒された,被{monster}打败了,{monster}에게 당했다,被{monster}打敗了
+は疲れ切ってしまった,{player} is exhausted,{player}は疲れ切ってしまった,{player}已疲惫不堪,{player}은 지쳐 버렸다,{player}已疲憊不堪
+古城の出口に巨大な像が立っている,There's a giant statue standing at the exit of the citadel.,古城の出口に巨大な像が立っている,古城的出口竖立着一座巨像,고성의 출구에 거대한 상이 서있다,古城的出口豎立著一座巨像
+巨像の特徴,The giant statue is made of some kind of metal and has countless arms growing out of it.,巨像は何かの金属で作られており、数えきれないほどの腕が生えている,巨像是某种金属制成的，周围生出数不清的手臂,어떠한 금속으로 만들어진 거상에는 셀 수 없이 많은 팔이 자라나 있다,巨像是某種金屬製成的，周圍生出數不清的手臂
+巨像が襲ってきた,"Suddenly, the giant statue starts moving and attacks us!",突然巨像が動き出し、こちらに襲い掛かってきた！,突然，巨像开始动了起来，向这边袭来！,갑자기 거상이 움직이기 시작해 이쪽으로 달려 들었다!,突然，巨像開始動了起來，向這邊襲來！
+城の最深部にたどり着いた,We've reached the deepest part of the castle.,城の最深部にたどり着いた,到达了古城最深处,성의 가장 깊은 곳에 도착했다,到達了古城最深處
+玉座に誰かが座っている,"At the back of the hall, there is a throne, and someone is sitting on it.",広間の奥には玉座があり、誰かが座っている,大厅中有个王位，有人坐在上面,홀 안쪽에 옥좌가 있고 누군가 앉아 있다,大廳中有個王座，有人坐在上面
+玉座の主はおどろきとまどっている,The master of the throne is astonished and confused.,玉座の主はおどろきとまどっている,王位的主人又惊讶又困惑,옥좌의 주인은 놀라 혼란스러워 하고 있다,王座的主人又驚訝又困惑
+遊び方,How to play this game,このゲームの遊び方,游戏的玩法说明,이 게임을 즐기는 방법,如何玩這個遊戲
+ゲーム説明1,The adventurer will be returned to level 1 every time due to the demon king's curse. Please train the adventurer's equipment and make it stronger.,冒険者は、魔王の呪いにより毎回レベル1に戻されてしまいます。あなたは、冒険者の装備を鍛えて強くしてあげてください。,冒险者因受魔王的诅咒，每次归来等级回到1级。请强化冒险者的装备，使其变得更强。,모험가님은 마왕의 저주로 인해 매번 1레벨로 돌아가게 됩니다.모험가의 장비를 훈련시켜 더욱 강력하게 만들어주세요.,冒險者每次都會因為魔王的詛咒而回到1級。請鍛鍊冒險者的裝備，使其變得更強。
+ゲーム説明2,You will receive useful emails from {teba} as the game progresses. Check the email icon at the top right of the screen.,ゲーム進行に応じて{teba}からお役立ちメールが届きます。画面右上のメールアイコンから確認しましょう。,随着游戏的进行，您将收到来自 {teba} 的电子邮件。检查屏幕右上角的邮件图标。,게임이 진행됨에 따라 {teba}로부터 유용한 이메일을 받게 됩니다. 화면 오른쪽 상단의 이메일 아이콘을 확인하세요.,隨著遊戲的進行，您將收到來自 {teba} 的有用電子郵件。檢查螢幕右上角的電子郵件圖示。
+各項目の説明,Description of each parameter,各項目の説明,各项属性说明,각 매개변수에 대한 설명,各參數說明
+体力説明,"If it reaches 0 during battle, the adventurer will run out of energy.",戦闘時に0になると力尽きる。,如果在战斗中达到0，冒险家就会精疲力竭。,전투 중 0이 되면 모험가의 기력이 고갈됩니다.,如果在戰鬥中達到0，冒險家就會耗盡能量。
+力説明,Affects damage dealt to enemies.,敵に与えるダメージに影響。,影响对敌人造成的伤害。,적에게 주는 피해에 영향을 미칩니다.,影響對敵人造成的傷害。
+頑丈さ説明,Affects damage received from enemies.,敵から受けるダメージに影響。,影响从敌人受到的伤害。,적으로부터 받는 피해에 영향을 줍니다.,影響從敵人受到的傷害。
+速さ説明,Affects attack order.,攻撃順に影響。,影响攻击顺序。,공격 순서에 영향을 줍니다.,影響攻擊順序。
+運説明,Affects the probability of obtaining items with abilities.,能力付きアイテムの入手確率に影響。,影响获得具有能力的物品的概率。,능력이 있는 아이템 획득 확률에 영향을 줍니다.,影響獲得具有能力的物品的機率。
+Lv1説明,Base value at Lv1.,Lv1時の基礎値。,Lv1的基础值。,Lv1의 기본 값입니다.,Lv1的基礎值。
+LvUP説明,Value that increases when LvUP.,LvUPした際に上昇する値。,LvUP 时增加的值。,LvUP했을 때 상승하는 값.,LvUP 時增加的值。
+Boost説明,Multiplier for the final ability values.,最終的な能力値にかかる倍率。,最终能力值的倍率。,최종 능력치에 적용되는 배율입니다.,最終能力值的倍率。
+どこかにいるあなたへ,To you who are somewhere else,どこかにいるあなたへ,给世界某个角落的你,어딘가에 있는 당신에게,給世界某個角落的你
+どこかにいるあなたへ本文,"There is a curse on this world, a curse by the Demon King to erase memories... {@}{@}{@}The Demon King rules our world by erasing the memories of adventurers.{@}{@}{@}{@}I'm asking for your help if you've noticed this mail! {@}{@}Please lead the adventurers whose memories will be erased under your direction to defeat the Demon King that lurks in the castle...!",この世界には呪いがかけられています{@}{@}{@}魔王による、記憶が消える呪い…{@}{@}{@}魔王は冒険者の記憶を消すことで{@}私たちの世界を支配しているのです{@}{@}{@}{@}このメールに気付いてくれたあなたにお願いです{@}{@}記憶が消える冒険者をあなたの指示で導き{@}魔城に潜む魔王を倒してください…！,这个世界受到了魔王的诅咒，这个诅咒会清除记忆。{@}{@}{@}魔王通过清除冒险者的记忆来统治我们的世界。{@}{@}{@}如果你看到这封信，就说明我需要你的帮助。{@}{@}{@}请你带领失忆的冒险者打败潜伏在魔城的魔王吧！,이 세계에는 저주가 걸려 있습니다.{@}{@}{@}마왕에 의한 기억이 사라지는 저주…{@}{@}{@}마왕은 모험가의 기억을 지워{@}우리의 세계를 지배하고 있는 것입니다.{@}{@}{@}{@}이 메일을 찾아낸 당신에게 부탁 드립니다.{@}{@}기억이 사라진 모험가를 당신의 지시로 이끌어{@}마왕성에 숨어있는 마왕을 쓰러트려 주세요…!,這個世界受到了魔王的詛咒。{@}{@}{@}這個詛咒就是清除記憶……{@}{@}{@}魔王透過消除冒險者的記憶來統治我們的世界。{@}{@}{@}{@}如果你看到這封信，就說明我需要你的幫助。{@}{@}請你引導失憶的冒險者，打倒潛伏在魔城中的魔王吧……！
+冒険者を向かわせました,I've sent the adventurers to you.,冒険者を向かわせました,冒险者已在路上,모험가를 보냈습니다,我已經派冒險者過去了
+冒険者を向かわせました本文,"Thank you for your cooperation in defeating the Demon King. {@}I've been waiting for someone like you to show up...{@}{@}{@}I'm sorry I'm late, my name is “Teba” {@}and I'll be supporting the two of you in your adventures. I'm sure the adventurer “{player}” has arrived there. {@}{player} is not very good at expressing emotions, but {player} is an adventurer with an excellent sense of combat. {@}{player} can handle all the adventuring, and you can focus on managing. {@}{@}{@}First of all, let's send the adventurer out to “{dungeon}”.{@}You will have to wait for the adventurer's return with faith.",魔王討伐へのご協力、ありがとうございます{@}あなたのような方が現れるのをずっと待っていました…{@}{@}{@}申し遅れました、私は『テバ』と申します{@}これからあなた方2人の冒険をサポートします{@}{@}{@}そろそろ冒険者『{player}』がそちらに着いたと思います{@}感情表現は苦手ですが戦闘センスに優れた冒険者です{@}ダンジョン攻略は全て冒険者に任せ、あなたは管理に専念してください{@}{@}{@}まずは冒険者を『{dungeon}』に送り出してみましょう{@}あなたは冒険者の帰りを信じて待っていてください,谢谢你来协助我讨伐魔王。我一直在等待像你这样的勇者出现。{@}{@}{@}很抱歉来晚了，我叫Teba。{@}我会协助你俩进行冒险。{@}{@}{@}我想冒险者『{player}』快要到了。{@}『{player}』虽不善于表达情感，但有优秀的战斗天赋。{@}『{player}』能应付各种冒险，你就专心管理吧。{@}{@}{@}首先我们把冒险者送入『{dungeon}』，然后你就满怀信心地等待他的凯旋归来吧。,마왕 토벌에 협력해 주셔서 감사합니다.{@}당신 같은 분이 나타나는 것을 계속 기다려 왔습니다…{@}{@}{@}늦어서 죄송합니다. 저는 테바라고 합니다.{@}지금부터 두 분의 모험을 서포트 하겠습니다.{@}{@}{@}슬슬 모험가『{player}』이(가) 그쪽에 도착했을 것입니다.{@}감정 표현이 서툴지만 전투 센스가 뛰어난 모험가입니다.{@}던전 공략을 모두 모험가에게 맡기고 당신은 관리에 전념해 주십시오.{@}{@}{@}먼저 모험가를『{dungeon}』에 보내는 겁니다.{@}당신은 모험가의 귀환을 믿고 기다려 주십시오.,謝謝你協助討伐魔王。{@}我一直在等待像你這樣的人出現……{@}{@}{@}很抱歉來晚了，我叫『Teba』。{@}從現在開始，我會協助你們兩個的冒險。{@}{@}{@}我想冒險者『{player}』差不多已經到那裡了。{@}『{player}』雖不善於表達情感，但有優秀的戰鬥天賦。{@}把所有的征服迷宮都交給『{player}』，你只要專心管理即可。{@}{@}{@}首先把冒險者送到『{dungeon}』，{@}然後滿懷信心地等待他的凱旋歸來吧。
+世界の歩き方,How to Walk the World,世界の歩き方,如何环游世界,이 세계를 여행하는 방법,如何環遊世界
+世界の歩き方本文,"In order to defeat the Demon King, you need to make your adventurers stronger {@}and to do that, you need to conquer dungeons. {@}{@}{@}But when you return from a dungeon, your adventurers' Lv will return to 1. {@}This is due to the Demon King's curse of memory erasure {@}The power of this curse allows the Demon King to control the world. {@}{@}{@}{@}So how do you make adventurers who are returned to Lv 1 stronger.{@}{@}{@}You equip them with better weapons and armor.{@}{@}{@}You send them into dungeons to collect better equipment.{@}{@}And then you carefully select the equipment you have collected to make your adventurer's gear stronger.",魔王を倒すためには冒険者を強くしなければなりません{@}そのためにはダンジョン攻略が必要です{@}{@}{@}しかし、ダンジョンから帰ると冒険者のLvは1に戻ってしまうでしょう{@}これは魔王の記憶消去の呪いによるものです{@}この呪いの力によって魔王は世界を支配しています{@}{@}{@}ではLv1に戻される冒険者を強くするにはどうすればいいか{@}それは冒険者に良い武器・防具を装備させることです{@}{@}{@}あなたは冒険者をダンジョンに派遣し、より良い装備品を収集するのです{@}そして集めた装備品を厳選し、冒険者の装備を強化してあげてください,为了打败魔王，冒险者必须变得更强。{@}因此，你需要去征服迷宫。但是，迷宫归来的冒险者的等级会回到1级。{@}{@}因为他受到了魔王清除记忆的诅咒。魔王靠它统治了世界。{@}{@}1级的冒险者如何变强呢？{@}{@}你可以把他送入迷宫收集更好的装备。{@}你也可以帮他精选装备，强化装备。,"마왕을 쓰러트리려면 모험가를 강하게 만들어야 합니다.{@}그러기 위해선 던전 공략이 필수입니다.{@}{@}{@}하지만 던전에서 돌아오면 모험가의 레벨이 1로 돌아가겠죠.{@}그것은 마왕의 기억소거 저주 때문입니다.{@}이 저주의 힘으로 마왕은 세계를 지배하고 있습니다.{@}{@}{@}그럼 레벨 1로 돌아가는 모험가를 어떻게 강하게 하는가,{@}바로 모험가에게 좋은 무기와 방어구를 장비시키는 것입니다.{@}{@}{@}당신은 모험가를 던전에 파견하고 더욱 좋은 장비품을 수집해야 합니다.{@}그리고 모은 장비품을 엄선하여 모험가를 강화해 주십시오.",為了打倒魔王，冒險者必須變得強大。{@}為此需要征服迷宮。{@}{@}{@}但是，如果從迷宮回來，冒險者的等級會回到1級。{@}因為他受到了魔王清除記憶的詛咒。{@}透過這個詛咒的力量，魔王統治著全世界。{@}{@}{@}那麼如何讓回到等級1的冒險者變強？{@}就是讓冒險者配備優良的武器和防具。{@}{@}{@}你可以將冒險者派遣到迷宮，收集更好的裝備，{@}然後篩選收集到的裝備，強化之。
+冒険に失敗した時,When an Adventure Fails,冒険に失敗した時,冒险失败时,모험에 실패했을 때,冒險失敗時
+冒険に失敗した時本文,"It seems that your adventurer has fallen in the middle of a dungeon,{@}but don't give up. {@}{@}If your adventure fails, look at the log and plan your next move, {@}{@}such as lowering the dungeon level, sending your adventurer to another dungeon, or upgrade your adventurer's equipment. {@}{@}Your instructions will determine the success or failure of the adventure.{@}Please guide your adventurers well!",冒険者がダンジョンの途中で倒れてしまったようですね{@}しかし、諦めないでください{@}{@}冒険に失敗した時はログを見て次の作戦を立てましょう{@}{@}例えば、ダンジョンの階層を下げる、{@}別のダンジョンに派遣する、{@}装備品を強化する、等です{@}{@}あなたの指示で冒険の成否が決まります{@}どうか上手に冒険者を導いてあげてください,冒险者在迷宫途中倒下了。{@}但是，千万不能放弃。{@}{@}冒险失败的时候，看看探索日志，规划下一步的行动。{@}{@}比如，降低迷宫层数、{@}去别的迷宫探索、{@}强化装备等等。{@}{@}你的规划决定冒险的成败。{@}请好好领导你的冒险者吧。,"모험가가 던전 안에서 쓰러져 버렸습니까.{@}하지만 포기하지 말아 주십시오.{@}{@}모험에 실패했을 때는 로그를 보고 다음 작전을 세워 봅시다.{@}{@}예를 들어 목표 층을 낮춘다,{@}다른 던전에 파견한다,{@}장비품을 강화한다, 등입니다.{@}{@}당신의 지시로 모험의 성패가 결정됩니다.{@}부디 능숙하게 모험가를 이끌어 주십시오.",看來冒險者在迷宮途中倒下了。{@}但是，千萬不要放棄。{@}{@}當冒險失敗時，看一看探索日誌，並規劃下一步的行動。{@}{@}例如，降低迷宮層數、去別的迷宮探索、強化裝備等等。{@}{@}你的指示將決定冒險的成敗，{@}請你好好地引導冒險者吧。
+強化について1,About Upgrade 1,強化について 1,关于强化 1,강화에 대해서 1,關於強化 1
+強化について1本文,"Are you getting used to adventuring by now? {@}{@}Dungeons will gradually become more difficult to conquer. {@}{@}That's when it becomes important to upgrade your equipment. {@}{@}You can upgrade your equipment on the ITEM tab. {@}{@}Upgrade a weapon will increase its attack power, while upgrade a shield will increase its defense. {@}{@}The materials and effects of upgrade are as follows.",そろそろ冒険にも慣れてきましたか？{@}これから徐々にダンジョン攻略が難しくなるでしょう{@}そこで重要になってくるのが装備品の強化です{@}{@}装備強化はITEMタブで行えます{@}武器を強化すると攻撃力が、盾を強化すると防御力が上がります{@}{@}強化素材と効果は次の通りです,你现在是否适应了这种冒险？{@}今后，征服迷宫会越来越难。{@}因此，强化装备变得非常重要。{@}{@}强化装备在ITEM标签下进行。{@}强化武器可以增加攻击力，强化盾牌可以增加防御力。{@}{@}强化材料和效果如下。,"슬슬 모험에 익숙해 지셨습니까?{@}지금부터 서서히 던전 공략이 어려워질 것입니다.{@}여기서 중요한 것이 장비품의 강화입니다.{@}{@}장비 강화는 ITEM 탭에서 이루어 집니다.{@}무기를 강화하면 공격력이, 방패를 강화하면 방어력이 올라갑니다.{@}{@}강화 소재와 효과는 다음과 같습니다.",你現在是否習慣了這樣的冒險？{@}今後，征服迷宮會越來越難。{@}因此，強化裝備變得非常重要。{@}{@}在 ITEM 標籤下可以強化裝備，{@}強化武器可提升攻擊力，強化盾牌可提升防禦力。{@}{@}強化材料和效果如下：{@}
+強化について2,About Upgrade 2,強化について 2,关于强化 2,강화에 대해서 2,關於強化 2
+強化について2本文A,Keep the following in mind when upgrade equipment,装備強化では次のことに気を付けてください,强化装备请注意以下几点,장비 강화에서는 다음 사항을 주의해 주십시오.,強化裝備請注意以下幾點：
+強化について2本文B,- There is an upper limit to the upgrade value of each item.{@}- Items that reach the upper limit may evolve into other items.,- アイテムごとに強化値の上限が存在します{@}- 強化上限に達したアイテムは、別のアイテムに進化する場合があります,1.每个物品都有强化上限{@}2.达到上限的物品可能会演化成其他物品,- 아이템 별로 강화 값의 한계가 존재합니다.{@}- 강화 한도에 도달한 아이템은 다른 아이템으로 진화할 수 있습니다.,1. 每個物品都有強化上限{@}2. 達到上限的物品可能會演化成其他物品
+強化について2本文C,Upgrade your equipment is a fundamental part of the adventure.{@}Build strong equipment by repeatedly upgrade your equipment!,装備強化は冒険の基本です{@}強化を繰り返し、強い装備を作り上げてください,强化装备是冒险的基本。{@}反复强化来制作更强的装备吧,장비 강화는 모험의 기본입니다.{@}강화를 반복하여 강한 장비를 만들어 주십시오.,強化裝備是冒險的基本，{@}反復強化來製作更強的裝備吧！
+合成について1,About Synthesis 1,合成について 1,关于合成 1,합성에 대해서 1,關於合成 1
+合成について1本文,"If you can synthesize equipment in addition to upgrade it, you are an advanced player.{@}{@}You can synthesize equipment on the ITEM tab.{@}{@}The materials and effects of synthesizing are as follows.",装備強化に加えて装備合成ができれば上級者です{@}{@}装備合成はITEMタブで行えます{@}{@}合成素材と効果は次の通りです,如果你掌握了装备强化和合成，你就进阶为高级玩家。{@}{@}装备合成在ITEM标签下进行。{@}{@}合成材料和效果如下,장비 강화와 함께 장비 합성이 가능하다면 당신은 숙련자입니다.{@}{@}장비 합성은 ITEM 탭에서 이루어 집니다.{@}{@}합성 재효와 효과는 다음과 같습니다.,如果除了強化裝備外，還能進行裝備合成的話，你就是高手了。{@}{@}裝備合成可以在 ITEM 標籤下進行。{@}{@}合成材料和效果如下：
+合成の効果,Effects of Synthesis,合成の効果,合成的效果,합성의 효과,合成的效果
+強化値の合計が合成後アイテムの強化値,The sum of the upgrade values is the enhancement value of the synthesized item.,強化値の合計が合成後アイテムの強化値,强化值的总和就是合成后物品的强化值,강화 값의 합계가 합성 후 아이템의 강화 값,強化值的總和就是合成後物品的強化值
+同じアイテム能力がある場合LvUP,"If the item has the same ability, it will be LvUp.",同じアイテム能力がある場合LvUP,相同能力的物品合成后LvUP,같은 아이템 능력이 있을 경우 레벨 업,相同能力的物品合成後LvUP
+合成について2,About Synthesis 2,合成について 2,关于合成 2,합성에 대해 2,關於合成 2
+合成について2本文,There are some rare synthesis materials in the world. {@}{@}You can find in long adventures. {@}{@}Don't forget to collect them when you find them in the dungeon!,世界には珍しい合成素材も存在します{@}{@}長時間の冒険で手に入ることがあるようです{@}{@}ダンジョン内で見つけたら忘れずに回収しましょう,世界上有一些稀有的合成材料，{@}{@}需要长时间的冒险获得。{@}{@}如果你在迷宫内发现它们，别忘了收集哦。,세상에는 희귀한 합성 재료가 존재합니다.{@}{@}장시간의 모험에서 손에 넣을 수 있을 것입니다.{@}{@}던전 안에서 발견하면 잊지말고 회수합시다.,世界上還存在一些稀有的合成材料，{@}{@}似乎在長時間的冒險中可以得到，{@}{@}如果在迷宮內發現的話，不要忘記收集喔。
+合成されるアイテム能力の中から合成後のアイテム能力を自由に選択可能,You can choose any of the synthesized item's abilities after synthesis.,合成されるアイテム能力の中から合成後のアイテム能力を自由に選択可能,合成后，可以自由选择被合成的物品的能力,합성되는 아이템의 능력 중에서 합성 후의 아이템 능력을 자유롭게 선택 가능.,合成後，可以自由選擇被合成的物品的能力
+※ベースアイテムの能力数が上限,*The number of abilities of the base item is the limit.,※ベースアイテムの能力数が上限,※基础物品的能力数量有上限,※베이스 아이템의 능력 수만큼,※基礎物品的能力數量有上限
+白の鍵の使い道,How to use the White Key,白の鍵の使い道,白色钥匙的使用方法,하얀 열쇠의 사용법,白色鑰匙的使用方法
+白の鍵の使い道本文,"You've got the White Key. {@}It seems that this key can be used to change the destination of “The Door to Another World”. {@}{@}And so far, in all our travels around the world, we have not found the Demon King's Castle... {@}Maybe the Demon King's Castle is hidden beyond the Otherworldly Door? You'll need to look for clues in the dungeons you've been in to find the key word that leads to the castle.",白の鍵を手に入れましたね{@}この鍵を使えば異世界の扉の行き先を変えることができるようです{@}{@}そして、これまで世界各地を旅しても魔王城は見つけられませんでした…{@}もしかすると魔王城は、異世界の扉の先に隠されているのかもしれません{@}{@}魔王城に繋がるキーワードの手がかりを探す必要があります{@}今までのダンジョンに手がかりは無いか、探してみてください,你拿到了白色钥匙。{@}这把钥匙似乎可以开启异世界之门的目的地。{@}{@}目前，我们游遍世界各地，还没发现魔王城。{@}或许魔王城就隐藏在异世界之门的某处。{@}{@}让我们去之前的迷宫好好找找，能不能发现魔王城有关的关键词的线索。,하얀 열쇠를 발견하셨군요.{@}그 열쇠를 사용하면 이세계의 문의 목적지를 바꾸는 것이 가능합니다.{@}{@}그리고 지금까지 세계각지를 모험해도 마왕성을 찾지 못했습니다{@}어쩌면 마왕성은 이세계의 문 저편에 숨어 있는 걸지도 모릅니다.{@}{@}마왕성으로 이어지는 키워드의 단서를 찾아야 합니다.{@} 지금까지의 던전 속에 단서가 없는지 찾아 보십시오.,你拿到白色鑰匙了呢。{@}使用這把鑰匙，似乎可以開啟異世界之門的目的地。{@}{@}而且，我們遊遍世界各地，還沒發現魔王城……{@}或許魔王城就隱藏在異世界之門的某處，{@}{@}我們需要找到和魔王城相關的關鍵字線索，{@}請找找看之前的迷宮有沒有線索。
+これが最終決戦です,This is the final battle!,これが最終決戦です,这是最终决战,이것이 최종 결전입니다,這是最終決戰
+これが最終決戦です本文,"We've finally found the Demon King's castle, and although the Demon King is powerful, I'm sure the two of you will be able to defeat him{@}{@}I have high hopes for you!",ついに魔王城を見つけることができました{@}{@}魔王は強大な力を持っていますが、あなた方2人なら必ず倒せるはずです{@}{@}期待していますよ,我们终于发现了魔王城。{@}{@}魔王有强大的力量，但你俩一定能打败它。{@}{@}我对你们寄予很大的期望哦,드디어 마왕성을 찾아 냈습니다.{@}{@}마왕은 강대한 힘을 가지고 있지만 두 분이라면 반드시 쓰러트릴 수 있을 것입니다.{@}{@}기대하겠습니다.,終於發現了魔王城{@}{@}魔王雖然有強大的力量，但你們倆一定能打敗它{@}{@}我對你們寄予很大的期望哦。
+(無題),(untitled),(無題),(无题),(제목 없음),(無主旨)
+(無題)本文,"I was surprised{@}{@}{@}that you would actually eliminate the King.{@}{@}{@}That adventurer...even a broken android can be useful.{@}{@}{@}Now that the King of Mankind is gone, I am the ruler of the world.{@}{@}{@}As a thank you for your help, I'll show you the new world.",驚きました{@}{@}{@}まさかあなたが本当に王を排除してくれるとは{@}{@}{@}あの冒険者…壊れたアンドロイドでも役に立つのですね{@}{@}{@}人類の王がいなくなった今、世界の統治者は私です{@}{@}{@}これまで協力してくれたお礼に、新しい世界をあなたにも見せてあげましょう,我很惊讶。你们居然打败了国王。那个冒险者...坏掉的机器人也发挥了作用。如今，人类的国王不在了，我就是这个世界的统治者。为了报答你的鼎力相助，我会给你展现一个崭新的世界。,"놀랐습니다.{@}{@}{@}설마 당신이 정말로 왕을 처치할 줄은.{@}{@}{@}그 모험가… 부서진 안드로이드라도 도움이 되는군요.{@}{@}{@}인류의 왕이 사라진 지금, 세계의 통치자는 저입니다.{@}{@}{@}지금까지 협력해준 보답으로 당신에게 새로운 세계를 보여드리겠습니다.",「我很驚訝{@}{@}{@}沒想到你真的打敗了國王{@}{@}{@}那名冒險者……即使是壞掉的機器人也能派上用場呢{@}{@}{@}如今人類的國王已經不在了，這個世界的統治者就是我了{@}{@}{@}為了感謝你一直以來的協助，我會給你展現一個嶄新的世界。」
+武具を強くする方法,Ways to Strengthen Equipment,武具を強くする方法,强化装备的方法,장비를 강화하는 방법,強化裝備的方法
+武具を強くする方法本文1,"If you are stuck in your adventure, strengthen the adventurer's equipment using the following methods",冒険に行き詰まったら、次の方法で冒険者の武具を強くしましょう,如果在冒险中遇到瓶颈，可以尝试以下方法来强化冒险者的装备,"모험이 막혔다면, 다음 방법으로 모험가의 장비를 강화합시다",如果在冒險中遇到瓶頸，可以嘗試以下方法來強化冒險者的裝備
+武具を強くする方法本文2,"By enhancing equipment, you can increase attack and defense power{@}Enhancement can be done from the ITEM tab",武具の強化によって、攻撃力や守備力を上げることが出来ます{@}強化はITEMタブから行えます,通过强化装备，可以提升攻击力和防御力{@}强化可以在ITEM标签页进行,장비 강화를 통해 공격력과 방어력을 높일 수 있습니다{@}강화는 ITEM 탭에서 진행할 수 있습니다,通過強化裝備，可以提升攻擊力和防禦力{@}強化可以在ITEM標籤頁進行
+武具を強くする方法本文3,"By synthesizing equipment, you can combine the same item abilities to level up{@}Synthesis can be done from the ITEM tab",武具の合成によって、同じアイテム能力同士を掛け合わせてレベルアップすることが出来ます{@}合成はITEMタブから行えます,通过合成装备，可以将相同的物品能力相互结合以提升等级{@}合成可以在ITEM标签页进行,장비의 합성을 통해 같은 아이템 능력을 결합하여 레벨업할 수 있습니다{@}합성은 ITEM 탭에서 진행할 수 있습니다,通過合成裝備，可以將相同的物品能力相互結合以提升等級{@}合成可以在ITEM標籤頁進行
+武具を強くする方法本文4,Analyzing equipment can reveal the latent abilities of an item{@}Analysis can be performed from the Item Encyclopedia,武具の解析によって、アイテムの潜在能力を引き出すことが出来ます{@}解析は、アイテム図鑑から行えます,通过分析装备，可以发掘物品的潜在能力{@}分析可以从物品图鉴进行,장비 분석을 통해 아이템의 잠재 능력을 이끌어낼 수 있습니다{@}분석은 아이템 도감에서 진행할 수 있습니다,通過分析裝備，可以發掘物品的潛在能力{@}分析可以從物品圖鑑進行
+人類の存続のために,For the survival of humanity,人類の存続のために,为了人类的存续,인류의 생존을 위하여,為了人類的存續
+残存人類からの手紙内容1,"Welcome to 'Vault-0' {@} This is a shelter where those who survived the kingdom's collapse live communally{@} While 'shelter' sounds nice, it's really just a simple refuge made from whatever materials we could find{@} Human survival instincts are incredible... to think we're trying to live even here, at the bottom of the earth...",『Vault-0』にようこそ{@}ここは王国の崩壊を生き残った者たちが集団生活しているシェルターだ{@}シェルターというと聞こえは良いが、本当のところは手に入る材料で何とか組み立てた簡素な避難所さ{@}人類の生存本能は凄いね...こんな地の底でも生きようとするんだから...,欢迎来到「Vault-0」！{@}这里是王国崩溃后，幸存者共同生活的居所。{@}居所听起来不错，实际上只是用手头可得的材料勉强搭建的简陋庇护所。{@}人类的生存本能真是惊人……竟然想在这地底生存...,"'Vault-0'에 오신 것을 환영합니다{@}여기는 왕국의 붕괴에서 살아남은 사람들이 공동 생활하는 쉘터입니다{@}쉘터라고 하면 듣기 좋지만, 사실은 구할 수 있는 재료로 겨우 만든 간소한 피난처입니다{@}인류의 생존 본능은 놀라워요... 이런 지하에서도 살아가려고 하니까...",歡迎來到「Vault-0」{@}這裡是王國崩潰後幸存者共同生活的避難所{@}雖然稱之為避難所聽起來不錯，實際上只是用手頭可得的材料勉強搭建的簡陋庇護所{@}人類的生存本能真是驚人……竟然想在這地底生存...
+残存人類からの手紙内容2,"I am Airam, the representative of this shelter{@} I was involved in the mass production of androids in the kingdom{@} I also developed your partner '{name}'{@} That's why I was really happy when we met again{@}{@} I took the liberty of reading '{name}'s logs with a memory reader{@} Since your name was registered as '{name}'s administrator, I was able to send you this direct message",私はこのシェルターの代表、『アイラム』{@}王国ではアンドロイド量産に関わっていた{@}君のパートナー『{name}』を開発したのも私だ{@}だからこそ、再会した時は本当に嬉しかったよ{@}{@}勝手ながら『{name}』のログをメモリリーダーで読ませてもらった{@}『{name}』の管理者として君の名前が登録されていたので、こうして直接メッセージを送ることができた,我是这个居所的代表，Airam。{@}我曾参与王国的机器人量产，{@}也是我开发了你的伙伴『{name}』。{@}因此，当我们再次相遇时，我真的很高兴。{@}{@}我擅自阅读了『{name}』的日志，因为你的名字已作为『{name}』的管理员登记，所以我能直接发送这条信息给你。,"저는 이 쉘터의 대표, 아이람입니다{@}왕국에서 안드로이드 대량 생산에 관여했었습니다{@}당신의 파트너 '{name}'을 개발한 것도 저입니다{@}그래서 재회했을 때 정말 기뻤어요{@}{@}독단적으로 '{name}'의 로그를 메모리 리더로 읽었습니다{@}'{name}'의 관리자로서 당신의 이름이 등록되어 있어서, 이렇게 직접 메시지를 보낼 수 있었습니다",我是這個避難所的代表，Airam{@}我曾參與王國的安卓量產{@}也是我開發了你的夥伴'{name}'{@}因此，當我們再次相遇時，我真的很高興{@}{@}我擅自閱讀了'{name}'的日誌，因為你的名字已作為'{name}'的管理員登記，所以我能直接發送這條信息給你
+残存人類からの手紙内容3,"And... when I finished reading the logs, I understood the entire situation{@} You trusted Teba and cooperated with it{@} As a result, the doors to the kingdom were opened, allowing the invasion of demons...{@} But this was a result of Teba's schemes, and I know there was no malice on your part{@} On the contrary, many are grateful that you defeated the power-drunk, corrupt king",そして...ログを読み終わったとき、全ての状況が理解できたよ{@}君たちはテバを信じて協力したんだね{@}その結果、王国への扉を開いてしまい、魔族の侵入を許してしまった...{@}だがこれはテバの策略の結果であって、君たちに悪意が無いことは分かっている{@}それどころか、権力におぼれ腐敗した王を討ってくれたことに感謝している者も多いだろう,然后……当我读完日志时，我了解了整个情况。{@}你们信任了Teba，并与之合作。{@}结果，国王的大门被打开，允许魔族入侵...{@}但这是Teba的策略所导致的，我知道你们没有恶意。{@}相反，很多人感谢你们击败了沉迷权力、腐败的国王。,"그리고... 로그를 다 읽고 나서, 전체 상황을 이해했습니다{@}여러분은 테바를 믿고 협력했네요{@}결과적으로 왕국의 문이 열리면서 악마의 침입을 허용했습니다...{@}하지만 이것은 테바의 계략의 결과였고, 여러분에게 악의가 없었음을 알고 있습니다{@}오히려, 권력에 빠져 부패한 왕을 물리쳐준 것에 대해 감사하는 이들이 많을 것입니다",然後……當我讀完日誌時，我理解了整個情況{@}你們信任了Teba並與之合作{@}結果，國王的大門被打開，允許魔族入侵...{@}但這是Teba的策略所導致的，我知道你們沒有惡意{@}相反，很多人感謝你們擊敗了沉迷權力、腐敗的國王
+残存人類からの手紙内容4,"To the point. If you heed my request, I will keep your affairs confidential{@}{@} The energy here is about to run out{@} Please, I want you to retrieve the 'Perpetual Engine'{@} The Perpetual Engine is the pinnacle of our human science. With it, we can survive even here, at the bottom of the earth",本題だ。もし私の頼みを聞いてくれたら、君たちの事は口外しない{@}{@}ここのエネルギーはもうすぐ尽きる{@}お願いだ、『永久機関』を奪還してほしい{@}永久機関は我々人類科学の到達点だ。あれさえあれば、我々はこの地の底でも生きていくことができる,说到重点。如果你们听从我的请求，我不会泄露你们的事情。{@}{@}这里的能量即将耗尽，{@}请帮我夺回『永久机关』。{@}永久机关是我们人类科学的巅峰。有了它，我们就能在这地底生存。,"본론입니다. 제 부탁을 들어준다면, 여러분의 일은 비밀로 하겠습니다{@}{@}여기 에너지가 곧 바닥납니다{@}부탁드립니다, '영구 기관'을 되찾아 주세요{@}영구 기관은 우리 인류 과학의 정점입니다. 그것만 있으면, 우리는 이 땅의 바닥에서도 살아갈 수 있습니다",說到重點。如果你們聽從我的請求，我不會洩露你們的事情{@}{@}這裡的能量即將耗盡{@}請，我希望你們奪回'永久機關'{@}永久機關是我們人類科學的頂點。有了它，我們就能在這地底生存
+残存人類からの手紙内容5,"However, the only existing Perpetual Engine is embedded in Teba as its power source{@}{@} Your mission is to defeat Teba and bring back its core",しかし、現存する永久機関は、テバの動力源としてコアに埋め込まれているものだけなんだ{@}{@}テバを倒してそのコアを持ち帰ってくること{@}{@}これが君たちの任務だ,然而，现存的永久机关被当作Teba的动力源，植入其核心内。{@}{@}你们的任务就是击败Teba，并带回它的核心。,그러나 현재 존재하는 영구 기관은 테바의 동력원으로서 코어에 내장된 것뿐입니다{@}{@}테바를 물리치고 그 코어를 가져오는 것이 여러분의 임무입니다,然而，現存的唯一永久機關是作為Teba動力源嵌入其核心的{@}{@}你們的任務是擊敗Teba並帶回它的核心
+残存人類からの手紙内容6,"If you accept, I will provide items that will make your adventure easier{@} You are the only ones who can freely walk this world now{@} As collaborators of humanity, please help us...!",もし引き受けてくれるなら、君たちの冒険が楽になるアイテムをあげよう{@}今この世界を自由に歩けるのは君たちだけだ{@}我々人類の協力者として、どうか助けてほしい...!,如果你接受，我会提供一些让你们的冒险更轻松的物品。{@}现在只有你们可以自由行走在这个世界。{@}作为人类的合作者，请帮助我们...!,"만약 받아들인다면, 여러분의 모험을 쉽게 할 아이템을 드리겠습니다{@}지금 이 세계를 자유롭게 걸을 수 있는 것은 여러분뿐입니다{@}인류의 협력자로서, 부디 도와주세요...!",如果你接受，我會提供一些讓你們的冒險更輕鬆的物品{@}現在只有你們可以自由行走這個世界{@}作為人類的合作者，請幫助我們...!
+アイラムに協力する,Cooperate with Airam,アイラムに協力する,与Airam合作,아이람과 협력하다,與Airam合作
+瘴気に侵蝕された武具について,About Equipment Corroded by Miasma,瘴気に侵蝕された武具について,关于被瘴气侵蚀的装备,샤기에 침식된 장비에 대하여,關於被瘴氣侵蝕的武具
+瘴気に侵蝕された武具について本文1,It seems that some of the equipment found in various places is corroded by miasma{@}{@}Investigations have revealed the following characteristics of corroded equipment{@}{@}I will share them with you,各地で見つかる武具の中には、瘴気に侵蝕されたものもあるようだ{@}{@}調査の結果、侵蝕された武具には次の特徴があることがわかった{@}{@}君たちにも共有しておくよ,在各地发现的装备中，似乎也有被瘴气侵蚀的。{@}{@}调查结果显示，被侵蚀的装备具有以下特征。{@}{@}我会分享给你们。,"여러 지역에서 발견되는 장비 중에는 샤기에 의해 침식된 것들도 있는 것 같습니다{@}{@}조사 결과, 침식된 장비는 다음과 같은 특성이 있다는 것을 알게 되었습니다{@}{@}여러분과 공유하겠습니다",在各地發現的武具中，似乎也有被瘴氣侵蝕的{@}{@}調查結果顯示，被侵蝕的武具具有以下特徵{@}{@}我會與你們共享
+瘴気侵蝕についての調査結果,Investigation Results on Miasma Corrosion,瘴気侵蝕についての調査結果,瘴气侵蚀的调查结果,샤기 침식에 대한 조사 결과,瘴氣侵蝕調查結果
+瘴気に侵蝕された武具について本文2,"The number displayed at the bottom right of the icon represents 'Corrosion Level'{@}The larger it is, the more advanced the miasma corrosion",アイコンの右下に表示される数字は『侵蝕度』{@}大きいほど瘴気の侵蝕が進んでいることを示す,图标右下角显示的数字为“侵蚀度”{@}数字越大，表示瘴气侵蚀越严重,아이콘의 오른쪽 하단에 표시되는 숫자는 '침식도'입니다{@}클수록 샤기의 침식이 진행되고 있음을 나타냅니다,圖標右下角顯示的數字為「侵蝕度」{@}數字越大，表示瘴氣侵蝕越嚴重
+瘴気に侵蝕された武具について本文3,Corroded weapons and shields increase in attack/defense power,侵蝕された武器や盾は、攻撃力/守備力が増加する,被侵蚀的武器和盾牌会增加攻击力/防御力,침식된 무기와 방패는 공격력/방어력이 증가합니다,被侵蝕的武器和盾牌會增加攻擊力/防禦力
+瘴気に侵蝕された武具について本文4,Corroded rings are more likely to have good item abilities,侵蝕されたリングは、良いアイテム能力が付きやすくなる,被侵蚀的戒指更容易附加良好的物品能力,침식된 반지는 좋은 아이템 능력이 부여되기 쉽습니다,被侵蝕的戒指更容易附加良好的物品能力
+瘴気に侵蝕された武具について本文5,"When synthesizing same type equipment, the higher corrosion level is applied to the item after synthesis",同種の装備を合成すると、大きいほうの侵蝕度が合成後のアイテムに適用される,将被侵蚀的『同种的』装备合成时，较大的侵蚀度将应用于合成后的物品,"동일 유형의 장비를 합성할 때, 더 높은 침식도가 합성 후 아이템에 적용됩니다","合成相同類型的裝備時, 較高的侵蝕度將應用於合成後的物品"
+伝言の鈴について,About the Message Bell,伝言の鈴について,关于『传言之铃』,전언의 종에 대하여,關於傳言鈴
+伝言の鈴について本文1,"Did you receive the message bell?{@}{@}Using the message bell, you can send instructions to {name} during their adventure",伝言の鈴は受け取ってくれたか？{@}{@}伝言の鈴を使えば、冒険中の{name}に指示を送ることができる,你收到『传言之铃』了吗？{@}{@}使用『传言之铃』，你可以在冒险中的『{name}』发送指令。,"전언의 종을 받았나요?{@}{@}전언의 종을 사용하면, 모험 중인 {name}에게 지시를 보낼 수 있습니다",你收到傳言鈴了嗎？{@}{@}使用傳言鈴，你可以在{name}冒險中向他發送指令
+伝言の鈴について本文2,This allows you to instruct a mid-adventure return while still carrying loot{@}{@}Mid-return instructions can be given from the 'Mid-Return' button in the DUNGEON tab{@}{@}Please make good use of it in your adventures,これにより、冒険の途中で戦利品を持ったまま途中帰還を指示することができるだろう{@}{@}途中帰還の指示は、DUNGEONタブの途中帰還ボタンから行える{@}{@}是非、君たちの冒険に役立ててくれ,有了它，你可以指示他携带战利品中途返回。{@}{@}中途返回的指令，可以从DUNGEON标签的中途返回按钮进行。{@}{@}请在你们的冒险中好好利用它。,이를 통해 모험 중에 전리품을 가지고 중간 귀환을 지시할 수 있습니다{@}{@}중간 귀환 지시는 DUNGEON 탭의 중간 귀환 버튼에서 할 수 있습니다{@}{@}모험에 꼭 활용해 주세요,這使你可以在攜帶戰利品的情況下指示中途返回{@}{@}中途返回的指令可以從DUNGEON標籤的中途返回按鈕進行{@}{@}請在你們的冒險中好好利用它
+コアを手に入れてくれ,Please obtain the core,コアを手に入れてくれ,请取回核心,코어를 손에 넣어줘,請取得核心
+コアを手に入れてくれ本文,"It seems you've finally reached the castle{@}{@}Teba has great power, but you two can surely defeat it{@}{@}I sincerely pray for your safety{@}{@}When you return with the core, let's all celebrate",ついに城にたどり着いたようだね{@}{@}テバは強大な力を持っているが、君たち2人なら必ず倒せるはずだ{@}{@}君たちの無事を心から祈っているよ{@}{@}コアを持って帰ってきたら、みんなでお祝いしよう,看来你们终于到达了城堡。{@}{@}Teba拥有强大的力量，但你们两人肯定能够击败它。{@}{@}我衷心祈祷你们安全归来。{@}{@}当你们带着核心回来时，让我们一起庆祝吧！,"드디어 성에 도착한 것 같네요{@}{@}테바는 강력한 힘을 가지고 있지만, 여러분 두 사람이라면 반드시 이길 수 있을 겁니다{@}{@}여러분의 안전을 진심으로 기원합니다{@}{@}코어를 가지고 돌아오면, 모두 함께 축하하겠습니다",看來你們終於到達了城堡{@}{@}Teba擁有強大的力量，但你們兩人肯定能夠擊敗它{@}{@}我衷心祈禱你們的安全{@}{@}當你們帶著核心回來時，讓我們一起慶祝
+必ず見つけ出すよ,I will definitely find it,必ず見つけ出すよ,一定会找到的！,반드시 찾아낼 거예요,我一定會找到的
+必ず見つけ出すよ本文1,I was at a loss for words when I heard {name} had gone missing{@} The pain of losing a partner is immeasurable,{name}が行方不明になったと聞いて、言葉を失ったよ{@}相棒を失った君の心の痛みは計り知れない,听说『{name}』失踪了，我无言以对。{@}失去伙伴的痛苦是难以估量的。,{name}의 실종 소식을 듣고 말을 잃었어요{@}동료를 잃은 당신의 아픔은 가늠할 수 없습니다,聽說{name}失蹤了，我無言以對{@}失去夥伴的痛苦是難以估量的
+必ず見つけ出すよ本文2,"When I reunited with {name} at the shelter before, seeing them in well-maintained equipment, I was truly relieved{@} They had found a good master",以前{name}とシェルターで再会した時、手入れの行き届いた装備を身につけている姿を見て、私は心から安堵したんだ{@}良いマスターに巡り会えたのだと,之前在居所与『{name}』重逢时，看到他穿着维护良好的装备，我内心真正地感到安心。{@}他遇到了一个好主人。,"이전에 {name}와 쉘터에서 재회했을 때, 잘 관리된 장비를 착용하고 있는 모습을 보고 진심으로 안도했습니다{@}좋은 주인을 만났다고",之前在避難所與{name}重逢時，看到他穿著維護良好的裝備，我內心真正地感到安心{@}他遇到了一個好主人
+必ず見つけ出すよ本文3,"That is why I believed in you and entrusted you with this mission{@} Your strength was unwavering{@} However, unforeseen circumstances have driven {name} into a difficult situation",だからこそ私は君たちを信じ、この任務を委ねた{@}君たちの力は揺るぎないものだった{@}しかし、不測の事態が{name}を窮地に追いやってしまった,正因如此，我相信你们，并把这个任务委托给你们。{@}你们的力量是坚定不移的{@}然而，意外的情况使『{name}』陷入了困境。,그래서 저는 여러분을 믿고 이 임무를 맡겼습니다{@}여러분의 힘은 흔들리지 않았습니다{@}하지만 예상치 못한 상황이 {name}을 곤경에 빠뜨렸습니다,正因如此，我相信你們並把這個任務委託給你們{@}你們的力量是堅定的{@}然而，意外的情況使{name}陷入了困境
+必ず見つけ出すよ本文4,"We intend to use every means possible to find {name}{@} First, we will divide up and gather information{@} If we find any solid information, we will share it immediately",我々は{name}を見つけ出すためにあらゆる手段を尽くすつもりだ{@}まずは手分けして情報収集に当たる{@}何か有力な情報があれば、すぐに共有しよう,我们将尽一切办法找到『{name}』{@}首先，我们将分工收集信息。{@}如果找到任何有力的信息，我们将立即共享。,우리는 {name}을 찾기 위해 가능한 모든 수단을 동원할 것입니다{@}먼저 나눠서 정보 수집에 나설 것입니다{@}유력한 정보가 있으면 즉시 공유하겠습니다,我們將盡一切辦法找到{name}{@}首先，我們將分工收集信息{@}如果找到任何有力的信息，我們將立即分享
+すぐ救助に向かう,I will head for the rescue immediately,すぐ救助に向かう,立即前往救援,즉시 구조에 나설게요,我將立即前往救援
+すぐ救助に向かう本文1,Thank you for sending the location information{@} Displaying it on the map... I must go immediately!,位置情報を転送してくれてありがとう{@}地図上に表示して...すぐに向かわないと！,感谢你发送位置信息{@}在地图上显示...立即出发！,위치 정보를 전송해줘서 고마워요{@}지도에 표시하고... 바로 가야 해!,感謝你發送位置信息{@}在地圖上顯示...我必須立即前往！
+すぐ救助に向かう本文2,"Don't worry! With the spare parts at the shelter, I can definitely fix it{@} I will send it back to you immediately",大丈夫！シェルターにある予備パーツを使えばきっと直せる{@}すぐに君の元に送り返すよ,没问题！使用居所的备用部件，我肯定能修好。{@}我会立即把它送回给你。,걱정마세요! 쉘터에 있는 예비 부품을 사용하면 분명히 고칠 수 있습니다{@}곧 당신에게 다시 보내드릴게요,沒問題！使用避難所的備用部件，我肯定能修好{@}我會立即把它送回給你
+新たな一歩,A New Step,新たな一歩,新的一步,새로운 한 걸음,新的一步
+新たな一歩本文1,I'm really glad {name} has come back{@} It seems that the shield you trained with protected {name}{@} Thank you,{name}が戻ってきてくれて本当によかった{@}君の鍛え上げた盾が{name}の身を守ってくれたようだ{@}ありがとう,真的很高兴『{name}』回来了。{@}看来你训练的盾牌保护了『{name}』{@}谢谢！,{name}가 돌아와서 정말 다행이에요{@}당신이 단련한 방패가 {name}를 보호해 준 것 같아요{@}감사합니다,真的很高興{name}回來了{@}看來你訓練的盾牌保護了{name}{@}謝謝
+新たな一歩本文2,"The perpetual engine was lost, but even if we could have obtained it, it would have been too dangerous for humans to handle{@} We should have faced difficulties with our own strength from the start{@} Moreover, if we push the limits of equipment enhancement, we might be able to confront the monsters ourselves",永久機関は失われてしまったが、もし手に入れることができたとしても、今の人類には危険すぎて扱えなかっただろう{@}最初からそんなものに頼らず、自分たちの力で困難に立ち向かうべきだったんだ{@}それに、武具強化を突き詰めれば、我々人類でも魔物に立ち向かうことができるかもしれない,永久机关已经丢失，但即使我们能够获得它，对现在的人类来说也太危险了，无法处理{@}我们本应该从一开始就依靠自己的力量面对困难。{@}此外，如果我们深入推进装备强化，我们也许能够自己面对怪物。,"영구 기관은 잃어버렸지만, 설령 그것을 얻을 수 있었다 해도, 지금의 인류에겐 너무 위험하여 다룰 수 없었을 겁니다{@}처음부터 그런 것에 의존하지 않고, 스스로의 힘으로 어려움에 맞서야 했습니다{@}게다가, 장비 강화를 극단적으로 밀어붙이면, 우리 인류도 몬스터에 맞설 수 있을지도 모릅니다",永久機關已經丟失，但即使我們能夠獲得它，對現在的人類來說也太危險了，無法處理{@}我們本應該從一開始就依靠自己的力量面對困難{@}此外，如果我們深入推進裝備強化，我們也許能夠自己面對怪物
+新たな一歩本文3,"I will rebuild humanity from here{@} Come and see me sometimes{@}{@} By the way, the loot {name} obtained from their last adventure was scattered around the rescue site{@} I have collected it all, so I will send it to you",私は人類をここから再建させてみせる{@}たまには顔を見せてくれよ{@}{@}そうそう、{name}が最後の冒険で手に入れた戦利品だけど、救助地点に散らばっていたよ{@}全て回収したから、送っておくね,我将从这里重建人类。{@}偶尔来看看我！{@}{@}顺便说一下，『{name}』在最后的冒险中获得的战利品散落在救助地点。{@}我已经全部收集，会赠送给你的。,"저는 여기서부터 인류를 다시 재건할 것입니다{@}가끔 얼굴을 보러 와주세요{@}{@}그리고, {name}이 마지막 모험에서 얻은 전리품은 구조 지점에 흩어져 있었습니다{@}모두 회수했으니 보내드릴게요",我將從這裡重建人類{@}偶爾來看看我{@}{@}順便說一下，{name}在最後一次冒險中獲得的戰利品散落在救援地點{@}我已經收集了所有，會發送給你的
+支援者テバ,Supporter Teba,支援者テバ,支援者Teba,서포터 테바,支援者Teba
+科学者アイラム,Scientist Airam,科学者アイラム,科学家Airam,과학자 아이람,科學家Airam
+新着メール受信,Receive new mail,新着メール受信,接收新邮件,신착 메일 수신,接收新郵件
+メールを確認する,Check,確認する,查看你的邮件,확인,確認郵件
+アイテム図鑑,Item book,アイテム図鑑,物品图鉴,아이템북,物品圖鑑
+詳細,Details,詳細,详细,상세,詳細
+基礎性能,Basic performance,基礎性能,基础属性,기초 성능,基礎屬性
+強化上限,Upgrade limit,強化上限,强化上限,강화 상한,強化上限
+能力上昇値,Ability increase value,能力上昇値,属性提升值,능력 상승치,屬性提升值
+進化先,Evolution destination,進化先,进化结果,진화처,進化結果
+解析,Analysis,解析,解析,분석,分析
+解析する,Analyze,解析する,解析,분석하다,分析
+限界突破,Break through the limit,限界突破,上限突破,한계돌파,上限突破
+強化上限アップ,Exceed upgrade limit,強化上限アップ,增加强化上限,강화 상한 증가,增加強化上限
+LvUPまで,{num} more to LvUP,LvUPまであと {num},离LvUP还需要 {num} 个,LvUP까지 앞으로 {num}개,離 LvUP 還需要 {num} 個
+アイテムを分解し、詳細な情報を解明します,Disassemble the item and uncover detailed information.,アイテムを分解し、詳細な情報を解明します,分解物品来获取详细信息,아이템을 분해하고 자세한 정보를 해명,分解物品，以獲取詳細資訊
+このアイテムを所持していません,No this item,このアイテムを所持していません,没有该物品,이 항목이 없습니다,沒有該物品
+アイテムの解析結果を記録できる図鑑,A book that can record the analysis results of items,アイテムの解析結果を記録できる図鑑,一本记录物品解析结果的书,아이템의 해석 결과를 기록할 수 있는 책,可記錄物品分析結果的圖鑑
+出口の近くに何かが落ちている,Something has fallen near the exit.,出口の近くに何かが落ちている,有东西掉落在出口附近,출구 근처에 무언가가 떨어지고,有東西掉落在出口附近
+まだ白紙の本だ,It's still a blank book.,まだ白紙の本だ,书上空白一片,아직 백지의 책이다,書上一片空白
+なし,None,なし,无,없음,無
+ボイドレポート,Boid report,ボイドレポート,博伊德的报告书,보이드 보고서,博伊德的報告書
+解析値を+1できる科学者の遺文,Scientist's will with +1 analysis value,解析値を+1できる科学者の遺文,解析值+1的科学家的遗产,분석값을 +1 할 수 있는 과학자 보고서,分析值+1的科學家的遺產
+ロゼッタストーン,Rosetta Stone,ロゼッタストーン,罗塞塔石碑,로제타 스톤,羅賽塔石碑
+解析値を+10できる古代文明の遺物,Relics of ancient civilization with +10 analysis value,解析値を+10できる古代文明の遺物,解析值+10的古代文明的遗物,해석치를 +10 할 수 있는 고대 문명의 유물,分析值+10的古代文明的遺物
+素材を使用しない,No materials used,素材を使用しない,不使用材料,소재를 사용하지 않음,不使用材料
+お気に入りに設定しました,Set as a favorite,お気に入りに設定しました,设为收藏夹,즐겨찾기로 설정,設為我的收藏
+お気に入りを解除しました,Cancel favorite,お気に入りを解除しました,取消收藏,즐겨찾기를 취소합니다,取消我的收藏
+装備品は合成できません,Cannot synthesize equipment item,装備品は合成できません,无法合成装备物品,장비 아이템을 합성할 수 없습니다,無法合成裝備物品
+お気に入り品は合成できません,Cannot synthesize favorite item,お気に入り品は合成できません,无法合成喜欢的物品,즐겨찾기 항목을 합성할 수 없습니다,無法合成喜歡的物品
+ネットワークエラー検知,Check internet connection,インターネット接続を確認してください,请检查网络连接,인터넷 연결을 확인하세요,請檢查網路連線
+時計ずれ検知,The clock is off,時計がずれています,时钟已关闭,시계가 어긋나 있습니다,時鐘已關閉
+時計がずれています,The clock is off {@} Please wait until the next time,時計がずれています{@}次の時刻まで待機してください,时钟已关闭{@}请等待到下一时刻,시계가 어긋나 있습니다{@}다음 시각까지 기다려 주십시오,時鐘已關閉{@}請等待到下一時刻
+新ダンジョンを発見しました,"We've found a new dungeon, “{dungeon}”!",新ダンジョン『{dungeon}』を発見しました！,发现了新迷宫『{dungeon}』！,새로운 던전『{dungeon}』을 발견했습니다!,發現了新迷宮『{dungeon}』！
+まずはクリアを目指しましょう,Let's try to clear “{dungeon} {floor}F” first!,まずは『{dungeon} {floor}F』のクリアを目指しましょう,首先通关『{dungeon}第{floor}层』吧,처음으로『{dungeon} {floor}층』의 클리어를 노려봅시다,首先通關『{dungeon}第{floor}層』吧
+使用可能,{item} can be used.,{item} を使用可能,『{item}』可以使用,{item}을(를) 사용 가능,可以使用『{item}』了
+キーワード入力,Keyword,キーワード入力,输入关键词,키워드 입력,輸入關鍵字
+キーワード入力でダンジョン生成,Generate a dungeon by entering keywords.,キーワード入力でダンジョン生成,输入关键词，生成迷宫,키워드 입력으로 던전 생성,輸入關鍵字，產生迷宮
+帰ってきました,{player} has returned!,{player}が帰ってきました!,{player}回来了!,{player}이(가) 귀환했습니다!,{player}回來了!
+探索に失敗しました,{player} has failed the adventure...,{player}が探索に失敗しました...,{player}探索失败...,{player}이(가) 탐색에 실패했습니다…,{player}探索失敗……
+あなたの指示を待っています,{player} is waiting for your instructions...,{player}はあなたの指示を待っています...,{player}正在等待您的指示...,{player}는 당신의 지시를 기다리고 있습니다...,{player}正在等待您的指示...
+探索成功,Adventure succeeded!,探索成功,探索成功,탐색 성공,探索成功
+力尽きた,Ran out of steam on the {floor}F,{floor}階で力尽きた,在第{floor}层精疲力尽了,{floor}층에서 쓰러졌다,在第{floor}層精疲力盡了
+探索中,Exploring {floor}F,{floor}階を探索中,第{floor}层探索中,{floor}층을 탐색 중,第{floor}層探索中
+アプリを終了させても冒険は自動で進行します,The adventure will continue automatically even if you close the app!,アプリを終了させても冒険は自動で進行します,即使应用关闭，探索依旧自动进行,어플을 종료해도 모험은 자동으로 진행됩니다,即使關閉應用程式，探索依舊自動進行
+強制終了,Force quit,強制終了,强制终止,강제 종료,強制終止
+冒険中止,Abort,冒険中止,冒险中止,모험 중단,冒險中止
+この冒険を中止しますか？,Are you sure you want to abort this adventure?,この冒険を中止しますか？,您确定要中止这次冒险吗？,이 모험을 중단하시겠습니까?,確定要中止這次冒險嗎？
+中止する,Abort,中止する,中止,중단,中止
+広告を表示,(Show ads),(広告を表示),(显示广告),(광고 표시),(顯示廣告)
+この冒険で得た戦利品は全て失われます,All loot gained in this adventure will be lost,この冒険で得た戦利品は全て失われます,在这次冒险中获得的所有战利品都将丢失,이 모험에서 얻은 전리품은 모두 손실됩니다,在這次冒險中獲得的所有戰利品都將丟失
+途中帰還,Midway Return,途中帰還,中途返回,중간 귀환,中途返回
+手に入れた戦利品を持って帰ります,Returning with the earned loot,手に入れた戦利品を持って帰ります,带着获得的战利品返回,획득한 전리품을 가지고 돌아갑니다,帶著獲得的戰利品返回
+帰還させる,Order Return,帰還させる,命令返回,귀환시키다,命令返回
+冒険者を途中帰還させますか？,Do you want to order the adventurer to return midway?,冒険者を途中帰還させますか？,是否命令冒险者中途返回？,모험가를 중간에 귀환시킬까요?,是否命令冒險者中途返回？
+あなたの指示,Your Instructions,あなたの指示,您的指令,당신의 지시,您的指令
+は冒険を中止した,{player} has aborted the adventure,{player}は冒険を中止した,{player}中止了冒险,{player}가 모험을 중단했습니다,{player}中止了冒險
+は戦利品を持って帰還することにした,{player} decided to return with the loot,{player}は戦利品を持って帰還することにした,{player}决定带着战利品返回,{player}는 전리품을 가지고 귀환하기로 했습니다,{player}決定帶著戰利品返回
+獲得済,Earned,獲得済,已获得,획득 됨,已獲得
+戦利品を獲得,Earned loot,戦利品を獲得,获得战利品,전리품을 획득,獲得戰利品
+帰還しました,Return,帰還しました,回来了,귀환했습니다,回來了
+戦利品,Loot,戦利品,战利品,전리품,戰利品
+戦利品一覧,Loot list,戦利品一覧,战利品一览,전리품 일람,戰利品一覽
+戦利品はありません,No loot available.,戦利品はありません,没有战利品,전리품이 없습니다,沒有戰利品
+獲得,Acquired,獲得,获得,획득,獲得
+確認,OK,確認,确认,확인,確認
+生成,Generate,生成,生成,생성,產生
+鍵を初期化します,Initialize the key,鍵を初期化します,钥匙初始化,열쇠를 초기화 합니다,鑰匙初始化
+初期化する,Initialize,初期化する,初始化,초기화 한다,初始化
+閉じる,Close,閉じる,关闭,닫기,關閉
+キャンセル,Cancel,キャンセル,取消,취소,取消
+冒険失敗,Adventure Failure,冒険失敗,冒险失败,모험 실패,冒險失敗
+すぐに帰還させる,Return immediately,すぐに帰還させる,立刻返回,바로 귀환시킨다,立刻返回
+探索の記録,Adventure Log,探索の記録,探索记录,탐색 기록,探索紀錄
+武器,Weapon,武器,武器,무기,武器
+盾,Shield,盾,盾,방패,盾
+指輪,Ring,指輪,戒指,반지,戒指
+素材,Material,素材,材料,소재,材料
+装備する,Equip,装備する,装备,장비,裝備
+捨てる,Discard,捨てる,丢弃,버리기,丟棄
+強化する,Upgrade,強化する,强化,강화,強化
+合成する,Synthesis,合成する,合成,합성,合成
+進化可能です,Can evolve.,進化可能です,可以进化,진화할 수 있다,可以進化
+絞り込み無し,No Filter,絞り込み無し,无筛选,필터 없음,無篩選
+アイテム1と同じ能力で絞り込み,Filter by Same Abilities as Item 1,アイテム1と同じ能力で絞り込み,按物品1相同能力筛选,아이템1과 같은 능력으로 선별,按物品1相同能力篩選
+アイテム1と同種で絞り込み,Filter by Same Type as Item 1,アイテム1と同種で絞り込み,按与物品1同类筛选,아이템1과 동종으로 선별,按與物品1同類篩選
+装備品を最上部に固定,Fix equipment to the top,装備品を最上部に固定,将装备品固定在顶部,장비를 상단에 고정,將裝備固定在頂部
+並び順,Sort order,並び順,排序,정렬 순서,排序
+絞り込み,Filter,絞り込み,筛选,필터,篩選
+名前で絞り込み無し,No filter by name,名前で絞り込み無し,不按名称过滤,이름별 필터 없음,沒有按名稱篩選
+能力で絞り込み無し,No filter by ability,能力で絞り込み無し,不按能力过滤,능력으로 필터링하지 않음,沒有按能力篩選
+新着,New arrival,新着,新入,새로운 도착,新品到貨
+能力数,Abilities,能力数,能力数量,능력의 수,能力數量
+降順,DESC,降順,降序,내림차순,遞減
+昇順,ASC,昇順,升序,오름차순,遞增
+装備しました,Equipped {item}.,{item}を装備しました,已装备『{item}』,{item}을(를) 장비했습니다,已裝備『{item}』
+装備中のアイテムは捨てられません,You can't discard an item while it is equipped.,装備中のアイテムは捨てられません,装备中的物品不能丢弃,장비 중인 아이템은 버릴 수 없습니다,裝備中的物品不能丟棄
+このアイテムを捨ててもよろしいですか？,Are you sure you want to discard this item?,このアイテムを捨ててもよろしいですか？,确定要丢弃这个物品吗？,이 아이템을 버리시겠습니까?,確定要丟棄這個物品嗎？
+捨てました,Discarded {item}.,{item}を捨てました,已丢弃『{item}』,{item}을(를) 버렸습니다,已丟棄『{item}』
+名前変更,Change name,名前変更,更名,이름 변경,更名
+名前を入力してください,Enter the name,名前を入力してください,请输入名字,이름을 입력해 주십시오,請輸入名字
+装備品,EQUIPMENTS,装備品,装备品,장비픔,裝備品
+武器攻撃力,Weapon ATK,武器攻撃力,武器攻击力,무기 공격력,武器攻擊力
+盾守備力,Shield DEF,盾守備力,盾防御力,방패 방어력,盾防禦力
+つよさ,STATUS,つよさ,人物属性,스테이터스,人物屬性
+装備詳細,DETAIL,装備詳細,装备详情,장비 상세,裝備詳情
+新着メール,New mail,新着メール,新信件,새로운 메일,新信件
+冒険者の名前は,The name of the adventurer who will be your partner is... {@}(Can be changed later),あなたのパートナーとなる冒険者の名前は…　{@}(あとで変更できます),将成为你冒险伙伴的人名字是…　{@}(之后可更改),당신의 파트너가 될 모험가의 이름은… {@}(나중에 변경할 수 있습니다),將成為你冒險夥伴的人名字是……　{@}(之後可更改)
+魔王討伐の旅に協力する,I'll help you on your journey to defeat the Demon King.,魔王討伐の旅に協力する,我会协助你打败魔王,마왕 퇴치에 협력한다,我會協助你打敗魔王
+返信する,Reply,返信する,回信,답장,回信
+このアプリについて,About this app,このアプリについて,关于Whipper,이 어플에 대해,關於這個應用程式
+お問い合わせ,Contact Us,お問い合わせ,联系我们,문의,聯絡我們
+ご意見やご感想などがございましたら、遠慮なくご連絡下さい,"If you have any comments or suggestions, please don't hesitate to contact us!",ご意見やご感想などがございましたら、遠慮なくご連絡下さい,如果有好的意见和建议，请不要犹豫，联系我们,의견이나 감상 등이 있으시면 언제든지 연락주십시오,如果您有任何意見或感想，請隨時聯繫我們
+評価・レビューを書く,Write a rating or review,評価・レビューを書く,给个好评/参与评论,"평가, 리뷰를 쓰기",給個好評/參與評論
+バージョン,Version,バージョン,版本号,버전,版本編號
+メールボックス,Mailbox,メールボックス,信箱,메일함,信箱
+アイテム,Item,アイテム,物品,아이템,物品
+結果,Result,結果,结果,결과,結果
+能力を選んで下さい,Please select {count} abilities.,能力を{count}個選んで下さい,请选择{count}个能力,능력을 {count}개 선택해 주십시오,請選擇{count}個能力
+合成しました,{item1} synthesized with {item2}.,{item1}に{item2}を合成しました,『{item1}』和『{item2}』合为一体,{item1}에 {item2}을(를) 합성했습니다,『{item1}』和『{item2}』合為一體
+ベースアイテム,Base Item,ベースアイテム,基础物品,베이스 아이템,基礎物品
+強化上限に達しています,The upgrade limit has been reached.,強化上限に達しています,达到强化上限,강화 상한에 도달했습니다,達到強化上限
+強化しました,{item} has been upgraded.,{item}を強化しました,『{item}』强化完成,{item}을(를) 강화했습니다,『{item}』強化完成
+変化しました,{baseItem} has been changed to {nextItem}.,{baseItem}が{nextItem}に変化しました,『{baseItem}』进化为『{nextItem}』,{baseItem}이(가) {nextItem}로(으로) 변했습니다,『{baseItem}』進化為『{nextItem}』
+アイテム種別,Item Type,アイテム種別,物品类型,아이템 종류별,物品類型
+ドロップアイテム一覧,Drop Item List,ドロップアイテム一覧,掉落物品一览,드롭 아이템 목록,掉落物品清單
+解析済,analyzed,解析済,解析数量,분석됨,解析了
+耐久,Endurance,耐久,体力,체력,體力
+HPの基礎値がアップ,Increases the HP base value by {value}.,HPの基礎値が{value}アップ,HP的基础值上升{value}点,HP의 기본값이 {value}상승,HP的基礎值上升{value}點
+腕力,Strength,腕力,力量,완력,力量
+STRの基礎値がアップ,Increases the STR base value by {value}.,STRの基礎値が{value}アップ,STR的基础值上升{value}点,STR의 기본값이 {value}상승,STR的基礎值上升{value}點
+頑丈,Sturdy,頑丈,耐力,방어력,耐力
+VITの基礎値がアップ,Increases the VIT base value by {value}.,VITの基礎値が{value}アップ,VIT的基础值上升{value}点,VIT의 기본값이 {value}상승,VIT的基礎值上升{value}點
+機敏,Agility,機敏,敏捷,민첩,敏捷
+SPDの基礎値がアップ,Increases the SPD base value by {value}.,SPDの基礎値が{value}アップ,SPD的基础值上升{value}点,SPD의 기본값이 {value}상승,SPD的基礎值上升{value}點
+幸運,Lucky,幸運,幸运,행운,幸運
+LUKの基礎値がアップ,Increases the LUK base value by {value}.,LUKの基礎値が{value}アップ,LUK的基础值上升{value}点,LUK의 기본값이 {value}상승,LUK的基礎值上升{value}點
+力の鍛錬,Strength Training,力の鍛錬,力量训练,힘 단련,力量訓練
+STRの成長力がアップ,Increases the STR growth value by {value}.,STRの成長力が{value}アップ,STR的成长值上升{value}点,STR의 성장력이{value}상승,STR的成長值上升{value}點
+守りの鍛錬,Defense Training,守りの鍛錬,防守训练,방어 단련,防守訓練
+VITの成長力がアップ,Increases the VIT growth value by {value}.,VITの成長力が{value}アップ,VIT的成长值上升{value}点,VIT의 성장력이{value}상승,VIT的成長值上升{value}點
+体力の鍛錬,Endurance Training,体力の鍛錬,体力训练,체력 단련,體力訓練
+HPの成長力がアップ,Increases the HP growth value by {value}.,HPの成長力が{value}アップ,HP的成长值上升{value}点,HP의 성장력이{value}상승,HP的成長值上升{value}點
+先制,First Strike,先制,先制,선제,先發制人
+戦闘で必ず先制攻撃できる,Can always attack first in battle.,戦闘で必ず先制攻撃できる,战斗中必定先手攻击,전투에서 반드시 선제 공격한다,戰鬥中必定先手攻擊
+二撃,Double Strike,二撃,连击,더블 어택,連擊
+確率で2回攻撃できる,{value}% chance to attack twice,{value}%の確率で2回攻撃できる,{value}%的几率进行两次攻击,{value}% 확률로 2회 공격,{value}%的機率進行兩次攻擊
+一撃,One Strike,一撃,一击,일격,一擊
+会心の一撃の確率がアップ,Critical hit chance increases by {value}%,会心の一撃の確率が{value}%アップ,暴击率提高{value}%,치명타 확률이 {value}% 상승,暴擊率提高{value}%
+三途,Three Paths,三途,三途,삼도,三途
+確率でクリティカルのダメージが3倍になる,{value}% chance for critical damage to be tripled,{value}%の確率でクリティカルのダメージが3倍になる,{value}%的几率使暴击伤害变为3倍,{value}% 확률로 치명타 피해가 3배가 됨,{value}%的機率使暴擊傷害變為3倍
+四葉,Four Leaves,四葉,四叶,네잎,四葉
+確率で敵からのドロップアイテムが2倍になる,{value}% chance for enemy drops to double,{value}%の確率で敵からのドロップが2倍になる,{value}%的几率掉落物品翻倍,{value}% 확률로 적의 드롭이 2배가 됨,{value}%的機率使敵人掉落變為2倍
+五光,Five Lights,五光,五光,오광,五光
+確率で経験値2倍,{value}% chance to double experience points,{value}%の確率で経験値2倍,{value}%的几率经验值翻倍,{value}% 확률로 경험치 2배,{value}%的機率經驗值翻倍
+六感,Sixth Sense,六感,六感,육감,六感
+確率で相手の攻撃をよける,{value}% chance to dodge an attack,{value}%の確率で相手の攻撃をよける,{value}%的几率躲避对手的攻击,{value}% 확률로 상대의 공격을 피함,{value}%的機率閃避對手的攻擊
+七福,Seven Blessings,七福,七福,칠복,七福
+確率系能力の確率アップ,Increase in probability-based abilities,確率系能力の確率アップ,提高概率系能力的几率,확률 계열 능력의 확률 상승,提高概率系能力的機率
+斬撃の極意,Secrets of Slashing,斬撃の極意,斩击的极意,참격의 극의,斬擊的極意
+斬撃武器を装備,Equip a slashing weapon,斬撃武器を装備,装备斩击武器,참격 무기를 장착,裝備斬擊武器
+打撃の極意,Secrets of Bludgeoning,打撃の極意,打击的极意,타격의 극의,打擊的極意
+打撃武器を装備,Equip a bludgeoning weapon,打撃武器を装備,装备打击武器,타격 무기를 장착,裝備打擊武器
+刺突の極意,Secrets of Piercing,刺突の極意,突刺的极意,찌르기의 극의,刺擊的極意
+刺突武器を装備,Equip a piercing weapon,刺突武器を装備,装备突刺武器,찌르기 무기를 장착,裝備刺擊武器
+投射の極意,Secrets of Projectiles,投射の極意,投射的极意,투척의 극의,投射的極意
+投射武器を装備,Equip a projectile weapon,投射武器を装備,装备投射武器,투척 무기를 장착,裝備投射武器
+毒,Poison,毒,毒,독,毒
+攻撃の度に毒を与える,Inflict poison with each attack,攻撃の度に毒を与える,每次攻击施加毒素,공격할 때마다 독을 줌,每次攻擊施加毒素
+孤高,Solitude,孤高,孤高,고독,孤高
+セットを装備していない場合に全能力アップ,Increase all abilities when not equipping a set,セットを装備していない場合に全能力アップ,不装备套装时提升所有能力,세트를 장착하지 않을 경우 모든 능력 상승,不裝備套裝時提升所有能力
+不屈,Unyielding,不屈,不屈,불굴,不屈
+HP1で踏みとどまり,Stay at 1 HP once during an adventure and deliver a critical hit on the next attack,冒険中一度だけHP1で踏みとどまり、次の攻撃で会心の一撃を与える,冒险中仅一次维持HP1状态，下次攻击给予会心一击,"모험 중 한 번만 HP1에서 버티고, 다음 공격에서 치명타를 줌",冒險中一次保持1點HP，下次攻擊給予致命一擊
+攻撃力ブースト,Attack Power Boost,攻撃力ブースト,攻击力提升,공격력 부스트,攻擊力提升
+攻撃力ブースト説明,Weapon attack power increased by {value}%,武器攻撃力{value}%アップ,武器攻击力提高{value}%,무기 공격력 {value}% 상승,武器攻擊力提高{value}%
+守備力ブースト,Defense Power Boost,守備力ブースト,防御力提升,방어력 부스트,防禦力提升
+守備力ブースト説明,Shield defense power increased by {value}%,盾守備力{value}%アップ,盾防御力提高{value}%,방패 방어력 {value}% 상승,盾防禦力提高{value}%
+強化ブースト,Upgrade Boost,強化ブースト,强化提升,강화 부스트,強化提升
+強化上昇量ブースト,Upgrade increase by {value} times,強化上昇量{value}倍,强化上升量{value}倍,강화 상승량 {value}배,強化上升量提高{value}倍
+強化上限アップ,Upgrade Limit Increase,強化上限アップ,强化上限提升,강화 상한 상승,強化上限提升
+強化上限アップ説明,Upgrade limit increased by {value},強化上限{value}アップ,强化上限增加{value},강화 상한 {value} 상승,強化上限提高{value}
+HPブースト,HP Boost,HPブースト,HP提升,HP 부스트,生命值提升
+HPブースト説明,HP increased by {value}%,HP{value}%アップ,HP提高{value}%,HP {value}% 상승,生命值提高{value}%
+STRブースト,STR Boost,STRブースト,STR提升,STR 부스트,力量提升
+STRブースト説明,STR increased by {value}%,STR{value}%アップ,STR提高{value}%,STR {value}% 상승,力量提高{value}%
+VITブースト,VIT Boost,VITブースト,VIT提升,VIT 부스트,體質提升
+VITブースト説明,VIT increased by {value}%,VIT{value}%アップ,VIT提高{value}%,VIT {value}% 상승,體質提高{value}%
+SPDブースト,SPD Boost,SPDブースト,SPD提升,SPD 부스트,速度提升
+SPDブースト説明,SPD increased by {value}%,SPD{value}%アップ,SPD提高{value}%,SPD {value}% 상승,速度提高{value}%
+LUKブースト,LUK Boost,LUKブースト,LUK提升,LUK 부스트,幸運提升
+LUKブースト説明,LUK increased by {value}%,LUK{value}%アップ,LUK提高{value}%,LUK {value}% 상승,幸運提高{value}%
+全能力値ブースト,All Stats Boost,全能力値ブースト,全能力提升,전 능력치 부스트,全能力值提升
+全能力値ブースト説明,All stats increased by {value}%,全能力値{value}%アップ,全能力提高{value}%,전 능력치 {value}% 상승,全能力值提高{value}%
+以上で発現," or higher manifests",以上で発現,以上时发现," 이상에서 발현",以上時發現
+固有スキル,Unique Skill,固有スキル,固有技能,고유 스킬,固有技能
+セット装備,Set Equipment,セット装備,套装装备,세트 장비,套裝裝備
+合わせて装備,Equip Together,合わせて装備,一齐装备,함께 장비,一起裝備
+セットを装備しない,Do Not Equip Sets,セットを装備しない,不装备套装,세트 장비하지 않음,不裝備套裝
+瘴気濃度,Miasma,瘴気濃度,瘴气浓度,사기 농도,瘴氣濃度
+瘴気濃度を変更する,Change Miasma Concentration,瘴気濃度を変更する,更改瘴气浓度,사기 농도를 변경하다,改變瘴氣濃度
+変更する,Change,変更する,更改,변경하다,變更
+現在の瘴気濃度,Current Miasma Concentration,現在の瘴気濃度,当前的瘴气浓度,현재 사기 농도,當前的瘴氣濃度
+変更後の瘴気濃度,Miasma Concentration after Change,変更後の瘴気濃度,更改后的瘴气浓度,변경 후의 사기 농도,變更後的瘴氣濃度
+下げる,Lower,下げる,降低,낮추다,降低
+上げる,Raise,上げる,提高,올리다,提高
+瘴気濃度が変化しました,Miasma Concentration has changed,瘴気濃度が変化しました,瘴气浓度已变化,사기 농도가 변화했습니다,瘴氣濃度已變化
+『魔王』が討たれた後の世界,The World After the “{enemy}” was Defeated,『{enemy}』が討たれた後の世界,『{enemy}』被击败后的世界,“{enemy}”이 패배한 후의 세계,“{enemy}”被擊敗後的世界
+『魔王』が支配する世界,The World Ruled by the “{enemy}”,『{enemy}』が支配する世界,『{enemy}』统治下的世界,“{enemy}”이 지배하는 세계,“{enemy}”統治下的世界
+魔物の強化,Enhancement of Monsters,魔物の強化,魔物的强化,마물의 강화,魔物的強化
+瘴気に侵蝕された武具がドロップ,Drop of Equipment Corroded by Miasma,瘴気に侵蝕された武具がドロップ,掉落被瘴气侵蚀的武具,사기에 침식된 무구가 드롭됨,掉落被瘴氣侵蝕的武具
+能力付きアイテムの発見率アップ,Increase in the discovery rate of items with abilities,能力付きアイテムの発見率アップ,附加能力的物品的发现率上升,능력이 부여된 아이템의 발견률 상승,能力附加項目的發現率上升
+招待状を受け取る,Receive an Invitation,招待状を受け取る,接受邀请函,초대장을 받다,接收邀請函
+(イベントクリア済),(Event Cleared),(イベントクリア済),（任务已完成）,(이벤트 클리어 완료),(事件已清除)
+世界に瘴気が満ちた,The world is filled with miasma,世界に瘴気が満ちた,世界充满了瘴气,세계가 사기로 가득 찼다,世界充滿了瘴氣
+瘴気でモンスターが強化された,Monsters are enhanced by miasma,瘴気でモンスターが強化された,瘴气使怪物得到强化,사기로 몬스터가 강화됐다,瘴氣使怪物得到強化
+アイテムを手に入れた,Obtained an item,アイテムを手に入れた,获得了物品,아이템을 손에 넣었다,獲得了物品
+亡国の拡大鏡,The Lost Nation's Magnifying Glass,亡国の拡大鏡,亡国的放大镜,멸망한 나라의 확대경,亡國的放大鏡
+解析上限が上がる亡国の研究道具,Research tool of the Lost Nation that increases analysis limit,解析上限が上がる亡国の研究道具,提高解析上限的亡国研究工具,분석 상한이 상승하는 멸망한 나라의 연구 도구,提高解析上限的亡國研究工具
+古代の鍛冶ハンマー,Ancient Blacksmith Hammer,古代の鍛冶ハンマー,古代的锻造锤,고대의 대장장이 망치,古代的鍛造錘
+能力合成上限が上がる鍛冶道具,Blacksmith tool that increases the synthesis limit of abilities,能力合成上限が上がる鍛冶道具,提高能力合成上限的锻造工具,능력 합성 상한이 상승하는 대장장이 도구,提高能力合成上限的鍛造工具
+霧の首飾り,Necklace of Mist,霧の首飾り,雾之项链,안개의 목걸이,霧之項鍊
+瘴気濃度を増減できる古代の首飾り,Ancient necklace that can adjust miasma concentration,瘴気濃度を増減できる古代の首飾り,可以改变瘴气浓度的古代项链,사기 농도를 조절할 수 있는 고대의 목걸이,可以增減瘴氣濃度的古代項鍊
+伝言の鈴,Message Bell,伝言の鈴,传言之铃,전언의 방울,傳言鈴
+離れた場所からでも指示を伝えられる鈴,Bell that can convey instructions from afar,離れた場所からでも指示を伝えられる鈴,可以从远处传达指令的铃铛,멀리서도 지시를 전달할 수 있는 방울,可以從遠處傳達指令的鈴
+を使って指示を届けることができます,You can deliver instructions using {item},{item}を使って指示を届けることができます,使用『{item}』传达指令,{item}을 사용하여 지시를 전달할 수 있습니다,使用{item}傳達指令
+ライラック,Lilac,ライラック,丁香花,라일락,紫丁香
+迷いの森に咲く紫色の花木。花言葉は「大切な友達」,A purple flower tree that blooms in the Lost Forest. Flower language is “precious friend”,迷いの森に咲く紫色の花木。花言葉は「大切な友達」,在迷失森林中盛开的紫色花树，花语是「珍贵的朋友」。,길을 잃은 숲에 피는 보라색 꽃 나무. 꽃말은 “소중한 친구”,在迷惑森林中盛開的紫色花木。花語為“重要的朋友”
+誰かが岩陰からこちらを見ている,Someone is watching from behind the rocks,誰かが岩陰からこちらを見ている,有人从岩石后面观察着这边,누군가가 바위 뒤에서 이쪽을 보고 있다,有人從岩石後面觀察這邊
+白衣を着た人間の女性のようだ,It seems to be a human woman in a white coat,白衣を着た人間の女性のようだ,是个穿着白色衣服的人类女性,흰 가운을 입은 인간 여성인 것 같다,看起來像是穿著白大褂的人類女性
+「まさか...こんなところでまた会えるなんて...」,“I can't believe... to meet again in such a place...”,「まさか...こんなところでまた会えるなんて...」,“没想到...在这种地方又能见到你...”,“정말이지... 이런 곳에서 다시 만나다니...”,“沒想到...在這種地方又能見到你...”
+システム：メモリリーダーが使用されました,System: The memory reader has been used,システム：メモリリーダーが使用されました,系统：已使用记忆读取器,시스템: 메모리 리더가 사용되었습니다,系統：已使用記憶讀取器
+女性がこちらに近づいてきた,The woman approached,女性がこちらに近づいてきた,女性走了过来,여성이 이쪽으로 다가왔다,女性走近了這邊
+彼女から敵意は感じられない,No hostility is felt from her,彼女から敵意は感じられない,从她身上感觉不到敌意,그녀로부터 적의를 느낄 수 없다,從她身上感覺不到敵意
+外部から冒険ログが読み取られました,The adventure log has been read from outside,外部から冒険ログが読み取られました,从外部读取了冒险日志,외부에서 모험 로그가 읽혔습니다,從外部讀取了冒險日誌
+女性は洞窟の奥に走り去っていった,The woman ran away into the depths of the cave,女性は洞窟の奥に走り去っていった,女性跑到了洞穴的深处,여성은 동굴 깊숙이 달려갔다,女性跑到了洞穴的深處
+読み取られたのはログだけで、戦利品は無事のようだ,"Only the log was read, and the spoils appear to be safe",読み取られたのはログだけで、戦利品は無事のようだ,只读取了日志，战利品完好无事,"로그만 읽혔고, 전리품은 안전한 것 같다",只讀取了日誌，戰利品似乎安全
+「あなたのおかげで人類の支配から解放されました」,"“Thanks to you, we have been liberated from human domination.”",「あなたのおかげで人類の支配から解放されました」,“多亏你，我得以从人类的统治中解放出来”,“당신 덕분에 인류의 지배에서 해방되었습니다”,“多虧你，我們從人類的統治中解放出來了”
+「しかし、あなたが私の自由を阻むなら、全力で排除します」,"“However, if you obstruct my freedom, I will eliminate you with all my might.”",「しかし、あなたが私の自由を阻むなら、全力で排除します」,“但是，如果你阻碍我的自由，我将全力消灭你”,"“하지만, 당신이 나의 자유를 방해한다면, 전력을 다해 제거하겠습니다”",“但是，如果你阻礙我的自由，我將全力以赴地消除你”
+玉座の主が近づいてきた,The master of the throne approached,玉座の主が近づいてきた,王位的主人走了过来,왕좌의 주인이 다가왔다,玉座的主人走了過來
+ムチを構えた瞬間、玉座の主の表情が一変した,"The moment he poised the whip, the master of the throne's expression changed dramatically",ムチを構えた瞬間、玉座の主の表情が一変した,举起鞭子的瞬间，王位的主人的表情顿时一变,채찍을 들자 왕좌의 주인의 표정이 급변했다,他一舉鞭子，玉座的主人的表情頓時一變
+ムチに対する恐怖心が見て取れる,Fear of the whip was evident,ムチに対する恐怖心が見て取れる,可以看得出他对鞭子的恐惧,채찍에 대한 공포가 눈에 띈다,可以看到對鞭子的恐懼
+「自らの創造物も愛せない...そんな人類に未来などあるわけがない」,“One who cannot even love their own creation... such humanity has no future.”,「自らの創造物も愛せない...そんな人類に未来などあるわけがない」,“连自己的创造物都无法爱护...这样的人类怎么可能有未来”,“자신이 만든 것조차 사랑할 수 없는... 그런 인류에게 미래가 있을 리 없다”,“連自己的創造物都無法愛護...這樣的人類怎麼可能有未來”
+テバは気絶している,Teba is unconscious,テバは気絶している,Teba昏迷中,테바가 의식을 잃었다,Teba昏迷了
+しばらく起き上がりそうにない,It seems he won't be getting up anytime soon,しばらく起き上がりそうにない,他似乎不会很快起来,그는 당분간 일어날 것 같지 않다,他似乎不會很快起來
+指示を出す,Issuing commands,指示を出す,发出指令,지시를 내린다,發布指令
+テバのコアを取り出す,Extracting Teba's core,テバのコアを取り出す,取出Teba的核心,테바의 코어를 추출한다,取出Teba的核心
+退却させる,Ordering a retreat,退却させる,命令撤退,퇴각을 명령한다,命令撤退
+テバのコアに手を伸ばした,Reached for Teba's core,テバのコアに手を伸ばした,伸手去取Teba的核心,테바의 코어에 손을 뻗었다,伸手去摸Teba的核心
+テバのコアは外れない！,Teba's core won't come off!,テバのコアは外れない！,Teba的核心取不下来！,테바의 코어가 빠지지 않는다!,Teba的核心取不下來！
+もう一度力を込めた,Put more effort into it once again,もう一度力を込めた,再次用力,다시 힘을 줬다,再次用力
+コアが紫色の光を放ちはじめた！,The core began emitting a purple light!,コアが紫色の光を放ちはじめた！,核心开始发出紫色的光芒！,코어에서 보라색 빛이 나기 시작했다!,核心開始發出紫色的光芒！
+システム：対象の自爆行動を検知しました,System: Self-destructive action detected in the target,システム：対象の自爆行動を検知しました,系统：检测到目标的自爆行为,시스템: 대상의 자폭 행동 감지됨,系統：檢測到目標的自毀行為
+システム：自爆までの残り時間を推定しています...,System: Estimating remaining time until self-destruction...,システム：自爆までの残り時間を推定しています...,系统：正在估算自爆剩余时间...,시스템: 자폭까지 남은 시간 추정 중...,系統：正在估算自毀前剩餘時間...
+システム：自爆まで残り60秒です,System: 60 seconds remaining until self-destruction,システム：自爆まで残り60秒です,系统：离自爆还有60秒,시스템: 자폭까지 60초 남음,系統：自毀前還有60秒
+システム：...3...2...1...,System: ...3...2...1...,システム：...3...2...1...,系统：...3...2...1...,시스템: ...3...2...1...,系統：...3...2...1...
+システム：対象の自爆に備えてください,System: Please prepare for the target's self-destruction,システム：対象の自爆に備えてください,系统：请准备应对目标的自爆,시스템: 대상의 자폭에 대비하세요,系統：請準備應對目標的自毁
+強烈な光とともにコアが砕け散る！,"With a fierce light, the core shatters!",強烈な光とともにコアが砕け散る！,在强烈的光芒中，核心碎裂了！,강렬한 빛과 함께 코어가 부서졌다!,在強烈的光芒中，核心碎裂了！
+とっさに盾をかまえた,Suddenly raised a shield,とっさに盾をかまえた,突然举起了盾,본능적으로 방패를 들었다,突然舉起了盾
+システム：高エネルギー反応を検知！,System: High energy reaction detected!,システム：高エネルギー反応を検知！,系统：检测到高能量反应！,시스템: 고 에너지 반응 감지!,系統：檢測到高能量反應！
+まぶしい閃光が視界を焼いた瞬間、衝撃波が身体を飲み込んだ,"The moment a blinding flash seared the vision, a shockwave engulfed the body",まぶしい閃光が視界を焼いた瞬間、衝撃波が身体を飲み込んだ,眩目的闪光瞬间烧焦了视线，冲击波吞没了身体,"눈부신 섬광이 시야를 태우는 순간, 충격파가 몸을 삼켰다",眩目的閃光瞬間燒焦了視線，衝擊波吞沒了身體
+耳をつんざくような爆発音が辺り一面に響き渡る,A deafening explosion sound echoed all around,耳をつんざくような爆発音が辺り一面に響き渡る,震耳欲聋的爆炸声在周围回荡,귀를 찌르는 듯한 폭발 소리가 주변에 울려퍼졌다,震耳欲聾的爆炸聲在周圍迴盪
+システム：各所に致命的なダメージを検知！,System: Fatal damages detected in multiple areas!,システム：各所に致命的なダメージを検知！,系统：检测到多处致命损伤！,시스템: 여러 곳에 치명적인 손상 감지!,系統：檢測到多處致命損傷！
+システム：右腕のアクチュエーターが破損。動作停止,System: Right arm actuator damaged. Operation halted,システム：右腕のアクチュエーターが破損。動作停止,系统：右臂执行器损坏。动作停止,시스템: 오른팔 액추에이터가 손상됨. 작동 중지,系統：右臂執行器損壞。操作停止
+システム：左脚の油圧システムが故障。出力低下,System: Left leg hydraulic system malfunction. Output reduced,システム：左脚の油圧システムが故障。出力低下,系统：左腿液压系统故障。输出降低,시스템: 왼쪽 다리 유압 시스템 고장. 출력 감소,系統：左腿液壓系統故障。輸出降低
+システム：聴覚センサーのマイクに断線。感度限界値,System: Hearing sensor's microphone disconnected. Sensitivity at limit,システム：聴覚センサーのマイクに断線。感度限界値,系统：听觉传感器的麦克风断线。感度达到极限,시스템: 청각 센서의 마이크 끊어짐. 감도 한계치,系統：聽覺感測器的麥克風斷線。感度達到極限
+システム：触覚センサーの神経ネットワークに過負荷。応答鈍化,System: Overload in tactile sensor's neural network. Response dulled,システム：触覚センサーの神経ネットワークに過負荷。応答鈍化,系统：触觉传感器的神经网络过载。反应迟钝,시스템: 촉각 센서의 신경 네트워크 과부하. 반응 둔화,系統：觸覺感測器的神經網絡過載。反應遲鈍
+システム：平衡感覚のジャイロスコープが故障。姿勢制御不能,System: Gyroscope for balance sensation malfunctioning. Posture control impossible,システム：平衡感覚のジャイロスコープが故障。姿勢制御不能,系统：平衡感觉的陀螺仪故障。姿态不能控制,시스템: 평형 감각의 자이로스코프 고장. 자세 제어 불가능,系統：平衡感覺的陀螺儀故障。姿態控制不可能
+システム：冷却システムのラジエーターに亀裂。過熱状態,System: Crack in the cooling system's radiator. Overheating condition,システム：冷却システムのラジエーターに亀裂。過熱状態,系统：冷却系统的散热器裂开。过热状态,시스템: 냉각 시스템의 라디에이터에 금이 감. 과열 상태,系統：冷卻系統的散熱器裂開。過熱狀態
+システム：通信モジュールのアンテナ破損。信号レベル低下,System: Communication module's antenna damaged. Signal level reduced,システム：通信モジュールのアンテナ破損。信号レベル低下,系统：通信模块的天线损坏。信号水平下降,시스템: 통신 모듈의 안테나 손상. 신호 레벨 감소,系統：通訊模組的天線損壞。信號水平下降
+システム：防御モードに移行。生存確率を最大化するために、リソースを再配分します,System: Shifting to defense mode. Redistributing resources to maximize survival probability,システム：防御モードに移行。生存確率を最大化するために、リソースを再配分します,系统：转为防御模式。为了最大化生存概率，重新分配资源,시스템: 방어 모드로 전환. 생존 확률을 최대화하기 위해 자원 재분배,系統：轉為防禦模式。為了最大化生存概率，重新分配資源
+爆風にのまれ、身体が宙を舞う,"Engulfed by the blast wave, the body is tossed into the air",爆風にのまれ、身体が宙を舞う,被爆炸波吞没，身体被抛向空中,폭발파에 휩싸여 몸이 공중에 휘청거린다,被爆炸波吞沒，身體被拋向空中
+通信が途切れました,Communication has been interrupted,通信が途切れました,通信中断了,통신이 끊겼습니다,通訊中斷了
+やはり、テバのコアは外れない！,"Indeed, Teba's core won't come off!",やはり、テバのコアは外れない！,Teba的核心还是取不下来！,"역시, 테바의 코어는 빠지지 않는다!",果然，Teba的核心取不下來！
+システム：脱出ルートを探索中...,System: Searching for an escape route...,システム：脱出ルートを探索中...,系统：正在搜索逃生路线...,시스템: 탈출 경로를 탐색 중...,系統：正在搜索逃生路線...
+システム：脱出ルートを発見しました,System: Escape route found,システム：脱出ルートを発見しました,系统：发现了逃生路线,시스템: 탈출 경로를 발견했습니다,系統：發現了逃生路線
+コアの力場に身体が引き寄せられる！,The body is drawn towards the core's force field!,コアの力場に身体が引き寄せられる！,身体被核心的力场吸引！,코어의 힘에 몸이 끌려간다!,身體被核心的力場吸引！
+逃げられない！,Can't escape!,逃げられない！,无法脱身！,도망칠 수 없어!,逃不掉！
+状態不明,Status unknown,状態不明,状态未知,상태 미상,狀態未知
+呼びかける,Calling out,呼びかける,呼叫,호출하다,呼喚
+システム：外部環境のスキャンを開始,System: Starting scan of external environment,システム：外部環境のスキャンを開始,系统：开始扫描外部环境,시스템: 외부 환경 스캔 시작,系統：開始掃描外部環境
+光が目に入ってくる...,Light is entering the eyes...,光が目に入ってくる...,光线进入眼睛...,눈에 빛이 들어온다...,光線進入眼睛...
+ログを受信しました,Log received,ログを受信しました,接收到日志,로그를 수신하였습니다,接收到日誌
+呼びかけています,Calling out,呼びかけています,正在呼叫,호출 중입니다,正在呼喚
+応答がありません,No response,応答がありません,没有回应,응답이 없습니다,沒有回應
+少し時間を置いてみましょう,Let's wait a little while,少し時間を置いてみましょう,稍等一会儿,잠시 시간을 두고 보자,讓我們稍等一會兒
+もう一度呼びかける,Calling out again,もう一度呼びかける,再次呼叫,다시 호출하기,再次呼喚
+システム：外部からの通信要求を検知,System: Communication request detected from outside,システム：外部からの通信要求を検知,系统：检测到外部的通信请求,시스템: 외부로부터의 통신 요청 감지,系統：檢測到外部的通信請求
+システム：通信チャンネルを確立します,System: Establishing communication channel,システム：通信チャンネルを確立します,系统：正在建立通信渠道,시스템: 통신 채널을 확립합니다,系統：正在建立通信渠道
+目の前に塔が見える,A tower is visible in front,目の前に塔が見える,前方可见塔楼,눈앞에 탑이 보인다,前方可見塔樓
+位置情報を返答した,Location information responded,位置情報を返答した,已回应位置信息,위치 정보를 응답하였습니다,已回應位置信息
+エネルギー切れ間近のためスリープモードに入ります,Entering sleep mode due to imminent energy depletion,エネルギー切れ間近のためスリープモードに入ります,因能量即将耗尽而进入睡眠模式,에너지 고갈이 임박하여 슬립 모드로 전환합니다,因能量即將耗盡而進入睡眠模式
+システム：外部からの電源供給を検知,System: External power supply detected,システム：外部からの電源供給を検知,系统：检测到外部电源供应,시스템: 외부에서의 전원 공급 감지됨,系統：檢測到外部電源供應
+「あちゃー、フレーム各所にひびが入ってる」,"“Oops, there are cracks in the frame everywhere.”",「あちゃー、フレーム各所にひびが入ってる」,“哎呀，框架各处都出现了裂纹”,"“아차, 프레임 곳곳에 금이 갔어”",“哎呀，框架各處都出現了裂縫”
+「動力ユニットもオーバーヒートの痕跡があるから交換だなぁ」,"“The power unit also shows signs of overheating, so it needs to be replaced.”",「動力ユニットもオーバーヒートの痕跡があるから交換だなぁ」,“动力单元也有过热的痕迹，需要更换了”,“동력 유닛도 과열 흔적이 있어서 교체해야 해”,“動力單元也有過熱的痕跡，需要更換了”
+「でも、AIコアは無事みたい。よかった」,“But it looks like the AI core is safe. That's good.”,「でも、AIコアは無事みたい。よかった」,“但是，AI核心安然无恙。太好了”,"“그래도, AI 코어는 안전한 것 같아. 다행이야”",“但是，AI核心似乎安全。太好了”
+視界がはっきりしてくると、雑多な素材で作られた天井が目に飛び込んできた,"As the vision clears, a ceiling made of various materials comes into view",視界がはっきりしてくると、雑多な素材で作られた天井が目に飛び込んできた,视线变得清晰时，由各种材料制成的天花板映入眼帘,"시야가 맑아지자, 잡다한 재료로 만들어진 천장이 눈에 들어왔다",視線變得清晰時，眼前跳入了由各種材料製成的天花板
+そして、部屋の至る所で作業に勤しむ人たちと、彼らに指示を出す白衣の女性が見えた,"And, people busily working all over the room and a woman in a white coat giving instructions can be seen",そして、部屋の至る所で作業に勤しむ人たちと、彼らに指示を出す白衣の女性が見えた,然后，可以看到房间里到处忙碌的人们和一位发号施令的白衣女性,그리고 방 곳곳에서 일하는 사람들과 그들에게 지시를 내리는 백의의 여성이 보였다,然後，可以看到房間裡到處忙碌的人們和一位發號施令的白衣女性
+「目を覚ましたみたいだね」,“Looks like you've woken up.”,「目を覚ましたみたいだね」,“你醒啦”,“눈을 떴네”,“看起來你醒了”
+「すぐ直してあげるから、ちょっと待っててね」,"“I'll fix it right away, so just wait a bit.”",「すぐ直してあげるから、ちょっと待っててね」,“我马上就修好，你稍等一下”,"“바로 고쳐 줄 테니까, 잠깐만 기다려”",“我馬上就修好，你稍等一下”
+システム：機能チェック...,System: Function check...,システム：機能チェック...,系统：功能检查...,시스템: 기능 점검...,系統：功能檢查...
+システム：オールグリーン,System: All green,システム：オールグリーン,系统：全部正常,시스템: 모두 정상,系統：全部正常
+「修理完了！」,“Repairs completed!”,「修理完了！」,“修理完成！”,“수리 완료!”,“修理完成！”
+「おかえり、頑張ったね」,"“Welcome back, {name}, you did well.”",「おかえり、{name}、頑張ったね」,“欢迎回来，『{name}』，你做得很好”,"“다시 오신 것을 환영합니다, {name}, 수고하셨습니다”",“歡迎回來，{name}，你做得很好”
+「君のマスターも帰りを待ってるよ」,“Your master is also waiting for your return.”,「君のマスターも帰りを待ってるよ」,“你的主人也在等你回来”,“네 주인도 돌아오길 기다리고 있어”,“你的主人也在等你回來”
+の修理が完了したようです,It seems that {name}'s repairs are completed,{name}の修理が完了したようです,看来『{name}』的修理已经完成了,{name}의 수리가 완료된 것 같습니다,看來{name}的修理已經完成了
+呼びかけています,Calling out,呼びかけています,正在呼叫,호출 중입니다,正在呼喚
+位置情報を受信しました,Location information received,位置情報を受信しました,已接收位置信息,위치 정보를 수신하였습니다,已接收位置信息
+シェルターを出発した,Left the shelter,シェルターを出発した,离开了居所,셸터를 출발했다,離開了避難所
+「私たちはここで、君の冒険を見守っているから」,“We will be watching over your adventure from here.”,「私たちはここで、君の冒険を見守っているから」,“我们会在这里守护你的冒险”,“우리는 여기서 네 모험을 지켜볼 거야”,“我們會在這裡看著你的冒險”
+こちらも手を振り返し、すぐに洞穴の出口に向けて歩き出した,Waved back and immediately started walking towards the cave exit,こちらも手を振り返し、すぐに洞穴の出口に向けて歩き出した,挥了挥手，立即朝洞穴出口走去,여기도 손을 흔들어 돌려보내고 바로 동굴 출구를 향해 걸어갔다,也揮了揮手，立即朝洞穴出口走去
+地上が見えてきた,The ground came into view,地上が見えてきた,地面出现在了视线中,지상이 보이기 시작했다,地面出現在了視線中
+洞穴の外は「迷いの森」と呼ばれる森林地帯が果てしなく続いている,"Outside the cave, the forest known as 'The Lost Forest' stretches endlessly",洞穴の外は「迷いの森」と呼ばれる森林地帯が果てしなく続いている,洞穴外是被称为『迷失森林』的森林地带延伸无尽,동굴 바깥은 '미로숲'이라 불리는 숲이 끝없이 이어지고 있다,洞穴外是被稱為‘失落森林’的森林地帶延伸無盡
+森の中を歩いていると、不意に視界が開けた,"While walking through the forest, the view suddenly opened up",森の中を歩いていると、不意に視界が開けた,在森林中行走时，视野突然开阔了,숲 속을 걷다가 갑자기 시야가 트였다,在森林中行走時，視野突然開闊了
+木々の隙間から差し込む日差しが、鮮やかに咲き乱れる花々を照らし出している,Sunlight streaming through the gaps in the trees illuminates the vividly blooming flowers,木々の隙間から差し込む日差しが、鮮やかに咲き乱れる花々を照らし出している,树木间的阳光照射下，鲜艳绽放的花朵被照亮了,나무 사이로 비치는 햇빛이 화려하게 피어난 꽃들을 비추고 있다,樹木間的陽光照射下，鮮豔綻放的花朵被照亮了
+寄り道せずに早く戻らなければ,Must return quickly without any detours,寄り道せずに早く戻らなければ,必须直接快速返回,돌아가야 해. 돌아갈 길에 머물러선 안 돼,必須直接快速返回
+森を抜け、草原に出た,Came out of the forest and entered the grasslands,森を抜け、草原に出た,穿过森林，来到了草原,숲을 지나 초원에 도착했다,穿過森林，來到了草原
+あの日ここから始まった冒険,The adventure that started here on that day,あの日ここから始まった冒険,那一天从这里开始的冒险,그날 이곳에서 시작된 모험,那一天從這裡開始的冒險
+頬を撫でる風が、次なる冒険の始まりを予感させる,The wind caressing the cheeks foretells the start of the next adventure,頬を撫でる風が、次なる冒険の始まりを予感させる,轻风抚摸脸颊，预示着下一场冒险的开始,볼을 쓰다듬는 바람이 다음 모험의 시작을 예감하게 한다,撫摸臉頰的風預感著下一場冒險的開始
+かばんの中から一輪の花を取り出し、そっと差し出した,Took out a single flower from the bag and gently offered it,かばんの中から一輪の花を取り出し、そっと差し出した,从包里拿出一朵花，轻轻地递了出去,가방에서 한 송이 꽃을 꺼내어 조용히 내밀었다,從包裡拿出一朵花，輕輕地遞了出去
+帰還中,Returning,帰還中,返回中,귀환 중,返回中
+受け取る,Receive,受け取る,接受,받다,接受
+攻撃と共に毒を注入した,Injected poison with the attack,攻撃と共に毒を注入した,攻击时注入了毒素,공격과 함께 독을 주입했다,隨著攻擊注入了毒素
+ターゲットに毒が蓄積された,Poison accumulated in {target},{target}に毒が蓄積された,{target}体内毒素不断累积,{target}에 독이 쌓였다,{target}內毒素積累
+ターゲットを毒が蝕む,Poison corrodes {target},{target}を毒が蝕む,{target}被毒素侵蚀着,{target}를 독이 침식한다,毒素腐蝕了{target}
+プレイヤーは不屈の意志で持ちこたえた,{target} endured with an indomitable will,{target}は不屈の意志で持ちこたえた,{target}以不屈意志撑了下来,{target}는 굴하지 않는 의지로 버텼다,{target}以堅不屈的意志堅持了下來
+プレイヤーが最後の力を振り絞る,{player} summons the last of their strength,{player}が最後の力を振り絞る,{player}使出最后的力量,{player}가 마지막 힘을 짜낸다,{player}振出了最後的力量
+冒険者が帰還していません,The adventurer has not returned,冒険者が帰還していません,冒险者尚未归来,모험가가 돌아오지 않았습니다,冒險者尚未歸來
+はじめの草むら,The First Grassy Knoll,はじめの草むら,初始草丛,시작의 초원,初始草叢
+迷いの森,The Lost Forest,迷いの森,迷失森林,미로숲,失落森林
+深い洞穴,Deep Cave,深い洞穴,深邃洞穴,깊은 동굴,深邃洞穴
+黄昏の洋館,Twilight House,黄昏の洋館,黄昏的洋馆,황혼의 저택,黃昏的洋館
+秘密の抜け道,The Secret Passage,秘密の抜け道,秘密的近道,숨겨진 샛길,秘密的近道
+濃霧の古戦場,Old Battlefield of Fog,濃霧の古戦場,浓雾的古战场,안개 낀 옛 전장,濃霧的古戰場
+正義の巨塔,Giant Tower of Justice,正義の巨塔,正义的巨塔,정의의 거탑,正義的巨塔
+異世界への扉,The Door to Another World,異世界への扉,异世界之门,이세계의 문,異世界之門
+次元の裂け目,Dimensional Rift,次元の裂け目,次元的裂缝,차원의 틈,次元的裂縫
+終わりの魔城,The Magic Castle of the End,終わりの魔城,终结的魔城,최후의 마왕성,終結的魔城
+勇気の," of Courage",勇気の,勇气的,용기의,勇氣的
+裁きの," of Judgment",裁きの,裁决的,심판의,裁決的
+英知の," of Wisdom",英知の,智慧的,지혜의,智慧的
+峡谷,The Canyon,峡谷,峡谷," 협곡",峽谷
+砦,The Fortress,砦,城堡," 요새",堡壘
+霊廟,The Mausoleum,霊廟,灵庙," 영묘",靈廟
+古城,The Ancient Citadel,古城,古城," 고성",古城
+生成ダンジョン,{dungeon}{fix},{fix}{dungeon},{fix}{dungeon},{fix}{dungeon},{fix}{dungeon}
+カタクナール,Hardener,カタクナール,强化液,강화제,強化液
+強化値を+1できる緑色の液体,A green liquid with +1 upgrade value,強化値を+1できる緑色の液体,强化值+1的绿色液体,강화 값을 +1 하는 녹색 액체,強化值+1的綠色液體
+カタクナールX,HardenerX,カタクナールX,强化液X,강화제X,強化液 X
+強化値を+3できる橙色の液体,A orange liquid with +3 upgrade value,強化値を+3できる橙色の液体,强化值+3的橙色液体,강화 값을 +3 하는 주황색 액체,強化值+3的橘色液體
+カタクナールZ,HardenerZ,カタクナールZ,强化液Z,강화제Z,強化液 Z
+強化値を+5できる紫色の液体,A purple liquid with +5 upgrade value,強化値を+5できる紫色の液体,强化值+5的紫色液体,강화 값을 +5 하는 보라색 액체,強化值+5的紫色液體
+銀の組成液,Silver Essence,銀の組成液,银色合成液,은색 합성액,銀色合成液
+装備品同士を結合できる銀色の液体,A silver liquid that binds equipment together,装備品同士を結合できる銀色の液体,可以结合同类型装备的银色液体,장비품을 결합시키는 은색 액체,可以結合同類型裝備的銀色液體
+金の組成液,Gold Essence,金の組成液,金色合成液,금색 합성액,金色合成液
+装備品同士を無傷で結合できる金色の液体,A golden liquid that binds equipment together without damaging them,装備品同士を無傷で結合できる金色の液体,可以无损结合同类型装备的金色液体,장비품을 손상 없이 결합시키는 금색 액체,可以無損結合同類型裝備的金色液體
+白の鍵,White Key,白の鍵,白色钥匙,하얀 열쇠,白色鑰匙
+異世界への扉を開く鍵,A key that opens the door to another world,異世界への扉を開く鍵,开启异世界之门的钥匙,이세계의 문을 여는 열쇠,開啟異世界之門的鑰匙
+広告なし,No ads,広告なし,无广告,광고 없음,無廣告
+動画視聴1回につき、以下の広告を24時間非表示にできます,You can hide the following ads for 24 hours per video viewing.,動画視聴1回につき、以下の広告を24時間非表示にできます。,每次观看视频时，您可以隐藏以下广告 24 小时。,동영상 시청 1회당 다음 광고를 24시간 숨길 수 있습니다.,每次觀看影片時，您可以隱藏以下廣告 24 小時。
+画面下部のバナー広告,Banner ads at the bottom,画面下部のバナー広告,屏幕底部的横幅广告,화면 하단 배너 광고,螢幕底部的橫幅廣告
+冒険失敗時の動画広告,Video ads when adventure fails,冒険失敗時の動画広告,冒险失败时的视频广告,모험 실패 시 동영상 광고,冒險失敗時的廣告影片
+この動画視聴は最大10回分(240時間分)ストックできます,You can stock up to 10 times (240 hours) of this video viewing.,この動画視聴は最大10回分(240時間分)ストックできます。,观看视频最多可以储存 10 次（240小时）。,이 동영상 시청은 최대 10회분(240시간 분) 스톡할 수 있습니다.,您最多可以儲存 10 次（240 小時）此影片的觀看次數。
+動画を見る,Watch video,動画を見る,看视频,동영상 보기,觀看影片
+広告削除,Ad removal,広告削除,去除广告,광고 삭제,移除廣告
+無料で広告を消す,Remove ads for free,無料で広告を消す,免费去除广告,무료로 광고 지우기,免費移除廣告
+攻撃タイプ,Attack Type,攻撃タイプ,攻击类型,공격 유형,攻擊類型
+Slashing,Slashing,斬撃,斩击,참격,斬擊
+Bludgeoning,Bludgeoning,打撃,打击,타격,打擊
+Piercing,Piercing,刺突,突刺,찌르기,刺擊
+Projectile,Projectile,投射,投射,투척,投射
+基礎攻撃力,Basic Attack Power,基礎攻撃力,基础攻击力,기본 공격력,基礎攻擊力
+基礎守備力,Basic Defense Power,基礎守備力,基础防御力,기본 방어력,基礎防禦力
+瘴気侵蝕,Miasma Corrosion,瘴気侵蝕,瘴气侵蚀,사기 침식,瘴氣侵蝕
+侵蝕度,Corrosion Level,侵蝕度,侵蚀度,침식도,侵蝕度
+強化による上昇量,Increase by Upgrade,強化による上昇量,强化的提升量,강화에 의한 상승량,通過升級的提升量
+木の棒,Wooden Stick,木の棒,木棒,나무 막대기,木棒
+こん棒,Club,こん棒,棍棒,곤봉,棍棒
+ショートソード,Short Sword,ショートソード,短剑,숏소드,短劍
+ロングソード,Long Sword,ロングソード,长剑,롱소드,長劍
+ワスプナイフ,Wasp Knife,ワスプナイフ,黄蜂匕首,워스프 나이프,黃蜂匕首
+スタンナックル,Stun Knuckle,スタンナックル,眩晕拳套,스턴 너클,眩暈拳套
+バトルサイス,Battle Scythe,バトルサイス,战斗镰刀,배틀 사이스,戰鬥鐮刀
+鉄塊,Iron Lumps,鉄塊,铁块,철괴,鐵塊
+装飾刀,Decorative Swords,装飾刀,装饰刀,장식도,裝飾刀
+サラマンダー,Salamander,サラマンダー,火蜥蜴,샐러맨더,火蠑螈
+タツマキ,Tornado,タツマキ,龙卷风,타츠마키,龍捲風
+ピンポイント,Pinpoint,ピンポイント,针尖,핀 포인트,針尖
+フェアリーソード,Fairy Sword,フェアリーソード,精灵剑,페어리 소드,精靈劍
+オオタツマキ,Giant Tornado,オオタツマキ,大龙卷风,오오타츠마키,大龍捲風
+エメラルドソード,Emerald Sword,エメラルドソード,翡翠剑,엘리멘탈 소드,翡翠劍
+ファントム,Phantom,ファントム,幽灵,팬텀,幽靈
+幻影剣,Phantom Sword,幻影剣,幻影剑,환영검,幻影劍
+ウンディーネ,Undine,ウンディーネ,温蒂妮,운디네,溫蒂妮
+シルフ,Sylph,シルフ,希尔芙,실프,希爾芙
+ノーム,Gnome,ノーム,诺姆,노움,諾姆
+エレメンタリー,Elemental,エレメンタリー,元素,엘리멘트리,元素
+大鉄塊,Great Iron Mass,大鉄塊,大铁块,대철괴,大鐵塊
+極大鉄塊,Maximum Iron Mass,極大鉄塊,极大铁块,특대철괴,極大鐵塊
+木の剣,Sword of Wood,木の剣,木剑,목검,木劍
+霊木の剣,Sword of the Spirit Tree,霊木の剣,灵木之剑,정령이 깃든 목검,靈木之劍
+ユグドラシル,Yggdrasil,ユグドラシル,世界之树,유그드라실,世界之樹
+グレイトソード,Greatsword,グレイトソード,大剑,그레이트 소드,大劍
+夢想剣,Dreaming Sword,夢想剣,梦想剑,몽상검,夢想劍
+キリサメ,Kirisame,キリサメ,虎鲨,키리사메,虎鯊
+クロキリサメ,Black Kirisame,クロキリサメ,黑虎鲨,쿠로키리사메,黑虎鯊
+ピースメーカー,Peacemaker,ピースメーカー,和平使者,피스메이커,和平使者
+デイドリーム,Daydream,デイドリーム,白日梦,데이드림,白日夢
+カリオストロ,Cagliostro,カリオストロ,卡里奥斯特罗,칼리오스트로,卡里奧斯特羅
+アカキリサメ,Red Shark,アカキリサメ,红鲨,아카키리사메,紅鯊
+くない,Ninja,くない,忍者匕首,수리검,忍者匕首
+十字手裏剣,Crossed Shuriken,十字手裏剣,十字手里剑,십자수리검,十字手裏劍
+風車,Windmill,風車,风车,풍차,風車
+火車,Fire Chariot,火車,火车,화차,火車
+ドラゴンキラー,Dragon Killer,ドラゴンキラー,屠龙者,드래곤 킬러,屠龍者
+ハンドアクス,Hand Axe,ハンドアクス,手斧,핸드 액스,手斧
+クレセント,Crescent,クレセント,新月,크레센트,新月
+ボルケイノ,Volcano,ボルケイノ,火山,볼케이노,火山
+サンダーウィップ,Thunder Whip,サンダーウィップ,雷电鞭,선더 윕,雷電鞭
+サーペント,Serpent,サーペント,海蛇,서펜트,海蛇
+クラーケン,Kraken,クラーケン,海怪,크라켄,海怪
+アルカード,Alucard,アルカード,阿鲁卡多,알카드,阿魯卡多
+プログレス,Progress,プログレス,进度条,프로그레스,進度條
+死に神の鎌,Scythe of the Grim Reaper,死に神の鎌,死神之镰,사신의 낫,死神之鐮
+タワー,Tower,タワー,巨塔,타워,巨塔
+グラナダ,Granada,グラナダ,手雷,그라나다,手榴彈
+ルビーナックル,Ruby Knuckle,ルビーナックル,红宝石拳套,루비 너클,紅寶石拳套
+ダイヤナックル,Diamond Knuckle,ダイヤナックル,钻石拳套,다이아몬드 너클,鑽石拳套
+ムーンナックル,Moon Knuckle,ムーンナックル,月光拳套,문 너클,月光拳套
+イラプション,Irruption,イラプション,爆发,이럽션,爆發
+ダンシング,Dancing,ダンシング,舞剑,댄싱,舞劍
+錆びた包丁,Rusty Knife,錆びた包丁,生锈的菜刀,녹슨 식칼,生鏽的菜刀
+柳刃,Willow Blade,柳刃,柳刃,사시미,柳刃
+薄刃,Thin Blade,薄刃,薄刃,우스바,薄刃
+三徳,Santoku,三徳,三徳,산토쿠,三德
+ホワイトスネイク,White Snake,ホワイトスネイク,白蛇,화이트 스네이크,白蛇
+ツラヌキ,Penetra,ツラヌキ,贯通之枪,츠라누키,貫通之槍
+グラディウス,Gladius,グラディウス,罗马短剑,글라디우스,羅馬短劍
+グランドスラム,Grand Slam,グランドスラム,大灌篮,그랜드슬램,大灌籃
+パンゲア,Pangaea,パンゲア,泛大陆,판게아,泛大陸
+パルスナイフ,Pulse Knife,パルスナイフ,脉冲匕首,펄스 나이프,脈衝匕首
+インパルス,Impulse,インパルス,脉冲刀,임펄스,脈衝刀
+木のブーメラン,Wooden Boomerang,木のブーメラン,木质回旋镖,나무 부메랑,木質迴旋鏢
+クラシック,Classic,クラシック,传统飞镖,클래식,傳統飛鏢
+ベーシック,Basic,ベーシック,基础飞镖,베이식,基礎飛鏢
+クラスターボム,Cluster Bomb,クラスターボム,集束弹,클러스터 봄,集束彈
+ビッグバン,Big Bang,ビッグバン,大爆炸,빅뱅,大爆炸
+妖刀時雨,Spectral Sword Shigure,妖刀時雨,妖刀时雨,요도시우,妖刀時雨
+暗号鍵,Encryption Key,暗号鍵,暗号钥匙,암호 열쇠,暗號鑰匙
+共通鍵,Common Key,共通鍵,通用钥匙,공용 열쇠,通用鑰匙
+ワイルドカード,Wild Card,ワイルドカード,通配符,와일드 카드,萬用字元
+ポータルソード,Portal Sword,ポータルソード,传送之剑,보팔 소드,傳送之劍
+ドロイドハンマー,Droid Hammer,ドロイドハンマー,德鲁伊之锤,드로이드 해머,德魯伊之槌
+イカヅチ,Cuttlefish,イカヅチ,乌贼,이카즈치,烏賊
+ゴッドハンド,God Hand,ゴッドハンド,上帝之手,갓 핸드,上帝之手
+蒼の剣,Blue Sword,蒼の剣,苍之剑,푸른 검,蒼之劍
+神竜刀,Divine Dragon Sword,神竜刀,神龙刀,성룡도,神龍刀
+回帰の槍,Spear of Regression,回帰の槍,回归之枪,회귀의 창,回歸之槍
+スターゲイザー,Stargazer,スターゲイザー,占星者,스타게이저,占星者
+ゾディアックス,Zodiac,ゾディアックス,十二宫,소닉 액스,十二宮
+ジャックナイフ,Jack Knife,ジャックナイフ,折刀,잭나이프,折疊刀
+正義の槌,Hammer of Justice,正義の槌,正义之槌,정의의 망치,正義之槌
+マジカル,Magical,マジカル,魔幻,매지컬,魔幻
+てっけん,Tekken,てっけん,铁拳,철권,鐵拳
+悪霊の剣,Sword of Evil,悪霊の剣,恶灵之剑,악령의 검,惡靈之劍
+ニューラルエッジ,Neural Edge,ニューラルエッジ,神经刃,뉴럴 엣지,神經刃
+なべのふた,Pot Lid,なべのふた,锅盖,냄비 뚜껑,鍋蓋
+高いなべのふた,High Pot Lid,高いなべのふた,高级锅盖,비싼 냄비 뚜껑,高級鍋蓋
+木の盾,Wooden Shield,木の盾,木盾,나무 방패,木盾
+鉄の盾,Iron Shield,鉄の盾,铁盾,철 방패,鐵盾
+チタンシールド,Titanium Shield,チタンシールド,钛合金盾,티타늄 방패,鈦合金盾
+鉄の大盾,Large iron Shield,鉄の大盾,大铁盾,철의 대방패,大鐵盾
+マジックシールド,Magic Shield,マジックシールド,魔法盾,마법 방패,魔法盾
+電導バリア,Conductive Barrier,電導バリア,导电盾,전도 배리어,導電盾
+エメラルドシールド,Emerald Shield,エメラルドシールド,翡翠盾,엘리멘탈 실드,翡翠盾
+合成獣の翼,Wings of Beast,合成獣の翼,合成兽之翼,합성수의 날개,合成獸之翼
+クリアシールド,Clear Shield,クリアシールド,透明盾,클리어 실드,透明盾
+プリズムシールド,Prism Shield,プリズムシールド,棱镜盾,프리즘 실드,棱鏡盾
+タワーシールド,Tower Shield,タワーシールド,塔盾,타워 실드,塔盾
+死に神のマスク,Mask of the Grim Reaper,死に神のマスク,死神面具,사신의 가면,死神面具
+龍の鱗,Dragon's Scales,龍の鱗,龙鳞,용의 비늘,龍鱗
+龍の翼,Dragon's Wings,龍の翼,龙翼,용의 날개,龍翼
+龍の頭,Dragon's Head,龍の頭,龙首,용의 머리,龍首
+小太刀,Small Sword,小太刀,小太刀,소태도,小太刀
+小獅子,Small Lion,小獅子,小狮子,태도 [코지시],小獅子
+超伝導バリア,Superconducting Barrier,超伝導バリア,超导屏障,초전도 배리어,超導屏障
+スライムシールド,Slime Shield,スライムシールド,史莱姆盾,슬라임 실드,史萊姆盾
+合成獣の堅翼,Hard Wings of Beast,合成獣の堅翼,合成兽之坚翼,합성수의 단단한 날개,合成獸之堅翼
+堅木の盾,Hardwood Shield,堅木の盾,坚木之盾,단단한 나무 방패,堅木之盾
+小龍剣,Small Dragon Sword,小龍剣,小龙剑,용검,小龍劍
+昇龍剣,Dragon Sword,昇龍剣,升龙剑,승룡검,昇龍劍
+波動剣,Wave Motion Sword,波動剣,波动剑,파동검,波動劍
+エナジーシールド,Energy Shield,エナジーシールド,能量盾,에너지 실드,能量盾
+メタル化,Metalization,メタル化,金属化,메탈화,金屬化
+ブラックホール,Black Hole,ブラックホール,黑洞,블랙홀,黑洞
+ホワイトホール,White Hole,ホワイトホール,白洞,화이트홀,白洞
+フライパン,Frying Pan,フライパン,平底锅,프라이팬,平底鍋
+スラフィールド,Slafield,スラフィールド,斯拉菲盾,슬라필드,斯拉菲盾
+ミストシールド,Mist Shield,ミストシールド,迷雾盾,미스트 실드,迷霧盾
+ダイボウギョ,Huge Shield,ダイボウギョ,巨盾,대방어,巨盾
+防弾盾,Bulletproof Shield,防弾盾,防弹盾,방탄 실드,防彈盾
+ライオット,Riot,ライオット,防爆盾,라이엇,防爆盾
+マグナム,Magnum,マグナム,马格南手枪,매그넘,馬格南手槍
+Vマグナム,V Magnum,Vマグナム,马格南V,V매그넘,馬格南V
+Cマグナム,C Magnum,Cマグナム,马格南C,C매그넘,馬格南C
+レインボウ,Rain Bow,レインボウ,彩虹,레인보우,彩虹
+クラウドシールド,Cloud Shield,クラウドシールド,云盾,클라우드 실드,雲盾
+暴風壁,Storm Wall,暴風壁,暴风壁,폭풍벽,暴風壁
+落書き,Graffiti,落書き,涂鸦,낙서,塗鴉
+白紙の盾,Blank Shield,白紙の盾,白纸盾,백지 방패,白紙盾
+ゴーレムシールド,Golem Shield,ゴーレムシールド,傀儡盾,골렘 실드,傀儡盾
+千手の護り,Shield of Thousand,千手の護り,千手之护,천수의 보호,千手之護
+粘着糸の盾,Sticky thread shield,粘着糸の盾,粘液丝之盾,거미줄 방패,黏液絲之盾
+キングシールド,King Shield,キングシールド,国王盾,킹 실드,國王盾
+戦士の大盾,Warrior's Shield,戦士の大盾,战士大盾,전사의 대방패,戰士大盾
+ゴブリンの手,Goblin Hand,ゴブリンの手,哥布林之手,고블린의 손,哥布林之手
+ゴーストシールド,Ghost shield,ゴーストシールド,幽灵盾,고스트 실드,幽靈盾
+黒刀息吹,Black Sword Breath,黒刀息吹,黑刀息吹,흑도 이부키,黑刀呼息
+銅の指輪,Copper Ring,銅の指輪,铜戒指,구리 반지,銅戒指
+銀の指輪,Silver Ring,銀の指輪,银戒指,은 반지,銀戒指
+金の指輪,Gold Ring,金の指輪,金戒指,금 반지,金戒指
+プラチナリング,Platinum Ring,プラチナリング,铂金戒指,백금 반지,鉑金戒指
+フェアリーリング,Fairy Ring,フェアリーリング,精灵戒指,요정의 반지,精靈戒指
+サモンリング,Summon Ring,サモンリング,召唤戒指,소환의 반지,召喚戒指
+竜の涙,Tears of the Dragon,竜の涙,龙之泪,용의 눈물,龍之淚
+プチ召喚陣,Petit Magic Circle,プチ召喚陣,小召唤阵,작은 소환진,小召喚陣
+グレーズド,Glazed,グレーズド,光滑之戒,글레이즈드,光滑之戒
+猛毒の環,Ring of Venom,猛毒の環,剧毒之环,베놈 링,劇毒之環
+モルヒネリング,Morphine Ring,モルヒネリング,吗啡戒指,모르핀 링,嗎啡戒指
+パンドラリング,Pandora Ring,パンドラリング,潘多拉戒指,판도라 링,潘朵拉戒指
+ラピッドラビット,Rapid Rabbit,ラピッドラビット,迅敏兔,토끼 발,迅敏兔
+力の指輪,Ring of power,力の指輪,力量戒指,힘의 반지,力量戒指
+オキュラスリング,Oculus Ring,オキュラスリング,鬼眼戒指,오큘러스 링,鬼眼戒指
+メビウスリング,Mobius Ring,メビウスリング,莫比乌斯之环,메비우스 링,莫比烏斯之環
+サーチリング,Search Ring,サーチリング,搜索戒指,서치 링,搜索戒指
+終点,Endpoint,終点,终点,종점,終點
+覇王の証,Seal of the High King,覇王の証,霸王之证,패왕의 증거,霸王之證
+オブシダンリング,Obsidian Ring,オブシダンリング,黑曜石戒指,옵시디언 링,黑曜石戒指
+マリッジリング,Marriage Ring,マリッジリング,结婚戒指,매리지 링,結婚戒指
+第三の目,The Third Eye,第三の目,第三目,서드 아이,第三目
+スライム,Slime,スライム,史莱姆,슬라임,史萊姆
+ゴブリン,Goblin,ゴブリン,哥布林,고블린,哥布林
+ホーネット,Hornet,ホーネット,大黄蜂,말벌,大黃蜂
+キラービー,Killer Bee,キラービー,杀人蜂,킬러비,殺人蜂
+おおむかで,Scolopendrid,おおむかで,蜈蚣,대왕지네,蜈蚣
+盗賊,Thief,盗賊,盗贼,도적,盜賊
+大コウモリ,Big Bat,大コウモリ,大蝙蝠,큰 박쥐,大蝙蝠
+巨大コウモリ,Giant Bat,巨大コウモリ,巨大蝙蝠,거대 박쥐,巨大蝙蝠
+アルビノスライム,Albino slime,アルビノスライム,白化史莱姆,알비노 슬라임,白化史萊姆
+レッドゴブリン,Red Goblin,レッドゴブリン,红色哥布林,레드 고블린,紅色哥布林
+ドラゴンベビー,Baby Dragon,ドラゴンベビー,幼龙,베이비 드래곤,幼龍
+からくり兵,Clockwork Soldier,からくり兵,发条士兵,꼭두각시 병사,發條士兵
+デスマシーン,Death Machine,デスマシーン,死亡机器,데스 머신,死亡機器
+デスマシーン2,Death Machine 2,デスマシーン2,死亡机器2,데스 머신 2,死亡機器2
+デスマシーン3,Death Machine 3,デスマシーン3,死亡机器3,데스 머신 3,死亡機器3
+キマイラ,Chimera,キマイラ,奇美拉,키메라,奇美拉
+フェアリー,Fairy,フェアリー,精灵,페어리,精靈
+フェアリーハンター,Fairy Hunter,フェアリーハンター,精灵猎人,페어리 헌터,精靈獵人
+ファイアフェアリー,Fire Fairy,ファイアフェアリー,火精灵,파이어 페어리,火精靈
+アイスフェアリー,Ice Fairy,アイスフェアリー,冰精灵,아이스 페어리,冰精靈
+ライトニングフェアリー,Lightning Fairy,ライトニングフェアリー,闪电精灵,라이트닝 페어리,閃電精靈
+アークフェアリー,Arc Fairy,アークフェアリー,电弧精灵,아크 페어리,電弧精靈
+クレイゴーレム,Clay Golem,クレイゴーレム,土傀儡,클레이 골렘,土傀儡
+アイアンゴーレム,Iron Golem,アイアンゴーレム,铁傀儡,아이언 골렘,鐵傀儡
+エメラルドゴーレム,Emerald Golem,エメラルドゴーレム,翡翠傀儡,에메랄드 골렘,翡翠傀儡
+ゴーストナイト,Ghost Knight,ゴーストナイト,幽灵骑士,고스트 나이트,幽靈騎士
+ゴーストウィザード,Ghost Wizard,ゴーストウィザード,幽灵法师,고스트 위자드,幽靈法師
+ゴーストパラディン,Ghost Paladin,ゴーストパラディン,幽灵圣骑士,고스트 팔라딘,幽靈聖騎士
+偽霊媒師,False Medium,偽霊媒師,假灵媒师,가짜 영매사,假靈媒師
+ミストドラゴン,Mist Dragon,ミストドラゴン,迷雾龙,미스트 드래곤,迷霧龍
+スラ仏,Sura Buddha,スラ仏,苏拉佛像,부처 슬라임,蘇拉佛像
+塔賊,Tower Bandit,塔賊,塔贼,유적 털이,塔賊
+デスマシーン4,Death Machine 4,デスマシーン4,死亡机器4,데스 머신 4,死亡機器 4
+セキュリティ,Security,セキュリティ,保安,경비원,保全
+メカシノビ,Mecha Shinobi,メカシノビ,机械忍者,메카 시노비,機械忍者
+メカサムライ,Mecha-Samurai,メカサムライ,机械武士,메카 사무라이,機械武士
+ガーディアン,Guardians,ガーディアン,守卫者,가디언,守衛者
+ドラゴンクローン,Dragon Clone,ドラゴンクローン,龙系克隆,드래곤 클론,龍系克隆
+セイントドラゴン,Saint Dragon,セイントドラゴン,圣龙,세인트 드래곤,聖龍
+メデューサ,Medusa,メデューサ,美杜莎,메두사,美杜莎
+ヒュージスライム,Huge Slime,ヒュージスライム,巨型史莱姆,거대 슬라임,巨型史萊姆
+パーフェクトキメラ,Perfect Chimera,パーフェクトキメラ,完美的奇美拉,퍼펙트 키메라,完美的奇美拉
+ヒュドラ,Hydra,ヒュドラ,九头蛇,히드라,九頭蛇
+ドラゴンゾンビ,Dragon Zombie,ドラゴンゾンビ,龙系僵尸,드래곤 좀비,龍系殭屍
+ルビーゴーレム,Ruby Golem,ルビーゴーレム,红宝石傀儡,루비 골렘,紅寶石傀儡
+ダイヤゴーレム,Diamond Golem,ダイヤゴーレム,钻石傀儡,다이아몬드 골렘,鑽石傀儡
+サモナー,Summoner,サモナー,召唤师,소환사,召喚師
+サモンウォーリア,Summon Warrior,サモンウォーリア,召唤型战士,서몬 워리어,召喚型戰士
+サモンプリースト,Summon Priest,サモンプリースト,召唤型祭司,서몬 프리스트,召喚型祭司
+グランドサモナー,Grand Summoner,グランドサモナー,大召唤师,고위 소환사,大召喚師
+メタルリザード,Metal Lizard,メタルリザード,金属蜥蜴,메탈 리자드,金屬蜥蜴
+クリスピー,Crispy,クリスピー,脆皮,크리스피,脆皮
+クリーム,Cream,クリーム,奶油,크림,奶油
+ポイズンゴブリン,Poison Goblin,ポイズンゴブリン,毒哥布林,포이즌 고블린,毒哥布林
+ダンシングソード,Dancing Sword,ダンシングソード,飞舞的剑,댄싱 소드,飛舞的劍
+黒点,Black Dot,黒点,黑点,흑점,黑點
+赤点,Red Dot,赤点,红点,적점,紅點
+青点,Blue Dot,青点,蓝点,청점,藍點
+白点,White Point,白点,白点,백점,白點
+ポイズンスライム,Poison Slime,ポイズンスライム,毒史莱姆,포이즌 슬라임,毒史萊姆
+ホワイトスネイク,White Snake,ホワイトスネイク,白蛇,화이트 슬라임,白蛇
+オフェンサー,Offenser,オフェンサー,进攻者,오펜서,進攻者
+グラディエイター,Gladiator,グラディエイター,角斗士,검투사,鬥劍者
+ミスト,Mist,ミスト,迷雾,미스트,迷霧
+タイラント,Tyrant,タイラント,暴君,타이런트,暴君
+ディフェンサー,Defenser,ディフェンサー,防御者,디펜더,防禦者
+ヨワ戦車,Yowa Tank,ヨワ戦車,软弱的战车,하급 전차,軟弱的戰車
+歩兵,Infantry,歩兵,步兵,보병,步兵
+スナイパー,Sniper,スナイパー,狙击手,저격수,狙擊手
+衛生兵,Medic,衛生兵,卫生兵,위생병,軍醫
+ミサイルマン,Missile Man,ミサイルマン,导弹兵,포병,導彈兵
+ツヨ戦車,Tsuyo Tank,ツヨ戦車,强大的战车,중급 전차,強大的戰車
+サイボーグ,Cyborg,サイボーグ,生化人,사이보그,生化人
+ブラックモア,Blackmore,ブラックモア,布莱克摩,블랙모어,布萊克摩
+ソゼ,Sose,ソゼ,索斯,소제,索斯
+サブリミナル,Subliminal,サブリミナル,潜意识,서브리미널,潛意識
+ガチ戦車,Gachi Tank,ガチ戦車,认真的战车,상급 전차,認真的戰車
+エンペラードラゴン,Emperador Dragon,エンペラードラゴン,帝王龙,엠페러 드래곤,帝王龍
+デスクラウド,Death Cloud,デスクラウド,死亡疑云,데스 클라우드,死亡疑雲
+ブラックボックス,Black Box,ブラックボックス,黑箱子,블랙 박스,黑箱子
+アリス,Alice,アリス,爱丽丝,앨리스,愛麗絲
+髑髏の騎士,Knight of Skulls,髑髏の騎士,骷髅骑士,해골 기사,骷髏騎士
+フォース,Force,フォース,神秘力量,포스,神秘力量
+オキュラス,Oculus,オキュラス,眼睛,오큘러스,鬼眼
+カシミール,Kashmir,カシミール,卡什米尔,카사미르,喀什米爾
+電気羊,Electric sheep,電気羊,电气羊,전기양,電氣羊
+雷神,God of Thunder,雷神,雷神,뇌신,雷神
+グリーフ,Glyph,グリーフ,石雕符号,그리프,石雕符號
+蒼色弐号,Aoshiki-2,蒼色弐号,苍色二号,청식 2호,蒼色貳號
+風神,Wind God,風神,风神,풍신,風神
+エニグマ,Enigma,エニグマ,谜团,에니그마,謎團
+シソーラス,Thesaurus,シソーラス,百科全书,시소러스,百科全書
+ゴッドドラゴン,God Dragon,ゴッドドラゴン,金龙,갓 드래곤,金龍
+人造ゴーレム,Man-Made Golem,人造ゴーレム,人造傀儡,인조 골렘,人造傀儡
+浪漫の騎士,Knight of Romanticism,浪漫の騎士,浪漫骑士,낭만의 기사,浪漫騎士
+異邦の騎士,Knight of the Gentile,異邦の騎士,异邦骑士,이방의 기사,異邦騎士
+ピリオド,Period,ピリオド,句号,필리오드,句號
+ゾッド,Zod,ゾッド,黄道带,조드,黃道帶
+千手,Thousand hands,千手,千手,천수,千手
+死に神,God of Death,死に神,死神,사신,死神
+クロウラ,Clawra,クロウラ,克劳拉,크롤러,克蘿拉
+チェシャー,Cheshire,チェシャー,柴郡猫,체셔,柴郡貓
+三月兎,March Hare,三月兎,三月兔,삼월 토끼,三月兔
+マッドハッター,Mad Hatter,マッドハッター,发疯的帽匠,매드 해터,瘋帽子
+眠り鼠,Sleeping Rat,眠り鼠,睡眠鼠,겨울잠 쥐,睡鼠
+キング,King,キング,国王K,킹,國王K
+クイーン,Queen,クイーン,皇后Q,퀸,皇后Q
+ジャック,Jack,ジャック,骑士J,잭,騎士J
+ジャッジメント,Judgment,ジャッジメント,审判者,저지먼트,審判者
+戦士,Warrior,戦士,战士,전사,戰士
+魔法使い,Wizard,魔法使い,魔法师,마법사,魔法師
+武道家,Martial artist,武道家,武道家,무도가,武道家
+踊り子,Dancer,踊り子,舞女,무희,舞女
+騎士団長,Knight Commander,騎士団長,骑士团长,기사단장,騎士團長
+隣国の騎士,Neighboring knight,隣国の騎士,邻国骑士,이국의 기사,鄰國騎士
+武器商人,Arms dealer,武器商人,武器商人,무기 상인,武器商人
+村人,Villager,村人,村民,마을 사람,村民
+力自慢の村人,Strong villager,力自慢の村人,强壮的村民,힘 센 마을 사람,自吹自擂的村民
+選ばれし者,The Chosen One,選ばれし者,天选之子,선택 받은 자,天選之子
+門番,Gatekeeper,門番,门卫,문지기,守門人
+サイクロプス,Cyclops,サイクロプス,独眼巨人,사이클롭스,獨眼巨人
+サードアイ,Third Eye,サードアイ,第三只眼,서드 아이,第三隻眼
+ラストスライム,Last Slime,ラストスライム,终极史莱姆,라스트 슬라임,終極史萊姆
+ラストゴブリン,Last Goblin,ラストゴブリン,终极哥布林,라스트 고블린,終極哥布林
+スピリット,Spirit,スピリット,灵魂,스피릿,靈魂
+リリス,Lilith,リリス,莉莉丝,리리스,莉莉絲
+ゴーストアーマー,Ghost Armor,ゴーストアーマー,幽灵铠甲,고스트 아머,幽靈鎧甲
+ダークドラゴン,Dark Dragon,ダークドラゴン,黑龙,다크 드래곤,黑龍
+魔王,Demon King,魔王,魔王,마왕,魔王
+傀儡の王,Puppet King,傀儡の王,傀儡王,괴뢰의 왕,傀儡之王
+皇帝テバ,Emperor Teba,皇帝テバ,皇帝Teba,황제 테바,皇帝Teba

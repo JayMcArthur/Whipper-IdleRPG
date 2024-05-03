@@ -2,7 +2,7 @@
   "dungeons": [
     {
       "id": 1,
-      "nameId": "Grassy Knoll",
+      "nameId": "はじめの草むら",
       "maxFloor": 5,
       "minutesPerFloor": 5,
       "modLv": 1,
@@ -17,7 +17,7 @@
     },
     {
       "id": 2,
-      "nameId": "The Lost Forest",
+      "nameId": "迷いの森",
       "maxFloor": 10,
       "minutesPerFloor": 10,
       "modLv": 1,
@@ -37,7 +37,7 @@
     },
     {
       "id": 3,
-      "nameId": "Deep Cave",
+      "nameId": "深い洞穴",
       "maxFloor": 10,
       "minutesPerFloor": 20,
       "modLv": 2,
@@ -57,7 +57,7 @@
     },
     {
       "id": 4,
-      "nameId": "Twilight House",
+      "nameId": "黄昏の洋館",
       "maxFloor": 4,
       "minutesPerFloor": 30,
       "modLv": 3,
@@ -71,7 +71,7 @@
     },
     {
       "id": 5,
-      "nameId": "The Secret Passage",
+      "nameId": "秘密の抜け道",
       "maxFloor": 15,
       "minutesPerFloor": 15,
       "modLv": 4,
@@ -96,7 +96,7 @@
     },
     {
       "id": 6,
-      "nameId": "Old Battlefield of Fog",
+      "nameId": "濃霧の古戦場",
       "maxFloor": 6,
       "minutesPerFloor": 20,
       "modLv": 5,
@@ -112,7 +112,7 @@
     },
     {
       "id": 7,
-      "nameId": "Giant Tower of Justice",
+      "nameId": "正義の巨塔",
       "maxFloor": 30,
       "minutesPerFloor": 20,
       "modLv": 7,
@@ -152,7 +152,7 @@
     },
     {
       "id": 8,
-      "nameId": "Door to Another World",
+      "nameId": "異世界への扉",
       "maxFloor": 1,
       "minutesPerFloor": 10,
       "modLv": 8,
@@ -163,7 +163,7 @@
     },
     {
       "id": 9,
-      "nameId": "Dimensional Rift",
+      "nameId": "次元の裂け目",
       "maxFloor": 9,
       "minutesPerFloor": 20,
       "modLv": 8,
@@ -182,7 +182,7 @@
     },
     {
       "id": 10,
-      "nameId": "The Magic Castle of the End",
+      "nameId": "終わりの魔城",
       "maxFloor": 20,
       "minutesPerFloor": 21,
       "modLv": 8,

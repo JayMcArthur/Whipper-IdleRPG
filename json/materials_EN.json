@@ -5,266 +5,342 @@
       "nameId": "カタクナール",
       "icon": "mate01",
       "efficacyId": "強化値を+1できる緑色の液体",
-      "use": 1
+      "use": 1,
+      "nameId_EN": "Hardener",
+      "efficacyId_EN": "A green liquid with +1 upgrade value"
     },
     {
       "id": 2,
       "nameId": "カタクナールX",
       "icon": "mate02",
       "efficacyId": "強化値を+3できる橙色の液体",
-      "use": 1
+      "use": 1,
+      "nameId_EN": "HardenerX",
+      "efficacyId_EN": "A orange liquid with +3 upgrade value"
     },
     {
       "id": 3,
       "nameId": "カタクナールZ",
       "icon": "mate03",
       "efficacyId": "強化値を+5できる紫色の液体",
-      "use": 1
+      "use": 1,
+      "nameId_EN": "HardenerZ",
+      "efficacyId_EN": "A purple liquid with +5 upgrade value"
     },
     {
       "id": 4,
       "nameId": "銀の組成液",
       "icon": "mate04",
       "efficacyId": "装備品同士を結合できる銀色の液体",
-      "use": 2
+      "use": 2,
+      "nameId_EN": "Silver Essence",
+      "efficacyId_EN": "A silver liquid that binds equipment together"
     },
     {
       "id": 5,
       "nameId": "金の組成液",
       "icon": "mate05",
       "efficacyId": "装備品同士を無傷で結合できる金色の液体",
-      "use": 2
+      "use": 2,
+      "nameId_EN": "Gold Essence",
+      "efficacyId_EN": "A golden liquid that binds equipment together without damaging them"
     },
     {
       "id": 10,
       "nameId": "白の鍵",
       "icon": "mate10",
       "efficacyId": "異世界への扉を開く鍵",
-      "use": 3
+      "use": 3,
+      "nameId_EN": "White Key",
+      "efficacyId_EN": "A key that opens the door to another world"
     },
     {
       "id": 11,
       "nameId": "朽ちかけた紙切れ 1",
       "icon": "log_paper",
       "efficacyId": "はじめの草むら",
-      "use": 6
+      "use": 6,
+      "nameId_EN": "Decaying piece of paper 1",
+      "efficacyId_EN": "The First Grassy Knoll"
     },
     {
       "id": 12,
       "nameId": "朽ちかけた紙切れ 2",
       "icon": "log_paper",
       "efficacyId": "深い洞穴",
-      "use": 6
+      "use": 6,
+      "nameId_EN": "Decaying piece of paper 2",
+      "efficacyId_EN": "Deep Cave"
     },
     {
       "id": 13,
       "nameId": "朽ちかけた紙切れ 3",
       "icon": "log_paper",
       "efficacyId": "秘密の抜け道",
-      "use": 6
+      "use": 6,
+      "nameId_EN": "Decaying piece of paper 3",
+      "efficacyId_EN": "The Secret Passage"
     },
     {
       "id": 14,
       "nameId": "朽ちかけた紙切れ 4",
       "icon": "log_paper",
       "efficacyId": "正義の巨塔",
-      "use": 6
+      "use": 6,
+      "nameId_EN": "Decaying piece of paper 4",
+      "efficacyId_EN": "Giant Tower of Justice"
     },
     {
       "id": 20,
       "nameId": "アイテム図鑑",
       "icon": "log_book",
       "efficacyId": "アイテムの解析結果を記録できる図鑑",
-      "use": 4
+      "use": 4,
+      "nameId_EN": "Item book",
+      "efficacyId_EN": "A book that can record the analysis results of items"
     },
     {
       "id": 21,
       "nameId": "ボイドレポート",
       "icon": "mate21",
       "efficacyId": "解析値を+1できる科学者の遺文",
-      "use": 5
+      "use": 5,
+      "nameId_EN": "Boid report",
+      "efficacyId_EN": "Scientist's will with +1 analysis value"
     },
     {
       "id": 22,
       "nameId": "ロゼッタストーン",
       "icon": "mate22",
       "efficacyId": "解析値を+10できる古代文明の遺物",
-      "use": 5
+      "use": 5,
+      "nameId_EN": "Rosetta Stone",
+      "efficacyId_EN": "Relics of ancient civilization with +10 analysis value"
     },
     {
       "id": 30,
       "nameId": "亡国の拡大鏡",
       "icon": "mate30",
       "efficacyId": "解析上限が上がる亡国の研究道具",
-      "use": 7
+      "use": 7,
+      "nameId_EN": "The Lost Nation's Magnifying Glass",
+      "efficacyId_EN": "Research tool of the Lost Nation that increases analysis limit"
     },
     {
       "id": 40,
       "nameId": "古代の鍛冶ハンマー",
       "icon": "mate40",
       "efficacyId": "能力合成上限が上がる鍛冶道具",
-      "use": 8
+      "use": 8,
+      "nameId_EN": "Ancient Blacksmith Hammer",
+      "efficacyId_EN": "Blacksmith tool that increases the synthesis limit of abilities"
     },
     {
       "id": 50,
       "nameId": "霧の首飾り",
       "icon": "mate50",
       "efficacyId": "瘴気濃度を増減できる古代の首飾り",
-      "use": 9
+      "use": 9,
+      "nameId_EN": "Necklace of Mist",
+      "efficacyId_EN": "Ancient necklace that can adjust miasma concentration"
     },
     {
       "id": 51,
       "nameId": "伝言の鈴",
       "icon": "suzu",
       "efficacyId": "離れた場所からでも指示を伝えられる鈴",
-      "use": 30
+      "use": 30,
+      "nameId_EN": "Message Bell",
+      "efficacyId_EN": "Bell that can convey instructions from afar"
     },
     {
       "id": 71,
       "nameId": "千手核",
       "icon": "senjukaku",
       "efficacyId": "茜色にきらめく、千の手を持つ巨像の動力源",
-      "use": 11
+      "use": 11,
+      "nameId_EN": "¿thousand-armed nucleus?",
+      "efficacyId_EN": "¿The power source of the colossal statue with a thousand hands, shimmering in madder colors.?"
     },
     {
       "id": 90,
       "nameId": "黒の鍵",
       "icon": "blackkey",
       "efficacyId": "用途不明の鍵",
-      "use": 50
+      "use": 50,
+      "nameId_EN": "¿Black Keys?",
+      "efficacyId_EN": "¿Key of unknown use?"
     },
     {
       "id": 91,
       "nameId": "ライラック",
       "icon": "lilac",
       "efficacyId": "迷いの森に咲く紫色の花木。花言葉は「大切な友達」",
-      "use": 13
+      "use": 13,
+      "nameId_EN": "Lilac",
+      "efficacyId_EN": "A purple flower tree that blooms in the Lost Forest. Flower language is “precious friend”"
     },
     {
       "id": 101,
       "nameId": "遭難者の手記",
       "icon": "log_paper",
       "efficacyId": "迷いの森",
-      "use": 100
+      "use": 100,
+      "nameId_EN": "Survivor's Log",
+      "efficacyId_EN": "The Lost Forest"
     },
     {
       "id": 102,
       "nameId": "研究所長の書き置き",
       "icon": "log_paper",
       "efficacyId": "黄昏の洋館",
-      "use": 100
+      "use": 100,
+      "nameId_EN": "Director's Note",
+      "efficacyId_EN": "Twilight House"
     },
     {
       "id": 103,
       "nameId": "偽霊媒師の独白",
       "icon": "log_paper",
       "efficacyId": "濃霧の古戦場",
-      "use": 100
+      "use": 100,
+      "nameId_EN": "Impostor Medium's Monologue",
+      "efficacyId_EN": "Old Battlefield of Fog"
     },
     {
       "id": 104,
       "nameId": "戦況報告書",
       "icon": "log_scroll",
       "efficacyId": "終わりの魔城",
-      "use": 100
+      "use": 100,
+      "nameId_EN": "Combat Report",
+      "efficacyId_EN": "The Magic Castle of the End"
     },
     {
       "id": 105,
       "nameId": "生存者の日記",
       "icon": "log_newmemo",
       "efficacyId": "はじめの草むら",
-      "use": 100
+      "use": 100,
+      "nameId_EN": "Survivor's Diary",
+      "efficacyId_EN": "The First Grassy Knoll"
     },
     {
       "id": 106,
       "nameId": "看守の回想",
       "icon": "log_newmemo",
       "efficacyId": "迷いの森",
-      "use": 100
+      "use": 100,
+      "nameId_EN": "Guard's Recollection",
+      "efficacyId_EN": "The Lost Forest"
     },
     {
       "id": 107,
       "nameId": "生き残るために、Vault-0へ",
       "icon": "log_newmemo",
       "efficacyId": "深い洞穴",
-      "use": 100
+      "use": 100,
+      "nameId_EN": "\"To survive",
+      "efficacyId_EN": "Deep Cave"
     },
     {
       "id": 108,
       "nameId": "瘴気中毒に関する研究報告",
       "icon": "log_paper",
       "efficacyId": "黄昏の洋館",
-      "use": 100
+      "use": 100,
+      "nameId_EN": "Research Report on Miasma Poisoning",
+      "efficacyId_EN": "Twilight House"
     },
     {
       "id": 109,
       "nameId": "合成獣に関する研究報告",
       "icon": "log_paper",
       "efficacyId": "秘密の抜け道",
-      "use": 100
+      "use": 100,
+      "nameId_EN": "Effects and Promotion of Synthetic Beast Research",
+      "efficacyId_EN": "The Secret Passage"
     },
     {
       "id": 110,
       "nameId": "よくわかる鉱物図鑑",
       "icon": "log_paper",
       "efficacyId": "濃霧の古戦場",
-      "use": 100
+      "use": 100,
+      "nameId_EN": "\"Well-understood Mineral Guide",
+      "efficacyId_EN": "Old Battlefield of Fog"
     },
     {
       "id": 111,
       "nameId": "初代王の遺書",
       "icon": "log_paper",
       "efficacyId": "正義の巨塔",
-      "use": 100
+      "use": 100,
+      "nameId_EN": "The First King's Testament",
+      "efficacyId_EN": "Giant Tower of Justice"
     },
     {
       "id": 112,
       "nameId": "テバの基本性能",
       "icon": "log_newmemo",
       "efficacyId": "異世界への扉",
-      "use": 100
+      "use": 100,
+      "nameId_EN": "Teba's Basic Capabilities",
+      "efficacyId_EN": "The Door to Another World"
     },
     {
       "id": 113,
       "nameId": "量産型アンドロイドの特性",
       "icon": "log_newmemo",
       "efficacyId": "異世界への扉",
-      "use": 100
+      "use": 100,
+      "nameId_EN": "Characteristics of Mass-Produced Androids",
+      "efficacyId_EN": "The Door to Another World"
     },
     {
       "id": 114,
       "nameId": "テバの思考",
       "icon": "log_newmemo",
       "efficacyId": "異世界への扉",
-      "use": 100
+      "use": 100,
+      "nameId_EN": "Teba's Thinking",
+      "efficacyId_EN": "The Door to Another World"
     },
     {
       "id": 115,
       "nameId": "テバの制止手段",
       "icon": "log_newmemo",
       "efficacyId": "異世界への扉",
-      "use": 100
+      "use": 100,
+      "nameId_EN": "Teba's Restraint Methods",
+      "efficacyId_EN": "The Door to Another World"
     },
     {
       "id": 116,
       "nameId": "号外",
       "icon": "log_newmemo",
       "efficacyId": "異世界への扉",
-      "use": 100
+      "use": 100,
+      "nameId_EN": "Extra Edition A.D. 2207 Winter",
+      "efficacyId_EN": "The Door to Another World"
     },
     {
       "id": 117,
       "nameId": "遺物について",
       "icon": "log_newmemo",
       "efficacyId": "異世界への扉",
-      "use": 100
+      "use": 100,
+      "nameId_EN": "Relics",
+      "efficacyId_EN": "The Door to Another World"
     },
     {
       "id": 118,
       "nameId": "巨人の腕について",
       "icon": "log_newmemo",
       "efficacyId": "異世界への扉",
-      "use": 100
+      "use": 100,
+      "nameId_EN": "Giant's Arm",
+      "efficacyId_EN": "The Door to Another World"
     }
   ]
 }

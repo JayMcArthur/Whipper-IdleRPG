@@ -25,7 +25,7 @@
     </script>
 </head>
 
-<body>
+<body onload="getTable()">
 <div class="w3-top">
     <div class="w3-bar color-medium w3-card">
         <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
@@ -73,11 +73,92 @@
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
-    <p class="w3-justify text-color">
-        TODO
-    </p>
-    <div id="content"></div>
+    <div id="Table" class="w3-container w3-center"></div>
 </div>
-
 </body>
+<script>
+    let monsters;
+    let equips;
+
+    function getTable() {
+        let request = new XMLHttpRequest();
+        request.open("GET","json/monsters_EN.json",false);
+        request.send(null);
+        monsters = JSON.parse(request.responseText)["monsters"];
+
+        request = new XMLHttpRequest();
+        request.open("GET","json/equips_EN.json",false);
+        request.send(null);
+        equips = JSON.parse(request.responseText)["equips"];
+        loadTable();
+    }
+    function getMonsterByID(id){
+        return monsters.filter(
+            function(monster){return monster.id === id}
+        )[0]
+    }
+    function getItemByID(id){
+        return equips.filter(
+            function(equip){return equip.id === id}
+        )[0]
+    }
+    function loadTable() {
+        let col = [
+            "ID", "Name", "HP", "ATK", "DEF", "SPD", "EXP", "Item 1", "Drop %", "Item 2", "Drop %"
+        ]
+
+        let table = document.createElement("table");
+        table.className = "styled-table";
+
+        let tr = table.insertRow(-1);
+        for (let i = 0; i < col.length; i++) {
+            let th = document.createElement("th");
+            th.innerHTML = col[i];
+            tr.appendChild(th);
+        }
+        tr.id = "StickyHeader"
+
+        for (let i = 0; i < monsters.length - 2; i++) {
+
+            let tr = table.insertRow(-1);
+            let tabCell_1 = tr.insertCell(-1);
+            tabCell_1.innerHTML = monsters[i]["id"];
+            let tabCell_2 = tr.insertCell(-1);
+            tabCell_2.innerHTML = monsters[i]["nameId_EN"];
+            let tabCell_3 = tr.insertCell(-1);
+            tabCell_3.innerHTML = monsters[i]["hp"];
+            let tabCell_4 = tr.insertCell(-1);
+            tabCell_4.innerHTML = monsters[i]["atk"];
+            let tabCell_5 = tr.insertCell(-1);
+            tabCell_5.innerHTML = monsters[i]["def"];
+            let tabCell_6 = tr.insertCell(-1);
+            tabCell_6.innerHTML = monsters[i]["spd"];
+            let tabCell_7 = tr.insertCell(-1);
+            tabCell_7.innerHTML = monsters[i]["exp"];
+            let tabCell_8 = tr.insertCell(-1);
+            let tabCell_9 = tr.insertCell(-1);
+            if (monsters[i]["item1"] > 0) {
+                tabCell_8.innerHTML = getItemByID(monsters[i]["item1"])["nameId_EN"]
+                tabCell_9.innerHTML = monsters[i]["prob1"]
+            } else {
+                tabCell_8.innerHTML = ''
+                tabCell_9.innerHTML = ''
+            }
+            let tabCell_10 = tr.insertCell(-1);
+            let tabCell_11 = tr.insertCell(-1);
+            if (monsters[i]["item2"] > 0) {
+                tabCell_10.innerHTML = getItemByID(monsters[i]["item2"])["nameId_EN"]
+                tabCell_11.innerHTML = monsters[i]["prob2"]
+            } else {
+                tabCell_10.innerHTML = ''
+                tabCell_11.innerHTML = ''
+            }
+
+        }
+
+        let divContainer = document.getElementById("Table")
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table)
+    }
+</script>
 </html>
