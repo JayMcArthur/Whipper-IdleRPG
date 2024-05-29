@@ -120,25 +120,46 @@
       "use": 30
     },
     {
-      "id": 71,
-      "nameId": "千手核",
-      "icon": "senjukaku",
-      "efficacyId": "茜色にきらめく、千の手を持つ巨像の動力源",
-      "use": 11
+      "id": 61,
+      "nameId": "カタクナールG",
+      "icon": "mate61",
+      "efficacyId": "強化値を+10できる大容量の緑色の液体",
+      "use": 1
+    },
+    {
+      "id": 62,
+      "nameId": "カタクナールXG",
+      "icon": "mate62",
+      "efficacyId": "強化値を+30できる大容量の橙色の液体",
+      "use": 1
+    },
+    {
+      "id": 63,
+      "nameId": "カタクナールZG",
+      "icon": "mate63",
+      "efficacyId": "強化値を+50できる大容量の紫色の液体",
+      "use": 1
     },
     {
       "id": 90,
       "nameId": "黒の鍵",
       "icon": "blackkey",
       "efficacyId": "用途不明の鍵",
-      "use": 50
+      "use": 95
     },
     {
       "id": 91,
       "nameId": "ライラック",
       "icon": "lilac",
       "efficacyId": "迷いの森に咲く紫色の花木。花言葉は「大切な友達」",
-      "use": 13
+      "use": 90
+    },
+    {
+      "id": 92,
+      "nameId": "コアのかけら",
+      "icon": "corefragment",
+      "efficacyId": "砕け散ったコアのかけら。瘴気濃度の上限が上がる",
+      "use": 9
     },
     {
       "id": 101,

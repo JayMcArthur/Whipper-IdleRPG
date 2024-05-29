@@ -1138,16 +1138,16 @@
       "id": 803,
       "nameId": "三途",
       "summaryId": "確率でクリティカルのダメージが3倍になる",
-      "modLv": 51,
+      "modLv": 50,
       "dispLv": 0,
-      "value": 70,
+      "value": 50,
       "nextModId": 0
     },
     {
       "id": 804,
       "nameId": "四葉",
       "summaryId": "確率で敵からのドロップアイテムが2倍になる",
-      "modLv": 51,
+      "modLv": 50,
       "dispLv": 0,
       "value": 20,
       "nextModId": 0
@@ -1156,16 +1156,16 @@
       "id": 805,
       "nameId": "五光",
       "summaryId": "確率で経験値2倍",
-      "modLv": 51,
+      "modLv": 50,
       "dispLv": 0,
-      "value": 30,
+      "value": 15,
       "nextModId": 0
     },
     {
       "id": 806,
       "nameId": "六感",
       "summaryId": "確率で相手の攻撃をよける",
-      "modLv": 51,
+      "modLv": 50,
       "dispLv": 0,
       "value": 20,
       "nextModId": 0
@@ -1173,17 +1173,17 @@
     {
       "id": 807,
       "nameId": "七福",
-      "summaryId": "確率系能力の確率アップ",
-      "modLv": 51,
+      "summaryId": "確率系能力の確率2倍",
+      "modLv": 50,
       "dispLv": 0,
-      "value": 20,
+      "value": 2,
       "nextModId": 0
     },
     {
       "id": 901,
       "nameId": "斬撃の極意",
       "summaryId": "斬撃武器を装備",
-      "modLv": 51,
+      "modLv": 99,
       "dispLv": 1,
       "value": 30,
       "nextModId": 0
@@ -1192,7 +1192,7 @@
       "id": 911,
       "nameId": "打撃の極意",
       "summaryId": "打撃武器を装備",
-      "modLv": 51,
+      "modLv": 99,
       "dispLv": 1,
       "value": 30,
       "nextModId": 0
@@ -1201,7 +1201,7 @@
       "id": 921,
       "nameId": "刺突の極意",
       "summaryId": "刺突武器を装備",
-      "modLv": 51,
+      "modLv": 99,
       "dispLv": 1,
       "value": 30,
       "nextModId": 0
@@ -1210,7 +1210,7 @@
       "id": 931,
       "nameId": "投射の極意",
       "summaryId": "投射武器を装備",
-      "modLv": 51,
+      "modLv": 99,
       "dispLv": 1,
       "value": 30,
       "nextModId": 0
@@ -1219,7 +1219,7 @@
       "id": 941,
       "nameId": "毒",
       "summaryId": "攻撃の度に毒を与える",
-      "modLv": 51,
+      "modLv": 50,
       "dispLv": 0,
       "value": 0,
       "nextModId": 0
@@ -1228,7 +1228,7 @@
       "id": 951,
       "nameId": "孤高",
       "summaryId": "セットを装備していない場合に全能力アップ",
-      "modLv": 51,
+      "modLv": 99,
       "dispLv": 0,
       "value": 10,
       "nextModId": 0
@@ -1237,7 +1237,7 @@
       "id": 961,
       "nameId": "不屈",
       "summaryId": "HP1で踏みとどまり",
-      "modLv": 51,
+      "modLv": 50,
       "dispLv": 0,
       "value": 0,
       "nextModId": 0
@@ -1246,7 +1246,7 @@
       "id": 971,
       "nameId": "攻撃力ブースト",
       "summaryId": "攻撃力ブースト説明",
-      "modLv": 51,
+      "modLv": 99,
       "dispLv": 1,
       "value": 20,
       "nextModId": 972
@@ -1255,7 +1255,7 @@
       "id": 972,
       "nameId": "攻撃力ブースト",
       "summaryId": "攻撃力ブースト説明",
-      "modLv": 51,
+      "modLv": 99,
       "dispLv": 2,
       "value": 30,
       "nextModId": 0
@@ -1264,7 +1264,7 @@
       "id": 981,
       "nameId": "守備力ブースト",
       "summaryId": "守備力ブースト説明",
-      "modLv": 51,
+      "modLv": 99,
       "dispLv": 1,
       "value": 20,
       "nextModId": 982
@@ -1273,7 +1273,7 @@
       "id": 982,
       "nameId": "守備力ブースト",
       "summaryId": "守備力ブースト説明",
-      "modLv": 51,
+      "modLv": 99,
       "dispLv": 2,
       "value": 30,
       "nextModId": 0
@@ -1375,7 +1375,7 @@
       "modLv": 99,
       "dispLv": 2,
       "value": 30,
-      "nextModId": 2204
+      "nextModId": 2203
     },
     {
       "id": 2203,
