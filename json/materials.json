@@ -92,6 +92,13 @@
       "use": 5
     },
     {
+      "id": 25,
+      "nameId": "鑑定士の心得",
+      "icon": "tips",
+      "efficacyId": "下級アイテムの自動解析ができるようになる巻物",
+      "use": 4
+    },
+    {
       "id": 30,
       "nameId": "亡国の拡大鏡",
       "icon": "mate30",
@@ -144,7 +151,7 @@
       "id": 90,
       "nameId": "黒の鍵",
       "icon": "blackkey",
-      "efficacyId": "用途不明の鍵",
+      "efficacyId": "廃棄場への扉を開く鍵",
       "use": 95
     },
     {
@@ -160,6 +167,13 @@
       "icon": "corefragment",
       "efficacyId": "砕け散ったコアのかけら。瘴気濃度の上限が上がる",
       "use": 9
+    },
+    {
+      "id": 93,
+      "nameId": "幻鉱の砥石",
+      "icon": "sharpening",
+      "efficacyId": "侵蝕度を+10できる砥石",
+      "use": 1
     },
     {
       "id": 101,

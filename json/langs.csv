@@ -50,8 +50,12 @@ iCloudやGoogleドライブにセーブデータを設置します,Place saved d
 頑丈さ上昇の泉だった,It was a fountain of VIT.,頑丈さ上昇の泉だった,这是提升耐力(VIT)的泉水,방어력 상승의 샘이었다,這是提升耐力(VIT)的泉水
 速度上昇の泉だった,It was a fountain of SPD.,速度上昇の泉だった,这是提升速度(SPD)的泉水,속도 상승의 샘이었다,這是提升速度(SPD)的泉水
 運上昇の泉だった,It was a fountain of LUK.,運上昇の泉だった,这是提升幸运(LUK)的泉水,운 상승의 샘이었다,這是提升幸運(LUK)的泉水
+レベルアップの泉だった,It was a fountain of level-up.,レベルアップの泉だった,这是提升等级的泉水,레벨 업의 샘이었다,這是提升等級的泉水
 泉を見つけた,Found a Fountain.,泉を見つけた,发现泉水,샘을 발견했다,發現了泉水
 ダンジョン階の探索成功,{dungeon} {floor}F adventure succeeded!,{dungeon} {floor}階の探索成功,{dungeon}第{floor}层的探索成功,{dungeon} {floor}층 탐색 성공!,{dungeon}第{floor}層的探索成功
+ダンジョン階まで踏破しました,Cleared up to {floor}F in {dungeon}.,{dungeon} {floor}階まで踏破しました,通关至{dungeon}第{floor}层,{dungeon} {floor}층까지 클리어했습니다.,通關至{dungeon}第{floor}層
+今週の踏破記録を更新しました,This week's clear record has been updated.,今週の踏破記録を更新しました,本周的通关记录更新了,이번 주 클리어 기록이 갱신되었습니다.,本週的通關記錄更新了
+宝箱が現れた！,A treasure chest appeared!,宝箱が現れた！,宝箱出现了！,보물 상자가 나타났습니다!,寶箱出現了！
 個のアイテムを入手した！,Got {num} items!,{num}個のアイテムを入手した！,得到了{num}个物品！,{num}개의 아이템을 획득했다!,得到了{num}個物品！
 を手に入れた,Got {item}!,{item}を手に入れた,得到了『{item}』,{item}을(를) 획득했다,得到了『{item}』
 探索時間ボーナス！,Adventure time bonus!,探索時間ボーナス！,探索时间奖励！,탐색시간 보너스!,探索時間獎勵！
@@ -259,6 +263,10 @@ Boost説明,Multiplier for the final ability values.,最終的な能力値にか
 進化先,Evolution destination,進化先,进化结果,진화처,進化結果
 解析,Analysis,解析,解析,분석,分析
 解析する,Analyze,解析する,解析,분석하다,分析
+下級アイテムを自動解析,Automatic analysis of low-level items,下級アイテムを自動解析,自动解析低级物品,하위 아이템 자동 분석,自動分析低級物品
+鑑定士の心得,Appraiser's Guide,鑑定士の心得,鉴定师的心得,감정사의 지침,鑑定師的心得
+下級アイテムの自動解析ができるようになる巻物,A scroll that enables automatic analysis of low-level items,下級アイテムの自動解析ができるようになる巻物,可自动解析低级物品的卷轴,하위 아이템 자동 분석을 가능하게 하는 두루마리,可自動分析低級物品的卷軸
+アイテムの良し悪しを見分ける秘訣が書かれている,It contains secrets to distinguish the quality of items.,アイテムの良し悪しを見分ける秘訣が書かれている,里面写有辨别物品优劣的秘诀,아이템의 질을 구별하는 비결이 적혀있다,內寫辨別物品優劣的秘訣
 限界突破,Break through the limit,限界突破,上限突破,한계돌파,上限突破
 限界突破の説明,Description of breaking through the limit,限界突破の説明,关于上限突破的说明,한계돌파 설명,關於上限突破的說明
 このアイテムの侵蝕度がXXX以上の場合のみ発現する能力。,This ability only manifests when the item's corrosion level is XXX or higher.,このアイテムの侵蝕度がXXX以上の場合のみ発現する能力。,只有该物品的侵蚀度达到XXX以上时，才能发现与之相对应的能力。,이 아이템의 침식도가 XXX 이상일 때만 발현되는 능력입니다.,只有該物品的侵蝕度達到XXX以上時，才能發現與之相對應的能力。
@@ -345,6 +353,7 @@ LvUPまで,{num} more to LvUP,LvUPまであと {num},离LvUP还需要 {num} 个,
 名前で絞り込み無し,No filter by name,名前で絞り込み無し,不按名称过滤,이름별 필터 없음,沒有按名稱篩選
 能力で絞り込み無し,No filter by ability,能力で絞り込み無し,不按能力过滤,능력으로 필터링하지 않음,沒有按能力篩選
 新着,New arrival,新着,新入,새로운 도착,新品到貨
+図鑑No.,Book No.,図鑑No.,图鉴No.,책No.,圖鑑No.
 能力数,Abilities,能力数,能力数量,능력의 수,能力數量
 降順,DESC,降順,降序,내림차순,遞減
 昇順,ASC,昇順,升序,오름차순,遞增
@@ -447,6 +456,9 @@ LUKブースト,LUK Boost,LUKブースト,LUK提升,LUK 부스트,幸運提升
 LUKブースト説明,LUK increased by {value}%,LUK{value}%アップ,LUK提高{value}%,LUK {value}% 상승,幸運提高{value}%
 全能力値ブースト,All Stats Boost,全能力値ブースト,全能力提升,전 능력치 부스트,全能力值提升
 全能力値ブースト説明,All stats increased by {value}%,全能力値{value}%アップ,全能力提高{value}%,전 능력치 {value}% 상승,全能力值提高{value}%
+侵蝕度ブースト,Corrosion Level Boost,侵蝕度ブースト,侵蚀度提升,침식도 부스트,侵蝕度提升
+能力Lvブースト,Ability Level Boost,能力Lvブースト,能力Lv提升,능력 레벨 부스트,能力Lv提升
+能力Lvブースト説明,This item is more likely to gain high-level abilities,このアイテムに付く能力が高Lvになりやすくなる,该物品被赋予的能力更容易获得高Lv,이 아이템은 높은 레벨의 능력을 얻기 쉽습니다,該物品被賦予的能力更容易獲得高Lv
 以上で発現," or higher manifests",以上で発現,以上时发现," 이상에서 발현",以上時發現
 固有スキル,Unique Skill,固有スキル,固有技能,고유 스킬,固有技能
 セット装備,Set Equipment,セット装備,套装装备,세트 장비,套裝裝備
@@ -582,12 +594,15 @@ LUKブースト説明,LUK increased by {value}%,LUK{value}%アップ,LUK提高{v
 かばんの中から一輪の花を取り出し、そっと差し出した,Took out a single flower from the bag and gently offered it,かばんの中から一輪の花を取り出し、そっと差し出した,从包里拿出一朵花，轻轻地递了出去,가방에서 한 송이 꽃을 꺼내어 조용히 내밀었다,從包裡拿出一朵花，輕輕地遞了出去
 帰還中,Returning,帰還中,返回中,귀환 중,返回中
 受け取る,Receive,受け取る,接受,받다,接受
-攻撃と共に毒を注入した,Injected poison with the attack,攻撃と共に毒を注入した,攻击时注入了毒素,공격과 함께 독을 주입했다,隨著攻擊注入了毒素
-ターゲットに毒が蓄積された,Poison accumulated in {target},{target}に毒が蓄積された,{target}体内毒素不断累积,{target}에 독이 쌓였다,{target}內毒素積累
-ターゲットを毒が蝕む,Poison corrodes {target},{target}を毒が蝕む,{target}被毒素侵蚀着,{target}를 독이 침식한다,毒素腐蝕了{target}
-プレイヤーは不屈の意志で持ちこたえた,{target} endured with an indomitable will,{target}は不屈の意志で持ちこたえた,{target}以不屈意志撑了下来,{target}는 굴하지 않는 의지로 버텼다,{target}以堅不屈的意志堅持了下來
-プレイヤーが最後の力を振り絞る,{player} summons the last of their strength,{player}が最後の力を振り絞る,{player}使出最后的力气,{player}가 마지막 힘을 짜낸다,{player}使出最後的力氣
+攻撃と共に毒を注入した,Injected poison with the attack.,攻撃と共に毒を注入した,攻击时注入了毒素,공격과 함께 독을 주입했다,隨著攻擊注入了毒素
+ターゲットに毒が蓄積された,Poison accumulated in {target}.,{target}に毒が蓄積された,{target}体内毒素不断累积,{target}에 독이 쌓였다,{target}內毒素積累
+ターゲットを毒が蝕む,Poison corrodes {target}.,{target}を毒が蝕む,{target}被毒素侵蚀着,{target}를 독이 침식한다,毒素腐蝕了{target}
+ターゲットに毒は効かないようだ,It seems that poison doesn't work on {target}.,{target}に毒は効かないようだ,毒好像对{target}不起作用。,{target}에게 독이 효과가 없는 것 같다,毒似乎對{target}不起作用。
+プレイヤーは不屈の意志で持ちこたえた,{target} endured with an indomitable will.,{target}は不屈の意志で持ちこたえた,{target}以不屈意志撑了下来,{target}는 굴하지 않는 의지로 버텼다,{target}以堅不屈的意志堅持了下來
+プレイヤーが最後の力を振り絞る,{player} summons the last of their strength.,{player}が最後の力を振り絞る,{player}使出最后的力气,{player}가 마지막 힘을 짜낸다,{player}使出最後的力氣
 ミス！ターゲットは攻撃を回避した,Miss! {target} dodged the attack.,ミス！{target}は攻撃を回避した,未击中！{target}躲避了攻击,빗나감! {target}는 공격을 회피했습니다,未擊中！{target}閃避了攻擊
+なんとターゲットがよみがえった,{target} has resurrected!,なんと{target}がよみがえった！,{target}复活了！,{target}이 부활했다!,{target}復活了！
+ターゲットが再び襲い掛かってくる,{target} is attacking again.,{target}が再び襲い掛かってくる,{target}再次攻击,{target}가 다시 공격해온다,{target}再次攻擊
 冒険者が帰還していません,The adventurer has not returned,冒険者が帰還していません,冒险者尚未归来,모험가가 돌아오지 않았습니다,冒險者尚未歸來
 はじめの草むら,The First Grassy Knoll,はじめの草むら,初始草丛,시작의 초원,初始草叢
 迷いの森,The Lost Forest,迷いの森,迷失森林,미로숲,失落森林
@@ -607,6 +622,21 @@ LUKブースト説明,LUK increased by {value}%,LUK{value}%アップ,LUK提高{v
 霊廟,The Mausoleum,霊廟,灵庙," 영묘",靈廟
 古城,The Ancient Citadel,古城,古城," 고성",古城
 生成ダンジョン,{dungeon}{fix},{fix}{dungeon},{fix}{dungeon},{fix}{dungeon},{fix}{dungeon}
+夢幻の王墓,The Illusory Royal Tomb,夢幻の王墓,梦幻的王陵,환상의 왕릉,夢幻的王陵
+このダンジョンについて,About this dungeon,このダンジョンについて,关于这个迷宫,이 던전에 대해,關於這個迷宮
+深い階層ほど強い魔物が出現します。,"The deeper the floor, the stronger the monsters will appear.",深い階層ほど強い魔物が出現します。,越往深处走，出现的怪物越强。,층이 깊을수록 더 강한 몬스터가 나타납니다.,越深的樓層會出現越強的怪物。
+選択した階層をクリアすると、より深い階層が選べるようになります。,Clearing the selected floor will allow you to choose a deeper floor.,選択した階層をクリアすると、より深い階層が選べるようになります。,通关所选楼层后，可以选择更深的楼层。,선택한 층을 클리어하면 더 깊은 층을 선택할 수 있습니다.,通關所選樓層後，可以選擇更深的樓層。
+注意点は以下の通りです。,Please note the following points:,注意点は以下の通りです。,注意事项如下：,주의 사항은 다음과 같습니다:,注意事項如下：
+シナリオクリアには無関係です。,It is unrelated to scenario clearing.,シナリオクリアには無関係です。,与剧情通关无关。,시나리오 클리어와는 관련이 없습니다.,與劇情通關無關。
+途中帰還はできません。,Cannot return midway.,途中帰還はできません。,中途无法返回。,중간에 돌아갈 수 없습니다.,中途無法返回。
+魔物は瘴気の影響を受けません。,Monsters are not affected by miasma.,魔物は瘴気の影響を受けません。,怪物不受瘴气影响。,몬스터는 장기의 영향을 받지 않습니다.,怪物不受瘴氣影響。
+クリア報酬について,About the clear rewards,クリア報酬について,关于通关奖励,클리어 보상에 대해,通關獎勵
+このダンジョンでは魔物がアイテムをドロップしません。,Monsters do not drop items in this dungeon.,このダンジョンでは魔物がアイテムをドロップしません。,该迷宫的怪物不会掉落物品。,이 던전에서는 몬스터가 아이템을 드롭하지 않습니다.,該迷宮的怪物不會掉落物品。
+その代わり、10階クリアごとに一度だけ報酬が貰えます。,"Instead, you can get rewards once every 10 floors you clear.",その代わり、10階クリアごとに一度だけ報酬が貰えます。,而是每通过10层可以获得一次奖励。,대신 10층 클리어마다 한 번씩 보상을 받을 수 있습니다.,而是每透過10層可以獲得一次獎勵。
+深い階層をクリアすると、それより浅い階層のクリア報酬も全て貰えます。,Clearing a deeper floor will also give you all the rewards for clearing shallower floors.,深い階層をクリアすると、それより浅い階層のクリア報酬も全て貰えます。,通关更深的楼层也会获得所有较浅楼层的通关奖励。,깊은 층을 클리어하면 얕은 층의 클리어 보상도 모두 받을 수 있습니다.,通關更深的樓層也會獲得所有較淺樓層的通關獎勵。
+クリア階層と報酬受け取り状況は、毎週月曜日にリセットされます。,The cleared floors and reward status are reset every Monday.,クリア階層と報酬受け取り状況は、毎週月曜日にリセットされます。,每周一重置通关楼层数和奖励。,클리어한 층과 보상 수령 상황은 매주 월요일에 리셋됩니다.,每週一重置通關樓層數和獎勵。
+最高記録,Highest,最高記録,最高纪录,최고 기록,最高紀錄
+今週の記録,This Week's High,今週の記録,本周记录,이번 주 기록,本週記錄
 カタクナール,Hardener,カタクナール,强化液,강화제,強化液
 強化値を+1できる緑色の液体,A green liquid with +1 upgrade value,強化値を+1できる緑色の液体,强化值+1的绿色液体,강화 값을 +1 하는 녹색 액체,強化值+1的綠色液體
 カタクナールX,HardenerX,カタクナールX,强化液X,강화제X,強化液 X
@@ -619,12 +649,16 @@ LUKブースト説明,LUK increased by {value}%,LUK{value}%アップ,LUK提高{v
 強化値を+30できる大容量の橙色の液体,A large amount of orange liquid with +30 upgrade value,強化値を+30できる大容量の橙色の液体,强化值+30的大容量的橙色液体,대용량 강화 값을 +30 하는 주황색 액체,強化值+30的大容量的橙色液體
 カタクナールZG,HardenerZG,カタクナールZG,强化液ZG,강화제ZG,強化液 ZG
 強化値を+50できる大容量の紫色の液体,A large amount of purple liquid with +50 upgrade value,強化値を+50できる大容量の紫色の液体,强化值+50的大容量的紫色液体,대용량 강화 값을 +50 하는 보라색 액체,強化值+50的大容量的紫色液體
+幻鉱の砥石,Illusory Ore Whetstone,幻鉱の砥石,幻矿的砥石,환광 숫돌,幻礦的砥石
+侵蝕度を+10できる砥石,A whetstone that can increase Corrosion Level by +10,侵蝕度を+10できる砥石,侵蚀度+10的砥石,침식도를 +10 할 수 있는 숫돌,侵蝕度+10的砥石
 銀の組成液,Silver Essence,銀の組成液,银色合成液,은색 합성액,銀色合成液
 装備品同士を結合できる銀色の液体,A silver liquid that binds equipment together,装備品同士を結合できる銀色の液体,可以结合同类型装备的银色液体,장비품을 결합시키는 은색 액체,可以結合同類型裝備的銀色液體
 金の組成液,Gold Essence,金の組成液,金色合成液,금색 합성액,金色合成液
 装備品同士を無傷で結合できる金色の液体,A golden liquid that binds equipment together without damaging them,装備品同士を無傷で結合できる金色の液体,可以无损结合同类型装备的金色液体,장비품을 손상 없이 결합시키는 금색 액체,可以無損結合同類型裝備的金色液體
 白の鍵,White Key,白の鍵,白色钥匙,하얀 열쇠,白色鑰匙
 異世界への扉を開く鍵,A key that opens the door to another world,異世界への扉を開く鍵,开启异世界之门的钥匙,이세계의 문을 여는 열쇠,開啟異世界之門的鑰匙
+黒の鍵,The Black Key,黒の鍵,黑色钥匙,검은 열쇠,黑色鑰匙
+廃棄場への扉を開く鍵,The key that opens the door to the junkyard,廃棄場への扉を開く鍵,打开通往废弃场大门的钥匙,폐기장 문을 여는 열쇠,打開通往廢棄場大門的鑰匙
 広告なし,No ads,広告なし,无广告,광고 없음,無廣告
 動画視聴1回につき、以下の広告を24時間非表示にできます,You can hide the following ads for 24 hours per video viewing.,動画視聴1回につき、以下の広告を24時間非表示にできます。,每次观看视频时，您可以隐藏以下广告 24 小时。,동영상 시청 1회당 다음 광고를 24시간 숨길 수 있습니다.,每次觀看影片時，您可以隱藏以下廣告 24 小時。
 画面下部のバナー広告,Banner ads at the bottom,画面下部のバナー広告,屏幕底部的横幅广告,화면 하단 배너 광고,螢幕底部的橫幅廣告
@@ -946,3 +980,6 @@ Cマグナム,C Magnum,Cマグナム,马格南C,C매그넘,馬格南C
 魔王,Demon King,魔王,魔王,마왕,魔王
 傀儡の王,Puppet King,傀儡の王,傀儡王,괴뢰의 왕,傀儡之王
 皇帝テバ,Emperor Teba,皇帝テバ,皇帝Teba,황제 테바,皇帝Teba
+墓守のミイラ,The Mummy Tomb Keeper,墓守のミイラ,守墓的木乃伊,묘수의 미이라,守墓的木乃伊
+アヌビス,Anubis,アヌビス,阿努比斯,아누비스,阿努比斯
+ネクロノミコン,Necronomicon,ネクロノミコン,死灵之书,네크로노미콘,死靈之書

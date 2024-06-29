@@ -1833,6 +1833,48 @@
       "item2": 323,
       "prob2": 4,
       "nameId_EN": "Emperor Teba"
+    },
+    {
+      "id": 132,
+      "nameId": "墓守のミイラ",
+      "hp": 2000,
+      "atk": 900,
+      "def": 750,
+      "spd": 300,
+      "exp": 1,
+      "item1": 0,
+      "prob1": 0,
+      "item2": 0,
+      "prob2": 0,
+      "nameId_EN": "The Mummy Tomb Keeper"
+    },
+    {
+      "id": 133,
+      "nameId": "アヌビス",
+      "hp": 8000,
+      "atk": 4000,
+      "def": 2000,
+      "spd": 2000,
+      "exp": 1,
+      "item1": 0,
+      "prob1": 0,
+      "item2": 0,
+      "prob2": 0,
+      "nameId_EN": "Anubis"
+    },
+    {
+      "id": 134,
+      "nameId": "ネクロノミコン",
+      "hp": 99999,
+      "atk": 5000,
+      "def": 5000,
+      "spd": 1,
+      "exp": 99999,
+      "item1": 0,
+      "prob1": 0,
+      "item2": 0,
+      "prob2": 0,
+      "nameId_EN": "Necronomicon"
     }
   ]
 }

@@ -118,6 +118,15 @@
       "efficacyId_EN": "Relics of ancient civilization with +10 analysis value"
     },
     {
+      "id": 25,
+      "nameId": "鑑定士の心得",
+      "icon": "tips",
+      "efficacyId": "下級アイテムの自動解析ができるようになる巻物",
+      "use": 4,
+      "nameId_EN": "Appraiser's Guide",
+      "efficacyId_EN": "A scroll that enables automatic analysis of low-level items"
+    },
+    {
       "id": 30,
       "nameId": "亡国の拡大鏡",
       "icon": "mate30",
@@ -184,10 +193,10 @@
       "id": 90,
       "nameId": "黒の鍵",
       "icon": "blackkey",
-      "efficacyId": "用途不明の鍵",
+      "efficacyId": "廃棄場への扉を開く鍵",
       "use": 95,
-      "nameId_EN": "NA",
-      "efficacyId_EN": "NA"
+      "nameId_EN": "The Black Key",
+      "efficacyId_EN": "The key that opens the door to the junkyard"
     },
     {
       "id": 91,
@@ -206,6 +215,15 @@
       "use": 9,
       "nameId_EN": "Core Fragment",
       "efficacyId_EN": "Shattered core fragment. Increases the maximum miasma concentration."
+    },
+    {
+      "id": 93,
+      "nameId": "幻鉱の砥石",
+      "icon": "sharpening",
+      "efficacyId": "侵蝕度を+10できる砥石",
+      "use": 1,
+      "nameId_EN": "Illusory Ore Whetstone",
+      "efficacyId_EN": "A whetstone that can increase Corrosion Level by +10"
     },
     {
       "id": 101,
