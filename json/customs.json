@@ -484,7 +484,7 @@
       "modLv": 17,
       "dispLv": 8,
       "value": 50,
-      "nextModId": 0
+      "nextModId": 509
     },
     {
       "id": 55,
@@ -589,7 +589,7 @@
       "id": 66,
       "nameId": "先制",
       "summaryId": "戦闘で必ず先制攻撃できる",
-      "modLv": 50,
+      "modLv": 90,
       "dispLv": 0,
       "value": 0,
       "nextModId": 0
@@ -598,7 +598,7 @@
       "id": 67,
       "nameId": "二撃",
       "summaryId": "確率で2回攻撃できる",
-      "modLv": 50,
+      "modLv": 90,
       "dispLv": 0,
       "value": 20,
       "nextModId": 0
@@ -607,7 +607,7 @@
       "id": 68,
       "nameId": "一撃",
       "summaryId": "会心の一撃の確率がアップ",
-      "modLv": 50,
+      "modLv": 90,
       "dispLv": 0,
       "value": 20,
       "nextModId": 0
@@ -703,6 +703,96 @@
       "nextModId": 121
     },
     {
+      "id": 121,
+      "nameId": "耐久",
+      "summaryId": "HPの基礎値がアップ",
+      "modLv": 32,
+      "dispLv": 21,
+      "value": 7000,
+      "nextModId": 122
+    },
+    {
+      "id": 122,
+      "nameId": "耐久",
+      "summaryId": "HPの基礎値がアップ",
+      "modLv": 34,
+      "dispLv": 22,
+      "value": 8000,
+      "nextModId": 123
+    },
+    {
+      "id": 123,
+      "nameId": "耐久",
+      "summaryId": "HPの基礎値がアップ",
+      "modLv": 36,
+      "dispLv": 23,
+      "value": 9000,
+      "nextModId": 124
+    },
+    {
+      "id": 124,
+      "nameId": "耐久",
+      "summaryId": "HPの基礎値がアップ",
+      "modLv": 38,
+      "dispLv": 24,
+      "value": 10000,
+      "nextModId": 125
+    },
+    {
+      "id": 125,
+      "nameId": "耐久",
+      "summaryId": "HPの基礎値がアップ",
+      "modLv": 40,
+      "dispLv": 25,
+      "value": 11000,
+      "nextModId": 126
+    },
+    {
+      "id": 126,
+      "nameId": "耐久",
+      "summaryId": "HPの基礎値がアップ",
+      "modLv": 42,
+      "dispLv": 26,
+      "value": 12000,
+      "nextModId": 127
+    },
+    {
+      "id": 127,
+      "nameId": "耐久",
+      "summaryId": "HPの基礎値がアップ",
+      "modLv": 44,
+      "dispLv": 27,
+      "value": 13000,
+      "nextModId": 128
+    },
+    {
+      "id": 128,
+      "nameId": "耐久",
+      "summaryId": "HPの基礎値がアップ",
+      "modLv": 46,
+      "dispLv": 28,
+      "value": 14000,
+      "nextModId": 129
+    },
+    {
+      "id": 129,
+      "nameId": "耐久",
+      "summaryId": "HPの基礎値がアップ",
+      "modLv": 48,
+      "dispLv": 29,
+      "value": 15000,
+      "nextModId": 130
+    },
+    {
+      "id": 130,
+      "nameId": "耐久",
+      "summaryId": "HPの基礎値がアップ",
+      "modLv": 50,
+      "dispLv": 30,
+      "value": 16000,
+      "nextModId": 131
+    },
+    {
       "id": 211,
       "nameId": "腕力",
       "summaryId": "STRの基礎値がアップ",
@@ -791,6 +881,96 @@
       "dispLv": 20,
       "value": 6000,
       "nextModId": 221
+    },
+    {
+      "id": 221,
+      "nameId": "腕力",
+      "summaryId": "STRの基礎値がアップ",
+      "modLv": 32,
+      "dispLv": 21,
+      "value": 7000,
+      "nextModId": 222
+    },
+    {
+      "id": 222,
+      "nameId": "腕力",
+      "summaryId": "STRの基礎値がアップ",
+      "modLv": 34,
+      "dispLv": 22,
+      "value": 8000,
+      "nextModId": 223
+    },
+    {
+      "id": 223,
+      "nameId": "腕力",
+      "summaryId": "STRの基礎値がアップ",
+      "modLv": 36,
+      "dispLv": 23,
+      "value": 9000,
+      "nextModId": 224
+    },
+    {
+      "id": 224,
+      "nameId": "腕力",
+      "summaryId": "STRの基礎値がアップ",
+      "modLv": 38,
+      "dispLv": 24,
+      "value": 10000,
+      "nextModId": 225
+    },
+    {
+      "id": 225,
+      "nameId": "腕力",
+      "summaryId": "STRの基礎値がアップ",
+      "modLv": 40,
+      "dispLv": 25,
+      "value": 11000,
+      "nextModId": 226
+    },
+    {
+      "id": 226,
+      "nameId": "腕力",
+      "summaryId": "STRの基礎値がアップ",
+      "modLv": 42,
+      "dispLv": 26,
+      "value": 12000,
+      "nextModId": 227
+    },
+    {
+      "id": 227,
+      "nameId": "腕力",
+      "summaryId": "STRの基礎値がアップ",
+      "modLv": 44,
+      "dispLv": 27,
+      "value": 13000,
+      "nextModId": 228
+    },
+    {
+      "id": 228,
+      "nameId": "腕力",
+      "summaryId": "STRの基礎値がアップ",
+      "modLv": 46,
+      "dispLv": 28,
+      "value": 14000,
+      "nextModId": 229
+    },
+    {
+      "id": 229,
+      "nameId": "腕力",
+      "summaryId": "STRの基礎値がアップ",
+      "modLv": 48,
+      "dispLv": 29,
+      "value": 15000,
+      "nextModId": 230
+    },
+    {
+      "id": 230,
+      "nameId": "腕力",
+      "summaryId": "STRの基礎値がアップ",
+      "modLv": 50,
+      "dispLv": 30,
+      "value": 16000,
+      "nextModId": 231
     },
     {
       "id": 311,
@@ -883,6 +1063,96 @@
       "nextModId": 321
     },
     {
+      "id": 321,
+      "nameId": "頑丈",
+      "summaryId": "VITの基礎値がアップ",
+      "modLv": 32,
+      "dispLv": 21,
+      "value": 7000,
+      "nextModId": 322
+    },
+    {
+      "id": 322,
+      "nameId": "頑丈",
+      "summaryId": "VITの基礎値がアップ",
+      "modLv": 34,
+      "dispLv": 22,
+      "value": 8000,
+      "nextModId": 323
+    },
+    {
+      "id": 323,
+      "nameId": "頑丈",
+      "summaryId": "VITの基礎値がアップ",
+      "modLv": 36,
+      "dispLv": 23,
+      "value": 9000,
+      "nextModId": 324
+    },
+    {
+      "id": 324,
+      "nameId": "頑丈",
+      "summaryId": "VITの基礎値がアップ",
+      "modLv": 38,
+      "dispLv": 24,
+      "value": 10000,
+      "nextModId": 325
+    },
+    {
+      "id": 325,
+      "nameId": "頑丈",
+      "summaryId": "VITの基礎値がアップ",
+      "modLv": 40,
+      "dispLv": 25,
+      "value": 11000,
+      "nextModId": 326
+    },
+    {
+      "id": 326,
+      "nameId": "頑丈",
+      "summaryId": "VITの基礎値がアップ",
+      "modLv": 42,
+      "dispLv": 26,
+      "value": 12000,
+      "nextModId": 327
+    },
+    {
+      "id": 327,
+      "nameId": "頑丈",
+      "summaryId": "VITの基礎値がアップ",
+      "modLv": 44,
+      "dispLv": 27,
+      "value": 13000,
+      "nextModId": 328
+    },
+    {
+      "id": 328,
+      "nameId": "頑丈",
+      "summaryId": "VITの基礎値がアップ",
+      "modLv": 46,
+      "dispLv": 28,
+      "value": 14000,
+      "nextModId": 329
+    },
+    {
+      "id": 329,
+      "nameId": "頑丈",
+      "summaryId": "VITの基礎値がアップ",
+      "modLv": 48,
+      "dispLv": 29,
+      "value": 15000,
+      "nextModId": 330
+    },
+    {
+      "id": 330,
+      "nameId": "頑丈",
+      "summaryId": "VITの基礎値がアップ",
+      "modLv": 50,
+      "dispLv": 30,
+      "value": 16000,
+      "nextModId": 331
+    },
+    {
       "id": 409,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
@@ -944,6 +1214,51 @@
       "dispLv": 15,
       "value": 380,
       "nextModId": 416
+    },
+    {
+      "id": 416,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 30,
+      "dispLv": 16,
+      "value": 435,
+      "nextModId": 417
+    },
+    {
+      "id": 417,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 32,
+      "dispLv": 17,
+      "value": 490,
+      "nextModId": 418
+    },
+    {
+      "id": 418,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 34,
+      "dispLv": 18,
+      "value": 545,
+      "nextModId": 419
+    },
+    {
+      "id": 419,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 36,
+      "dispLv": 19,
+      "value": 600,
+      "nextModId": 420
+    },
+    {
+      "id": 420,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 38,
+      "dispLv": 20,
+      "value": 655,
+      "nextModId": 421
     },
     {
       "id": 509,
@@ -1009,6 +1324,141 @@
       "nextModId": 516
     },
     {
+      "id": 516,
+      "nameId": "体力の鍛錬",
+      "summaryId": "HPの成長力がアップ",
+      "modLv": 33,
+      "dispLv": 16,
+      "value": 210,
+      "nextModId": 517
+    },
+    {
+      "id": 517,
+      "nameId": "体力の鍛錬",
+      "summaryId": "HPの成長力がアップ",
+      "modLv": 35,
+      "dispLv": 17,
+      "value": 240,
+      "nextModId": 518
+    },
+    {
+      "id": 518,
+      "nameId": "体力の鍛錬",
+      "summaryId": "HPの成長力がアップ",
+      "modLv": 37,
+      "dispLv": 18,
+      "value": 270,
+      "nextModId": 519
+    },
+    {
+      "id": 519,
+      "nameId": "体力の鍛錬",
+      "summaryId": "HPの成長力がアップ",
+      "modLv": 39,
+      "dispLv": 19,
+      "value": 300,
+      "nextModId": 520
+    },
+    {
+      "id": 520,
+      "nameId": "体力の鍛錬",
+      "summaryId": "HPの成長力がアップ",
+      "modLv": 41,
+      "dispLv": 20,
+      "value": 330,
+      "nextModId": 521
+    },
+    {
+      "id": 521,
+      "nameId": "体力の鍛錬",
+      "summaryId": "HPの成長力がアップ",
+      "modLv": 43,
+      "dispLv": 21,
+      "value": 360,
+      "nextModId": 522
+    },
+    {
+      "id": 522,
+      "nameId": "体力の鍛錬",
+      "summaryId": "HPの成長力がアップ",
+      "modLv": 45,
+      "dispLv": 22,
+      "value": 390,
+      "nextModId": 523
+    },
+    {
+      "id": 523,
+      "nameId": "体力の鍛錬",
+      "summaryId": "HPの成長力がアップ",
+      "modLv": 47,
+      "dispLv": 23,
+      "value": 420,
+      "nextModId": 524
+    },
+    {
+      "id": 524,
+      "nameId": "体力の鍛錬",
+      "summaryId": "HPの成長力がアップ",
+      "modLv": 49,
+      "dispLv": 24,
+      "value": 450,
+      "nextModId": 525
+    },
+    {
+      "id": 525,
+      "nameId": "体力の鍛錬",
+      "summaryId": "HPの成長力がアップ",
+      "modLv": 51,
+      "dispLv": 25,
+      "value": 480,
+      "nextModId": 526
+    },
+    {
+      "id": 526,
+      "nameId": "体力の鍛錬",
+      "summaryId": "HPの成長力がアップ",
+      "modLv": 53,
+      "dispLv": 26,
+      "value": 510,
+      "nextModId": 527
+    },
+    {
+      "id": 527,
+      "nameId": "体力の鍛錬",
+      "summaryId": "HPの成長力がアップ",
+      "modLv": 55,
+      "dispLv": 27,
+      "value": 540,
+      "nextModId": 528
+    },
+    {
+      "id": 528,
+      "nameId": "体力の鍛錬",
+      "summaryId": "HPの成長力がアップ",
+      "modLv": 57,
+      "dispLv": 28,
+      "value": 570,
+      "nextModId": 529
+    },
+    {
+      "id": 529,
+      "nameId": "体力の鍛錬",
+      "summaryId": "HPの成長力がアップ",
+      "modLv": 59,
+      "dispLv": 29,
+      "value": 600,
+      "nextModId": 530
+    },
+    {
+      "id": 530,
+      "nameId": "体力の鍛錬",
+      "summaryId": "HPの成長力がアップ",
+      "modLv": 61,
+      "dispLv": 30,
+      "value": 630,
+      "nextModId": 531
+    },
+    {
       "id": 609,
       "nameId": "力の鍛錬",
       "summaryId": "STRの成長力がアップ",
@@ -1070,6 +1520,141 @@
       "dispLv": 15,
       "value": 180,
       "nextModId": 616
+    },
+    {
+      "id": 616,
+      "nameId": "力の鍛錬",
+      "summaryId": "STRの成長力がアップ",
+      "modLv": 33,
+      "dispLv": 16,
+      "value": 210,
+      "nextModId": 617
+    },
+    {
+      "id": 617,
+      "nameId": "力の鍛錬",
+      "summaryId": "STRの成長力がアップ",
+      "modLv": 35,
+      "dispLv": 17,
+      "value": 240,
+      "nextModId": 618
+    },
+    {
+      "id": 618,
+      "nameId": "力の鍛錬",
+      "summaryId": "STRの成長力がアップ",
+      "modLv": 37,
+      "dispLv": 18,
+      "value": 270,
+      "nextModId": 619
+    },
+    {
+      "id": 619,
+      "nameId": "力の鍛錬",
+      "summaryId": "STRの成長力がアップ",
+      "modLv": 39,
+      "dispLv": 19,
+      "value": 300,
+      "nextModId": 620
+    },
+    {
+      "id": 620,
+      "nameId": "力の鍛錬",
+      "summaryId": "STRの成長力がアップ",
+      "modLv": 41,
+      "dispLv": 20,
+      "value": 330,
+      "nextModId": 621
+    },
+    {
+      "id": 621,
+      "nameId": "力の鍛錬",
+      "summaryId": "STRの成長力がアップ",
+      "modLv": 43,
+      "dispLv": 21,
+      "value": 360,
+      "nextModId": 622
+    },
+    {
+      "id": 622,
+      "nameId": "力の鍛錬",
+      "summaryId": "STRの成長力がアップ",
+      "modLv": 45,
+      "dispLv": 22,
+      "value": 390,
+      "nextModId": 623
+    },
+    {
+      "id": 623,
+      "nameId": "力の鍛錬",
+      "summaryId": "STRの成長力がアップ",
+      "modLv": 47,
+      "dispLv": 23,
+      "value": 420,
+      "nextModId": 624
+    },
+    {
+      "id": 624,
+      "nameId": "力の鍛錬",
+      "summaryId": "STRの成長力がアップ",
+      "modLv": 49,
+      "dispLv": 24,
+      "value": 450,
+      "nextModId": 625
+    },
+    {
+      "id": 625,
+      "nameId": "力の鍛錬",
+      "summaryId": "STRの成長力がアップ",
+      "modLv": 51,
+      "dispLv": 25,
+      "value": 480,
+      "nextModId": 626
+    },
+    {
+      "id": 626,
+      "nameId": "力の鍛錬",
+      "summaryId": "STRの成長力がアップ",
+      "modLv": 53,
+      "dispLv": 26,
+      "value": 510,
+      "nextModId": 627
+    },
+    {
+      "id": 627,
+      "nameId": "力の鍛錬",
+      "summaryId": "STRの成長力がアップ",
+      "modLv": 55,
+      "dispLv": 27,
+      "value": 540,
+      "nextModId": 628
+    },
+    {
+      "id": 628,
+      "nameId": "力の鍛錬",
+      "summaryId": "STRの成長力がアップ",
+      "modLv": 57,
+      "dispLv": 28,
+      "value": 570,
+      "nextModId": 629
+    },
+    {
+      "id": 629,
+      "nameId": "力の鍛錬",
+      "summaryId": "STRの成長力がアップ",
+      "modLv": 59,
+      "dispLv": 29,
+      "value": 600,
+      "nextModId": 630
+    },
+    {
+      "id": 630,
+      "nameId": "力の鍛錬",
+      "summaryId": "STRの成長力がアップ",
+      "modLv": 61,
+      "dispLv": 30,
+      "value": 630,
+      "nextModId": 631
     },
     {
       "id": 709,
@@ -1135,10 +1720,145 @@
       "nextModId": 716
     },
     {
+      "id": 716,
+      "nameId": "守りの鍛錬",
+      "summaryId": "VITの成長力がアップ",
+      "modLv": 34,
+      "dispLv": 16,
+      "value": 210,
+      "nextModId": 717
+    },
+    {
+      "id": 717,
+      "nameId": "守りの鍛錬",
+      "summaryId": "VITの成長力がアップ",
+      "modLv": 36,
+      "dispLv": 17,
+      "value": 240,
+      "nextModId": 718
+    },
+    {
+      "id": 718,
+      "nameId": "守りの鍛錬",
+      "summaryId": "VITの成長力がアップ",
+      "modLv": 38,
+      "dispLv": 18,
+      "value": 270,
+      "nextModId": 719
+    },
+    {
+      "id": 719,
+      "nameId": "守りの鍛錬",
+      "summaryId": "VITの成長力がアップ",
+      "modLv": 40,
+      "dispLv": 19,
+      "value": 300,
+      "nextModId": 720
+    },
+    {
+      "id": 720,
+      "nameId": "守りの鍛錬",
+      "summaryId": "VITの成長力がアップ",
+      "modLv": 42,
+      "dispLv": 20,
+      "value": 330,
+      "nextModId": 721
+    },
+    {
+      "id": 721,
+      "nameId": "守りの鍛錬",
+      "summaryId": "VITの成長力がアップ",
+      "modLv": 44,
+      "dispLv": 21,
+      "value": 360,
+      "nextModId": 722
+    },
+    {
+      "id": 722,
+      "nameId": "守りの鍛錬",
+      "summaryId": "VITの成長力がアップ",
+      "modLv": 46,
+      "dispLv": 22,
+      "value": 390,
+      "nextModId": 723
+    },
+    {
+      "id": 723,
+      "nameId": "守りの鍛錬",
+      "summaryId": "VITの成長力がアップ",
+      "modLv": 48,
+      "dispLv": 23,
+      "value": 420,
+      "nextModId": 724
+    },
+    {
+      "id": 724,
+      "nameId": "守りの鍛錬",
+      "summaryId": "VITの成長力がアップ",
+      "modLv": 50,
+      "dispLv": 24,
+      "value": 450,
+      "nextModId": 725
+    },
+    {
+      "id": 725,
+      "nameId": "守りの鍛錬",
+      "summaryId": "VITの成長力がアップ",
+      "modLv": 52,
+      "dispLv": 25,
+      "value": 480,
+      "nextModId": 726
+    },
+    {
+      "id": 726,
+      "nameId": "守りの鍛錬",
+      "summaryId": "VITの成長力がアップ",
+      "modLv": 54,
+      "dispLv": 26,
+      "value": 510,
+      "nextModId": 727
+    },
+    {
+      "id": 727,
+      "nameId": "守りの鍛錬",
+      "summaryId": "VITの成長力がアップ",
+      "modLv": 56,
+      "dispLv": 27,
+      "value": 540,
+      "nextModId": 728
+    },
+    {
+      "id": 728,
+      "nameId": "守りの鍛錬",
+      "summaryId": "VITの成長力がアップ",
+      "modLv": 58,
+      "dispLv": 28,
+      "value": 570,
+      "nextModId": 729
+    },
+    {
+      "id": 729,
+      "nameId": "守りの鍛錬",
+      "summaryId": "VITの成長力がアップ",
+      "modLv": 60,
+      "dispLv": 29,
+      "value": 600,
+      "nextModId": 730
+    },
+    {
+      "id": 730,
+      "nameId": "守りの鍛錬",
+      "summaryId": "VITの成長力がアップ",
+      "modLv": 62,
+      "dispLv": 30,
+      "value": 630,
+      "nextModId": 731
+    },
+    {
       "id": 803,
       "nameId": "三途",
       "summaryId": "確率でクリティカルのダメージが3倍になる",
-      "modLv": 50,
+      "modLv": 90,
       "dispLv": 0,
       "value": 50,
       "nextModId": 0
@@ -1147,7 +1867,7 @@
       "id": 804,
       "nameId": "四葉",
       "summaryId": "確率で敵からのドロップアイテムが2倍になる",
-      "modLv": 50,
+      "modLv": 90,
       "dispLv": 0,
       "value": 20,
       "nextModId": 0
@@ -1156,7 +1876,7 @@
       "id": 805,
       "nameId": "五光",
       "summaryId": "確率で経験値2倍",
-      "modLv": 50,
+      "modLv": 90,
       "dispLv": 0,
       "value": 15,
       "nextModId": 0
@@ -1165,7 +1885,7 @@
       "id": 806,
       "nameId": "六感",
       "summaryId": "確率で相手の攻撃をよける",
-      "modLv": 50,
+      "modLv": 90,
       "dispLv": 0,
       "value": 20,
       "nextModId": 0
@@ -1174,7 +1894,7 @@
       "id": 807,
       "nameId": "七福",
       "summaryId": "確率系能力の確率2倍",
-      "modLv": 50,
+      "modLv": 90,
       "dispLv": 0,
       "value": 2,
       "nextModId": 0
@@ -1219,7 +1939,7 @@
       "id": 941,
       "nameId": "毒",
       "summaryId": "攻撃の度に毒を与える",
-      "modLv": 50,
+      "modLv": 90,
       "dispLv": 0,
       "value": 0,
       "nextModId": 0
@@ -1237,7 +1957,7 @@
       "id": 961,
       "nameId": "不屈",
       "summaryId": "HP1で踏みとどまり",
-      "modLv": 50,
+      "modLv": 90,
       "dispLv": 0,
       "value": 0,
       "nextModId": 0
@@ -1329,7 +2049,7 @@
       "summaryId": "強化上限アップ説明",
       "modLv": 99,
       "dispLv": 3,
-      "value": 5000,
+      "value": 2000,
       "nextModId": 1104
     },
     {
@@ -1338,7 +2058,25 @@
       "summaryId": "強化上限アップ説明",
       "modLv": 99,
       "dispLv": 4,
-      "value": 99999,
+      "value": 3000,
+      "nextModId": 0
+    },
+    {
+      "id": 1201,
+      "nameId": "侵蝕度ブースト",
+      "summaryId": "侵蝕度上昇量ブースト",
+      "modLv": 99,
+      "dispLv": 1,
+      "value": 2,
+      "nextModId": 1202
+    },
+    {
+      "id": 1202,
+      "nameId": "侵蝕度ブースト",
+      "summaryId": "侵蝕度上昇量ブースト",
+      "modLv": 99,
+      "dispLv": 2,
+      "value": 4,
       "nextModId": 0
     },
     {
@@ -1456,6 +2194,24 @@
       "modLv": 99,
       "dispLv": 2,
       "value": 30,
+      "nextModId": 0
+    },
+    {
+      "id": 3001,
+      "nameId": "能力Lvブースト",
+      "summaryId": "能力Lvブースト説明",
+      "modLv": 99,
+      "dispLv": 1,
+      "value": 0,
+      "nextModId": 3002
+    },
+    {
+      "id": 3002,
+      "nameId": "能力Lvブースト",
+      "summaryId": "能力Lvブースト説明",
+      "modLv": 99,
+      "dispLv": 2,
+      "value": 0,
       "nextModId": 0
     }
   ]
