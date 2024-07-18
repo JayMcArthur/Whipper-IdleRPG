@@ -2008,24 +2008,6 @@
       "nextModId": 1002
     },
     {
-      "id": 1002,
-      "nameId": "強化ブースト",
-      "summaryId": "強化上昇量ブースト",
-      "modLv": 99,
-      "dispLv": 2,
-      "value": 4,
-      "nextModId": 1003
-    },
-    {
-      "id": 1003,
-      "nameId": "強化ブースト",
-      "summaryId": "強化上昇量ブースト",
-      "modLv": 99,
-      "dispLv": 3,
-      "value": 8,
-      "nextModId": 0
-    },
-    {
       "id": 1101,
       "nameId": "強化上限アップ",
       "summaryId": "強化上限アップ説明",
@@ -2071,15 +2053,6 @@
       "nextModId": 1202
     },
     {
-      "id": 1202,
-      "nameId": "侵蝕度ブースト",
-      "summaryId": "侵蝕度上昇量ブースト",
-      "modLv": 99,
-      "dispLv": 2,
-      "value": 4,
-      "nextModId": 0
-    },
-    {
       "id": 2101,
       "nameId": "HPブースト",
       "summaryId": "HPブースト説明",
@@ -2094,7 +2067,34 @@
       "summaryId": "HPブースト説明",
       "modLv": 99,
       "dispLv": 2,
+      "value": 20,
+      "nextModId": 2103
+    },
+    {
+      "id": 2103,
+      "nameId": "HPブースト",
+      "summaryId": "HPブースト説明",
+      "modLv": 99,
+      "dispLv": 3,
       "value": 30,
+      "nextModId": 2104
+    },
+    {
+      "id": 2104,
+      "nameId": "HPブースト",
+      "summaryId": "HPブースト説明",
+      "modLv": 99,
+      "dispLv": 4,
+      "value": 40,
+      "nextModId": 2105
+    },
+    {
+      "id": 2105,
+      "nameId": "HPブースト",
+      "summaryId": "HPブースト説明",
+      "modLv": 99,
+      "dispLv": 5,
+      "value": 50,
       "nextModId": 0
     },
     {
@@ -2112,7 +2112,7 @@
       "summaryId": "STRブースト説明",
       "modLv": 99,
       "dispLv": 2,
-      "value": 30,
+      "value": 20,
       "nextModId": 2203
     },
     {
@@ -2121,7 +2121,43 @@
       "summaryId": "STRブースト説明",
       "modLv": 99,
       "dispLv": 3,
+      "value": 30,
+      "nextModId": 2204
+    },
+    {
+      "id": 2204,
+      "nameId": "STRブースト",
+      "summaryId": "STRブースト説明",
+      "modLv": 99,
+      "dispLv": 4,
+      "value": 40,
+      "nextModId": 2205
+    },
+    {
+      "id": 2205,
+      "nameId": "STRブースト",
+      "summaryId": "STRブースト説明",
+      "modLv": 99,
+      "dispLv": 5,
       "value": 50,
+      "nextModId": 2206
+    },
+    {
+      "id": 2206,
+      "nameId": "STRブースト",
+      "summaryId": "STRブースト説明",
+      "modLv": 99,
+      "dispLv": 6,
+      "value": 60,
+      "nextModId": 0
+    },
+    {
+      "id": 2210,
+      "nameId": "STRブースト",
+      "summaryId": "STRブースト説明",
+      "modLv": 99,
+      "dispLv": 10,
+      "value": 100,
       "nextModId": 0
     },
     {
@@ -2139,7 +2175,34 @@
       "summaryId": "VITブースト説明",
       "modLv": 99,
       "dispLv": 2,
+      "value": 20,
+      "nextModId": 2303
+    },
+    {
+      "id": 2303,
+      "nameId": "VITブースト",
+      "summaryId": "VITブースト説明",
+      "modLv": 99,
+      "dispLv": 3,
       "value": 30,
+      "nextModId": 2304
+    },
+    {
+      "id": 2304,
+      "nameId": "VITブースト",
+      "summaryId": "VITブースト説明",
+      "modLv": 99,
+      "dispLv": 4,
+      "value": 40,
+      "nextModId": 2305
+    },
+    {
+      "id": 2305,
+      "nameId": "VITブースト",
+      "summaryId": "VITブースト説明",
+      "modLv": 99,
+      "dispLv": 5,
+      "value": 50,
       "nextModId": 0
     },
     {
@@ -2157,7 +2220,34 @@
       "summaryId": "SPDブースト説明",
       "modLv": 99,
       "dispLv": 2,
+      "value": 20,
+      "nextModId": 2403
+    },
+    {
+      "id": 2403,
+      "nameId": "SPDブースト",
+      "summaryId": "SPDブースト説明",
+      "modLv": 99,
+      "dispLv": 3,
       "value": 30,
+      "nextModId": 2404
+    },
+    {
+      "id": 2404,
+      "nameId": "SPDブースト",
+      "summaryId": "SPDブースト説明",
+      "modLv": 99,
+      "dispLv": 4,
+      "value": 40,
+      "nextModId": 2405
+    },
+    {
+      "id": 2405,
+      "nameId": "SPDブースト",
+      "summaryId": "SPDブースト説明",
+      "modLv": 99,
+      "dispLv": 5,
+      "value": 50,
       "nextModId": 0
     },
     {
@@ -2175,7 +2265,34 @@
       "summaryId": "LUKブースト説明",
       "modLv": 99,
       "dispLv": 2,
+      "value": 20,
+      "nextModId": 2503
+    },
+    {
+      "id": 2503,
+      "nameId": "LUKブースト",
+      "summaryId": "LUKブースト説明",
+      "modLv": 99,
+      "dispLv": 3,
       "value": 30,
+      "nextModId": 2504
+    },
+    {
+      "id": 2504,
+      "nameId": "LUKブースト",
+      "summaryId": "LUKブースト説明",
+      "modLv": 99,
+      "dispLv": 4,
+      "value": 40,
+      "nextModId": 2505
+    },
+    {
+      "id": 2505,
+      "nameId": "LUKブースト",
+      "summaryId": "LUKブースト説明",
+      "modLv": 99,
+      "dispLv": 5,
+      "value": 50,
       "nextModId": 0
     },
     {
@@ -2193,6 +2310,15 @@
       "summaryId": "全能力値ブースト説明",
       "modLv": 99,
       "dispLv": 2,
+      "value": 20,
+      "nextModId": 2603
+    },
+    {
+      "id": 2603,
+      "nameId": "全能力値ブースト",
+      "summaryId": "全能力値ブースト説明",
+      "modLv": 99,
+      "dispLv": 3,
       "value": 30,
       "nextModId": 0
     },
@@ -2212,6 +2338,15 @@
       "modLv": 99,
       "dispLv": 2,
       "value": 0,
+      "nextModId": 0
+    },
+    {
+      "id": 3101,
+      "nameId": "セットブースト",
+      "summaryId": "セットブースト説明",
+      "modLv": 99,
+      "dispLv": 1,
+      "value": 50,
       "nextModId": 0
     }
   ]

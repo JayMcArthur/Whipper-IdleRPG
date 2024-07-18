@@ -459,6 +459,8 @@ LUKブースト説明,LUK increased by {value}%,LUK{value}%アップ,LUK提高{v
 侵蝕度ブースト,Corrosion Level Boost,侵蝕度ブースト,侵蚀度提升,침식도 부스트,侵蝕度提升
 能力Lvブースト,Ability Level Boost,能力Lvブースト,能力Lv提升,능력 레벨 부스트,能力Lv提升
 能力Lvブースト説明,This item is more likely to gain high-level abilities,このアイテムに付く能力が高Lvになりやすくなる,该物品被赋予的能力更容易获得高Lv,이 아이템은 높은 레벨의 능력을 얻기 쉽습니다,該物品被賦予的能力更容易獲得高Lv
+セットブースト,Set Boost,セットブースト,套装提升,세트 부스트,套裝提升
+セットブースト説明,Increases the effect of set equipment,セット装備の効果が上がる,提升套装装备的效果,세트 장비 효과가 증가합니다,提升套裝裝備的效果
 以上で発現," or higher manifests",以上で発現,以上时发现," 이상에서 발현",以上時發現
 固有スキル,Unique Skill,固有スキル,固有技能,고유 스킬,固有技能
 セット装備,Set Equipment,セット装備,套装装备,세트 장비,套裝裝備
@@ -700,7 +702,7 @@ Lv時XXX,{param} at Lv{num},Lv{num}時点 {param},Lv{num}时 {param},Lv{num}시�
 フェアリーソード,Fairy Sword,フェアリーソード,精灵剑,페어리 소드,精靈劍
 オオタツマキ,Giant Tornado,オオタツマキ,大龙卷风,오오타츠마키,大龍捲風
 エメラルドソード,Emerald Sword,エメラルドソード,翡翠剑,엘리멘탈 소드,翡翠劍
-ファントム,Phantom,ファントム,幽灵,팬텀,幽靈
+ファントムサイス,Phantom Scythe,ファントムサイス,幻影镰刀,팬텀 사이쓰,幻影鐮刀
 幻影剣,Phantom Sword,幻影剣,幻影剑,환영검,幻影劍
 ウンディーネ,Undine,ウンディーネ,温蒂妮,운디네,溫蒂妮
 シルフ,Sylph,シルフ,希尔芙,실프,希爾芙
@@ -814,7 +816,7 @@ Lv時XXX,{param} at Lv{num},Lv{num}時点 {param},Lv{num}时 {param},Lv{num}시�
 マグナム,Magnum,マグナム,马格南手枪,매그넘,馬格南手槍
 Vマグナム,V Magnum,Vマグナム,马格南V,V매그넘,馬格南V
 Cマグナム,C Magnum,Cマグナム,马格南C,C매그넘,馬格南C
-レインボウ,Rain Bow,レインボウ,彩虹,레인보우,彩虹
+オーロラシールド,Aurora Shield,オーロラシールド,极光盾,오로라 실드,極光盾
 クラウドシールド,Cloud Shield,クラウドシールド,云盾,클라우드 실드,雲盾
 暴風壁,Storm Wall,暴風壁,暴风壁,폭풍벽,暴風壁
 落書き,Graffiti,落書き,涂鸦,낙서,塗鴉
@@ -983,3 +985,4 @@ Cマグナム,C Magnum,Cマグナム,马格南C,C매그넘,馬格南C
 墓守のミイラ,The Mummy Tomb Keeper,墓守のミイラ,守墓的木乃伊,묘수의 미이라,守墓的木乃伊
 アヌビス,Anubis,アヌビス,阿努比斯,아누비스,阿努比斯
 ネクロノミコン,Necronomicon,ネクロノミコン,死灵之书,네크로노미콘,死靈之書
+レインボースライム,Rainbow Slime,レインボースライム,彩虹史莱姆,레인보우 슬라임,彩虹史萊姆

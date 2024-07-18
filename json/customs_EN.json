@@ -2454,28 +2454,6 @@
       "summaryId_EN": "Upgrade increase by {value} times"
     },
     {
-      "id": 1002,
-      "nameId": "強化ブースト",
-      "summaryId": "強化上昇量ブースト",
-      "modLv": 99,
-      "dispLv": 2,
-      "value": 4,
-      "nextModId": 1003,
-      "nameId_EN": "Upgrade Boost",
-      "summaryId_EN": "Upgrade increase by {value} times"
-    },
-    {
-      "id": 1003,
-      "nameId": "強化ブースト",
-      "summaryId": "強化上昇量ブースト",
-      "modLv": 99,
-      "dispLv": 3,
-      "value": 8,
-      "nextModId": 0,
-      "nameId_EN": "Upgrade Boost",
-      "summaryId_EN": "Upgrade increase by {value} times"
-    },
-    {
       "id": 1101,
       "nameId": "強化上限アップ",
       "summaryId": "強化上限アップ説明",
@@ -2531,17 +2509,6 @@
       "summaryId_EN": "NA"
     },
     {
-      "id": 1202,
-      "nameId": "侵蝕度ブースト",
-      "summaryId": "侵蝕度上昇量ブースト",
-      "modLv": 99,
-      "dispLv": 2,
-      "value": 4,
-      "nextModId": 0,
-      "nameId_EN": "Corrosion Level Boost",
-      "summaryId_EN": "NA"
-    },
-    {
       "id": 2101,
       "nameId": "HPブースト",
       "summaryId": "HPブースト説明",
@@ -2558,7 +2525,40 @@
       "summaryId": "HPブースト説明",
       "modLv": 99,
       "dispLv": 2,
+      "value": 20,
+      "nextModId": 2103,
+      "nameId_EN": "HP Boost",
+      "summaryId_EN": "HP increased by {value}%"
+    },
+    {
+      "id": 2103,
+      "nameId": "HPブースト",
+      "summaryId": "HPブースト説明",
+      "modLv": 99,
+      "dispLv": 3,
       "value": 30,
+      "nextModId": 2104,
+      "nameId_EN": "HP Boost",
+      "summaryId_EN": "HP increased by {value}%"
+    },
+    {
+      "id": 2104,
+      "nameId": "HPブースト",
+      "summaryId": "HPブースト説明",
+      "modLv": 99,
+      "dispLv": 4,
+      "value": 40,
+      "nextModId": 2105,
+      "nameId_EN": "HP Boost",
+      "summaryId_EN": "HP increased by {value}%"
+    },
+    {
+      "id": 2105,
+      "nameId": "HPブースト",
+      "summaryId": "HPブースト説明",
+      "modLv": 99,
+      "dispLv": 5,
+      "value": 50,
       "nextModId": 0,
       "nameId_EN": "HP Boost",
       "summaryId_EN": "HP increased by {value}%"
@@ -2580,7 +2580,7 @@
       "summaryId": "STRブースト説明",
       "modLv": 99,
       "dispLv": 2,
-      "value": 30,
+      "value": 20,
       "nextModId": 2203,
       "nameId_EN": "STR Boost",
       "summaryId_EN": "STR increased by {value}%"
@@ -2591,7 +2591,51 @@
       "summaryId": "STRブースト説明",
       "modLv": 99,
       "dispLv": 3,
+      "value": 30,
+      "nextModId": 2204,
+      "nameId_EN": "STR Boost",
+      "summaryId_EN": "STR increased by {value}%"
+    },
+    {
+      "id": 2204,
+      "nameId": "STRブースト",
+      "summaryId": "STRブースト説明",
+      "modLv": 99,
+      "dispLv": 4,
+      "value": 40,
+      "nextModId": 2205,
+      "nameId_EN": "STR Boost",
+      "summaryId_EN": "STR increased by {value}%"
+    },
+    {
+      "id": 2205,
+      "nameId": "STRブースト",
+      "summaryId": "STRブースト説明",
+      "modLv": 99,
+      "dispLv": 5,
       "value": 50,
+      "nextModId": 2206,
+      "nameId_EN": "STR Boost",
+      "summaryId_EN": "STR increased by {value}%"
+    },
+    {
+      "id": 2206,
+      "nameId": "STRブースト",
+      "summaryId": "STRブースト説明",
+      "modLv": 99,
+      "dispLv": 6,
+      "value": 60,
+      "nextModId": 0,
+      "nameId_EN": "STR Boost",
+      "summaryId_EN": "STR increased by {value}%"
+    },
+    {
+      "id": 2210,
+      "nameId": "STRブースト",
+      "summaryId": "STRブースト説明",
+      "modLv": 99,
+      "dispLv": 10,
+      "value": 100,
       "nextModId": 0,
       "nameId_EN": "STR Boost",
       "summaryId_EN": "STR increased by {value}%"
@@ -2613,7 +2657,40 @@
       "summaryId": "VITブースト説明",
       "modLv": 99,
       "dispLv": 2,
+      "value": 20,
+      "nextModId": 2303,
+      "nameId_EN": "VIT Boost",
+      "summaryId_EN": "VIT increased by {value}%"
+    },
+    {
+      "id": 2303,
+      "nameId": "VITブースト",
+      "summaryId": "VITブースト説明",
+      "modLv": 99,
+      "dispLv": 3,
       "value": 30,
+      "nextModId": 2304,
+      "nameId_EN": "VIT Boost",
+      "summaryId_EN": "VIT increased by {value}%"
+    },
+    {
+      "id": 2304,
+      "nameId": "VITブースト",
+      "summaryId": "VITブースト説明",
+      "modLv": 99,
+      "dispLv": 4,
+      "value": 40,
+      "nextModId": 2305,
+      "nameId_EN": "VIT Boost",
+      "summaryId_EN": "VIT increased by {value}%"
+    },
+    {
+      "id": 2305,
+      "nameId": "VITブースト",
+      "summaryId": "VITブースト説明",
+      "modLv": 99,
+      "dispLv": 5,
+      "value": 50,
       "nextModId": 0,
       "nameId_EN": "VIT Boost",
       "summaryId_EN": "VIT increased by {value}%"
@@ -2635,7 +2712,40 @@
       "summaryId": "SPDブースト説明",
       "modLv": 99,
       "dispLv": 2,
+      "value": 20,
+      "nextModId": 2403,
+      "nameId_EN": "SPD Boost",
+      "summaryId_EN": "SPD increased by {value}%"
+    },
+    {
+      "id": 2403,
+      "nameId": "SPDブースト",
+      "summaryId": "SPDブースト説明",
+      "modLv": 99,
+      "dispLv": 3,
       "value": 30,
+      "nextModId": 2404,
+      "nameId_EN": "SPD Boost",
+      "summaryId_EN": "SPD increased by {value}%"
+    },
+    {
+      "id": 2404,
+      "nameId": "SPDブースト",
+      "summaryId": "SPDブースト説明",
+      "modLv": 99,
+      "dispLv": 4,
+      "value": 40,
+      "nextModId": 2405,
+      "nameId_EN": "SPD Boost",
+      "summaryId_EN": "SPD increased by {value}%"
+    },
+    {
+      "id": 2405,
+      "nameId": "SPDブースト",
+      "summaryId": "SPDブースト説明",
+      "modLv": 99,
+      "dispLv": 5,
+      "value": 50,
       "nextModId": 0,
       "nameId_EN": "SPD Boost",
       "summaryId_EN": "SPD increased by {value}%"
@@ -2657,7 +2767,40 @@
       "summaryId": "LUKブースト説明",
       "modLv": 99,
       "dispLv": 2,
+      "value": 20,
+      "nextModId": 2503,
+      "nameId_EN": "LUK Boost",
+      "summaryId_EN": "LUK increased by {value}%"
+    },
+    {
+      "id": 2503,
+      "nameId": "LUKブースト",
+      "summaryId": "LUKブースト説明",
+      "modLv": 99,
+      "dispLv": 3,
       "value": 30,
+      "nextModId": 2504,
+      "nameId_EN": "LUK Boost",
+      "summaryId_EN": "LUK increased by {value}%"
+    },
+    {
+      "id": 2504,
+      "nameId": "LUKブースト",
+      "summaryId": "LUKブースト説明",
+      "modLv": 99,
+      "dispLv": 4,
+      "value": 40,
+      "nextModId": 2505,
+      "nameId_EN": "LUK Boost",
+      "summaryId_EN": "LUK increased by {value}%"
+    },
+    {
+      "id": 2505,
+      "nameId": "LUKブースト",
+      "summaryId": "LUKブースト説明",
+      "modLv": 99,
+      "dispLv": 5,
+      "value": 50,
       "nextModId": 0,
       "nameId_EN": "LUK Boost",
       "summaryId_EN": "LUK increased by {value}%"
@@ -2679,6 +2822,17 @@
       "summaryId": "全能力値ブースト説明",
       "modLv": 99,
       "dispLv": 2,
+      "value": 20,
+      "nextModId": 2603,
+      "nameId_EN": "All Stats Boost",
+      "summaryId_EN": "All stats increased by {value}%"
+    },
+    {
+      "id": 2603,
+      "nameId": "全能力値ブースト",
+      "summaryId": "全能力値ブースト説明",
+      "modLv": 99,
+      "dispLv": 3,
       "value": 30,
       "nextModId": 0,
       "nameId_EN": "All Stats Boost",
@@ -2705,6 +2859,17 @@
       "nextModId": 0,
       "nameId_EN": "Ability Level Boost",
       "summaryId_EN": "This item is more likely to gain high-level abilities"
+    },
+    {
+      "id": 3101,
+      "nameId": "セットブースト",
+      "summaryId": "セットブースト説明",
+      "modLv": 99,
+      "dispLv": 1,
+      "value": 50,
+      "nextModId": 0,
+      "nameId_EN": "Set Boost",
+      "summaryId_EN": "Increases the effect of set equipment"
     }
   ]
 }

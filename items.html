@@ -175,7 +175,11 @@
                 if (equips[i]["next"] === 0){
                     tabCell_4.innerHTML = "None";
                 } else {
-                    tabCell_4.innerHTML = getItemByID(equips[i]["next"])["nameId_EN"];
+                    if (parseInt(sel) === 3) {
+                        tabCell_4.innerHTML = getCustomById(equips[i]["next"])["nameId_EN"];
+                    } else {
+                        tabCell_4.innerHTML = getItemByID(equips[i]["next"])["nameId_EN"] + " (" + equips[i]["next"] + ")";
+                    }
                 }
                 let tabCell_5 = tr.insertCell(-1);
                 tabCell_5.innerHTML = equips[i]["param"];
