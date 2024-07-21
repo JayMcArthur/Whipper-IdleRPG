@@ -226,6 +226,15 @@
       "efficacyId_EN": "A whetstone that can increase Corrosion Level by +10"
     },
     {
+      "id": 99,
+      "nameId": "りんご",
+      "icon": "apple",
+      "efficacyId": "高濃度の瘴気に汚染された果実。持っているだけで永続的にLUK+1",
+      "use": 99,
+      "nameId_EN": "Apple",
+      "efficacyId_EN": "A fruit contaminated with high concentrations of miasma. Grants a permanent LUK +1 just by holding it"
+    },
+    {
       "id": 101,
       "nameId": "遭難者の手記",
       "icon": "log_paper",
