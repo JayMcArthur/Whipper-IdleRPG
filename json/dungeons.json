@@ -224,6 +224,17 @@
         "5": [59,64,127,132,132]
       },
       "condition": 0
+    },
+    {
+      "id": 13,
+      "nameId": "堕天の廃棄場",
+      "maxFloor": 1,
+      "minutesPerFloor": 30,
+      "modLv": 8,
+      "monsters": {
+        "1": []
+      },
+      "condition": 0
     }
   ]
 }

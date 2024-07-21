@@ -1889,6 +1889,20 @@
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Rainbow Slime"
+    },
+    {
+      "id": 200,
+      "nameId": "アダム",
+      "hp": 1000000,
+      "atk": 10000,
+      "def": 10000,
+      "spd": 10000,
+      "exp": 99999,
+      "item1": 99,
+      "prob1": 100,
+      "item2": 0,
+      "prob2": 0,
+      "nameId_EN": "Adam"
     }
   ]
 }

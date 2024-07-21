@@ -176,6 +176,13 @@
       "use": 1
     },
     {
+      "id": 99,
+      "nameId": "りんご",
+      "icon": "apple",
+      "efficacyId": "高濃度の瘴気に汚染された果実。持っているだけで永続的にLUK+1",
+      "use": 99
+    },
+    {
       "id": 101,
       "nameId": "遭難者の手記",
       "icon": "log_paper",
