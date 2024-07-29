@@ -79,6 +79,7 @@
 <script>
     let monsters;
     let equips;
+    let materials;
 
     function getTable() {
         let request = new XMLHttpRequest();
@@ -90,6 +91,12 @@
         request.open("GET","json/equips_EN.json",false);
         request.send(null);
         equips = JSON.parse(request.responseText)["equips"];
+
+        request = new XMLHttpRequest();
+        request.open("GET","json/materials_EN.json",false);
+        request.send(null);
+        materials = JSON.parse(request.responseText)["materials"];
+
         loadTable();
     }
     function getMonsterByID(id){
@@ -100,6 +107,11 @@
     function getItemByID(id){
         return equips.filter(
             function(equip){return equip.id === id}
+        )[0]
+    }
+    function getMaterialmById(id){
+        return materials.filter(
+          function(material){return material.id === id}
         )[0]
     }
     function loadTable() {
@@ -137,7 +149,11 @@
             tabCell_7.innerHTML = monsters[i]["exp"];
             let tabCell_8 = tr.insertCell(-1);
             let tabCell_9 = tr.insertCell(-1);
-            if (monsters[i]["item1"] > 0) {
+            if (monsters[i]["item1"] > 10000) {
+                tabCell_8.innerHTML = getMaterialmById(monsters[i]["item1"] - 10000)["nameId_EN"]
+                tabCell_9.innerHTML = monsters[i]["prob1"]
+            }
+            else if (monsters[i]["item1"] > 0) {
                 tabCell_8.innerHTML = getItemByID(monsters[i]["item1"])["nameId_EN"]
                 tabCell_9.innerHTML = monsters[i]["prob1"]
             } else {
