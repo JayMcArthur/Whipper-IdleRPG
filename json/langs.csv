@@ -151,8 +151,15 @@ WOND,“WO......ND”,“WO......ND”,“WO......ND”,“WO......ND”,“WO..
 巨人の腕について内容3,"In other words, these arms were not parts of different statues but belonged to a single colossal statue with many arms{@} It is estimated that at least ten arms, all bearing the same serial number, belonged to this giant statue{@} In ancient times, this multi-armed giant was likely used to perform physical labor and dangerous tasks, essentially acting as a human surrogate",つまり、これらの腕は異なる像の一部ではなく、何本もの腕を持つ一体の巨大な像に属するものだったのだ{@}同じ機体番号が刻まれた腕の数を集計すると、少なくとも10本以上の腕を持つ巨像が存在していたことが推測される{@}古代においてこの多腕の巨像は、人間に代わって肉体労働や危険な作業などを請け負う、いわば人間の分身として機能していた可能性が高い,换言之，这些手臂并非属于不同的雕像，而是属于一个拥有许多手臂的巨大雕像{@}据估计，这座雕像至少有十多个刻有相同机体编号的手臂。{@}在古代，这种多臂巨像很大可能被用来承担人类的体力劳动和危险工作，实际上实现了人类般的功能。,"다시 말해, 이 팔들은 다른 조각상의 부분이 아니라 여러 팔을 가진 하나의 거대한 조각상에 속해 있었습니다{@} 같은 기체 번호가 새겨진 팔의 수를 집계하면, 최소한 10개 이상의 팔을 가진 거인상이 존재했을 것으로 추정됩니다{@} 고대에 이 다중 팔 거인은 사람을 대신하여 육체 노동이나 위험한 작업을 수행하는, 일종의 인간 대용으로 기능했을 가능성이 높습니다",換言之，這些手臂並非屬於不同的雕像，而是屬於一個擁有許多手臂的巨大雕像{@}據估計，至少有十多個手臂，都刻有相同的機體編號，屬於這座巨大的雕像{@}在古代，這種多臂巨像很可能被用來承擔人類的體力勞動和危險工作，實際上充當了人類的替代者
 巨人の腕について内容4,"Inspired by this ancient giant, the kingdom began to fully engage in the research of androids",そして、この古代の巨像から着想を得て、王国におけるアンドロイドの研究が本格化することとなった,受这座古代巨像的启发，王国开始全面开展机器人的研究。,이 고대 거인상에서 영감을 받아 왕국에서는 안드로이드 연구를 본격화하기 시작했습니다,受這座古代巨像的啟發，王國開始全面開展安卓研究
 ダンジョン階の探索失敗,{dungeon} {floor}F adventure failed.,{dungeon} {floor}階の探索失敗,{dungeon}第{floor}层的探索失败,{dungeon} {floor}층 탐색 실패,{dungeon}第{floor}層的探索失敗
-個のアイテムを失った,Lost {num} items.,{num}個のアイテムを失った,失去了{num}个物品,{num}개의 아이템을 잃어 버렸다,失去了{num}個物品
-を失った,Lost {item}.,{item}を失った,失去了『{item}』,{item}을(를) 잃어 버렸다,失去了『{item}』
+個のアイテムを失った,Lost {num} items.,{num}個のアイテムをロストした,丢失了{num}个物品,{num}개의 아이템을 잃어 버렸다,遺失了{num}個物品
+を失った,Lost {item}.,{item}をロストした,丢失了『{item}』,{item}을(를) 잃어 버렸다,遺失了『{item}』
+逆行の懐中時計,Counterclockwise Watch,逆行の懐中時計,逆行的怀表,역행 회중시계,逆行的懷錶
+古びた時計だ,An old clock.,古びた時計だ,一块老旧的手表。,낡은 시계다.,一隻老舊的手錶。
+失ったアイテムを取り戻すことができる古びた懐中時計,An old pocket watch that can retrieve lost items,失ったアイテムを取り戻すことができる古びた懐中時計,能找回丢失物品的老旧怀表。,잃어버린 아이템을 되찾을 수 있는 낡은 회중시계,能找回遺失物品的老舊懷錶。
+全てのロストアイテムを取り戻した！,Recovered all lost items!,全てのロストアイテムを取り戻した！,找回了所有丢失的物品！,모든 잃어버린 아이템을 되찾았다!,找回了所有丟失的物品！
+一部のロストアイテムを取り戻した,Recovered some of the lost items,一部のロストアイテムを取り戻した,找回了部分丢失的物品,일부 잃어버린 아이템을 되찾았다,找回了部分丟失的物品
+ロスト,Lost,ロスト,丢失,소실,遺失
+ロストを回避,Avoid loss,ロストを回避する,避免丢失,로스트를 회피하다,避免丟失
 と対峙した,Confronted {monster}.,{monster}と対峙した,遭遇到了{monster},{monster}과(와) 만났다,遭遇到了{monster}
 の会心の一撃！,{player}'s heart attack!,{player}の会心の一撃！,{player}触发会心一击！,{player}의 치명적인 일격!,{player}觸發會心一擊！
 ターゲットにダメージ,{target} was damaged by {damage}.,{target}に{damage}のダメージ,{target}受到{damage}点伤害,{target}에게 {damage}의 대미지,{target}受到了{damage}點傷害
@@ -394,6 +401,7 @@ LvUPまで,{num} more to LvUP,LvUPまであと {num},离LvUP还需要 {num} 个,
 ベースアイテム,Base Item,ベースアイテム,基础物品,베이스 아이템,基礎物品
 強化上限に達しています,The upgrade limit has been reached.,強化上限に達しています,达到强化上限,강화 상한에 도달했습니다,達到強化上限
 強化しました,{item} has been upgraded.,{item}を強化しました,『{item}』强化完成,{item}을(를) 강화했습니다,『{item}』強化完成
+侵蝕度上限に達しています,Corrosion Level limit has been reached.,侵蝕度上限に達しています,达到侵蚀度上限,침식도 상한에 도달했습니다,達到侵蝕度上限
 変化しました,{baseItem} has been changed to {nextItem}.,{baseItem}が{nextItem}に変化しました,『{baseItem}』进化为『{nextItem}』,{baseItem}이(가) {nextItem}로(으로) 변했습니다,『{baseItem}』進化為『{nextItem}』
 アイテム種別,Item Type,アイテム種別,物品类型,아이템 종류별,物品類型
 ドロップアイテム一覧,Drop Item List,ドロップアイテム一覧,掉落物品一览,드롭 아이템 목록,掉落物品清單
@@ -653,7 +661,7 @@ LUKブースト説明,LUK increased by {value}%,LUK{value}%アップ,LUK提高{v
 黒の鍵を1本消費します(残り:本),You will use 1 black key (Remaining: {remain}),黒の鍵を1本消費します(残り:{remain}本),使用一把黑色钥匙（剩余：{remain}）,검은 열쇠 1개를 소모합니다 (남은 개수: {remain}),使用一把黑色鑰匙（剩餘：{remain}）
 階の探索(高濃度の瘴気),Start exploring {floor}F (High-density miasma).,{floor}階の探索(高濃度の瘴気),开始第{floor}层的探索（高浓度的瘴气）,{floor}층을 탐색 (고농도 독기),開始第{floor}層的探索（高濃度的瘴氣）
 ダンジョン全体に高濃度の瘴気が充満している！,The dungeon is filled with high-density miasma!,ダンジョン全体に高濃度の瘴気が充満している！,整个迷宫弥漫着高浓度的瘴气！,던전 전체에 고농도 독기가 가득 차 있다!,整個迷宮瀰漫著高濃度的瘴氣！
-武器を無力化した,{enemy} has neutralized the {weapon} weapon.,{enemy}は{weapon}武器を無力化した,{enemy}使武器「{weapon}」无效,{enemy}이(가) {weapon} 무기를 무력화했다,{enemy}使武器「{weapon}」無效
+武器を無力化した,{enemy} has neutralized the {weapon} weapon.,{enemy}は{weapon}武器を無力化した,{enemy}使「{weapon}」武器无效,{enemy}이(가) {weapon} 무기를 무력화했다,{enemy}使「{weapon}」武器無效
 こちらの様子をうかがっている,{enemy} is observing my situation.,{enemy}はこちらの様子をうかがっている,{enemy}正在静观其变,{enemy}가 나의 상황을 살펴보고 있다,{enemy}正在靜觀其變
 Lvを下げた,{enemy} has lowered {player}'s level.,{enemy}は{player}のLvを下げた,{enemy}降低了{player}的Lv,{enemy}가 {player}의 레벨을 낮췄다,{enemy}降低了{player}的Lv
 しかしカウンター,But {enemy}'s counter!,しかし{enemy}のカウンター！,但是，{enemy}发起反击！,하지만 {enemy}의 카운터!,但是，{enemy}發動反擊！

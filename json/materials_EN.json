@@ -127,6 +127,15 @@
       "efficacyId_EN": "A scroll that enables automatic analysis of low-level items"
     },
     {
+      "id": 26,
+      "nameId": "逆行の懐中時計",
+      "icon": "watch",
+      "efficacyId": "失ったアイテムを取り戻すことができる古びた懐中時計",
+      "use": 4,
+      "nameId_EN": "Counterclockwise Watch",
+      "efficacyId_EN": "An old pocket watch that can retrieve lost items"
+    },
+    {
       "id": 30,
       "nameId": "亡国の拡大鏡",
       "icon": "mate30",
