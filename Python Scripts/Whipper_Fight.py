@@ -12,36 +12,36 @@ level_list = {}
 UPGRADE_MAX = 20000
 ANALYSIS_MAX = 15
 MIASMA_MAX = 999
-MIASMA_APPLES = 50
+MIASMA_APPLES = 99
 
 # This was made using the results from generate_all_items_levels_stats
 # We take the best of every result and store them here for enchant use
 # Enchants where processed and stored as notes
 best_equips_normal = {
-    "1": [171, 244, 303],  # 3x 120 (Endurance 20), 3x 220 (Strength 20), 3x 320 (Sturdy 20)
-    "5": [171, 244, 303],  # 3x 120 (Endurance 20), 3x 220 (Strength 20), 3x 320 (Sturdy 20)
-    "10": [171, 244, 303],  # 3x 120 (Endurance 20), 3x 220 (Strength 20), 3x 320 (Sturdy 20)
-    "15": [182, 244, 323],  # 3x 120 (Endurance 20), 2x 220 (Strength 20), 4x 320 (Sturdy 20)
-    "20": [182, 244, 323],  # 2x 120 (Endurance 20), 3x 220 (Strength 20), 4x 320 (Sturdy 20)
-    "25": [182, 244, 323],  # 2x 120 (Endurance 20), 4x 220 (Strength 20), 3x 320 (Sturdy 20)
-    "30": [182, 244, 323],  # 2x 120 (Endurance 20), 4x 220 (Strength 20), 3x 320 (Sturdy 20)
-    "35": [182, 244, 323],  # 2x 515 (Endurance Training 15), 4x 615 (Strength Training 15), 3x 715 (Defense Training 15)
-    "40": [182, 244, 323],  # 2x 515 (Endurance Training 15), 4x 615 (Strength Training 15), 3x 715 (Defense Training 15)
-    "45": [182, 244, 323],  # 2x 515 (Endurance Training 15), 4x 615 (Strength Training 15), 3x 715 (Defense Training 15)
-    "50": [175, 246, 323]  # 2x 515 (Endurance Training 15), 4x 615 (Strength Training 15), 3x 715 (Defense Training 15)
+    "1": [171, 244, 303],
+    "5": [171, 244, 303],
+    "10": [171, 244, 303],
+    "15": [182, 244, 323],
+    "20": [182, 244, 323],
+    "25": [182, 244, 323],
+    "30": [182, 244, 323],
+    "35": [182, 244, 323],
+    "40": [182, 244, 323],
+    "45": [182, 244, 323],
+    "50": [175, 246, 323]
 }
 best_equips_strength = {
-    "1": [189, 239, 314],  # 3x 120 (Endurance 20), 3x 220 (Strength 20), 3x 320 (Sturdy 20)
-    "5": [189, 239, 317],  # 3x 120 (Endurance 20), 3x 220 (Strength 20), 3x 320 (Sturdy 20)
-    "10": [172, 252, 314],  # 3x 120 (Endurance 20), 3x 220 (Strength 20), 3x 320 (Sturdy 20)
-    "15": [172, 252, 314],  # 3x 120 (Endurance 20), 2x 220 (Strength 20), 4x 320 (Sturdy 20)
-    "20": [172, 252, 314],  # 2x 120 (Endurance 20), 3x 220 (Strength 20), 4x 320 (Sturdy 20)
-    "25": [172, 252, 314],  # 2x 120 (Endurance 20), 4x 220 (Strength 20), 3x 320 (Sturdy 20)
-    "30": [172, 252, 314],  # 2x 120 (Endurance 20), 4x 220 (Strength 20), 3x 320 (Sturdy 20)
-    "35": [172, 252, 314],  # 2x 515 (Endurance Training 15), 4x 615 (Strength Training 15), 3x 715 (Defense Training 15)
-    "40": [172, 252, 314],  # 2x 515 (Endurance Training 15), 4x 615 (Strength Training 15), 3x 715 (Defense Training 15)
-    "45": [172, 252, 314],  # 2x 515 (Endurance Training 15), 4x 615 (Strength Training 15), 3x 715 (Defense Training 15)
-    "50": [190, 252, 319]  # 2x 515 (Endurance Training 15), 4x 615 (Strength Training 15), 3x 715 (Defense Training 15)
+    "1": [188, 230, 230, 230, 226, 230, 230, 230, 322, 67, 68, 807],
+    "5": [188, 230, 230, 230, 226, 230, 230, 230, 322, 67, 68, 807],
+    "10": [188, 230, 230, 230, 226, 230, 230, 230, 322, 67, 68, 807],
+    "15": [188, 230, 230, 230, 226, 230, 230, 230, 322, 67, 68, 807],
+    "20": [188, 230, 230, 230, 226, 230, 230, 230, 322, 67, 68, 807],
+    "25": [188, 230, 230, 230, 226, 230, 230, 230, 322, 67, 68, 807],
+    "30": [188, 630, 630, 630, 226, 630, 630, 630, 322, 67, 68, 807],
+    "35": [188, 630, 630, 630, 226, 630, 630, 630, 322, 67, 68, 807],
+    "40": [188, 630, 630, 630, 226, 630, 630, 630, 322, 67, 68, 807],
+    "45": [188, 630, 630, 630, 226, 630, 630, 630, 322, 67, 68, 807],
+    "50": [188, 630, 630, 630, 226, 630, 630, 630, 322, 67, 68, 807]
 }
 
 
@@ -70,7 +70,7 @@ best_equips_strength = {
 
 def make_lists():
     # Make Monster List
-    with open('./json/monsters_EN.json', encoding='utf8') as f:
+    with open('../json/monsters_EN.json', encoding='utf8') as f:
         data = json.load(f)
         for monster in data['monsters']:
             monster['encounter_level'] = {
@@ -81,7 +81,7 @@ def make_lists():
             monster_list[monster["id"]] = monster
 
     # Make Equip List
-    with open('./json/equips_EN.json', encoding='utf8') as f:
+    with open('../json/equips_EN.json', encoding='utf8') as f:
         data = json.load(f)
 
         for item in data['equips']:
@@ -101,13 +101,13 @@ def make_lists():
             equip_list[item["id"]] = item
 
     # Make Custom List
-    with open('./json/customs_EN.json', encoding='utf8') as f:
+    with open('../json/customs_EN.json', encoding='utf8') as f:
         data = json.load(f)
         for custom in data['customs']:
             custom_list[custom["id"]] = custom
 
     # Make Dungeon List
-    with open('./json/dungeons_EN.json', encoding='utf8') as f:
+    with open('../json/dungeons_EN.json', encoding='utf8') as f:
         data = json.load(f)
         data['dungeons'][10]["maxFloor"] = 50  # Reduce max floor to make it work
         temp = {}
@@ -322,12 +322,17 @@ class Player(Stats):
         self.armor = armor
         self.ring = ring
         self.effects = []
+        self.attack = 0
+        self.defense = 0
 
     def print_stuff(self):
+        mods = generate_attack_defense_mod(self)
         return (f'HP: {self.hp}, STR: {self.str}, VIT: {self.vit}, SPD: {self.spd}, LUK: {self.luk}, '
-                f'[{equip_list[self.weapon.id]["nameId_EN"]} [{self.weapon.id}, {self.weapon.custom1}, {self.weapon.custom2}, {self.weapon.custom3}], '
-                f'{equip_list[self.armor.id]["nameId_EN"]} [{self.armor.id}, {self.armor.custom1}, {self.armor.custom2}, {self.armor.custom3}], '
-                f'{equip_list[self.ring.id]["nameId_EN"]} [{self.ring.id}, {self.ring.custom1}, {self.ring.custom2}, {self.ring.custom3}]]')
+                f'Attack: {self.attack}, Defense: {self.defense}, '
+                f'A Scaled: {floor(self.attack * mods[0])}, D Scaled: {floor(self.defense * mods[1])}, '
+                f'[{equip_list[self.weapon.id]["nameId_EN"]}({self.weapon.id}) [{self.weapon.custom1}, {self.weapon.custom2}, {self.weapon.custom3}], '
+                f'{equip_list[self.armor.id]["nameId_EN"]}({self.armor.id}) [{self.armor.custom1}, {self.armor.custom2}, {self.armor.custom3}], '
+                f'{equip_list[self.ring.id]["nameId_EN"]}({self.ring.id}) [{self.ring.custom1}, {self.ring.custom2}, {self.ring.custom3}]]')
 
 
 def find_set(equip_ids: list):
@@ -542,7 +547,7 @@ def apply_custom(item: Item, level: int) -> Item:
     return item
 
 
-def get_stats(player: Player, weapon: Item, armor: Item, ring: Item, upgrade: list[int], level: int, analysis: list[int], miasma: list[int]):
+def update_stats(player: Player, weapon: Item, armor: Item, ring: Item, upgrade: list[int], level: int, analysis: list[int], miasma: list[int]):
     ids = [weapon.id, armor.id, ring.id]
     weapon.miasma = miasma[0]
     armor.miasma = miasma[1]
@@ -579,55 +584,53 @@ def get_stats(player: Player, weapon: Item, armor: Item, ring: Item, upgrade: li
     player.vit *= weapon.mult.vit + armor.mult.vit + ring.mult.vit - 2
     player.spd *= weapon.mult.spd + armor.mult.spd + ring.mult.spd - 2
     player.luk *= weapon.mult.luk + armor.mult.luk + ring.mult.luk - 2
-    # Add Weapon
-    player.str += (weapon.upgrade * weapon.upgrade_boost + weapon.miasma * 10 * weapon.miasma_boost + equip_list[weapon.id]["param"]) * weapon.boost
-    # Add Armor
-    player.vit += (armor.upgrade * armor.upgrade_boost + armor.miasma * 10 * armor.miasma_boost + equip_list[armor.id]["param"]) * armor.boost
     # Floor values
     player.hp = floor(player.hp)
     player.str = floor(player.str)
     player.vit = floor(player.vit)
     player.spd = floor(player.spd)
     player.luk = floor(player.luk)
+    # Add Weapon
+    player.attack = player.str + ((weapon.upgrade * weapon.upgrade_boost + weapon.miasma * 10 * weapon.miasma_boost + equip_list[weapon.id]["param"]) * weapon.boost)
+    # Add Armor
+    player.defense = player.vit + ((armor.upgrade * armor.upgrade_boost + armor.miasma * 10 * armor.miasma_boost + equip_list[armor.id]["param"]) * armor.boost)
+
+    # Floor values
+    player.attack = floor(player.attack)
+    player.defense = floor(player.defense)
 
     return player
 
 
-def create_leveled_player(lvl, w_key: int, a_key: int, r_key: int, w_custom: list = None, a_custom: list = None, r_custom: list = None):
-    if w_custom is None:
-        w_custom = [0, 0, 0]
-    if a_custom is None:
-        a_custom = [0, 0, 0]
-    if r_custom is None:
-        r_custom = [0, 0, 0]
-
-    weapon = Item(w_key)
-    weapon.custom1 = w_custom[0]
-    weapon.custom2 = w_custom[1]
-    weapon.custom3 = w_custom[2]
-    armor = Item(a_key)
-    armor.custom1 = a_custom[0]
-    armor.custom2 = a_custom[1]
-    armor.custom3 = a_custom[2]
-    ring = Item(r_key)
-    ring.custom1 = r_custom[0]
-    ring.custom2 = r_custom[1]
-    ring.custom3 = r_custom[2]
-    return get_stats(Player(weapon, armor, ring), weapon, armor, ring, [UPGRADE_MAX, UPGRADE_MAX], lvl, [ANALYSIS_MAX, ANALYSIS_MAX, ANALYSIS_MAX],
-                                   [MIASMA_MAX, MIASMA_MAX, MIASMA_MAX])
+def create_leveled_player(lvl: int, keys: list) -> Player:
+    weapon = Item(keys[0])
+    weapon.custom1 = keys[1]
+    weapon.custom2 = keys[2]
+    weapon.custom3 = keys[3]
+    armor = Item(keys[4])
+    armor.custom1 = keys[5]
+    armor.custom2 = keys[6]
+    armor.custom3 = keys[7]
+    ring = Item(keys[8])
+    ring.custom1 = keys[9]
+    ring.custom2 = keys[10]
+    ring.custom3 = keys[11]
+    return update_stats(Player(weapon, armor, ring), weapon, armor, ring, [UPGRADE_MAX, UPGRADE_MAX], lvl, [ANALYSIS_MAX, ANALYSIS_MAX, ANALYSIS_MAX],
+                        [MIASMA_MAX, MIASMA_MAX, MIASMA_MAX])
 
 
-def create_all_items_lineup(lineup: list, lvl: int) -> list[Player]:
+def create_all_items_lineup(lineup: list, print_stuff: bool) -> list[list[int]]:
     # Every Combination
     for w_key in [x for x in list(equip_list.keys()) if x < 200]:
         for a_key in [y for y in list(equip_list.keys()) if 200 < y < 300]:
             for r_key in [z for z in list(equip_list.keys()) if 300 < z]:
-                lineup.append(create_leveled_player(lvl, w_key, a_key, r_key))
-    print(f"Number of item combinations: {len(lineup)}")
+                lineup.append([w_key, 0, 0, 0, a_key, 0, 0, 0, r_key, 0, 0, 0])
+    if print_stuff:
+        print(f"Number of item combinations: {len(lineup)}")
     return lineup
 
 
-def create_all_enchantments_lineup(lineup: list, lvl: int, equips: dict) -> list[Player]:
+def add_all_enchantments(lineup: list, lvl: int, print_stuff: bool) -> list[list[int]]:
     # Endurance 30: #130 (16000 HP)
     # Strength 30: #230 (16000 STR)
     # Sturdy 30: #330 (16000 VIT)
@@ -638,7 +641,10 @@ def create_all_enchantments_lineup(lineup: list, lvl: int, equips: dict) -> list
     # Defense Training 30: #730 (630 VIT ^)
 
     # These I will allow any amount of
-    main_enchantments = [130, 230, 330, 630, 730, 530]
+    if lvl > 25:
+        main_enchantments = [630, 730, 530]
+    else:
+        main_enchantments = [130, 230, 330]
 
     # First Strike: #66 (Can always attack first in battle)
     # Double Strike: #67 (20% chance to attack twice)
@@ -653,20 +659,57 @@ def create_all_enchantments_lineup(lineup: list, lvl: int, equips: dict) -> list
     for i in range(1, min(len(side_enchantments), 10)):
         enchantments += list(a + b for a, b in product(combinations_with_replacement(main_enchantments, 9 - i), combinations(side_enchantments, i)))
 
-    print(f'Number of enchantment combinations: {len(enchantments)}')
+    if print_stuff:
+        print(f'Number of enchantment combinations: {len(enchantments)}')
 
+    lineup_updated = []
     for enchant in enchantments:
-        [w_key, a_key, r_key] = equips[f'{lvl}']
-        lineup.append(create_leveled_player(lvl, w_key, a_key, r_key, list(enchant[0:2]), list(enchant[3:5]), list(enchant[6:8])))
-    return lineup
+        for player in lineup:
+            lineup_updated.append([player[0]] + list(enchant[0:3]) + player[4] + list(enchant[3:6]) + player[8] + list(enchant[6:9]))
+    return lineup_updated
+
+
+def add_str_enchantments(lineup: list, lvl: int, print_stuff: bool) -> list[list[int]]:
+    # Strength 30: #230 (16000 STR)
+    # Strength Training 30: #630 (630 STR ^)
+    # These I will allow any amount of
+    if lvl > 25:
+        main_enchantments = [630]
+    else:
+        main_enchantments = [230]
+
+    # First Strike: #66 (Can always attack first in battle)
+    # Double Strike: #67 (20% chance to attack twice)
+    # One Strike: #68 (Critical hit chance increases by 20%)
+    # Three Paths: #803 (50% chance for critical damage to be tripled)
+    # Seven Blessings: #807 (The probability of probability-based abilities is doubled)
+    # These can only be in a gear set once
+    side_enchantments = [66, 67, 68, 803, 807]
+
+    enchantments = list(combinations_with_replacement(main_enchantments, 9))
+    for i in range(1, min(len(side_enchantments), 10)):
+        enchantments += list(a + b for a, b in product(combinations_with_replacement(main_enchantments, 9 - i), combinations(side_enchantments, i)))
+
+    if print_stuff:
+        print(f'Number of enchantment combinations: {len(enchantments)}')
+
+    lineup_updated = []
+    for enchant in enchantments:
+        for player in lineup:
+            lineup_updated.append([player[0]] + list(enchant[0:3]) + [player[4]] + list(enchant[3:6]) + [player[8]] + list(enchant[6:9]))
+    return lineup_updated
 
 
 def generate_all_items_levels_lineup() -> None:
     for lvl in range(11):
-        run_lineup(create_all_items_lineup([], max(1, lvl * 5)), lvl)
+        lineup = create_all_items_lineup([], False)
+        final_lineup = []
+        for keys in lineup:
+            final_lineup.append(create_leveled_player(max(1, lvl * 5), keys))
+        run_lineup(final_lineup, lvl)
 
 
-def run_lineup(lineup: list[Player], lvl: int):
+def run_lineup(lineup: list[Player], lvl: int, print_stuff: bool):
     record = []
     fights = 0
     total_fights = floor((len(lineup) * (len(lineup) + 1)) / 2)
@@ -697,30 +740,31 @@ def run_lineup(lineup: list[Player], lvl: int):
                 record[id_a][TIE] += 1
                 record[id_b][TIE] += 1
             fights += 1
-            if floor(fights / total_fights * 100) >= percent + 5:
+            if print_stuff and floor(fights / total_fights * 100) >= percent + 5:
                 percent = floor(fights / total_fights * 100)
                 print(f'Level {lvl} - {floor(fights / total_fights * 100):2}% - {fights} / {total_fights}')
         record[id_a][4] = record[id_a][WIN] * 3 + record[id_a][TIE]
     record.sort(key=rank_sort)
-    s_print(record, lineup, lvl)
+    return [record, lineup]
+
+
+def generate_attack_defense_mod(player: Player) -> list[float]:
+    # Double Strike: #67  (20% chance to attack twice)
+    double_strike = 67 in player.effects
+    # Seven Blessings: #807 (The probability of probability-based abilities is doubled)
+    seven_blessings = 1 + (807 in player.effects)
+    # Three Paths: #803 (50% chance for critical damage to be *3)
+    # Crit is 5% for 2x attack damage
+    crit_damage = 1 + (0.5 * (803 in player.effects) * seven_blessings)
+    # One Strike: #68  (Critical hit chance increases by 20%)
+    crit_chance = 0.05 + (0.2 * (68 in player.effects) * seven_blessings)
+    attack = (1 + (crit_damage * crit_chance)) * (1 + (0.2 * double_strike * seven_blessings))
+    defense = 1 / (1 - (0.20 * (806 in player.effects) * seven_blessings))  # 1, 1.25, 1.66
+    return [attack, defense]
 
 
 def fight(attacker: Player, defender: Player, miasma: int = 5) -> list[int]:
     # First Strike:    #66  (Can always attack first in battle) -- This happens outside
-    # Double Strike:   #67  (20% chance to attack twice) -- Happens in fight loop
-    a_ds = 67 in attacker.effects
-    d_ds = 67 in defender.effects
-
-    # TODO - This needs tons of testing
-    #  This needs tons of testing
-    #  Does everyone double it or just once?
-    # Seven Blessings: #807 (The probability of probability-based abilities is doubled)
-    a_sb = 2 if 807 in attacker.effects else 1
-    d_sb = 2 if 807 in defender.effects else 1
-
-    # Three Paths: #803 (50% chance for critical damage to be tripled)
-    a_tp = (6 if 807 in attacker.effects else 4) if 803 in attacker.effects else 2
-    d_tp = (6 if 807 in defender.effects else 4) if 803 in defender.effects else 2
 
     # Poison  941 TODO
 
@@ -729,19 +773,13 @@ def fight(attacker: Player, defender: Player, miasma: int = 5) -> list[int]:
     d_unyielding = 961 in defender.effects
     # I don't give the auto crit just keep the chance stuff
 
-    # Crit is 5% for 2x attack damage (aka after defense)
-    # One Strike: #68  (Critical hit chance increases by 20%)
-    a_crit_mod = 1 + ((a_tp - 1) * (0.05 + (0.2 * 68 in attacker.effects * a_sb)))
-    d_crit_mod = 1 + ((d_tp - 1) * (0.05 + (0.2 * 68 in defender.effects * d_sb)))
-
-    # Sixth Sense: #806 (20% chance to dodge an attack)
-    a_ss = 0.8 if 806 in attacker.effects else 1
-    d_ss = 0.8 if 806 in defender.effects else 1
+    a_mod = generate_attack_defense_mod(attacker)
+    d_mod = generate_attack_defense_mod(defender)
 
     a_hp = attacker.hp
-    a_damage = max(0, (attacker.str * d_ss) - defender.vit) * a_crit_mod
+    a_damage = max(0, (attacker.attack * a_mod[0]) - (defender.defense * d_mod[1]))
     d_hp = defender.hp
-    d_damage = max(0, (defender.str * a_ss) - attacker.vit) * d_crit_mod
+    d_damage = max(0, (defender.attack * d_mod[0]) - (attacker.defense * a_mod[1]))
 
     if a_damage == 0 and d_damage == 0:
         return [0, 0]
@@ -753,13 +791,6 @@ def fight(attacker: Player, defender: Player, miasma: int = 5) -> list[int]:
                 return [1, 0]
             d_unyielding = False
             d_hp = 1
-        if a_ds:
-            d_hp -= (a_damage + (random.randint(0, 5) * miasma)) * 0.2
-            if d_hp < 1:
-                if not d_unyielding:
-                    return [1, 0]
-                d_unyielding = False
-                d_hp = 1
 
         a_hp -= d_damage + (random.randint(0, 5) * miasma)
         if a_hp < 1:
@@ -767,13 +798,6 @@ def fight(attacker: Player, defender: Player, miasma: int = 5) -> list[int]:
                 return [0, 1]
             a_unyielding = False
             a_hp = 1
-        if d_ds:
-            a_hp -= (d_damage + (random.randint(0, 5) * miasma)) * 0.2
-            if a_hp < 1:
-                if not a_unyielding:
-                    return [0, 1]
-                a_unyielding = False
-                a_hp = 1
 
 
 def rank_sort(e: list[int]) -> int:
@@ -781,11 +805,11 @@ def rank_sort(e: list[int]) -> int:
 
 
 def str_sort(e: Player) -> int:
-    return e.str
+    return e.attack * generate_attack_defense_mod(e)[0]
 
 
-def s_print(records: list, lineup: list, lvl: int) -> None:
-    f = open(f'Level {lvl} Results.txt', "w")
+def s_print(records: list, lineup: list, lvl: int, name: str) -> None:
+    f = open(f'{name} Level {lvl} Results.txt', "w")
     # print("Rank #: Player # - [Win, Tie, Lose]")
     for i in range(len(records)):
         # print(f"Rank {records[i][4]:03}: {records[i][3]:03} - [{records[i][WIN]:03}, {records[i][TIE]:02}, {records[i][LOSE]:03}] - {lineup[records[i][3]].print_stuff()}")
@@ -817,35 +841,52 @@ def run_custom_setups():
         [171, 130, 130, 230, 244, 230, 230, 230, 303, 330, 330, 67],
         [171, 130, 130, 230, 244, 230, 230, 230, 303, 230, 66, 67]
     ]
+    setups = [
+        # [172, 230, 230, 230, 252, 630, 630, 630, 314, 230, 230, 0],
+        [188, 66, 67, 68, 226, 807, 630, 630, 322, 630, 630, 630],
+        [172, 66, 67, 68, 252, 803, 807, 630, 314, 630, 630, 630]
+    ]
 
     # Custom Equips
     for keys in setups:
-        w_key = keys[0]
-        w_custom = keys[1:4]
-        a_key = keys[4]
-        a_custom = keys[5:8]
-        r_key = keys[8]
-        r_custom = keys[9:]
-        lineup.append(create_leveled_player(1, w_key, a_key, r_key, w_custom, a_custom, r_custom))
-    run_lineup(lineup, 1)
+        lineup.append(create_leveled_player(50, keys))
+    lineup.sort(key=str_sort)
+    for player in lineup:
+        print(player.print_stuff())
 
 
 def main() -> None:
+    # run_custom_setups()
+
     # Best items for strength
-    for lvl in range(11):
-        lineup = create_all_items_lineup([], max(1, lvl * 5))
-        lineup.sort(key=str_sort)
-        print(f"Best {max(1, lvl * 5)}: {lineup[-1].print_stuff()}")
+    # for lvl in range(11):
+    #     lineup = create_all_items_lineup([], not lvl)
+    #     lineup = add_str_enchantments(lineup, max(1, lvl * 5), not lvl)
+    #     final_lineup = []
+    #     for keys in lineup:
+    #         final_lineup.append(create_leveled_player(max(1, lvl * 5), keys))
+    #     final_lineup.sort(key=str_sort)
+    #     print(f"Best {max(1, lvl * 5)}: {final_lineup[-1].print_stuff()}")
+    #     best_equips_strength[f'{max(1, lvl * 5)}'] = final_lineup[-1]
 
     # Best items overall
     for lvl in range(11):
-        lineup = create_all_items_lineup([], max(1, lvl * 5))
-        run_lineup(lineup, max(1, lvl * 5))
+        lineup = create_all_items_lineup([], not lvl)
+        final_lineup = []
+        for keys in lineup:
+            final_lineup.append(create_leveled_player(max(1, lvl * 5), keys))
+        record, lineup = run_lineup(final_lineup, max(1, lvl * 5), True)
+        s_print(record, lineup, max(1, lvl * 5), 'combination')
+        best_equips_normal[f'{max(1, lvl * 5)}'] = [lineup[-1].weapon.id, 0, 0, 0, lineup[-1].armor.id, 0, 0, 0, lineup[-1].ring.id, 0, 0, 0]
 
     # Best Enchantments for Best Items
-    # for lvl in range(11):
-    #     lineup = create_all_enchantments_lineup([], max(1, lvl * 5), best_equips_normal)
-    #     run_lineup(lineup, max(1, lvl * 5))
+    for lvl in range(11):
+        lineup = add_all_enchantments([best_equips_normal[f'{max(1, lvl * 5)}']], max(1, lvl * 5), False)
+        final_lineup = []
+        for keys in lineup:
+            final_lineup.append(create_leveled_player(max(1, lvl * 5), keys))
+        record, lineup = run_lineup(final_lineup, max(1, lvl * 5), True)
+        s_print(record, lineup, max(1, lvl * 5), 'enchantment')
 
 
 make_lists()
