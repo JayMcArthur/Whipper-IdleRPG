@@ -4,7 +4,6 @@ import random
 import json
 from multiprocessing import Pool, shared_memory
 import numpy as np
-import pickle
 
 monster_list = {}
 equip_list = {}
@@ -14,7 +13,7 @@ level_list = {}
 
 UPGRADE_MAX = 20000
 ANALYSIS_MAX = 15
-MIASMA_MAX = 999
+CORROSION_MAX = 999
 MIASMA_APPLES = 99
 
 # This was made using the results from generate_all_items_levels_stats
@@ -33,6 +32,7 @@ best_equips_normal = {
     "45": [182, 244, 323],
     "50": [175, 246, 323]
 }
+# Updated to V63
 best_equips_strength = {
     "1": [188, 230, 230, 230, 226, 230, 230, 230, 322, 67, 68, 807],
     "5": [188, 230, 230, 230, 226, 230, 230, 230, 322, 67, 68, 807],
@@ -271,12 +271,13 @@ TIE = 2
 
 
 class Stats:
-    def __init__(self):
-        self.hp = 1
-        self.str = 1
-        self.vit = 1
-        self.spd = 1
-        self.luk = 1
+    def __init__(self, default: int = 0):
+        self.hp = default
+        self.str = default
+        self.vit = default
+        self.spd = default
+        self.luk = default
+        self.default = default
 
     def string_to_stat(self, stat: str, amount: int | float):
         if stat == "HP":
@@ -299,331 +300,330 @@ class Stats:
         self.spd += amount
         self.luk += amount
 
+    def reset(self):
+        self.hp = self.default
+        self.str = self.default
+        self.vit = self.default
+        self.spd = self.default
+        self.luk = self.default
+
 
 class Item:
     def __init__(self, identifier):
         self.id = identifier
-        self.boost = 1
+        self._type = equip_list[identifier]['itemType']
+        if self._type == 1:
+            self._specialized = None
+            self.attack_kind = equip_list[identifier]['attackKind']
+        else:
+            self._specialized = equip_list[identifier]["specialized"]
+            self.attack_kind = ''
+        self.param = equip_list[identifier]["param"]
         self.upgrade = 0
-        self.upgrade_max = equip_list[identifier]["maxLv"]
         self.upgrade_boost = 1
-        self.miasma = 0
-        self.miasma_boost = 1
-        self.custom1 = 0
-        self.custom2 = 0
-        self.custom3 = 0
+        self._upgrade_max = equip_list[identifier]["maxLv"]
+        self.boost = 1
+        self.corrosion = 0
+        self.corrosion_boost = 1
+        self._enchant1 = 0
+        self._enchant2 = 0
+        self._enchant3 = 0
         # Used for real stats
         self.stats = Stats()
-        self.mult = Stats()
+        self.stats.hp = equip_list[identifier]["hp"]
+        self.stats.str = equip_list[identifier]["atk"]
+        self.stats.vit = equip_list[identifier]["def"]
+        self.up = Stats()
+        self.up.hp = equip_list[identifier]["lvHp"]
+        self.up.str = equip_list[identifier]["lvAtk"]
+        self.up.vit = equip_list[identifier]["lvDef"]
+        self.mult = Stats(1)
         self.effects = []
+
+    def apply_analysis_weapon(self, analysis: int, has_set: bool):
+        if analysis >= 5:
+            self._upgrade_max += 100
+        if analysis >= 6 and self.corrosion >= 50:
+            self.boost += 0.3
+        if analysis >= 7 and self.corrosion >= 100:
+            self._upgrade_max += 1000
+        if analysis >= 8 and self.corrosion >= 150:
+            self.upgrade_boost *= 2
+        if analysis >= 9 and self.corrosion >= 200 and has_set:
+            self.mult.str += 0.5
+        if analysis >= 10 and self.corrosion >= 250:
+            self.corrosion_boost *= 2
+        if analysis >= 11 and self.corrosion >= 300:
+            self._upgrade_max += 2000
+        if analysis >= 12 and self.corrosion >= 350:
+            self.upgrade_boost *= 2
+        if analysis >= 13 and self.corrosion >= 400 and has_set:
+            self.mult.str += 0.5
+        if analysis >= 14 and self.corrosion >= 450:
+            self._upgrade_max += 3000
+        if analysis >= 15 and self.corrosion >= 500:
+            self.corrosion_boost *= 2
+
+    def apply_analysis_armor(self, analysis: int):
+        if analysis >= 5:
+            self._upgrade_max += 100
+        if analysis >= 6 and self.corrosion >= 50:
+            self.mult.string_to_stat(self._specialized, 0.1)
+        if analysis >= 7 and self.corrosion >= 100:
+            self._upgrade_max += 1000
+        if analysis >= 8 and self.corrosion >= 150:
+            self.upgrade_boost *= 2
+        if analysis >= 9 and self.corrosion >= 200:
+            self.boost = 1.3
+        if analysis >= 10 and self.corrosion >= 250:
+            self.corrosion_boost *= 2
+        if analysis >= 11 and self.corrosion >= 300:
+            self._upgrade_max += 2000
+        if analysis >= 12 and self.corrosion >= 350:
+            self.upgrade_boost *= 2
+        if analysis >= 13 and self.corrosion >= 400:
+            self.mult.hp += 0.3
+        if analysis >= 14 and self.corrosion >= 450:
+            self._upgrade_max += 3000
+        if analysis >= 15 and self.corrosion >= 500:
+            self.corrosion_boost *= 2
+
+    def apply_analysis_ring(self, analysis: int, attack_kind: str, has_set: bool):
+        if analysis >= 5:
+            self.mult.string_to_stat(self._specialized, 0.1)
+        if analysis >= 6 and self.corrosion >= 50:
+            self.mult.all_stats(0.1)
+        if analysis >= 7 and self.corrosion >= 100:
+            match equip_list[self.id]["ability"]:
+                # First Strike
+                case 66:
+                    self.effects.append(66)
+                # Double Strike
+                case 67:
+                    self.effects.append(67)
+                # One Strike
+                case 68:
+                    self.effects.append(68)
+                # Slashing Mastery
+                case 901:
+                    if attack_kind == "Slashing":
+                        self.mult.str += 0.3
+                # Bludgeoning Mastery
+                case 911:
+                    if attack_kind == "Bludgeoning":
+                        self.mult.str += 0.3
+                # Piercing Mastery
+                case 921:
+                    if attack_kind == "Piercing":
+                        self.mult.str += 0.3
+                # Projectile Mastery
+                case 931:
+                    if attack_kind == "Projectile":
+                        self.mult.str += 0.3
+                # Poison
+                case 941:
+                    self.effects.append(941)
+                # Solitude
+                case 951:
+                    if not has_set:
+                        self.mult.all_stats(0.1)
+                # Unyielding
+                case 961:
+                    self.effects.append(961)
+                # HP Boost
+                case 2103:
+                    self.mult.hp += 0.3
+                # SPD Boost
+                case 2403:
+                    self.mult.spd += 0.3
+                case _:
+                    print(f"Invalid ability Effect: {equip_list[self.id]['ability']}")
+        if analysis >= 8 and self.corrosion >= 150:
+            self.mult.string_to_stat(self._specialized, 0.2)
+        if analysis >= 9 and self.corrosion >= 200:
+            self.mult.all_stats(0.2)
+        # analysis 10 >= More likely to find better enchants
+        if analysis >= 11 and self.corrosion >= 300:
+            self.mult.string_to_stat(self._specialized, 0.3)
+        if analysis >= 12 and self.corrosion >= 350:
+            self.mult.all_stats(0.3)
+        if analysis >= 13 and self.corrosion >= 400:
+            match equip_list[self.id]["next"]:
+                # Three Paths (Crit Damage)
+                case 803:
+                    self.effects.append(803)
+                # Four Leaves (Double Drops)
+                case 804:
+                    self.effects.append(804)
+                # Five Lights (Double XP)
+                case 805:
+                    self.effects.append(805)
+                # Sixth Sense (Dodge Attack)
+                case 806:
+                    self.effects.append(806)
+                # Seven Blessings (Probability Increase)
+                case 807:
+                    self.effects.append(807)
+                # Slashing Mastery
+                case 901:
+                    if attack_kind == "Slashing":
+                        self.mult.str += 0.3
+                # Bludgeoning Mastery
+                case 911:
+                    if attack_kind == "Bludgeoning":
+                        self.mult.str += 0.3
+                # Piercing Mastery
+                case 921:
+                    if attack_kind == "Piercing":
+                        self.mult.str += 0.3
+                # Projectile Mastery
+                case 931:
+                    if attack_kind == "Projectile":
+                        self.mult.str += 0.3
+                # Solitude
+                case 951:
+                    if not has_set:
+                        self.mult.all_stats(0.1)
+                # HP Boost
+                case 2103:
+                    self.mult.hp += 0.3
+                case _:
+                    print(f"Invalid Next Effect: {equip_list[self.id]['next']}")
+        if analysis >= 14 and self.corrosion >= 450:
+            self.mult.string_to_stat(self._specialized, 0.4)
+        # analysis 15 >= More likely to find better enchants
+
+    def apply_upgrade(self, amount: int):
+        self.upgrade = min(amount, self._upgrade_max)
+
+    def apply_enchantment(self, enchants: list[int]):
+        self._enchant1 = enchants[0]
+        self._enchant2 = enchants[1]
+        self._enchant3 = enchants[2]
+        for check in enchants:
+            match check:
+                case 0:
+                    continue
+                case 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 55 | 56 | 111 | 112 | 113 | 114 | 115 | 116 | 117 | 118 | 119 | 120 | 121 | 122 | 123 | 124 | 125 | 126 | 127 | 128 | 129 | 130:
+                    self.stats.hp += custom_list[check]["value"]  # Endurance
+                case 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 57 | 58 | 211 | 212 | 213 | 214 | 215 | 216 | 217 | 218 | 219 | 220 | 221 | 222 | 223 | 224 | 225 | 226 | 227 | 228 | 229 | 230:
+                    self.stats.str += custom_list[check]["value"]  # Strength
+                case 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 59 | 60 | 311 | 312 | 313 | 314 | 315 | 316 | 317 | 318 | 319 | 320 | 321 | 322 | 323 | 324 | 325 | 326 | 327 | 328 | 329 | 330:
+                    self.stats.vit += custom_list[check]["value"]  # Sturdy
+                case 25 | 26 | 27 | 61 | 62 | 63 | 64 | 65 | 409 | 410 | 411 | 412 | 413 | 414 | 415 | 416 | 417 | 418 | 419 | 420:
+                    self.stats.spd += custom_list[check]["value"]  # Agility
+                case 28 | 29 | 30:
+                    self.stats.luk += custom_list[check]["value"]  # Lucky
+                case 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 609 | 610 | 611 | 612 | 613 | 614 | 615 | 616 | 617 | 618 | 619 | 620 | 621 | 622 | 623 | 624 | 625 | 626 | 627 | 628 | 629 | 630:
+                    self.up.str += custom_list[check]["value"]  # Strength Training
+                case 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 709 | 710 | 711 | 712 | 713 | 714 | 715 | 716 | 717 | 718 | 719 | 720 | 721 | 722 | 723 | 724 | 725 | 726 | 727 | 728 | 729 | 730:
+                    self.up.vit += custom_list[check]["value"]  # Defense Training
+                case 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 509 | 510 | 511 | 512 | 513 | 514 | 515 | 516 | 517 | 518 | 519 | 520 | 521 | 522 | 523 | 524 | 525 | 526 | 527 | 528 | 529 | 530:
+                    self.up.hp += custom_list[check]["value"]  # Endurance Training
+                case 66 | 67 | 68 | 803 | 806 | 807:
+                    # First Strike, Double Strike, One Strike, Three Paths, Sixth Sense, Seven Blessings
+                    self.effects.append(check)
+                case _:
+                    print(f'Custom Effect {check} not found')
+
+    def print(self):
+        return f'{equip_list[self.id]["nameId_EN"]}({self.id})[{self._enchant1}, {self._enchant2}, {self._enchant3}]'
 
 
 class Player(Stats):
-    def __init__(self, weapon: Item, armor: Item, ring: Item):
+    def __init__(self):
         super().__init__()
-        self.weapon = weapon
-        self.armor = armor
-        self.ring = ring
-        self.effects = []
-        self.attack = 0
-        self.defense = 0
-        self.id = 0
+        self._has_set: bool = False
+        self._attack_kind = ''
+        self.weapon: Item | None = None
+        self.armor: Item | None = None
+        self.ring: Item | None = None
+        self.effects: list[int] = []
+        self.attack: int = 0
+        self.defense: int = 0
+        self.id: int = 0
+        self.lvl: int = 1
 
-    def print_stuff(self):
+    def apply_corrosion(self, amount: list[int]):
+        self.weapon.corrosion = amount[0]
+        self.armor.corrosion = amount[1]
+        self.ring.corrosion = amount[2]
+
+    def apply_analysis(self, amount: list[int]):
+        self.weapon.apply_analysis_weapon(amount[0], self._has_set)
+        self.armor.apply_analysis_armor(amount[1])
+        self.ring.apply_analysis_ring(amount[2], self.weapon.attack_kind, self._has_set)
+
+    def apply_upgrade(self, amount: list[int]):
+        self.weapon.apply_upgrade(amount[0])
+        self.armor.apply_upgrade(amount[1])
+        self.ring.apply_upgrade(amount[2])
+
+    def apply_enchantment(self, w_enchant: list[int], a_enchant: list[int], r_enchant: list[int],):
+        self.weapon.apply_enchantment(w_enchant)
+        self.armor.apply_enchantment(a_enchant)
+        self.ring.apply_enchantment(r_enchant)
+
+    def add_items(self, weapon: list[int], armor: list[int], ring: list[int], corrosion: list[int], analysis: list[int], upgrade: list[int]):
+        self.weapon = Item(weapon[0])
+        self.armor = Item(armor[0])
+        self.ring = Item(ring[0])
+        self._has_set = equip_list[weapon[0]]["set_EN"] in [equip_list[armor[0]]["nameId_EN"], equip_list[ring[0]]["nameId_EN"]]
+        self.apply_corrosion(corrosion)
+        self.apply_analysis(analysis)
+        self.apply_upgrade(upgrade)
+        self.apply_enchantment(weapon[1:], armor[1:], ring[1:])
+        self.effects += self.weapon.effects + self.armor.effects + self.ring.effects
+
+    def convert_monster(self, monster_id: int, miasma: int = 5):
+        # TODO miasma's affect isn't correct
+        self.hp = monster_list[monster_id]['hp'] * miasma
+        self.attack = monster_list[monster_id]['atk'] * miasma
+        self.defense = monster_list[monster_id]['def'] * miasma
+        self.spd = monster_list[monster_id]['spd'] * miasma
+
+    def print(self):
         mods = generate_attack_defense_mod(self)
         return (f'HP: {self.hp}, STR: {self.str}, VIT: {self.vit}, SPD: {self.spd}, LUK: {self.luk}, '
                 f'Attack: {self.attack}, Defense: {self.defense}, '
                 f'A Scaled: {floor(self.attack * mods[0])}, D Scaled: {floor(self.defense * mods[1])}, '
-                f'[{equip_list[self.weapon.id]["nameId_EN"]}({self.weapon.id}) [{self.weapon.custom1}, {self.weapon.custom2}, {self.weapon.custom3}], '
-                f'{equip_list[self.armor.id]["nameId_EN"]}({self.armor.id}) [{self.armor.custom1}, {self.armor.custom2}, {self.armor.custom3}], '
-                f'{equip_list[self.ring.id]["nameId_EN"]}({self.ring.id}) [{self.ring.custom1}, {self.ring.custom2}, {self.ring.custom3}]]')
+                f'[{self.weapon.print()}, '
+                f'{self.armor.print()}, '
+                f'{self.ring.print()}]')
+
+    def apply_level(self, level: int):
+        # Get Base stats
+        self.hp = 30 + self.weapon.stats.hp + self.armor.stats.hp + self.ring.stats.hp
+        self.str = 10 + self.weapon.stats.str + self.armor.stats.str + self.ring.stats.str
+        self.vit = 10 + self.weapon.stats.vit + self.armor.stats.vit + self.ring.stats.vit
+        self.spd = 1 + self.weapon.stats.spd + self.armor.stats.spd + self.ring.stats.spd
+        self.luk = 1 + self.weapon.stats.luk + self.armor.stats.luk + self.ring.stats.luk + MIASMA_APPLES
+        # Get Lvl up stats
+        self.hp += (10 + self.weapon.up.hp + self.armor.up.hp + self.ring.up.hp) * (level - 1)
+        self.str += (1 + self.weapon.up.str + self.armor.up.str + self.ring.up.str) * (level - 1)
+        self.vit += (1 + self.weapon.up.vit + self.armor.up.vit + self.ring.up.vit) * (level - 1)
+        # Do Multiplier
+        self.hp *= self.weapon.mult.hp + self.armor.mult.hp + self.ring.mult.hp - 2
+        self.str *= self.weapon.mult.str + self.armor.mult.str + self.ring.mult.str - 2
+        self.vit *= self.weapon.mult.vit + self.armor.mult.vit + self.ring.mult.vit - 2
+        self.spd *= self.weapon.mult.spd + self.armor.mult.spd + self.ring.mult.spd - 2
+        self.luk *= self.weapon.mult.luk + self.armor.mult.luk + self.ring.mult.luk - 2
+        # Floor values
+        self.hp = floor(self.hp)
+        self.str = floor(self.str)
+        self.vit = floor(self.vit)
+        self.spd = floor(self.spd)
+        self.luk = floor(self.luk)
+        # Add Weapon
+        self.attack = self.str + (((self.weapon.upgrade * self.weapon.upgrade_boost) + (self.weapon.corrosion * 10 * self.weapon.corrosion_boost) + self.weapon.param) * self.weapon.boost)
+        # Add Armor
+        self.defense = self.vit + ((self.armor.upgrade * self.armor.upgrade_boost + self.armor.corrosion * 10 * self.armor.corrosion_boost + self.armor.param) * self.armor.boost)
+        # Floor values
+        self.attack = floor(self.attack)
+        self.defense = floor(self.defense)
 
 
-def find_set(equip_ids: list):
-    weapon, armor, ring = equip_ids
-    names = [equip_list[armor]["nameId_EN"], equip_list[ring]["nameId_EN"]]
-    return equip_list[weapon]["set_EN"] in names
-
-
-def apply_upgrade(item: Item, upgrade: int) -> Item:
-    item.upgrade = min(upgrade, item.upgrade_max)
-    return item
-
-
-def apply_level(item: Item, level: int) -> Item:
-    item.stats.hp = equip_list[item.id]["results"]["hp"][level - 1]
-    item.stats.str = equip_list[item.id]["results"]["str"][level - 1]
-    item.stats.vit = equip_list[item.id]["results"]["vit"][level - 1]
-    item.stats.spd = 0
-    item.stats.luk = 0
-    return item
-
-
-def apply_analysis(item: Item, analysis: int, equip_ids: list) -> Item:
-    if equip_list[item.id]['itemType'] == 1:
-        if analysis >= 5:
-            item.upgrade_max += 100
-        if analysis >= 6 and item.miasma >= 50:
-            item.boost = 1.3
-        if analysis >= 7 and item.miasma >= 100:
-            item.upgrade_max += 1000
-        if analysis >= 8 and item.miasma >= 150:
-            item.upgrade_boost *= 2
-        if analysis >= 9 and item.miasma >= 200 and find_set(equip_ids):
-            item.mult.str += 0.5
-        if analysis >= 10 and item.miasma >= 250:
-            item.miasma_boost *= 2
-        if analysis >= 11 and item.miasma >= 300:
-            item.upgrade_max += 2000
-        if analysis >= 12 and item.miasma >= 350:
-            item.upgrade_boost *= 2
-        if analysis >= 13 and item.miasma >= 400 and find_set(equip_ids):
-            item.mult.str += 0.5
-        if analysis >= 14 and item.miasma >= 450:
-            item.upgrade_max += 3000
-        if analysis >= 15 and item.miasma >= 500:
-            item.miasma_boost *= 2
-
-    elif equip_list[item.id]['itemType'] == 2:
-        if analysis >= 5:
-            item.upgrade_max += 100
-        if analysis >= 6 and item.miasma >= 50:
-            item.mult.string_to_stat(equip_list[item.id]["specialized"], 0.1)
-        if analysis >= 7 and item.miasma >= 100:
-            item.upgrade_max += 1000
-        if analysis >= 8 and item.miasma >= 150:
-            item.upgrade_boost *= 2
-        if analysis >= 9 and item.miasma >= 200:
-            item.boost = 1.3
-        if analysis >= 10 and item.miasma >= 250:
-            item.miasma_boost *= 2
-        if analysis >= 11 and item.miasma >= 300:
-            item.upgrade_max += 2000
-        if analysis >= 12 and item.miasma >= 350:
-            item.upgrade_boost *= 2
-        if analysis >= 13 and item.miasma >= 400:
-            item.mult.hp += 0.3
-        if analysis >= 14 and item.miasma >= 450:
-            item.upgrade_max += 3000
-        if analysis >= 15 and item.miasma >= 500:
-            item.miasma_boost *= 2
-
-    elif equip_list[item.id]['itemType'] == 3:
-        if analysis >= 5:
-            item.mult.string_to_stat(equip_list[item.id]["specialized"], 0.1)
-        if analysis >= 6 and item.miasma >= 50:
-            item.mult.all_stats(0.1)
-        if analysis >= 7 and item.miasma >= 100:
-            # First Strike
-            if equip_list[item.id]["ability"] == 66:
-                item.effects.append(66)
-            # Double Strike
-            elif equip_list[item.id]["ability"] == 67:
-                item.effects.append(67)
-            # One Strike
-            elif equip_list[item.id]["ability"] == 68:
-                item.effects.append(68)
-            # Slashing Mastery
-            elif equip_list[item.id]["ability"] == 901:
-                if equip_list[equip_ids[0]]["attackKind"] == "Slashing":
-                    item.mult.str += 0.3
-            # Bludgeoning Mastery
-            elif equip_list[item.id]["ability"] == 911:
-                if equip_list[equip_ids[0]]["attackKind"] == "Bludgeoning":
-                    item.mult.str += 0.3
-            # Piercing Mastery
-            elif equip_list[item.id]["ability"] == 921:
-                if equip_list[equip_ids[0]]["attackKind"] == "Piercing":
-                    item.mult.str += 0.3
-            # Projectile Mastery
-            elif equip_list[item.id]["ability"] == 931:
-                if equip_list[equip_ids[0]]["attackKind"] == "Projectile":
-                    item.mult.str += 0.3
-            # Poison
-            elif equip_list[item.id]["ability"] == 941:
-                item.effects.append(941)
-            # Solitude
-            elif equip_list[item.id]["ability"] == 951:
-                if not find_set(equip_ids):
-                    item.mult.all_stats(0.1)
-            # Unyielding
-            elif equip_list[item.id]["ability"] == 961:
-                item.effects.append(961)
-            # HP Boost
-            elif equip_list[item.id]["ability"] == 2103:
-                item.mult.hp += 0.3
-            # SPD Boost
-            elif equip_list[item.id]["ability"] == 2403:
-                item.mult.spd += 0.3
-            else:
-                print(f"Invalid ability Effect: {equip_list[item.id]['ability']}")
-        if analysis >= 8 and item.miasma >= 150:
-            item.mult.string_to_stat(equip_list[item.id]["specialized"], 0.2)
-        if analysis >= 9 and item.miasma >= 200:
-            item.mult.all_stats(0.2)
-        # analysis 10 >= More likely to find better enchants
-        if analysis >= 11 and item.miasma >= 300:
-            item.mult.string_to_stat(equip_list[item.id]["specialized"], 0.3)
-        if analysis >= 12 and item.miasma >= 350:
-            item.mult.all_stats(0.3)
-        if analysis >= 13 and item.miasma >= 400:
-            # Three Paths (Crit Damage)
-            if equip_list[item.id]["next"] == 803:
-                item.effects.append(803)
-            # Four Leaves (Double Drops)
-            elif equip_list[item.id]["next"] == 804:
-                item.effects.append(804)
-            # Five Lights (Double XP)
-            elif equip_list[item.id]["next"] == 805:
-                item.effects.append(805)
-            # Sixth Sense (Dodge Attack)
-            elif equip_list[item.id]["next"] == 806:
-                item.effects.append(806)
-            # Seven Blessings (Probability Increase)
-            elif equip_list[item.id]["next"] == 807:
-                item.effects.append(807)
-            # Slashing Mastery
-            elif equip_list[item.id]["next"] == 901:
-                if equip_list[equip_ids[0]]["attackKind"] == "Slashing":
-                    item.mult.str += 0.3
-            # Bludgeoning Mastery
-            elif equip_list[item.id]["next"] == 911:
-                if equip_list[equip_ids[0]]["attackKind"] == "Bludgeoning":
-                    item.mult.str += 0.3
-            # Piercing Mastery
-            elif equip_list[item.id]["next"] == 921:
-                if equip_list[equip_ids[0]]["attackKind"] == "Piercing":
-                    item.mult.str += 0.3
-            # Projectile Mastery
-            elif equip_list[item.id]["next"] == 931:
-                if equip_list[equip_ids[0]]["attackKind"] == "Projectile":
-                    item.mult.str += 0.3
-            # Solitude
-            elif equip_list[item.id]["next"] == 951:
-                if not find_set(equip_ids):
-                    item.mult.all_stats(0.1)
-            # HP Boost
-            elif equip_list[item.id]["next"] == 2103:
-                item.mult.hp += 0.3
-            else:
-                print(f"Invalid Next Effect: {equip_list[item.id]['next']}")
-        if analysis >= 14 and item.miasma >= 450:
-            item.mult.string_to_stat(equip_list[item.id]["specialized"], 0.4)
-        # analysis 15 >= More likely to find better enchants
-    return item
-
-
-def apply_custom(item: Item, level: int) -> Item:
-    checks = [item.custom1, item.custom2, item.custom3]
-    for check in checks:
-        if check == 0:
-            continue
-        if custom_list[check]["nameId_EN"] == "Endurance":
-            item.stats.hp += custom_list[check]["value"]
-        elif custom_list[check]["nameId_EN"] == "Strength":
-            item.stats.str += custom_list[check]["value"]
-        elif custom_list[check]["nameId_EN"] == "Sturdy":
-            item.stats.vit += custom_list[check]["value"]
-        elif custom_list[check]["nameId_EN"] == "Agility":
-            item.stats.spd += custom_list[check]["value"]
-        elif custom_list[check]["nameId_EN"] == "Lucky":
-            item.stats.luk += custom_list[check]["value"]
-        elif custom_list[check]["nameId_EN"] == "Endurance Training":
-            item.stats.hp += custom_list[check]["value"] * (level - 1)
-        elif custom_list[check]["nameId_EN"] == "Strength Training":
-            item.stats.str += custom_list[check]["value"] * (level - 1)
-        elif custom_list[check]["nameId_EN"] == "Defense Training":
-            item.stats.vit += custom_list[check]["value"] * (level - 1)
-        elif custom_list[check]["nameId_EN"] == "First Strike":
-            item.effects.append(66)
-        elif custom_list[check]["nameId_EN"] == "Double Strike":
-            item.effects.append(67)
-        elif custom_list[check]["nameId_EN"] == "One Strike":
-            item.effects.append(68)
-        elif custom_list[check]["nameId_EN"] == "Three Paths":
-            item.effects.append(803)
-        elif custom_list[check]["nameId_EN"] == "Sixth Sense":
-            item.effects.append(806)
-        elif custom_list[check]["nameId_EN"] == "Seven Blessings":
-            item.effects.append(807)
-        else:
-            print(f'Custom Effect {check} not found')
-    return item
-
-
-def update_stats(player: Player, weapon: Item, armor: Item, ring: Item, upgrade: list[int], level: int, analysis: list[int], miasma: list[int]):
-    ids = [weapon.id, armor.id, ring.id]
-    weapon.miasma = miasma[0]
-    armor.miasma = miasma[1]
-    ring.miasma = miasma[2]
-
-    # Apply Analysis
-    weapon = apply_analysis(weapon, analysis[0], ids)
-    armor = apply_analysis(armor, analysis[1], ids)
-    ring = apply_analysis(ring, analysis[2], ids)
-
-    # Apply Upgrades
-    weapon = apply_upgrade(weapon, upgrade[0])
-    armor = apply_upgrade(armor, upgrade[1])
-    # Apply Level
-    weapon = apply_level(weapon, level)
-    armor = apply_level(armor, level)
-    ring = apply_level(ring, level)
-
-    # Apply Custom
-    weapon = apply_custom(weapon, level)
-    armor = apply_custom(armor, level)
-    ring = apply_custom(ring, level)
-    # Get all effects
-    player.effects += weapon.effects + armor.effects + ring.effects
-    # Get stats
-    player.hp = 20 + 10 * level + weapon.stats.hp + armor.stats.hp + ring.stats.hp
-    player.str = 9 + 1 * level + weapon.stats.str + armor.stats.str + ring.stats.str
-    player.vit = 9 + 1 * level + weapon.stats.vit + armor.stats.vit + ring.stats.vit
-    player.spd = 1 * level + weapon.stats.spd + armor.stats.spd + ring.stats.spd
-    player.luk = 1 + weapon.stats.luk + armor.stats.luk + ring.stats.luk + MIASMA_APPLES
-    # Do Multiplier
-    player.hp *= weapon.mult.hp + armor.mult.hp + ring.mult.hp - 2
-    player.str *= weapon.mult.str + armor.mult.str + ring.mult.str - 2
-    player.vit *= weapon.mult.vit + armor.mult.vit + ring.mult.vit - 2
-    player.spd *= weapon.mult.spd + armor.mult.spd + ring.mult.spd - 2
-    player.luk *= weapon.mult.luk + armor.mult.luk + ring.mult.luk - 2
-    # Floor values
-    player.hp = floor(player.hp)
-    player.str = floor(player.str)
-    player.vit = floor(player.vit)
-    player.spd = floor(player.spd)
-    player.luk = floor(player.luk)
-    # Add Weapon
-    player.attack = player.str + ((weapon.upgrade * weapon.upgrade_boost + weapon.miasma * 10 * weapon.miasma_boost + equip_list[weapon.id]["param"]) * weapon.boost)
-    # Add Armor
-    player.defense = player.vit + ((armor.upgrade * armor.upgrade_boost + armor.miasma * 10 * armor.miasma_boost + equip_list[armor.id]["param"]) * armor.boost)
-
-    # Floor values
-    player.attack = floor(player.attack)
-    player.defense = floor(player.defense)
-
-    return player
-
-
-def create_leveled_player(lvl: int, keys: list) -> Player:
-    weapon = Item(keys[0])
-    weapon.custom1 = keys[1]
-    weapon.custom2 = keys[2]
-    weapon.custom3 = keys[3]
-    armor = Item(keys[4])
-    armor.custom1 = keys[5]
-    armor.custom2 = keys[6]
-    armor.custom3 = keys[7]
-    ring = Item(keys[8])
-    ring.custom1 = keys[9]
-    ring.custom2 = keys[10]
-    ring.custom3 = keys[11]
-    return update_stats(Player(weapon, armor, ring), weapon, armor, ring, [UPGRADE_MAX, UPGRADE_MAX], lvl, [ANALYSIS_MAX, ANALYSIS_MAX, ANALYSIS_MAX],
-                        [MIASMA_MAX, MIASMA_MAX, MIASMA_MAX])
-
-
-def create_all_items_lineup(lineup: list, print_stuff: bool) -> list[list[int]]:
+def create_all_items_keys(lineup: list, print_stuff: bool) -> None:
     # Every Combination
     for w_key in [x for x in list(equip_list.keys()) if x < 200]:
         for a_key in [y for y in list(equip_list.keys()) if 200 < y < 300]:
@@ -631,7 +631,6 @@ def create_all_items_lineup(lineup: list, print_stuff: bool) -> list[list[int]]:
                 lineup.append([w_key, 0, 0, 0, a_key, 0, 0, 0, r_key, 0, 0, 0])
     if print_stuff:
         print(f"Number of item combinations: {len(lineup)}")
-    return lineup
 
 
 def add_all_enchantments(lineup: list, lvl: int, print_stuff: bool) -> list[list[int]]:
@@ -704,23 +703,10 @@ def add_str_enchantments(lineup: list, lvl: int, print_stuff: bool) -> list[list
     return lineup_updated
 
 
-def generate_all_items_levels_lineup() -> None:
-    for lvl in range(11):
-        lineup = create_all_items_lineup([], False)
-        final_lineup = []
-        for keys in lineup:
-            final_lineup.append(create_leveled_player(max(1, lvl * 5), keys))
-        run_lineup(final_lineup, lvl, False)
-
-
-def run_lineup(lineup: list[Player], lvl: int, print_stuff: bool):
-    record = []
+def run_lineup(lineup: list[Player], record: list, lvl: int, print_stuff: bool) -> None:
     fights = 0
     total_fights = floor((len(lineup) * (len(lineup) + 1)) / 2)
     percent = 0
-    for i in range(len(lineup)):
-        # Win, Lose, Tie, ID, Rank
-        record.append([0, 0, 0, i, 0])
 
     for id_a, per_a in enumerate(lineup):
         for id_b, per_b in enumerate(lineup[id_a + 1::]):
@@ -749,7 +735,6 @@ def run_lineup(lineup: list[Player], lvl: int, print_stuff: bool):
                 print(f'Level {lvl} - {floor(fights / total_fights * 100):2}% - {fights} / {total_fights}')
         record[id_a][4] = (record[id_a][WIN] * 3) + record[id_a][TIE]
     record.sort(key=rank_sort)
-    return [record, lineup]
 
 
 def worker(arg):
@@ -757,43 +742,39 @@ def worker(arg):
 
     # Access shared memory
     existing_shm = shared_memory.SharedMemory(name=shm_name)
-    np_lineup = np.ndarray(shape, dtype=np.object, buffer=existing_shm.buf)
+    stats_array = np.ndarray(shape, dtype=np.int32, buffer=existing_shm.buf)
 
-    # Extract players from shared memory using indices
-    per_a = pickle.loads(np_lineup[idx_a])
-    per_b = pickle.loads(np_lineup[idx_b])
+    # Extract player stats
+    a_hp, a_attack, a_def, a_unyielding, a_spd, a_fs = stats_array[idx_a]
+    b_hp, b_attack, b_def, b_unyielding, b_spd, b_fs = stats_array[idx_b]
 
+    # (HP, ATK, DEF, Unyielding, SPD, First_Strike)
     # 66 - First Strike
-    if 66 not in per_b.effects and (66 in per_a.effects or per_a.spd > per_a.spd):
-        results = fight(per_a, per_b)
-    elif 66 not in per_a.effects and (66 in per_b.effects or per_b.spd > per_a.spd):
-        results = fight(per_b, per_a)[::-1]
+    if not b_fs and (a_fs or a_spd > b_spd):
+        results = fight_multiprocessing(a_hp, a_attack, a_def, a_unyielding, b_hp, b_attack, b_def, b_unyielding)
+    elif not a_fs and (b_fs or b_spd > a_spd):
+        results = fight_multiprocessing(b_hp, b_attack, b_def, b_unyielding, a_hp, a_attack, a_def, a_unyielding)[::-1]
     else:
-        results = [a + b for a, b in zip(fight(per_a, per_b), fight(per_b, per_a)[::-1])]
+        results = [a + b for a, b in zip(fight_multiprocessing(a_hp, a_attack, a_def, a_unyielding, b_hp, b_attack, b_def, b_unyielding), fight_multiprocessing(b_hp, b_attack, b_def, b_unyielding, a_hp, a_attack, a_def, a_unyielding)[::-1])]
     return [idx_a, idx_b, results]
 
 
-def run_lineup_multiprocessing(lineup: list[Player]):
-    # Initialize the record
-    # Win, Lose, Tie, ID, Rank
-    record = [[0, 0, 0, i, 0] for i in range(len(lineup))]
+def run_lineup_multiprocessing(lineup: list[Player], record: list) -> None:
+    # Calculate the size of the shared memory needed
+    shm = shared_memory.SharedMemory(create=True, size=len(lineup) * 6 * np.dtype(np.int32).itemsize)
+    stats_array = np.ndarray((len(lineup), 6), dtype=np.int32, buffer=shm.buf)
 
-
-    # Serialize the lineup
-    serialized_lineup = [pickle.dumps(player) for player in lineup]
-
-    # Convert to numpy array and place it in shared memory
-    np_lineup = np.array(serialized_lineup, dtype=object)
-    shm = shared_memory.SharedMemory(create=True, size=np_lineup.nbytes)
-    shared_lineup = np.ndarray(np_lineup.shape, dtype=object, buffer=shm.buf)
-    shared_lineup[:] = np_lineup[:]
+    # Create the NumPy array to hold player stats
+    for i, player in enumerate(lineup):
+        mods = generate_attack_defense_mod(player)
+        stats_array[i] = [player.hp, floor(player.attack * mods[0]), floor(player.defense * mods[1]), int(961 in player.effects), player.spd, int(66 in player.effects)]
 
     # Setup multiprocessing
     pool = Pool(4)
     index_combinations = combinations(range(len(lineup)), 2)
 
-    results = pool.map(worker, [(idx_a, idx_b, shm.name, np_lineup.shape) for idx_a, idx_b in index_combinations])
-
+    # Run fights
+    results = pool.map(worker, [(idx_a, idx_b, shm.name, stats_array.shape) for idx_a, idx_b in index_combinations])
     pool.close()
     pool.join()
 
@@ -817,10 +798,6 @@ def run_lineup_multiprocessing(lineup: list[Player]):
     for i in range(len(lineup)):
         record[i][4] = (record[i][WIN] * 3) + record[i][TIE]
     record.sort(key=rank_sort)  # Sort based on rank
-
-
-
-    return [record, lineup]
 
 
 def generate_attack_defense_mod(player: Player) -> list[float]:
@@ -875,7 +852,7 @@ def fight(attacker: Player, defender: Player, miasma: int = 5) -> list[int]:
             a_hp = 1
 
 
-def fight_multiprocessing(a_hp: int, a_attack: int, a_defense: int, a_unyielding, d_hp, d_attack: int, d_defense: int, d_unyielding: bool, miasma: int = 5) -> list[int]:
+def fight_multiprocessing(a_hp: int, a_attack: int, a_defense: int, a_unyielding: bool, d_hp: int, d_attack: int, d_defense: int, d_unyielding: bool, miasma: int = 5) -> list[int]:
     # First Strike:    #66  (Can always attack first in battle) -- This happens outside
     # Poison  941 TODO
     # Unyielding 961 (Stay at 1 HP once during an adventure and deliver a critical hit on the next attack)
@@ -919,7 +896,7 @@ def s_print(records: list, lineup: list, lvl: int, name: str) -> None:
     f.close()
 
 
-def run_custom_setups():
+def run_custom_setups(levels: list[int]):
     lineup = []
     setups = [
         [171, 130, 230, 230, 244, 230, 230, 330, 303, 330, 66, 806],
@@ -950,48 +927,103 @@ def run_custom_setups():
     ]
 
     # Custom Equips
+    final_lineup = []
     for keys in setups:
-        lineup.append(create_leveled_player(50, keys))
-    lineup.sort(key=str_sort)
-    for player in lineup:
-        print(player.print_stuff())
+        final_lineup.append(Player())
+        final_lineup[-1].add_items(keys[0:4], keys[4:8], keys[8:12], [CORROSION_MAX] * 3, [ANALYSIS_MAX] * 3, [UPGRADE_MAX] * 3)
+
+    for lvl in levels:
+        for i in range(len(final_lineup)):
+            final_lineup[i].apply_level(lvl)
+        # Initialize the record
+        # Win, Lose, Tie, ID, Rank
+        record = [[0, 0, 0, i, 0] for i in range(len(final_lineup))]
+        run_lineup(final_lineup, record, lvl, False)
+
+        s_print(record, lineup, max(1, lvl * 5), 'custom')
 
 
-def main() -> None:
-    # run_custom_setups()
+def main(run_custom: bool, run_str: bool, run_all: bool, run_enchant: bool) -> None:
+    if run_custom:
+        run_custom_setups([1, 50])
 
     # Best items for strength
-    # lineup = create_all_items_lineup([], True)
-    # for lvl in range(11):
-    #     lineup_enchanted = add_str_enchantments(lineup, max(1, lvl * 5), not lvl)
-    #     final_lineup = []
-    #     for keys in lineup_enchanted:
-    #         final_lineup.append(create_leveled_player(max(1, lvl * 5), keys))
-    #     final_lineup.sort(key=str_sort)
-    #     print(f"Best {max(1, lvl * 5)}: {final_lineup[-1].print_stuff()}")
-    #     print(f"2ns {max(1, lvl * 5)}: {final_lineup[-2].print_stuff()}")
-    #     print(f"3rd {max(1, lvl * 5)}: {final_lineup[-3].print_stuff()}")
+    if run_str:
+        lineup = []
+        create_all_items_keys(lineup, True)
+
+        # Initialize Players
+        final_lineup = []
+        lineup_enchanted = add_str_enchantments(lineup, 1, True)
+        for keys in lineup_enchanted:
+            final_lineup.append(Player())
+            final_lineup[-1].add_items(keys[0:4], keys[4:8], keys[8:12], [CORROSION_MAX] * 3, [ANALYSIS_MAX] * 3, [UPGRADE_MAX] * 3)
+
+        # Run level 1 - 25
+        for lvl in range(6):
+            for i in range(len(final_lineup)):
+                final_lineup[i].apply_level(max(1, lvl * 5))
+            final_lineup.sort(key=str_sort)
+            print(f"Best {max(1, lvl * 5)}: {final_lineup[-1].print()}")
+            print(f"_2nd {max(1, lvl * 5)}: {final_lineup[-2].print()}")
+            print(f"_3rd {max(1, lvl * 5)}: {final_lineup[-3].print()}")
+
+        # Initialize Players
+        lineup_enchanted = add_str_enchantments(lineup, 50, True)
+        final_lineup = []
+        for keys in lineup_enchanted:
+            final_lineup.append(Player())
+            final_lineup[-1].add_items(keys[0:4], keys[4:8], keys[8:12], [CORROSION_MAX] * 3, [ANALYSIS_MAX] * 3, [UPGRADE_MAX] * 3)
+
+        # Run level 30 - 50
+        for lvl in range(6, 11):
+            for i in range(len(final_lineup)):
+                final_lineup[i].apply_level(max(1, lvl * 5))
+            final_lineup.sort(key=str_sort)
+            print(f"Best {max(1, lvl * 5)}: {final_lineup[-1].print()}")
+            print(f"_2nd {max(1, lvl * 5)}: {final_lineup[-2].print()}")
+            print(f"_3rd {max(1, lvl * 5)}: {final_lineup[-3].print()}")
 
     # Best items overall
-    lineup = create_all_items_lineup([], True)
-    for lvl in range(11):
+    if run_all:
+        lineup = []
+        create_all_items_keys(lineup, True)
+
+        # Initialize Players
         final_lineup = []
         for keys in lineup:
-            final_lineup.append(create_leveled_player(max(1, lvl * 5), keys))
-        [record, results] = run_lineup_multiprocessing(final_lineup)
-        s_print(record, lineup, max(1, lvl * 5), 'combination')
-        best_equips_normal[f'{max(1, lvl * 5)}'] = [results[-1].weapon.id, 0, 0, 0, results[-1].armor.id, 0, 0, 0, results[-1].ring.id, 0, 0, 0]
+            final_lineup.append(Player())
+            final_lineup[-1].add_items(keys[0:4], keys[4:8], keys[8:12], [CORROSION_MAX] * 3, [ANALYSIS_MAX] * 3, [UPGRADE_MAX] * 3)
+
+        # Run Sims
+        for lvl in range(11):
+            for i in range(len(final_lineup)):
+                final_lineup[i].apply_level(max(1, lvl * 5))
+            # Initialize the record
+            # Win, Lose, Tie, ID, Rank
+            record = [[0, 0, 0, i, 0] for i in range(len(final_lineup))]
+            run_lineup_multiprocessing(final_lineup, record)  # This still is not faster and has memory errors
+            # run_lineup(final_lineup, results, max(1, lvl * 5), True)
+            s_print(record, final_lineup, max(1, lvl * 5), 'combination')
+            best_equips_normal[f'{max(1, lvl * 5)}'] = [final_lineup[-1].weapon.id, 0, 0, 0, final_lineup[-1].armor.id, 0, 0, 0, final_lineup[-1].ring.id, 0, 0, 0]
 
     # Best Enchantments for Best Items
-    for lvl in range(11):
-        lineup = add_all_enchantments([best_equips_normal[f'{max(1, lvl * 5)}']], max(1, lvl * 5), False)
-        final_lineup = []
-        for keys in lineup:
-            final_lineup.append(create_leveled_player(max(1, lvl * 5), keys))
-        record, lineup = run_lineup_multiprocessing(final_lineup)
-        s_print(record, lineup, max(1, lvl * 5), 'enchantment')
+    if run_enchant:
+        for lvl in range(11):
+            lineup = add_all_enchantments([best_equips_normal[f'{max(1, lvl * 5)}']], max(1, lvl * 5), False)
+            final_lineup = []
+            for keys in lineup:
+                final_lineup.append(Player())
+                final_lineup[-1].add_items(keys[0:4], keys[4:8], keys[8:12], [CORROSION_MAX] * 3, [ANALYSIS_MAX] * 3, [UPGRADE_MAX] * 3)
+                final_lineup[-1].apply_level(max(1, lvl * 5))
+            # Initialize the record
+            # Win, Lose, Tie, ID, Rank
+            record = [[0, 0, 0, i, 0] for i in range(len(final_lineup))]
+            run_lineup_multiprocessing(final_lineup, record)  # This still is not faster and has memory errors
+            # record, results = run_lineup(final_lineup, record, max(1, lvl * 5), True)
+            s_print(record, lineup, max(1, lvl * 5), 'enchantment')
 
 
 if __name__ == '__main__':
     make_lists()
-    main()
+    main(False, False, True, True)
