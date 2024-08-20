@@ -2,7 +2,7 @@ from math import floor, ceil
 from itertools import combinations_with_replacement, combinations, product
 import random
 import json
-from multiprocessing import Pool, shared_memory
+from multiprocessing import Pool, shared_memory, Lock
 import numpy as np
 
 monster_list = {}
@@ -16,21 +16,26 @@ ANALYSIS_MAX = 15
 CORROSION_MAX = 999
 MIASMA_APPLES = 99
 
+
+# Global lock for safe concurrent access to the record_g
+lock = Lock()
+record_g = []
+
 # This was made using the results from generate_all_items_levels_stats
 # We take the best of every result and store them here for enchant use
 # Enchants where processed and stored as notes
 best_equips_normal = {
-    "1": [171, 244, 303],
-    "5": [171, 244, 303],
-    "10": [171, 244, 303],
-    "15": [182, 244, 323],
-    "20": [182, 244, 323],
-    "25": [182, 244, 323],
-    "30": [182, 244, 323],
-    "35": [182, 244, 323],
-    "40": [182, 244, 323],
-    "45": [182, 244, 323],
-    "50": [175, 246, 323]
+    "1": [171, 0, 0, 0, 244, 0, 0, 0, 303, 0, 0, 0],
+    "5": [171, 0, 0, 0, 244, 0, 0, 0, 303, 0, 0, 0],
+    "10": [171, 0, 0, 0, 244, 0, 0, 0, 303, 0, 0, 0],
+    "15": [182, 0, 0, 0, 244, 0, 0, 0, 323, 0, 0, 0],
+    "20": [182, 0, 0, 0, 244, 0, 0, 0, 323, 0, 0, 0],
+    "25": [182, 0, 0, 0, 244, 0, 0, 0, 323, 0, 0, 0],
+    "30": [182, 0, 0, 0, 244, 0, 0, 0, 323, 0, 0, 0],
+    "35": [182, 0, 0, 0, 244, 0, 0, 0, 323, 0, 0, 0],
+    "40": [182, 0, 0, 0, 244, 0, 0, 0, 323, 0, 0, 0],
+    "45": [182, 0, 0, 0, 244, 0, 0, 0, 323, 0, 0, 0],
+    "50": [175, 0, 0, 0, 246, 0, 0, 0, 323, 0, 0, 0]
 }
 # Updated to V63
 best_equips_strength = {
@@ -125,7 +130,7 @@ def make_lists():
 
         for dungeon in data['dungeons']:
             if dungeon["id"] == 13:
-                continue  # Skip new dungeon that isn't finished
+                continue  # Skip Adam Dungeon
             dungeon["boss"] = True if dungeon["id"] in [7, 9, 10, 121, 122, 123] else False
             if dungeon["id"] == 7:
                 boss_id = 108
@@ -263,11 +268,6 @@ def exp_to_level(exp: int) -> int:
             return level
         required += 10
         level += 1
-
-
-WIN = 0
-LOSE = 1
-TIE = 2
 
 
 class Stats:
@@ -602,6 +602,7 @@ class Player(Stats):
         self.hp += (10 + self.weapon.up.hp + self.armor.up.hp + self.ring.up.hp) * (level - 1)
         self.str += (1 + self.weapon.up.str + self.armor.up.str + self.ring.up.str) * (level - 1)
         self.vit += (1 + self.weapon.up.vit + self.armor.up.vit + self.ring.up.vit) * (level - 1)
+        self.spd += (level - 1)
         # Do Multiplier
         self.hp *= self.weapon.mult.hp + self.armor.mult.hp + self.ring.mult.hp - 2
         self.str *= self.weapon.mult.str + self.armor.mult.str + self.ring.mult.str - 2
@@ -668,7 +669,7 @@ def add_all_enchantments(lineup: list, lvl: int, print_stuff: bool) -> list[list
     lineup_updated = []
     for enchant in enchantments:
         for player in lineup:
-            lineup_updated.append([player[0]] + list(enchant[0:3]) + player[4] + list(enchant[3:6]) + player[8] + list(enchant[6:9]))
+            lineup_updated.append([player[0]] + list(enchant[0:3]) + [player[4]] + list(enchant[3:6]) + [player[8]] + list(enchant[6:9]))
     return lineup_updated
 
 
@@ -714,26 +715,26 @@ def run_lineup(lineup: list[Player], record: list, lvl: int, print_stuff: bool) 
 
             # 66 - First Strike
             if 66 not in per_b.effects and (66 in per_a.effects or per_a.spd > per_a.spd):
-                results = fight(per_a, per_b)
+                results = fight(per_a, per_b, True)
             elif 66 not in per_a.effects and (66 in per_b.effects or per_b.spd > per_a.spd):
-                results = fight(per_b, per_a)[::-1]
+                results = fight(per_b, per_a, True)[::-1]
             else:
-                results = [a + b for a, b in zip(fight(per_a, per_b), fight(per_b, per_a)[::-1])]
+                results = [a + b for a, b in zip(fight(per_a, per_b, True), fight(per_b, per_a, True)[::-1])]
 
             if results[0] > 0 and results[1] == 0:
-                record[id_a][WIN] += 1
-                record[id_b][LOSE] += 1
+                record[id_a][0] += 1
+                record[id_b][1] += 1
             elif results[0] == 0 and results[1] > 0:
-                record[id_a][LOSE] += 1
-                record[id_b][WIN] += 1
+                record[id_a][1] += 1
+                record[id_b][0] += 1
             else:
-                record[id_a][TIE] += 1
-                record[id_b][TIE] += 1
+                record[id_a][2] += 1
+                record[id_b][2] += 1
             fights += 1
             if print_stuff and floor(fights / total_fights * 100) >= percent + 5:
                 percent = floor(fights / total_fights * 100)
                 print(f'Level {lvl} - {floor(fights / total_fights * 100):2}% - {fights} / {total_fights}')
-        record[id_a][4] = (record[id_a][WIN] * 3) + record[id_a][TIE]
+        record[id_a][4] = (record[id_a][0] * 3) + record[id_a][2]
     record.sort(key=rank_sort)
 
 
@@ -759,7 +760,25 @@ def worker(arg):
     return [idx_a, idx_b, results]
 
 
-def run_lineup_multiprocessing(lineup: list[Player], record: list) -> None:
+def process_fight_results(arg):
+    id_a, id_b, result = arg
+    if result[0] > 0 and result[1] == 0:
+        record_g[id_a][0] += 1
+        record_g[id_b][1] += 1
+    elif result[0] == 0 and result[1] > 0:
+        record_g[id_a][1] += 1
+        record_g[id_b][0] += 1
+    else:
+        record_g[id_a][2] += 1
+        record_g[id_b][2] += 1
+
+
+def run_lineup_multiprocessing(lineup: list[Player]) -> list[list[int]]:
+    global record_g
+
+    # Initialize the record: [Wins, Losses, Ties, ID, Rank]
+    record_g = [[0, 0, 0, i, 0] for i in range(len(lineup))]
+
     # Calculate the size of the shared memory needed
     shm = shared_memory.SharedMemory(create=True, size=len(lineup) * 6 * np.dtype(np.int32).itemsize)
     stats_array = np.ndarray((len(lineup), 6), dtype=np.int32, buffer=shm.buf)
@@ -771,10 +790,12 @@ def run_lineup_multiprocessing(lineup: list[Player], record: list) -> None:
 
     # Setup multiprocessing
     pool = Pool(4)
-    index_combinations = combinations(range(len(lineup)), 2)
 
-    # Run fights
-    results = pool.map(worker, [(idx_a, idx_b, shm.name, stats_array.shape) for idx_a, idx_b in index_combinations])
+    # Use apply_async with callback to process results as they complete
+    for idx_a, idx_b in combinations(range(len(lineup)), 2):
+        pool.apply_async(worker, [(idx_a, idx_b, shm.name, stats_array.shape)], callback=process_fight_results)
+
+    # Close the pool and wait for all workers to finish
     pool.close()
     pool.join()
 
@@ -782,22 +803,11 @@ def run_lineup_multiprocessing(lineup: list[Player], record: list) -> None:
     shm.close()
     shm.unlink()
 
-    # Process the results
-    for id_a, id_b, result in results:
-        if result[0] > 0 and result[1] == 0:
-            record[id_a][WIN] += 1
-            record[id_b][LOSE] += 1
-        elif result[0] == 0 and result[1] > 0:
-            record[id_a][LOSE] += 1
-            record[id_b][WIN] += 1
-        else:
-            record[id_a][TIE] += 1
-            record[id_b][TIE] += 1
-
     # Calculate the rank based on Wins and Ties
     for i in range(len(lineup)):
-        record[i][4] = (record[i][WIN] * 3) + record[i][TIE]
-    record.sort(key=rank_sort)  # Sort based on rank
+        record_g[i][4] = (record_g[i][0] * 3) + record_g[i][2]
+    record_g.sort(key=rank_sort)  # Sort based on rank
+    return record_g
 
 
 def generate_attack_defense_mod(player: Player) -> list[float]:
@@ -815,7 +825,7 @@ def generate_attack_defense_mod(player: Player) -> list[float]:
     return [attack, defense]
 
 
-def fight(attacker: Player, defender: Player, miasma: int = 5) -> list[int]:
+def fight(attacker: Player, defender: Player, alt: bool = False, miasma: int = 5) -> list[int]:
     # First Strike:    #66  (Can always attack first in battle) -- This happens outside
 
     # Poison  941 TODO
@@ -833,8 +843,21 @@ def fight(attacker: Player, defender: Player, miasma: int = 5) -> list[int]:
     d_hp = defender.hp
     d_damage = max(0, floor((defender.attack * d_mod[0]) - (attacker.defense * a_mod[1])))
 
+    # Simplify if you do near 0 damage in game
+    #  In reality you would do some damage but uk
     if a_damage == 0 and d_damage == 0:
         return [0, 0]
+    if a_damage == 0:
+        return [0, 1]
+    if d_damage == 0:
+        return [1, 0]
+
+    if alt:
+        a_hits = ceil(a_hp / d_damage) + a_unyielding
+        d_hits = ceil(d_hp / a_damage) + d_unyielding
+        if a_hits < d_hits:
+            return [0, 1]
+        return [1, 0]
 
     while True:
         d_hp -= a_damage + (random.randint(0, 5) * miasma)
@@ -852,7 +875,7 @@ def fight(attacker: Player, defender: Player, miasma: int = 5) -> list[int]:
             a_hp = 1
 
 
-def fight_multiprocessing(a_hp: int, a_attack: int, a_defense: int, a_unyielding: bool, d_hp: int, d_attack: int, d_defense: int, d_unyielding: bool, miasma: int = 5) -> list[int]:
+def fight_multiprocessing(a_hp: int, a_attack: int, a_defense: int, a_unyielding: bool, d_hp: int, d_attack: int, d_defense: int, d_unyielding: bool) -> list[int]:
     # First Strike:    #66  (Can always attack first in battle) -- This happens outside
     # Poison  941 TODO
     # Unyielding 961 (Stay at 1 HP once during an adventure and deliver a critical hit on the next attack)
@@ -862,21 +885,16 @@ def fight_multiprocessing(a_hp: int, a_attack: int, a_defense: int, a_unyielding
 
     if a_damage == 0 and d_damage == 0:
         return [0, 0]
+    if a_damage == 0:
+        return [0, 1]
+    if d_damage == 0:
+        return [1, 0]
 
-    while True:
-        d_hp -= a_damage + (random.randint(0, 5) * miasma)
-        if d_hp < 1:
-            if not d_unyielding:
-                return [1, 0]
-            d_unyielding = False
-            d_hp = 1
-
-        a_hp -= d_damage + (random.randint(0, 5) * miasma)
-        if a_hp < 1:
-            if not a_unyielding:
-                return [0, 1]
-            a_unyielding = False
-            a_hp = 1
+    a_hits = ceil(a_hp / d_damage) + a_unyielding
+    d_hits = ceil(d_hp / a_damage) + d_unyielding
+    if a_hits < d_hits:
+        return [0, 1]
+    return [1, 0]
 
 
 def rank_sort(e: list[int]) -> int:
@@ -889,10 +907,10 @@ def str_sort(e: Player) -> int:
 
 def s_print(records: list, lineup: list, lvl: int, name: str) -> None:
     f = open(f'{name} Level {lvl} Results.txt', "w")
-    # print("Rank #: Player # - [Win, Tie, Lose]")
+    # print("Rank #: Player # - [Win, Tie, 1]")
     for i in range(len(records)):
-        # print(f"Rank {records[i][4]:03}: {records[i][3]:03} - [{records[i][WIN]:03}, {records[i][TIE]:02}, {records[i][LOSE]:03}] - {lineup[records[i][3]].print_stuff()}")
-        f.write(f"Rank {records[i][4]:03}: {records[i][3]:03} - [{records[i][WIN]:03}, {records[i][TIE]:02}, {records[i][LOSE]:03}] - {lineup[records[i][3]].print_stuff()}\n")
+        # print(f"Rank {records[i][4]:03}: {records[i][3]:03} - [{records[i][0]:03}, {records[i][2]:02}, {records[i][1]:03}] - {lineup[records[i][3]].print()}")
+        f.write(f"Rank {records[i][4]:03}: {records[i][3]:03} - [{records[i][0]:03}, {records[i][2]:02}, {records[i][1]:03}] - {lineup[records[i][3]].print()}\n")
     f.close()
 
 
@@ -958,6 +976,7 @@ def main(run_custom: bool, run_str: bool, run_all: bool, run_enchant: bool) -> N
         for keys in lineup_enchanted:
             final_lineup.append(Player())
             final_lineup[-1].add_items(keys[0:4], keys[4:8], keys[8:12], [CORROSION_MAX] * 3, [ANALYSIS_MAX] * 3, [UPGRADE_MAX] * 3)
+        del lineup_enchanted
 
         # Run level 1 - 25
         for lvl in range(6):
@@ -974,6 +993,8 @@ def main(run_custom: bool, run_str: bool, run_all: bool, run_enchant: bool) -> N
         for keys in lineup_enchanted:
             final_lineup.append(Player())
             final_lineup[-1].add_items(keys[0:4], keys[4:8], keys[8:12], [CORROSION_MAX] * 3, [ANALYSIS_MAX] * 3, [UPGRADE_MAX] * 3)
+        del lineup_enchanted
+        del lineup
 
         # Run level 30 - 50
         for lvl in range(6, 11):
@@ -994,6 +1015,7 @@ def main(run_custom: bool, run_str: bool, run_all: bool, run_enchant: bool) -> N
         for keys in lineup:
             final_lineup.append(Player())
             final_lineup[-1].add_items(keys[0:4], keys[4:8], keys[8:12], [CORROSION_MAX] * 3, [ANALYSIS_MAX] * 3, [UPGRADE_MAX] * 3)
+        del lineup
 
         # Run Sims
         for lvl in range(11):
@@ -1001,9 +1023,8 @@ def main(run_custom: bool, run_str: bool, run_all: bool, run_enchant: bool) -> N
                 final_lineup[i].apply_level(max(1, lvl * 5))
             # Initialize the record
             # Win, Lose, Tie, ID, Rank
-            record = [[0, 0, 0, i, 0] for i in range(len(final_lineup))]
-            run_lineup_multiprocessing(final_lineup, record)  # This still is not faster and has memory errors
-            # run_lineup(final_lineup, results, max(1, lvl * 5), True)
+            record = run_lineup_multiprocessing(final_lineup)  # This still is not faster and has memory errors
+            # run_lineup(final_lineup, record, max(1, lvl * 5), True)
             s_print(record, final_lineup, max(1, lvl * 5), 'combination')
             best_equips_normal[f'{max(1, lvl * 5)}'] = [final_lineup[-1].weapon.id, 0, 0, 0, final_lineup[-1].armor.id, 0, 0, 0, final_lineup[-1].ring.id, 0, 0, 0]
 
@@ -1019,9 +1040,8 @@ def main(run_custom: bool, run_str: bool, run_all: bool, run_enchant: bool) -> N
             # Initialize the record
             # Win, Lose, Tie, ID, Rank
             record = [[0, 0, 0, i, 0] for i in range(len(final_lineup))]
-            run_lineup_multiprocessing(final_lineup, record)  # This still is not faster and has memory errors
-            # record, results = run_lineup(final_lineup, record, max(1, lvl * 5), True)
-            s_print(record, lineup, max(1, lvl * 5), 'enchantment')
+            run_lineup(final_lineup, record, max(1, lvl * 5), True)
+            s_print(record, final_lineup, max(1, lvl * 5), 'enchantment')
 
 
 if __name__ == '__main__':
