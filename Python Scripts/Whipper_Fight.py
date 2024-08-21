@@ -2,7 +2,7 @@ from math import floor, ceil
 from itertools import combinations_with_replacement, combinations, product
 import random
 import json
-from multiprocessing import Pool, shared_memory, Lock
+from multiprocessing import Pool, shared_memory
 import numpy as np
 
 monster_list = {}
@@ -11,21 +11,23 @@ custom_list = {}
 dungeon_list = {}
 level_list = {}
 
+# This is the defaults of items
 UPGRADE_MAX = 20000
 ANALYSIS_MAX = 15
 CORROSION_MAX = 999
 MIASMA_APPLES = 99
 
 
-# Global lock for safe concurrent access to the record_g
-lock = Lock()
 record_g = []
 
-# This was made using the results from generate_all_items_levels_stats
+
+# This was made using the results from create_all_items_keys
 # We take the best of every result and store them here for enchant use
-# Enchants where processed and stored as notes
+# Enchants where processed and added as notes below
 best_equips_normal = {
-    "1": [171, 0, 0, 0, 244, 0, 0, 0, 303, 0, 0, 0],
+    "1": [[189, 0, 0, 0, 239, 0, 0, 0, 304, 0, 0, 0],
+          [189, 0, 0, 0, 238, 0, 0, 0, 304, 0, 0, 0],
+          [190, 0, 0, 0, 244, 0, 0, 0, 304, 0, 0, 0]],
     "5": [171, 0, 0, 0, 244, 0, 0, 0, 303, 0, 0, 0],
     "10": [171, 0, 0, 0, 244, 0, 0, 0, 303, 0, 0, 0],
     "15": [182, 0, 0, 0, 244, 0, 0, 0, 323, 0, 0, 0],
@@ -37,6 +39,7 @@ best_equips_normal = {
     "45": [182, 0, 0, 0, 244, 0, 0, 0, 323, 0, 0, 0],
     "50": [175, 0, 0, 0, 246, 0, 0, 0, 323, 0, 0, 0]
 }
+# Same as above but focused on str
 # Updated to V63
 best_equips_strength = {
     "1": [188, 230, 230, 230, 226, 230, 230, 230, 322, 67, 68, 807],
@@ -76,6 +79,7 @@ best_equips_strength = {
 #  99 ____________ Thousand Hands: [50] W5, A3, R4
 
 
+# This generates all the data to use from the json files provide by the game
 def make_lists():
     # Make Monster List
     with open('../json/monsters_EN.json', encoding='utf8') as f:
@@ -259,6 +263,7 @@ def make_lists():
                 monster_list[monster]['encounter_level']['avg'].append(level_list[d_id][f'{floor_num}']['level']['avg'])
 
 
+# function to get level for your xp
 def exp_to_level(exp: int) -> int:
     required = 10
     level = 1
@@ -793,6 +798,7 @@ def run_lineup_multiprocessing(lineup: list[Player]) -> list[list[int]]:
 
     # Use apply_async with callback to process results as they complete
     for idx_a, idx_b in combinations(range(len(lineup)), 2):
+        # pool.apply_async(worker, [(idx_a, idx_b, shm.name, stats_array.shape)], callback=process_fight_results_temp)
         pool.apply_async(worker, [(idx_a, idx_b, shm.name, stats_array.shape)], callback=process_fight_results)
 
     # Close the pool and wait for all workers to finish
@@ -1023,8 +1029,9 @@ def main(run_custom: bool, run_str: bool, run_all: bool, run_enchant: bool) -> N
                 final_lineup[i].apply_level(max(1, lvl * 5))
             # Initialize the record
             # Win, Lose, Tie, ID, Rank
-            record = run_lineup_multiprocessing(final_lineup)  # This still is not faster and has memory errors
-            # run_lineup(final_lineup, record, max(1, lvl * 5), True)
+            # record = run_lineup_multiprocessing(final_lineup)  # This still is not faster and has memory errors
+            record = [[0, 0, 0, i, 0] for i in range(len(final_lineup))]
+            run_lineup(final_lineup, record, max(1, lvl * 5), True)
             s_print(record, final_lineup, max(1, lvl * 5), 'combination')
             best_equips_normal[f'{max(1, lvl * 5)}'] = [final_lineup[-1].weapon.id, 0, 0, 0, final_lineup[-1].armor.id, 0, 0, 0, final_lineup[-1].ring.id, 0, 0, 0]
 
