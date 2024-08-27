@@ -1,0 +1,197 @@
+/// モンスターを生成する
+static Monster genMonster(int monsterId, MiasmaEffect miasma, int floor) {
+  int id = monsterId;
+  if (MonsterConstManager.constants.containsKey(id) == false) {
+      id = 1; // 参照できなかったらスライムを出しとく
+  }
+
+  final mc = MonsterConstManager.constants[id]!;
+
+  int f = floor;
+  // 王墓なら
+  if (miasma.dungeonId == 12) {
+    f = (f - 1) % tombFloor + 1;
+  }
+
+  // 瘴気があれば、4階ごとに敵が3%強くなる
+  int morePercent = miasma.miasmaLevel > 0
+      ? miasma.upMorePercent + (f ~/ 4) * (3 + miasma.miasmaLevel)
+      : 0;
+
+  // HPだけ倍率が大きくなる
+  int hp = ((mc.hp + miasma.upBaseParam) * (((morePercent) * 2 + 100) / 100))
+      .toInt();
+  // 瘴気レベルに応じて強さを変更
+  final monster = Monster(
+    id: mc.id,
+    name: mc.name,
+    lv: miasma.miasmaLevel,
+    hp: hp,
+    maxHP: hp,
+    atk: monsterId == 131
+        ? mc.atk * (miasma.miasmaLevel * miasma.miasmaLevel)
+        : ((mc.atk + miasma.upBaseParam) * ((morePercent + 100) / 100))
+            .toInt(),
+    def:
+        ((mc.def + miasma.upBaseParam) * ((morePercent + 100) / 100)).toInt(),
+    spd: (mc.spd * ((morePercent + 100) / 100)).toInt(),
+    exp: mc.exp,
+    item1: mc.item1,
+    pItem1: mc.prob1,
+    item2: mc.item2,
+    pItem2: mc.prob2,
+  );
+  return monster;
+}
+
+MiasmaEffect({
+    required this.miasmaLevel,
+    required this.wentToSecondWorld,
+    required this.containsCoreFragment,
+    required this.dungeonId,
+    required this.dungeonName,
+    required this.isInfiniteDungeon,
+    bool isHalf = false,
+  }) {
+    // 2周目の世界に行ってれば上限1
+    miasmaMax = wentToSecondWorld
+        ? containsCoreFragment
+            ? 5
+            : 1
+        : 0;
+
+    // 無限ダンジョンじゃなければ上限を設定
+    if (miasmaLevel > miasmaMax && isInfiniteDungeon == false) {
+      miasmaLevel = miasmaMax;
+    } else if (miasmaLevel < 0) {
+      miasmaLevel = 0;
+    }
+
+    int genDungeonBias = 0;
+    // ランダム生成ダンジョンならさらに強くなる
+    if (dungeonName.contains("峡谷".tr())) {
+      genDungeonBias = 0;
+    } else if (dungeonName.contains("砦".tr())) {
+      genDungeonBias = 2;
+    } else if (dungeonName.contains("霊廟".tr())) {
+      genDungeonBias = 4;
+    } else if (dungeonName.contains("古城".tr())) {
+      genDungeonBias = 8;
+    }
+
+    final result = _calc(miasmaLevel, dungeonId, genDungeonBias);
+    upBaseParam = result.upBaseParam;
+    upMorePercent = result.upMorePercent;
+    upFindAbilityPercent = result.upFindAbilityPercent;
+    upMinimumDamagePercent = result.upMinimumDamagePercent;
+
+    // 王墓の場合、強さの上昇をゆるやかにする
+    if (isHalf) {
+      // 1レベル前の強さと半分の値にする
+      final prevLv = _calc(miasmaLevel - 1, dungeonId, genDungeonBias);
+      upBaseParam = (upBaseParam + prevLv.upBaseParam) ~/ 2;
+      upMorePercent = (upMorePercent + prevLv.upMorePercent) ~/ 2;
+    }
+  }
+/// 瘴気による強さ変化
+  static ({
+    int upBaseParam,
+    int upMorePercent,
+    int upFindAbilityPercent,
+    int upMinimumDamagePercent
+  }) _calc(int miasmaLevel, int dungeonId, int genDungeonBias) {
+    var upBaseParam = 0;
+    var upMorePercent = 0;
+    var upFindAbilityPercent = 0;
+    var upMinimumDamagePercent = 0;
+
+    switch (miasmaLevel) {
+      case 0:
+        upBaseParam = 0;
+        upMorePercent = 0;
+        upFindAbilityPercent = 0;
+        upMinimumDamagePercent = 0;
+        break;
+      default: // 4面ごとにかなり強くなる
+        int rate = 2500 * (miasmaLevel - 1);
+        if (rate > 10000) {
+          rate = 10000;
+        }
+        upBaseParam =
+            (((500 * (1 + dungeonId / 4).toInt()) + (100 * dungeonId)) + rate)
+                .toInt();
+        upMorePercent =
+            (10 + (dungeonId * 2).toInt() + genDungeonBias) * miasmaLevel;
+        upFindAbilityPercent = 25 + (5 * miasmaLevel);
+        upMinimumDamagePercent = miasmaLevel > 3 ? 3 : miasmaLevel;
+        break;
+    }
+    return (
+      upBaseParam: upBaseParam,
+      upMorePercent: upMorePercent,
+      upFindAbilityPercent: upFindAbilityPercent,
+      upMinimumDamagePercent: upMinimumDamagePercent
+    );
+  }
+
+// The miasma level of royal tombs increases depending on the floor.
+// miasmaLevel: dungeon.id = floor ~/ 100
+// isHalf: floor % 100 == 0
+// tombFloor is constant value. it is "50".
+
+class MiasmaEffect:
+    # See ./Dart_Code for original
+    def __init__(self, dungeon_id: int, name: str, infinite: bool = False, level: int = 5, second: bool = True, core: bool = True):
+        self.miasma_level = level
+        self.went_to_second_world = second
+        self.has_core_fragment = core
+        self.dungeon_id = dungeon_id
+        self.dungeon_name = name
+        self.is_infinite_dungeon = infinite
+        self.is_half = False
+
+        self.miasma_max = self.went_to_second_world * (5 if self.has_core_fragment else 1)
+
+        # Enforce a limit if it's not an infinite dungeon.
+        if self.miasma_level > self.miasma_max and not self.is_infinite_dungeon:
+            self.miasma_level = self.miasma_max
+        elif self.miasma_level < 0:
+            self.miasma_level = 0
+
+        # Randomly Generated Dungeons get a boost
+        if "砦" in self.dungeon_name:
+            self.dungeon_bias = 2
+        elif "霊廟" in self.dungeon_name:
+            self.dungeon_bias = 4
+        elif "古城" in self.dungeon_name:
+            self.dungeon_bias = 8
+        else:
+            # "峡谷" in self.dungeon_name
+            self.dungeon_bias = 0
+
+        result = self.calculate_up(level, self.dungeon_id, self.dungeon_bias)
+        self.up_base_param = result[0]   ####
+        self.up_more_percent = result[1] ####
+        self.up_find_ability_percent = result[2]
+        self.up_minimum_damage_percent = result[3]
+
+        # If Kings Tomb: slow growth
+        if self.is_half and self.is_infinite_dungeon:
+            # Half the value of the strength before one level
+            result = self.calculate_up(level - 1, self.dungeon_id, self.up_find_ability_percent)
+            self.up_base_param = (result[0] + self.up_base_param) // 2
+            self.up_more_percent = (result[1] + self.up_more_percent) // 2
+
+    @staticmethod
+    def calculate_up(level: int, dungeon_id: int, dungeon_bias: int) -> list[int]:
+        match level:
+            case 0:
+                return [0, 0, 0, 0]
+            case _:
+                rate = min(2500 * (level - 1), 10000)
+                return [
+                    (((500 * int(1 + dungeon_id / 4)) + (100 * dungeon_id)) + rate),
+                    (10 + int(dungeon_id * 2) + dungeon_bias) * level,
+                    25 + (5 * level),
+                    min(level, 3)
+                ]
