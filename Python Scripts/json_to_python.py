@@ -20,26 +20,18 @@ def make_lists():
                 'max': [],
                 'avg': [],
             }
+            monster['effects'] = []
+            # Add in custom monster effects
+            if monster['id'] == 132:
+                monster['effects'] = [961]
+            if monster['id'] == 133:
+                monster['effects'] = [961]*3
             monster_list[monster["id"]] = monster
 
     # Make Equip List
     with open('../json/equips_EN.json', encoding='utf8') as f:
         data = json.load(f)
-
         for item in data['equips']:
-            hp = []
-            str = []
-            vit = []
-            for lvl in range(51):
-                hp.append(item["hp"] + lvl * item["lvHp"])
-                str.append(item["atk"] + lvl * item["lvAtk"])
-                vit.append(item["def"] + lvl * item["lvDef"])
-            item["results"] = {
-                "hp": hp,
-                "str": str,
-                "vit": vit,
-            }
-
             equip_list[item["id"]] = item
 
     # Make Custom List
@@ -51,33 +43,37 @@ def make_lists():
     # Make Dungeon List
     with open('../json/dungeons_EN.json', encoding='utf8') as f:
         data = json.load(f)
-        data['dungeons'][10]["maxFloor"] = 50  # Reduce max floor to make it work
+        # Reduce max floor to make them work
+        data['dungeons'][10]["maxFloor"] = 50
+        data['dungeons'][11]["maxFloor"] = 0
+        # Fix Royal Tomb so it has floors
         temp = {}
         for i in range(1, 51):
             temp[f'{i}'] = data['dungeons'][10]["monsters"][f'{ceil(i/10)}']
+        # Add In Royal Tombs withs bosses
         data['dungeons'][10]["monsters"] = temp
         data['dungeons'][10]["id"] = 121  # Change ID to 12.1, 12.2, 12.3
         data['dungeons'].append(data['dungeons'][10])
         data['dungeons'][-1]["id"] = 122
+        data['dungeons'][-1]["nameId_EN"] += ' Anubis'
         data['dungeons'].append(data['dungeons'][10])
         data['dungeons'][-1]["id"] = 123
+        data['dungeons'][-1]["nameId_EN"] += ' Necronomicon'
 
         for dungeon in data['dungeons']:
-            if dungeon["id"] == 13:
-                continue  # Skip Adam Dungeon
-            dungeon["boss"] = True if dungeon["id"] in [7, 9, 10, 121, 122, 123] else False
+            dungeon["boss"] = True if dungeon["id"] in [7, 9, 10, 122, 123, 13] else False
             if dungeon["id"] == 7:
                 boss_id = 108
             elif dungeon["id"] == 9:
                 boss_id = 109
             elif dungeon["id"] == 10:
                 boss_id = 129
-            elif dungeon["id"] == 121:
-                boss_id = 132
             elif dungeon["id"] == 122:
                 boss_id = 133
             elif dungeon["id"] == 123:
                 boss_id = 134
+            elif dungeon["id"] == 13:
+                boss_id = 200
             else:
                 boss_id = 0
             if dungeon["boss"]:
@@ -87,8 +83,8 @@ def make_lists():
         # Create Random Dungeons
         for d_id in range(60):
             dungeon = {'condition': 0, 'modLv': 8, 'id': 16 + d_id}
-            front = d_id // 20  # Makes 4 different fronts
-            behind = (d_id % 20) // 5  # Makes 3 different behinds
+            front = d_id // 20  # Makes 3 different fronts
+            behind = (d_id % 20) // 5  # Makes 4 different behinds
             dungeon['maxFloor'] = 14 + 10  # Only using max floor config but 0 - 14 are valid
             dungeon['minutesPerFloor'] = 15 + 5  # Only using max time config but 0 - 15 are valid
             monster_pos = ((d_id % 20) % 5) + 1  # Makes 5 different starting pos

@@ -1,7 +1,12 @@
 from math import floor
 
 from json_to_python import monster_list, equip_list, custom_list, exp_to_level
-from fight import generate_attack_defense_mod
+
+
+# This is the defaults of items
+UPGRADE_MAX = 20000
+ANALYSIS_MAX = 15
+CORROSION_MAX = 999
 
 
 class Stats:
@@ -316,7 +321,7 @@ class Player(Stats):
         mods = generate_attack_defense_mod(self)
         return (f'HP: {self.hp}, STR: {self.str}, VIT: {self.vit}, SPD: {self.spd}, LUK: {self.luk}, '
                 f'Attack: {self.attack}, Defense: {self.defense}, '
-                f'A Scale: {floor(self.attack * mods[0])}, D Scaled: {floor(self.defense * mods[1])}, '
+                f'Current HP: {self.current_hp}, A Avg: {floor(self.attack * mods[0])}, D Avg: {floor(self.defense * mods[1])}, '
                 f'[{self.weapon.print()}, '
                 f'{self.armor.print()}, '
                 f'{self.ring.print()}]')
@@ -365,11 +370,12 @@ class Player(Stats):
 class Monster(Stats):
     # See ./Dart_Code for Miasma Effect and Monster Generator
     # Thanks to Haap for dart code
-    def __int__(self, monster_id: int, dungeon_id: int, dungeon_name: str = '',  is_royal_tomb: bool = False, dungeon_floor: int = 0,  miasma_level: int = 5):
+    def __init__(self, monster_id: int, dungeon_id: int, dungeon_name: str = '',  is_royal_tomb: bool = False, dungeon_floor: int = 0,  miasma_level: int = 5):
         super().__init__()
         self.id: int = monster_id
+        self.xp: int = monster_list[monster_id]['exp']
         self.lvl: int = miasma_level
-        self.effects: list[int] = []
+        self.effects: list[int] = monster_list[monster_id]['effects']
 
         f = dungeon_floor
         # Because Royal Tomb goes up forever, we normalise floor
@@ -419,3 +425,17 @@ class Monster(Stats):
         self.spd = round(monster_list[monster_id]['spd'] * ((more_percent + 100) / 100))
         self.current_hp = self.hp
 
+
+def generate_attack_defense_mod(player: Player) -> list[float]:
+    # Double Strike: #67  (20% chance to attack twice)
+    double_strike = 67 in player.effects
+    # Seven Blessings: #807 (The probability of probability-based abilities is doubled)
+    seven_blessings = 1 + (807 in player.effects)
+    # Three Paths: #803 (50% chance for critical damage to be *3)
+    # Crit is 5% for 2x attack damage
+    crit_damage = 1 + (0.5 * (803 in player.effects) * seven_blessings)
+    # One Strike: #68  (Critical hit chance increases by 20%)
+    crit_chance = 0.05 + (0.2 * (68 in player.effects) * seven_blessings)
+    attack_mod = (1 + (crit_damage * crit_chance)) * (1 + (0.2 * double_strike * seven_blessings))
+    defense_mod = 1 / (1 - (0.20 * (806 in player.effects) * seven_blessings))  # 1, 1.25, 1.66
+    return [attack_mod, defense_mod]
