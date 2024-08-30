@@ -28,6 +28,9 @@ def run_lineup_quick(lineup: list[Player], record: list, lvl: int, print_stuff: 
                 results = fight_quick(per_a, per_b, 0, True)
                 # results = [a + b for a, b in zip(fight_func(per_a, per_b, True), fight_func(per_b, per_a, True)[::-1])]
 
+            per_a.current_hp = per_a.hp
+            per_b.current_hp = per_b.hp
+
             if results[0] > 0 and results[1] == 0:
                 record[id_a][0] += 1
                 record[id_b][1] += 1
@@ -47,14 +50,14 @@ def run_dungeon_quick(lineup: list[Player], dungeon: list[Monster], record: list
     # This expects player lineup vs a monster lineup
     # Players keep xp and level up
     fights = 0
-    total_fights = floor((len(lineup) * (len(lineup) + 1)) / 2)
+    total_fights = len(lineup) * len(dungeon)
     percent = 0
 
     for id_a, per in enumerate(lineup):
         for id_b, mon in enumerate(dungeon):
 
             # First Strike (66)
-            if 66 in per.effects or per.spd > per.spd:
+            if 66 in per.effects or per.spd > mon.spd:
                 results = fight_quick(per, mon, 2)
             elif mon.spd > per.spd:
                 results = fight_quick(mon, per, 1)[::-1]
@@ -85,9 +88,9 @@ def run_dungeon_quick(lineup: list[Player], dungeon: list[Monster], record: list
 ##################
 
 
-def rank_sort(e: list[int]) -> int:
+def rank_sort(r: list[int]) -> int:
     # 3 points for win, 1 point for tie
-    return (e[0] * 3) + e[2]
+    return (r[0] * 3) + r[2]
 
 
 def str_sort(e: Player, include_modifier: bool = True) -> int:
@@ -316,9 +319,9 @@ def fight_quick(attacker: Player | Monster, defender: Player | Monster, monster:
     d_mod = generate_attack_defense_mod(defender)
 
     a_hp = attacker.current_hp
-    a_damage = max(0, floor((attacker.attack * a_mod[0]) - (defender.defense * d_mod[1])))
+    a_damage = max(0, floor((attacker.attack - defender.defense) * a_mod[0]))
     d_hp = defender.current_hp
-    d_damage = max(0, floor((defender.attack * d_mod[0]) - (attacker.defense * a_mod[1])))
+    d_damage = max(0, floor((defender.attack - attacker.defense) * d_mod[0]))
 
     # Simplify if you do near 0 damage in game
     #  In reality you would do some damage but uk
@@ -334,8 +337,13 @@ def fight_quick(attacker: Player | Monster, defender: Player | Monster, monster:
         return [1 + do_both, 0]
 
     # Number of hits each can take
-    a_hits = ceil(a_hp / d_damage) + a_unyielding
-    d_hits = ceil(d_hp / a_damage) + d_unyielding
+    # a_unyielding is Resurrect for Monsters
+    a_hits = ceil(a_hp / d_damage * a_mod[1]) + a_unyielding
+    if monster == 1:
+        a_hits = ceil(a_hp / d_damage * a_mod[1]) * (a_unyielding + 1)
+    d_hits = ceil(d_hp / a_damage * d_mod[1]) + d_unyielding
+    if monster == 2:
+        d_hits = ceil(d_hp / a_damage * d_mod[1]) * (d_unyielding + 1)
 
     if do_both and a_hits >= (d_hits + 1):
         attacker.current_hp -= floor(d_damage * d_hits)
@@ -353,7 +361,7 @@ def fight_quick(attacker: Player | Monster, defender: Player | Monster, monster:
     if a_hits < d_hits:
         attacker.current_hp = 0
         defender.current_hp -= floor(a_damage * a_hits)
-        return [0, 1, d_hp - floor(a_damage * a_hits)]
+        return [0, 1]
     attacker.current_hp -= floor(d_damage * (d_hits - 1))
     defender.current_hp = 0
     return [1, 0]
@@ -364,25 +372,6 @@ def fight_quick(attacker: Player | Monster, defender: Player | Monster, monster:
 ###########################
 
 def create_dungeon(dungeon: list[Monster], identifier: int, end_floor: int = 0):
-    # 01 - The First Grassy Knoll
-    # 02 - The Lost Forest
-    # 03 - Deep Cave
-    # 04 - Twilight House
-    # 05 - The Secret Passage
-    # 06 - Old Battlefield of Fog
-    # 07 - Giant Tower of Justice
-    # 08 - The Door to Another World
-    # 09 - Dimensional Rift
-    # 10 - The Magic Castle of the End
-    # 12 - The Illusory Royal Tomb
-    # -- - 121: No Boss, All Floors
-    # -- - 122: Anubis, Every 100 Floors
-    # -- - 123: Necronomicon, every 300 Floors
-    # 13 - Fallen Junkyard
-    # 16 - Random Dungeons
-    # -- - ---------------
-    # 75 - Random Dungeons
-
     # Floor type determines the amount of monsters you fight
     # 1/60 Demon Nest:     80% Monster, 01% Treasure, 05% Fountain, 14% Nothing
     # 1/60 Treasure Floor: 10% Monster, 50% Treasure, 10% Fountain, 30% Nothing
@@ -408,7 +397,6 @@ def create_dungeon(dungeon: list[Monster], identifier: int, end_floor: int = 0):
             list_id = 122
         else:
             list_id = 121
-        identifier = end_floor // 100
         chance_mon = 80000
         chance_treasure = chance_mon + 1000
         chance_fountain = chance_treasure + 5000
@@ -431,21 +419,21 @@ def create_dungeon(dungeon: list[Monster], identifier: int, end_floor: int = 0):
                     # This keeps the chance per option correct
                     break
 
-                if event <= chance_mon:
-                    monster_index = randint(0, len(dungeon_list[list_id]['monsters'][f'{floor_id}']) - 1)
-                    monster_id = dungeon_list[list_id]['monsters'][f'{floor_id}'][monster_index]
-                    dungeon.append(Monster(monster_id, identifier, dungeon_list[list_id]['nameId_EN'], royal_tomb, end_floor))
-                    pass
-                elif event <= chance_treasure:
-                    # Gives Treasure which we don't care about
-                    pass
-                elif event <= chance_fountain:
-                    # TODO - This should do something but right now I don't
-                    #  It should roll for each stat and then give 1 to 4
-                    pass
-                elif event <= chance_nothing:
-                    # Nothing happens
-                    pass
+            if event <= chance_mon:
+                monster_index = randint(0, len(dungeon_list[list_id]['monsters'][f'{floor_id}']) - 1)
+                monster_id = dungeon_list[list_id]['monsters'][f'{floor_id}'][monster_index]
+                dungeon.append(Monster(monster_id, identifier, dungeon_list[list_id]['nameId_EN'], royal_tomb, end_floor))
+                pass
+            elif event <= chance_treasure:
+                # Gives Treasure which we don't care about
+                pass
+            elif event <= chance_fountain:
+                # TODO - This should do something but right now I don't
+                #  It should roll for each stat and then give 1 to 4
+                pass
+            elif event <= chance_nothing:
+                # Nothing happens
+                pass
 
     if dungeon_list[list_id]['boss']:
         monster_id = dungeon_list[list_id]['monsters'][f'{dungeon_list[list_id]["maxFloor"] + 1}'][0]
@@ -514,7 +502,7 @@ def add_enchantments(lineup: list, lvl: int, only_str: bool, print_stuff: bool) 
 ######################
 
 
-def solve_lineup(lineup: list[int], level: list[int], file_name: str, sort_function, do_enchants: bool = False, enchant_str: bool = False, run_lineup: bool = False, ignore_speed: bool = False, print_stuff: bool = False):
+def solve_lineup(lineup: list[list[int]], level: list[int], file_name: str, sort_function, do_enchants: bool = False, enchant_str: bool = False, run_lineup: bool = False, ignore_speed: bool = False, print_stuff: bool = False):
     # Enchant Lineup
     enchanted_lineup = lineup
     if do_enchants:
@@ -533,7 +521,7 @@ def solve_lineup(lineup: list[int], level: list[int], file_name: str, sort_funct
         # Initialize the record
         # Win, Lose, Tie, ID
         record = [[0, 0, 0, i] for i in range(len(final_lineup))]
-        f = open(f'{file_name} - Level {lvl:02} Results.txt', "w")
+
         if run_lineup:
             run_lineup_quick(final_lineup, record, lvl, print_stuff, ignore_speed)
             record.sort(key=sort_function)
@@ -541,7 +529,8 @@ def solve_lineup(lineup: list[int], level: list[int], file_name: str, sort_funct
                 print(f"{lvl:02} - Best: {final_lineup[record[-1][3]].print()}")
                 print(f"{lvl:02} - _2nd: {final_lineup[record[-2][3]].print()}")
                 print(f"{lvl:02} - _3rd: {final_lineup[record[-3][3]].print()}")
-            for i in range(len(record)):
+            f = open(f'{file_name} - Level {lvl:02} Results.txt', "w")
+            for i in range(max(len(final_lineup) - 1000, 0), len(final_lineup)):
                 f.write(f"Rank {rank_sort(record[i]):03}: {record[i][3]:03} - [{record[i][0]:03}, {record[i][2]:02}, {record[i][1]:03}] - {final_lineup[record[i][3]].print()}\n")
         else:
             final_lineup.sort(key=sort_function)
@@ -549,12 +538,13 @@ def solve_lineup(lineup: list[int], level: list[int], file_name: str, sort_funct
                 print(f"{lvl:02} - Best: {final_lineup[-1].print()}")
                 print(f"{lvl:02} - _2nd: {final_lineup[-2].print()}")
                 print(f"{lvl:02} - _3rd: {final_lineup[-3].print()}")
-            for i in range(len(final_lineup)):
+            f = open(f'{file_name} - Level {lvl:02} Results.txt', "w")
+            for i in range(max(len(final_lineup) - 1000, 0), len(final_lineup)):
                 f.write(f"Rank {len(final_lineup) - i:03}: {final_lineup[i].print()}\n")
         f.close()
 
 
-def solve_dungeon(lineup: list[int], file_name: str, dungeon_id: int, end_floor: int = 0, do_enchants: bool = False, enchant_str: bool = False, print_stuff: bool = False):
+def solve_dungeon(lineup: list[int], file_name: str, dungeon_id: int, dungeon: list[Monster] = None, end_floor: int = 0, do_enchants: bool = False, enchant_str: bool = False, print_stuff: bool = False):
     # Enchant Lineup
     enchanted_lineup = lineup
     if do_enchants:
@@ -567,8 +557,9 @@ def solve_dungeon(lineup: list[int], file_name: str, dungeon_id: int, end_floor:
         final_lineup[-1].add_items(keys[0:4], keys[4:8], keys[8:12], [CORROSION_MAX] * 3, [ANALYSIS_MAX] * 3, [UPGRADE_MAX] * 3)
         final_lineup[-1].apply_level(1)
 
-    dungeon = []
-    create_dungeon(dungeon, dungeon_id, end_floor)
+    if dungeon is None:
+        dungeon = []
+        create_dungeon(dungeon, dungeon_id, end_floor)
 
     # Initialize the record
     # Wins, HP, ID
@@ -581,11 +572,11 @@ def solve_dungeon(lineup: list[int], file_name: str, dungeon_id: int, end_floor:
     # Save Results
     f = open(f'{file_name} Results.txt', "w")
     if print_stuff:
-        print(f"{dungeon_id:02} - Best: {final_lineup[record[-1][3]].print()}")
-        print(f"{dungeon_id:02} - _2nd: {final_lineup[record[-2][3]].print()}")
-        print(f"{dungeon_id:02} - _3rd: {final_lineup[record[-3][3]].print()}")
-    for i in range(len(record)):
-        f.write(f"Rank {dungeon_sort(record[i]):03}: {record[i][3]:03} - {final_lineup[record[i][3]].print()}\n")
+        print(f"{dungeon_id:02} - Best: {final_lineup[record[-1][2]].print()}")
+        print(f"{dungeon_id:02} - _2nd: {final_lineup[record[-2][2]].print()}")
+        print(f"{dungeon_id:02} - _3rd: {final_lineup[record[-3][2]].print()}")
+    for i in range(max(len(final_lineup) - 1000, 0), len(final_lineup)):
+        f.write(f"Rank {dungeon_sort(record[i]):03}: {record[i][2]:03} - {final_lineup[record[i][2]].print()}\n")
     f.close()
 
 
