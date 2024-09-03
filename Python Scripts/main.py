@@ -303,20 +303,20 @@ best_vitality_with_enchants = {
 #####################
 # Enchantment Notes #
 #####################
-# Endurance 30: #130 (16000 HP)
-# Strength 30: #230 (16000 STR)
-# Sturdy 30: #330 (16000 VIT)
-# Agility 20: #420 (655 SPD)
-# Luck 3: #30 (3 LUK)
-# Endurance Training 30: #530 (630 HP ^)
-# Strength Training 30: #630 (630 STR ^)
-# Defense Training 30: #730 (630 VIT ^)
-# First Strike: #66 (Can always attack first in battle)
-# Double Strike: #67 (20% chance to attack twice)
-# One Strike: #68 (Critical hit chance increases by 20%)
-# Three Paths: #803 (50% chance for critical damage to be tripled)
-# Sixth Sense: #806 (20% chance to dodge an attack)
-# Seven Blessings: #807 (The probability of probability-based abilities is doubled)
+# _30 - Luck 3: 3 LUK
+# _66 - First Strike: Can always attack first in battle
+# _67 - Double Strike: 20% chance to attack twice
+# _68 - One Strike: Critical hit chance increases by 20%
+# 130 - Endurance 30: 16,000 HP
+# 230 - Strength 30: 16,000 STR
+# 330 - Sturdy 30: 16,000 VIT
+# 420 - Agility 20: 655 SPD
+# 530 - Endurance Training 30: 630 HP^
+# 630 - Strength Training 30: 630 STR^
+# 730 - Defense Training 30: 630 VIT^
+# 803 - Three Paths: 50% chance for critical damage to be tripled
+# 806 - Sixth Sense: 20% chance to dodge an attack
+# 807 - Seven Blessings: The probability of probability-based abilities is doubled
 
 #################
 # Dungeon Notes #
@@ -411,7 +411,7 @@ def run_custom_dungeon():
     enchant_str = False
     print_stuff = True
 
-    solve_dungeon(setups, file, dungeon_id, dungeon=dungeon, end_floor=end_floor, do_enchants=do_enchants, enchant_str=enchant_str, print_stuff=print_stuff)
+    solve_dungeon(file, dungeon_id, lineup=setups, dungeon=dungeon, end_floor=end_floor, do_enchants=do_enchants, enchant_str=enchant_str, print_stuff=print_stuff)
 
 
 def main(custom_equip: bool, custom_dungeon: bool, dungeon: bool, combination: bool, strength: bool, vitality: bool, enchantment: bool) -> None:
@@ -430,7 +430,10 @@ def main(custom_equip: bool, custom_dungeon: bool, dungeon: bool, combination: b
         enchant_str = False
         enchant_vit = False
         print_stuff = True
-        solve_dungeon(best_equips_normal['50'], f"Dungeon {dungeon_id}", dungeon_id, end_floor=end_floor, do_enchants=do_enchants, enchant_str=enchant_str, enchant_vit=enchant_vit, print_stuff=print_stuff)
+        lineup = [[184, 66, 230, 230, 246, 530, 530, 730, 314, 730, 230, 230],
+                  [172, 66, 230, 230, 252, 530, 530, 730, 314, 730, 230, 230]]
+
+        solve_dungeon(f"Dungeon {dungeon_id}", dungeon_id, lineup=None, end_floor=end_floor, do_enchants=do_enchants, enchant_str=enchant_str, enchant_vit=enchant_vit, print_stuff=print_stuff)
 
     if strength:
         find_best_str(True)

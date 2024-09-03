@@ -1,3 +1,4 @@
+from random import randint
 from math import floor
 
 from json_to_python import monster_list, equip_list, custom_list, exp_to_level
@@ -285,6 +286,7 @@ class Player(Stats):
         self.id: int = 0
         self.lvl: int = 1
         self.xp: int = 0
+        self.type: str = 'Player'
 
     def apply_corrosion(self, amount: list[int]):
         self.weapon.corrosion = amount[0]
@@ -378,6 +380,7 @@ class Monster(Stats):
         self.effects: list[int] = monster_list[monster_id]['effects']
         self.dungeon_id: int = dungeon_id
         self.floor: int = dungeon_floor
+        self.type: str = 'Monster'
 
         f = dungeon_floor
         # Because Royal Tomb goes up forever, we normalise floor
@@ -403,6 +406,7 @@ class Monster(Stats):
 
         base_param = (((500 * round(1 + dungeon_id / 4)) + (100 * dungeon_id)) + min(2500 * (miasma_level - 1), 10000))
         more_percent = (10 + (dungeon_id * 2) + dungeon_bias) * miasma_level
+        minimum_damage_percent = min(miasma_level, 3)
 
         if is_royal_tomb and dungeon_floor % 100 == 0:
             base_param_prev = (((500 * round(1 + dungeon_id / 4)) + (100 * dungeon_id)) + min(2500 * (miasma_level - 2), 10000))
@@ -418,6 +422,8 @@ class Monster(Stats):
         more_percent = more_percent + (f // 4) * (3 + miasma_level)
         if miasma_level == 0:
             more_percent = 0
+            base_param = 0
+            minimum_damage_percent = 0
 
         # Change in strength according to the level of miasma
         self.hp = floor((monster_list[monster_id]['hp'] + base_param) * ((more_percent * 2 + 100) / 100))
@@ -425,6 +431,7 @@ class Monster(Stats):
             self.attack = monster_list[monster_id]['atk'] * (miasma_level ** 2)
         else:
             self.attack = floor((monster_list[monster_id]['atk'] + base_param) * ((more_percent + 100) / 100))
+        self.minimum_damage = floor((self.attack * minimum_damage_percent)/100)
         self.defense = floor((monster_list[monster_id]['def'] + base_param) * ((more_percent + 100) / 100))
         self.spd = floor(monster_list[monster_id]['spd'] * ((more_percent + 100) / 100))
         self.current_hp = self.hp
@@ -432,7 +439,33 @@ class Monster(Stats):
     def print(self):
         return (f'ID: {self.id}, Name: {self.name}, Effects: {self.effects}, '
                 f'Dungeon ID: {self.dungeon_id}, Floor: {self.floor}, Level: {self.lvl}, '
-                f'HP: {self.hp}, Attack: {self.attack}, Defense: {self.defense}, SPD: {self.spd}')
+                f'HP: {self.hp}, Attack: {self.attack}, Minimum Damage: {self.minimum_damage}, Defense: {self.defense}, SPD: {self.spd}')
+
+
+class Fountain:
+    def __init__(self, is_level_up: bool = False, is_junkyard: bool = False):
+        self.type: str = 'Fountain'
+        self.amount: int = 1
+        if is_junkyard:
+            self.amount = 49
+
+        self.stat: str = ''
+        if is_level_up:
+            self.stat = 'Level'
+        else:
+            self.amount += randint(1, 4)
+            number = randint(1, 5)
+            match number:
+                case 1:
+                    self.stat = 'HP'
+                case 2:
+                    self.stat = 'VIT'
+                case 3:
+                    self.stat = 'SPD'
+                case 4:
+                    self.stat = 'STR'
+                case 5:
+                    self.stat = 'LUK'
 
 
 def generate_attack_defense_mod(player: Player) -> list[float]:

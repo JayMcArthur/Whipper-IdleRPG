@@ -3,8 +3,9 @@ from multiprocessing import Pool, shared_memory
 from math import floor, ceil
 from random import randint
 import numpy as np
+from numpy.ma.core import minimum
 
-from enitity import Player, Monster, generate_attack_defense_mod, UPGRADE_MAX, ANALYSIS_MAX, CORROSION_MAX
+from enitity import Player, Monster, Fountain, generate_attack_defense_mod, UPGRADE_MAX, ANALYSIS_MAX, CORROSION_MAX
 from json_to_python import dungeon_list, equip_list
 
 
@@ -46,7 +47,7 @@ def run_lineup_quick(lineup: list[Player], record: list, lvl: int, print_stuff: 
                 print(f'Level {lvl} - {floor(fights / total_fights * 100):2}% - {fights} / {total_fights}')
 
 
-def run_dungeon_quick(lineup: list[Player], dungeon: list[Monster], record: list, print_stuff: bool) -> None:
+def run_dungeon_quick(lineup: list[Player], dungeon: list[Monster | Fountain], record: list, print_stuff: bool) -> None:
     # This expects player lineup vs a monster lineup
     # Players keep xp and level up
     fights = 0
@@ -55,6 +56,13 @@ def run_dungeon_quick(lineup: list[Player], dungeon: list[Monster], record: list
 
     for id_a, per in enumerate(lineup):
         for id_b, mon in enumerate(dungeon):
+
+            if mon.type == "Fountain":
+                if mon.stat == 'Level':
+                    per.apply_level(mon.amount + per.lvl)
+                else:
+                    per.string_to_stat(mon.stat, mon.amount)
+                continue
 
             # First Strike (66)
             if 66 in per.effects or per.spd > mon.spd:
@@ -198,10 +206,10 @@ def fight_realistic(attacker: Player | Monster, defender: Player | Monster, mons
     # Returns [attacker Win, Defender Win]
 
     # First Strike (66): Can always attack first in battle -- This happens outside
-    # Poison (941): Deals ? damage at end of turn TODO This is wrong
-    a_poison = 1 if 941 in attacker.effects else 0
+    # Poison (941): Deals 0.5% stacking damage at end of turn
+    a_poison = 941 in attacker.effects
     a_poisoned = 0
-    d_poison = 1 if 941 in defender.effects else 0
+    d_poison = 941 in defender.effects
     d_poisoned = 0
     # Seven Blessings (807): The probability of probability-based abilities is doubled
     a_seven_blessings = 1 + (807 in attacker.effects)
@@ -227,7 +235,12 @@ def fight_realistic(attacker: Player | Monster, defender: Player | Monster, mons
     d_do_crit = False
     # Their HP
     a_hp = attacker.current_hp
+    a_max_hp = attacker.hp
     d_hp = defender.current_hp
+    d_max_hp = defender.hp
+
+    a_minimum_damage = 0 if monster != 1 else attacker.minimum_damage
+    d_minimum_damage = 0 if monster != 2 else defender.minimum_damage
 
     while True:
         # Attacker
@@ -247,8 +260,8 @@ def fight_realistic(attacker: Player | Monster, defender: Player | Monster, mons
                 a_do_crit = False
             else:
                 crit_damage = 1
-            d_hp -= (max(attacker.attack - defender.defense, 0) + randint(0, 5) * miasma) * crit_damage
-            d_poisoned += a_poison
+            d_hp -= (max(attacker.attack - defender.defense, a_minimum_damage) + randint(0, 5) * miasma) * crit_damage
+            d_poisoned += a_poison * 0.5
             if d_hp <= 0:
                 if not d_unyielding:
                     attacker.current_hp = a_hp
@@ -257,7 +270,7 @@ def fight_realistic(attacker: Player | Monster, defender: Player | Monster, mons
                 d_unyielding -= 1
                 d_hp = 1
                 d_do_crit = monster != 2
-        a_hp -= a_poisoned
+        a_hp -= a_poisoned * a_max_hp
         if a_hp <= 0:
             if not a_unyielding:
                 attacker.current_hp = 0
@@ -284,8 +297,8 @@ def fight_realistic(attacker: Player | Monster, defender: Player | Monster, mons
                 d_do_crit = False
             else:
                 crit_damage = 1
-            a_hp -= (max(defender.attack - attacker.defense, 0) + randint(0, 5) * miasma) * crit_damage
-            a_poisoned += d_poison
+            a_hp -= (max(defender.attack - attacker.defense, d_minimum_damage) + randint(0, 5) * miasma) * crit_damage
+            a_poisoned += d_poison * 0.5
             if a_hp <= 0:
                 if not a_unyielding:
                     attacker.current_hp = 0
@@ -294,7 +307,7 @@ def fight_realistic(attacker: Player | Monster, defender: Player | Monster, mons
                 a_unyielding -= 1
                 a_hp = 1
                 a_do_crit = monster != 1
-        d_hp -= d_poisoned
+        d_hp -= d_poisoned * d_max_hp
         if d_hp <= 0:
             if not d_unyielding:
                 attacker.current_hp = a_hp
@@ -309,7 +322,7 @@ def fight_quick(attacker: Player | Monster, defender: Player | Monster, monster:
     # Returns [attacker Win, Defender Win]
 
     # First Strike (66): Can always attack first in battle -- This happens outside
-    # Poison (941): Deals ? damage at end of turn TODO - I don't take this into account
+    # Poison (941): Deals 0.5% of Max HP stacking damage at end of turn TODO - I don't take this into account
 
     # Unyielding 961 (Stay at 1 HP once during an adventure and deliver a critical hit on the next attack)
     # I don't give the auto crit just keep the chance stuff
@@ -323,35 +336,38 @@ def fight_quick(attacker: Player | Monster, defender: Player | Monster, monster:
     a_mod = generate_attack_defense_mod(attacker)
     d_mod = generate_attack_defense_mod(defender)
 
+    a_minimum_damage = 0 if monster != 1 else attacker.minimum_damage
+    d_minimum_damage = 0 if monster != 2 else defender.minimum_damage
+
     a_hp = attacker.current_hp
-    a_damage = max(0, floor((attacker.attack - defender.defense) * a_mod[0]))
+    a_attack = max(a_minimum_damage, floor((attacker.attack - defender.defense) * a_mod[0]))
     d_hp = defender.current_hp
-    d_damage = max(0, floor((defender.attack - attacker.defense) * d_mod[0]))
+    d_attack = max(d_minimum_damage, floor((defender.attack - attacker.defense) * d_mod[0]))
 
     # Simplify if you do near 0 damage in game
     #  In reality you would do some damage but uk
-    if a_damage == 0 and d_damage == 0:
+    if a_attack == 0 and d_attack == 0:
         attacker.current_hp = 0
         defender.current_hp = 0
         return [0, 0]
-    if a_damage == 0:
+    if a_attack == 0:
         attacker.current_hp = 0
         return [0, 1 + do_both]
-    if d_damage == 0:
+    if d_attack == 0:
         defender.current_hp = 0
         return [1 + do_both, 0]
 
     # Number of hits each can take
     # a_unyielding is Resurrect for Monsters
-    a_hits = ceil(a_hp / d_damage * a_mod[1]) + a_unyielding
+    a_hits = ceil(a_hp / d_attack * a_mod[1]) + a_unyielding
     if monster == 1:
-        a_hits = ceil(a_hp / d_damage * a_mod[1]) * (a_unyielding + 1)
-    d_hits = ceil(d_hp / a_damage * d_mod[1]) + d_unyielding
+        a_hits = ceil(a_hp / d_attack * a_mod[1]) * (a_unyielding + 1)
+    d_hits = ceil(d_hp / a_attack * d_mod[1]) + d_unyielding
     if monster == 2:
-        d_hits = ceil(d_hp / a_damage * d_mod[1]) * (d_unyielding + 1)
+        d_hits = ceil(d_hp / a_attack * d_mod[1]) * (d_unyielding + 1)
 
     if do_both and a_hits >= (d_hits + 1):
-        attacker.current_hp -= floor(d_damage * d_hits)
+        attacker.current_hp -= floor(d_attack * d_hits)
         defender.current_hp = 0
         return [2, 0]
     elif do_both and a_hits == d_hits:
@@ -360,14 +376,14 @@ def fight_quick(attacker: Player | Monster, defender: Player | Monster, monster:
         return [1, 1]
     elif do_both:
         attacker.current_hp = 0
-        defender.current_hp -= floor(a_damage * a_hits)
+        defender.current_hp -= floor(a_attack * a_hits)
         return [0, 2]
 
     if a_hits < d_hits:
         attacker.current_hp = 0
-        defender.current_hp -= floor(a_damage * a_hits)
+        defender.current_hp -= floor(a_attack * a_hits)
         return [0, 1]
-    attacker.current_hp -= floor(d_damage * (d_hits - 1))
+    attacker.current_hp -= floor(d_attack * (d_hits - 1))
     defender.current_hp = 0
     return [1, 0]
 
@@ -376,7 +392,7 @@ def fight_quick(attacker: Player | Monster, defender: Player | Monster, monster:
 # Create Lineup / Dungeon #
 ###########################
 
-def create_dungeon(dungeon: list[Monster], identifier: int, end_floor: int = 0):
+def create_dungeon(dungeon: list[Monster | Fountain], identifier: int, end_floor: int = 0):
     # Floor type determines the amount of monsters you fight
     # 1/60 Demon Nest:     80% Monster, 01% Treasure, 05% Fountain, 14% Nothing
     # 1/60 Treasure Floor: 10% Monster, 50% Treasure, 10% Fountain, 30% Nothing
@@ -413,9 +429,17 @@ def create_dungeon(dungeon: list[Monster], identifier: int, end_floor: int = 0):
         print(f'No Dungeon with ID {list_id}')
         return
 
+    if not royal_tomb:
+        end_floor = dungeon_list[list_id]['maxFloor']
+
     for floor_id in range(1, dungeon_list[list_id]['maxFloor'] + 1):
-        # We waste 1 minute just displaying the floor type
-        for minute in range(dungeon_list[list_id]['minutesPerFloor'] - 1):
+        true_floor = end_floor - dungeon_list[list_id]['maxFloor'] + floor_id
+
+        # Royal Tomb gives level up per floor
+        if royal_tomb and floor_id != 1:
+            dungeon.append(Fountain(is_level_up=True))
+
+        for minute in range(dungeon_list[list_id]['minutesPerFloor']):
             while True:
                 event = randint(1, 100000)
                 if event <= chance_nothing:
@@ -427,14 +451,17 @@ def create_dungeon(dungeon: list[Monster], identifier: int, end_floor: int = 0):
             if event <= chance_mon:
                 monster_index = randint(0, len(dungeon_list[list_id]['monsters'][f'{floor_id}']) - 1)
                 monster_id = dungeon_list[list_id]['monsters'][f'{floor_id}'][monster_index]
-                dungeon.append(Monster(monster_id, identifier, end_floor, dungeon_list[list_id]['nameId_EN'], royal_tomb))
+                dungeon.append(Monster(monster_id, identifier, true_floor, dungeon_list[list_id]['nameId_EN'], royal_tomb))
+
+                # Royal Tomb gives level up per floor (You never get enough xp to level up)
+                if royal_tomb:
+                    dungeon[-1].xp = 0
                 pass
             elif event <= chance_treasure:
                 # Gives Treasure which we don't care about
                 pass
             elif event <= chance_fountain:
-                # TODO - This should do something but right now I don't
-                #  It should roll for each stat and then give 1 to 4
+                dungeon.append(Fountain())
                 pass
             elif event <= chance_nothing:
                 # Nothing happens
@@ -513,7 +540,8 @@ def add_enchantments(lineup: list, lvl: int, only_str: bool, only_vit: bool, pri
 ######################
 
 
-def solve_lineup(lineup: list[list[int]], level: list[int], file_name: str, sort_function, do_enchants: bool = False, enchant_str: bool = False, enchant_vit: bool = False, run_lineup: bool = False, ignore_speed: bool = False, print_stuff: bool = False):
+def solve_lineup(lineup: list[list[int]], level: list[int], file_name: str, sort_function, do_enchants: bool = False, enchant_str: bool = False, enchant_vit: bool = False,
+                 run_lineup: bool = False, ignore_speed: bool = False, print_stuff: bool = False):
     # Enchant Lineup
     enchanted_lineup = lineup
     if do_enchants:
@@ -555,39 +583,62 @@ def solve_lineup(lineup: list[list[int]], level: list[int], file_name: str, sort
         f.close()
 
 
-def solve_dungeon(lineup: list[int], file_name: str, dungeon_id: int, dungeon: list[Monster] = None, end_floor: int = 0, do_enchants: bool = False, enchant_str: bool = False, enchant_vit: bool = False, print_stuff: bool = False):
-    # Enchant Lineup
-    enchanted_lineup = lineup
-    if do_enchants:
-        enchanted_lineup = add_enchantments(lineup, -1, enchant_str, enchant_vit, print_stuff)
+def breakup_lineup(list_, n):
+    for i in range(0, len(list_), n):
+        yield list_[i:i + n]
 
-    # Initialize Players
-    final_lineup = []
-    for keys in enchanted_lineup:
-        final_lineup.append(Player())
-        final_lineup[-1].add_items(keys[0:4], keys[4:8], keys[8:12], [CORROSION_MAX] * 3, [ANALYSIS_MAX] * 3, [UPGRADE_MAX] * 3)
-        final_lineup[-1].apply_level(1)
+
+def solve_dungeon(file_name: str, dungeon_id: int, lineup: list[int] = None, dungeon: list[Monster | Fountain] = None, end_floor: int = 0, do_enchants: bool = False,
+                  enchant_str: bool = False, enchant_vit: bool = False, print_stuff: bool = False):
+    if lineup is None:
+        lineup = []
+        create_all_items_keys(lineup, False)
 
     if dungeon is None:
         dungeon = []
         create_dungeon(dungeon, dungeon_id, end_floor)
 
-    # Initialize the record
-    # Wins, HP, ID
-    record = [[0, 0, i] for i in range(len(final_lineup))]
+    final_record = []
+    record_lineup = []
 
-    # Run Dungeon
-    run_dungeon_quick(final_lineup, dungeon, record, print_stuff)
-    record.sort(key=dungeon_sort)
+    for part in breakup_lineup(lineup, 250):
+        # Enchant Lineup
+        enchanted_lineup = part
+        if do_enchants:
+            enchanted_lineup = add_enchantments(part, -1, enchant_str, enchant_vit, False)
+
+        # Initialize Players
+        final_lineup = []
+        for keys in enchanted_lineup:
+            final_lineup.append(Player())
+            final_lineup[-1].add_items(keys[0:4], keys[4:8], keys[8:12], [CORROSION_MAX] * 3, [ANALYSIS_MAX] * 3, [UPGRADE_MAX] * 3)
+            final_lineup[-1].apply_level(1)
+
+        # Initialize the record
+        # Wins, HP, ID
+        record = [[0, 0, i] for i in range(len(final_lineup))]
+
+        # Run Dungeon
+        run_dungeon_quick(final_lineup, dungeon, record, print_stuff)
+        record.sort(key=dungeon_sort)
+
+        for i in range(min(len(final_lineup), 10)):
+            final_record.append([record[-i][0], record[-i][1], len(record_lineup)])
+            record_lineup.append(final_lineup[record[-i][2]])
+
+    final_record.sort(key=dungeon_sort)
 
     # Save Results
     f = open(f'{file_name} Results.txt', "w")
     if print_stuff:
-        print(f"{dungeon_id:02} - Best: {final_lineup[record[-1][2]].print()}")
-        print(f"{dungeon_id:02} - _2nd: {final_lineup[record[-2][2]].print()}")
-        print(f"{dungeon_id:02} - _3rd: {final_lineup[record[-3][2]].print()}")
-    for i in range(max(len(final_lineup) - 1000, 0), len(final_lineup)):
-        f.write(f"Rank {dungeon_sort(record[i]):03}: {record[i][2]:03} - {final_lineup[record[i][2]].print()}\n")
+        print(
+            f"{dungeon_sort(final_record[-1]):03} - [{dungeon[final_record[-1][0] - 1].floor}, {dungeon[final_record[-1][0] - 1].id}, {dungeon[final_record[-1][0] - 1].name}] - Best: {record_lineup[final_record[-1][2]].print()}")
+        print(
+            f"{dungeon_sort(final_record[-2]):03} - [{dungeon[final_record[-1][0] - 1].floor}, {dungeon[final_record[-2][0] - 1].id}, {dungeon[final_record[-2][0] - 1].name}] - _2nd: {record_lineup[final_record[-2][2]].print()}")
+        print(
+            f"{dungeon_sort(final_record[-3]):03} - [{dungeon[final_record[-1][0] - 1].floor}, {dungeon[final_record[-3][0] - 1].id}, {dungeon[final_record[-3][0] - 1].name}] - _3rd: {record_lineup[final_record[-3][2]].print()}")
+    for i in range(max(len(record_lineup) - 1000, 0), len(record_lineup)):
+        f.write(f"Rank {dungeon_sort(final_record[i]):03}: {final_record[i][2]:03} - {record_lineup[final_record[i][2]].print()}\n")
     f.close()
 
 
