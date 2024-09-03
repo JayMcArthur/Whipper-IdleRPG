@@ -98,6 +98,11 @@ def str_sort(e: Player, include_modifier: bool = True) -> int:
     return floor(e.attack * mod)
 
 
+def vit_sort(e: Player, include_modifier: bool = False) -> int:
+    mod = generate_attack_defense_mod(e)[1] if include_modifier else 1
+    return floor(e.defense * mod)
+
+
 def hp_sort(e: Player):
     return e.current_hp
 
@@ -422,7 +427,7 @@ def create_dungeon(dungeon: list[Monster], identifier: int, end_floor: int = 0):
             if event <= chance_mon:
                 monster_index = randint(0, len(dungeon_list[list_id]['monsters'][f'{floor_id}']) - 1)
                 monster_id = dungeon_list[list_id]['monsters'][f'{floor_id}'][monster_index]
-                dungeon.append(Monster(monster_id, identifier, dungeon_list[list_id]['nameId_EN'], royal_tomb, end_floor))
+                dungeon.append(Monster(monster_id, identifier, end_floor, dungeon_list[list_id]['nameId_EN'], royal_tomb))
                 pass
             elif event <= chance_treasure:
                 # Gives Treasure which we don't care about
@@ -437,7 +442,7 @@ def create_dungeon(dungeon: list[Monster], identifier: int, end_floor: int = 0):
 
     if dungeon_list[list_id]['boss']:
         monster_id = dungeon_list[list_id]['monsters'][f'{dungeon_list[list_id]["maxFloor"] + 1}'][0]
-        dungeon.append(Monster(monster_id, identifier, dungeon_list[list_id]['nameId_EN'], royal_tomb, end_floor))
+        dungeon.append(Monster(monster_id, identifier, end_floor, dungeon_list[list_id]['nameId_EN'], royal_tomb))
 
 
 def create_all_items_keys(lineup: list, print_stuff: bool) -> None:
@@ -450,7 +455,7 @@ def create_all_items_keys(lineup: list, print_stuff: bool) -> None:
         print(f"Number of item combinations: {len(lineup)}")
 
 
-def add_enchantments(lineup: list, lvl: int, only_str: bool, print_stuff: bool) -> list[list[int]]:
+def add_enchantments(lineup: list, lvl: int, only_str: bool, only_vit: bool, print_stuff: bool) -> list[list[int]]:
     # Endurance 30: #130 (16000 HP)
     # Strength 30: #230 (16000 STR)
     # Sturdy 30: #330 (16000 VIT)
@@ -464,13 +469,17 @@ def add_enchantments(lineup: list, lvl: int, only_str: bool, print_stuff: bool) 
     if lvl == -1:
         main_enchantments = [130, 230, 330, 530, 630, 730]
     elif 25 < lvl < 51:
-        main_enchantments = [630]
-        if not only_str:
-            main_enchantments += [730, 530]
+        main_enchantments = [530, 630, 730]
+        if only_str:
+            main_enchantments = [630]
+        elif only_vit:
+            main_enchantments = [730]
     else:
-        main_enchantments = [230]
-        if not only_str:
-            main_enchantments += [330, 130]
+        main_enchantments = [130, 230, 330]
+        if only_str:
+            main_enchantments = [230]
+        elif only_vit:
+            main_enchantments = [330]
 
     # First Strike: #66 (Can always attack first in battle)
     # Double Strike: #67 (20% chance to attack twice)
@@ -479,9 +488,11 @@ def add_enchantments(lineup: list, lvl: int, only_str: bool, print_stuff: bool) 
     # Sixth Sense: #806 (20% chance to dodge an attack)
     # Seven Blessings: #807 (The probability of probability-based abilities is doubled)
     # These can only be in a gear set once
-    side_enchantments = [66, 67, 68, 803, 807]
-    if not only_str:
-        side_enchantments += [806]
+    side_enchantments = [66, 67, 68, 803, 806, 807]
+    if only_str:
+        side_enchantments = [66, 67, 68, 803, 807]
+    if only_vit:
+        side_enchantments = [806, 807]
 
     enchantments = list(combinations_with_replacement(main_enchantments, 9))
     for i in range(1, min(len(side_enchantments), 10)):
@@ -502,11 +513,11 @@ def add_enchantments(lineup: list, lvl: int, only_str: bool, print_stuff: bool) 
 ######################
 
 
-def solve_lineup(lineup: list[list[int]], level: list[int], file_name: str, sort_function, do_enchants: bool = False, enchant_str: bool = False, run_lineup: bool = False, ignore_speed: bool = False, print_stuff: bool = False):
+def solve_lineup(lineup: list[list[int]], level: list[int], file_name: str, sort_function, do_enchants: bool = False, enchant_str: bool = False, enchant_vit: bool = False, run_lineup: bool = False, ignore_speed: bool = False, print_stuff: bool = False):
     # Enchant Lineup
     enchanted_lineup = lineup
     if do_enchants:
-        enchanted_lineup = add_enchantments(lineup, level[0], enchant_str, print_stuff)
+        enchanted_lineup = add_enchantments(lineup, level[0], enchant_str, enchant_vit, print_stuff)
 
     # Initialize Players
     final_lineup = []
@@ -544,11 +555,11 @@ def solve_lineup(lineup: list[list[int]], level: list[int], file_name: str, sort
         f.close()
 
 
-def solve_dungeon(lineup: list[int], file_name: str, dungeon_id: int, dungeon: list[Monster] = None, end_floor: int = 0, do_enchants: bool = False, enchant_str: bool = False, print_stuff: bool = False):
+def solve_dungeon(lineup: list[int], file_name: str, dungeon_id: int, dungeon: list[Monster] = None, end_floor: int = 0, do_enchants: bool = False, enchant_str: bool = False, enchant_vit: bool = False, print_stuff: bool = False):
     # Enchant Lineup
     enchanted_lineup = lineup
     if do_enchants:
-        enchanted_lineup = add_enchantments(lineup, -1, enchant_str, print_stuff)
+        enchanted_lineup = add_enchantments(lineup, -1, enchant_str, enchant_vit, print_stuff)
 
     # Initialize Players
     final_lineup = []
@@ -599,6 +610,27 @@ def find_best_str(print_stuff: bool = False):
     # Do Second half enchants
     levels = [max(1, i * 5) for i in range(6, 11)]
     solve_lineup(lineup, levels, file, str_sort, do_enchants=True, enchant_str=True, print_stuff=print_stuff)
+
+
+def find_best_vit(print_stuff: bool = False):
+    lineup = []
+    create_all_items_keys(lineup, print_stuff)
+
+    # Do plain Items
+    levels = [max(1, i * 5) for i in range(11)]
+    file = "Best Vit Item"
+    solve_lineup(lineup, levels, file, vit_sort, print_stuff=print_stuff)
+
+    # Do Enchantments
+    file = "Best Vit Item with Enchantment"
+
+    # Do First half enchants
+    levels = [max(1, i * 5) for i in range(6)]
+    solve_lineup(lineup, levels, file, vit_sort, do_enchants=True, enchant_vit=True, print_stuff=print_stuff)
+
+    # Do Second half enchants
+    levels = [max(1, i * 5) for i in range(6, 11)]
+    solve_lineup(lineup, levels, file, vit_sort, do_enchants=True, enchant_vit=True, print_stuff=print_stuff)
 
 
 def find_best_items(print_stuff: bool = False):

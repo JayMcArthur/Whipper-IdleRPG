@@ -267,7 +267,7 @@ class Item:
                     print(f'Custom Effect {check} not found')
 
     def print(self):
-        return f'{equip_list[self.id]["nameId_EN"]}({self.id})[{self._enchant1}, {self._enchant2}, {self._enchant3}]'
+        return f'{equip_list[self.id]["nameId_EN"]}[{self.id}, {self._enchant1}, {self._enchant2}, {self._enchant3}]'
 
 
 class Player(Stats):
@@ -301,7 +301,7 @@ class Player(Stats):
         self.armor.apply_upgrade(amount[1])
         self.ring.apply_upgrade(amount[2])
 
-    def apply_enchantment(self, w_enchant: list[int], a_enchant: list[int], r_enchant: list[int],):
+    def apply_enchantment(self, w_enchant: list[int], a_enchant: list[int], r_enchant: list[int], ):
         self.weapon.apply_enchantment(w_enchant)
         self.armor.apply_enchantment(a_enchant)
         self.ring.apply_enchantment(r_enchant)
@@ -370,18 +370,22 @@ class Player(Stats):
 class Monster(Stats):
     # See ./Dart_Code for Miasma Effect and Monster Generator
     # Thanks to Haap for dart code
-    def __init__(self, monster_id: int, dungeon_id: int, dungeon_name: str = '',  is_royal_tomb: bool = False, dungeon_floor: int = 0,  miasma_level: int = 5):
+    def __init__(self, monster_id: int, dungeon_id: int, dungeon_floor: int, dungeon_name: str = '', is_royal_tomb: bool = False, miasma_level: int = 5):
         super().__init__()
         self.id: int = monster_id
+        self.name: str = monster_list[monster_id]['nameId_EN']
         self.xp: int = monster_list[monster_id]['exp']
-        self.lvl: int = miasma_level
         self.effects: list[int] = monster_list[monster_id]['effects']
+        self.dungeon_id: int = dungeon_id
+        self.floor: int = dungeon_floor
 
         f = dungeon_floor
         # Because Royal Tomb goes up forever, we normalise floor
         if is_royal_tomb:
             f = (dungeon_floor - 1) % 50 + 1
-            dungeon_id = dungeon_floor // 100
+            miasma_level = dungeon_floor // 100
+
+        self.lvl: int = miasma_level
 
         ###############################
         # Injected Miasma Effect Code #
@@ -402,7 +406,7 @@ class Monster(Stats):
 
         if is_royal_tomb and dungeon_floor % 100 == 0:
             base_param_prev = (((500 * round(1 + dungeon_id / 4)) + (100 * dungeon_id)) + min(2500 * (miasma_level - 2), 10000))
-            more_percent_prev = (10 + (dungeon_id * 2) + dungeon_bias) * (miasma_level - 1 )
+            more_percent_prev = (10 + (dungeon_id * 2) + dungeon_bias) * (miasma_level - 1)
             base_param = (base_param + base_param_prev) // 2
             more_percent = (more_percent + more_percent_prev) // 2
 
@@ -416,14 +420,19 @@ class Monster(Stats):
             more_percent = 0
 
         # Change in strength according to the level of miasma
-        self.hp = round((monster_list[monster_id]['hp'] + base_param) * ((more_percent * 2 + 100) / 100))
+        self.hp = floor((monster_list[monster_id]['hp'] + base_param) * ((more_percent * 2 + 100) / 100))
         if monster_id == 131:
             self.attack = monster_list[monster_id]['atk'] * (miasma_level ** 2)
         else:
-            self.attack = round((monster_list[monster_id]['atk'] + base_param) * ((more_percent + 100) / 100))
-        self.defense = round((monster_list[monster_id]['def'] + base_param) * ((more_percent + 100) / 100))
-        self.spd = round(monster_list[monster_id]['spd'] * ((more_percent + 100) / 100))
+            self.attack = floor((monster_list[monster_id]['atk'] + base_param) * ((more_percent + 100) / 100))
+        self.defense = floor((monster_list[monster_id]['def'] + base_param) * ((more_percent + 100) / 100))
+        self.spd = floor(monster_list[monster_id]['spd'] * ((more_percent + 100) / 100))
         self.current_hp = self.hp
+
+    def print(self):
+        return (f'ID: {self.id}, Name: {self.name}, Effects: {self.effects}, '
+                f'Dungeon ID: {self.dungeon_id}, Floor: {self.floor}, Level: {self.lvl}, '
+                f'HP: {self.hp}, Attack: {self.attack}, Defense: {self.defense}, SPD: {self.spd}')
 
 
 def generate_attack_defense_mod(player: Player) -> list[float]:
@@ -437,5 +446,5 @@ def generate_attack_defense_mod(player: Player) -> list[float]:
     # One Strike: #68  (Critical hit chance increases by 20%)
     crit_chance = 0.05 + (0.2 * (68 in player.effects) * seven_blessings)
     attack_mod = (1 + (crit_damage * crit_chance)) * (1 + (0.2 * double_strike * seven_blessings))
-    defense_mod = 1 / (1 - (0.20 * (806 in player.effects) * seven_blessings))  # 1, 1.25, 1.66
+    defense_mod = 1 + (0.20 * (806 in player.effects) * seven_blessings)  # 1, 1.2, 1.4
     return [attack_mod, defense_mod]
