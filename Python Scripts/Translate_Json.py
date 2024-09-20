@@ -6,7 +6,7 @@ def read_csv(filename: str) -> list[list[str]]:
     """ read a simple csv file and return list of strings from file """
     data = []
     keywords = []
-    with open(f'./json/{filename}', encoding='utf8') as csv:  # open file for reading, refer to it as csv
+    with open(f'../json/{filename}', encoding='utf8') as csv:  # open file for reading, refer to it as csv
         for row in csv:  # read each row from file (row ends with \n line seperator
             fields = row.strip().split(',')  # split line on commas into list of str
             data.append(fields)  # add fields (list) to end of data list
@@ -20,7 +20,7 @@ def add_translations(que: list[list[str]], translations: str):
     translation_data, keys = read_csv(translations)
 
     for file, checks in que:
-        with open(f'./json/{file}.json', encoding='utf8') as f:
+        with open(f'../json/{file}.json', encoding='utf8') as f:
             data = json.load(f)
             data_list = data[file]
             for item in data_list:
@@ -38,7 +38,7 @@ def add_translations(que: list[list[str]], translations: str):
                         print(f'Couldn\'t find {check}: {item[check]} for {item["id"]} in {file}.json')
 
         final = {file: data_list}
-        with open(f'./json/{file}_EN.json', 'w', encoding='utf8') as f:
+        with open(f'../json/{file}_EN.json', 'w', encoding='utf8') as f:
             f.write(json.dumps(final, ensure_ascii=False, indent=2))
 
 

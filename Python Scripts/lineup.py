@@ -3,9 +3,8 @@ from multiprocessing import Pool, shared_memory
 from math import floor, ceil
 from random import randint
 import numpy as np
-from numpy.ma.core import minimum
 
-from enitity import Player, Monster, Fountain, generate_attack_defense_mod, UPGRADE_MAX, ANALYSIS_MAX, CORROSION_MAX
+from enitity import Player, Monster, Fountain, generate_attack_defense_mod, UPGRADE_MAX, ANALYSIS_LEVEL_MAX, CORROSION_MAX, ANALYSIS_BOOST_DEFAULT
 from json_to_python import dungeon_list, equip_list
 
 
@@ -81,7 +80,6 @@ def run_dungeon_quick(lineup: list[Player], dungeon: list[Monster | Fountain], r
                 fights += 1
                 per.gain_xp(mon.xp)
             else:
-                record[id_a][0] += 1
                 fights += 1 + len(dungeon) - id_b
                 break
 
@@ -101,7 +99,7 @@ def rank_sort(r: list[int]) -> int:
     return (r[0] * 3) + r[2]
 
 
-def str_sort(e: Player, include_modifier: bool = True) -> int:
+def str_sort(e: Player, include_modifier: bool = False) -> int:
     mod = generate_attack_defense_mod(e)[0] if include_modifier else 1
     return floor(e.attack * mod)
 
@@ -208,8 +206,14 @@ def fight_realistic(attacker: Player | Monster, defender: Player | Monster, mons
     # First Strike (66): Can always attack first in battle -- This happens outside
     # Poison (941): Deals 0.5% stacking damage at end of turn
     a_poison = 941 in attacker.effects
+    a_poison_effect = 0.005
+    if monster != 1:
+        a_poison_effect += attacker.analysis_boost.poison_damage
     a_poisoned = 0
     d_poison = 941 in defender.effects
+    d_poison_effect = 0.005
+    if monster != 1:
+        d_poison_effect += defender.analysis_boost.poison_damage
     d_poisoned = 0
     # Seven Blessings (807): The probability of probability-based abilities is doubled
     a_seven_blessings = 1 + (807 in attacker.effects)
@@ -261,7 +265,7 @@ def fight_realistic(attacker: Player | Monster, defender: Player | Monster, mons
             else:
                 crit_damage = 1
             d_hp -= (max(attacker.attack - defender.defense, a_minimum_damage) + randint(0, 5) * miasma) * crit_damage
-            d_poisoned += a_poison * 0.5
+            d_poisoned += a_poison * a_poison_effect
             if d_hp <= 0:
                 if not d_unyielding:
                     attacker.current_hp = a_hp
@@ -270,7 +274,7 @@ def fight_realistic(attacker: Player | Monster, defender: Player | Monster, mons
                 d_unyielding -= 1
                 d_hp = 1
                 d_do_crit = monster != 2
-        a_hp -= a_poisoned * a_max_hp
+        a_hp -= floor(a_poisoned * a_max_hp)
         if a_hp <= 0:
             if not a_unyielding:
                 attacker.current_hp = 0
@@ -298,7 +302,7 @@ def fight_realistic(attacker: Player | Monster, defender: Player | Monster, mons
             else:
                 crit_damage = 1
             a_hp -= (max(defender.attack - attacker.defense, d_minimum_damage) + randint(0, 5) * miasma) * crit_damage
-            a_poisoned += d_poison * 0.5
+            a_poisoned += d_poison * d_poison_effect
             if a_hp <= 0:
                 if not a_unyielding:
                     attacker.current_hp = 0
@@ -307,7 +311,7 @@ def fight_realistic(attacker: Player | Monster, defender: Player | Monster, mons
                 a_unyielding -= 1
                 a_hp = 1
                 a_do_crit = monster != 1
-        d_hp -= d_poisoned * d_max_hp
+        d_hp -= floor(d_poisoned * d_max_hp)
         if d_hp <= 0:
             if not d_unyielding:
                 attacker.current_hp = a_hp
@@ -391,6 +395,7 @@ def fight_quick(attacker: Player | Monster, defender: Player | Monster, monster:
 ###########################
 # Create Lineup / Dungeon #
 ###########################
+
 
 def create_dungeon(dungeon: list[Monster | Fountain], identifier: int, end_floor: int = 0):
     # Floor type determines the amount of monsters you fight
@@ -482,7 +487,7 @@ def create_all_items_keys(lineup: list, print_stuff: bool) -> None:
         print(f"Number of item combinations: {len(lineup)}")
 
 
-def add_enchantments(lineup: list, lvl: int, only_str: bool, only_vit: bool, print_stuff: bool) -> list[list[int]]:
+def create_enchantments(lvl: int, only_str: bool, only_vit: bool, print_stuff: bool) -> list[list[int]]:
     # Endurance 30: #130 (16000 HP)
     # Strength 30: #230 (16000 STR)
     # Sturdy 30: #330 (16000 VIT)
@@ -525,13 +530,30 @@ def add_enchantments(lineup: list, lvl: int, only_str: bool, only_vit: bool, pri
     for i in range(1, min(len(side_enchantments), 10)):
         enchantments += list(a + b for a, b in product(combinations_with_replacement(main_enchantments, 9 - i), combinations(side_enchantments, i)))
 
+    # Filtering
+    # Here we can filter out enchantment we know will be bad.
+    # I know the Tomb will take at least 5 Strengths
+    # IDK if it is best
+    if lvl == -1:
+        total = len(enchantments)
+        for e_id, enchant in enumerate(enchantments[::-1]):
+            if enchant.count(230) + enchant.count(630) < 5:
+                enchantments.pop(total - e_id - 1)
+
     if print_stuff:
         print(f'Number of enchantment combinations: {len(enchantments)}')
+    return enchantments
 
+
+def add_enchantments(lineup: list[list[int]], enchantments: list[list[int]], print_stuff: bool) -> list[list[int]]:
     lineup_updated = []
     for enchant in enchantments:
         for player in lineup:
             lineup_updated.append([player[0]] + list(enchant[0:3]) + [player[4]] + list(enchant[3:6]) + [player[8]] + list(enchant[6:9]))
+
+    if print_stuff:
+        print(f"Number of Enchanted items: {len(lineup_updated)}")
+
     return lineup_updated
 
 
@@ -545,13 +567,14 @@ def solve_lineup(lineup: list[list[int]], level: list[int], file_name: str, sort
     # Enchant Lineup
     enchanted_lineup = lineup
     if do_enchants:
-        enchanted_lineup = add_enchantments(lineup, level[0], enchant_str, enchant_vit, print_stuff)
+        enchantments = create_enchantments(level[0], enchant_str, enchant_vit, print_stuff)
+        enchanted_lineup = add_enchantments(lineup, enchantments, print_stuff)
 
     # Initialize Players
     final_lineup = []
     for keys in enchanted_lineup:
         final_lineup.append(Player())
-        final_lineup[-1].add_items(keys[0:4], keys[4:8], keys[8:12], [CORROSION_MAX] * 3, [ANALYSIS_MAX] * 3, [UPGRADE_MAX] * 3)
+        final_lineup[-1].add_items(keys[0:4], keys[4:8], keys[8:12], [CORROSION_MAX] * 3, [ANALYSIS_LEVEL_MAX] * 3, ANALYSIS_BOOST_DEFAULT, [UPGRADE_MAX] * 3)
 
     # Run Lineup
     for lvl in level:
@@ -566,8 +589,10 @@ def solve_lineup(lineup: list[list[int]], level: list[int], file_name: str, sort
             record.sort(key=sort_function)
             if print_stuff:
                 print(f"{lvl:02} - Best: {final_lineup[record[-1][3]].print()}")
-                print(f"{lvl:02} - _2nd: {final_lineup[record[-2][3]].print()}")
-                print(f"{lvl:02} - _3rd: {final_lineup[record[-3][3]].print()}")
+                if len(final_lineup) > 1:
+                    print(f"{lvl:02} - _2nd: {final_lineup[record[-2][3]].print()}")
+                if len(final_lineup) > 2:
+                    print(f"{lvl:02} - _3rd: {final_lineup[record[-3][3]].print()}")
             f = open(f'{file_name} - Level {lvl:02} Results.txt', "w")
             for i in range(max(len(final_lineup) - 1000, 0), len(final_lineup)):
                 f.write(f"Rank {rank_sort(record[i]):03}: {record[i][3]:03} - [{record[i][0]:03}, {record[i][2]:02}, {record[i][1]:03}] - {final_lineup[record[i][3]].print()}\n")
@@ -575,8 +600,10 @@ def solve_lineup(lineup: list[list[int]], level: list[int], file_name: str, sort
             final_lineup.sort(key=sort_function)
             if print_stuff:
                 print(f"{lvl:02} - Best: {final_lineup[-1].print()}")
-                print(f"{lvl:02} - _2nd: {final_lineup[-2].print()}")
-                print(f"{lvl:02} - _3rd: {final_lineup[-3].print()}")
+                if len(final_lineup) > 1:
+                    print(f"{lvl:02} - _2nd: {final_lineup[-2].print()}")
+                if len(final_lineup) > 2:
+                    print(f"{lvl:02} - _3rd: {final_lineup[-3].print()}")
             f = open(f'{file_name} - Level {lvl:02} Results.txt', "w")
             for i in range(max(len(final_lineup) - 1000, 0), len(final_lineup)):
                 f.write(f"Rank {len(final_lineup) - i:03}: {final_lineup[i].print()}\n")
@@ -588,31 +615,42 @@ def breakup_lineup(list_, n):
         yield list_[i:i + n]
 
 
-def solve_dungeon(file_name: str, dungeon_id: int, lineup: list[int] = None, dungeon: list[Monster | Fountain] = None, end_floor: int = 0, do_enchants: bool = False,
+def solve_dungeon(file_name: str, dungeon_id: int, lineup: list[list[int]] = None, dungeon: list[Monster | Fountain] = None, end_floor: int = 0, do_enchants: bool = False,
                   enchant_str: bool = False, enchant_vit: bool = False, print_stuff: bool = False):
     if lineup is None:
         lineup = []
-        create_all_items_keys(lineup, False)
+        create_all_items_keys(lineup, print_stuff)
 
     if dungeon is None:
         dungeon = []
         create_dungeon(dungeon, dungeon_id, end_floor)
 
+    enchantments = []
+    if do_enchants:
+        enchantments = create_enchantments(-1, enchant_str, enchant_vit, print_stuff)
+
     final_record = []
     record_lineup = []
+    part_id = 0
+    parts_len = ceil(len(lineup) / 250)
 
     for part in breakup_lineup(lineup, 250):
+        part_id += 1
+        if print_stuff:
+            print(f'Starting Part {part_id}/{parts_len}')
+
         # Enchant Lineup
         enchanted_lineup = part
         if do_enchants:
-            enchanted_lineup = add_enchantments(part, -1, enchant_str, enchant_vit, False)
+            enchanted_lineup = add_enchantments(part, enchantments, print_stuff and part_id == 0)
 
         # Initialize Players
         final_lineup = []
         for keys in enchanted_lineup:
             final_lineup.append(Player())
-            final_lineup[-1].add_items(keys[0:4], keys[4:8], keys[8:12], [CORROSION_MAX] * 3, [ANALYSIS_MAX] * 3, [UPGRADE_MAX] * 3)
+            final_lineup[-1].add_items(keys[0:4], keys[4:8], keys[8:12], [CORROSION_MAX] * 3, [ANALYSIS_LEVEL_MAX] * 3, ANALYSIS_BOOST_DEFAULT, [UPGRADE_MAX] * 3)
             final_lineup[-1].apply_level(1)
+        del enchanted_lineup
 
         # Initialize the record
         # Wins, HP, ID
@@ -622,23 +660,24 @@ def solve_dungeon(file_name: str, dungeon_id: int, lineup: list[int] = None, dun
         run_dungeon_quick(final_lineup, dungeon, record, print_stuff)
         record.sort(key=dungeon_sort)
 
-        for i in range(min(len(final_lineup), 10)):
+        for i in range(min(len(final_lineup), 3)):
             final_record.append([record[-i][0], record[-i][1], len(record_lineup)])
             record_lineup.append(final_lineup[record[-i][2]])
+        del final_lineup
+        del record
 
     final_record.sort(key=dungeon_sort)
 
     # Save Results
     f = open(f'{file_name} Results.txt', "w")
     if print_stuff:
-        print(
-            f"{dungeon_sort(final_record[-1]):03} - [{dungeon[final_record[-1][0] - 1].floor}, {dungeon[final_record[-1][0] - 1].id}, {dungeon[final_record[-1][0] - 1].name}] - Best: {record_lineup[final_record[-1][2]].print()}")
-        print(
-            f"{dungeon_sort(final_record[-2]):03} - [{dungeon[final_record[-1][0] - 1].floor}, {dungeon[final_record[-2][0] - 1].id}, {dungeon[final_record[-2][0] - 1].name}] - _2nd: {record_lineup[final_record[-2][2]].print()}")
-        print(
-            f"{dungeon_sort(final_record[-3]):03} - [{dungeon[final_record[-1][0] - 1].floor}, {dungeon[final_record[-3][0] - 1].id}, {dungeon[final_record[-3][0] - 1].name}] - _3rd: {record_lineup[final_record[-3][2]].print()}")
+        print(f"{dungeon_sort(final_record[-1]):03} - {dungeon[final_record[-1][0]].print_dungeon()} - Best: {record_lineup[final_record[-1][2]].print()}")
+        if len(final_record) > 1:
+            print(f"{dungeon_sort(final_record[-2]):03} - {dungeon[final_record[-1][0]].print_dungeon()} - _2nd: {record_lineup[final_record[-2][2]].print()}")
+        if len(final_record) > 2:
+            print(f"{dungeon_sort(final_record[-3]):03} - {dungeon[final_record[-1][0]].print_dungeon()} - _3rd: {record_lineup[final_record[-3][2]].print()}")
     for i in range(max(len(record_lineup) - 1000, 0), len(record_lineup)):
-        f.write(f"Rank {dungeon_sort(final_record[i]):03}: {final_record[i][2]:03} - {record_lineup[final_record[i][2]].print()}\n")
+        f.write(f"Rank {dungeon_sort(final_record[i]):03} - {dungeon[final_record[i][0]].print_dungeon()} - {record_lineup[final_record[i][2]].print()}\n")
     f.close()
 
 

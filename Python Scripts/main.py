@@ -1,6 +1,6 @@
 from lineup import solve_lineup, solve_dungeon, find_best_str, find_best_vit, find_best_items, find_best_enchantments, rank_sort
 from json_to_python import make_lists
-from enitity import Monster
+from enitity import Monster, Fountain
 
 # This was made using the results from find_best_items
 # We take the best of every result and store them here for enchant use
@@ -317,6 +317,7 @@ best_vitality_with_enchants = {
 # 803 - Three Paths: 50% chance for critical damage to be tripled
 # 806 - Sixth Sense: 20% chance to dodge an attack
 # 807 - Seven Blessings: The probability of probability-based abilities is doubled
+# 941 - Poison: Deal stacking 0.5% of Monsters HP
 
 #################
 # Dungeon Notes #
@@ -344,78 +345,133 @@ best_vitality_with_enchants = {
 # 75 - Random Dungeons ------------- 50
 
 
+# TODO - Whipper v2.5
+#  Balance adjustment.
+#  > Fountains now give more stats (Maybe percent)
+
+# TODO - Whipper v3.7
+#  SPD now affects evasion rate and consecutive attack probability.
+
+
 def run_custom_setups():
     setups = [
-        [171, 130, 230, 230, 244, 230, 230, 330, 303, 330, 66, 806],
-        [171, 130, 230, 230, 244, 230, 230, 330, 303, 330, 330, 66],
-        [171, 130, 130, 230, 244, 230, 230, 230, 303, 330, 330, 806],
-        [171, 130, 130, 130, 244, 230, 230, 230, 303, 230, 66, 67],
-        [171, 130, 130, 230, 244, 230, 230, 230, 303, 330, 330, 330],
-        [171, 130, 130, 230, 244, 230, 230, 230, 303, 330, 67, 806],
-        [171, 130, 230, 230, 244, 230, 230, 330, 303, 330, 330, 330],
-        [171, 130, 230, 230, 244, 230, 230, 330, 303, 330, 330, 806],
-        [171, 130, 230, 230, 244, 230, 230, 230, 303, 230, 66, 67],
-        [171, 130, 130, 130, 244, 230, 230, 230, 303, 230, 230, 67],
-        [171, 130, 230, 230, 244, 230, 230, 230, 303, 330, 330, 67],
-        [171, 130, 130, 130, 244, 230, 230, 230, 303, 230, 330, 67],
-        [171, 130, 130, 230, 244, 230, 230, 230, 303, 230, 330, 67],
-        [171, 130, 230, 230, 244, 230, 230, 330, 303, 330, 66, 67],
-        [171, 130, 230, 230, 244, 230, 230, 330, 303, 330, 67, 806],
-        [171, 130, 230, 230, 244, 230, 230, 230, 303, 330, 66, 67],
-        [171, 130, 230, 230, 244, 230, 230, 330, 303, 330, 330, 67],
-        [171, 130, 130, 230, 244, 230, 230, 230, 303, 330, 66, 67],
-        [171, 130, 130, 230, 244, 230, 230, 230, 303, 330, 330, 67],
-        [171, 130, 130, 230, 244, 230, 230, 230, 303, 230, 66, 67]
+        [172, 66, 230, 230, 252, 530, 530, 730, 315, 730, 230, 230],
+        [172, 66, 230, 230, 252, 530, 530, 730, 321, 730, 230, 230],
+        [172, 66, 230, 230, 252, 530, 530, 730, 314, 730, 230, 230],
+        [190, 66, 230, 230, 252, 530, 530, 730, 315, 730, 230, 230],
+        [188, 66, 230, 230, 226, 530, 530, 730, 322, 730, 230, 230]
     ]
     levels = [max(1, i * 5) for i in range(11)]
+    levels = [50]
     file = "Custom"
     do_enchants = False
     enchant_str = False
+    enchant_vit = False
     ignore_speed = False
     print_stuff = True
 
-    solve_lineup(setups, levels, file, rank_sort, do_enchants=do_enchants, enchant_str=enchant_str, ignore_speed=ignore_speed, print_stuff=print_stuff)
+    solve_lineup(setups, levels, file, rank_sort, do_enchants=do_enchants, enchant_str=enchant_str, enchant_vit=enchant_vit, ignore_speed=ignore_speed, print_stuff=print_stuff)
 
 
 def run_custom_dungeon():
+    # I know this can get to the last Monster
+    # So I need to edit my script to reflect this
     setups = [
-        [171, 130, 230, 230, 244, 230, 230, 330, 303, 330, 66, 806],
-        [171, 130, 230, 230, 244, 230, 230, 330, 303, 330, 330, 66],
-        [171, 130, 130, 230, 244, 230, 230, 230, 303, 330, 330, 806],
-        [171, 130, 130, 130, 244, 230, 230, 230, 303, 230, 66, 67],
-        [171, 130, 130, 230, 244, 230, 230, 230, 303, 330, 330, 330],
-        [171, 130, 130, 230, 244, 230, 230, 230, 303, 330, 67, 806],
-        [171, 130, 230, 230, 244, 230, 230, 330, 303, 330, 330, 330],
-        [171, 130, 230, 230, 244, 230, 230, 330, 303, 330, 330, 806],
-        [171, 130, 230, 230, 244, 230, 230, 230, 303, 230, 66, 67],
-        [171, 130, 130, 130, 244, 230, 230, 230, 303, 230, 230, 67],
-        [171, 130, 230, 230, 244, 230, 230, 230, 303, 330, 330, 67],
-        [171, 130, 130, 130, 244, 230, 230, 230, 303, 230, 330, 67],
-        [171, 130, 130, 230, 244, 230, 230, 230, 303, 230, 330, 67],
-        [171, 130, 230, 230, 244, 230, 230, 330, 303, 330, 66, 67],
-        [171, 130, 230, 230, 244, 230, 230, 330, 303, 330, 67, 806],
-        [171, 130, 230, 230, 244, 230, 230, 230, 303, 330, 66, 67],
-        [171, 130, 230, 230, 244, 230, 230, 330, 303, 330, 330, 67],
-        [171, 130, 130, 230, 244, 230, 230, 230, 303, 330, 66, 67],
-        [171, 130, 130, 230, 244, 230, 230, 230, 303, 330, 330, 67],
-        [171, 130, 130, 230, 244, 230, 230, 230, 303, 230, 66, 67]
+        [184, 66, 230, 230, 246, 530, 530, 730, 314, 730, 230, 230],
+        [172, 66, 230, 230, 252, 530, 530, 730, 314, 730, 230, 230]
     ]
     dungeon_id = 12
-    end_floor = 2254
-    dungeon = [
-        Monster(17, dungeon_id, end_floor, "", True, ),
-        Monster(133, dungeon_id, end_floor + 46, "", True)
+    end_floor = 2750 - 50
+
+    fairy = 17
+    knight = 26
+    wizard = 27
+    paladin = 28
+    buddha = 31
+    dragon = 44
+    point = 59
+    mist = 64
+    armor = 127
+    mummy = 132
+    necronomicon = 134
+
+    dungeon_temp = [
+        [knight, fairy, knight, knight, knight, fairy, knight, knight],
+        [knight, fairy, knight, fairy, knight],
+        [knight, fairy, knight, fairy, knight],
+        [fairy, fairy, knight, fairy, knight],
+        [fairy, fairy, knight],
+        [knight, knight, knight, fairy, knight],
+        [knight, fairy, knight, fairy, knight],
+        [fairy, knight, knight, knight, fairy, knight, fairy],
+        [knight, knight, knight, fairy, fairy, knight, fairy],
+        [knight, fairy, fairy, knight, fairy, fairy, knight],
+        # 61
+        [paladin, paladin, paladin, fairy, wizard],
+        [paladin, fairy, knight, wizard, paladin, paladin],
+        [wizard, fairy, paladin, paladin, paladin],
+        [knight, wizard, knight, knight, wizard, knight],
+        [fairy, wizard, fairy, knight, paladin, fairy],
+        [fairy, knight, fairy, knight, wizard, knight],
+        [paladin, wizard, wizard, knight, fairy, wizard],
+        [paladin, wizard, fairy, fairy, knight, paladin],
+        [wizard, fairy, knight, wizard, knight, wizard, fairy],
+        [fairy, paladin, wizard],
+        # 71
+        [dragon, paladin, buddha, buddha, buddha, buddha, dragon],
+        [paladin, paladin, dragon, dragon, dragon],
+        [buddha, dragon, paladin, dragon, paladin],
+        [buddha, buddha, paladin, buddha, paladin, dragon],
+        [dragon, dragon, paladin, paladin, buddha, paladin],
+        [paladin, dragon, dragon, buddha, buddha, buddha],
+        [dragon, dragon, buddha, dragon, buddha],
+        [paladin, buddha, dragon, buddha, paladin, dragon],
+        [dragon, buddha, buddha, dragon, paladin],
+        [dragon, dragon, buddha, paladin, dragon, dragon],
+        # 81
+        [point, point, dragon, buddha, mummy, point],
+        [point, mummy, point, buddha, point, mummy, point],
+        [point, point, point, point, buddha, point],
+        [buddha, mummy, point, mummy, buddha, mummy],
+        [mummy, dragon, dragon, dragon, dragon, mummy],
+        [mummy, dragon, dragon, point, dragon, point, dragon],
+        [buddha, point, point, buddha, point],
+        [point, point, buddha, mummy, dragon, point],
+        [dragon, dragon, point, point, point],
+        [point, point, buddha, buddha, point, point],
+        # 91
+        [point, armor, armor, point, mist],
+        [mist, mummy, point, point],
+        [point, armor, mummy, mummy],
+        [mummy, mummy, mummy, point, armor, mist, mummy],
+        [armor, armor, point, point, mummy],
+        [armor, mist, point, armor, mummy, mummy],
+        [mist, mummy, mist, armor, armor],
+        [mummy, armor, armor, mummy, mummy, mummy],
+        [point, mist, armor, point, mummy],
+        [point, point, mummy, armor, point, necronomicon]
     ]
+
+    dungeon = []
+    for floor_id, floor in enumerate(dungeon_temp):
+        for encounter in floor:
+            dungeon.append(Monster(encounter, dungeon_id, end_floor + floor_id, is_royal_tomb=True))
+        dungeon.append(Fountain(is_level_up=True))
+
     file = "Custom Dungeon"
     do_enchants = False
     enchant_str = False
+    enchant_vit = False
     print_stuff = True
+    end_floor += 50
 
-    solve_dungeon(file, dungeon_id, lineup=setups, dungeon=dungeon, end_floor=end_floor, do_enchants=do_enchants, enchant_str=enchant_str, print_stuff=print_stuff)
+    solve_dungeon(file, dungeon_id, lineup=setups, end_floor=end_floor, do_enchants=do_enchants, enchant_str=enchant_str, enchant_vit=enchant_vit, print_stuff=print_stuff)
 
 
 def main(custom_equip: bool, custom_dungeon: bool, dungeon: bool, combination: bool, strength: bool, vitality: bool, enchantment: bool) -> None:
-    m = Monster(134, 12, 2400, is_royal_tomb=True)
+    m = Monster(134, 12, 2700, is_royal_tomb=True)
+    print(m.print())
+    m = Monster(17, 12, 2660, is_royal_tomb=True)
     print(m.print())
 
     if custom_equip:
@@ -425,15 +481,14 @@ def main(custom_equip: bool, custom_dungeon: bool, dungeon: bool, combination: b
 
     if dungeon:
         dungeon_id = 12
-        end_floor = 2400
+        end_floor = 7600
+        file = f"Dungeon {dungeon_id}"
         do_enchants = True
         enchant_str = False
         enchant_vit = False
         print_stuff = True
-        lineup = [[184, 66, 230, 230, 246, 530, 530, 730, 314, 730, 230, 230],
-                  [172, 66, 230, 230, 252, 530, 530, 730, 314, 730, 230, 230]]
 
-        solve_dungeon(f"Dungeon {dungeon_id}", dungeon_id, lineup=None, end_floor=end_floor, do_enchants=do_enchants, enchant_str=enchant_str, enchant_vit=enchant_vit, print_stuff=print_stuff)
+        solve_dungeon(file, dungeon_id, end_floor=end_floor, do_enchants=do_enchants, enchant_str=enchant_str, enchant_vit=enchant_vit, print_stuff=print_stuff)
 
     if strength:
         find_best_str(True)
@@ -449,4 +504,4 @@ def main(custom_equip: bool, custom_dungeon: bool, dungeon: bool, combination: b
 
 if __name__ == '__main__':
     make_lists()
-    main(False, False, True, False, False, False, False)
+    main(False, True, True, False, False, False, False)

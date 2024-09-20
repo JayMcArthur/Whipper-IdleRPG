@@ -3,10 +3,27 @@ from math import floor
 
 from json_to_python import monster_list, equip_list, custom_list, exp_to_level
 
-
 # This is the defaults of items
 UPGRADE_MAX = 20000
-ANALYSIS_MAX = 15
+ANALYSIS_LEVEL_MAX = 15
+ANALYSIS_BOOST_MAX = 495
+# We give max to All damage types as I assume you will change to weapon type
+ANALYSIS_BOOST_DEFAULT = [
+    0,  # HP
+    100,  # STR
+    95,  # VIT
+    0,  # SPD
+    0,  # LUK
+    0,  # Drop Rate
+    100,  # Crit Rate
+    100,  # Crit Dmg
+    100,  # Slash Dmg
+    100,  # Bludgeon Dmg
+    100,  # Pierce Dmg
+    100,  # Projectile Dmg
+    0,  # Poison Dmg
+    0,  # Xp Gain
+]
 CORROSION_MAX = 999
 
 
@@ -287,16 +304,49 @@ class Player(Stats):
         self.lvl: int = 1
         self.xp: int = 0
         self.type: str = 'Player'
+        self.analysis_boost: Stats = Stats(1)
+        self.analysis_boost.drop_rate = 1
+        self.analysis_boost.critical_hit_rate = 1
+        self.analysis_boost.critical_damage = 1
+        self.analysis_boost.slashing_damage = 1
+        self.analysis_boost.bludgeoning_damage = 1
+        self.analysis_boost.piercing_damage = 1
+        self.analysis_boost.projectile_damage = 1
+        self.analysis_boost.poison_damage = 1
+        self.analysis_boost.experience_gain = 1
 
     def apply_corrosion(self, amount: list[int]):
         self.weapon.corrosion = amount[0]
         self.armor.corrosion = amount[1]
         self.ring.corrosion = amount[2]
 
-    def apply_analysis(self, amount: list[int]):
-        self.weapon.apply_analysis_weapon(amount[0], self._has_set)
-        self.armor.apply_analysis_armor(amount[1])
-        self.ring.apply_analysis_ring(amount[2], self.weapon.attack_kind, self._has_set)
+    def apply_analysis(self, level: list[int], boost_points: list[int]):
+        self.analysis_boost.hp += boost_points[0] * 0.005
+        self.analysis_boost.str += boost_points[1] * 0.005
+        self.analysis_boost.vit += boost_points[2] * 0.005
+        self.analysis_boost.spd += boost_points[3] * 0.005
+        self.analysis_boost.luk += boost_points[4] * 0.005
+        self.analysis_boost.drop_rate += boost_points[5] * 0.0002
+        self.analysis_boost.critical_hit_rate += boost_points[6] * 0.002
+        self.analysis_boost.critical_damage += boost_points[7] * 0.005
+        self.analysis_boost.slashing_damage += boost_points[8] * 0.005
+        if self.weapon.attack_kind == "Slashing":
+            self.weapon.boost += self.analysis_boost.slashing_damage
+        self.analysis_boost.bludgeoning_damage += boost_points[9] * 0.005
+        if self.weapon.attack_kind == "Bludgeoning":
+            self.weapon.boost += self.analysis_boost.bludgeoning_damage
+        self.analysis_boost.piercing_damage += boost_points[10] * 0.005
+        if self.weapon.attack_kind == "Piercing":
+            self.weapon.boost += self.analysis_boost.piercing_damage
+        self.analysis_boost.projectile_damage += boost_points[11] * 0.005
+        if self.weapon.attack_kind == "Projectile":
+            self.weapon.boost += self.analysis_boost.projectile_damage
+        self.analysis_boost.poison_damage += boost_points[12] * 0.0001
+        self.analysis_boost.experience_gain += boost_points[13] * 0.005
+
+        self.weapon.apply_analysis_weapon(level[0], self._has_set)
+        self.armor.apply_analysis_armor(level[1])
+        self.ring.apply_analysis_ring(level[2], self.weapon.attack_kind, self._has_set)
 
     def apply_upgrade(self, amount: list[int]):
         self.weapon.apply_upgrade(amount[0])
@@ -308,13 +358,13 @@ class Player(Stats):
         self.armor.apply_enchantment(a_enchant)
         self.ring.apply_enchantment(r_enchant)
 
-    def add_items(self, weapon: list[int], armor: list[int], ring: list[int], corrosion: list[int], analysis: list[int], upgrade: list[int]):
+    def add_items(self, weapon: list[int], armor: list[int], ring: list[int], corrosion: list[int], analysis: list[int], analysis_boost: list[int], upgrade: list[int]):
         self.weapon = Item(weapon[0])
         self.armor = Item(armor[0])
         self.ring = Item(ring[0])
         self._has_set = equip_list[weapon[0]]["set_EN"] in [equip_list[armor[0]]["nameId_EN"], equip_list[ring[0]]["nameId_EN"]]
         self.apply_corrosion(corrosion)
-        self.apply_analysis(analysis)
+        self.apply_analysis(analysis, analysis_boost)
         self.apply_upgrade(upgrade)
         self.apply_enchantment(weapon[1:], armor[1:], ring[1:])
         self.effects += self.weapon.effects + self.armor.effects + self.ring.effects
@@ -342,11 +392,11 @@ class Player(Stats):
         self.vit += (1 + self.weapon.up.vit + self.armor.up.vit + self.ring.up.vit) * (level - 1)
         self.spd += (level - 1)
         # Do Multiplier
-        self.hp *= self.weapon.mult.hp + self.armor.mult.hp + self.ring.mult.hp - 2
-        self.str *= self.weapon.mult.str + self.armor.mult.str + self.ring.mult.str - 2
-        self.vit *= self.weapon.mult.vit + self.armor.mult.vit + self.ring.mult.vit - 2
-        self.spd *= self.weapon.mult.spd + self.armor.mult.spd + self.ring.mult.spd - 2
-        self.luk *= self.weapon.mult.luk + self.armor.mult.luk + self.ring.mult.luk - 2
+        self.hp *= self.weapon.mult.hp + self.armor.mult.hp + self.ring.mult.hp + self.analysis_boost.hp - 3
+        self.str *= self.weapon.mult.str + self.armor.mult.str + self.ring.mult.str + self.analysis_boost.str - 3
+        self.vit *= self.weapon.mult.vit + self.armor.mult.vit + self.ring.mult.vit + self.analysis_boost.vit - 3
+        self.spd *= self.weapon.mult.spd + self.armor.mult.spd + self.ring.mult.spd + self.analysis_boost.spd - 3
+        self.luk *= self.weapon.mult.luk + self.armor.mult.luk + self.ring.mult.luk + self.analysis_boost.luk - 3
         # Floor values
         self.hp = floor(self.hp)
         self.str = floor(self.str)
@@ -356,14 +406,14 @@ class Player(Stats):
         # Add Weapon
         self.attack = self.str + (((self.weapon.upgrade * self.weapon.upgrade_boost) + (self.weapon.corrosion * 10 * self.weapon.corrosion_boost) + self.weapon.param) * self.weapon.boost)
         # Add Armor
-        self.defense = self.vit + ((self.armor.upgrade * self.armor.upgrade_boost + self.armor.corrosion * 10 * self.armor.corrosion_boost + self.armor.param) * self.armor.boost)
+        self.defense = self.vit + (((self.armor.upgrade * self.armor.upgrade_boost) + (self.armor.corrosion * 10 * self.armor.corrosion_boost) + self.armor.param) * self.armor.boost)
         # Floor values
         self.attack = floor(self.attack)
         self.defense = floor(self.defense)
         self.current_hp = self.hp
 
     def gain_xp(self, xp: int):
-        self.xp += xp
+        self.xp += floor(xp * self.analysis_boost.experience_gain)
         level = exp_to_level(self.xp)
         if level != self.lvl:
             self.apply_level(level)
@@ -431,15 +481,31 @@ class Monster(Stats):
             self.attack = monster_list[monster_id]['atk'] * (miasma_level ** 2)
         else:
             self.attack = floor((monster_list[monster_id]['atk'] + base_param) * ((more_percent + 100) / 100))
-        self.minimum_damage = floor((self.attack * minimum_damage_percent)/100)
+        self.minimum_damage = floor((self.attack * minimum_damage_percent) / 100)
         self.defense = floor((monster_list[monster_id]['def'] + base_param) * ((more_percent + 100) / 100))
         self.spd = floor(monster_list[monster_id]['spd'] * ((more_percent + 100) / 100))
         self.current_hp = self.hp
+
+        self.analysis_boost: Stats = Stats(1)
+        self.analysis_boost.drop_rate = 1
+        self.analysis_boost.critical_hit_rate = 1
+        self.analysis_boost.critical_damage = 1
+        self.analysis_boost.slashing_damage = 1
+        self.analysis_boost.bludgeoning_damage = 1
+        self.analysis_boost.piercing_damage = 1
+        self.analysis_boost.projectile_damage = 1
+        self.analysis_boost.poison_damage = 1
+        self.analysis_boost.experience_gain = 1
 
     def print(self):
         return (f'ID: {self.id}, Name: {self.name}, Effects: {self.effects}, '
                 f'Dungeon ID: {self.dungeon_id}, Floor: {self.floor}, Level: {self.lvl}, '
                 f'HP: {self.hp}, Attack: {self.attack}, Minimum Damage: {self.minimum_damage}, Defense: {self.defense}, SPD: {self.spd}')
+
+    def print_dungeon(self):
+        return (
+            f'[{self.floor}, {self.id}, {self.name}]'
+        )
 
 
 class Fountain:
@@ -475,9 +541,9 @@ def generate_attack_defense_mod(player: Player) -> list[float]:
     seven_blessings = 1 + (807 in player.effects)
     # Three Paths: #803 (50% chance for critical damage to be *3)
     # Crit is 5% for 2x attack damage
-    crit_damage = 1 + (0.5 * (803 in player.effects) * seven_blessings)
+    crit_damage = 1 + (0.5 * (803 in player.effects) * seven_blessings) + player.analysis_boost.critical_damage
     # One Strike: #68  (Critical hit chance increases by 20%)
-    crit_chance = 0.05 + (0.2 * (68 in player.effects) * seven_blessings)
+    crit_chance = 0.05 + (0.2 * (68 in player.effects) * seven_blessings) + player.analysis_boost.critical_hit_rate
     attack_mod = (1 + (crit_damage * crit_chance)) * (1 + (0.2 * double_strike * seven_blessings))
     defense_mod = 1 + (0.20 * (806 in player.effects) * seven_blessings)  # 1, 1.2, 1.4
     return [attack_mod, defense_mod]

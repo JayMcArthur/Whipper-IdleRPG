@@ -9,9 +9,9 @@
       "spd": 1,
       "exp": 2,
       "item1": 101,
-      "prob1": 10,
+      "prob1": 11,
       "item2": 201,
-      "prob2": 6,
+      "prob2": 7,
       "nameId_EN": "Slime"
     },
     {
@@ -23,7 +23,7 @@
       "spd": 1,
       "exp": 3,
       "item1": 102,
-      "prob1": 10,
+      "prob1": 11,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Goblin"
@@ -37,7 +37,7 @@
       "spd": 1,
       "exp": 6,
       "item1": 202,
-      "prob1": 10,
+      "prob1": 11,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Hornet"
@@ -51,9 +51,9 @@
       "spd": 2,
       "exp": 8,
       "item1": 203,
-      "prob1": 10,
+      "prob1": 11,
       "item2": 303,
-      "prob2": 6,
+      "prob2": 7,
       "nameId_EN": "Killer Bee"
     },
     {
@@ -65,7 +65,7 @@
       "spd": 5,
       "exp": 7,
       "item1": 302,
-      "prob1": 10,
+      "prob1": 11,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Scolopendrid"
@@ -79,9 +79,9 @@
       "spd": 8,
       "exp": 10,
       "item1": 103,
-      "prob1": 8,
+      "prob1": 9,
       "item2": 304,
-      "prob2": 6,
+      "prob2": 7,
       "nameId_EN": "Thief"
     },
     {
@@ -93,7 +93,7 @@
       "spd": 2,
       "exp": 8,
       "item1": 301,
-      "prob1": 10,
+      "prob1": 11,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Big Bat"
@@ -107,7 +107,7 @@
       "spd": 3,
       "exp": 12,
       "item1": 104,
-      "prob1": 8,
+      "prob1": 9,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Giant Bat"
@@ -121,9 +121,9 @@
       "spd": 7,
       "exp": 15,
       "item1": 204,
-      "prob1": 8,
+      "prob1": 9,
       "item2": 201,
-      "prob2": 6,
+      "prob2": 7,
       "nameId_EN": "Albino slime"
     },
     {
@@ -135,7 +135,7 @@
       "spd": 6,
       "exp": 15,
       "item1": 104,
-      "prob1": 8,
+      "prob1": 9,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Red Goblin"
@@ -149,7 +149,7 @@
       "spd": 10,
       "exp": 25,
       "item1": 304,
-      "prob1": 8,
+      "prob1": 9,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Baby Dragon"
@@ -163,9 +163,9 @@
       "spd": 4,
       "exp": 15,
       "item1": 104,
-      "prob1": 8,
+      "prob1": 9,
       "item2": 105,
-      "prob2": 6,
+      "prob2": 7,
       "nameId_EN": "Clockwork Soldier"
     },
     {
@@ -177,9 +177,9 @@
       "spd": 10,
       "exp": 20,
       "item1": 204,
-      "prob1": 8,
+      "prob1": 9,
       "item2": 205,
-      "prob2": 6,
+      "prob2": 7,
       "nameId_EN": "Death Machine"
     },
     {
@@ -191,9 +191,9 @@
       "spd": 15,
       "exp": 24,
       "item1": 106,
-      "prob1": 8,
+      "prob1": 9,
       "item2": 108,
-      "prob2": 6,
+      "prob2": 7,
       "nameId_EN": "Death Machine 2"
     },
     {
@@ -205,9 +205,9 @@
       "spd": 15,
       "exp": 26,
       "item1": 206,
-      "prob1": 8,
+      "prob1": 9,
       "item2": 208,
-      "prob2": 5,
+      "prob2": 6,
       "nameId_EN": "Death Machine 3"
     },
     {
@@ -219,9 +219,9 @@
       "spd": 17,
       "exp": 28,
       "item1": 107,
-      "prob1": 8,
+      "prob1": 9,
       "item2": 210,
-      "prob2": 4,
+      "prob2": 5,
       "nameId_EN": "Chimera"
     },
     {
@@ -233,7 +233,7 @@
       "spd": 50,
       "exp": 1,
       "item1": 305,
-      "prob1": 3,
+      "prob1": 4,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Fairy"
@@ -247,9 +247,9 @@
       "spd": 3,
       "exp": 10,
       "item1": 109,
-      "prob1": 10,
+      "prob1": 11,
       "item2": 111,
-      "prob2": 6,
+      "prob2": 7,
       "nameId_EN": "Fairy Hunter"
     },
     {
@@ -261,9 +261,9 @@
       "spd": 10,
       "exp": 17,
       "item1": 301,
-      "prob1": 8,
+      "prob1": 9,
       "item2": 207,
-      "prob2": 5,
+      "prob2": 6,
       "nameId_EN": "Fire Fairy"
     },
     {
@@ -275,9 +275,9 @@
       "spd": 10,
       "exp": 17,
       "item1": 302,
-      "prob1": 8,
+      "prob1": 9,
       "item2": 207,
-      "prob2": 5,
+      "prob2": 6,
       "nameId_EN": "Ice Fairy"
     },
     {
@@ -289,9 +289,9 @@
       "spd": 10,
       "exp": 20,
       "item1": 304,
-      "prob1": 8,
+      "prob1": 9,
       "item2": 114,
-      "prob2": 4,
+      "prob2": 5,
       "nameId_EN": "Lightning Fairy"
     },
     {
@@ -303,9 +303,9 @@
       "spd": 20,
       "exp": 30,
       "item1": 113,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 305,
-      "prob2": 5,
+      "prob2": 6,
       "nameId_EN": "Arc Fairy"
     },
     {
@@ -317,9 +317,9 @@
       "spd": 10,
       "exp": 32,
       "item1": 110,
-      "prob1": 8,
+      "prob1": 9,
       "item2": 306,
-      "prob2": 5,
+      "prob2": 6,
       "nameId_EN": "Clay Golem"
     },
     {
@@ -331,9 +331,9 @@
       "spd": 20,
       "exp": 36,
       "item1": 112,
-      "prob1": 8,
+      "prob1": 9,
       "item2": 306,
-      "prob2": 5,
+      "prob2": 6,
       "nameId_EN": "Iron Golem"
     },
     {
@@ -345,9 +345,9 @@
       "spd": 30,
       "exp": 40,
       "item1": 115,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 209,
-      "prob2": 5,
+      "prob2": 6,
       "nameId_EN": "Emerald Golem"
     },
     {
@@ -359,7 +359,7 @@
       "spd": 1,
       "exp": 1,
       "item1": 117,
-      "prob1": 6,
+      "prob1": 7,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Ghost Knight"
@@ -373,7 +373,7 @@
       "spd": 1,
       "exp": 1,
       "item1": 211,
-      "prob1": 8,
+      "prob1": 9,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Ghost Wizard"
@@ -387,7 +387,7 @@
       "spd": 2,
       "exp": 1,
       "item1": 213,
-      "prob1": 6,
+      "prob1": 7,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Ghost Paladin"
@@ -401,7 +401,7 @@
       "spd": 1,
       "exp": 5,
       "item1": 131,
-      "prob1": 8,
+      "prob1": 9,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "False Medium"
@@ -415,9 +415,9 @@
       "spd": 3,
       "exp": 7,
       "item1": 129,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 307,
-      "prob2": 3,
+      "prob2": 4,
       "nameId_EN": "Mist Dragon"
     },
     {
@@ -429,9 +429,9 @@
       "spd": 2,
       "exp": 1,
       "item1": 116,
-      "prob1": 7,
+      "prob1": 8,
       "item2": 124,
-      "prob2": 4,
+      "prob2": 5,
       "nameId_EN": "Sura Buddha"
     },
     {
@@ -443,7 +443,7 @@
       "spd": 2,
       "exp": 10,
       "item1": 124,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Tower Bandit"
@@ -457,9 +457,9 @@
       "spd": 5,
       "exp": 20,
       "item1": 122,
-      "prob1": 6,
+      "prob1": 7,
       "item2": 143,
-      "prob2": 4,
+      "prob2": 5,
       "nameId_EN": "Death Machine 4"
     },
     {
@@ -471,7 +471,7 @@
       "spd": 10,
       "exp": 12,
       "item1": 211,
-      "prob1": 6,
+      "prob1": 7,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Security"
@@ -485,7 +485,7 @@
       "spd": 10,
       "exp": 21,
       "item1": 135,
-      "prob1": 6,
+      "prob1": 7,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Mecha Shinobi"
@@ -499,7 +499,7 @@
       "spd": 5,
       "exp": 22,
       "item1": 218,
-      "prob1": 6,
+      "prob1": 7,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Mecha-Samurai"
@@ -513,9 +513,9 @@
       "spd": 20,
       "exp": 30,
       "item1": 140,
-      "prob1": 6,
+      "prob1": 7,
       "item2": 141,
-      "prob2": 4,
+      "prob2": 5,
       "nameId_EN": "Guardians"
     },
     {
@@ -527,7 +527,7 @@
       "spd": 35,
       "exp": 32,
       "item1": 307,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Dragon Clone"
@@ -541,9 +541,9 @@
       "spd": 43,
       "exp": 50,
       "item1": 215,
-      "prob1": 6,
+      "prob1": 7,
       "item2": 307,
-      "prob2": 4,
+      "prob2": 5,
       "nameId_EN": "Saint Dragon"
     },
     {
@@ -555,7 +555,7 @@
       "spd": 42,
       "exp": 33,
       "item1": 144,
-      "prob1": 6,
+      "prob1": 7,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Medusa"
@@ -569,7 +569,7 @@
       "spd": 35,
       "exp": 31,
       "item1": 221,
-      "prob1": 6,
+      "prob1": 7,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Huge Slime"
@@ -583,7 +583,7 @@
       "spd": 35,
       "exp": 34,
       "item1": 222,
-      "prob1": 6,
+      "prob1": 7,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Perfect Chimera"
@@ -597,9 +597,9 @@
       "spd": 35,
       "exp": 52,
       "item1": 144,
-      "prob1": 7,
+      "prob1": 8,
       "item2": 146,
-      "prob2": 5,
+      "prob2": 6,
       "nameId_EN": "Hydra"
     },
     {
@@ -625,7 +625,7 @@
       "spd": 24,
       "exp": 34,
       "item1": 151,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Ruby Golem"
@@ -639,7 +639,7 @@
       "spd": 50,
       "exp": 40,
       "item1": 152,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Diamond Golem"
@@ -653,7 +653,7 @@
       "spd": 35,
       "exp": 35,
       "item1": 306,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Summoner"
@@ -667,7 +667,7 @@
       "spd": 45,
       "exp": 38,
       "item1": 142,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Summon Warrior"
@@ -681,7 +681,7 @@
       "spd": 60,
       "exp": 35,
       "item1": 227,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Summon Priest"
@@ -695,9 +695,9 @@
       "spd": 60,
       "exp": 41,
       "item1": 306,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 308,
-      "prob2": 3,
+      "prob2": 4,
       "nameId_EN": "Grand Summoner"
     },
     {
@@ -709,7 +709,7 @@
       "spd": 30,
       "exp": 34,
       "item1": 228,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Metal Lizard"
@@ -723,7 +723,7 @@
       "spd": 40,
       "exp": 35,
       "item1": 309,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Crispy"
@@ -737,7 +737,7 @@
       "spd": 50,
       "exp": 39,
       "item1": 229,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Cream"
@@ -751,7 +751,7 @@
       "spd": 40,
       "exp": 35,
       "item1": 310,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Poison Goblin"
@@ -765,7 +765,7 @@
       "spd": 70,
       "exp": 20,
       "item1": 155,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Dancing Sword"
@@ -779,7 +779,7 @@
       "spd": 70,
       "exp": 10,
       "item1": 156,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Black Dot"
@@ -793,7 +793,7 @@
       "spd": 80,
       "exp": 10,
       "item1": 156,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Red Dot"
@@ -807,7 +807,7 @@
       "spd": 90,
       "exp": 10,
       "item1": 157,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Blue Dot"
@@ -821,9 +821,9 @@
       "spd": 256,
       "exp": 1,
       "item1": 157,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 231,
-      "prob2": 4,
+      "prob2": 5,
       "nameId_EN": "White Point"
     },
     {
@@ -835,9 +835,9 @@
       "spd": 45,
       "exp": 34,
       "item1": 221,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 310,
-      "prob2": 4,
+      "prob2": 5,
       "nameId_EN": "Poison Slime"
     },
     {
@@ -849,7 +849,7 @@
       "spd": 60,
       "exp": 50,
       "item1": 160,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "White Snake"
@@ -863,7 +863,7 @@
       "spd": 1,
       "exp": 45,
       "item1": 161,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Offenser"
@@ -877,7 +877,7 @@
       "spd": 62,
       "exp": 52,
       "item1": 162,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Gladiator"
@@ -891,7 +891,7 @@
       "spd": 77,
       "exp": 1,
       "item1": 233,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Mist"
@@ -905,7 +905,7 @@
       "spd": 40,
       "exp": 50,
       "item1": 163,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Tyrant"
@@ -919,7 +919,7 @@
       "spd": 1,
       "exp": 45,
       "item1": 234,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Defenser"
@@ -933,7 +933,7 @@
       "spd": 67,
       "exp": 56,
       "item1": 235,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Yowa Tank"
@@ -947,7 +947,7 @@
       "spd": 55,
       "exp": 49,
       "item1": 237,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Infantry"
@@ -961,9 +961,9 @@
       "spd": 100,
       "exp": 51,
       "item1": 150,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 164,
-      "prob2": 3,
+      "prob2": 4,
       "nameId_EN": "Sniper"
     },
     {
@@ -975,7 +975,7 @@
       "spd": 65,
       "exp": 52,
       "item1": 311,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Medic"
@@ -989,9 +989,9 @@
       "spd": 75,
       "exp": 55,
       "item1": 237,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 235,
-      "prob2": 4,
+      "prob2": 5,
       "nameId_EN": "Missile Man"
     },
     {
@@ -1003,9 +1003,9 @@
       "spd": 70,
       "exp": 60,
       "item1": 235,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 236,
-      "prob2": 3,
+      "prob2": 4,
       "nameId_EN": "Tsuyo Tank"
     },
     {
@@ -1017,7 +1017,7 @@
       "spd": 68,
       "exp": 62,
       "item1": 165,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Cyborg"
@@ -1031,7 +1031,7 @@
       "spd": 50,
       "exp": 70,
       "item1": 240,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Blackmore"
@@ -1045,7 +1045,7 @@
       "spd": 55,
       "exp": 77,
       "item1": 167,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Sose"
@@ -1059,7 +1059,7 @@
       "spd": 120,
       "exp": 40,
       "item1": 312,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Subliminal"
@@ -1073,7 +1073,7 @@
       "spd": 70,
       "exp": 80,
       "item1": 170,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Gachi Tank"
@@ -1087,7 +1087,7 @@
       "spd": 77,
       "exp": 85,
       "item1": 172,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Emperador Dragon"
@@ -1101,7 +1101,7 @@
       "spd": 100,
       "exp": 78,
       "item1": 241,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Death Cloud"
@@ -1115,9 +1115,9 @@
       "spd": 20,
       "exp": 80,
       "item1": 173,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 174,
-      "prob2": 3,
+      "prob2": 4,
       "nameId_EN": "Black Box"
     },
     {
@@ -1129,7 +1129,7 @@
       "spd": 600,
       "exp": 77,
       "item1": 313,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Alice"
@@ -1143,7 +1143,7 @@
       "spd": 140,
       "exp": 87,
       "item1": 176,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Knight of Skulls"
@@ -1157,7 +1157,7 @@
       "spd": 1,
       "exp": 84,
       "item1": 314,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Force"
@@ -1171,7 +1171,7 @@
       "spd": 90,
       "exp": 85,
       "item1": 315,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Oculus"
@@ -1185,7 +1185,7 @@
       "spd": 30,
       "exp": 85,
       "item1": 243,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Kashmir"
@@ -1199,7 +1199,7 @@
       "spd": 290,
       "exp": 55,
       "item1": 177,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Electric sheep"
@@ -1213,7 +1213,7 @@
       "spd": 130,
       "exp": 89,
       "item1": 178,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "God of Thunder"
@@ -1227,7 +1227,7 @@
       "spd": 160,
       "exp": 92,
       "item1": 179,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Glyph"
@@ -1241,7 +1241,7 @@
       "spd": 95,
       "exp": 91,
       "item1": 180,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Aoshiki-2"
@@ -1255,7 +1255,7 @@
       "spd": 150,
       "exp": 89,
       "item1": 242,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Wind God"
@@ -1269,7 +1269,7 @@
       "spd": 100,
       "exp": 95,
       "item1": 316,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Enigma"
@@ -1283,7 +1283,7 @@
       "spd": 400,
       "exp": 92,
       "item1": 317,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Thesaurus"
@@ -1297,7 +1297,7 @@
       "spd": 140,
       "exp": 100,
       "item1": 181,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "God Dragon"
@@ -1311,7 +1311,7 @@
       "spd": 10,
       "exp": 99,
       "item1": 245,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Man-Made Golem"
@@ -1325,7 +1325,7 @@
       "spd": 150,
       "exp": 105,
       "item1": 182,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Knight of Romanticism"
@@ -1339,7 +1339,7 @@
       "spd": 150,
       "exp": 108,
       "item1": 183,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Knight of the Gentile"
@@ -1353,7 +1353,7 @@
       "spd": 160,
       "exp": 110,
       "item1": 318,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Period"
@@ -1367,7 +1367,7 @@
       "spd": 140,
       "exp": 110,
       "item1": 184,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Zod"
@@ -1381,9 +1381,9 @@
       "spd": 150,
       "exp": 1000,
       "item1": 246,
-      "prob1": 10,
+      "prob1": 11,
       "item2": 320,
-      "prob2": 6,
+      "prob2": 7,
       "nameId_EN": "Thousand hands"
     },
     {
@@ -1395,9 +1395,9 @@
       "spd": 55,
       "exp": 500,
       "item1": 148,
-      "prob1": 12,
+      "prob1": 13,
       "item2": 214,
-      "prob2": 8,
+      "prob2": 9,
       "nameId_EN": "God of Death"
     },
     {
@@ -1409,7 +1409,7 @@
       "spd": 4,
       "exp": 25,
       "item1": 247,
-      "prob1": 6,
+      "prob1": 7,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Clawra"
@@ -1423,7 +1423,7 @@
       "spd": 10,
       "exp": 30,
       "item1": 137,
-      "prob1": 6,
+      "prob1": 7,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Cheshire"
@@ -1437,7 +1437,7 @@
       "spd": 50,
       "exp": 40,
       "item1": 155,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "March Hare"
@@ -1451,7 +1451,7 @@
       "spd": 15,
       "exp": 32,
       "item1": 133,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Mad Hatter"
@@ -1465,7 +1465,7 @@
       "spd": 15,
       "exp": 39,
       "item1": 128,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Sleeping Rat"
@@ -1479,7 +1479,7 @@
       "spd": 30,
       "exp": 47,
       "item1": 248,
-      "prob1": 6,
+      "prob1": 7,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "King"
@@ -1493,7 +1493,7 @@
       "spd": 32,
       "exp": 45,
       "item1": 304,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Queen"
@@ -1507,7 +1507,7 @@
       "spd": 65,
       "exp": 44,
       "item1": 185,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Jack"
@@ -1521,7 +1521,7 @@
       "spd": 1000,
       "exp": 500,
       "item1": 186,
-      "prob1": 10,
+      "prob1": 11,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Judgment"
@@ -1535,7 +1535,7 @@
       "spd": 45,
       "exp": 75,
       "item1": 249,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Warrior"
@@ -1549,7 +1549,7 @@
       "spd": 55,
       "exp": 75,
       "item1": 187,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Wizard"
@@ -1563,7 +1563,7 @@
       "spd": 600,
       "exp": 75,
       "item1": 188,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Martial artist"
@@ -1577,7 +1577,7 @@
       "spd": 600,
       "exp": 75,
       "item1": 321,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Dancer"
@@ -1675,9 +1675,9 @@
       "spd": 20,
       "exp": 40,
       "item1": 119,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 120,
-      "prob2": 4,
+      "prob2": 5,
       "nameId_EN": "Gatekeeper"
     },
     {
@@ -1689,7 +1689,7 @@
       "spd": 10,
       "exp": 45,
       "item1": 163,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Cyclops"
@@ -1703,7 +1703,7 @@
       "spd": 600,
       "exp": 43,
       "item1": 322,
-      "prob1": 4,
+      "prob1": 5,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Third Eye"
@@ -1717,7 +1717,7 @@
       "spd": 41,
       "exp": 48,
       "item1": 232,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Last Slime"
@@ -1731,7 +1731,7 @@
       "spd": 54,
       "exp": 50,
       "item1": 250,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Last Goblin"
@@ -1745,7 +1745,7 @@
       "spd": 600,
       "exp": 62,
       "item1": 189,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Spirit"
@@ -1759,7 +1759,7 @@
       "spd": 60,
       "exp": 60,
       "item1": 147,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Lilith"
@@ -1773,7 +1773,7 @@
       "spd": 42,
       "exp": 1,
       "item1": 251,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Ghost Armor"
@@ -1787,7 +1787,7 @@
       "spd": 600,
       "exp": 70,
       "item1": 252,
-      "prob1": 5,
+      "prob1": 6,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Dark Dragon"
@@ -1801,7 +1801,7 @@
       "spd": 1,
       "exp": 1000,
       "item1": 319,
-      "prob1": 10,
+      "prob1": 11,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Demon King"
@@ -1815,7 +1815,7 @@
       "spd": 1,
       "exp": 1000,
       "item1": 319,
-      "prob1": 10,
+      "prob1": 11,
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Puppet King"
@@ -1823,15 +1823,15 @@
     {
       "id": 131,
       "nameId": "皇帝テバ",
-      "hp": 12000,
+      "hp": 15000,
       "atk": 1024,
       "def": 2000,
       "spd": 1000,
       "exp": 65535,
       "item1": 190,
-      "prob1": 10,
+      "prob1": 11,
       "item2": 323,
-      "prob2": 6,
+      "prob2": 7,
       "nameId_EN": "Emperor Teba"
     },
     {

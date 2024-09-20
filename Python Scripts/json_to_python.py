@@ -1,4 +1,5 @@
 from math import ceil
+from copy import deepcopy
 import json
 
 
@@ -53,10 +54,10 @@ def make_lists():
         # Add In Royal Tombs withs bosses
         data['dungeons'][10]["monsters"] = temp
         data['dungeons'][10]["id"] = 121  # Change ID to 12.1, 12.2, 12.3
-        data['dungeons'].append(data['dungeons'][10])
+        data['dungeons'].append(deepcopy(data['dungeons'][10]))
         data['dungeons'][-1]["id"] = 122
         data['dungeons'][-1]["nameId_EN"] += ' Anubis'
-        data['dungeons'].append(data['dungeons'][10])
+        data['dungeons'].append(deepcopy(data['dungeons'][10]))
         data['dungeons'][-1]["id"] = 123
         data['dungeons'][-1]["nameId_EN"] += ' Necronomicon'
 
