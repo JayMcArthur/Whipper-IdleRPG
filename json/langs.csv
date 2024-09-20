@@ -24,9 +24,12 @@ iCloudやGoogleドライブにセーブデータを設置します,Place saved d
 復元に失敗しました,Restoration failed.,復元に失敗しました。,恢复失败。,복원에 실패했습니다.,恢復失敗。
 新しいバージョンが利用可能です,A new version is available!,新しいバージョンが利用可能です!,有新版本可用！,새 버전을 사용할 수 있습니다!,有新版本可用。
 更新,Update,更新,更新,업데이트,更新
+冒険者の外見,Adventurer's Appearance,冒険者の外見,冒险者的外观,모험가의 외관,冒險者的外觀
+削除する,Delete,削除する,删除,삭제,刪除
 ダンジョン階へ,Go to {dungeon} {floor}F.,{dungeon} {floor}階へ,前往{dungeon}第{floor}层,{dungeon} {floor}층으로,前往{dungeon}第{floor}層
 ダンジョン到着,Arrive at {dungeon}.,{dungeon}に到着,到达{dungeon},{dungeon}에 도착,到達{dungeon}
 ダンジョン内部に侵入,Enter the dungeon.,ダンジョン内部に侵入,进入迷宫内部,던전 내부에 침입,進入迷宮內部
+装備品を確認した,Checked equipment.,装備品を確認した,装备检查完毕,장비를 확인했습니다,裝備檢查完畢
 階の探索(魔物の巣),Start exploring {floor}F (Demon's Nest).,{floor}階の探索(魔物の巣),开始第{floor}层的探索(魔物巢穴),{floor}층을 탐색 (마물의 둥지),開始第{floor}層的探索(魔物巢穴)
 階は魔物の巣だった！,{floor}F was a demon's nest!,{floor}階は魔物の巣だった！,第{floor}层是魔物的巢穴！,{floor}층은 마물의 둥지였다!,第{floor}層是魔物的巢穴！
 は身構えた,{player} braced himself.,{player}は身構えた,{player}进入战斗准备,{player}는 자세를 잡았다,{player}進入戰鬥準備
@@ -48,7 +51,7 @@ iCloudやGoogleドライブにセーブデータを設置します,Place saved d
 体力回復の泉だった,It was a fountain of recovery.,体力回復の泉だった,这是恢复体力(HP)的泉水,체력 회복의 샘이었다,這是恢復體力(HP)的泉水
 力上昇の泉だった,It was a fountain of STR.,力上昇の泉だった,这是提升力量(STR)的泉水,힘 상승의 샘이었다,這是提升力量(STR)的泉水
 頑丈さ上昇の泉だった,It was a fountain of VIT.,頑丈さ上昇の泉だった,这是提升耐力(VIT)的泉水,방어력 상승의 샘이었다,這是提升耐力(VIT)的泉水
-速度上昇の泉だった,It was a fountain of SPD.,速度上昇の泉だった,这是提升速度(SPD)的泉水,속도 상승의 샘이었다,這是提升速度(SPD)的泉水
+速度上昇の泉だった,It was a fountain of SPD.,速度上昇の泉だった,这是提升敏捷(SPD)的泉水,속도 상승의 샘이었다,這是提升敏捷(SPD)的泉水
 運上昇の泉だった,It was a fountain of LUK.,運上昇の泉だった,这是提升幸运(LUK)的泉水,운 상승의 샘이었다,這是提升幸運(LUK)的泉水
 レベルアップの泉だった,It was a fountain of level-up.,レベルアップの泉だった,这是提升等级的泉水,레벨 업의 샘이었다,這是提升等級的泉水
 泉を見つけた,Found a Fountain.,泉を見つけた,发现泉水,샘을 발견했다,發現了泉水
@@ -151,13 +154,20 @@ WOND,“WO......ND”,“WO......ND”,“WO......ND”,“WO......ND”,“WO..
 巨人の腕について内容3,"In other words, these arms were not parts of different statues but belonged to a single colossal statue with many arms{@} It is estimated that at least ten arms, all bearing the same serial number, belonged to this giant statue{@} In ancient times, this multi-armed giant was likely used to perform physical labor and dangerous tasks, essentially acting as a human surrogate",つまり、これらの腕は異なる像の一部ではなく、何本もの腕を持つ一体の巨大な像に属するものだったのだ{@}同じ機体番号が刻まれた腕の数を集計すると、少なくとも10本以上の腕を持つ巨像が存在していたことが推測される{@}古代においてこの多腕の巨像は、人間に代わって肉体労働や危険な作業などを請け負う、いわば人間の分身として機能していた可能性が高い,换言之，这些手臂并非属于不同的雕像，而是属于一个拥有许多手臂的巨大雕像{@}据估计，这座雕像至少有十多个刻有相同机体编号的手臂。{@}在古代，这种多臂巨像很大可能被用来承担人类的体力劳动和危险工作，实际上实现了人类般的功能。,"다시 말해, 이 팔들은 다른 조각상의 부분이 아니라 여러 팔을 가진 하나의 거대한 조각상에 속해 있었습니다{@} 같은 기체 번호가 새겨진 팔의 수를 집계하면, 최소한 10개 이상의 팔을 가진 거인상이 존재했을 것으로 추정됩니다{@} 고대에 이 다중 팔 거인은 사람을 대신하여 육체 노동이나 위험한 작업을 수행하는, 일종의 인간 대용으로 기능했을 가능성이 높습니다",換言之，這些手臂並非屬於不同的雕像，而是屬於一個擁有許多手臂的巨大雕像{@}據估計，至少有十多個手臂，都刻有相同的機體編號，屬於這座巨大的雕像{@}在古代，這種多臂巨像很可能被用來承擔人類的體力勞動和危險工作，實際上充當了人類的替代者
 巨人の腕について内容4,"Inspired by this ancient giant, the kingdom began to fully engage in the research of androids",そして、この古代の巨像から着想を得て、王国におけるアンドロイドの研究が本格化することとなった,受这座古代巨像的启发，王国开始全面开展机器人的研究。,이 고대 거인상에서 영감을 받아 왕국에서는 안드로이드 연구를 본격화하기 시작했습니다,受這座古代巨像的啟發，王國開始全面開展安卓研究
 ダンジョン階の探索失敗,{dungeon} {floor}F adventure failed.,{dungeon} {floor}階の探索失敗,{dungeon}第{floor}层的探索失败,{dungeon} {floor}층 탐색 실패,{dungeon}第{floor}層的探索失敗
-個のアイテムを失った,Lost {num} items.,{num}個のアイテムを失った,失去了{num}个物品,{num}개의 아이템을 잃어 버렸다,失去了{num}個物品
-を失った,Lost {item}.,{item}を失った,失去了『{item}』,{item}을(를) 잃어 버렸다,失去了『{item}』
+個のアイテムを失った,Lost {num} items.,{num}個のアイテムをロストした,丢失了{num}个物品,{num}개의 아이템을 잃어 버렸다,遺失了{num}個物品
+を失った,Lost {item}.,{item}をロストした,丢失了『{item}』,{item}을(를) 잃어 버렸다,遺失了『{item}』
+逆行の懐中時計,Counterclockwise Watch,逆行の懐中時計,逆行的怀表,역행 회중시계,逆行的懷錶
+古びた時計だ,An old clock.,古びた時計だ,一块老旧的手表。,낡은 시계다.,一隻老舊的手錶。
+失ったアイテムを取り戻すことができる古びた懐中時計,An old pocket watch that can retrieve lost items,失ったアイテムを取り戻すことができる古びた懐中時計,能找回丢失物品的老旧怀表。,잃어버린 아이템을 되찾을 수 있는 낡은 회중시계,能找回遺失物品的老舊懷錶。
+全てのロストアイテムを取り戻した！,Recovered all lost items!,全てのロストアイテムを取り戻した！,找回了所有丢失的物品！,모든 잃어버린 아이템을 되찾았다!,找回了所有丟失的物品！
+一部のロストアイテムを取り戻した,Recovered some of the lost items,一部のロストアイテムを取り戻した,找回了部分丢失的物品,일부 잃어버린 아이템을 되찾았다,找回了部分丟失的物品
+ロスト,Lost,ロスト,丢失,소실,遺失
+ロストを回避,Avoid loss,ロストを回避する,避免丢失,로스트를 회피하다,避免丟失
 と対峙した,Confronted {monster}.,{monster}と対峙した,遭遇到了{monster},{monster}과(와) 만났다,遭遇到了{monster}
 の会心の一撃！,{player}'s heart attack!,{player}の会心の一撃！,{player}触发会心一击！,{player}의 치명적인 일격!,{player}觸發會心一擊！
 ターゲットにダメージ,{target} was damaged by {damage}.,{target}に{damage}のダメージ,{target}受到{damage}点伤害,{target}에게 {damage}의 대미지,{target}受到了{damage}點傷害
 ターゲットの攻撃,{target}'s attack!,{target}の攻撃,{target}发动攻击,{target}의 공격,{target}的攻擊
-の痛恨の一撃！,A blow that hurts {monster}!,{monster}の痛恨の一撃！,{monster}触发痛恨一击！,{monster}의 통한의 일격!,{monster}觸發痛恨一擊！
+の痛恨の一撃！,{monster}'s heart attack!,{monster}の痛恨の一撃！,{monster}触发痛恨一击！,{monster}의 통한의 일격!,{monster}觸發痛恨一擊！
 を倒した,{monster} was defeated.,{monster}を倒した,{monster}被打败了,{monster}을(를) 쓰러트렸다,{monster}被打敗了
 の経験値を得た,Gained {exp} experience!,{exp}の経験値を得た,获得{exp}点经验,{exp}의 경험치를 얻었다,獲得了{exp}點經驗值
 のレベルが上がった,{player}'s level has been increased.,{player}のレベルが上がった,{player}升级了,{player}의 레벨이 올랐다,{player}升級了
@@ -179,12 +189,17 @@ WOND,“WO......ND”,“WO......ND”,“WO......ND”,“WO......ND”,“WO..
 各項目の説明,Description of each parameter,各項目の説明,各项属性说明,각 매개변수에 대한 설명,各參數說明
 体力説明,"If it reaches 0 during battle, the adventurer will run out of energy.",戦闘時に0になると力尽きる。,如果在战斗中达到0，冒险家就会精疲力竭。,전투 중 0이 되면 모험가의 기력이 고갈됩니다.,如果在戰鬥中達到0，冒險家就會耗盡能量。
 力説明,Affects damage dealt to enemies.,敵に与えるダメージに影響。,影响对敌人造成的伤害。,적에게 주는 피해에 영향을 미칩니다.,影響對敵人造成的傷害。
-頑丈さ説明,Affects damage received from enemies.,敵から受けるダメージに影響。,影响从敌人受到的伤害。,적으로부터 받는 피해에 영향을 줍니다.,影響從敵人受到的傷害。
-速さ説明,Affects attack order.,攻撃順に影響。,影响攻击顺序。,공격 순서에 영향을 줍니다.,影響攻擊順序。
+頑丈さ説明,Affects damage received from enemies.,敵から受けるダメージに影響。,影响从敌人那受到的伤害。,적으로부터 받는 피해에 영향을 줍니다.,影響從敵人那裡受到的傷害。
+速さ説明,"Affects attack order, evasion rate, and consecutive attack probability.",攻撃順、回避率、連続攻撃確率に影響。,影响攻击顺序、闪避率以及连续攻击的几率。,"공격 순서, 회피율, 연속 공격 확률에 영향을 미칩니다.",影響攻擊順序、閃避率、連續攻擊的幾率。
 運説明,Affects the probability of obtaining items with abilities.,能力付きアイテムの入手確率に影響。,影响获得具有能力的物品的概率。,능력이 있는 아이템 획득 확률에 영향을 줍니다.,影響獲得具有能力的物品的機率。
 Lv1説明,Base value at Lv1.,Lv1時の基礎値。,Lv1的基础值。,Lv1의 기본 값입니다.,Lv1的基礎值。
 LvUP説明,Value that increases when LvUP.,LvUPした際に上昇する値。,LvUP 时增加的值。,LvUP했을 때 상승하는 값.,LvUP 時增加的值。
 Boost説明,Multiplier for the final ability values.,最終的な能力値にかかる倍率。,最终能力值的倍率。,최종 능력치에 적용되는 배율입니다.,最終能力值的倍率。
+永続ブースト,Permanent Boost,永続ブースト,永久提升,영구 부스트,永久提升
+割り振る,Allocate,割り振る,分配,할당,分配
+振りなおし,Reallocate,振りなおし,重新分配,재할당,重新分配
+永続ブーストの説明,Description of Permanent Boost,永続ブーストの説明,关于永久提升,영구 부스트 설명,關於永久提升
+永続ブーストの説明内容,"Each time you increase the analysis level of an item by 5, you will receive 1 Permanent Boost Point (BP). You can allocate the BP you acquire freely to each boost category.",各アイテムの解析レベルを 5 上げる毎に、永続ブーストポイント(BP)が 1 もらえます。入手したBPは、各ブースト項目に自由に割り振ることが出来ます。,各物品的解析等级每提升 5 级，你将获得 1 个永久提升点数 (BP)。你可以自由分配BP到各提升项目中。,"아이템의 분석 레벨을 5 올릴 때마다, 영구 부스트 포인트(BP)를 1 얻을 수 있습니다. 획득한 BP는 각 부스트 항목에 자유롭게 할당할 수 있습니다.",各物品的解析等級每提升 5 級，你將獲得 1 點永久提升點數 (BP)。你可以自由分配BP到各提升項目。
 どこかにいるあなたへ,To you who are somewhere else,どこかにいるあなたへ,给世界某个角落的你,어딘가에 있는 당신에게,給世界某個角落的你
 どこかにいるあなたへ本文,"There is a curse on this world, a curse by the Demon King to erase memories... {@}{@}{@}The Demon King rules our world by erasing the memories of adventurers.{@}{@}{@}{@}I'm asking for your help if you've noticed this mail! {@}{@}Please lead the adventurers whose memories will be erased under your direction to defeat the Demon King that lurks in the castle...!",この世界には呪いがかけられています{@}{@}{@}魔王による、記憶が消える呪い…{@}{@}{@}魔王は冒険者の記憶を消すことで{@}私たちの世界を支配しているのです{@}{@}{@}{@}このメールに気付いてくれたあなたにお願いです{@}{@}記憶が消える冒険者をあなたの指示で導き{@}魔城に潜む魔王を倒してください…！,这个世界受到了魔王的诅咒，这个诅咒会清除记忆。{@}{@}{@}魔王通过清除冒险者的记忆来统治我们的世界。{@}{@}{@}如果你看到这封信，就说明我需要你的帮助。{@}{@}{@}请你带领失忆的冒险者打败潜伏在魔城的魔王吧！,이 세계에는 저주가 걸려 있습니다.{@}{@}{@}마왕에 의한 기억이 사라지는 저주…{@}{@}{@}마왕은 모험가의 기억을 지워{@}우리의 세계를 지배하고 있는 것입니다.{@}{@}{@}{@}이 메일을 찾아낸 당신에게 부탁 드립니다.{@}{@}기억이 사라진 모험가를 당신의 지시로 이끌어{@}마왕성에 숨어있는 마왕을 쓰러트려 주세요…!,這個世界受到了魔王的詛咒。{@}{@}{@}這個詛咒就是清除記憶……{@}{@}{@}魔王透過消除冒險者的記憶來統治我們的世界。{@}{@}{@}{@}如果你看到這封信，就說明我需要你的幫助。{@}{@}請你引導失憶的冒險者，打倒潛伏在魔城中的魔王吧……！
 冒険者を向かわせました,I've sent the adventurers to you.,冒険者を向かわせました,冒险者已在路上,모험가를 보냈습니다,我已經派冒險者過去了
@@ -239,6 +254,8 @@ Boost説明,Multiplier for the final ability values.,最終的な能力値にか
 伝言の鈴について本文2,This allows you to instruct a mid-adventure return while still carrying loot{@}{@}Mid-return instructions can be given from the 'Mid-Return' button in the DUNGEON tab{@}{@}Please make good use of it in your adventures,これにより、冒険の途中で戦利品を持ったまま途中帰還を指示することができるだろう{@}{@}途中帰還の指示は、DUNGEONタブの途中帰還ボタンから行える{@}{@}是非、君たちの冒険に役立ててくれ,有了它，你可以指示他携带战利品中途返回。{@}{@}中途返回的指令，可以从DUNGEON标签的中途返回按钮进行。{@}{@}请在你们的冒险中好好利用它。,이를 통해 모험 중에 전리품을 가지고 중간 귀환을 지시할 수 있습니다{@}{@}중간 귀환 지시는 DUNGEON 탭의 중간 귀환 버튼에서 할 수 있습니다{@}{@}모험에 꼭 활용해 주세요,這使你可以在攜帶戰利品的情況下指示中途返回{@}{@}中途返回的指令可以從DUNGEON標籤的中途返回按鈕進行{@}{@}請在你們的冒險中好好利用它
 コアを手に入れてくれ,Please obtain the core,コアを手に入れてくれ,请取回核心,코어를 손에 넣어줘,請取得核心
 コアを手に入れてくれ本文,"It seems you've finally reached the castle{@}{@}Teba has great power, but you two can surely defeat it{@}{@}I sincerely pray for your safety{@}{@}When you return with the core, let's all celebrate",ついに城にたどり着いたようだね{@}{@}テバは強大な力を持っているが、君たち2人なら必ず倒せるはずだ{@}{@}君たちの無事を心から祈っているよ{@}{@}コアを持って帰ってきたら、みんなでお祝いしよう,看来你们终于到达了城堡。{@}{@}Teba拥有强大的力量，但你们两人肯定能够击败它。{@}{@}我衷心祈祷你们安全归来。{@}{@}当你们带着核心回来时，让我们一起庆祝吧！,"드디어 성에 도착한 것 같네요{@}{@}테바는 강력한 힘을 가지고 있지만, 여러분 두 사람이라면 반드시 이길 수 있을 겁니다{@}{@}여러분의 안전을 진심으로 기원합니다{@}{@}코어를 가지고 돌아오면, 모두 함께 축하하겠습니다",看來你們終於到達了城堡{@}{@}Teba擁有強大的力量，但你們兩人肯定能夠擊敗它{@}{@}我衷心祈禱你們的安全{@}{@}當你們帶著核心回來時，讓我們一起慶祝
+王国書庫の資料,Records from the Kingdom Archives,王国書庫の資料,王国书库的资料,왕국 서고의 자료,王國書庫的資料
+王国書庫の資料本文,It seems you are struggling{@}{@}I saw the records in the archives swallowed by 『The Door to Another World』 when the Kingdom fell{@}The information contained there might be helpful in conquering Teba{@}{@}Why not try entering different passwords into 『The Door to Another World』 to gather the records,苦戦しているようだね{@}{@}王国崩壊の時、書庫にあった資料が『異世界への扉』に飲み込まれたのを見た{@}そこに書かれている情報が、テバ攻略の役に立つかもしれない{@}{@}『異世界への扉』に色々なパスワードを入力して、資料を集めてみてはどうだろう,看来你遇到了困难。{@}{@}王国崩溃时，我看到书库的资料被『异世界之门』吞噬了。{@}那里记载的信息可能有助于战胜Teba。{@}{@}试着在『异世界之门』中输入各种暗号，看看能不能收集到资料吧！,"고전하는 것 같군{@}{@}왕국이 무너질 때, 서고에 있던 자료가 『이세계의 문』에 삼켜지는 것을 보았다{@}거기에 적힌 정보가 테바를 공략하는 데 도움이 될지도 모른다{@}{@}『이세계의 문』에 여러 가지 비밀번호를 입력해서 자료를 모아보는 게 어떻겠나",看來你遇到困難了。 {@}{@}王國崩潰時，我看到書庫的資料被『異世界之門』吞噬了。 {@}那裡記載的資訊可能有助於戰勝Teba。 {@}{@}試著在『異世界之門』輸入各種暗號，看看能不能收集到資料吧！
 必ず見つけ出すよ,I will definitely find it,必ず見つけ出すよ,一定会找到的！,반드시 찾아낼 거예요,我一定會找到的
 必ず見つけ出すよ本文1,I was at a loss for words when I heard {name} had gone missing{@} The pain of losing a partner is immeasurable,{name}が行方不明になったと聞いて、言葉を失ったよ{@}相棒を失った君の心の痛みは計り知れない,听说『{name}』失踪了，我无言以对。{@}失去伙伴的痛苦是难以估量的。,{name}의 실종 소식을 듣고 말을 잃었어요{@}동료를 잃은 당신의 아픔은 가늠할 수 없습니다,聽說{name}失蹤了，我無言以對{@}失去夥伴的痛苦是難以估量的
 必ず見つけ出すよ本文2,"When I reunited with {name} at the shelter before, seeing them in well-maintained equipment, I was truly relieved{@} They had found a good master",以前{name}とシェルターで再会した時、手入れの行き届いた装備を身につけている姿を見て、私は心から安堵したんだ{@}良いマスターに巡り会えたのだと,之前在居所与『{name}』重逢时，看到他穿着维护良好的装备，我内心真正地感到安心。{@}他遇到了一个好主人。,"이전에 {name}와 쉘터에서 재회했을 때, 잘 관리된 장비를 착용하고 있는 모습을 보고 진심으로 안도했습니다{@}좋은 주인을 만났다고",之前在避難所與{name}重逢時，看到他穿著維護良好的裝備，我內心真正地感到安心{@}他遇到了一個好主人
@@ -288,7 +305,7 @@ LvUPまで,{num} more to LvUP,LvUPまであと {num},离LvUP还需要 {num} 个,
 まだ白紙の本だ,It's still a blank book.,まだ白紙の本だ,书上空白一片,아직 백지의 책이다,書上一片空白
 なし,None,なし,无,없음,無
 ボイドレポート,Boid report,ボイドレポート,博伊德的报告书,보이드 보고서,博伊德的報告書
-解析値を+1できる科学者の遺文,Scientist's will with +1 analysis value,解析値を+1できる科学者の遺文,解析值+1的科学家的遗产,분석값을 +1 할 수 있는 과학자 보고서,分析值+1的科學家的遺產
+解析値を+3できる科学者の遺文,Scientist's will with +3 analysis value,解析値を+3できる科学者の遺文,解析值+3的科学家的遗产,분석값을 +3 할 수 있는 과학자 보고서,分析值+3的科學家的遺產
 ロゼッタストーン,Rosetta Stone,ロゼッタストーン,罗塞塔石碑,로제타 스톤,羅賽塔石碑
 解析値を+10できる古代文明の遺物,Relics of ancient civilization with +10 analysis value,解析値を+10できる古代文明の遺物,解析值+10的古代文明的遗物,해석치를 +10 할 수 있는 고대 문명의 유물,分析值+10的古代文明的遺物
 素材を使用しない,No materials used,素材を使用しない,不使用材料,소재를 사용하지 않음,不使用材料
@@ -394,6 +411,7 @@ LvUPまで,{num} more to LvUP,LvUPまであと {num},离LvUP还需要 {num} 个,
 ベースアイテム,Base Item,ベースアイテム,基础物品,베이스 아이템,基礎物品
 強化上限に達しています,The upgrade limit has been reached.,強化上限に達しています,达到强化上限,강화 상한에 도달했습니다,達到強化上限
 強化しました,{item} has been upgraded.,{item}を強化しました,『{item}』强化完成,{item}을(를) 강화했습니다,『{item}』強化完成
+侵蝕度上限に達しています,Corrosion Level limit has been reached.,侵蝕度上限に達しています,达到侵蚀度上限,침식도 상한에 도달했습니다,達到侵蝕度上限
 変化しました,{baseItem} has been changed to {nextItem}.,{baseItem}が{nextItem}に変化しました,『{baseItem}』进化为『{nextItem}』,{baseItem}이(가) {nextItem}로(으로) 변했습니다,『{baseItem}』進化為『{nextItem}』
 アイテム種別,Item Type,アイテム種別,物品类型,아이템 종류별,物品類型
 ドロップアイテム一覧,Drop Item List,ドロップアイテム一覧,掉落物品一览,드롭 아이템 목록,掉落物品清單
@@ -417,7 +435,7 @@ HPの成長力がアップ,Increases the HP growth value by {value}.,HPの成長
 先制,First Strike,先制,先制,선제,先發制人
 戦闘で必ず先制攻撃できる,Can always attack first in battle.,戦闘で必ず先制攻撃できる,战斗中必定先手攻击,전투에서 반드시 선제 공격한다,戰鬥中必定先手攻擊
 二撃,Double Strike,二撃,连击,더블 어택,連擊
-確率で2回攻撃できる,{value}% chance to attack twice,{value}%の確率で2回攻撃できる,{value}%的几率进行两次攻击,{value}% 확률로 2회 공격,{value}%的機率進行兩次攻擊
+確率で2回攻撃できる,Chance of consecutive attacks increases by {value}%,連続攻撃の確率が{value}%アップ,连续攻击的几率提高{value}%,연속 공격 확률이 {value}% 상승,連續攻擊的幾率提高{value}%
 一撃,One Strike,一撃,一击,일격,一擊
 会心の一撃の確率がアップ,Critical hit chance increases by {value}%,会心の一撃の確率が{value}%アップ,暴击率提高{value}%,치명타 확률이 {value}% 상승,暴擊率提高{value}%
 三途,Three Paths,三途,三途,삼도,三途
@@ -605,6 +623,7 @@ LUKブースト説明,LUK increased by {value}%,LUK{value}%アップ,LUK提高{v
 かばんの中から一輪の花を取り出し、そっと差し出した,Took out a single flower from the bag and gently offered it,かばんの中から一輪の花を取り出し、そっと差し出した,从包里拿出一朵花，轻轻地递了出去,가방에서 한 송이 꽃을 꺼내어 조용히 내밀었다,從包裡拿出一朵花，輕輕地遞了出去
 帰還中,Returning,帰還中,返回中,귀환 중,返回中
 受け取る,Receive,受け取る,接受,받다,接受
+ターゲットは連続攻撃の態勢をとった！,{target} has taken a stance for consecutive attacks!,{target}は連続攻撃の態勢をとった！,{target}摆出连续攻击的架势！,{target}는 연속 공격 자세를 취했습니다!,{target}擺出連續攻擊的架勢！
 攻撃と共に毒を注入した,Injected poison with the attack.,攻撃と共に毒を注入した,攻击时注入了毒素,공격과 함께 독을 주입했다,隨著攻擊注入了毒素
 ターゲットに毒が蓄積された,Poison accumulated in {target}.,{target}に毒が蓄積された,{target}体内毒素不断累积,{target}에 독이 쌓였다,{target}內毒素積累
 ターゲットを毒が蝕む,Poison corrodes {target}.,{target}を毒が蝕む,{target}被毒素侵蚀着,{target}를 독이 침식한다,毒素腐蝕了{target}
@@ -653,7 +672,7 @@ LUKブースト説明,LUK increased by {value}%,LUK{value}%アップ,LUK提高{v
 黒の鍵を1本消費します(残り:本),You will use 1 black key (Remaining: {remain}),黒の鍵を1本消費します(残り:{remain}本),使用一把黑色钥匙（剩余：{remain}）,검은 열쇠 1개를 소모합니다 (남은 개수: {remain}),使用一把黑色鑰匙（剩餘：{remain}）
 階の探索(高濃度の瘴気),Start exploring {floor}F (High-density miasma).,{floor}階の探索(高濃度の瘴気),开始第{floor}层的探索（高浓度的瘴气）,{floor}층을 탐색 (고농도 독기),開始第{floor}層的探索（高濃度的瘴氣）
 ダンジョン全体に高濃度の瘴気が充満している！,The dungeon is filled with high-density miasma!,ダンジョン全体に高濃度の瘴気が充満している！,整个迷宫弥漫着高浓度的瘴气！,던전 전체에 고농도 독기가 가득 차 있다!,整個迷宮瀰漫著高濃度的瘴氣！
-武器を無力化した,{enemy} has neutralized the {weapon} weapon.,{enemy}は{weapon}武器を無力化した,{enemy}使武器「{weapon}」无效,{enemy}이(가) {weapon} 무기를 무력화했다,{enemy}使武器「{weapon}」無效
+武器を無力化した,{enemy} has neutralized the {weapon} weapon.,{enemy}は{weapon}武器を無力化した,{enemy}使「{weapon}」武器无效,{enemy}이(가) {weapon} 무기를 무력화했다,{enemy}使「{weapon}」武器無效
 こちらの様子をうかがっている,{enemy} is observing my situation.,{enemy}はこちらの様子をうかがっている,{enemy}正在静观其变,{enemy}가 나의 상황을 살펴보고 있다,{enemy}正在靜觀其變
 Lvを下げた,{enemy} has lowered {player}'s level.,{enemy}は{player}のLvを下げた,{enemy}降低了{player}的Lv,{enemy}가 {player}의 레벨을 낮췄다,{enemy}降低了{player}的Lv
 しかしカウンター,But {enemy}'s counter!,しかし{enemy}のカウンター！,但是，{enemy}发起反击！,하지만 {enemy}의 카운터!,但是，{enemy}發動反擊！
@@ -688,7 +707,7 @@ Lvを下げた,{enemy} has lowered {player}'s level.,{enemy}は{player}のLvを�
 黒の鍵,The Black Key,黒の鍵,黑色钥匙,검은 열쇠,黑色鑰匙
 廃棄場への扉を開く鍵,The key that opens the door to the junkyard,廃棄場への扉を開く鍵,打开废弃场大门的钥匙,폐기장 문을 여는 열쇠,打開廢棄場大門的鑰匙
 りんご,Apple,りんご,苹果,사과,蘋果
-高濃度の瘴気に汚染された果実。持っているだけで永続的にLUK+1,A fruit contaminated with high concentrations of miasma. Grants a permanent LUK +1 just by holding it,高濃度の瘴気に汚染された果実。持っているだけで永続的にLUK+1,被高浓度的瘴气所污染的果实。拥有后即可永久获得LUK+1,고농도의 장기에 오염된 과일. 보유하기만 해도 영구적으로 LUK+1 증가,被高濃度的瘴氣所污染的果實。擁有後即可永久獲得LUK+1
+高濃度の瘴気に汚染された果実。持っているだけで永続的にLUK+1,A fruit contaminated with high concentrations of miasma. Grants a permanent LUK +1 just by holding it (Up to +20),高濃度の瘴気に汚染された果実。持っているだけで永続的にLUK+1 (最大+20まで),被高浓度的瘴气所污染的果实。拥有后即可永久获得LUK+1（上限20）,고농도의 장기에 오염된 과일. 보유하기만 해도 영구적으로 LUK+1 증가 (최대+20까지),被高濃度的瘴氣所污染的果實。擁有後即可永久獲得LUK+1 (上限20)
 広告なし,No ads,広告なし,无广告,광고 없음,無廣告
 動画視聴1回につき、以下の広告を24時間非表示にできます,You can hide the following ads for 24 hours per video viewing.,動画視聴1回につき、以下の広告を24時間非表示にできます。,每次观看视频时，您可以隐藏以下广告 24 小时。,동영상 시청 1회당 다음 광고를 24시간 숨길 수 있습니다.,每次觀看影片時，您可以隱藏以下廣告 24 小時。
 画面下部のバナー広告,Banner ads at the bottom,画面下部のバナー広告,屏幕底部的横幅广告,화면 하단 배너 광고,螢幕底部的橫幅廣告
@@ -709,6 +728,7 @@ Projectile,Projectile,投射,投射,투척,投射
 強化による上昇量,Increase by Upgrade,強化による上昇量,强化的提升量,강화에 의한 상승량,通過升級的提升量
 シェア,Share,シェア,分享,공유,分享
 画像をシェアする,Share image,画像をシェアする,分享图片,이미지 공유하기,分享圖片
+外見・名前を表示,Display Appearance & Name,外見・名前を表示,显示外观和名字,외관・이름을 표시,顯示外觀和名字
 強さレート,Power Rating,強さレーティング,实力评分,파워 레이팅,實力評分
 レーティング,Rating,レーティング,评分,레이팅,評分
 Lv時XXX,{param} at Lv{num},Lv{num}時点 {param},Lv{num}时 {param},Lv{num}시의 {param},Lv{num}時 {param}

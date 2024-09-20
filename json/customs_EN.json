@@ -735,7 +735,7 @@
       "value": 20,
       "nextModId": 0,
       "nameId_EN": "Double Strike",
-      "summaryId_EN": "{value}% chance to attack twice"
+      "summaryId_EN": "Chance of consecutive attacks increases by {value}%"
     },
     {
       "id": 68,
