@@ -183,6 +183,41 @@
       "use": 1
     },
     {
+      "id": 94,
+      "nameId": "コアの塊",
+      "icon": "unobtainium1",
+      "efficacyId": "砕け散ったコアの大きな塊。全4種集めると…",
+      "use": 9
+    },
+    {
+      "id": 95,
+      "nameId": "コアの塊",
+      "icon": "unobtainium2",
+      "efficacyId": "砕け散ったコアの大きな塊。全4種集めると…",
+      "use": 9
+    },
+    {
+      "id": 96,
+      "nameId": "コアの塊",
+      "icon": "unobtainium3",
+      "efficacyId": "砕け散ったコアの大きな塊。全4種集めると…",
+      "use": 9
+    },
+    {
+      "id": 97,
+      "nameId": "コアの塊",
+      "icon": "unobtainium4",
+      "efficacyId": "砕け散ったコアの大きな塊。全4種集めると…",
+      "use": 9
+    },
+    {
+      "id": 98,
+      "nameId": "オリジンコア",
+      "icon": "unobtainium",
+      "efficacyId": "コアの塊を集めて復元した、テバの動力源だったモノ。瘴気濃度の上限がさらに上がる",
+      "use": 9
+    },
+    {
       "id": 99,
       "nameId": "りんご",
       "icon": "apple",
@@ -314,6 +349,34 @@
       "icon": "log_newmemo",
       "efficacyId": "異世界への扉",
       "use": 100
+    },
+    {
+      "id": 1101,
+      "nameId": "戦闘用チップ",
+      "icon": "tebachip",
+      "efficacyId": "【討伐の証】テバの学習データが記録されたチップ。Lvが上がるごとに、割り振り可能BPが増える(+5/Lv)",
+      "use": 110
+    },
+    {
+      "id": 1102,
+      "nameId": "戦闘用チップがレベルアップ",
+      "icon": "tebachip",
+      "efficacyId": "",
+      "use": 200
+    },
+    {
+      "id": 1201,
+      "nameId": "千手核",
+      "icon": "senjukaku",
+      "efficacyId": "【討伐の証】千手の動力源。消えることのない炎を内包している。Lvが上がるごとに、アイテム能力の合成上限が上がる",
+      "use": 110
+    },
+    {
+      "id": 1202,
+      "nameId": "千手核がレベルアップ",
+      "icon": "senjukaku",
+      "efficacyId": "",
+      "use": 200
     }
   ]
 }

@@ -235,6 +235,51 @@
       "efficacyId_EN": "A whetstone that can increase Corrosion Level by +10"
     },
     {
+      "id": 94,
+      "nameId": "コアの塊",
+      "icon": "unobtainium1",
+      "efficacyId": "砕け散ったコアの大きな塊。全4種集めると…",
+      "use": 9,
+      "nameId_EN": "Core Shard",
+      "efficacyId_EN": "A large shard of a shattered core. Collect all 4 types to..."
+    },
+    {
+      "id": 95,
+      "nameId": "コアの塊",
+      "icon": "unobtainium2",
+      "efficacyId": "砕け散ったコアの大きな塊。全4種集めると…",
+      "use": 9,
+      "nameId_EN": "Core Shard",
+      "efficacyId_EN": "A large shard of a shattered core. Collect all 4 types to..."
+    },
+    {
+      "id": 96,
+      "nameId": "コアの塊",
+      "icon": "unobtainium3",
+      "efficacyId": "砕け散ったコアの大きな塊。全4種集めると…",
+      "use": 9,
+      "nameId_EN": "Core Shard",
+      "efficacyId_EN": "A large shard of a shattered core. Collect all 4 types to..."
+    },
+    {
+      "id": 97,
+      "nameId": "コアの塊",
+      "icon": "unobtainium4",
+      "efficacyId": "砕け散ったコアの大きな塊。全4種集めると…",
+      "use": 9,
+      "nameId_EN": "Core Shard",
+      "efficacyId_EN": "A large shard of a shattered core. Collect all 4 types to..."
+    },
+    {
+      "id": 98,
+      "nameId": "オリジンコア",
+      "icon": "unobtainium",
+      "efficacyId": "コアの塊を集めて復元した、テバの動力源だったモノ。瘴気濃度の上限がさらに上がる",
+      "use": 9,
+      "nameId_EN": "Origin Core",
+      "efficacyId_EN": "\"A restored Core Shard"
+    },
+    {
       "id": 99,
       "nameId": "りんご",
       "icon": "apple",
@@ -404,6 +449,40 @@
       "use": 100,
       "nameId_EN": "Giant's Arm",
       "efficacyId_EN": "The Door to Another World"
+    },
+    {
+      "id": 1101,
+      "nameId": "戦闘用チップ",
+      "icon": "tebachip",
+      "efficacyId": "【討伐の証】テバの学習データが記録されたチップ。Lvが上がるごとに、割り振り可能BPが増える(+5/Lv)",
+      "use": 110,
+      "nameId_EN": "Combat Chip",
+      "efficacyId_EN": "[Proof of Subjugation] A chip containing Teba's learning data. Assignable BP increases by +5 per level."
+    },
+    {
+      "id": 1102,
+      "nameId": "戦闘用チップがレベルアップ",
+      "icon": "tebachip",
+      "efficacyId": "",
+      "use": 200,
+      "nameId_EN": "Combat Chip Level Up"
+    },
+    {
+      "id": 1201,
+      "nameId": "千手核",
+      "icon": "senjukaku",
+      "efficacyId": "【討伐の証】千手の動力源。消えることのない炎を内包している。Lvが上がるごとに、アイテム能力の合成上限が上がる",
+      "use": 110,
+      "nameId_EN": "Thousand-Hand Core",
+      "efficacyId_EN": "[Proof of Subjugation] The power source of Thousand Hands. Contains an eternal flame. Increases item synthesis limits with each level."
+    },
+    {
+      "id": 1202,
+      "nameId": "千手核がレベルアップ",
+      "icon": "senjukaku",
+      "efficacyId": "",
+      "use": 200,
+      "nameId_EN": "Thousand-Hand Core Level Up"
     }
   ]
 }

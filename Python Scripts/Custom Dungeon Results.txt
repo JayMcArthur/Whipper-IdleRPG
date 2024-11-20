@@ -1,2 +1,0 @@
-Rank 218 - [2726, 31, Sura Buddha] - HP: 247, STR: 307728, VIT: 20, SPD: 1, LUK: 1, Attack: 491968, Defense: 85690, Current HP: 0, A Avg: 2029368, D Avg: 85690, [Zodiac[184, 66, 230, 230], Shield of Thousand[246, 530, 530, 730], Ring of power[314, 730, 230, 230]]
-Rank 218 - [2726, 31, Sura Buddha] - HP: 437, STR: 311884, VIT: 103, SPD: 1, LUK: 1, Attack: 505534, Defense: 87931, Current HP: 0, A Avg: 2085327, D Avg: 87931, [Spectral Sword Shigure[172, 66, 230, 230], Black Sword Breath[252, 530, 530, 730], Ring of power[314, 730, 230, 230]]

@@ -1,5 +1,5 @@
-from lineup import solve_lineup, solve_dungeon, find_best_str, find_best_vit, find_best_items, find_best_enchantments, rank_sort
-from json_to_python import make_lists
+from lineup import solve_lineup, solve_dungeon, find_best_str, find_best_vit, find_best_items, find_best_enchantments, rank_sort, get_max_damage
+from json_to_python import make_lists, print_enchantments
 from enitity import Monster, Fountain
 
 # This was made using the results from find_best_items
@@ -186,9 +186,9 @@ best_equips_strength = {
     "45": [[172, 0, 0, 0, 252, 0, 0, 0, 315, 0, 0, 0],
            [172, 0, 0, 0, 252, 0, 0, 0, 321, 0, 0, 0],
            [190, 0, 0, 0, 252, 0, 0, 0, 315, 0, 0, 0]],
-    "50": [[172, 0, 0, 0, 252, 0, 0, 0, 315, 0, 0, 0],
-           [172, 0, 0, 0, 252, 0, 0, 0, 321, 0, 0, 0],
-           [190, 0, 0, 0, 252, 0, 0, 0, 315, 0, 0, 0]]
+    "50": [[172, 0, 0, 0, 252, 0, 0, 0, 314, 0, 0, 0],
+           [172, 0, 0, 0, 252, 0, 0, 0, 323, 0, 0, 0],
+           [190, 0, 0, 0, 252, 0, 0, 0, 319, 0, 0, 0]]
 }
 # Updated to V65
 best_strength_with_enchants = {
@@ -303,26 +303,28 @@ best_vitality_with_enchants = {
 #####################
 # Enchantment Notes #
 #####################
-# _30 - Luck 3: 3 LUK
-# _66 - First Strike: Can always attack first in battle
-# _67 - Double Strike: 20% chance to attack twice
-# _68 - One Strike: Critical hit chance increases by 20%
-# 130 - Endurance 30: 16,000 HP
-# 230 - Strength 30: 16,000 STR
-# 330 - Sturdy 30: 16,000 VIT
-# 420 - Agility 20: 655 SPD
-# 530 - Endurance Training 30: 630 HP^
-# 630 - Strength Training 30: 630 STR^
-# 730 - Defense Training 30: 630 VIT^
-# 803 - Three Paths: 50% chance for critical damage to be tripled
-# 806 - Sixth Sense: 20% chance to dodge an attack
-# 807 - Seven Blessings: The probability of probability-based abilities is doubled
-# 941 - Poison: Deal stacking 0.5% of Monsters HP
+# 1100 - Endurance 100: Increases the HP base value by 65536.
+# 2100 - Strength 100: Increases the STR base value by 65536.
+# 3100 - Sturdy 100: Increases the VIT base value by 65536.
+# _450 - Agility 50: Increases the SPD base value by 2500.
+# _898 - Lucky 8: Increases the LUK base value by 8.
+# 6100 - Strength Training 100: Increases the STR growth value by 2048.
+# 7100 - Defense Training 100: Increases the VIT growth value by 2048.
+# 5100 - Endurance Training 100: Increases the HP growth value by 2048.
+# __66 - First Strike: A preemptive strike (1/2 of normal damage) triggers at the start of combat
+# __67 - Double Strike: Chance of consecutive attacks increases by 20%
+# __68 - One Strike: Critical hit chance increases by 20%
+# _803 - Three Paths: 50% chance for critical damage to be tripled
+# _804 - Four Leaves: 20% chance for enemy drops to double
+# _805 - Five Lights: 20% chance to double experience points
+# _806 - Sixth Sense: 20% chance to dodge an attack
+# _807 - Seven Blessings: The probability of probability-based abilities is doubled.
+
 
 #################
 # Dungeon Notes #
 #################
-# ID - Name --------------------- Level
+# ID - Name ----------------- AVG Level
 # 01 - The First Grassy Knoll ------ 02
 # 02 - The Lost Forest ------------- 07
 # 03 - Deep Cave ------------------- 14
@@ -352,14 +354,24 @@ best_vitality_with_enchants = {
 # TODO - Whipper v3.7
 #  SPD now affects evasion rate and consecutive attack probability.
 
+# TODO - Whipper v3.8
+#  Added permanent boost item (released as progress is made)
+#  > Does Permanent boost Poison Damage add or mult?
+
+# TODO - Whipper v4.4
+#  Added event items to the last dungeon.
+#  > added combat core that can go to level 50
+
+# TODO - Me
+#  Huge refactor on how enchantments and effects are applied to the player
+#  > I still need to rework the fights so they can use the premade stats
 
 def run_custom_setups():
     setups = [
-        [172, 66, 230, 230, 252, 530, 530, 730, 315, 730, 230, 230],
-        [172, 66, 230, 230, 252, 530, 530, 730, 321, 730, 230, 230],
-        [172, 66, 230, 230, 252, 530, 530, 730, 314, 730, 230, 230],
-        [190, 66, 230, 230, 252, 530, 530, 730, 315, 730, 230, 230],
-        [188, 66, 230, 230, 226, 530, 530, 730, 322, 730, 230, 230]
+        [184, 66, 630, 630, 246, 630, 630, 630, 314, 630, 68, 803],
+        [172, 66, 630, 630, 252, 630, 630, 630, 314, 630, 68, 803],
+        [172, 66, 630, 630, 252, 630, 630, 630, 314, 630, 68, 630],
+        [188, 630, 630, 630, 226, 630, 630, 630, 315, 67, 68, 807]
     ]
     levels = [max(1, i * 5) for i in range(11)]
     levels = [50]
@@ -370,15 +382,16 @@ def run_custom_setups():
     ignore_speed = False
     print_stuff = True
 
-    solve_lineup(setups, levels, file, rank_sort, do_enchants=do_enchants, enchant_str=enchant_str, enchant_vit=enchant_vit, ignore_speed=ignore_speed, print_stuff=print_stuff)
+    get_max_damage(setups, levels, file, do_enchants=do_enchants, enchant_str=enchant_str, enchant_vit=enchant_vit, print_stuff=print_stuff)
+    # solve_lineup(setups, levels, file, rank_sort, do_enchants=do_enchants, enchant_str=enchant_str, enchant_vit=enchant_vit, ignore_speed=ignore_speed, print_stuff=print_stuff)
 
 
 def run_custom_dungeon():
     # I know this can get to the last Monster
     # So I need to edit my script to reflect this
     setups = [
-        [184, 66, 230, 230, 246, 530, 530, 730, 314, 730, 230, 230],
-        [172, 66, 230, 230, 252, 530, 530, 730, 314, 730, 230, 230]
+        [184, 66, 630, 630, 246, 630, 630, 630, 314, 630, 630, 630],
+        [172, 66, 630, 630, 252, 630, 630, 630, 314, 630, 630, 630]
     ]
     dungeon_id = 12
     end_floor = 2750 - 50
@@ -469,10 +482,33 @@ def run_custom_dungeon():
 
 
 def main(custom_equip: bool, custom_dungeon: bool, dungeon: bool, combination: bool, strength: bool, vitality: bool, enchantment: bool) -> None:
-    m = Monster(134, 12, 2700, is_royal_tomb=True)
+    # m = Monster(134, 12, 2700, is_royal_tomb=True)
+    # print(m.print())
+    # m = Monster(17, 12, 2660, is_royal_tomb=True)
+    # print(m.print())
+
+    # m = Monster(30, 11, 1, dungeon_name="The Ancient Citadel of Wisdom", miasma_level=50)
+    # ID: 30, Name: <Alpha>Mist Dragon, Effects: [], Dungeon ID: 11, Floor: 1, Level: 50, HP: 1332375, Attack: 272422, Minimum Damage: 8334, Defense: 271138, SPD: 16435
+    # ID: 30, Name: <Bloody>Mist Dragon, Effects: [], Dungeon ID: 11, Floor: 1, Level: 50, HP: 1901025, Attack: 277514, Minimum Damage: 8334, Defense: 276206, SPD: 17069
+    # print(m.print())
+    m = Monster(26, 11, 1, dungeon_name="The Ancient Citadel of Wisdom", miasma_level=5)
+    # ID: 26, Name: <Alpha>Ghost Knight, Effects: [], Dungeon ID: 11, Floor: 1, Level: 50, HP: 1327150, Attack: 271352, Minimum Damage: 8303, Defense: 270710, SPD: 16392
+    # ID: 26, Name: <Bloody>Ghost Knight, Effects: [], Dungeon ID: 11, Floor: 1, Level: 50, HP: 1893570, Attack: 276424, Minimum Damage: 8303, Defense: 275770, SPD: 17025
     print(m.print())
-    m = Monster(17, 12, 2660, is_royal_tomb=True)
-    print(m.print())
+    # HP
+    # Base Param + 135
+    # more_percent + 5 & Base + 3
+    # ATK & Defense
+    # Base Param - 500
+    # SPD
+    # IDK
+
+    # m = Monster(34, 11, 1, dungeon_name="The Ancient Citadel of Wisdom", miasma_level=50)
+    # ID: 34, Name: <Bloody>Security, Effects: [], Dungeon ID: 11, Floor: 1, Level: 50, HP: 1909971, Attack: 277732, Minimum Damage: 8303, Defense: 277143, SPD: 17222
+    # ID: 34, Name: <Alpha>Security, Effects: [], Dungeon ID: 11, Floor: 1, Level: 50, HP: 1338645, Attack: 272636, Minimum Damage: 8303, Defense: 272058, SPD: 16585
+    # print(m.print())
+
+    input()
 
     if custom_equip:
         run_custom_setups()
@@ -504,4 +540,5 @@ def main(custom_equip: bool, custom_dungeon: bool, dungeon: bool, combination: b
 
 if __name__ == '__main__':
     make_lists()
-    main(False, True, True, False, False, False, False)
+    # print_enchantments()
+    main(True, True, False, False, False, False, False)
