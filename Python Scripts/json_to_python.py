@@ -6,6 +6,7 @@ import json
 monster_list = {}
 equip_list = {}
 custom_list = {}
+enchantment_list = {}
 dungeon_list = {}
 level_list = {}
 
@@ -40,6 +41,13 @@ def make_lists():
         data = json.load(f)
         for custom in data['customs']:
             custom_list[custom["id"]] = custom
+
+        # Generate enchantment chains
+        for id, custom in custom_list.items():
+            if custom['nameId_EN'] not in enchantment_list.keys():
+                enchantment_list[custom['nameId_EN']] = [custom['id']]
+            else:
+                enchantment_list[custom['nameId_EN']].append(custom['id'])
 
     # Make Dungeon List
     with open('../json/dungeons_EN.json', encoding='utf8') as f:
@@ -188,6 +196,12 @@ def make_lists():
                 monster_list[monster]['encounter_level']['min'].append(level_list[d_id][f'{floor_num}']['level']['min'])
                 monster_list[monster]['encounter_level']['max'].append(level_list[d_id][f'{floor_num}']['level']['max'])
                 monster_list[monster]['encounter_level']['avg'].append(level_list[d_id][f'{floor_num}']['level']['avg'])
+
+
+def print_enchantments():
+    for key in enchantment_list.keys():
+        best = enchantment_list[key][-1]
+        print(f'# {best:_>4} - {custom_list[best]["nameId_EN"]}{" " + str(custom_list[best]["dispLv"]) if custom_list[best]["dispLv"] > 1 else ""}: {custom_list[best]["summaryId_EN"].replace("{value}", str(custom_list[best]["value"]))}')
 
 
 # Returns level based on xp

@@ -1,30 +1,40 @@
 from random import randint
-from math import floor
+from math import floor, log10
 
-from json_to_python import monster_list, equip_list, custom_list, exp_to_level
+from json_to_python import monster_list, equip_list, custom_list, exp_to_level, enchantment_list
 
 # This is the defaults of items
-UPGRADE_MAX = 20000
+UPGRADE_MAX = 50000
 ANALYSIS_LEVEL_MAX = 15
-ANALYSIS_BOOST_MAX = 495
-# We give max to All damage types as I assume you will change to weapon type
+ANALYSIS_BOOST_MAX = 495 + (50 * 5)
+# We give max to All damage types as I assume you will change boost to weapon type
 ANALYSIS_BOOST_DEFAULT = [
     0,  # HP
     100,  # STR
-    95,  # VIT
+    100,  # VIT
     0,  # SPD
     0,  # LUK
     0,  # Drop Rate
     100,  # Crit Rate
-    100,  # Crit Dmg
+    0,  # Crit Dmg
     100,  # Slash Dmg
     100,  # Bludgeon Dmg
     100,  # Pierce Dmg
     100,  # Projectile Dmg
     0,  # Poison Dmg
     0,  # Xp Gain
+    50,  # First Strike
+    0,  # Poison
+    50,  # Unyielding
+    50,  # One Strike
+    50,  # Double Strike
+    50,  # Three Paths
+    0,  # Four Leaves
+    0,  # Five Lights
+    50,  # Sixth Sense
+    50,  # Seven Blessings
 ]
-CORROSION_MAX = 999
+CORROSION_MAX = 2500
 
 
 class Stats:
@@ -39,12 +49,12 @@ class Stats:
     def string_to_stat(self, stat: str, amount: int | float):
         if stat == "HP":
             self.hp += amount
+        elif stat == "STR":
+            self.str += amount
         elif stat == "VIT":
             self.vit += amount
         elif stat == "SPD":
             self.spd += amount
-        elif stat == "STR":
-            self.str += amount
         elif stat == "LUK":
             self.luk += amount
         else:
@@ -100,189 +110,236 @@ class Item:
 
     def apply_analysis_weapon(self, analysis: int, has_set: bool):
         if analysis >= 5:
-            self._upgrade_max += 100
+            self.apply_effect(1101)  # Exceed upgrade limit
         if analysis >= 6 and self.corrosion >= 50:
-            self.boost += 0.3
+            self.apply_effect(972)  # Attack Power Boost
         if analysis >= 7 and self.corrosion >= 100:
-            self._upgrade_max += 1000
+            self.apply_effect(1102)  # Exceed upgrade limit
         if analysis >= 8 and self.corrosion >= 150:
-            self.upgrade_boost *= 2
-        if analysis >= 9 and self.corrosion >= 200 and has_set:
-            self.mult.str += 0.5
+            self.apply_effect(1001)  # Upgrade Boost
+        if analysis >= 9 and self.corrosion >= 200:
+            self.apply_effect(3101, has_set=has_set)  # Set Boost
         if analysis >= 10 and self.corrosion >= 250:
-            self.corrosion_boost *= 2
+            self.apply_effect(3101)  # Corrosion Level Boost
         if analysis >= 11 and self.corrosion >= 300:
-            self._upgrade_max += 2000
+            self.apply_effect(1103)  # Exceed upgrade limit
         if analysis >= 12 and self.corrosion >= 350:
-            self.upgrade_boost *= 2
-        if analysis >= 13 and self.corrosion >= 400 and has_set:
-            self.mult.str += 0.5
+            self.apply_effect(1001)  # Upgrade Boost
+        if analysis >= 13 and self.corrosion >= 400:
+            self.apply_effect(3101, has_set=has_set)  # Set Boost
         if analysis >= 14 and self.corrosion >= 450:
-            self._upgrade_max += 3000
+            self.apply_effect(1104)  # Exceed upgrade limit
         if analysis >= 15 and self.corrosion >= 500:
-            self.corrosion_boost *= 2
+            self.apply_effect(3101)  # Corrosion Level Boost
 
     def apply_analysis_armor(self, analysis: int):
         if analysis >= 5:
-            self._upgrade_max += 100
+            self.apply_effect(1101)  # Exceed upgrade limit
         if analysis >= 6 and self.corrosion >= 50:
-            self.mult.string_to_stat(self._specialized, 0.1)
+            if self._specialized == "HP":
+                self.apply_effect(2101)  # HP Boost
+            elif self._specialized == "STR":
+                self.apply_effect(2201)  # STR Boost
+            elif self._specialized == "VIT":
+                self.apply_effect(2301)  # VIT Boost
+            elif self._specialized == "SPD":
+                self.apply_effect(2401)  # SPD Boost
+            elif self._specialized == "LUK":
+                self.apply_effect(2501)  # LUK Boost
+            else:
+                print(f"Invalid Stat: {self._specialized}")
         if analysis >= 7 and self.corrosion >= 100:
-            self._upgrade_max += 1000
+            self.apply_effect(1102)  # Exceed upgrade limit
         if analysis >= 8 and self.corrosion >= 150:
-            self.upgrade_boost *= 2
+            self.apply_effect(1001)  # Upgrade Boost
         if analysis >= 9 and self.corrosion >= 200:
-            self.boost = 1.3
+            self.apply_effect(982)  # Defense Power Boost
         if analysis >= 10 and self.corrosion >= 250:
-            self.corrosion_boost *= 2
+            self.apply_effect(3101)  # Corrosion Level Boost
         if analysis >= 11 and self.corrosion >= 300:
-            self._upgrade_max += 2000
+            self.apply_effect(1103)  # Exceed upgrade limit
         if analysis >= 12 and self.corrosion >= 350:
-            self.upgrade_boost *= 2
+            self.apply_effect(1001)  # Upgrade Boost
         if analysis >= 13 and self.corrosion >= 400:
-            self.mult.hp += 0.3
+            self.apply_effect(2103)  # HP Boost
         if analysis >= 14 and self.corrosion >= 450:
-            self._upgrade_max += 3000
+            self.apply_effect(1104)  # Exceed upgrade limit
         if analysis >= 15 and self.corrosion >= 500:
-            self.corrosion_boost *= 2
+            self.apply_effect(3101)  # Corrosion Level Boost
 
     def apply_analysis_ring(self, analysis: int, attack_kind: str, has_set: bool):
         if analysis >= 5:
-            self.mult.string_to_stat(self._specialized, 0.1)
+            if self._specialized == "HP":
+                self.apply_effect(2101)  # HP Boost
+            elif self._specialized == "STR":
+                self.apply_effect(2201)  # STR Boost
+            elif self._specialized == "VIT":
+                self.apply_effect(2301)  # VIT Boost
+            elif self._specialized == "SPD":
+                self.apply_effect(2401)  # SPD Boost
+            elif self._specialized == "LUK":
+                self.apply_effect(2501)  # LUK Boost
+            else:
+                print(f"Invalid Stat: {self._specialized}")
         if analysis >= 6 and self.corrosion >= 50:
-            self.mult.all_stats(0.1)
+            self.apply_effect(2601)  # All Stats Boost
         if analysis >= 7 and self.corrosion >= 100:
-            match equip_list[self.id]["ability"]:
-                # First Strike
-                case 66:
-                    self.effects.append(66)
-                # Double Strike
-                case 67:
-                    self.effects.append(67)
-                # One Strike
-                case 68:
-                    self.effects.append(68)
-                # Slashing Mastery
-                case 901:
-                    if attack_kind == "Slashing":
-                        self.mult.str += 0.3
-                # Bludgeoning Mastery
-                case 911:
-                    if attack_kind == "Bludgeoning":
-                        self.mult.str += 0.3
-                # Piercing Mastery
-                case 921:
-                    if attack_kind == "Piercing":
-                        self.mult.str += 0.3
-                # Projectile Mastery
-                case 931:
-                    if attack_kind == "Projectile":
-                        self.mult.str += 0.3
-                # Poison
-                case 941:
-                    self.effects.append(941)
-                # Solitude
-                case 951:
-                    if not has_set:
-                        self.mult.all_stats(0.1)
-                # Unyielding
-                case 961:
-                    self.effects.append(961)
-                # HP Boost
-                case 2103:
-                    self.mult.hp += 0.3
-                # SPD Boost
-                case 2403:
-                    self.mult.spd += 0.3
-                case _:
-                    print(f"Invalid ability Effect: {equip_list[self.id]['ability']}")
+            worked = self.apply_effect(equip_list[self.id]["ability"], attack_kind, has_set)
+            if not worked:
+                print(f"Invalid ability Effect: {equip_list[self.id]['ability']}")
         if analysis >= 8 and self.corrosion >= 150:
-            self.mult.string_to_stat(self._specialized, 0.2)
+            if self._specialized == "HP":
+                self.apply_effect(2102)  # HP Boost
+            elif self._specialized == "STR":
+                self.apply_effect(2202)  # STR Boost
+            elif self._specialized == "VIT":
+                self.apply_effect(2302)  # VIT Boost
+            elif self._specialized == "SPD":
+                self.apply_effect(2402)  # SPD Boost
+            elif self._specialized == "LUK":
+                self.apply_effect(2502)  # LUK Boost
+            else:
+                print(f"Invalid Stat: {self._specialized}")
         if analysis >= 9 and self.corrosion >= 200:
-            self.mult.all_stats(0.2)
-        # analysis 10 >= More likely to find better enchants
+            self.apply_effect(2602)  # All Stats Boost
+        if analysis >= 10:
+            self.apply_effect(3001)  # Ability Level Boost
         if analysis >= 11 and self.corrosion >= 300:
-            self.mult.string_to_stat(self._specialized, 0.3)
+            if self._specialized == "HP":
+                self.apply_effect(2103)  # HP Boost
+            elif self._specialized == "STR":
+                self.apply_effect(2203)  # STR Boost
+            elif self._specialized == "VIT":
+                self.apply_effect(2303)  # VIT Boost
+            elif self._specialized == "SPD":
+                self.apply_effect(2403)  # SPD Boost
+            elif self._specialized == "LUK":
+                self.apply_effect(2503)  # LUK Boost
+            else:
+                print(f"Invalid Stat: {self._specialized}")
         if analysis >= 12 and self.corrosion >= 350:
-            self.mult.all_stats(0.3)
+            self.apply_effect(2603)  # All Stats Boost
         if analysis >= 13 and self.corrosion >= 400:
-            match equip_list[self.id]["next"]:
-                # Three Paths (Crit Damage)
-                case 803:
-                    self.effects.append(803)
-                # Four Leaves (Double Drops)
-                case 804:
-                    self.effects.append(804)
-                # Five Lights (Double XP)
-                case 805:
-                    self.effects.append(805)
-                # Sixth Sense (Dodge Attack)
-                case 806:
-                    self.effects.append(806)
-                # Seven Blessings (Probability Increase)
-                case 807:
-                    self.effects.append(807)
-                # Slashing Mastery
-                case 901:
-                    if attack_kind == "Slashing":
-                        self.mult.str += 0.3
-                # Bludgeoning Mastery
-                case 911:
-                    if attack_kind == "Bludgeoning":
-                        self.mult.str += 0.3
-                # Piercing Mastery
-                case 921:
-                    if attack_kind == "Piercing":
-                        self.mult.str += 0.3
-                # Projectile Mastery
-                case 931:
-                    if attack_kind == "Projectile":
-                        self.mult.str += 0.3
-                # Solitude
-                case 951:
-                    if not has_set:
-                        self.mult.all_stats(0.1)
-                # HP Boost
-                case 2103:
-                    self.mult.hp += 0.3
-                case _:
-                    print(f"Invalid Next Effect: {equip_list[self.id]['next']}")
+            worked = self.apply_effect(equip_list[self.id]["next"], attack_kind, has_set)
+            if not worked:
+                print(f"Invalid Next Effect: {equip_list[self.id]['next']}")
         if analysis >= 14 and self.corrosion >= 450:
-            self.mult.string_to_stat(self._specialized, 0.4)
-        # analysis 15 >= More likely to find better enchants
+            if self._specialized == "HP":
+                self.apply_effect(2104)  # HP Boost
+            elif self._specialized == "STR":
+                self.apply_effect(2204)  # STR Boost
+            elif self._specialized == "VIT":
+                self.apply_effect(2304)  # VIT Boost
+            elif self._specialized == "SPD":
+                self.apply_effect(2404)  # SPD Boost
+            elif self._specialized == "LUK":
+                self.apply_effect(2504)  # LUK Boost
+            else:
+                print(f"Invalid Stat: {self._specialized}")
+        if analysis >= 15:
+            self.apply_effect(3002)  # Ability Level Boost
 
     def apply_upgrade(self, amount: int):
         self.upgrade = min(amount, self._upgrade_max)
 
-    def apply_enchantment(self, enchants: list[int]):
+    def apply_enchantments(self, enchants: list[int]):
         self._enchant1 = enchants[0]
         self._enchant2 = enchants[1]
         self._enchant3 = enchants[2]
-        for check in enchants:
-            match check:
-                case 0:
-                    continue
-                case 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 55 | 56 | 111 | 112 | 113 | 114 | 115 | 116 | 117 | 118 | 119 | 120 | 121 | 122 | 123 | 124 | 125 | 126 | 127 | 128 | 129 | 130:
-                    self.stats.hp += custom_list[check]["value"]  # Endurance
-                case 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 57 | 58 | 211 | 212 | 213 | 214 | 215 | 216 | 217 | 218 | 219 | 220 | 221 | 222 | 223 | 224 | 225 | 226 | 227 | 228 | 229 | 230:
-                    self.stats.str += custom_list[check]["value"]  # Strength
-                case 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 59 | 60 | 311 | 312 | 313 | 314 | 315 | 316 | 317 | 318 | 319 | 320 | 321 | 322 | 323 | 324 | 325 | 326 | 327 | 328 | 329 | 330:
-                    self.stats.vit += custom_list[check]["value"]  # Sturdy
-                case 25 | 26 | 27 | 61 | 62 | 63 | 64 | 65 | 409 | 410 | 411 | 412 | 413 | 414 | 415 | 416 | 417 | 418 | 419 | 420:
-                    self.stats.spd += custom_list[check]["value"]  # Agility
-                case 28 | 29 | 30:
-                    self.stats.luk += custom_list[check]["value"]  # Lucky
-                case 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 609 | 610 | 611 | 612 | 613 | 614 | 615 | 616 | 617 | 618 | 619 | 620 | 621 | 622 | 623 | 624 | 625 | 626 | 627 | 628 | 629 | 630:
-                    self.up.str += custom_list[check]["value"]  # Strength Training
-                case 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 709 | 710 | 711 | 712 | 713 | 714 | 715 | 716 | 717 | 718 | 719 | 720 | 721 | 722 | 723 | 724 | 725 | 726 | 727 | 728 | 729 | 730:
-                    self.up.vit += custom_list[check]["value"]  # Defense Training
-                case 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 509 | 510 | 511 | 512 | 513 | 514 | 515 | 516 | 517 | 518 | 519 | 520 | 521 | 522 | 523 | 524 | 525 | 526 | 527 | 528 | 529 | 530:
-                    self.up.hp += custom_list[check]["value"]  # Endurance Training
-                case 66 | 67 | 68 | 803 | 806 | 807:
-                    # First Strike, Double Strike, One Strike, Three Paths, Sixth Sense, Seven Blessings
-                    self.effects.append(check)
-                case _:
-                    print(f'Custom Effect {check} not found')
+        for enchant in enchants:
+            self.apply_effect(enchant)
+
+    def apply_effect(self, effect: int, attack_kind: str = "", has_set: bool = False):
+        match effect:
+            # Normal Enchantments
+            case 0:
+                pass  # No Enchantment
+            case _ if effect in enchantment_list['Endurance']:
+                self.stats.hp += custom_list[effect]["value"]
+            case _ if effect in enchantment_list['Strength']:
+                self.stats.str += custom_list[effect]["value"]
+            case _ if effect in enchantment_list['Sturdy']:
+                self.stats.vit += custom_list[effect]["value"]
+            case _ if effect in enchantment_list['Agility']:
+                self.stats.spd += custom_list[effect]["value"]
+            case _ if effect in enchantment_list['Lucky']:
+                self.stats.luk += custom_list[effect]["value"]
+            case _ if effect in enchantment_list['Strength Training']:
+                self.up.str += custom_list[effect]["value"]
+            case _ if effect in enchantment_list['Defense Training']:
+                self.up.vit += custom_list[effect]["value"]
+            case _ if effect in enchantment_list['Endurance Training']:
+                self.up.hp += custom_list[effect]["value"]
+            # Special Enchantments
+            case _ if effect in enchantment_list['First Strike']:
+                self.effects.append(effect)
+            case _ if effect in enchantment_list['One Strike']:
+                self.effects.append(effect)
+            case _ if effect in enchantment_list['Double Strike']:
+                self.effects.append(effect)
+            case _ if effect in enchantment_list['Three Paths']:
+                self.effects.append(effect)
+            case _ if effect in enchantment_list['Four Leaves']:
+                self.effects.append(effect)
+            case _ if effect in enchantment_list['Five Lights']:
+                self.effects.append(effect)
+            case _ if effect in enchantment_list['Sixth Sense']:
+                self.effects.append(effect)
+            case _ if effect in enchantment_list['Seven Blessings']:
+                self.effects.append(effect)
+            # Ring Effects
+            case _ if effect in enchantment_list['Mastery of Slashing']:
+                if attack_kind == "Slashing":
+                    self.mult.str += custom_list[effect]["value"] / 100
+            case _ if effect in enchantment_list['Mastery of Bludgeoning']:
+                if attack_kind == "Bludgeoning":
+                    self.mult.str += custom_list[effect]["value"] / 100
+            case _ if effect in enchantment_list['Mastery of Piercing']:
+                if attack_kind == "Piercing":
+                    self.mult.str += custom_list[effect]["value"] / 100
+            case _ if effect in enchantment_list['Mastery of Projectiles']:
+                if attack_kind == "Projectile":
+                    self.mult.str += custom_list[effect]["value"] / 100
+            case _ if effect in enchantment_list['Poison']:
+                self.effects.append(effect)
+            case _ if effect in enchantment_list['Solitude']:
+                if not has_set:
+                    self.mult.all_stats(custom_list[effect]["value"] / 100)
+            case _ if effect in enchantment_list['Unyielding']:
+                self.effects.append(effect)
+            # These are the builtin Weapon/Armor analysis effects
+            case _ if effect in enchantment_list['Attack Power Boost']:
+                self.boost += custom_list[effect]["value"] / 100
+            case _ if effect in enchantment_list['Defense Power Boost']:
+                self.boost += custom_list[effect]["value"] / 100
+            case _ if effect in enchantment_list['Upgrade Boost']:
+                self.upgrade_boost *= custom_list[effect]["value"]
+            case _ if effect in enchantment_list['Exceed upgrade limit']:
+                self._upgrade_max += custom_list[effect]["value"]
+            case _ if effect in enchantment_list['Corrosion Level Boost']:
+                self.corrosion_boost *= custom_list[effect]["value"]
+            # These are the builtin Ring analysis effects
+            case _ if effect in enchantment_list['HP Boost']:
+                self.mult.hp += custom_list[effect]["value"] / 100
+            case _ if effect in enchantment_list['STR Boost']:
+                self.mult.str += custom_list[effect]["value"] / 100
+            case _ if effect in enchantment_list['VIT Boost']:
+                self.mult.vit += custom_list[effect]["value"] / 100
+            case _ if effect in enchantment_list['SPD Boost']:
+                self.mult.spd += custom_list[effect]["value"] / 100
+            case _ if effect in enchantment_list['LUK Boost']:
+                self.mult.luk += custom_list[effect]["value"] / 100
+            case _ if effect in enchantment_list['All Stats Boost']:
+                self.mult.all_stats(custom_list[effect]["value"] / 100)
+            case _ if effect in enchantment_list['Ability Level Boost']:
+                self.effects.append(effect)
+            case _ if effect in enchantment_list['Set Boost']:
+                if has_set:
+                    self.mult.str += custom_list[effect]["value"] / 100
+            case _:
+                print(f'Custom Effect {effect} not found')
+                return False
+        return True
 
     def print(self):
         return f'{equip_list[self.id]["nameId_EN"]}[{self.id}, {self._enchant1}, {self._enchant2}, {self._enchant3}]'
@@ -297,6 +354,19 @@ class Player(Stats):
         self.armor: Item | None = None
         self.ring: Item | None = None
         self.effects: list[int] = []
+        self.drop_rate: float = 1
+        self.crit_rate: float = 0.05
+        self.analysis_crit_rate: float = 1
+        self.crit_damage: float = 2
+        self.analysis_crit_damage: float = 1
+        self.first_strike: bool = False
+        self.double_strike: float = 0
+        self.poison: bool = False
+        self.poison_damage: float = 0.01
+        self.experience_gain: float = 1
+        self.revive: bool = False
+        self.dodge: int = 0
+        self.weapon_boost: float = 1
         self.attack: int = 0
         self.defense: int = 0
         self.current_hp: int = 0
@@ -304,16 +374,7 @@ class Player(Stats):
         self.lvl: int = 1
         self.xp: int = 0
         self.type: str = 'Player'
-        self.analysis_boost: Stats = Stats(1)
-        self.analysis_boost.drop_rate = 1
-        self.analysis_boost.critical_hit_rate = 1
-        self.analysis_boost.critical_damage = 1
-        self.analysis_boost.slashing_damage = 1
-        self.analysis_boost.bludgeoning_damage = 1
-        self.analysis_boost.piercing_damage = 1
-        self.analysis_boost.projectile_damage = 1
-        self.analysis_boost.poison_damage = 1
-        self.analysis_boost.experience_gain = 1
+        self.analysis_boost = Stats(1)
 
     def apply_corrosion(self, amount: list[int]):
         self.weapon.corrosion = amount[0]
@@ -326,24 +387,39 @@ class Player(Stats):
         self.analysis_boost.vit += boost_points[2] * 0.005
         self.analysis_boost.spd += boost_points[3] * 0.005
         self.analysis_boost.luk += boost_points[4] * 0.005
-        self.analysis_boost.drop_rate += boost_points[5] * 0.0002
-        self.analysis_boost.critical_hit_rate += boost_points[6] * 0.002
-        self.analysis_boost.critical_damage += boost_points[7] * 0.005
-        self.analysis_boost.slashing_damage += boost_points[8] * 0.005
+        self.drop_rate += boost_points[5] * 0.0002  # TODO - IDK if this is + or *
+        self.analysis_crit_rate += boost_points[6] * 0.002  # TODO - IDK if this is + or *
+        self.analysis_crit_damage += boost_points[7] * 0.005  # TODO - IDK if this is + or *
         if self.weapon.attack_kind == "Slashing":
-            self.weapon.boost += self.analysis_boost.slashing_damage
-        self.analysis_boost.bludgeoning_damage += boost_points[9] * 0.005
+            self.weapon_boost = boost_points[8] * 0.005
         if self.weapon.attack_kind == "Bludgeoning":
-            self.weapon.boost += self.analysis_boost.bludgeoning_damage
-        self.analysis_boost.piercing_damage += boost_points[10] * 0.005
+            self.weapon_boost = boost_points[9] * 0.005
         if self.weapon.attack_kind == "Piercing":
-            self.weapon.boost += self.analysis_boost.piercing_damage
-        self.analysis_boost.projectile_damage += boost_points[11] * 0.005
+            self.weapon_boost = boost_points[10] * 0.005
         if self.weapon.attack_kind == "Projectile":
-            self.weapon.boost += self.analysis_boost.projectile_damage
-        self.analysis_boost.poison_damage += boost_points[12] * 0.0001
-        self.analysis_boost.experience_gain += boost_points[13] * 0.005
-
+            self.weapon_boost = boost_points[11] * 0.005
+        self.poison_damage += boost_points[12] * 0.0001  # TODO - IDK if this is + or * - is this before or after enchantments
+        self.experience_gain += boost_points[13] * 0.005  # TODO - IDK if this is + or * - is this before or after enchantments
+        if boost_points[14] == 50:
+            self.effects += [66]
+        if boost_points[15] == 50:
+            self.effects += [941]
+        if boost_points[16] == 50:
+            self.effects += [961]
+        if boost_points[17] == 50:
+            self.effects += [68]
+        if boost_points[18] == 50:
+            self.effects += [67]
+        if boost_points[19] == 50:
+            self.effects += [803]
+        if boost_points[20] == 50:
+            self.effects += [804]
+        if boost_points[21] == 50:
+            self.effects += [805]
+        if boost_points[22] == 50:
+            self.effects += [806]
+        if boost_points[23] == 50:
+            self.effects += [807]
         self.weapon.apply_analysis_weapon(level[0], self._has_set)
         self.armor.apply_analysis_armor(level[1])
         self.ring.apply_analysis_ring(level[2], self.weapon.attack_kind, self._has_set)
@@ -354,9 +430,9 @@ class Player(Stats):
         self.ring.apply_upgrade(amount[2])
 
     def apply_enchantment(self, w_enchant: list[int], a_enchant: list[int], r_enchant: list[int], ):
-        self.weapon.apply_enchantment(w_enchant)
-        self.armor.apply_enchantment(a_enchant)
-        self.ring.apply_enchantment(r_enchant)
+        self.weapon.apply_enchantments(w_enchant)
+        self.armor.apply_enchantments(a_enchant)
+        self.ring.apply_enchantments(r_enchant)
 
     def add_items(self, weapon: list[int], armor: list[int], ring: list[int], corrosion: list[int], analysis: list[int], analysis_boost: list[int], upgrade: list[int]):
         self.weapon = Item(weapon[0])
@@ -368,6 +444,47 @@ class Player(Stats):
         self.apply_upgrade(upgrade)
         self.apply_enchantment(weapon[1:], armor[1:], ring[1:])
         self.effects += self.weapon.effects + self.armor.effects + self.ring.effects
+        self.apply_effects()
+
+    def apply_effects(self):
+        self.effects = list(set(self.effects))
+
+        represented_effects = [66, 67, 68, 803, 804, 805, 806, 807, 941, 961]
+        if not self.effects.issubset(represented_effects):
+            print(f"Found invalid effects: {[x for x in self.effects if x not in represented_effects]}")
+
+        # Seven Blessings: #807 (The probability of probability-based abilities is doubled)
+        seven_blessings = 1 if 807 not in self.effects else custom_list[807]["value"]
+
+        # First Strike: #66 (A preemptive strike (1/2 damage) triggers at the start of combat)
+        self.first_strike = 66 in self.effects
+
+        # Double Strike: #67 (20% chance to attack twice)
+        double_strike = 67 in self.effects
+        self.double_strike = (custom_list[67]["value"]/100 * double_strike * seven_blessings) + log10(self.spd)  # TODO SPD affects this but idk how
+
+        # Three Paths: #803 (50% chance for critical damage to be *3)
+        # Crit is 5% for 2x attack damage
+        three_paths_chance = min(1, 0 if 803 not in self.effects else (custom_list[803]["value"]/100 * seven_blessings))
+        self.crit_damage = (2 + three_paths_chance) * self.analysis_crit_damage
+
+        # Four Leaves: #804 (20% chance to double enemy drops)
+        self.drop_rate += 0 if 804 not in self.effects else custom_list[804]["value"]/100 * seven_blessings
+
+        # Five Lights: # 805 (20% chance to double experience points)
+        self.experience_gain += 0 if 805 not in self.effects else custom_list[805]["value"]/100 * seven_blessings
+
+        # Six Sense: #806 (20% chance to dodge an attack)
+        self.dodge += 0 if 806 not in self.effects else custom_list[806]["value"]/100 * seven_blessings + log10(self.spd)  # TODO SPD affects this but idk how
+
+        # One Strike: #68  (Critical hit chance increases by 20%)
+        self.crit_rate = 0.05 + (custom_list[68]["value"]/100 * (68 in self.effects) * seven_blessings) + self.analysis_crit_rate
+
+        # Poison (941): Deals 0.5% of Max HP stacking damage at end of turn
+        self.poison = 941 in self.effects
+
+        # Unyielding 961 (Stay at 1 HP once during an adventure and deliver a critical hit on the next attack)
+        self.revive = 961 in self.effects
 
     def print(self):
         mods = generate_attack_defense_mod(self)
@@ -405,6 +522,7 @@ class Player(Stats):
         self.luk = floor(self.luk)
         # Add Weapon
         self.attack = self.str + (((self.weapon.upgrade * self.weapon.upgrade_boost) + (self.weapon.corrosion * 10 * self.weapon.corrosion_boost) + self.weapon.param) * self.weapon.boost)
+        self.attack = floor(self.attack * self.weapon_boost)
         # Add Armor
         self.defense = self.vit + (((self.armor.upgrade * self.armor.upgrade_boost) + (self.armor.corrosion * 10 * self.armor.corrosion_boost) + self.armor.param) * self.armor.boost)
         # Floor values
@@ -413,7 +531,7 @@ class Player(Stats):
         self.current_hp = self.hp
 
     def gain_xp(self, xp: int):
-        self.xp += floor(xp * self.analysis_boost.experience_gain)
+        self.xp += floor(xp * self.experience_gain)
         level = exp_to_level(self.xp)
         if level != self.lvl:
             self.apply_level(level)
@@ -422,7 +540,7 @@ class Player(Stats):
 class Monster(Stats):
     # See ./Dart_Code for Miasma Effect and Monster Generator
     # Thanks to Haap for dart code
-    def __init__(self, monster_id: int, dungeon_id: int, dungeon_floor: int, dungeon_name: str = '', is_royal_tomb: bool = False, miasma_level: int = 5):
+    def __init__(self, monster_id: int, dungeon_id: int, dungeon_floor: int, dungeon_name: str = '', is_royal_tomb: bool = False, miasma_level: int = 50):
         super().__init__()
         self.id: int = monster_id
         self.name: str = monster_list[monster_id]['nameId_EN']
@@ -447,11 +565,11 @@ class Monster(Stats):
         # Randomly Generated Dungeons get a boost
         # "峡谷" in self.dungeon_name
         dungeon_bias = 0
-        if "砦" in dungeon_name:
+        if "The Fortress" in dungeon_name:
             dungeon_bias = 2
-        elif "霊廟" in dungeon_name:
+        elif "The Mausoleum" in dungeon_name:
             dungeon_bias = 4
-        elif "古城" in dungeon_name:
+        elif "The Ancient Citadel" in dungeon_name:
             dungeon_bias = 8
 
         base_param = (((500 * round(1 + dungeon_id / 4)) + (100 * dungeon_id)) + min(2500 * (miasma_level - 1), 10000))
@@ -469,7 +587,7 @@ class Monster(Stats):
         #############################
 
         # If there is Miasma, The enemy gets 3% stronger every 4 floors
-        more_percent = more_percent + (f // 4) * (3 + miasma_level)
+        more_percent += (f // 4) * (3 + miasma_level)
         if miasma_level == 0:
             more_percent = 0
             base_param = 0
@@ -535,15 +653,6 @@ class Fountain:
 
 
 def generate_attack_defense_mod(player: Player) -> list[float]:
-    # Double Strike: #67  (20% chance to attack twice)
-    double_strike = 67 in player.effects
-    # Seven Blessings: #807 (The probability of probability-based abilities is doubled)
-    seven_blessings = 1 + (807 in player.effects)
-    # Three Paths: #803 (50% chance for critical damage to be *3)
-    # Crit is 5% for 2x attack damage
-    crit_damage = 1 + (0.5 * (803 in player.effects) * seven_blessings) + player.analysis_boost.critical_damage
-    # One Strike: #68  (Critical hit chance increases by 20%)
-    crit_chance = 0.05 + (0.2 * (68 in player.effects) * seven_blessings) + player.analysis_boost.critical_hit_rate
-    attack_mod = (1 + (crit_damage * crit_chance)) * (1 + (0.2 * double_strike * seven_blessings))
-    defense_mod = 1 + (0.20 * (806 in player.effects) * seven_blessings)  # 1, 1.2, 1.4
+    attack_mod = (1 + (player.crit_damage * player.crit_rate)) * (1 + player.double_strike)
+    defense_mod = 1 + player.dodge
     return [attack_mod, defense_mod]

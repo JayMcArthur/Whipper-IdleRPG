@@ -5,7 +5,7 @@ from random import randint
 import numpy as np
 
 from enitity import Player, Monster, Fountain, generate_attack_defense_mod, UPGRADE_MAX, ANALYSIS_LEVEL_MAX, CORROSION_MAX, ANALYSIS_BOOST_DEFAULT
-from json_to_python import dungeon_list, equip_list
+from json_to_python import dungeon_list, equip_list, enchantment_list
 
 
 def run_lineup_quick(lineup: list[Player], record: list, lvl: int, print_stuff: bool, ignore_spd: bool) -> None:
@@ -118,6 +118,10 @@ def dungeon_sort(r: list[int]) -> int:
     return r[0] + r[1]
 
 
+def damage_sort(e: Player) -> int:
+    return e.attack * (2 + (803 in e.effects))
+
+
 #############################
 # Multiprocessing functions #
 #############################
@@ -208,12 +212,12 @@ def fight_realistic(attacker: Player | Monster, defender: Player | Monster, mons
     a_poison = 941 in attacker.effects
     a_poison_effect = 0.005
     if monster != 1:
-        a_poison_effect += attacker.analysis_boost.poison_damage
+        a_poison_effect += attacker.poison_damage  # TODO - IDK if this + or *
     a_poisoned = 0
     d_poison = 941 in defender.effects
     d_poison_effect = 0.005
     if monster != 1:
-        d_poison_effect += defender.analysis_boost.poison_damage
+        d_poison_effect += defender.poison_damage
     d_poisoned = 0
     # Seven Blessings (807): The probability of probability-based abilities is doubled
     a_seven_blessings = 1 + (807 in attacker.effects)
@@ -488,43 +492,45 @@ def create_all_items_keys(lineup: list, print_stuff: bool) -> None:
 
 
 def create_enchantments(lvl: int, only_str: bool, only_vit: bool, print_stuff: bool) -> list[list[int]]:
-    # Endurance 30: #130 (16000 HP)
-    # Strength 30: #230 (16000 STR)
-    # Sturdy 30: #330 (16000 VIT)
-    # Agility 20: #420 (655 SPD) -- SKIPPED -- First Strike better
-    # Luck 3: #30 (3 LUK) -- SKIPPED -- Apples better
-    # Endurance Training 30: #530 (630 HP ^)
-    # Strength Training 30: #630 (630 STR ^)
-    # Defense Training 30: #730 (630 VIT ^)
+    endurance = enchantment_list["Endurance"][-1]
+    strength = enchantment_list["Strength"][-1]
+    sturdy = enchantment_list["Sturdy"][-1]
+    agility = enchantment_list["Agility"][-1]  # SKIPPED -- First Strike better
+    lucky = enchantment_list["Lucky"][-1]  # SKIPPED -- Apples better
+    strength_training = enchantment_list["Strength Training"][-1]
+    defense_training = enchantment_list["Defense Training"][-1]
+    endurance_training = enchantment_list["Endurance Training"][-1]
+    first_strike = enchantment_list["First Strike"][-1]
+    one_strike = enchantment_list["One Strike"][-1]
+    double_strike = enchantment_list["Double Strike"][-1]
+    three_paths = enchantment_list["Three Paths"][-1]
+    four_leaves = enchantment_list["Four Leaves"][-1]  # SKIPPED -- Who cares about drops
+    five_lights = enchantment_list["Five Lights"][-1]  # SKIPPED -- XP only good for dungeons and even then...
+    sixth_sense = enchantment_list["Sixth Sense"][-1]
+    seven_blessings = enchantment_list["Seven Blessings"][-1]
 
     # These I will allow any amount of
     if lvl == -1:
-        main_enchantments = [130, 230, 330, 530, 630, 730]
+        main_enchantments = [endurance, strength, sturdy, endurance_training, strength_training, defense_training]
     elif 25 < lvl < 51:
-        main_enchantments = [530, 630, 730]
+        main_enchantments = [endurance_training, strength_training, defense_training]
         if only_str:
-            main_enchantments = [630]
+            main_enchantments = [strength_training]
         elif only_vit:
-            main_enchantments = [730]
+            main_enchantments = [defense_training]
     else:
-        main_enchantments = [130, 230, 330]
+        main_enchantments = [endurance, strength, sturdy]
         if only_str:
-            main_enchantments = [230]
+            main_enchantments = [strength]
         elif only_vit:
-            main_enchantments = [330]
+            main_enchantments = [sturdy]
 
-    # First Strike: #66 (Can always attack first in battle)
-    # Double Strike: #67 (20% chance to attack twice)
-    # One Strike: #68 (Critical hit chance increases by 20%)
-    # Three Paths: #803 (50% chance for critical damage to be tripled)
-    # Sixth Sense: #806 (20% chance to dodge an attack)
-    # Seven Blessings: #807 (The probability of probability-based abilities is doubled)
     # These can only be in a gear set once
-    side_enchantments = [66, 67, 68, 803, 806, 807]
+    side_enchantments = [first_strike, double_strike, one_strike, three_paths, sixth_sense, seven_blessings]
     if only_str:
-        side_enchantments = [66, 67, 68, 803, 807]
+        side_enchantments = [first_strike, double_strike, one_strike, three_paths, seven_blessings]
     if only_vit:
-        side_enchantments = [806, 807]
+        side_enchantments = [sixth_sense, seven_blessings]
 
     enchantments = list(combinations_with_replacement(main_enchantments, 9))
     for i in range(1, min(len(side_enchantments), 10)):
@@ -532,13 +538,12 @@ def create_enchantments(lvl: int, only_str: bool, only_vit: bool, print_stuff: b
 
     # Filtering
     # Here we can filter out enchantment we know will be bad.
-    # I know the Tomb will take at least 5 Strengths
-    # IDK if it is best
-    if lvl == -1:
-        total = len(enchantments)
-        for e_id, enchant in enumerate(enchantments[::-1]):
-            if enchant.count(230) + enchant.count(630) < 5:
-                enchantments.pop(total - e_id - 1)
+    # IDK what is bad anymore
+    # if lvl == -1:
+    #     total = len(enchantments)
+    #     for e_id, enchant in enumerate(enchantments[::-1]):
+    #         if enchant.count(230) + enchant.count(630) < 5:
+    #             enchantments.pop(total - e_id - 1)
 
     if print_stuff:
         print(f'Number of enchantment combinations: {len(enchantments)}')
@@ -560,6 +565,37 @@ def add_enchantments(lineup: list[list[int]], enchantments: list[list[int]], pri
 ######################
 # Generate Functions #
 ######################
+
+
+def get_max_damage(lineup: list[list[int]], level: list[int], file_name: str, do_enchants: bool = False, enchant_str: bool = False, enchant_vit: bool = False, print_stuff: bool = False):
+    # Enchant Lineup
+    enchanted_lineup = lineup
+    if do_enchants:
+        enchantments = create_enchantments(level[0], enchant_str, enchant_vit, print_stuff)
+        enchanted_lineup = add_enchantments(lineup, enchantments, print_stuff)
+
+    # Initialize Players
+    final_lineup = []
+    for keys in enchanted_lineup:
+        final_lineup.append(Player())
+        final_lineup[-1].add_items(keys[0:4], keys[4:8], keys[8:12], [CORROSION_MAX] * 3, [ANALYSIS_LEVEL_MAX] * 3, ANALYSIS_BOOST_DEFAULT, [UPGRADE_MAX] * 3)
+
+    # Run Lineup
+    for lvl in level:
+        for i in range(len(final_lineup)):
+            final_lineup[i].apply_level(lvl)
+
+        final_lineup.sort(key=damage_sort)
+        if print_stuff:
+            print(f"{lvl:02} - Best - MAX DMG: {damage_sort(final_lineup[-1])} - {final_lineup[-1].print()}")
+            if len(final_lineup) > 1:
+                print(f"{lvl:02} - _2nd - MAX DMG: {damage_sort(final_lineup[-2])} - {final_lineup[-2].print()}")
+            if len(final_lineup) > 2:
+                print(f"{lvl:02} - _3rd - MAX DMG: {damage_sort(final_lineup[-3])} - {final_lineup[-3].print()}")
+        f = open(f'{file_name} - Level {lvl:02} Results.txt', "w")
+        for i in range(max(len(final_lineup) - 1000, 0), len(final_lineup)):
+            f.write(f"Rank {len(final_lineup) - i:03} - MAX DMG: {damage_sort(final_lineup[i])} - {final_lineup[i].print()}\n")
+        f.close()
 
 
 def solve_lineup(lineup: list[list[int]], level: list[int], file_name: str, sort_function, do_enchants: bool = False, enchant_str: bool = False, enchant_vit: bool = False,
