@@ -1903,6 +1903,20 @@
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Adam"
+    },
+    {
+      "id": 201,
+      "nameId": "パノプテス",
+      "hp": 1500000,
+      "atk": 15000,
+      "def": 5000,
+      "spd": 500,
+      "exp": 99999,
+      "item1": 253,
+      "prob1": 100,
+      "item2": 0,
+      "prob2": 0,
+      "nameId_EN": "Panoptes"
     }
   ]
 }

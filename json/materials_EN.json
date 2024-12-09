@@ -483,6 +483,40 @@
       "efficacyId": "",
       "use": 200,
       "nameId_EN": "Thousand-Hand Core Level Up"
+    },
+    {
+      "id": 1301,
+      "nameId": "アダムの心臓",
+      "icon": "adamheart",
+      "efficacyId": "【討伐の証】脈打つ心臓は力の象徴。Lvが上がるごとに、永続ブーストの上限が上がる",
+      "use": 110,
+      "nameId_EN": "Adam's Heart",
+      "efficacyId_EN": "[Proof of Subjugation] The pulsating heart is a symbol of power. Increases the limit of permanent boosts with each level."
+    },
+    {
+      "id": 1302,
+      "nameId": "アダムの心臓がレベルアップ",
+      "icon": "adamheart",
+      "efficacyId": "",
+      "use": 200,
+      "nameId_EN": "Adam's Heart Level Up"
+    },
+    {
+      "id": 1401,
+      "nameId": "パノプテスの瞳",
+      "icon": "panopteseye",
+      "efficacyId": "【討伐の証】その瞳は過去・現在・未来を見通す。Lvが上がるごとに、アイテムの解析上限が上がる",
+      "use": 110,
+      "nameId_EN": "Panoptes' Eye",
+      "efficacyId_EN": "\"[Proof of Subjugation] This eye sees the past"
+    },
+    {
+      "id": 1402,
+      "nameId": "パノプテスの瞳がレベルアップ",
+      "icon": "panopteseye",
+      "efficacyId": "",
+      "use": 200,
+      "nameId_EN": "Panoptes' Eye Level Up"
     }
   ]
 }

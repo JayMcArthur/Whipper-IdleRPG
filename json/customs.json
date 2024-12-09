@@ -3154,7 +3154,7 @@
       "id": 421,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 42,
+      "modLv": 40,
       "dispLv": 21,
       "value": 710,
       "nextModId": 422
@@ -3163,7 +3163,7 @@
       "id": 422,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 46,
+      "modLv": 42,
       "dispLv": 22,
       "value": 770,
       "nextModId": 423
@@ -3172,7 +3172,7 @@
       "id": 423,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 50,
+      "modLv": 44,
       "dispLv": 23,
       "value": 830,
       "nextModId": 424
@@ -3181,7 +3181,7 @@
       "id": 424,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 54,
+      "modLv": 46,
       "dispLv": 24,
       "value": 890,
       "nextModId": 425
@@ -3190,7 +3190,7 @@
       "id": 425,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 58,
+      "modLv": 48,
       "dispLv": 25,
       "value": 950,
       "nextModId": 426
@@ -3199,7 +3199,7 @@
       "id": 426,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 62,
+      "modLv": 50,
       "dispLv": 26,
       "value": 1010,
       "nextModId": 427
@@ -3208,7 +3208,7 @@
       "id": 427,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 66,
+      "modLv": 52,
       "dispLv": 27,
       "value": 1070,
       "nextModId": 428
@@ -3217,7 +3217,7 @@
       "id": 428,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 70,
+      "modLv": 54,
       "dispLv": 28,
       "value": 1130,
       "nextModId": 429
@@ -3226,7 +3226,7 @@
       "id": 429,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 74,
+      "modLv": 56,
       "dispLv": 29,
       "value": 1190,
       "nextModId": 430
@@ -3235,190 +3235,640 @@
       "id": 430,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 78,
+      "modLv": 58,
       "dispLv": 30,
-      "value": 1250,
+      "value": 1290,
       "nextModId": 431
     },
     {
       "id": 431,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 82,
+      "modLv": 62,
       "dispLv": 31,
-      "value": 1310,
+      "value": 1350,
       "nextModId": 432
     },
     {
       "id": 432,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 86,
+      "modLv": 66,
       "dispLv": 32,
-      "value": 1370,
+      "value": 1410,
       "nextModId": 433
     },
     {
       "id": 433,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 90,
+      "modLv": 70,
       "dispLv": 33,
-      "value": 1430,
+      "value": 1470,
       "nextModId": 434
     },
     {
       "id": 434,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 94,
+      "modLv": 74,
       "dispLv": 34,
-      "value": 1490,
+      "value": 1530,
       "nextModId": 435
     },
     {
       "id": 435,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 98,
+      "modLv": 78,
       "dispLv": 35,
-      "value": 1550,
+      "value": 1590,
       "nextModId": 436
     },
     {
       "id": 436,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 102,
+      "modLv": 82,
       "dispLv": 36,
-      "value": 1610,
+      "value": 1650,
       "nextModId": 437
     },
     {
       "id": 437,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 106,
+      "modLv": 86,
       "dispLv": 37,
-      "value": 1670,
+      "value": 1710,
       "nextModId": 438
     },
     {
       "id": 438,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 110,
+      "modLv": 90,
       "dispLv": 38,
-      "value": 1730,
+      "value": 1770,
       "nextModId": 439
     },
     {
       "id": 439,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 114,
+      "modLv": 94,
       "dispLv": 39,
-      "value": 1790,
+      "value": 1830,
       "nextModId": 440
     },
     {
       "id": 440,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 118,
+      "modLv": 98,
       "dispLv": 40,
-      "value": 1880,
+      "value": 1930,
       "nextModId": 441
     },
     {
       "id": 441,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 122,
+      "modLv": 102,
       "dispLv": 41,
-      "value": 1940,
+      "value": 2010,
       "nextModId": 442
     },
     {
       "id": 442,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 126,
+      "modLv": 106,
       "dispLv": 42,
-      "value": 2000,
+      "value": 2090,
       "nextModId": 443
     },
     {
       "id": 443,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 130,
+      "modLv": 110,
       "dispLv": 43,
-      "value": 2060,
+      "value": 2170,
       "nextModId": 444
     },
     {
       "id": 444,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 134,
+      "modLv": 114,
       "dispLv": 44,
-      "value": 2120,
+      "value": 2250,
       "nextModId": 445
     },
     {
       "id": 445,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 138,
+      "modLv": 118,
       "dispLv": 45,
-      "value": 2180,
+      "value": 2330,
       "nextModId": 446
     },
     {
       "id": 446,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 142,
+      "modLv": 122,
       "dispLv": 46,
-      "value": 2240,
+      "value": 2410,
       "nextModId": 447
     },
     {
       "id": 447,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 146,
+      "modLv": 126,
       "dispLv": 47,
-      "value": 2300,
+      "value": 2490,
       "nextModId": 448
     },
     {
       "id": 448,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 150,
+      "modLv": 130,
       "dispLv": 48,
-      "value": 2360,
+      "value": 2570,
       "nextModId": 449
     },
     {
       "id": 449,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 154,
+      "modLv": 134,
       "dispLv": 49,
-      "value": 2420,
+      "value": 2650,
       "nextModId": 450
     },
     {
       "id": 450,
       "nameId": "機敏",
       "summaryId": "SPDの基礎値がアップ",
-      "modLv": 158,
+      "modLv": 138,
       "dispLv": 50,
-      "value": 2500,
+      "value": 2750,
       "nextModId": 451
+    },
+    {
+      "id": 451,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 142,
+      "dispLv": 51,
+      "value": 2830,
+      "nextModId": 452
+    },
+    {
+      "id": 452,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 146,
+      "dispLv": 52,
+      "value": 2910,
+      "nextModId": 453
+    },
+    {
+      "id": 453,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 150,
+      "dispLv": 53,
+      "value": 2990,
+      "nextModId": 454
+    },
+    {
+      "id": 454,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 154,
+      "dispLv": 54,
+      "value": 3070,
+      "nextModId": 455
+    },
+    {
+      "id": 455,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 158,
+      "dispLv": 55,
+      "value": 3150,
+      "nextModId": 456
+    },
+    {
+      "id": 456,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 162,
+      "dispLv": 56,
+      "value": 3230,
+      "nextModId": 457
+    },
+    {
+      "id": 457,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 166,
+      "dispLv": 57,
+      "value": 3310,
+      "nextModId": 458
+    },
+    {
+      "id": 458,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 170,
+      "dispLv": 58,
+      "value": 3390,
+      "nextModId": 459
+    },
+    {
+      "id": 459,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 174,
+      "dispLv": 59,
+      "value": 3470,
+      "nextModId": 460
+    },
+    {
+      "id": 460,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 178,
+      "dispLv": 60,
+      "value": 3570,
+      "nextModId": 461
+    },
+    {
+      "id": 461,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 182,
+      "dispLv": 61,
+      "value": 3670,
+      "nextModId": 462
+    },
+    {
+      "id": 462,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 186,
+      "dispLv": 62,
+      "value": 3770,
+      "nextModId": 463
+    },
+    {
+      "id": 463,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 190,
+      "dispLv": 63,
+      "value": 3870,
+      "nextModId": 464
+    },
+    {
+      "id": 464,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 194,
+      "dispLv": 64,
+      "value": 3970,
+      "nextModId": 465
+    },
+    {
+      "id": 465,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 198,
+      "dispLv": 65,
+      "value": 4070,
+      "nextModId": 466
+    },
+    {
+      "id": 466,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 202,
+      "dispLv": 66,
+      "value": 4170,
+      "nextModId": 467
+    },
+    {
+      "id": 467,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 206,
+      "dispLv": 67,
+      "value": 4270,
+      "nextModId": 468
+    },
+    {
+      "id": 468,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 210,
+      "dispLv": 68,
+      "value": 4370,
+      "nextModId": 469
+    },
+    {
+      "id": 469,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 214,
+      "dispLv": 69,
+      "value": 4470,
+      "nextModId": 470
+    },
+    {
+      "id": 470,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 218,
+      "dispLv": 70,
+      "value": 4570,
+      "nextModId": 471
+    },
+    {
+      "id": 471,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 222,
+      "dispLv": 71,
+      "value": 4670,
+      "nextModId": 472
+    },
+    {
+      "id": 472,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 226,
+      "dispLv": 72,
+      "value": 4770,
+      "nextModId": 473
+    },
+    {
+      "id": 473,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 230,
+      "dispLv": 73,
+      "value": 4870,
+      "nextModId": 474
+    },
+    {
+      "id": 474,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 234,
+      "dispLv": 74,
+      "value": 4970,
+      "nextModId": 475
+    },
+    {
+      "id": 475,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 238,
+      "dispLv": 75,
+      "value": 5070,
+      "nextModId": 476
+    },
+    {
+      "id": 476,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 242,
+      "dispLv": 76,
+      "value": 5170,
+      "nextModId": 477
+    },
+    {
+      "id": 477,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 246,
+      "dispLv": 77,
+      "value": 5270,
+      "nextModId": 478
+    },
+    {
+      "id": 478,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 250,
+      "dispLv": 78,
+      "value": 5370,
+      "nextModId": 479
+    },
+    {
+      "id": 479,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 254,
+      "dispLv": 79,
+      "value": 5470,
+      "nextModId": 480
+    },
+    {
+      "id": 480,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 258,
+      "dispLv": 80,
+      "value": 5570,
+      "nextModId": 481
+    },
+    {
+      "id": 481,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 262,
+      "dispLv": 81,
+      "value": 5690,
+      "nextModId": 482
+    },
+    {
+      "id": 482,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 266,
+      "dispLv": 82,
+      "value": 5810,
+      "nextModId": 483
+    },
+    {
+      "id": 483,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 270,
+      "dispLv": 83,
+      "value": 5930,
+      "nextModId": 484
+    },
+    {
+      "id": 484,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 274,
+      "dispLv": 84,
+      "value": 6050,
+      "nextModId": 485
+    },
+    {
+      "id": 485,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 278,
+      "dispLv": 85,
+      "value": 6170,
+      "nextModId": 486
+    },
+    {
+      "id": 486,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 282,
+      "dispLv": 86,
+      "value": 6290,
+      "nextModId": 487
+    },
+    {
+      "id": 487,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 286,
+      "dispLv": 87,
+      "value": 6410,
+      "nextModId": 488
+    },
+    {
+      "id": 488,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 290,
+      "dispLv": 88,
+      "value": 6530,
+      "nextModId": 489
+    },
+    {
+      "id": 489,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 294,
+      "dispLv": 89,
+      "value": 6650,
+      "nextModId": 490
+    },
+    {
+      "id": 490,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 298,
+      "dispLv": 90,
+      "value": 6770,
+      "nextModId": 491
+    },
+    {
+      "id": 491,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 302,
+      "dispLv": 91,
+      "value": 6910,
+      "nextModId": 492
+    },
+    {
+      "id": 492,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 306,
+      "dispLv": 92,
+      "value": 7050,
+      "nextModId": 493
+    },
+    {
+      "id": 493,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 310,
+      "dispLv": 93,
+      "value": 7190,
+      "nextModId": 494
+    },
+    {
+      "id": 494,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 314,
+      "dispLv": 94,
+      "value": 7330,
+      "nextModId": 495
+    },
+    {
+      "id": 495,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 318,
+      "dispLv": 95,
+      "value": 7470,
+      "nextModId": 496
+    },
+    {
+      "id": 496,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 322,
+      "dispLv": 96,
+      "value": 7610,
+      "nextModId": 497
+    },
+    {
+      "id": 497,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 326,
+      "dispLv": 97,
+      "value": 7750,
+      "nextModId": 498
+    },
+    {
+      "id": 498,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 330,
+      "dispLv": 98,
+      "value": 7890,
+      "nextModId": 499
+    },
+    {
+      "id": 499,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 334,
+      "dispLv": 99,
+      "value": 8030,
+      "nextModId": 4100
+    },
+    {
+      "id": 4100,
+      "nameId": "機敏",
+      "summaryId": "SPDの基礎値がアップ",
+      "modLv": 338,
+      "dispLv": 100,
+      "value": 8192,
+      "nextModId": 4101
     },
     {
       "id": 509,
@@ -6139,6 +6589,51 @@
       "nextModId": 0
     },
     {
+      "id": 1105,
+      "nameId": "強化上限アップ",
+      "summaryId": "強化上限アップ説明",
+      "modLv": 9999,
+      "dispLv": 5,
+      "value": 4000,
+      "nextModId": 0
+    },
+    {
+      "id": 1106,
+      "nameId": "強化上限アップ",
+      "summaryId": "強化上限アップ説明",
+      "modLv": 9999,
+      "dispLv": 6,
+      "value": 5000,
+      "nextModId": 0
+    },
+    {
+      "id": 1107,
+      "nameId": "強化上限アップ",
+      "summaryId": "強化上限アップ説明",
+      "modLv": 9999,
+      "dispLv": 7,
+      "value": 6000,
+      "nextModId": 0
+    },
+    {
+      "id": 1108,
+      "nameId": "強化上限アップ",
+      "summaryId": "強化上限アップ説明",
+      "modLv": 9999,
+      "dispLv": 8,
+      "value": 9900,
+      "nextModId": 0
+    },
+    {
+      "id": 1109,
+      "nameId": "強化上限アップ",
+      "summaryId": "強化上限アップ説明",
+      "modLv": 9999,
+      "dispLv": 9,
+      "value": 19000,
+      "nextModId": 0
+    },
+    {
       "id": 1201,
       "nameId": "侵蝕度ブースト",
       "summaryId": "侵蝕度上昇量ブースト",
@@ -6441,6 +6936,15 @@
       "summaryId": "能力Lvブースト説明",
       "modLv": 9999,
       "dispLv": 2,
+      "value": 0,
+      "nextModId": 0
+    },
+    {
+      "id": 3003,
+      "nameId": "能力Lvブースト",
+      "summaryId": "能力Lvブースト説明",
+      "modLv": 9999,
+      "dispLv": 3,
       "value": 0,
       "nextModId": 0
     },

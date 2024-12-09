@@ -306,7 +306,7 @@ best_vitality_with_enchants = {
 # 1100 - Endurance 100: Increases the HP base value by 65536.
 # 2100 - Strength 100: Increases the STR base value by 65536.
 # 3100 - Sturdy 100: Increases the VIT base value by 65536.
-# _450 - Agility 50: Increases the SPD base value by 2500.
+# 4100 - Agility 100: Increases the SPD base value by 8192.
 # _898 - Lucky 8: Increases the LUK base value by 8.
 # 6100 - Strength Training 100: Increases the STR growth value by 2048.
 # 7100 - Defense Training 100: Increases the VIT growth value by 2048.
@@ -507,8 +507,6 @@ def main(custom_equip: bool, custom_dungeon: bool, dungeon: bool, combination: b
     # ID: 34, Name: <Bloody>Security, Effects: [], Dungeon ID: 11, Floor: 1, Level: 50, HP: 1909971, Attack: 277732, Minimum Damage: 8303, Defense: 277143, SPD: 17222
     # ID: 34, Name: <Alpha>Security, Effects: [], Dungeon ID: 11, Floor: 1, Level: 50, HP: 1338645, Attack: 272636, Minimum Damage: 8303, Defense: 272058, SPD: 16585
     # print(m.print())
-
-    input()
 
     if custom_equip:
         run_custom_setups()
