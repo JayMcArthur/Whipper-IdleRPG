@@ -1,0 +1,3991 @@
+{
+  "weapons": {
+    "ecd26a80-4c94-4fe2-bd90-ce5fb80acfae": {
+      "id": "ecd26a80-4c94-4fe2-bd90-ce5fb80acfae",
+      "itemId": 184,
+      "lv": 50010,
+      "custom1": 2100,
+      "custom2": 2100,
+      "custom3": 2100,
+      "exceedLimit": 2500,
+      "legend": 10
+    },
+    "c9c923d0-0e8d-4267-860d-5d27e00a9f8b": {
+      "id": "c9c923d0-0e8d-4267-860d-5d27e00a9f8b",
+      "itemId": 190,
+      "lv": 0,
+      "custom1": 66,
+      "custom2": 630,
+      "custom3": 609,
+      "exceedLimit": 500,
+      "legend": 0
+    },
+    "5479613a-159c-4250-879a-aefdc0a09256": {
+      "id": "5479613a-159c-4250-879a-aefdc0a09256",
+      "itemId": 188,
+      "lv": 0,
+      "custom1": 213,
+      "custom2": 610,
+      "custom3": 961,
+      "exceedLimit": 419,
+      "legend": 0
+    },
+    "350e9803-76c0-471b-bc17-e77ed2d083bb": {
+      "id": "350e9803-76c0-471b-bc17-e77ed2d083bb",
+      "itemId": 187,
+      "lv": 0,
+      "custom1": 509,
+      "custom2": 410,
+      "custom3": 805,
+      "exceedLimit": 384,
+      "legend": 0
+    },
+    "cd518f8a-9837-41d5-a06b-254c1dbfd486": {
+      "id": "cd518f8a-9837-41d5-a06b-254c1dbfd486",
+      "itemId": 184,
+      "lv": 0,
+      "custom1": 315,
+      "custom2": 710,
+      "custom3": 941,
+      "exceedLimit": 372,
+      "legend": 0
+    },
+    "81dfb1aa-ba49-4538-b339-c17323865590": {
+      "id": "81dfb1aa-ba49-4538-b339-c17323865590",
+      "itemId": 172,
+      "lv": 0,
+      "custom1": 230,
+      "custom2": 730,
+      "custom3": 730,
+      "exceedLimit": 600,
+      "legend": 0
+    },
+    "e5fa188a-9814-4aad-a294-c0dd9fe59a45": {
+      "id": "e5fa188a-9814-4aad-a294-c0dd9fe59a45",
+      "itemId": 172,
+      "lv": 0,
+      "custom1": 316,
+      "custom2": 45,
+      "custom3": 806,
+      "exceedLimit": 410,
+      "legend": 0
+    },
+    "7f3c1749-77f6-4594-8180-c3a4ad86c926": {
+      "id": "7f3c1749-77f6-4594-8180-c3a4ad86c926",
+      "itemId": 190,
+      "lv": 0,
+      "custom1": 45,
+      "custom2": 511,
+      "custom3": 67,
+      "exceedLimit": 417,
+      "legend": 1
+    },
+    "8dfaca78-2f36-4526-a5a7-b4528903691e": {
+      "id": "8dfaca78-2f36-4526-a5a7-b4528903691e",
+      "itemId": 184,
+      "lv": 0,
+      "custom1": 230,
+      "custom2": 230,
+      "custom3": 230,
+      "exceedLimit": 507,
+      "legend": 0
+    },
+    "e01fe8bf-37ff-46d5-ad2a-b031ac159a6f": {
+      "id": "e01fe8bf-37ff-46d5-ad2a-b031ac159a6f",
+      "itemId": 184,
+      "lv": 0,
+      "custom1": 30,
+      "custom2": 30,
+      "custom3": 30,
+      "exceedLimit": 500,
+      "legend": 1
+    },
+    "ccb33ed6-70e2-42b3-81a6-eebe5dcf58e7": {
+      "id": "ccb33ed6-70e2-42b3-81a6-eebe5dcf58e7",
+      "itemId": 172,
+      "lv": 0,
+      "custom1": 230,
+      "custom2": 730,
+      "custom3": 230,
+      "exceedLimit": 500,
+      "legend": 0
+    },
+    "ee242b97-30d8-49d1-b555-655eca63b618": {
+      "id": "ee242b97-30d8-49d1-b555-655eca63b618",
+      "itemId": 172,
+      "lv": 0,
+      "custom1": 510,
+      "custom2": 409,
+      "custom3": 805,
+      "exceedLimit": 373,
+      "legend": 1
+    },
+    "d2ef44d8-ef0e-4c30-b38c-b4f1cbaefa15": {
+      "id": "d2ef44d8-ef0e-4c30-b38c-b4f1cbaefa15",
+      "itemId": 152,
+      "lv": 0,
+      "custom1": 330,
+      "custom2": 230,
+      "custom3": 941,
+      "exceedLimit": 500,
+      "legend": 0
+    },
+    "9efe5382-7ae4-4120-b180-032d0c0f3ffe": {
+      "id": "9efe5382-7ae4-4120-b180-032d0c0f3ffe",
+      "itemId": 131,
+      "lv": 0,
+      "custom1": 510,
+      "custom2": 710,
+      "custom3": 805,
+      "exceedLimit": 368,
+      "legend": 0
+    },
+    "09c2f1aa-9c6b-4e2c-b56e-a2e3f071ab7a": {
+      "id": "09c2f1aa-9c6b-4e2c-b56e-a2e3f071ab7a",
+      "itemId": 150,
+      "lv": 0,
+      "custom1": 409,
+      "custom2": 215,
+      "custom3": 961,
+      "exceedLimit": 460,
+      "legend": 0
+    },
+    "32eb0b27-a4dc-4ac3-9838-33d84e55d890": {
+      "id": "32eb0b27-a4dc-4ac3-9838-33d84e55d890",
+      "itemId": 164,
+      "lv": 0,
+      "custom1": 315,
+      "custom2": 115,
+      "custom3": 803,
+      "exceedLimit": 402,
+      "legend": 0
+    },
+    "84e7a58e-6dc2-414f-8c7b-c72bd18e744e": {
+      "id": "84e7a58e-6dc2-414f-8c7b-c72bd18e744e",
+      "itemId": 163,
+      "lv": 0,
+      "custom1": 212,
+      "custom2": 213,
+      "custom3": 961,
+      "exceedLimit": 360,
+      "legend": 0
+    },
+    "2ab29596-b9ab-4d63-a892-d0396c6cda59": {
+      "id": "2ab29596-b9ab-4d63-a892-d0396c6cda59",
+      "itemId": 144,
+      "lv": 0,
+      "custom1": 515,
+      "custom2": 717,
+      "custom3": 804,
+      "exceedLimit": 500,
+      "legend": 0
+    },
+    "79891caf-1501-4046-8c27-edbaddd52d59": {
+      "id": "79891caf-1501-4046-8c27-edbaddd52d59",
+      "itemId": 103,
+      "lv": 0,
+      "custom1": 624,
+      "custom2": 229,
+      "custom3": 803,
+      "exceedLimit": 500,
+      "legend": 0
+    },
+    "c9b9a37f-0dee-4982-8ddc-8263bad41dee": {
+      "id": "c9b9a37f-0dee-4982-8ddc-8263bad41dee",
+      "itemId": 128,
+      "lv": 0,
+      "custom1": 420,
+      "custom2": 626,
+      "custom3": 961,
+      "exceedLimit": 500,
+      "legend": 0
+    },
+    "4a4354f8-40ae-4115-8025-294b3d9ae81d": {
+      "id": "4a4354f8-40ae-4115-8025-294b3d9ae81d",
+      "itemId": 144,
+      "lv": 0,
+      "custom1": 630,
+      "custom2": 730,
+      "custom3": 806,
+      "exceedLimit": 500,
+      "legend": 0
+    },
+    "dfb0b54a-e3b0-43d9-8b5f-81f59a1845f1": {
+      "id": "dfb0b54a-e3b0-43d9-8b5f-81f59a1845f1",
+      "itemId": 120,
+      "lv": 0,
+      "custom1": 230,
+      "custom2": 230,
+      "custom3": 66,
+      "exceedLimit": 500,
+      "legend": 0
+    },
+    "78fb406d-9803-4d44-b31b-3d8716b88b71": {
+      "id": "78fb406d-9803-4d44-b31b-3d8716b88b71",
+      "itemId": 102,
+      "lv": 0,
+      "custom1": 730,
+      "custom2": 630,
+      "custom3": 807,
+      "exceedLimit": 500,
+      "legend": 0
+    },
+    "7467f213-558a-4992-ab40-3bb75b780171": {
+      "id": "7467f213-558a-4992-ab40-3bb75b780171",
+      "itemId": 119,
+      "lv": 0,
+      "custom1": 753,
+      "custom2": 156,
+      "custom3": 941,
+      "exceedLimit": 1507,
+      "legend": 0
+    },
+    "fe6f07c2-8ba2-4f5f-87c0-cd049e19f479": {
+      "id": "fe6f07c2-8ba2-4f5f-87c0-cd049e19f479",
+      "itemId": 102,
+      "lv": 0,
+      "custom1": 753,
+      "custom2": 553,
+      "custom3": 155,
+      "exceedLimit": 1756,
+      "legend": 0
+    },
+    "f6d31b0d-bc73-4cfc-8fef-8382fa1b9217": {
+      "id": "f6d31b0d-bc73-4cfc-8fef-8382fa1b9217",
+      "itemId": 102,
+      "lv": 0,
+      "custom1": 653,
+      "custom2": 356,
+      "custom3": 453,
+      "exceedLimit": 1613,
+      "legend": 0
+    },
+    "61958069-f598-40a1-b4ac-c13256a1cb63": {
+      "id": "61958069-f598-40a1-b4ac-c13256a1cb63",
+      "itemId": 101,
+      "lv": 0,
+      "custom1": 653,
+      "custom2": 752,
+      "custom3": 355,
+      "exceedLimit": 1659,
+      "legend": 0
+    },
+    "871a86fc-0154-430b-b8d8-73d800f17cc9": {
+      "id": "871a86fc-0154-430b-b8d8-73d800f17cc9",
+      "itemId": 102,
+      "lv": 0,
+      "custom1": 654,
+      "custom2": 356,
+      "custom3": 356,
+      "exceedLimit": 1325,
+      "legend": 0
+    },
+    "963e3590-9883-45db-84e3-f0b3241e759f": {
+      "id": "963e3590-9883-45db-84e3-f0b3241e759f",
+      "itemId": 101,
+      "lv": 0,
+      "custom1": 752,
+      "custom2": 356,
+      "custom3": 753,
+      "exceedLimit": 1652,
+      "legend": 0
+    },
+    "fff5b42b-0c7c-4e66-b2fa-91eefe00f09a": {
+      "id": "fff5b42b-0c7c-4e66-b2fa-91eefe00f09a",
+      "itemId": 101,
+      "lv": 0,
+      "custom1": 256,
+      "custom2": 553,
+      "custom3": 155,
+      "exceedLimit": 1621,
+      "legend": 0
+    },
+    "b837aad0-95a1-4733-b70c-f75c36cd3707": {
+      "id": "b837aad0-95a1-4733-b70c-f75c36cd3707",
+      "itemId": 103,
+      "lv": 0,
+      "custom1": 552,
+      "custom2": 455,
+      "custom3": 0,
+      "exceedLimit": 1675,
+      "legend": 0
+    },
+    "008ca141-916b-471a-aa06-de235048d036": {
+      "id": "008ca141-916b-471a-aa06-de235048d036",
+      "itemId": 163,
+      "lv": 0,
+      "custom1": 155,
+      "custom2": 753,
+      "custom3": 653,
+      "exceedLimit": 1357,
+      "legend": 0
+    },
+    "31de2a4f-a7f0-46ff-bc22-0b36465ced9b": {
+      "id": "31de2a4f-a7f0-46ff-bc22-0b36465ced9b",
+      "itemId": 120,
+      "lv": 0,
+      "custom1": 553,
+      "custom2": 752,
+      "custom3": 0,
+      "exceedLimit": 1673,
+      "legend": 0
+    },
+    "713e65b8-5cc9-4395-b8ed-7165b2617417": {
+      "id": "713e65b8-5cc9-4395-b8ed-7165b2617417",
+      "itemId": 119,
+      "lv": 0,
+      "custom1": 653,
+      "custom2": 156,
+      "custom3": 454,
+      "exceedLimit": 1473,
+      "legend": 0
+    },
+    "217dc348-d2a9-4448-80f0-058d63c7ecc2": {
+      "id": "217dc348-d2a9-4448-80f0-058d63c7ecc2",
+      "itemId": 120,
+      "lv": 0,
+      "custom1": 554,
+      "custom2": 156,
+      "custom3": 0,
+      "exceedLimit": 1523,
+      "legend": 0
+    },
+    "01806c3b-b21f-4ce9-b7d8-3a1e8d20f218": {
+      "id": "01806c3b-b21f-4ce9-b7d8-3a1e8d20f218",
+      "itemId": 104,
+      "lv": 0,
+      "custom1": 256,
+      "custom2": 156,
+      "custom3": 653,
+      "exceedLimit": 1448,
+      "legend": 0
+    },
+    "24e5df4e-beb6-441e-bbe7-8f6014f60cf3": {
+      "id": "24e5df4e-beb6-441e-bbe7-8f6014f60cf3",
+      "itemId": 101,
+      "lv": 0,
+      "custom1": 256,
+      "custom2": 455,
+      "custom3": 257,
+      "exceedLimit": 1462,
+      "legend": 0
+    },
+    "125d77fa-8ba8-4673-a7a7-10ff4b05d81e": {
+      "id": "125d77fa-8ba8-4673-a7a7-10ff4b05d81e",
+      "itemId": 104,
+      "lv": 0,
+      "custom1": 356,
+      "custom2": 653,
+      "custom3": 0,
+      "exceedLimit": 1618,
+      "legend": 0
+    },
+    "99fee6ff-0f62-4d5f-b49e-06cc65502128": {
+      "id": "99fee6ff-0f62-4d5f-b49e-06cc65502128",
+      "itemId": 104,
+      "lv": 0,
+      "custom1": 553,
+      "custom2": 355,
+      "custom3": 156,
+      "exceedLimit": 1339,
+      "legend": 0
+    },
+    "09b86b1d-b1fa-4a93-bab8-93e62a2777dd": {
+      "id": "09b86b1d-b1fa-4a93-bab8-93e62a2777dd",
+      "itemId": 104,
+      "lv": 0,
+      "custom1": 356,
+      "custom2": 155,
+      "custom3": 0,
+      "exceedLimit": 1344,
+      "legend": 0
+    },
+    "3e657fd7-65ce-420e-a0ef-b5ebc5cf6d74": {
+      "id": "3e657fd7-65ce-420e-a0ef-b5ebc5cf6d74",
+      "itemId": 105,
+      "lv": 0,
+      "custom1": 356,
+      "custom2": 255,
+      "custom3": 356,
+      "exceedLimit": 1625,
+      "legend": 0
+    },
+    "f6ee3554-a5ee-4d1a-aa3c-5b0461e17c4a": {
+      "id": "f6ee3554-a5ee-4d1a-aa3c-5b0461e17c4a",
+      "itemId": 104,
+      "lv": 0,
+      "custom1": 453,
+      "custom2": 356,
+      "custom3": 156,
+      "exceedLimit": 1335,
+      "legend": 0
+    },
+    "513c3eb4-6c64-41c6-aa88-1806f3425aab": {
+      "id": "513c3eb4-6c64-41c6-aa88-1806f3425aab",
+      "itemId": 106,
+      "lv": 0,
+      "custom1": 553,
+      "custom2": 454,
+      "custom3": 356,
+      "exceedLimit": 1667,
+      "legend": 0
+    },
+    "b12d12f1-976e-4000-a406-980b7c8bca09": {
+      "id": "b12d12f1-976e-4000-a406-980b7c8bca09",
+      "itemId": 107,
+      "lv": 0,
+      "custom1": 754,
+      "custom2": 454,
+      "custom3": 752,
+      "exceedLimit": 1503,
+      "legend": 0
+    },
+    "18a6bacd-0072-43b6-9537-0705bc05b3cd": {
+      "id": "18a6bacd-0072-43b6-9537-0705bc05b3cd",
+      "itemId": 109,
+      "lv": 0,
+      "custom1": 753,
+      "custom2": 553,
+      "custom3": 453,
+      "exceedLimit": 1699,
+      "legend": 0
+    },
+    "937894dc-dc6f-450b-b328-33ba6e1b3425": {
+      "id": "937894dc-dc6f-450b-b328-33ba6e1b3425",
+      "itemId": 109,
+      "lv": 0,
+      "custom1": 356,
+      "custom2": 255,
+      "custom3": 357,
+      "exceedLimit": 1257,
+      "legend": 0
+    },
+    "6abdb081-8d58-4eff-8971-b36f6e471ebf": {
+      "id": "6abdb081-8d58-4eff-8971-b36f6e471ebf",
+      "itemId": 109,
+      "lv": 0,
+      "custom1": 356,
+      "custom2": 552,
+      "custom3": 454,
+      "exceedLimit": 1364,
+      "legend": 0
+    },
+    "d8a641e5-168f-4b1d-8520-f7851d2823d6": {
+      "id": "d8a641e5-168f-4b1d-8520-f7851d2823d6",
+      "itemId": 113,
+      "lv": 0,
+      "custom1": 653,
+      "custom2": 155,
+      "custom3": 653,
+      "exceedLimit": 1338,
+      "legend": 0
+    },
+    "0fa3c6c7-8e0e-4db1-80d3-079f2566e566": {
+      "id": "0fa3c6c7-8e0e-4db1-80d3-079f2566e566",
+      "itemId": 110,
+      "lv": 0,
+      "custom1": 552,
+      "custom2": 454,
+      "custom3": 155,
+      "exceedLimit": 1457,
+      "legend": 0
+    },
+    "ac448c22-dfc1-4079-b861-ffb780ff1a3e": {
+      "id": "ac448c22-dfc1-4079-b861-ffb780ff1a3e",
+      "itemId": 101,
+      "lv": 0,
+      "custom1": 453,
+      "custom2": 356,
+      "custom3": 0,
+      "exceedLimit": 1354,
+      "legend": 0
+    },
+    "6f6eff59-aad7-4316-a620-bcc915f6bd8d": {
+      "id": "6f6eff59-aad7-4316-a620-bcc915f6bd8d",
+      "itemId": 117,
+      "lv": 0,
+      "custom1": 653,
+      "custom2": 454,
+      "custom3": 652,
+      "exceedLimit": 1741,
+      "legend": 0
+    },
+    "0106ae55-e27e-4f06-a96a-9a11d02c04df": {
+      "id": "0106ae55-e27e-4f06-a96a-9a11d02c04df",
+      "itemId": 131,
+      "lv": 0,
+      "custom1": 356,
+      "custom2": 256,
+      "custom3": 553,
+      "exceedLimit": 1702,
+      "legend": 0
+    },
+    "7281ceb2-795d-4f78-bcc8-b57473b072ba": {
+      "id": "7281ceb2-795d-4f78-bcc8-b57473b072ba",
+      "itemId": 116,
+      "lv": 0,
+      "custom1": 155,
+      "custom2": 356,
+      "custom3": 0,
+      "exceedLimit": 1475,
+      "legend": 0
+    },
+    "754f6421-50b4-4348-8718-a7410e0547bd": {
+      "id": "754f6421-50b4-4348-8718-a7410e0547bd",
+      "itemId": 122,
+      "lv": 0,
+      "custom1": 255,
+      "custom2": 155,
+      "custom3": 156,
+      "exceedLimit": 1470,
+      "legend": 0
+    },
+    "7155ea9b-02a7-4e3e-af73-6171e8936c29": {
+      "id": "7155ea9b-02a7-4e3e-af73-6171e8936c29",
+      "itemId": 143,
+      "lv": 0,
+      "custom1": 553,
+      "custom2": 753,
+      "custom3": 356,
+      "exceedLimit": 1575,
+      "legend": 0
+    },
+    "da0f193c-6f5c-4f66-b424-f3cc021909c4": {
+      "id": "da0f193c-6f5c-4f66-b424-f3cc021909c4",
+      "itemId": 141,
+      "lv": 0,
+      "custom1": 155,
+      "custom2": 256,
+      "custom3": 0,
+      "exceedLimit": 1679,
+      "legend": 0
+    },
+    "3f6075d7-fa0a-4e22-90b4-45409f9556fb": {
+      "id": "3f6075d7-fa0a-4e22-90b4-45409f9556fb",
+      "itemId": 101,
+      "lv": 0,
+      "custom1": 355,
+      "custom2": 356,
+      "custom3": 256,
+      "exceedLimit": 1368,
+      "legend": 0
+    },
+    "8bcfc999-2152-4a0a-872f-1d72d36c718d": {
+      "id": "8bcfc999-2152-4a0a-872f-1d72d36c718d",
+      "itemId": 144,
+      "lv": 0,
+      "custom1": 654,
+      "custom2": 356,
+      "custom3": 355,
+      "exceedLimit": 1405,
+      "legend": 0
+    },
+    "a44ad678-e651-4621-9726-e825a0b851e1": {
+      "id": "a44ad678-e651-4621-9726-e825a0b851e1",
+      "itemId": 144,
+      "lv": 0,
+      "custom1": 753,
+      "custom2": 156,
+      "custom3": 0,
+      "exceedLimit": 1436,
+      "legend": 0
+    },
+    "a7ea3ae9-62d0-4468-9c5b-fd163909f7da": {
+      "id": "a7ea3ae9-62d0-4468-9c5b-fd163909f7da",
+      "itemId": 146,
+      "lv": 0,
+      "custom1": 753,
+      "custom2": 256,
+      "custom3": 256,
+      "exceedLimit": 1262,
+      "legend": 0
+    },
+    "bcc73f14-5b3e-47c4-91c0-57d0b35f65b9": {
+      "id": "bcc73f14-5b3e-47c4-91c0-57d0b35f65b9",
+      "itemId": 144,
+      "lv": 0,
+      "custom1": 898,
+      "custom2": 454,
+      "custom3": 553,
+      "exceedLimit": 1512,
+      "legend": 0
+    },
+    "a24146e9-3ca9-491d-ad69-82ff714bb532": {
+      "id": "a24146e9-3ca9-491d-ad69-82ff714bb532",
+      "itemId": 144,
+      "lv": 0,
+      "custom1": 653,
+      "custom2": 255,
+      "custom3": 156,
+      "exceedLimit": 1453,
+      "legend": 0
+    },
+    "268d4301-d44b-4299-aa11-4a013294effc": {
+      "id": "268d4301-d44b-4299-aa11-4a013294effc",
+      "itemId": 124,
+      "lv": 0,
+      "custom1": 156,
+      "custom2": 653,
+      "custom3": 255,
+      "exceedLimit": 1486,
+      "legend": 0
+    },
+    "a07a1149-4f5c-4c73-9406-99238e175bd4": {
+      "id": "a07a1149-4f5c-4c73-9406-99238e175bd4",
+      "itemId": 137,
+      "lv": 0,
+      "custom1": 453,
+      "custom2": 156,
+      "custom3": 752,
+      "exceedLimit": 1481,
+      "legend": 0
+    },
+    "cab5d878-1d72-48bb-be51-1295251ea2f0": {
+      "id": "cab5d878-1d72-48bb-be51-1295251ea2f0",
+      "itemId": 155,
+      "lv": 0,
+      "custom1": 157,
+      "custom2": 752,
+      "custom3": 356,
+      "exceedLimit": 1396,
+      "legend": 0
+    },
+    "eb3ec97e-3d71-4b38-960a-96b54938e2ff": {
+      "id": "eb3ec97e-3d71-4b38-960a-96b54938e2ff",
+      "itemId": 128,
+      "lv": 0,
+      "custom1": 355,
+      "custom2": 752,
+      "custom3": 356,
+      "exceedLimit": 1454,
+      "legend": 0
+    },
+    "92b15282-aeb4-4b2d-bdf5-b4c136739359": {
+      "id": "92b15282-aeb4-4b2d-bdf5-b4c136739359",
+      "itemId": 185,
+      "lv": 0,
+      "custom1": 553,
+      "custom2": 356,
+      "custom3": 453,
+      "exceedLimit": 1398,
+      "legend": 0
+    },
+    "ea2ef33a-92f8-4aca-abc7-46d5e5731aad": {
+      "id": "ea2ef33a-92f8-4aca-abc7-46d5e5731aad",
+      "itemId": 185,
+      "lv": 0,
+      "custom1": 653,
+      "custom2": 753,
+      "custom3": 752,
+      "exceedLimit": 1758,
+      "legend": 0
+    },
+    "82f29218-0954-4693-a3f7-1d7c32d93555": {
+      "id": "82f29218-0954-4693-a3f7-1d7c32d93555",
+      "itemId": 120,
+      "lv": 0,
+      "custom1": 256,
+      "custom2": 552,
+      "custom3": 552,
+      "exceedLimit": 1494,
+      "legend": 0
+    },
+    "684c9b1e-a369-4fa1-bd35-e530ad26440f": {
+      "id": "684c9b1e-a369-4fa1-bd35-e530ad26440f",
+      "itemId": 101,
+      "lv": 0,
+      "custom1": 356,
+      "custom2": 255,
+      "custom3": 257,
+      "exceedLimit": 1558,
+      "legend": 0
+    },
+    "c1a2852a-1995-4934-871f-496ed62a7b69": {
+      "id": "c1a2852a-1995-4934-871f-496ed62a7b69",
+      "itemId": 189,
+      "lv": 0,
+      "custom1": 453,
+      "custom2": 255,
+      "custom3": 156,
+      "exceedLimit": 1512,
+      "legend": 0
+    },
+    "27a2b1ad-790a-4420-8e4b-1f99f92c686e": {
+      "id": "27a2b1ad-790a-4420-8e4b-1f99f92c686e",
+      "itemId": 147,
+      "lv": 0,
+      "custom1": 225,
+      "custom2": 124,
+      "custom3": 898,
+      "exceedLimit": 650,
+      "legend": 0
+    },
+    "fbe0d17f-5b3c-4ec2-ab90-4c182d2cf27f": {
+      "id": "fbe0d17f-5b3c-4ec2-ab90-4c182d2cf27f",
+      "itemId": 115,
+      "lv": 0,
+      "custom1": 630,
+      "custom2": 234,
+      "custom3": 730,
+      "exceedLimit": 860,
+      "legend": 0
+    },
+    "560b85f6-dc23-4d71-a0f3-5cdf7ec175e7": {
+      "id": "560b85f6-dc23-4d71-a0f3-5cdf7ec175e7",
+      "itemId": 188,
+      "lv": 0,
+      "custom1": 738,
+      "custom2": 240,
+      "custom3": 342,
+      "exceedLimit": 1010,
+      "legend": 0
+    },
+    "421fdc87-6a2d-4444-8e59-bdc142a641f9": {
+      "id": "421fdc87-6a2d-4444-8e59-bdc142a641f9",
+      "itemId": 177,
+      "lv": 0,
+      "custom1": 142,
+      "custom2": 738,
+      "custom3": 738,
+      "exceedLimit": 1030,
+      "legend": 0
+    },
+    "94c9d1e7-faee-461b-8844-64443c78e371": {
+      "id": "94c9d1e7-faee-461b-8844-64443c78e371",
+      "itemId": 176,
+      "lv": 0,
+      "custom1": 346,
+      "custom2": 146,
+      "custom3": 898,
+      "exceedLimit": 1150,
+      "legend": 0
+    },
+    "0bcc1986-9c8d-472e-99e7-ce4165fe847e": {
+      "id": "0bcc1986-9c8d-472e-99e7-ce4165fe847e",
+      "itemId": 174,
+      "lv": 0,
+      "custom1": 746,
+      "custom2": 446,
+      "custom3": 250,
+      "exceedLimit": 1230,
+      "legend": 0
+    },
+    "6ee51025-c9c9-4dd1-849e-ad868a496490": {
+      "id": "6ee51025-c9c9-4dd1-849e-ad868a496490",
+      "itemId": 156,
+      "lv": 0,
+      "custom1": 627,
+      "custom2": 429,
+      "custom3": 428,
+      "exceedLimit": 760,
+      "legend": 0
+    },
+    "5adc2afd-40b7-486e-a0eb-a752c6d9a213": {
+      "id": "5adc2afd-40b7-486e-a0eb-a752c6d9a213",
+      "itemId": 167,
+      "lv": 0,
+      "custom1": 236,
+      "custom2": 898,
+      "custom3": 335,
+      "exceedLimit": 870,
+      "legend": 0
+    },
+    "14ee1448-1919-41e5-94fd-82cae19545cf": {
+      "id": "14ee1448-1919-41e5-94fd-82cae19545cf",
+      "itemId": 152,
+      "lv": 0,
+      "custom1": 438,
+      "custom2": 437,
+      "custom3": 536,
+      "exceedLimit": 1000,
+      "legend": 0
+    },
+    "332e954a-2c71-4c85-b596-c56e7dee2040": {
+      "id": "332e954a-2c71-4c85-b596-c56e7dee2040",
+      "itemId": 135,
+      "lv": 0,
+      "custom1": 898,
+      "custom2": 141,
+      "custom3": 538,
+      "exceedLimit": 1020,
+      "legend": 0
+    },
+    "e5632702-efb8-4b3b-a9ce-7fbe95fe8364": {
+      "id": "e5632702-efb8-4b3b-a9ce-7fbe95fe8364",
+      "itemId": 151,
+      "lv": 0,
+      "custom1": 241,
+      "custom2": 440,
+      "custom3": 539,
+      "exceedLimit": 1080,
+      "legend": 0
+    },
+    "365e72d3-1846-409c-8d26-5d64aeb859a2": {
+      "id": "365e72d3-1846-409c-8d26-5d64aeb859a2",
+      "itemId": 148,
+      "lv": 0,
+      "custom1": 544,
+      "custom2": 148,
+      "custom3": 347,
+      "exceedLimit": 1190,
+      "legend": 0
+    },
+    "be281b13-e3f1-4112-a767-551cc4b2b2e9": {
+      "id": "be281b13-e3f1-4112-a767-551cc4b2b2e9",
+      "itemId": 164,
+      "lv": 0,
+      "custom1": 747,
+      "custom2": 746,
+      "custom3": 547,
+      "exceedLimit": 1230,
+      "legend": 0
+    },
+    "750be3e5-cd97-4a8f-a90f-353b87dda99d": {
+      "id": "750be3e5-cd97-4a8f-a90f-353b87dda99d",
+      "itemId": 157,
+      "lv": 0,
+      "custom1": 748,
+      "custom2": 448,
+      "custom3": 150,
+      "exceedLimit": 1300,
+      "legend": 0
+    },
+    "6585bf3f-539e-4ea3-b556-5fd4b6f3b79b": {
+      "id": "6585bf3f-539e-4ea3-b556-5fd4b6f3b79b",
+      "itemId": 182,
+      "lv": 0,
+      "custom1": 230,
+      "custom2": 229,
+      "custom3": 524,
+      "exceedLimit": 710,
+      "legend": 0
+    },
+    "4db2fb78-7eeb-4558-b019-b4911a1fbbef": {
+      "id": "4db2fb78-7eeb-4558-b019-b4911a1fbbef",
+      "itemId": 122,
+      "lv": 0,
+      "custom1": 229,
+      "custom2": 228,
+      "custom3": 965,
+      "exceedLimit": 740,
+      "legend": 0
+    },
+    "fac2655c-5f15-4ad5-840f-cbc3baeb30fb": {
+      "id": "fac2655c-5f15-4ad5-840f-cbc3baeb30fb",
+      "itemId": 187,
+      "lv": 0,
+      "custom1": 527,
+      "custom2": 332,
+      "custom3": 332,
+      "exceedLimit": 750,
+      "legend": 0
+    },
+    "5ff0a1fe-c2c3-41ea-8607-34c601524041": {
+      "id": "5ff0a1fe-c2c3-41ea-8607-34c601524041",
+      "itemId": 165,
+      "lv": 0,
+      "custom1": 431,
+      "custom2": 333,
+      "custom3": 333,
+      "exceedLimit": 810,
+      "legend": 0
+    },
+    "790b7692-0780-482a-937f-77671b07150a": {
+      "id": "790b7692-0780-482a-937f-77671b07150a",
+      "itemId": 173,
+      "lv": 0,
+      "custom1": 531,
+      "custom2": 631,
+      "custom3": 631,
+      "exceedLimit": 830,
+      "legend": 0
+    },
+    "099cb6a3-3668-42f1-8d86-9846babeb952": {
+      "id": "099cb6a3-3668-42f1-8d86-9846babeb952",
+      "itemId": 142,
+      "lv": 0,
+      "custom1": 143,
+      "custom2": 639,
+      "custom3": 142,
+      "exceedLimit": 1100,
+      "legend": 0
+    },
+    "78b2e160-a5d1-4e57-a7e5-a621b516609a": {
+      "id": "78b2e160-a5d1-4e57-a7e5-a621b516609a",
+      "itemId": 179,
+      "lv": 0,
+      "custom1": 345,
+      "custom2": 741,
+      "custom3": 144,
+      "exceedLimit": 1090,
+      "legend": 0
+    },
+    "aef61a00-056f-498e-affb-26e243d6b9b1": {
+      "id": "aef61a00-056f-498e-affb-26e243d6b9b1",
+      "itemId": 170,
+      "lv": 0,
+      "custom1": 744,
+      "custom2": 543,
+      "custom3": 644,
+      "exceedLimit": 1170,
+      "legend": 0
+    },
+    "f9be3ab9-8a1b-4499-80c4-4992df03f4e6": {
+      "id": "f9be3ab9-8a1b-4499-80c4-4992df03f4e6",
+      "itemId": 108,
+      "lv": 0,
+      "custom1": 450,
+      "custom2": 251,
+      "custom3": 548,
+      "exceedLimit": 1320,
+      "legend": 0
+    },
+    "68076850-1b28-4a20-98d5-e9c5895cd852": {
+      "id": "68076850-1b28-4a20-98d5-e9c5895cd852",
+      "itemId": 105,
+      "lv": 0,
+      "custom1": 156,
+      "custom2": 356,
+      "custom3": 0,
+      "exceedLimit": 1627,
+      "legend": 0
+    },
+    "083a91a7-3b2c-4b33-a6a9-229fce389075": {
+      "id": "083a91a7-3b2c-4b33-a6a9-229fce389075",
+      "itemId": 114,
+      "lv": 0,
+      "custom1": 46,
+      "custom2": 215,
+      "custom3": 896,
+      "exceedLimit": 540,
+      "legend": 0
+    },
+    "d8504eea-89be-4695-81a9-19be9e2b7fcc": {
+      "id": "d8504eea-89be-4695-81a9-19be9e2b7fcc",
+      "itemId": 161,
+      "lv": 0,
+      "custom1": 122,
+      "custom2": 717,
+      "custom3": 518,
+      "exceedLimit": 630,
+      "legend": 0
+    },
+    "858c744d-4244-4489-bf03-01c776cba926": {
+      "id": "858c744d-4244-4489-bf03-01c776cba926",
+      "itemId": 112,
+      "lv": 0,
+      "custom1": 420,
+      "custom2": 719,
+      "custom3": 898,
+      "exceedLimit": 660,
+      "legend": 0
+    },
+    "84c50025-dc95-456f-a098-764bab314b9f": {
+      "id": "84c50025-dc95-456f-a098-764bab314b9f",
+      "itemId": 181,
+      "lv": 0,
+      "custom1": 328,
+      "custom2": 328,
+      "custom3": 898,
+      "exceedLimit": 710,
+      "legend": 0
+    },
+    "6bf3f273-59a4-4d07-b55d-71efb347cd70": {
+      "id": "6bf3f273-59a4-4d07-b55d-71efb347cd70",
+      "itemId": 129,
+      "lv": 0,
+      "custom1": 898,
+      "custom2": 136,
+      "custom3": 337,
+      "exceedLimit": 920,
+      "legend": 0
+    },
+    "cd5ea00f-5033-428a-a601-05322ffb479d": {
+      "id": "cd5ea00f-5033-428a-a601-05322ffb479d",
+      "itemId": 133,
+      "lv": 0,
+      "custom1": 536,
+      "custom2": 898,
+      "custom3": 898,
+      "exceedLimit": 950,
+      "legend": 0
+    },
+    "62578944-6b22-4738-947c-a4533ca1d426": {
+      "id": "62578944-6b22-4738-947c-a4533ca1d426",
+      "itemId": 111,
+      "lv": 0,
+      "custom1": 243,
+      "custom2": 243,
+      "custom3": 440,
+      "exceedLimit": 1100,
+      "legend": 0
+    },
+    "4bb6818d-46d0-4154-8b37-48ad9cc27857": {
+      "id": "4bb6818d-46d0-4154-8b37-48ad9cc27857",
+      "itemId": 172,
+      "lv": 0,
+      "custom1": 444,
+      "custom2": 444,
+      "custom3": 743,
+      "exceedLimit": 1130,
+      "legend": 0
+    },
+    "92715c84-66d1-4e76-8308-6046a3666e80": {
+      "id": "92715c84-66d1-4e76-8308-6046a3666e80",
+      "itemId": 162,
+      "lv": 0,
+      "custom1": 743,
+      "custom2": 346,
+      "custom3": 743,
+      "exceedLimit": 1150,
+      "legend": 0
+    },
+    "89cad412-e1c2-4379-ba19-b024fd71812a": {
+      "id": "89cad412-e1c2-4379-ba19-b024fd71812a",
+      "itemId": 140,
+      "lv": 0,
+      "custom1": 248,
+      "custom2": 546,
+      "custom3": 148,
+      "exceedLimit": 1240,
+      "legend": 0
+    },
+    "b019a1ed-a0c0-4bf7-bf2e-2d16a089d2f0": {
+      "id": "b019a1ed-a0c0-4bf7-bf2e-2d16a089d2f0",
+      "itemId": 146,
+      "lv": 0,
+      "custom1": 251,
+      "custom2": 449,
+      "custom3": 449,
+      "exceedLimit": 1300,
+      "legend": 0
+    },
+    "aa3ec142-be2c-435c-9381-0258ec7454a9": {
+      "id": "aa3ec142-be2c-435c-9381-0258ec7454a9",
+      "itemId": 186,
+      "lv": 0,
+      "custom1": 450,
+      "custom2": 351,
+      "custom3": 450,
+      "exceedLimit": 1290,
+      "legend": 0
+    },
+    "606b96a3-8a55-4010-92f3-beb49baa95dd": {
+      "id": "606b96a3-8a55-4010-92f3-beb49baa95dd",
+      "itemId": 190,
+      "lv": 0,
+      "custom1": 652,
+      "custom2": 898,
+      "custom3": 254,
+      "exceedLimit": 1390,
+      "legend": 0
+    },
+    "5ab6a2b9-4bd7-4e68-87a6-cf8e41f4da2b": {
+      "id": "5ab6a2b9-4bd7-4e68-87a6-cf8e41f4da2b",
+      "itemId": 160,
+      "lv": 0,
+      "custom1": 356,
+      "custom2": 754,
+      "custom3": 753,
+      "exceedLimit": 1430,
+      "legend": 0
+    },
+    "4a1f9da8-ab57-428b-ac0c-9441865e90fd": {
+      "id": "4a1f9da8-ab57-428b-ac0c-9441865e90fd",
+      "itemId": 142,
+      "lv": 0,
+      "custom1": 655,
+      "custom2": 357,
+      "custom3": 455,
+      "exceedLimit": 1480,
+      "legend": 0
+    },
+    "fe2cbfd9-b5cc-4fe6-a0d1-f2c11918d8ab": {
+      "id": "fe2cbfd9-b5cc-4fe6-a0d1-f2c11918d8ab",
+      "itemId": 173,
+      "lv": 0,
+      "custom1": 754,
+      "custom2": 755,
+      "custom3": 457,
+      "exceedLimit": 1470,
+      "legend": 0
+    },
+    "c0045996-4075-43cc-b595-2ed410192e0e": {
+      "id": "c0045996-4075-43cc-b595-2ed410192e0e",
+      "itemId": 142,
+      "lv": 0,
+      "custom1": 724,
+      "custom2": 426,
+      "custom3": 965,
+      "exceedLimit": 740,
+      "legend": 0
+    },
+    "2077bc0e-bdd5-4be6-9ebe-a805e7b9b7b9": {
+      "id": "2077bc0e-bdd5-4be6-9ebe-a805e7b9b7b9",
+      "itemId": 135,
+      "lv": 0,
+      "custom1": 898,
+      "custom2": 726,
+      "custom3": 941,
+      "exceedLimit": 760,
+      "legend": 0
+    },
+    "978d3107-1c57-4424-a3f2-3c514e3c90f8": {
+      "id": "978d3107-1c57-4424-a3f2-3c514e3c90f8",
+      "itemId": 150,
+      "lv": 0,
+      "custom1": 737,
+      "custom2": 438,
+      "custom3": 440,
+      "exceedLimit": 1010,
+      "legend": 0
+    },
+    "f667a3c7-720e-499e-8e75-d01b4e323807": {
+      "id": "f667a3c7-720e-499e-8e75-d01b4e323807",
+      "itemId": 112,
+      "lv": 0,
+      "custom1": 438,
+      "custom2": 141,
+      "custom3": 538,
+      "exceedLimit": 1040,
+      "legend": 0
+    },
+    "8adb1da8-1999-4c64-8172-9e0d2849fe5d": {
+      "id": "8adb1da8-1999-4c64-8172-9e0d2849fe5d",
+      "itemId": 188,
+      "lv": 0,
+      "custom1": 242,
+      "custom2": 441,
+      "custom3": 639,
+      "exceedLimit": 1050,
+      "legend": 0
+    },
+    "bc666326-00a0-44e0-83bc-45a9743e1714": {
+      "id": "bc666326-00a0-44e0-83bc-45a9743e1714",
+      "itemId": 179,
+      "lv": 0,
+      "custom1": 745,
+      "custom2": 646,
+      "custom3": 898,
+      "exceedLimit": 1230,
+      "legend": 0
+    },
+    "e250bcc9-99e5-4a27-b362-e219a591867f": {
+      "id": "e250bcc9-99e5-4a27-b362-e219a591867f",
+      "itemId": 181,
+      "lv": 0,
+      "custom1": 548,
+      "custom2": 448,
+      "custom3": 547,
+      "exceedLimit": 1270,
+      "legend": 0
+    },
+    "40bf6597-e426-4b7b-a1b7-471225fccdc9": {
+      "id": "40bf6597-e426-4b7b-a1b7-471225fccdc9",
+      "itemId": 150,
+      "lv": 0,
+      "custom1": 651,
+      "custom2": 749,
+      "custom3": 551,
+      "exceedLimit": 1330,
+      "legend": 0
+    },
+    "e41aee5e-fd97-4ffd-a81e-8f6e712c9581": {
+      "id": "e41aee5e-fd97-4ffd-a81e-8f6e712c9581",
+      "itemId": 182,
+      "lv": 0,
+      "custom1": 652,
+      "custom2": 652,
+      "custom3": 356,
+      "exceedLimit": 1390,
+      "legend": 0
+    },
+    "3f700afe-95b0-4b93-bada-1606097d3a64": {
+      "id": "3f700afe-95b0-4b93-bada-1606097d3a64",
+      "itemId": 179,
+      "lv": 0,
+      "custom1": 257,
+      "custom2": 753,
+      "custom3": 654,
+      "exceedLimit": 1430,
+      "legend": 0
+    },
+    "eb93ecf0-29e2-4926-a4c6-07be31e8e8a5": {
+      "id": "eb93ecf0-29e2-4926-a4c6-07be31e8e8a5",
+      "itemId": 141,
+      "lv": 0,
+      "custom1": 257,
+      "custom2": 456,
+      "custom3": 655,
+      "exceedLimit": 1500,
+      "legend": 0
+    },
+    "11ab1399-c62e-4242-a665-d307e2eac544": {
+      "id": "11ab1399-c62e-4242-a665-d307e2eac544",
+      "itemId": 178,
+      "lv": 0,
+      "custom1": 340,
+      "custom2": 738,
+      "custom3": 341,
+      "exceedLimit": 1010,
+      "legend": 0
+    },
+    "0f81bf49-0b35-4fc9-bace-6834f3a87879": {
+      "id": "0f81bf49-0b35-4fc9-bace-6834f3a87879",
+      "itemId": 188,
+      "lv": 0,
+      "custom1": 640,
+      "custom2": 442,
+      "custom3": 542,
+      "exceedLimit": 1090,
+      "legend": 0
+    },
+    "696c82b2-a9b1-4bdd-96a7-59c7cde85b98": {
+      "id": "696c82b2-a9b1-4bdd-96a7-59c7cde85b98",
+      "itemId": 111,
+      "lv": 0,
+      "custom1": 146,
+      "custom2": 644,
+      "custom3": 742,
+      "exceedLimit": 1180,
+      "legend": 0
+    },
+    "e9bf0e0d-262b-4aa7-bae1-4a2f1a3e628c": {
+      "id": "e9bf0e0d-262b-4aa7-bae1-4a2f1a3e628c",
+      "itemId": 180,
+      "lv": 0,
+      "custom1": 898,
+      "custom2": 147,
+      "custom3": 544,
+      "exceedLimit": 1170,
+      "legend": 0
+    },
+    "209f5d37-1559-4cfa-8a50-f81778d1b8a9": {
+      "id": "209f5d37-1559-4cfa-8a50-f81778d1b8a9",
+      "itemId": 147,
+      "lv": 0,
+      "custom1": 647,
+      "custom2": 648,
+      "custom3": 448,
+      "exceedLimit": 1270,
+      "legend": 0
+    },
+    "aeaf612e-43e5-4941-b255-5227c0bfa680": {
+      "id": "aeaf612e-43e5-4941-b255-5227c0bfa680",
+      "itemId": 164,
+      "lv": 0,
+      "custom1": 548,
+      "custom2": 898,
+      "custom3": 649,
+      "exceedLimit": 1290,
+      "legend": 0
+    },
+    "cc7f0780-623f-4ba8-890f-1b120d04c9f4": {
+      "id": "cc7f0780-623f-4ba8-890f-1b120d04c9f4",
+      "itemId": 161,
+      "lv": 0,
+      "custom1": 151,
+      "custom2": 251,
+      "custom3": 748,
+      "exceedLimit": 1310,
+      "legend": 0
+    },
+    "4a21971d-9609-461b-800f-99078dec5dbd": {
+      "id": "4a21971d-9609-461b-800f-99078dec5dbd",
+      "itemId": 152,
+      "lv": 0,
+      "custom1": 153,
+      "custom2": 898,
+      "custom3": 651,
+      "exceedLimit": 1360,
+      "legend": 0
+    },
+    "8ae494d1-3cac-4f5e-8ddb-ae75ad7abc8e": {
+      "id": "8ae494d1-3cac-4f5e-8ddb-ae75ad7abc8e",
+      "itemId": 162,
+      "lv": 0,
+      "custom1": 155,
+      "custom2": 256,
+      "custom3": 752,
+      "exceedLimit": 1390,
+      "legend": 0
+    },
+    "1649c25e-8595-4109-a978-43da72bfede1": {
+      "id": "1649c25e-8595-4109-a978-43da72bfede1",
+      "itemId": 137,
+      "lv": 0,
+      "custom1": 554,
+      "custom2": 654,
+      "custom3": 157,
+      "exceedLimit": 1430,
+      "legend": 0
+    },
+    "4d4ec42c-78a4-4268-8602-7b793936583a": {
+      "id": "4d4ec42c-78a4-4268-8602-7b793936583a",
+      "itemId": 172,
+      "lv": 0,
+      "custom1": 554,
+      "custom2": 554,
+      "custom3": 358,
+      "exceedLimit": 1450,
+      "legend": 0
+    },
+    "11a0eb88-5efd-4bd4-a4c8-fd711d75acdc": {
+      "id": "11a0eb88-5efd-4bd4-a4c8-fd711d75acdc",
+      "itemId": 112,
+      "lv": 0,
+      "custom1": 655,
+      "custom2": 358,
+      "custom3": 358,
+      "exceedLimit": 1500,
+      "legend": 0
+    },
+    "438d8a37-5f02-44ca-9cb7-6d0443cb07b8": {
+      "id": "438d8a37-5f02-44ca-9cb7-6d0443cb07b8",
+      "itemId": 112,
+      "lv": 0,
+      "custom1": 457,
+      "custom2": 158,
+      "custom3": 159,
+      "exceedLimit": 1500,
+      "legend": 0
+    },
+    "c9dbff24-30bf-47f6-9840-b8f38b9f6e36": {
+      "id": "c9dbff24-30bf-47f6-9840-b8f38b9f6e36",
+      "itemId": 148,
+      "lv": 0,
+      "custom1": 757,
+      "custom2": 160,
+      "custom3": 159,
+      "exceedLimit": 1500,
+      "legend": 0
+    }
+  },
+  "shields": {
+    "9383a550-217c-4fc4-84eb-7e72bd4fb140": {
+      "id": "9383a550-217c-4fc4-84eb-7e72bd4fb140",
+      "itemId": 250,
+      "lv": 0,
+      "custom1": 11,
+      "custom2": 68,
+      "custom3": 11,
+      "exceedLimit": 0,
+      "legend": 1
+    },
+    "8a82ad1d-c1f3-4680-b475-ad2f35f0c398": {
+      "id": "8a82ad1d-c1f3-4680-b475-ad2f35f0c398",
+      "itemId": 252,
+      "lv": 0,
+      "custom1": 9,
+      "custom2": 68,
+      "custom3": 11,
+      "exceedLimit": 0,
+      "legend": 1
+    },
+    "25596afa-a47b-401c-9a09-93e18af8a40f": {
+      "id": "25596afa-a47b-401c-9a09-93e18af8a40f",
+      "itemId": 213,
+      "lv": 0,
+      "custom1": 1,
+      "custom2": 67,
+      "custom3": 11,
+      "exceedLimit": 0,
+      "legend": 1
+    },
+    "4ece232b-aae3-440a-9c83-88c85a7dbac9": {
+      "id": "4ece232b-aae3-440a-9c83-88c85a7dbac9",
+      "itemId": 211,
+      "lv": 0,
+      "custom1": 26,
+      "custom2": 66,
+      "custom3": 0,
+      "exceedLimit": 0,
+      "legend": 1
+    },
+    "15143a27-b3da-4665-a219-23a28772d05e": {
+      "id": "15143a27-b3da-4665-a219-23a28772d05e",
+      "itemId": 246,
+      "lv": 50010,
+      "custom1": 7100,
+      "custom2": 7100,
+      "custom3": 3100,
+      "exceedLimit": 2500,
+      "legend": 1
+    },
+    "f5cec3df-639d-4d37-aebc-adeadc7418a4": {
+      "id": "f5cec3df-639d-4d37-aebc-adeadc7418a4",
+      "itemId": 244,
+      "lv": 7100,
+      "custom1": 230,
+      "custom2": 230,
+      "custom3": 230,
+      "exceedLimit": 500,
+      "legend": 1
+    },
+    "6e9fddd3-29bc-4832-89e3-763aed933e29": {
+      "id": "6e9fddd3-29bc-4832-89e3-763aed933e29",
+      "itemId": 211,
+      "lv": 0,
+      "custom1": 113,
+      "custom2": 314,
+      "custom3": 961,
+      "exceedLimit": 392,
+      "legend": 0
+    },
+    "ffa2792b-ec7e-4056-9420-8f84e703e6ee": {
+      "id": "ffa2792b-ec7e-4056-9420-8f84e703e6ee",
+      "itemId": 211,
+      "lv": 0,
+      "custom1": 409,
+      "custom2": 609,
+      "custom3": 807,
+      "exceedLimit": 442,
+      "legend": 0
+    },
+    "f0af80de-ce35-4d11-b95a-c1e0bb9891d8": {
+      "id": "f0af80de-ce35-4d11-b95a-c1e0bb9891d8",
+      "itemId": 231,
+      "lv": 0,
+      "custom1": 709,
+      "custom2": 115,
+      "custom3": 941,
+      "exceedLimit": 452,
+      "legend": 0
+    },
+    "053cffcc-0836-4502-850b-2941db77f8dd": {
+      "id": "053cffcc-0836-4502-850b-2941db77f8dd",
+      "itemId": 234,
+      "lv": 0,
+      "custom1": 213,
+      "custom2": 216,
+      "custom3": 961,
+      "exceedLimit": 423,
+      "legend": 0
+    },
+    "03c51440-866b-459f-a067-4bdb360033e9": {
+      "id": "03c51440-866b-459f-a067-4bdb360033e9",
+      "itemId": 252,
+      "lv": 6900,
+      "custom1": 2100,
+      "custom2": 2100,
+      "custom3": 2100,
+      "exceedLimit": 999,
+      "legend": 0
+    },
+    "55c569ea-50df-4f06-be78-99549bebd84b": {
+      "id": "55c569ea-50df-4f06-be78-99549bebd84b",
+      "itemId": 226,
+      "lv": 6400,
+      "custom1": 230,
+      "custom2": 230,
+      "custom3": 230,
+      "exceedLimit": 500,
+      "legend": 0
+    },
+    "b873a85d-f3ae-481e-962d-c285c07ed8ec": {
+      "id": "b873a85d-f3ae-481e-962d-c285c07ed8ec",
+      "itemId": 237,
+      "lv": 0,
+      "custom1": 609,
+      "custom2": 53,
+      "custom3": 68,
+      "exceedLimit": 434,
+      "legend": 0
+    },
+    "fb4b685e-d4bc-4f80-ae7c-21c4f061254f": {
+      "id": "fb4b685e-d4bc-4f80-ae7c-21c4f061254f",
+      "itemId": 235,
+      "lv": 0,
+      "custom1": 116,
+      "custom2": 53,
+      "custom3": 67,
+      "exceedLimit": 403,
+      "legend": 0
+    },
+    "39f9e229-7966-487a-bb1c-6b6a473503ae": {
+      "id": "39f9e229-7966-487a-bb1c-6b6a473503ae",
+      "itemId": 235,
+      "lv": 0,
+      "custom1": 609,
+      "custom2": 215,
+      "custom3": 941,
+      "exceedLimit": 413,
+      "legend": 0
+    },
+    "0da4c10e-f2eb-4ebd-97fa-66af92e30a44": {
+      "id": "0da4c10e-f2eb-4ebd-97fa-66af92e30a44",
+      "itemId": 218,
+      "lv": 0,
+      "custom1": 214,
+      "custom2": 316,
+      "custom3": 961,
+      "exceedLimit": 392,
+      "legend": 0
+    },
+    "0bc7aee8-1e34-4a51-835c-ae84e96f08d4": {
+      "id": "0bc7aee8-1e34-4a51-835c-ae84e96f08d4",
+      "itemId": 213,
+      "lv": 0,
+      "custom1": 609,
+      "custom2": 610,
+      "custom3": 68,
+      "exceedLimit": 394,
+      "legend": 0
+    },
+    "6aca9d06-9cd2-44e2-9675-268f3146c93f": {
+      "id": "6aca9d06-9cd2-44e2-9675-268f3146c93f",
+      "itemId": 234,
+      "lv": 0,
+      "custom1": 156,
+      "custom2": 156,
+      "custom3": 356,
+      "exceedLimit": 1582,
+      "legend": 0
+    },
+    "453e87e5-cb18-4281-85d5-7f447ebd523a": {
+      "id": "453e87e5-cb18-4281-85d5-7f447ebd523a",
+      "itemId": 201,
+      "lv": 0,
+      "custom1": 553,
+      "custom2": 256,
+      "custom3": 355,
+      "exceedLimit": 1415,
+      "legend": 0
+    },
+    "1b2b51a2-4458-4c87-ab9b-62c082aab913": {
+      "id": "1b2b51a2-4458-4c87-ab9b-62c082aab913",
+      "itemId": 202,
+      "lv": 0,
+      "custom1": 157,
+      "custom2": 355,
+      "custom3": 553,
+      "exceedLimit": 1435,
+      "legend": 0
+    },
+    "03937551-beb6-4379-9f9d-b69e1020949e": {
+      "id": "03937551-beb6-4379-9f9d-b69e1020949e",
+      "itemId": 202,
+      "lv": 0,
+      "custom1": 898,
+      "custom2": 156,
+      "custom3": 554,
+      "exceedLimit": 1431,
+      "legend": 0
+    },
+    "8c99badf-e89b-4cc5-9537-57c2c456f594": {
+      "id": "8c99badf-e89b-4cc5-9537-57c2c456f594",
+      "itemId": 201,
+      "lv": 0,
+      "custom1": 256,
+      "custom2": 256,
+      "custom3": 653,
+      "exceedLimit": 1660,
+      "legend": 0
+    },
+    "9bf48666-dcab-4623-b395-ef9ea6a6dba0": {
+      "id": "9bf48666-dcab-4623-b395-ef9ea6a6dba0",
+      "itemId": 204,
+      "lv": 0,
+      "custom1": 752,
+      "custom2": 255,
+      "custom3": 652,
+      "exceedLimit": 1663,
+      "legend": 0
+    },
+    "fdb0be1b-695b-43ef-8ebb-29ddf465b1a6": {
+      "id": "fdb0be1b-695b-43ef-8ebb-29ddf465b1a6",
+      "itemId": 204,
+      "lv": 0,
+      "custom1": 356,
+      "custom2": 653,
+      "custom3": 554,
+      "exceedLimit": 1653,
+      "legend": 0
+    },
+    "bbef3701-e85b-4196-89d3-3eaea48c1fad": {
+      "id": "bbef3701-e85b-4196-89d3-3eaea48c1fad",
+      "itemId": 206,
+      "lv": 0,
+      "custom1": 753,
+      "custom2": 157,
+      "custom3": 355,
+      "exceedLimit": 1444,
+      "legend": 0
+    },
+    "5c7bfd6a-f8b0-4b08-9462-5ce66fdffdd7": {
+      "id": "5c7bfd6a-f8b0-4b08-9462-5ce66fdffdd7",
+      "itemId": 207,
+      "lv": 0,
+      "custom1": 554,
+      "custom2": 553,
+      "custom3": 553,
+      "exceedLimit": 1687,
+      "legend": 0
+    },
+    "b2ca708e-be26-4fa1-8d2a-08d2dd6b4693": {
+      "id": "b2ca708e-be26-4fa1-8d2a-08d2dd6b4693",
+      "itemId": 210,
+      "lv": 0,
+      "custom1": 553,
+      "custom2": 553,
+      "custom3": 652,
+      "exceedLimit": 1496,
+      "legend": 0
+    },
+    "733aa315-aa1b-4001-9478-54635917bdd1": {
+      "id": "733aa315-aa1b-4001-9478-54635917bdd1",
+      "itemId": 209,
+      "lv": 0,
+      "custom1": 156,
+      "custom2": 257,
+      "custom3": 0,
+      "exceedLimit": 1339,
+      "legend": 0
+    },
+    "9915aaeb-f687-4a3e-b942-12c3653ed383": {
+      "id": "9915aaeb-f687-4a3e-b942-12c3653ed383",
+      "itemId": 209,
+      "lv": 0,
+      "custom1": 454,
+      "custom2": 753,
+      "custom3": 355,
+      "exceedLimit": 1701,
+      "legend": 0
+    },
+    "ce301175-6ff8-4414-a5bf-24527d636439": {
+      "id": "ce301175-6ff8-4414-a5bf-24527d636439",
+      "itemId": 201,
+      "lv": 0,
+      "custom1": 552,
+      "custom2": 356,
+      "custom3": 454,
+      "exceedLimit": 1366,
+      "legend": 0
+    },
+    "b93a6bf7-0494-41bc-aea7-042098cf9a77": {
+      "id": "b93a6bf7-0494-41bc-aea7-042098cf9a77",
+      "itemId": 211,
+      "lv": 0,
+      "custom1": 453,
+      "custom2": 256,
+      "custom3": 0,
+      "exceedLimit": 1493,
+      "legend": 0
+    },
+    "94e18a26-fe89-48b0-9d51-ba9fe378743c": {
+      "id": "94e18a26-fe89-48b0-9d51-ba9fe378743c",
+      "itemId": 211,
+      "lv": 0,
+      "custom1": 454,
+      "custom2": 654,
+      "custom3": 0,
+      "exceedLimit": 1706,
+      "legend": 0
+    },
+    "142ffe4e-6666-42ff-a351-aea8cd217c19": {
+      "id": "142ffe4e-6666-42ff-a351-aea8cd217c19",
+      "itemId": 218,
+      "lv": 0,
+      "custom1": 753,
+      "custom2": 156,
+      "custom3": 0,
+      "exceedLimit": 1678,
+      "legend": 0
+    },
+    "bda816e1-0fa9-4504-84f3-8d28b035b9ae": {
+      "id": "bda816e1-0fa9-4504-84f3-8d28b035b9ae",
+      "itemId": 218,
+      "lv": 0,
+      "custom1": 653,
+      "custom2": 654,
+      "custom3": 256,
+      "exceedLimit": 1510,
+      "legend": 0
+    },
+    "1b23a46c-c215-42d4-9528-caf7314e7e49": {
+      "id": "1b23a46c-c215-42d4-9528-caf7314e7e49",
+      "itemId": 218,
+      "lv": 0,
+      "custom1": 355,
+      "custom2": 553,
+      "custom3": 156,
+      "exceedLimit": 1317,
+      "legend": 0
+    },
+    "3c51b8af-bba3-4876-bd64-c5ae36c35a5a": {
+      "id": "3c51b8af-bba3-4876-bd64-c5ae36c35a5a",
+      "itemId": 218,
+      "lv": 0,
+      "custom1": 356,
+      "custom2": 552,
+      "custom3": 654,
+      "exceedLimit": 1377,
+      "legend": 0
+    },
+    "059d8c8d-65a0-4b3a-9ea9-8339376a35c2": {
+      "id": "059d8c8d-65a0-4b3a-9ea9-8339376a35c2",
+      "itemId": 222,
+      "lv": 0,
+      "custom1": 256,
+      "custom2": 455,
+      "custom3": 256,
+      "exceedLimit": 1394,
+      "legend": 0
+    },
+    "e9657fe4-3577-4396-8c19-e3d437e61b3b": {
+      "id": "e9657fe4-3577-4396-8c19-e3d437e61b3b",
+      "itemId": 215,
+      "lv": 0,
+      "custom1": 255,
+      "custom2": 454,
+      "custom3": 355,
+      "exceedLimit": 1642,
+      "legend": 0
+    },
+    "a1b35f6c-7728-420b-a164-8d1001efa8fd": {
+      "id": "a1b35f6c-7728-420b-a164-8d1001efa8fd",
+      "itemId": 247,
+      "lv": 0,
+      "custom1": 553,
+      "custom2": 898,
+      "custom3": 553,
+      "exceedLimit": 1403,
+      "legend": 0
+    },
+    "bad66afd-169d-4a26-86ce-8a44144c4097": {
+      "id": "bad66afd-169d-4a26-86ce-8a44144c4097",
+      "itemId": 232,
+      "lv": 0,
+      "custom1": 453,
+      "custom2": 753,
+      "custom3": 155,
+      "exceedLimit": 1707,
+      "legend": 0
+    },
+    "ff3d8375-6958-44ee-8270-77804c6c99f5": {
+      "id": "ff3d8375-6958-44ee-8270-77804c6c99f5",
+      "itemId": 252,
+      "lv": 0,
+      "custom1": 453,
+      "custom2": 654,
+      "custom3": 453,
+      "exceedLimit": 1482,
+      "legend": 0
+    },
+    "9b8c34a6-5c19-4594-88e7-f7d8dcdd5429": {
+      "id": "9b8c34a6-5c19-4594-88e7-f7d8dcdd5429",
+      "itemId": 252,
+      "lv": 0,
+      "custom1": 256,
+      "custom2": 454,
+      "custom3": 553,
+      "exceedLimit": 1478,
+      "legend": 0
+    },
+    "bed49721-5b0c-49e2-a555-9622b4e707f1": {
+      "id": "bed49721-5b0c-49e2-a555-9622b4e707f1",
+      "itemId": 252,
+      "lv": 0,
+      "custom1": 157,
+      "custom2": 255,
+      "custom3": 356,
+      "exceedLimit": 1477,
+      "legend": 0
+    },
+    "45349949-9b5d-446a-8e4a-74223d5c126b": {
+      "id": "45349949-9b5d-446a-8e4a-74223d5c126b",
+      "itemId": 229,
+      "lv": 0,
+      "custom1": 31,
+      "custom2": 14,
+      "custom3": 28,
+      "exceedLimit": 0,
+      "legend": 0
+    },
+    "dd317a3d-be56-4663-9f9a-2c83d60293d3": {
+      "id": "dd317a3d-be56-4663-9f9a-2c83d60293d3",
+      "itemId": 214,
+      "lv": 0,
+      "custom1": 111,
+      "custom2": 65,
+      "custom3": 61,
+      "exceedLimit": 330,
+      "legend": 0
+    },
+    "f5cb2f03-0033-4293-8f1a-e8981116fa36": {
+      "id": "f5cb2f03-0033-4293-8f1a-e8981116fa36",
+      "itemId": 203,
+      "lv": 0,
+      "custom1": 111,
+      "custom2": 35,
+      "custom3": 51,
+      "exceedLimit": 420,
+      "legend": 0
+    },
+    "bcc7b1b3-1126-444b-bb7c-156ab4e9d71f": {
+      "id": "bcc7b1b3-1126-444b-bb7c-156ab4e9d71f",
+      "itemId": 208,
+      "lv": 0,
+      "custom1": 65,
+      "custom2": 410,
+      "custom3": 409,
+      "exceedLimit": 480,
+      "legend": 0
+    },
+    "55bcc800-6749-4a3b-8c7a-055f396093dc": {
+      "id": "55bcc800-6749-4a3b-8c7a-055f396093dc",
+      "itemId": 235,
+      "lv": 0,
+      "custom1": 712,
+      "custom2": 897,
+      "custom3": 898,
+      "exceedLimit": 550,
+      "legend": 0
+    },
+    "702407b5-17d7-4349-b4be-048f857c1aa5": {
+      "id": "702407b5-17d7-4349-b4be-048f857c1aa5",
+      "itemId": 231,
+      "lv": 0,
+      "custom1": 328,
+      "custom2": 524,
+      "custom3": 524,
+      "exceedLimit": 720,
+      "legend": 0
+    },
+    "a343bab5-23b8-4cfd-925a-0aebac18db36": {
+      "id": "a343bab5-23b8-4cfd-925a-0aebac18db36",
+      "itemId": 241,
+      "lv": 0,
+      "custom1": 725,
+      "custom2": 523,
+      "custom3": 228,
+      "exceedLimit": 710,
+      "legend": 0
+    },
+    "6b3f5340-80db-4f27-9391-671f032a35da": {
+      "id": "6b3f5340-80db-4f27-9391-671f032a35da",
+      "itemId": 213,
+      "lv": 0,
+      "custom1": 331,
+      "custom2": 430,
+      "custom3": 132,
+      "exceedLimit": 800,
+      "legend": 0
+    },
+    "e3b1ed48-7e65-49fc-9815-465355ec079c": {
+      "id": "e3b1ed48-7e65-49fc-9815-465355ec079c",
+      "itemId": 205,
+      "lv": 0,
+      "custom1": 540,
+      "custom2": 242,
+      "custom3": 142,
+      "exceedLimit": 1080,
+      "legend": 0
+    },
+    "276c3e33-b854-40af-ad6a-6afddbd46a83": {
+      "id": "276c3e33-b854-40af-ad6a-6afddbd46a83",
+      "itemId": 231,
+      "lv": 0,
+      "custom1": 541,
+      "custom2": 641,
+      "custom3": 343,
+      "exceedLimit": 1120,
+      "legend": 0
+    },
+    "bfab6560-d9ca-4ec9-a918-731280fe6ac9": {
+      "id": "bfab6560-d9ca-4ec9-a918-731280fe6ac9",
+      "itemId": 245,
+      "lv": 0,
+      "custom1": 542,
+      "custom2": 144,
+      "custom3": 344,
+      "exceedLimit": 1110,
+      "legend": 0
+    },
+    "b60728f9-c5c6-453d-b866-5c77ad798293": {
+      "id": "b60728f9-c5c6-453d-b866-5c77ad798293",
+      "itemId": 229,
+      "lv": 0,
+      "custom1": 446,
+      "custom2": 148,
+      "custom3": 249,
+      "exceedLimit": 1240,
+      "legend": 0
+    },
+    "8dff610d-0744-48b0-bf91-e445b5bdfadc": {
+      "id": "8dff610d-0744-48b0-bf91-e445b5bdfadc",
+      "itemId": 233,
+      "lv": 0,
+      "custom1": 647,
+      "custom2": 449,
+      "custom3": 648,
+      "exceedLimit": 1270,
+      "legend": 0
+    },
+    "ca74556f-1e11-4186-b94d-e12ee0f05097": {
+      "id": "ca74556f-1e11-4186-b94d-e12ee0f05097",
+      "itemId": 228,
+      "lv": 0,
+      "custom1": 510,
+      "custom2": 610,
+      "custom3": 37,
+      "exceedLimit": 540,
+      "legend": 0
+    },
+    "de79e9e2-2f91-4c4d-a317-3648f95f4056": {
+      "id": "de79e9e2-2f91-4c4d-a317-3648f95f4056",
+      "itemId": 243,
+      "lv": 0,
+      "custom1": 225,
+      "custom2": 225,
+      "custom3": 717,
+      "exceedLimit": 630,
+      "legend": 0
+    },
+    "fc6c0156-7aab-4f0f-8daf-1d17f4d8c222": {
+      "id": "fc6c0156-7aab-4f0f-8daf-1d17f4d8c222",
+      "itemId": 228,
+      "lv": 0,
+      "custom1": 134,
+      "custom2": 432,
+      "custom3": 632,
+      "exceedLimit": 880,
+      "legend": 0
+    },
+    "1234ed35-e61e-4eed-806d-8ab982a5ee15": {
+      "id": "1234ed35-e61e-4eed-806d-8ab982a5ee15",
+      "itemId": 237,
+      "lv": 0,
+      "custom1": 436,
+      "custom2": 238,
+      "custom3": 536,
+      "exceedLimit": 950,
+      "legend": 0
+    },
+    "c1af624e-e492-43e5-ad0f-e5c5383f063f": {
+      "id": "c1af624e-e492-43e5-ad0f-e5c5383f063f",
+      "itemId": 240,
+      "lv": 0,
+      "custom1": 537,
+      "custom2": 539,
+      "custom3": 638,
+      "exceedLimit": 1010,
+      "legend": 0
+    },
+    "cc824be7-63b7-4666-9c92-d53d138b21bd": {
+      "id": "cc824be7-63b7-4666-9c92-d53d138b21bd",
+      "itemId": 237,
+      "lv": 0,
+      "custom1": 144,
+      "custom2": 740,
+      "custom3": 144,
+      "exceedLimit": 1090,
+      "legend": 0
+    },
+    "d72f6a17-7083-4b65-9809-04717c624861": {
+      "id": "d72f6a17-7083-4b65-9809-04717c624861",
+      "itemId": 213,
+      "lv": 0,
+      "custom1": 343,
+      "custom2": 244,
+      "custom3": 441,
+      "exceedLimit": 1120,
+      "legend": 0
+    },
+    "6f73dfb4-1b10-4cbb-94b2-21ae66977907": {
+      "id": "6f73dfb4-1b10-4cbb-94b2-21ae66977907",
+      "itemId": 251,
+      "lv": 0,
+      "custom1": 442,
+      "custom2": 443,
+      "custom3": 245,
+      "exceedLimit": 1110,
+      "legend": 0
+    },
+    "bf12fcb7-3a02-4b84-b6d1-2875572c2cdb": {
+      "id": "bf12fcb7-3a02-4b84-b6d1-2875572c2cdb",
+      "itemId": 221,
+      "lv": 0,
+      "custom1": 644,
+      "custom2": 745,
+      "custom3": 545,
+      "exceedLimit": 1220,
+      "legend": 0
+    },
+    "df078642-4b85-49ed-9513-d84844ae20b9": {
+      "id": "df078642-4b85-49ed-9513-d84844ae20b9",
+      "itemId": 248,
+      "lv": 0,
+      "custom1": 546,
+      "custom2": 249,
+      "custom3": 647,
+      "exceedLimit": 1250,
+      "legend": 0
+    },
+    "e8dd66bf-81c5-4535-a74a-a4eb06edbe3e": {
+      "id": "e8dd66bf-81c5-4535-a74a-a4eb06edbe3e",
+      "itemId": 249,
+      "lv": 0,
+      "custom1": 318,
+      "custom2": 319,
+      "custom3": 117,
+      "exceedLimit": 550,
+      "legend": 0
+    },
+    "c52011bb-21e7-41ad-ae64-6876d73a7d54": {
+      "id": "c52011bb-21e7-41ad-ae64-6876d73a7d54",
+      "itemId": 241,
+      "lv": 0,
+      "custom1": 331,
+      "custom2": 131,
+      "custom3": 331,
+      "exceedLimit": 730,
+      "legend": 0
+    },
+    "33da13e1-8845-4be9-92c5-6ab5ee9611d0": {
+      "id": "33da13e1-8845-4be9-92c5-6ab5ee9611d0",
+      "itemId": 203,
+      "lv": 0,
+      "custom1": 732,
+      "custom2": 898,
+      "custom3": 135,
+      "exceedLimit": 880,
+      "legend": 0
+    },
+    "e5870f96-713f-45bb-94ad-8afdd17eb70c": {
+      "id": "e5870f96-713f-45bb-94ad-8afdd17eb70c",
+      "itemId": 236,
+      "lv": 0,
+      "custom1": 634,
+      "custom2": 433,
+      "custom3": 137,
+      "exceedLimit": 890,
+      "legend": 0
+    },
+    "fb2a6153-e723-4170-a952-8cfeab0de1a9": {
+      "id": "fb2a6153-e723-4170-a952-8cfeab0de1a9",
+      "itemId": 243,
+      "lv": 0,
+      "custom1": 635,
+      "custom2": 436,
+      "custom3": 437,
+      "exceedLimit": 950,
+      "legend": 0
+    },
+    "ad5295e3-6c3f-4f8e-ac9d-582c6bf3ee2a": {
+      "id": "ad5295e3-6c3f-4f8e-ac9d-582c6bf3ee2a",
+      "itemId": 242,
+      "lv": 0,
+      "custom1": 140,
+      "custom2": 141,
+      "custom3": 240,
+      "exceedLimit": 1010,
+      "legend": 0
+    },
+    "db0ffc7e-406d-4758-802d-75d98132ab71": {
+      "id": "db0ffc7e-406d-4758-802d-75d98132ab71",
+      "itemId": 243,
+      "lv": 0,
+      "custom1": 538,
+      "custom2": 341,
+      "custom3": 439,
+      "exceedLimit": 1030,
+      "legend": 0
+    },
+    "44920e9a-e0c8-4d55-b731-5fbc205674c5": {
+      "id": "44920e9a-e0c8-4d55-b731-5fbc205674c5",
+      "itemId": 237,
+      "lv": 0,
+      "custom1": 246,
+      "custom2": 145,
+      "custom3": 344,
+      "exceedLimit": 1130,
+      "legend": 0
+    },
+    "d073c83c-8e5d-4f4e-85ef-4252a2e6f7a2": {
+      "id": "d073c83c-8e5d-4f4e-85ef-4252a2e6f7a2",
+      "itemId": 203,
+      "lv": 0,
+      "custom1": 247,
+      "custom2": 744,
+      "custom3": 544,
+      "exceedLimit": 1200,
+      "legend": 0
+    },
+    "1856f838-f11d-497f-af3c-f083e412388d": {
+      "id": "1856f838-f11d-497f-af3c-f083e412388d",
+      "itemId": 213,
+      "lv": 0,
+      "custom1": 647,
+      "custom2": 746,
+      "custom3": 546,
+      "exceedLimit": 1260,
+      "legend": 0
+    },
+    "fe62193f-15a0-4baf-be73-013cbcf19727": {
+      "id": "fe62193f-15a0-4baf-be73-013cbcf19727",
+      "itemId": 237,
+      "lv": 0,
+      "custom1": 150,
+      "custom2": 547,
+      "custom3": 350,
+      "exceedLimit": 1270,
+      "legend": 0
+    },
+    "fe36b017-ca39-41eb-94a5-98e7e63b957b": {
+      "id": "fe36b017-ca39-41eb-94a5-98e7e63b957b",
+      "itemId": 233,
+      "lv": 0,
+      "custom1": 151,
+      "custom2": 548,
+      "custom3": 548,
+      "exceedLimit": 1290,
+      "legend": 0
+    },
+    "ea3b3b94-218a-4b75-becc-452439fdab4a": {
+      "id": "ea3b3b94-218a-4b75-becc-452439fdab4a",
+      "itemId": 205,
+      "lv": 0,
+      "custom1": 255,
+      "custom2": 552,
+      "custom3": 455,
+      "exceedLimit": 1284,
+      "legend": 0
+    },
+    "12dfdec0-7bb4-4925-bdbc-e94925400d80": {
+      "id": "12dfdec0-7bb4-4925-bdbc-e94925400d80",
+      "itemId": 204,
+      "lv": 0,
+      "custom1": 256,
+      "custom2": 454,
+      "custom3": 0,
+      "exceedLimit": 1640,
+      "legend": 0
+    },
+    "0fcf6507-edc2-410b-9b9e-4ecec791a45d": {
+      "id": "0fcf6507-edc2-410b-9b9e-4ecec791a45d",
+      "itemId": 208,
+      "lv": 0,
+      "custom1": 156,
+      "custom2": 156,
+      "custom3": 753,
+      "exceedLimit": 1678,
+      "legend": 0
+    },
+    "63c15654-1a51-4aea-a54f-dc67c8591cfe": {
+      "id": "63c15654-1a51-4aea-a54f-dc67c8591cfe",
+      "itemId": 250,
+      "lv": 0,
+      "custom1": 898,
+      "custom2": 521,
+      "custom3": 326,
+      "exceedLimit": 650,
+      "legend": 0
+    },
+    "7b895d2c-e119-4200-8efd-7df25fd50ebd": {
+      "id": "7b895d2c-e119-4200-8efd-7df25fd50ebd",
+      "itemId": 228,
+      "lv": 0,
+      "custom1": 520,
+      "custom2": 422,
+      "custom3": 67,
+      "exceedLimit": 700,
+      "legend": 0
+    },
+    "8c189c98-4687-4569-aad2-9e009456dc16": {
+      "id": "8c189c98-4687-4569-aad2-9e009456dc16",
+      "itemId": 250,
+      "lv": 0,
+      "custom1": 334,
+      "custom2": 233,
+      "custom3": 531,
+      "exceedLimit": 810,
+      "legend": 0
+    },
+    "bbf87c92-6056-4058-8559-667e783a23ac": {
+      "id": "bbf87c92-6056-4058-8559-667e783a23ac",
+      "itemId": 227,
+      "lv": 0,
+      "custom1": 339,
+      "custom2": 735,
+      "custom3": 635,
+      "exceedLimit": 980,
+      "legend": 0
+    },
+    "61fd8389-db4f-4f1b-8ea5-d956b56bf334": {
+      "id": "61fd8389-db4f-4f1b-8ea5-d956b56bf334",
+      "itemId": 242,
+      "lv": 0,
+      "custom1": 248,
+      "custom2": 746,
+      "custom3": 148,
+      "exceedLimit": 1210,
+      "legend": 0
+    },
+    "e7130134-9c7a-4597-81ea-0178ae8bf746": {
+      "id": "e7130134-9c7a-4597-81ea-0178ae8bf746",
+      "itemId": 241,
+      "lv": 0,
+      "custom1": 450,
+      "custom2": 153,
+      "custom3": 353,
+      "exceedLimit": 1310,
+      "legend": 0
+    },
+    "a3403685-56c7-41e0-bd33-7aa20a1e28c1": {
+      "id": "a3403685-56c7-41e0-bd33-7aa20a1e28c1",
+      "itemId": 203,
+      "lv": 0,
+      "custom1": 652,
+      "custom2": 550,
+      "custom3": 551,
+      "exceedLimit": 1380,
+      "legend": 0
+    },
+    "33ca980b-73dc-473c-82ff-25eadcedccf8": {
+      "id": "33ca980b-73dc-473c-82ff-25eadcedccf8",
+      "itemId": 248,
+      "lv": 0,
+      "custom1": 752,
+      "custom2": 751,
+      "custom3": 651,
+      "exceedLimit": 1370,
+      "legend": 0
+    },
+    "af12f7ad-a11a-4e3b-abfe-26a45650ce53": {
+      "id": "af12f7ad-a11a-4e3b-abfe-26a45650ce53",
+      "itemId": 236,
+      "lv": 0,
+      "custom1": 453,
+      "custom2": 752,
+      "custom3": 454,
+      "exceedLimit": 1410,
+      "legend": 0
+    },
+    "e8ba6b9b-66d1-44a2-962d-10c10704dd0e": {
+      "id": "e8ba6b9b-66d1-44a2-962d-10c10704dd0e",
+      "itemId": 201,
+      "lv": 0,
+      "custom1": 157,
+      "custom2": 653,
+      "custom3": 357,
+      "exceedLimit": 1460,
+      "legend": 0
+    },
+    "c6ed6b99-6149-4dc8-b67a-ce09ba0be6b5": {
+      "id": "c6ed6b99-6149-4dc8-b67a-ce09ba0be6b5",
+      "itemId": 243,
+      "lv": 0,
+      "custom1": 740,
+      "custom2": 441,
+      "custom3": 898,
+      "exceedLimit": 1070,
+      "legend": 0
+    },
+    "125b637d-c301-4812-964d-711d84fb439e": {
+      "id": "125b637d-c301-4812-964d-711d84fb439e",
+      "itemId": 250,
+      "lv": 0,
+      "custom1": 346,
+      "custom2": 642,
+      "custom3": 742,
+      "exceedLimit": 1130,
+      "legend": 0
+    },
+    "dba13042-4e94-4fa3-af89-7156da2e09b3": {
+      "id": "dba13042-4e94-4fa3-af89-7156da2e09b3",
+      "itemId": 233,
+      "lv": 0,
+      "custom1": 449,
+      "custom2": 649,
+      "custom3": 252,
+      "exceedLimit": 1310,
+      "legend": 0
+    },
+    "522c7243-e21c-40c8-a6d2-304fff9a3b37": {
+      "id": "522c7243-e21c-40c8-a6d2-304fff9a3b37",
+      "itemId": 213,
+      "lv": 0,
+      "custom1": 552,
+      "custom2": 451,
+      "custom3": 353,
+      "exceedLimit": 1380,
+      "legend": 0
+    },
+    "3076ec3e-6da6-4c8b-b1b7-76eb01b0eb45": {
+      "id": "3076ec3e-6da6-4c8b-b1b7-76eb01b0eb45",
+      "itemId": 240,
+      "lv": 0,
+      "custom1": 153,
+      "custom2": 452,
+      "custom3": 154,
+      "exceedLimit": 1370,
+      "legend": 0
+    },
+    "f0f1160d-06d1-4303-852f-6112e0575af9": {
+      "id": "f0f1160d-06d1-4303-852f-6112e0575af9",
+      "itemId": 242,
+      "lv": 0,
+      "custom1": 155,
+      "custom2": 754,
+      "custom3": 155,
+      "exceedLimit": 1410,
+      "legend": 0
+    },
+    "fc6dc44c-8676-487b-9fa0-6d9b563ca022": {
+      "id": "fc6dc44c-8676-487b-9fa0-6d9b563ca022",
+      "itemId": 207,
+      "lv": 0,
+      "custom1": 455,
+      "custom2": 654,
+      "custom3": 357,
+      "exceedLimit": 1460,
+      "legend": 0
+    },
+    "1db2175c-ea2e-4b27-868d-b7021da7baf0": {
+      "id": "1db2175c-ea2e-4b27-868d-b7021da7baf0",
+      "itemId": 222,
+      "lv": 0,
+      "custom1": 554,
+      "custom2": 157,
+      "custom3": 358,
+      "exceedLimit": 1480,
+      "legend": 0
+    },
+    "7e07536b-3667-4166-a098-bc3f22672da6": {
+      "id": "7e07536b-3667-4166-a098-bc3f22672da6",
+      "itemId": 249,
+      "lv": 0,
+      "custom1": 358,
+      "custom2": 259,
+      "custom3": 655,
+      "exceedLimit": 1490,
+      "legend": 0
+    },
+    "0dc098a7-b3c8-4c0a-9a77-14d0da2e14d5": {
+      "id": "0dc098a7-b3c8-4c0a-9a77-14d0da2e14d5",
+      "itemId": 227,
+      "lv": 0,
+      "custom1": 359,
+      "custom2": 557,
+      "custom3": 898,
+      "exceedLimit": 1500,
+      "legend": 0
+    },
+    "cf3807e4-8d31-48f6-808d-274752c280f3": {
+      "id": "cf3807e4-8d31-48f6-808d-274752c280f3",
+      "itemId": 204,
+      "lv": 0,
+      "custom1": 34,
+      "custom2": 34,
+      "custom3": 804,
+      "exceedLimit": 360,
+      "legend": 0
+    },
+    "ff822f48-80fe-476b-867e-7f0bcfe331ff": {
+      "id": "ff822f48-80fe-476b-867e-7f0bcfe331ff",
+      "itemId": 228,
+      "lv": 0,
+      "custom1": 739,
+      "custom2": 739,
+      "custom3": 540,
+      "exceedLimit": 1080,
+      "legend": 0
+    },
+    "423bef54-6a5c-4f5e-a9c3-26f7a2b79098": {
+      "id": "423bef54-6a5c-4f5e-a9c3-26f7a2b79098",
+      "itemId": 250,
+      "lv": 0,
+      "custom1": 348,
+      "custom2": 744,
+      "custom3": 745,
+      "exceedLimit": 1190,
+      "legend": 0
+    },
+    "6067a45f-6d41-485b-9ccd-9a941dbb1b6d": {
+      "id": "6067a45f-6d41-485b-9ccd-9a941dbb1b6d",
+      "itemId": 228,
+      "lv": 0,
+      "custom1": 549,
+      "custom2": 549,
+      "custom3": 352,
+      "exceedLimit": 1320,
+      "legend": 0
+    },
+    "b9b05c55-71d1-4b21-b7fd-1873956fc24a": {
+      "id": "b9b05c55-71d1-4b21-b7fd-1873956fc24a",
+      "itemId": 210,
+      "lv": 0,
+      "custom1": 653,
+      "custom2": 156,
+      "custom3": 553,
+      "exceedLimit": 1420,
+      "legend": 0
+    },
+    "79e09e1b-badd-4fae-bc99-7bb4ce7e4ecf": {
+      "id": "79e09e1b-badd-4fae-bc99-7bb4ce7e4ecf",
+      "itemId": 213,
+      "lv": 0,
+      "custom1": 654,
+      "custom2": 355,
+      "custom3": 554,
+      "exceedLimit": 1440,
+      "legend": 0
+    },
+    "f5f089f7-b40f-4607-bfcd-544bd49b77e6": {
+      "id": "f5f089f7-b40f-4607-bfcd-544bd49b77e6",
+      "itemId": 235,
+      "lv": 0,
+      "custom1": 455,
+      "custom2": 555,
+      "custom3": 456,
+      "exceedLimit": 1470,
+      "legend": 0
+    }
+  },
+  "rings": {
+    "86423029-080f-4752-8ed2-4eaea023618f": {
+      "id": "86423029-080f-4752-8ed2-4eaea023618f",
+      "itemId": 314,
+      "lv": 0,
+      "custom1": 730,
+      "custom2": 230,
+      "custom3": 530,
+      "exceedLimit": 500,
+      "legend": 0
+    },
+    "839c6b0b-2448-4e28-9485-adcca4e545d2": {
+      "id": "839c6b0b-2448-4e28-9485-adcca4e545d2",
+      "itemId": 314,
+      "lv": 0,
+      "custom1": 130,
+      "custom2": 130,
+      "custom3": 230,
+      "exceedLimit": 500,
+      "legend": 1
+    },
+    "8deb4351-6df2-4d10-9710-b1dd1a865ebd": {
+      "id": "8deb4351-6df2-4d10-9710-b1dd1a865ebd",
+      "itemId": 322,
+      "lv": 0,
+      "custom1": 530,
+      "custom2": 730,
+      "custom3": 230,
+      "exceedLimit": 500,
+      "legend": 1
+    },
+    "0b6e3514-dcfc-45ba-9008-76bfd63b2067": {
+      "id": "0b6e3514-dcfc-45ba-9008-76bfd63b2067",
+      "itemId": 317,
+      "lv": 0,
+      "custom1": 630,
+      "custom2": 630,
+      "custom3": 30,
+      "exceedLimit": 500,
+      "legend": 1
+    },
+    "e96e1db1-84c5-4457-af00-8c142b1be907": {
+      "id": "e96e1db1-84c5-4457-af00-8c142b1be907",
+      "itemId": 316,
+      "lv": 0,
+      "custom1": 530,
+      "custom2": 230,
+      "custom3": 730,
+      "exceedLimit": 500,
+      "legend": 1
+    },
+    "05f48db8-c232-4005-a46f-d49e4598ffd7": {
+      "id": "05f48db8-c232-4005-a46f-d49e4598ffd7",
+      "itemId": 312,
+      "lv": 0,
+      "custom1": 230,
+      "custom2": 530,
+      "custom3": 630,
+      "exceedLimit": 500,
+      "legend": 1
+    },
+    "2863dfba-d6b8-4d58-8f82-ac9fd2a85788": {
+      "id": "2863dfba-d6b8-4d58-8f82-ac9fd2a85788",
+      "itemId": 314,
+      "lv": 0,
+      "custom1": 630,
+      "custom2": 130,
+      "custom3": 630,
+      "exceedLimit": 500,
+      "legend": 0
+    },
+    "13acb1ce-67e5-4065-9a9b-6c6de9cc8a8c": {
+      "id": "13acb1ce-67e5-4065-9a9b-6c6de9cc8a8c",
+      "itemId": 308,
+      "lv": 0,
+      "custom1": 630,
+      "custom2": 231,
+      "custom3": 630,
+      "exceedLimit": 609,
+      "legend": 1
+    },
+    "931f1ca1-7cff-4b25-a71c-7668249bdb49": {
+      "id": "931f1ca1-7cff-4b25-a71c-7668249bdb49",
+      "itemId": 303,
+      "lv": 0,
+      "custom1": 671,
+      "custom2": 771,
+      "custom3": 675,
+      "exceedLimit": 1639,
+      "legend": 1
+    },
+    "8a453008-db45-448c-9e63-b9825d88e85f": {
+      "id": "8a453008-db45-448c-9e63-b9825d88e85f",
+      "itemId": 303,
+      "lv": 0,
+      "custom1": 566,
+      "custom2": 270,
+      "custom3": 468,
+      "exceedLimit": 1228,
+      "legend": 1
+    },
+    "df74b8cb-4583-4a18-8f34-945710985a2c": {
+      "id": "df74b8cb-4583-4a18-8f34-945710985a2c",
+      "itemId": 303,
+      "lv": 0,
+      "custom1": 666,
+      "custom2": 766,
+      "custom3": 169,
+      "exceedLimit": 1224,
+      "legend": 1
+    },
+    "26c7763d-fe01-4a04-b4a5-29513bc6b704": {
+      "id": "26c7763d-fe01-4a04-b4a5-29513bc6b704",
+      "itemId": 303,
+      "lv": 0,
+      "custom1": 469,
+      "custom2": 769,
+      "custom3": 768,
+      "exceedLimit": 1431,
+      "legend": 1
+    },
+    "2917a040-32fd-4aff-9f41-883195f8da87": {
+      "id": "2917a040-32fd-4aff-9f41-883195f8da87",
+      "itemId": 322,
+      "lv": 0,
+      "custom1": 569,
+      "custom2": 572,
+      "custom3": 0,
+      "exceedLimit": 1468,
+      "legend": 0
+    },
+    "86259761-58d8-43c9-8953-f1dfdbb54e22": {
+      "id": "86259761-58d8-43c9-8953-f1dfdbb54e22",
+      "itemId": 301,
+      "lv": 0,
+      "custom1": 466,
+      "custom2": 369,
+      "custom3": 172,
+      "exceedLimit": 1245,
+      "legend": 0
+    },
+    "fc6783f0-4480-4533-a8ea-61766f03133b": {
+      "id": "fc6783f0-4480-4533-a8ea-61766f03133b",
+      "itemId": 304,
+      "lv": 0,
+      "custom1": 271,
+      "custom2": 470,
+      "custom3": 0,
+      "exceedLimit": 1497,
+      "legend": 0
+    },
+    "6eda7ec0-b32f-46a3-8319-ecd24068c1b6": {
+      "id": "6eda7ec0-b32f-46a3-8319-ecd24068c1b6",
+      "itemId": 304,
+      "lv": 0,
+      "custom1": 273,
+      "custom2": 672,
+      "custom3": 179,
+      "exceedLimit": 1658,
+      "legend": 0
+    },
+    "7c78af99-8abd-4515-a736-de917d3917c3": {
+      "id": "7c78af99-8abd-4515-a736-de917d3917c3",
+      "itemId": 305,
+      "lv": 0,
+      "custom1": 471,
+      "custom2": 768,
+      "custom3": 669,
+      "exceedLimit": 1474,
+      "legend": 0
+    },
+    "4566655e-78c6-4ec9-a99f-edf8161aae45": {
+      "id": "4566655e-78c6-4ec9-a99f-edf8161aae45",
+      "itemId": 306,
+      "lv": 0,
+      "custom1": 468,
+      "custom2": 668,
+      "custom3": 898,
+      "exceedLimit": 1261,
+      "legend": 0
+    },
+    "7edf2dce-475b-4532-a344-935c572bbde2": {
+      "id": "7edf2dce-475b-4532-a344-935c572bbde2",
+      "itemId": 305,
+      "lv": 0,
+      "custom1": 371,
+      "custom2": 669,
+      "custom3": 672,
+      "exceedLimit": 1388,
+      "legend": 0
+    },
+    "928f85b9-0151-4aea-b6f7-6664614f61da": {
+      "id": "928f85b9-0151-4aea-b6f7-6664614f61da",
+      "itemId": 306,
+      "lv": 0,
+      "custom1": 274,
+      "custom2": 475,
+      "custom3": 472,
+      "exceedLimit": 1665,
+      "legend": 0
+    },
+    "dda34b74-d07a-4e48-88cb-7230f8c0f292": {
+      "id": "dda34b74-d07a-4e48-88cb-7230f8c0f292",
+      "itemId": 306,
+      "lv": 0,
+      "custom1": 669,
+      "custom2": 272,
+      "custom3": 175,
+      "exceedLimit": 1497,
+      "legend": 0
+    },
+    "084e7dd7-6476-4037-85a6-1edf4a90a110": {
+      "id": "084e7dd7-6476-4037-85a6-1edf4a90a110",
+      "itemId": 306,
+      "lv": 0,
+      "custom1": 569,
+      "custom2": 569,
+      "custom3": 175,
+      "exceedLimit": 1443,
+      "legend": 0
+    },
+    "b3e682e7-f929-4528-bf05-62300ebb4156": {
+      "id": "b3e682e7-f929-4528-bf05-62300ebb4156",
+      "itemId": 306,
+      "lv": 0,
+      "custom1": 668,
+      "custom2": 371,
+      "custom3": 371,
+      "exceedLimit": 1459,
+      "legend": 0
+    },
+    "f546a480-b744-4000-97ec-4899b84e04b8": {
+      "id": "f546a480-b744-4000-97ec-4899b84e04b8",
+      "itemId": 307,
+      "lv": 0,
+      "custom1": 768,
+      "custom2": 471,
+      "custom3": 372,
+      "exceedLimit": 1410,
+      "legend": 0
+    },
+    "dd867409-a9f4-49b4-a75d-79100797e13a": {
+      "id": "dd867409-a9f4-49b4-a75d-79100797e13a",
+      "itemId": 307,
+      "lv": 0,
+      "custom1": 171,
+      "custom2": 570,
+      "custom3": 0,
+      "exceedLimit": 1454,
+      "legend": 0
+    },
+    "ae5aa471-b48c-40d8-867c-20a816033064": {
+      "id": "ae5aa471-b48c-40d8-867c-20a816033064",
+      "itemId": 307,
+      "lv": 0,
+      "custom1": 569,
+      "custom2": 669,
+      "custom3": 0,
+      "exceedLimit": 1493,
+      "legend": 0
+    },
+    "aa45a32c-41f9-4f5b-8052-b95962bc0478": {
+      "id": "aa45a32c-41f9-4f5b-8052-b95962bc0478",
+      "itemId": 313,
+      "lv": 0,
+      "custom1": 170,
+      "custom2": 770,
+      "custom3": 0,
+      "exceedLimit": 1476,
+      "legend": 0
+    },
+    "01f002a8-4ded-4bdb-9165-38eca9ef07d9": {
+      "id": "01f002a8-4ded-4bdb-9165-38eca9ef07d9",
+      "itemId": 323,
+      "lv": 0,
+      "custom1": 567,
+      "custom2": 272,
+      "custom3": 375,
+      "exceedLimit": 1360,
+      "legend": 0
+    },
+    "6b20961e-2490-4795-810a-303357ff3c90": {
+      "id": "6b20961e-2490-4795-810a-303357ff3c90",
+      "itemId": 319,
+      "lv": 0,
+      "custom1": 528,
+      "custom2": 528,
+      "custom3": 231,
+      "exceedLimit": 510,
+      "legend": 0
+    },
+    "62dd3548-8971-453d-b762-300da38f67dd": {
+      "id": "62dd3548-8971-453d-b762-300da38f67dd",
+      "itemId": 317,
+      "lv": 0,
+      "custom1": 529,
+      "custom2": 233,
+      "custom3": 331,
+      "exceedLimit": 530,
+      "legend": 0
+    },
+    "ff5a634c-71cb-4490-b2dd-a119949cada0": {
+      "id": "ff5a634c-71cb-4490-b2dd-a119949cada0",
+      "itemId": 318,
+      "lv": 0,
+      "custom1": 235,
+      "custom2": 432,
+      "custom3": 530,
+      "exceedLimit": 570,
+      "legend": 0
+    },
+    "7d16ccc0-b1d2-4961-8859-11af50a31c3e": {
+      "id": "7d16ccc0-b1d2-4961-8859-11af50a31c3e",
+      "itemId": 310,
+      "lv": 0,
+      "custom1": 631,
+      "custom2": 733,
+      "custom3": 533,
+      "exceedLimit": 600,
+      "legend": 0
+    },
+    "a2393f9f-8e66-4348-a1f7-77722ec121b2": {
+      "id": "a2393f9f-8e66-4348-a1f7-77722ec121b2",
+      "itemId": 317,
+      "lv": 0,
+      "custom1": 533,
+      "custom2": 731,
+      "custom3": 632,
+      "exceedLimit": 590,
+      "legend": 0
+    },
+    "1494cf3e-2a4e-40b7-a859-945242083bd9": {
+      "id": "1494cf3e-2a4e-40b7-a859-945242083bd9",
+      "itemId": 318,
+      "lv": 0,
+      "custom1": 337,
+      "custom2": 634,
+      "custom3": 534,
+      "exceedLimit": 610,
+      "legend": 0
+    },
+    "4c59b89c-8a6a-4575-b4ea-4772d5145fde": {
+      "id": "4c59b89c-8a6a-4575-b4ea-4772d5145fde",
+      "itemId": 320,
+      "lv": 0,
+      "custom1": 340,
+      "custom2": 898,
+      "custom3": 440,
+      "exceedLimit": 690,
+      "legend": 0
+    },
+    "76c13f34-8f08-4c06-b5fb-77a158473041": {
+      "id": "76c13f34-8f08-4c06-b5fb-77a158473041",
+      "itemId": 320,
+      "lv": 0,
+      "custom1": 149,
+      "custom2": 646,
+      "custom3": 249,
+      "exceedLimit": 830,
+      "legend": 0
+    },
+    "dd880ba4-a72b-4073-b9db-7f87b6d30ba9": {
+      "id": "dd880ba4-a72b-4073-b9db-7f87b6d30ba9",
+      "itemId": 308,
+      "lv": 0,
+      "custom1": 750,
+      "custom2": 353,
+      "custom3": 253,
+      "exceedLimit": 920,
+      "legend": 0
+    },
+    "7638a64a-12ea-4094-ba36-9c8bc7e02147": {
+      "id": "7638a64a-12ea-4094-ba36-9c8bc7e02147",
+      "itemId": 321,
+      "lv": 0,
+      "custom1": 254,
+      "custom2": 354,
+      "custom3": 154,
+      "exceedLimit": 930,
+      "legend": 0
+    },
+    "36220aa4-285c-4f2c-9ddb-ece33cd3b6cf": {
+      "id": "36220aa4-285c-4f2c-9ddb-ece33cd3b6cf",
+      "itemId": 314,
+      "lv": 0,
+      "custom1": 753,
+      "custom2": 654,
+      "custom3": 455,
+      "exceedLimit": 990,
+      "legend": 0
+    },
+    "9acb1a1f-3dc6-45f4-98b3-7a54a1403915": {
+      "id": "9acb1a1f-3dc6-45f4-98b3-7a54a1403915",
+      "itemId": 318,
+      "lv": 0,
+      "custom1": 660,
+      "custom2": 898,
+      "custom3": 659,
+      "exceedLimit": 1070,
+      "legend": 0
+    },
+    "25c3aefa-645a-402f-b1c7-8f081cba32b2": {
+      "id": "25c3aefa-645a-402f-b1c7-8f081cba32b2",
+      "itemId": 323,
+      "lv": 0,
+      "custom1": 263,
+      "custom2": 659,
+      "custom3": 660,
+      "exceedLimit": 1090,
+      "legend": 0
+    },
+    "58fc4f74-636c-4cf5-9cf4-955c8db42988": {
+      "id": "58fc4f74-636c-4cf5-9cf4-955c8db42988",
+      "itemId": 321,
+      "lv": 0,
+      "custom1": 267,
+      "custom2": 168,
+      "custom3": 564,
+      "exceedLimit": 1170,
+      "legend": 0
+    },
+    "ca751634-acc2-4a38-b2a7-54dfa4092d85": {
+      "id": "ca751634-acc2-4a38-b2a7-54dfa4092d85",
+      "itemId": 314,
+      "lv": 0,
+      "custom1": 666,
+      "custom2": 466,
+      "custom3": 369,
+      "exceedLimit": 1190,
+      "legend": 0
+    },
+    "5f0a1210-c740-41b0-982a-df23affd7bd3": {
+      "id": "5f0a1210-c740-41b0-982a-df23affd7bd3",
+      "itemId": 311,
+      "lv": 0,
+      "custom1": 369,
+      "custom2": 767,
+      "custom3": 667,
+      "exceedLimit": 1210,
+      "legend": 0
+    },
+    "1783f8ae-ee90-4eb2-a4e5-cf8d10c10ec5": {
+      "id": "1783f8ae-ee90-4eb2-a4e5-cf8d10c10ec5",
+      "itemId": 318,
+      "lv": 0,
+      "custom1": 171,
+      "custom2": 669,
+      "custom3": 470,
+      "exceedLimit": 1250,
+      "legend": 0
+    },
+    "3fad2484-66ee-4f2f-82df-a3e489b47b38": {
+      "id": "3fad2484-66ee-4f2f-82df-a3e489b47b38",
+      "itemId": 304,
+      "lv": 0,
+      "custom1": 171,
+      "custom2": 171,
+      "custom3": 470,
+      "exceedLimit": 1280,
+      "legend": 0
+    },
+    "5fe63059-af7b-4f63-87ec-31ca20864100": {
+      "id": "5fe63059-af7b-4f63-87ec-31ca20864100",
+      "itemId": 309,
+      "lv": 0,
+      "custom1": 528,
+      "custom2": 332,
+      "custom3": 729,
+      "exceedLimit": 560,
+      "legend": 0
+    },
+    "753e4cff-409b-498d-8a43-b59c58b3e15f": {
+      "id": "753e4cff-409b-498d-8a43-b59c58b3e15f",
+      "itemId": 309,
+      "lv": 0,
+      "custom1": 637,
+      "custom2": 638,
+      "custom3": 239,
+      "exceedLimit": 700,
+      "legend": 0
+    },
+    "15f96338-ef63-4c0e-8796-e9d3101e79cd": {
+      "id": "15f96338-ef63-4c0e-8796-e9d3101e79cd",
+      "itemId": 312,
+      "lv": 0,
+      "custom1": 141,
+      "custom2": 142,
+      "custom3": 640,
+      "exceedLimit": 710,
+      "legend": 0
+    },
+    "a4a6b2f1-a37c-4c8d-a245-4497f844d1d8": {
+      "id": "a4a6b2f1-a37c-4c8d-a245-4497f844d1d8",
+      "itemId": 317,
+      "lv": 0,
+      "custom1": 253,
+      "custom2": 749,
+      "custom3": 649,
+      "exceedLimit": 890,
+      "legend": 0
+    },
+    "72910abc-520c-4772-87d7-6faab6f76391": {
+      "id": "72910abc-520c-4772-87d7-6faab6f76391",
+      "itemId": 319,
+      "lv": 0,
+      "custom1": 452,
+      "custom2": 751,
+      "custom3": 752,
+      "exceedLimit": 930,
+      "legend": 0
+    },
+    "9a5107a3-901e-4ce3-b79b-cbc4c32415c2": {
+      "id": "9a5107a3-901e-4ce3-b79b-cbc4c32415c2",
+      "itemId": 310,
+      "lv": 0,
+      "custom1": 756,
+      "custom2": 657,
+      "custom3": 261,
+      "exceedLimit": 1060,
+      "legend": 0
+    },
+    "e8a5f07d-e076-45e1-80af-1b9dec9ce41f": {
+      "id": "e8a5f07d-e076-45e1-80af-1b9dec9ce41f",
+      "itemId": 315,
+      "lv": 0,
+      "custom1": 758,
+      "custom2": 757,
+      "custom3": 966,
+      "exceedLimit": 1050,
+      "legend": 0
+    },
+    "d5a763d3-30a6-4e08-abd1-6fd01bd8ca59": {
+      "id": "d5a763d3-30a6-4e08-abd1-6fd01bd8ca59",
+      "itemId": 313,
+      "lv": 0,
+      "custom1": 362,
+      "custom2": 262,
+      "custom3": 459,
+      "exceedLimit": 1070,
+      "legend": 0
+    },
+    "e74ae862-239c-4fc6-a202-96389314ad24": {
+      "id": "e74ae862-239c-4fc6-a202-96389314ad24",
+      "itemId": 303,
+      "lv": 0,
+      "custom1": 166,
+      "custom2": 763,
+      "custom3": 266,
+      "exceedLimit": 1160,
+      "legend": 0
+    },
+    "e51b3cf0-139b-449d-bb30-d4716afeee69": {
+      "id": "e51b3cf0-139b-449d-bb30-d4716afeee69",
+      "itemId": 313,
+      "lv": 0,
+      "custom1": 764,
+      "custom2": 165,
+      "custom3": 763,
+      "exceedLimit": 1150,
+      "legend": 0
+    },
+    "f276fe4a-e2da-4d58-82f6-2863e7057e72": {
+      "id": "f276fe4a-e2da-4d58-82f6-2863e7057e72",
+      "itemId": 319,
+      "lv": 0,
+      "custom1": 566,
+      "custom2": 169,
+      "custom3": 766,
+      "exceedLimit": 1210,
+      "legend": 0
+    },
+    "a8592ca1-90c9-40ed-ab40-824a6f48de64": {
+      "id": "a8592ca1-90c9-40ed-ab40-824a6f48de64",
+      "itemId": 307,
+      "lv": 0,
+      "custom1": 569,
+      "custom2": 271,
+      "custom3": 570,
+      "exceedLimit": 1280,
+      "legend": 0
+    },
+    "e403163b-4339-4e77-8e3b-83b82216a465": {
+      "id": "e403163b-4339-4e77-8e3b-83b82216a465",
+      "itemId": 304,
+      "lv": 0,
+      "custom1": 173,
+      "custom2": 173,
+      "custom3": 373,
+      "exceedLimit": 1270,
+      "legend": 0
+    },
+    "a2590544-1777-4585-a9aa-fc4fb5d3efb6": {
+      "id": "a2590544-1777-4585-a9aa-fc4fb5d3efb6",
+      "itemId": 301,
+      "lv": 0,
+      "custom1": 331,
+      "custom2": 332,
+      "custom3": 66,
+      "exceedLimit": 540,
+      "legend": 0
+    },
+    "6c69d60a-d1e4-4e43-8fc5-beca112a30e4": {
+      "id": "6c69d60a-d1e4-4e43-8fc5-beca112a30e4",
+      "itemId": 302,
+      "lv": 0,
+      "custom1": 147,
+      "custom2": 745,
+      "custom3": 898,
+      "exceedLimit": 840,
+      "legend": 0
+    },
+    "91e0d85d-24a7-4b39-9216-f74b8c4a0816": {
+      "id": "91e0d85d-24a7-4b39-9216-f74b8c4a0816",
+      "itemId": 308,
+      "lv": 0,
+      "custom1": 451,
+      "custom2": 153,
+      "custom3": 650,
+      "exceedLimit": 940,
+      "legend": 0
+    },
+    "b311d46f-ce1a-4f74-9b5e-0fac184cf4b1": {
+      "id": "b311d46f-ce1a-4f74-9b5e-0fac184cf4b1",
+      "itemId": 302,
+      "lv": 0,
+      "custom1": 255,
+      "custom2": 255,
+      "custom3": 453,
+      "exceedLimit": 980,
+      "legend": 0
+    },
+    "89be4183-a18c-48ed-b03c-e1a75b4327cb": {
+      "id": "89be4183-a18c-48ed-b03c-e1a75b4327cb",
+      "itemId": 307,
+      "lv": 0,
+      "custom1": 157,
+      "custom2": 655,
+      "custom3": 455,
+      "exceedLimit": 1000,
+      "legend": 0
+    },
+    "cbaa8817-84d6-4714-83b1-3c8001326735": {
+      "id": "cbaa8817-84d6-4714-83b1-3c8001326735",
+      "itemId": 301,
+      "lv": 0,
+      "custom1": 555,
+      "custom2": 357,
+      "custom3": 358,
+      "exceedLimit": 1020,
+      "legend": 0
+    },
+    "ec7e4d26-48fb-42d0-bb98-03579a00289e": {
+      "id": "ec7e4d26-48fb-42d0-bb98-03579a00289e",
+      "itemId": 307,
+      "lv": 0,
+      "custom1": 755,
+      "custom2": 359,
+      "custom3": 458,
+      "exceedLimit": 1040,
+      "legend": 0
+    },
+    "5227da70-98e6-4263-9186-8e8e16b26ca6": {
+      "id": "5227da70-98e6-4263-9186-8e8e16b26ca6",
+      "itemId": 317,
+      "lv": 0,
+      "custom1": 458,
+      "custom2": 161,
+      "custom3": 260,
+      "exceedLimit": 1050,
+      "legend": 0
+    },
+    "b7797ecf-bf41-425c-ac91-8539e2d23450": {
+      "id": "b7797ecf-bf41-425c-ac91-8539e2d23450",
+      "itemId": 304,
+      "lv": 0,
+      "custom1": 462,
+      "custom2": 263,
+      "custom3": 660,
+      "exceedLimit": 1110,
+      "legend": 0
+    },
+    "d898f234-f10a-4be4-8418-50d43f5dcab1": {
+      "id": "d898f234-f10a-4be4-8418-50d43f5dcab1",
+      "itemId": 305,
+      "lv": 0,
+      "custom1": 563,
+      "custom2": 463,
+      "custom3": 366,
+      "exceedLimit": 1160,
+      "legend": 0
+    },
+    "368e5b2c-8e23-44fb-b640-37d553bcea62": {
+      "id": "368e5b2c-8e23-44fb-b640-37d553bcea62",
+      "itemId": 314,
+      "lv": 0,
+      "custom1": 365,
+      "custom2": 267,
+      "custom3": 166,
+      "exceedLimit": 1150,
+      "legend": 0
+    },
+    "913e5339-51ce-4633-a776-0fb5b44c52aa": {
+      "id": "913e5339-51ce-4633-a776-0fb5b44c52aa",
+      "itemId": 312,
+      "lv": 0,
+      "custom1": 369,
+      "custom2": 765,
+      "custom3": 368,
+      "exceedLimit": 1190,
+      "legend": 0
+    },
+    "0b3b87cf-2d42-4a2a-945f-aceac46e140b": {
+      "id": "0b3b87cf-2d42-4a2a-945f-aceac46e140b",
+      "itemId": 320,
+      "lv": 0,
+      "custom1": 667,
+      "custom2": 566,
+      "custom3": 468,
+      "exceedLimit": 1210,
+      "legend": 0
+    },
+    "be0e26da-075f-4744-be40-a67a385fe254": {
+      "id": "be0e26da-075f-4744-be40-a67a385fe254",
+      "itemId": 304,
+      "lv": 0,
+      "custom1": 568,
+      "custom2": 768,
+      "custom3": 898,
+      "exceedLimit": 1230,
+      "legend": 0
+    },
+    "43cb5f69-bc9f-4243-a56b-430611e3f4a6": {
+      "id": "43cb5f69-bc9f-4243-a56b-430611e3f4a6",
+      "itemId": 319,
+      "lv": 0,
+      "custom1": 569,
+      "custom2": 372,
+      "custom3": 272,
+      "exceedLimit": 1250,
+      "legend": 0
+    },
+    "b4194c31-00ff-4edd-86ca-5b371904ed8f": {
+      "id": "b4194c31-00ff-4edd-86ca-5b371904ed8f",
+      "itemId": 302,
+      "lv": 0,
+      "custom1": 172,
+      "custom2": 670,
+      "custom3": 769,
+      "exceedLimit": 1280,
+      "legend": 0
+    },
+    "6490e062-d476-4a3a-819f-9208144acf45": {
+      "id": "6490e062-d476-4a3a-819f-9208144acf45",
+      "itemId": 304,
+      "lv": 0,
+      "custom1": 477,
+      "custom2": 180,
+      "custom3": 0,
+      "exceedLimit": 1358,
+      "legend": 0
+    },
+    "44360878-5582-49bd-a650-d535a5b69ae5": {
+      "id": "44360878-5582-49bd-a650-d535a5b69ae5",
+      "itemId": 304,
+      "lv": 0,
+      "custom1": 277,
+      "custom2": 276,
+      "custom3": 898,
+      "exceedLimit": 1330,
+      "legend": 0
+    },
+    "c0f7258b-f3d8-4c69-8f78-dff58c9080c9": {
+      "id": "c0f7258b-f3d8-4c69-8f78-dff58c9080c9",
+      "itemId": 316,
+      "lv": 0,
+      "custom1": 533,
+      "custom2": 734,
+      "custom3": 898,
+      "exceedLimit": 610,
+      "legend": 0
+    },
+    "1ba5f784-a91f-4928-9c9c-c9a470b0378c": {
+      "id": "1ba5f784-a91f-4928-9c9c-c9a470b0378c",
+      "itemId": 309,
+      "lv": 0,
+      "custom1": 452,
+      "custom2": 154,
+      "custom3": 452,
+      "exceedLimit": 960,
+      "legend": 0
+    },
+    "d5bbdead-0a23-4a3e-bc85-5c258f442017": {
+      "id": "d5bbdead-0a23-4a3e-bc85-5c258f442017",
+      "itemId": 314,
+      "lv": 0,
+      "custom1": 554,
+      "custom2": 256,
+      "custom3": 255,
+      "exceedLimit": 970,
+      "legend": 0
+    },
+    "db9cd8b5-9bd4-489f-9aab-1fc71af12662": {
+      "id": "db9cd8b5-9bd4-489f-9aab-1fc71af12662",
+      "itemId": 323,
+      "lv": 0,
+      "custom1": 258,
+      "custom2": 754,
+      "custom3": 157,
+      "exceedLimit": 990,
+      "legend": 0
+    },
+    "0a8f7657-d6f1-453e-a3b0-839840cc2160": {
+      "id": "0a8f7657-d6f1-453e-a3b0-839840cc2160",
+      "itemId": 307,
+      "lv": 0,
+      "custom1": 756,
+      "custom2": 556,
+      "custom3": 656,
+      "exceedLimit": 1020,
+      "legend": 0
+    },
+    "89a821eb-0df4-4e21-99fb-f86583232fd1": {
+      "id": "89a821eb-0df4-4e21-99fb-f86583232fd1",
+      "itemId": 304,
+      "lv": 0,
+      "custom1": 657,
+      "custom2": 359,
+      "custom3": 260,
+      "exceedLimit": 1030,
+      "legend": 0
+    },
+    "9a5586e1-d9e7-4d54-b494-c149eccfa74a": {
+      "id": "9a5586e1-d9e7-4d54-b494-c149eccfa74a",
+      "itemId": 309,
+      "lv": 0,
+      "custom1": 458,
+      "custom2": 261,
+      "custom3": 757,
+      "exceedLimit": 1060,
+      "legend": 0
+    },
+    "3b312d8c-1189-4515-b638-df6eddb04988": {
+      "id": "3b312d8c-1189-4515-b638-df6eddb04988",
+      "itemId": 317,
+      "lv": 0,
+      "custom1": 561,
+      "custom2": 364,
+      "custom3": 364,
+      "exceedLimit": 1110,
+      "legend": 0
+    },
+    "6abc8c73-aa2d-4ddd-8ffa-8f030a0b422a": {
+      "id": "6abc8c73-aa2d-4ddd-8ffa-8f030a0b422a",
+      "itemId": 305,
+      "lv": 0,
+      "custom1": 467,
+      "custom2": 667,
+      "custom3": 466,
+      "exceedLimit": 1220,
+      "legend": 0
+    },
+    "423f9a20-1844-4e35-bee1-d406ea00035b": {
+      "id": "423f9a20-1844-4e35-bee1-d406ea00035b",
+      "itemId": 303,
+      "lv": 0,
+      "custom1": 370,
+      "custom2": 372,
+      "custom3": 470,
+      "exceedLimit": 1260,
+      "legend": 0
+    },
+    "7937fb6c-ccb1-4e1a-81f5-b7ad0aa95393": {
+      "id": "7937fb6c-ccb1-4e1a-81f5-b7ad0aa95393",
+      "itemId": 323,
+      "lv": 0,
+      "custom1": 469,
+      "custom2": 769,
+      "custom3": 171,
+      "exceedLimit": 1250,
+      "legend": 0
+    },
+    "7d4dad01-00f0-4910-9ed4-06bf097cf63e": {
+      "id": "7d4dad01-00f0-4910-9ed4-06bf097cf63e",
+      "itemId": 302,
+      "lv": 0,
+      "custom1": 772,
+      "custom2": 274,
+      "custom3": 175,
+      "exceedLimit": 1320,
+      "legend": 0
+    },
+    "6db00d13-e1c8-41d9-b5ff-2562542d22ea": {
+      "id": "6db00d13-e1c8-41d9-b5ff-2562542d22ea",
+      "itemId": 322,
+      "lv": 0,
+      "custom1": 475,
+      "custom2": 774,
+      "custom3": 377,
+      "exceedLimit": 1330,
+      "legend": 0
+    },
+    "df0caa5d-fab1-4434-b8ee-c04650d06845": {
+      "id": "df0caa5d-fab1-4434-b8ee-c04650d06845",
+      "itemId": 304,
+      "lv": 0,
+      "custom1": 179,
+      "custom2": 775,
+      "custom3": 178,
+      "exceedLimit": 1400,
+      "legend": 0
+    },
+    "09968740-65fd-4b1a-8f9b-df0c14be0051": {
+      "id": "09968740-65fd-4b1a-8f9b-df0c14be0051",
+      "itemId": 303,
+      "lv": 0,
+      "custom1": 777,
+      "custom2": 576,
+      "custom3": 778,
+      "exceedLimit": 1420,
+      "legend": 0
+    },
+    "d65716ce-be11-436b-b00f-72ffc0dc557d": {
+      "id": "d65716ce-be11-436b-b00f-72ffc0dc557d",
+      "itemId": 307,
+      "lv": 0,
+      "custom1": 280,
+      "custom2": 577,
+      "custom3": 777,
+      "exceedLimit": 1440,
+      "legend": 0
+    },
+    "523d2d50-3b6d-4881-916a-eeab690cbf72": {
+      "id": "523d2d50-3b6d-4881-916a-eeab690cbf72",
+      "itemId": 317,
+      "lv": 0,
+      "custom1": 780,
+      "custom2": 580,
+      "custom3": 680,
+      "exceedLimit": 1450,
+      "legend": 0
+    },
+    "ef22bae8-0548-468d-b79e-19f1f46af924": {
+      "id": "ef22bae8-0548-468d-b79e-19f1f46af924",
+      "itemId": 308,
+      "lv": 0,
+      "custom1": 552,
+      "custom2": 452,
+      "custom3": 651,
+      "exceedLimit": 960,
+      "legend": 0
+    },
+    "849006db-b16f-4a4b-b961-49fce739c160": {
+      "id": "849006db-b16f-4a4b-b961-49fce739c160",
+      "itemId": 305,
+      "lv": 0,
+      "custom1": 356,
+      "custom2": 553,
+      "custom3": 156,
+      "exceedLimit": 980,
+      "legend": 0
+    },
+    "5eae39aa-861e-48a8-bd24-38099a3a619b": {
+      "id": "5eae39aa-861e-48a8-bd24-38099a3a619b",
+      "itemId": 317,
+      "lv": 0,
+      "custom1": 754,
+      "custom2": 157,
+      "custom3": 555,
+      "exceedLimit": 990,
+      "legend": 0
+    },
+    "faa94a8b-d48f-409f-9b91-47c3e6c05b12": {
+      "id": "faa94a8b-d48f-409f-9b91-47c3e6c05b12",
+      "itemId": 308,
+      "lv": 0,
+      "custom1": 654,
+      "custom2": 755,
+      "custom3": 257,
+      "exceedLimit": 1020,
+      "legend": 0
+    },
+    "63881354-b5ec-4ad5-b41b-432b7f71f117": {
+      "id": "63881354-b5ec-4ad5-b41b-432b7f71f117",
+      "itemId": 302,
+      "lv": 0,
+      "custom1": 658,
+      "custom2": 261,
+      "custom3": 657,
+      "exceedLimit": 1060,
+      "legend": 0
+    },
+    "d4898b57-bcfd-41d8-b9f1-028e5bfdd244": {
+      "id": "d4898b57-bcfd-41d8-b9f1-028e5bfdd244",
+      "itemId": 301,
+      "lv": 0,
+      "custom1": 365,
+      "custom2": 364,
+      "custom3": 364,
+      "exceedLimit": 1140,
+      "legend": 0
+    },
+    "63d0cdfc-1c94-4fca-932a-fc276b4dd328": {
+      "id": "63d0cdfc-1c94-4fca-932a-fc276b4dd328",
+      "itemId": 318,
+      "lv": 0,
+      "custom1": 165,
+      "custom2": 167,
+      "custom3": 366,
+      "exceedLimit": 1150,
+      "legend": 0
+    },
+    "7a5d96d6-bd28-4cb4-bdc4-addb13483670": {
+      "id": "7a5d96d6-bd28-4cb4-bdc4-addb13483670",
+      "itemId": 315,
+      "lv": 0,
+      "custom1": 564,
+      "custom2": 167,
+      "custom3": 764,
+      "exceedLimit": 1170,
+      "legend": 0
+    },
+    "f37af10f-c6fb-4cee-b961-e6f8e9ed9b7b": {
+      "id": "f37af10f-c6fb-4cee-b961-e6f8e9ed9b7b",
+      "itemId": 320,
+      "lv": 0,
+      "custom1": 372,
+      "custom2": 768,
+      "custom3": 172,
+      "exceedLimit": 1250,
+      "legend": 0
+    },
+    "3656dedc-6482-47c3-afe5-6087b14c100f": {
+      "id": "3656dedc-6482-47c3-afe5-6087b14c100f",
+      "itemId": 305,
+      "lv": 0,
+      "custom1": 272,
+      "custom2": 172,
+      "custom3": 769,
+      "exceedLimit": 1280,
+      "legend": 0
+    },
+    "1145b0a2-88d8-447c-9bd2-10d4fc0a3d05": {
+      "id": "1145b0a2-88d8-447c-9bd2-10d4fc0a3d05",
+      "itemId": 307,
+      "lv": 0,
+      "custom1": 771,
+      "custom2": 571,
+      "custom3": 175,
+      "exceedLimit": 1320,
+      "legend": 0
+    },
+    "d71157ae-720c-4ef9-bc78-f9bee9255142": {
+      "id": "d71157ae-720c-4ef9-bc78-f9bee9255142",
+      "itemId": 305,
+      "lv": 0,
+      "custom1": 176,
+      "custom2": 376,
+      "custom3": 177,
+      "exceedLimit": 1360,
+      "legend": 0
+    },
+    "755bf27c-0b62-4977-ae49-40b7f8be5d3f": {
+      "id": "755bf27c-0b62-4977-ae49-40b7f8be5d3f",
+      "itemId": 306,
+      "lv": 0,
+      "custom1": 379,
+      "custom2": 278,
+      "custom3": 280,
+      "exceedLimit": 1400,
+      "legend": 0
+    },
+    "c5e74a21-c7f7-4de2-a8c4-aaafe9b62b58": {
+      "id": "c5e74a21-c7f7-4de2-a8c4-aaafe9b62b58",
+      "itemId": 309,
+      "lv": 0,
+      "custom1": 678,
+      "custom2": 180,
+      "custom3": 280,
+      "exceedLimit": 1420,
+      "legend": 0
+    },
+    "744f59fc-2806-43c0-a90e-cdcc58e02e1b": {
+      "id": "744f59fc-2806-43c0-a90e-cdcc58e02e1b",
+      "itemId": 302,
+      "lv": 0,
+      "custom1": 777,
+      "custom2": 678,
+      "custom3": 777,
+      "exceedLimit": 1440,
+      "legend": 0
+    },
+    "34d0cdc5-64e2-4d4e-9f56-ad7a401a4989": {
+      "id": "34d0cdc5-64e2-4d4e-9f56-ad7a401a4989",
+      "itemId": 312,
+      "lv": 0,
+      "custom1": 898,
+      "custom2": 580,
+      "custom3": 579,
+      "exceedLimit": 1450,
+      "legend": 0
+    },
+    "d457cddb-3fb5-4473-8f25-4fd35b21f647": {
+      "id": "d457cddb-3fb5-4473-8f25-4fd35b21f647",
+      "itemId": 317,
+      "lv": 0,
+      "custom1": 580,
+      "custom2": 682,
+      "custom3": 481,
+      "exceedLimit": 1470,
+      "legend": 0
+    },
+    "96b177a0-b9eb-411c-9b7c-9c07a2f97fcd": {
+      "id": "96b177a0-b9eb-411c-9b7c-9c07a2f97fcd",
+      "itemId": 322,
+      "lv": 0,
+      "custom1": 650,
+      "custom2": 153,
+      "custom3": 965,
+      "exceedLimit": 910,
+      "legend": 0
+    },
+    "84b0389f-24b3-4252-9ab0-c79bec378450": {
+      "id": "84b0389f-24b3-4252-9ab0-c79bec378450",
+      "itemId": 306,
+      "lv": 0,
+      "custom1": 357,
+      "custom2": 454,
+      "custom3": 941,
+      "exceedLimit": 1000,
+      "legend": 0
+    },
+    "8eb0c30c-e890-4200-9159-1d2edbcb9f39": {
+      "id": "8eb0c30c-e890-4200-9159-1d2edbcb9f39",
+      "itemId": 310,
+      "lv": 0,
+      "custom1": 259,
+      "custom2": 755,
+      "custom3": 756,
+      "exceedLimit": 1040,
+      "legend": 0
+    },
+    "5f67b244-ac0f-4e1e-9d67-77e601d168c4": {
+      "id": "5f67b244-ac0f-4e1e-9d67-77e601d168c4",
+      "itemId": 315,
+      "lv": 0,
+      "custom1": 262,
+      "custom2": 261,
+      "custom3": 759,
+      "exceedLimit": 1070,
+      "legend": 0
+    },
+    "eb529813-2aef-4ac5-b0a8-480b958f9c35": {
+      "id": "eb529813-2aef-4ac5-b0a8-480b958f9c35",
+      "itemId": 305,
+      "lv": 0,
+      "custom1": 758,
+      "custom2": 759,
+      "custom3": 559,
+      "exceedLimit": 1100,
+      "legend": 0
+    },
+    "b5d54b2f-4a9b-4c82-9f39-c336c059ff7f": {
+      "id": "b5d54b2f-4a9b-4c82-9f39-c336c059ff7f",
+      "itemId": 321,
+      "lv": 0,
+      "custom1": 164,
+      "custom2": 561,
+      "custom3": 364,
+      "exceedLimit": 1110,
+      "legend": 0
+    },
+    "11be4f11-704f-4a6d-90af-3a2930ec7269": {
+      "id": "11be4f11-704f-4a6d-90af-3a2930ec7269",
+      "itemId": 317,
+      "lv": 0,
+      "custom1": 898,
+      "custom2": 563,
+      "custom3": 761,
+      "exceedLimit": 1130,
+      "legend": 0
+    },
+    "238b907d-dd85-48e4-aa49-dee325bf93ff": {
+      "id": "238b907d-dd85-48e4-aa49-dee325bf93ff",
+      "itemId": 323,
+      "lv": 0,
+      "custom1": 562,
+      "custom2": 762,
+      "custom3": 562,
+      "exceedLimit": 1150,
+      "legend": 0
+    },
+    "9a20f57c-c5c5-4e67-a953-f6e1d66590a9": {
+      "id": "9a20f57c-c5c5-4e67-a953-f6e1d66590a9",
+      "itemId": 302,
+      "lv": 0,
+      "custom1": 666,
+      "custom2": 565,
+      "custom3": 466,
+      "exceedLimit": 1220,
+      "legend": 0
+    },
+    "13e0af2b-db4a-41c6-8b6f-57280ab0384d": {
+      "id": "13e0af2b-db4a-41c6-8b6f-57280ab0384d",
+      "itemId": 315,
+      "lv": 0,
+      "custom1": 669,
+      "custom2": 568,
+      "custom3": 371,
+      "exceedLimit": 1230,
+      "legend": 0
+    },
+    "8ba7bf63-1e5d-4adb-9d3d-cb07ab358e92": {
+      "id": "8ba7bf63-1e5d-4adb-9d3d-cb07ab358e92",
+      "itemId": 301,
+      "lv": 0,
+      "custom1": 768,
+      "custom2": 372,
+      "custom3": 173,
+      "exceedLimit": 1280,
+      "legend": 0
+    },
+    "9b8569f1-e734-42f7-896f-5c3e9622e35b": {
+      "id": "9b8569f1-e734-42f7-896f-5c3e9622e35b",
+      "itemId": 304,
+      "lv": 0,
+      "custom1": 273,
+      "custom2": 273,
+      "custom3": 274,
+      "exceedLimit": 1300,
+      "legend": 0
+    },
+    "04bbb480-bd2f-4f70-a1f1-a98dd2627dcb": {
+      "id": "04bbb480-bd2f-4f70-a1f1-a98dd2627dcb",
+      "itemId": 318,
+      "lv": 0,
+      "custom1": 376,
+      "custom2": 376,
+      "custom3": 276,
+      "exceedLimit": 1330,
+      "legend": 0
+    },
+    "b9162d10-4cb9-4de1-9349-34f0ec3063a0": {
+      "id": "b9162d10-4cb9-4de1-9349-34f0ec3063a0",
+      "itemId": 323,
+      "lv": 0,
+      "custom1": 278,
+      "custom2": 378,
+      "custom3": 179,
+      "exceedLimit": 1370,
+      "legend": 0
+    },
+    "029f6b66-5086-4f6c-b498-8af38b9e2779": {
+      "id": "029f6b66-5086-4f6c-b498-8af38b9e2779",
+      "itemId": 312,
+      "lv": 0,
+      "custom1": 180,
+      "custom2": 678,
+      "custom3": 479,
+      "exceedLimit": 1410,
+      "legend": 0
+    },
+    "f6662f81-237e-41ea-99c6-77e9b210ee47": {
+      "id": "f6662f81-237e-41ea-99c6-77e9b210ee47",
+      "itemId": 302,
+      "lv": 0,
+      "custom1": 780,
+      "custom2": 680,
+      "custom3": 283,
+      "exceedLimit": 1460,
+      "legend": 0
+    },
+    "cd726ba7-7042-4608-b948-ba1f9029adb4": {
+      "id": "cd726ba7-7042-4608-b948-ba1f9029adb4",
+      "itemId": 315,
+      "lv": 0,
+      "custom1": 583,
+      "custom2": 385,
+      "custom3": 682,
+      "exceedLimit": 1490,
+      "legend": 0
+    },
+    "465c0d91-7312-4667-a3fa-8b673733ce1e": {
+      "id": "465c0d91-7312-4667-a3fa-8b673733ce1e",
+      "itemId": 302,
+      "lv": 0,
+      "custom1": 683,
+      "custom2": 584,
+      "custom3": 782,
+      "exceedLimit": 1500,
+      "legend": 0
+    },
+    "3b3f43a9-4bb5-44b6-972a-8bfe8d2bdb28": {
+      "id": "3b3f43a9-4bb5-44b6-972a-8bfe8d2bdb28",
+      "itemId": 319,
+      "lv": 0,
+      "custom1": 187,
+      "custom2": 684,
+      "custom3": 485,
+      "exceedLimit": 1500,
+      "legend": 0
+    }
+  },
+  "materials": {
+    "1": {
+      "id": 1,
+      "number": 33
+    },
+    "2": {
+      "id": 2,
+      "number": 33
+    },
+    "3": {
+      "id": 3,
+      "number": 18
+    },
+    "4": {
+      "id": 4,
+      "number": 10061
+    },
+    "5": {
+      "id": 5,
+      "number": 10002
+    },
+    "10": {
+      "id": 10,
+      "number": 1
+    },
+    "11": {
+      "id": 11,
+      "number": 1
+    },
+    "12": {
+      "id": 12,
+      "number": 6
+    },
+    "13": {
+      "id": 13,
+      "number": 1
+    },
+    "14": {
+      "id": 14,
+      "number": 114
+    },
+    "20": {
+      "id": 20,
+      "number": 1
+    },
+    "21": {
+      "id": 21,
+      "number": 89303
+    },
+    "22": {
+      "id": 22,
+      "number": 2388
+    },
+    "25": {
+      "id": 25,
+      "number": 1
+    },
+    "26": {
+      "id": 26,
+      "number": 1
+    },
+    "30": {
+      "id": 30,
+      "number": 1
+    },
+    "40": {
+      "id": 40,
+      "number": 1
+    },
+    "50": {
+      "id": 50,
+      "number": 1
+    },
+    "51": {
+      "id": 51,
+      "number": 1
+    },
+    "61": {
+      "id": 61,
+      "number": 12
+    },
+    "62": {
+      "id": 62,
+      "number": 2
+    },
+    "63": {
+      "id": 63,
+      "number": 10592
+    },
+    "90": {
+      "id": 90,
+      "number": 1256
+    },
+    "91": {
+      "id": 91,
+      "number": 1
+    },
+    "92": {
+      "id": 92,
+      "number": 1
+    },
+    "93": {
+      "id": 93,
+      "number": 10096
+    },
+    "98": {
+      "id": 98,
+      "number": 1
+    },
+    "99": {
+      "id": 99,
+      "number": 107
+    },
+    "101": {
+      "id": 101,
+      "number": 1
+    },
+    "102": {
+      "id": 102,
+      "number": 1
+    },
+    "103": {
+      "id": 103,
+      "number": 1
+    },
+    "104": {
+      "id": 104,
+      "number": 1
+    },
+    "105": {
+      "id": 105,
+      "number": 1
+    },
+    "106": {
+      "id": 106,
+      "number": 1
+    },
+    "107": {
+      "id": 107,
+      "number": 1
+    },
+    "108": {
+      "id": 108,
+      "number": 1
+    },
+    "109": {
+      "id": 109,
+      "number": 1
+    },
+    "110": {
+      "id": 110,
+      "number": 1
+    },
+    "111": {
+      "id": 111,
+      "number": 1
+    },
+    "112": {
+      "id": 112,
+      "number": 1
+    },
+    "113": {
+      "id": 113,
+      "number": 1
+    },
+    "114": {
+      "id": 114,
+      "number": 1
+    },
+    "115": {
+      "id": 115,
+      "number": 1
+    },
+    "116": {
+      "id": 116,
+      "number": 1
+    },
+    "117": {
+      "id": 117,
+      "number": 1
+    },
+    "118": {
+      "id": 118,
+      "number": 1
+    },
+    "1101": {
+      "id": 1101,
+      "number": 1
+    },
+    "1102": {
+      "id": 1102,
+      "number": 49
+    },
+    "1201": {
+      "id": 1201,
+      "number": 1
+    },
+    "1202": {
+      "id": 1202,
+      "number": 49
+    },
+    "1301": {
+      "id": 1301,
+      "number": 1
+    },
+    "1302": {
+      "id": 1302,
+      "number": 4
+    },
+    "1401": {
+      "id": 1401,
+      "number": 1
+    },
+    "1402": {
+      "id": 1402,
+      "number": 4
+    },
+    "1501": {
+      "id": 1501,
+      "number": 1
+    },
+    "1502": {
+      "id": 1502,
+      "number": 4
+    },
+    "80": {
+      "id": 80,
+      "number": 18000
+    },
+    "81": {
+      "id": 81,
+      "number": 1
+    },
+    "85": {
+      "id": 85,
+      "number": 1
+    },
+    "88": {
+      "id": 88,
+      "number": 1
+    }
+  },
+  "chips": {}
+}

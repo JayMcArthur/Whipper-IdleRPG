@@ -1917,6 +1917,20 @@
       "item2": 0,
       "prob2": 0,
       "nameId_EN": "Panoptes"
+    },
+    {
+      "id": 202,
+      "nameId": "九尾",
+      "hp": 1700000,
+      "atk": 0,
+      "def": 10000,
+      "spd": 0,
+      "exp": 99999,
+      "item1": 324,
+      "prob1": 100,
+      "item2": 0,
+      "prob2": 0,
+      "nameId_EN": "Nine Tails"
     }
   ]
 }

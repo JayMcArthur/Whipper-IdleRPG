@@ -657,6 +657,20 @@
       },
       "condition": 0,
       "nameId_EN": "Fallen Junkyard"
+    },
+    {
+      "id": 14,
+      "nameId": "錬金術師の島",
+      "maxFloor": 3,
+      "minutesPerFloor": 25,
+      "modLv": 8,
+      "monsters": {
+        "1": [],
+        "2": [],
+        "3": []
+      },
+      "condition": 0,
+      "nameId_EN": "Alchemist's Island"
     }
   ]
 }

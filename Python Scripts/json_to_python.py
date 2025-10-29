@@ -55,10 +55,15 @@ def make_lists():
         # Reduce max floor to make them work
         data['dungeons'][10]["maxFloor"] = 50
         data['dungeons'][11]["maxFloor"] = 0
+        data['dungeons'][12]["maxFloor"] = 0
         # Fix Royal Tomb so it has floors
         temp = {}
         for i in range(1, 51):
             temp[f'{i}'] = data['dungeons'][10]["monsters"][f'{ceil(i/10)}']
+        # Fix Alchemist Island so it has something
+        data['dungeons'][10]["monsters"]["1"] = [1]
+        data['dungeons'][10]["monsters"]["2"] = [1]
+        data['dungeons'][10]["monsters"]["3"] = [1]
         # Add In Royal Tombs withs bosses
         data['dungeons'][10]["monsters"] = temp
         data['dungeons'][10]["id"] = 121  # Change ID to 12.1, 12.2, 12.3
@@ -201,7 +206,7 @@ def make_lists():
 def print_enchantments():
     for key in enchantment_list.keys():
         best = enchantment_list[key][-1]
-        print(f'# {best:_>4} - {custom_list[best]["nameId_EN"]}{" " + str(custom_list[best]["dispLv"]) if custom_list[best]["dispLv"] > 1 else ""}: {custom_list[best]["summaryId_EN"].replace("{value}", str(custom_list[best]["value"]))}')
+        print(f'# {best:_>5} - {custom_list[best]["nameId_EN"]}{" " + str(custom_list[best]["dispLv"]) if custom_list[best]["dispLv"] > 1 else ""}: {custom_list[best]["summaryId_EN"].replace("{value}", str(custom_list[best]["value"]))}')
 
 
 # Returns level based on xp

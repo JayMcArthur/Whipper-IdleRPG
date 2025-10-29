@@ -303,23 +303,49 @@ best_vitality_with_enchants = {
 #####################
 # Enchantment Notes #
 #####################
-# 1100 - Endurance 100: Increases the HP base value by 65536.
-# 2100 - Strength 100: Increases the STR base value by 65536.
-# 3100 - Sturdy 100: Increases the VIT base value by 65536.
-# 4100 - Agility 100: Increases the SPD base value by 8192.
-# _898 - Lucky 8: Increases the LUK base value by 8.
-# 6100 - Strength Training 100: Increases the STR growth value by 2048.
-# 7100 - Defense Training 100: Increases the VIT growth value by 2048.
-# 5100 - Endurance Training 100: Increases the HP growth value by 2048.
-# __66 - First Strike: A preemptive strike (1/2 of normal damage) triggers at the start of combat
-# __67 - Double Strike: Chance of consecutive attacks increases by 20%
-# __68 - One Strike: Critical hit chance increases by 20%
-# _803 - Three Paths: 50% chance for critical damage to be tripled
-# _804 - Four Leaves: 20% chance for enemy drops to double
-# _805 - Five Lights: 20% chance to double experience points
-# _806 - Sixth Sense: 20% chance to dodge an attack
-# _807 - Seven Blessings: The probability of probability-based abilities is doubled.
+# 10200 - Endurance 200: Increases the HP base value by 100000.
+# 20200 - Strength 200: Increases the STR base value by 100000.
+# 30200 - Sturdy 200: Increases the VIT base value by 100000.
+# 40200 - Agility 200: Increases the SPD base value by 20000.
+# __898 - Lucky 8: Increases the LUK base value by 8.
+# 60200 - Strength Training 200: Increases the STR growth value by 5000.
+# 70200 - Defense Training 200: Increases the VIT growth value by 5000.
+# 50200 - Endurance Training 200: Increases the HP growth value by 5000.
+# ___66 - First Strike: Can always attack first in battle.
+# ___67 - Double Strike: Chance of consecutive attacks increases by 20%
+# ___68 - One Strike: Critical hit chance increases by 20%
+# __803 - Three Paths: 50% chance for critical damage to be tripled
+# __804 - Four Leaves: 20% chance for enemy drops to double
+# __805 - Five Lights: 20% chance to double experience points
+# __806 - Sixth Sense: 20% chance to dodge an attack
+# __807 - Seven Blessings: The probability of probability-based abilities is doubled
 
+#################
+# Ability Notes #
+#################
+# __901 - Mastery of Slashing: Equip a slashing weapon
+# __911 - Mastery of Bludgeoning: Equip a bludgeoning weapon
+# __921 - Mastery of Piercing: Equip a piercing weapon
+# __931 - Mastery of Projectiles: Equip a projectile weapon
+# __941 - Poison: Inflict poison with each attack
+# __942 - Deadly Poison: Inflicts deadly poison with each attack
+# __951 - Solitude: Increase all abilities when not equipping a set
+# __961 - Unyielding: Stay at 1 HP once during an adventure and deliver a critical hit on the next attack
+# __965 - Treasure Hunter: Easier to find treasure chests
+# __966 - Water Source Detection: Easier to find springs
+# __972 - Attack Power Boost 2: Weapon attack power increased by 30%
+# __982 - Defense Power Boost 2: Shield defense power increased by 30%
+# _1001 - Upgrade Boost: Upgrade increase by 2 times
+# _1109 - Exceed upgrade limit 9: Upgrade limit increased by 19000
+# _1201 - Corrosion Level Boost: 侵蝕度上昇量ブースト
+# _2105 - HP Boost 5: HP increased by 50%
+# _2210 - STR Boost 10: STR increased by 100%
+# _2305 - VIT Boost 5: VIT increased by 50%
+# _2405 - SPD Boost 5: SPD increased by 50%
+# _2505 - LUK Boost 5: LUK increased by 50%
+# _2604 - All Stats Boost 3: All stats increased by 40%
+# _3003 - Ability Level Boost 3: This item is more likely to gain high-level abilities
+# _3101 - Set Boost: Increases the effect of set equipment
 
 #################
 # Dungeon Notes #
@@ -365,6 +391,16 @@ best_vitality_with_enchants = {
 # TODO - Me
 #  Huge refactor on how enchantments and effects are applied to the player
 #  > I still need to rework the fights so they can use the premade stats
+
+# TODO - Whipper v4.5
+#  Epic Monsters Added
+#  Thousand Hand Core added as Drop to Thousand Hands
+#  Thousand Hands Spawn Changes
+#  Rainbow Slime Drop Changes
+#  Max Corrosion Level Change (Drop 1500, Enhancement 2500)
+
+# TODO - Whipper v4.6, 4.7, 4.9, 5.0, 5.1, 5.2, 5.3, 5.4, 5.6
+#  A lot.. I am so behind
 
 def run_custom_setups():
     setups = [
@@ -538,5 +574,5 @@ def main(custom_equip: bool, custom_dungeon: bool, dungeon: bool, combination: b
 
 if __name__ == '__main__':
     make_lists()
-    # print_enchantments()
-    main(True, True, False, False, False, False, False)
+    print_enchantments()
+    # main(True, True, False, False, False, False, False)

@@ -36,6 +36,13 @@
       "use": 2
     },
     {
+      "id": 6,
+      "nameId": "星の組成液",
+      "icon": "mate06",
+      "efficacyId": "指輪同士を無傷で結合できる幻の液体",
+      "use": 2
+    },
+    {
       "id": 10,
       "nameId": "白の鍵",
       "icon": "mate10",
@@ -153,6 +160,34 @@
       "icon": "mate63",
       "efficacyId": "強化値を+50できる大容量の紫色の液体",
       "use": 1
+    },
+    {
+      "id": 80,
+      "nameId": "地図の断片",
+      "icon": "map",
+      "efficacyId": "財宝のありかが印されている",
+      "use": 88
+    },
+    {
+      "id": 81,
+      "nameId": "儀式の燈火",
+      "icon": "candle",
+      "efficacyId": "錬金術師の島の霧を払い、探索時間を延ばすことができる",
+      "use": 4
+    },
+    {
+      "id": 85,
+      "nameId": "逆転の砂時計",
+      "icon": "hourglass",
+      "efficacyId": "隠者の秘宝。ロストしたアイテムを全て取り戻すことができる",
+      "use": 88
+    },
+    {
+      "id": 88,
+      "nameId": "瞬足の羽飾り",
+      "icon": "feather",
+      "efficacyId": "隠者の秘宝。足が速くなり、いつもの冒険を1/2の時間でこなすことができる",
+      "use": 88
     },
     {
       "id": 90,
@@ -351,6 +386,20 @@
       "use": 100
     },
     {
+      "id": 1001,
+      "nameId": "幽世の栞",
+      "icon": "shiori",
+      "efficacyId": "【討伐の証】禁書に命を芽吹かせた栞。未だ微かに脈打っている。HPが増える(+1000/Lv)",
+      "use": 110
+    },
+    {
+      "id": 1002,
+      "nameId": "幽世の栞がレベルアップ",
+      "icon": "shiori",
+      "efficacyId": "",
+      "use": 200
+    },
+    {
       "id": 1101,
       "nameId": "戦闘用チップ",
       "icon": "tebachip",
@@ -403,6 +452,20 @@
       "id": 1402,
       "nameId": "パノプテスの瞳がレベルアップ",
       "icon": "panopteseye",
+      "efficacyId": "",
+      "use": 200
+    },
+    {
+      "id": 1501,
+      "nameId": "殺生石",
+      "icon": "sesshoseki",
+      "efficacyId": "【討伐の証】妖狐が姿を変えた魔石。砥石による侵蝕度強化の上限が上がる(+500/Lv)",
+      "use": 110
+    },
+    {
+      "id": 1502,
+      "nameId": "殺生石がレベルアップ",
+      "icon": "sesshoseki",
       "efficacyId": "",
       "use": 200
     }

@@ -46,6 +46,15 @@
       "efficacyId_EN": "A golden liquid that binds equipment together without damaging them"
     },
     {
+      "id": 6,
+      "nameId": "星の組成液",
+      "icon": "mate06",
+      "efficacyId": "指輪同士を無傷で結合できる幻の液体",
+      "use": 2,
+      "nameId_EN": "Star Essence",
+      "efficacyId_EN": "A mythical liquid that binds rings together without damaging them"
+    },
+    {
       "id": 10,
       "nameId": "白の鍵",
       "icon": "mate10",
@@ -197,6 +206,42 @@
       "use": 1,
       "nameId_EN": "HardenerZG",
       "efficacyId_EN": "A large amount of purple liquid with +50 upgrade value"
+    },
+    {
+      "id": 80,
+      "nameId": "地図の断片",
+      "icon": "map",
+      "efficacyId": "財宝のありかが印されている",
+      "use": 88,
+      "nameId_EN": "Map Fragment",
+      "efficacyId_EN": "The location of the treasure is marked"
+    },
+    {
+      "id": 81,
+      "nameId": "儀式の燈火",
+      "icon": "candle",
+      "efficacyId": "錬金術師の島の霧を払い、探索時間を延ばすことができる",
+      "use": 4,
+      "nameId_EN": "Ritual's Flame",
+      "efficacyId_EN": "Clears the mist of the Alchemist's Island and extends the exploration time"
+    },
+    {
+      "id": 85,
+      "nameId": "逆転の砂時計",
+      "icon": "hourglass",
+      "efficacyId": "隠者の秘宝。ロストしたアイテムを全て取り戻すことができる",
+      "use": 88,
+      "nameId_EN": "Reversal Hourglass",
+      "efficacyId_EN": "Hermit's Treasure. Allows you to recover all lost items"
+    },
+    {
+      "id": 88,
+      "nameId": "瞬足の羽飾り",
+      "icon": "feather",
+      "efficacyId": "隠者の秘宝。足が速くなり、いつもの冒険を1/2の時間でこなすことができる",
+      "use": 88,
+      "nameId_EN": "Swiftfoot's Feather",
+      "efficacyId_EN": "\"Hermit's Treasure. Increases speed"
     },
     {
       "id": 90,
@@ -451,6 +496,23 @@
       "efficacyId_EN": "The Door to Another World"
     },
     {
+      "id": 1001,
+      "nameId": "幽世の栞",
+      "icon": "shiori",
+      "efficacyId": "【討伐の証】禁書に命を芽吹かせた栞。未だ微かに脈打っている。HPが増える(+1000/Lv)",
+      "use": 110,
+      "nameId_EN": "Bookmark of the Netherworld",
+      "efficacyId_EN": "[Proof of Subjugation] A bookmark that gave life to a forbidden book. It still faintly pulses. HP increases (+1000/Lv)"
+    },
+    {
+      "id": 1002,
+      "nameId": "幽世の栞がレベルアップ",
+      "icon": "shiori",
+      "efficacyId": "",
+      "use": 200,
+      "nameId_EN": "Bookmark of the Netherworld Level Up"
+    },
+    {
       "id": 1101,
       "nameId": "戦闘用チップ",
       "icon": "tebachip",
@@ -517,6 +579,23 @@
       "efficacyId": "",
       "use": 200,
       "nameId_EN": "Panoptes' Eye Level Up"
+    },
+    {
+      "id": 1501,
+      "nameId": "殺生石",
+      "icon": "sesshoseki",
+      "efficacyId": "【討伐の証】妖狐が姿を変えた魔石。砥石による侵蝕度強化の上限が上がる(+500/Lv)",
+      "use": 110,
+      "nameId_EN": "Killing Stone",
+      "efficacyId_EN": "[Proof of Subjugation] A magical stone transformed by a mystic fox. Increases the maximum limit for Corrosion Level reinforcement via whetstone stones (+500/Lv)"
+    },
+    {
+      "id": 1502,
+      "nameId": "殺生石がレベルアップ",
+      "icon": "sesshoseki",
+      "efficacyId": "",
+      "use": 200,
+      "nameId_EN": "Killing Stone Level Up"
     }
   ]
 }

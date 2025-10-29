@@ -3237,7 +3237,7 @@
       "attackKind": "Ring",
       "set": "",
       "specialized": "LUK",
-      "ability": 961,
+      "ability": 965,
       "nameId_EN": "Tears of the Dragon"
     },
     {
@@ -3405,7 +3405,7 @@
       "attackKind": "Ring",
       "set": "",
       "specialized": "STR",
-      "ability": 68,
+      "ability": 966,
       "nameId_EN": "Oculus Ring"
     },
     {
@@ -3575,6 +3575,27 @@
       "specialized": "STR",
       "ability": 911,
       "nameId_EN": "Black Box"
+    },
+    {
+      "id": 324,
+      "itemType": 3,
+      "nameId": "狐火",
+      "param": 0,
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "lvHp": 40,
+      "lvAtk": 0,
+      "lvDef": 0,
+      "maxLv": 0,
+      "icon": "kitsunebi",
+      "next": 942,
+      "equipKind": "Ring",
+      "attackKind": "Ring",
+      "set": "",
+      "specialized": "HP",
+      "ability": 941,
+      "nameId_EN": "Foxfire"
     }
   ]
 }
