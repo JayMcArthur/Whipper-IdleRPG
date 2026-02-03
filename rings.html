@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rings - Whipper Wiki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand"><img src="assets/images/logo.png" alt=""><span>Whipper Wiki</span></a>
+      <button class="nav-toggle">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="active">Equipment ▾</a>
+          <div class="nav-dropdown-content">
+            <a href="weapons.html">Weapons</a>
+            <a href="armor.html">Armor</a>
+            <a href="rings.html" class="active">Rings</a>
+          </div>
+        </li>
+        <li><a href="monsters.html">Monsters</a></li>
+        <li><a href="bosses.html">Bosses</a></li>
+        <li><a href="dungeons.html">Dungeons</a></li>
+        <li><a href="enchantments.html">Enchantments</a></li>
+        <li><a href="materials.html">Materials</a></li>
+        <li><a href="analysis.html">Analysis</a></li>
+        <li class="lang-picker"><select id="lang-select"><option value="en">English</option><option value="ja">日本語</option></select></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main">
+    <div class="container">
+      <header class="page-header">
+        <h1>💍 Rings</h1>
+        <p>All rings with stats and special abilities (Analysis).</p>
+      </header>
+
+      <div class="table-controls">
+        <div class="search-box"><input type="text" id="search-input" placeholder="Search rings..."></div>
+        <span class="text-muted">Showing <span id="result-count">-</span> rings</span>
+      </div>
+
+      <div class="table-container">
+        <table class="data-table" id="rings-table">
+          <thead>
+            <tr>
+              <th data-sort="nameId_EN">Name</th>
+              <th data-sort="hp" class="stat-col">HP</th>
+              <th data-sort="atk" class="stat-col">STR</th>
+              <th data-sort="def" class="stat-col">VIT</th>
+              <th data-sort="specialized">Specialization</th>
+              <th>Ability (Analysis)</th>
+            </tr>
+          </thead>
+          <tbody><tr><td colspan="6" class="loading">Loading rings...</td></tr></tbody>
+        </table>
+      </div>
+
+      <div class="card mt-3">
+        <h3>About Rings</h3>
+        <p class="mt-1">Rings provide passive stat bonuses and special abilities. The Ability column shows the ring's unique effect, which can significantly impact your build strategy.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="footer-content"><p>Whipper Wiki • Data from version 6.0</p></div></footer>
+  <script src="js/wiki.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', initRingsPage);</script>
+</body>
+</html>

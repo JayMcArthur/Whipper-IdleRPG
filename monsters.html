@@ -1,180 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Whipper - Idle RPG</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <script src="https://kit.fontawesome.com/3fe7bed0c0.js" crossorigin="anonymous"></script>
-    <script src="js/jquery.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('#content').load("sheets/Monsters.html");
-        })
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monsters - Whipper Wiki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body onload="getTable()">
-<div class="w3-top">
-    <div class="w3-bar color-medium w3-card">
-        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
-           href="javascript:void(0)" onclick="toggleMenu()" title="Toggle Navigation Menu"><i
-                class="fa fa-bars"></i></a>
-        <img class="w3-bar-item" height="48" alt='' src='assets/images/logo.png'/>
-        <a href="index.html#" class="w3-bar-item w3-button w3-padding-large text-bold">Whipper</a>
-        <a href="whatsnew.html#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">What's New</a>
-        <div class="w3-dropdown-hover" style="outline: none;">
-            <button class="w3-button w3-padding-large w3-hide-small" style="outline: none;">Wiki</button>
-            <div class="w3-dropdown-content w3-bar-block w3-card-4 color-medium">
-                <a href="items.html" class="w3-bar-item w3-button">Items</a>
-                <a href="enchantments.html" class="w3-bar-item w3-button">Enchantments</a>
-                <a href="monsters.html" class="w3-bar-item w3-button">Monsters</a>
-                <a href="dungeons.html" class="w3-bar-item w3-button">Dungeons</a>
-                <a href="guide.html" class="w3-bar-item w3-button">Guide</a>
-            </div>
-        </div>
-        <div class="w3-dropdown-hover" style="outline: none;">
-            <button class="w3-button w3-padding-large w3-hide-small" style="outline: none;">Tools</button>
-            <div class="w3-dropdown-content w3-bar-block w3-card-4 color-medium">
-                <a href="buildtest.html" class="w3-bar-item w3-button">Build Tester</a>
-                <a href="itemcompare.html" class="w3-bar-item w3-button">Item Comparison</a>
-            </div>
-        </div>
-        <a href="privacypolicy.html#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Privacy Policy</a>
-        <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contact</a>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand"><img src="assets/images/logo.png" alt=""><span>Whipper Wiki</span></a>
+      <button class="nav-toggle">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown"><a href="#">Equipment</a><div class="nav-dropdown-content"><a href="weapons.html">Weapons</a><a href="armor.html">Armor</a><a href="rings.html">Rings</a></div></li>
+        <li><a href="monsters.html" class="active">Monsters</a></li>
+        <li><a href="bosses.html">Bosses</a></li>
+        <li><a href="dungeons.html">Dungeons</a></li>
+        <li><a href="enchantments.html">Enchantments</a></li>
+        <li><a href="materials.html">Materials</a></li>
+        <li><a href="analysis.html">Analysis</a></li>
+        <li class="lang-picker"><select id="lang-select"><option value="en">English</option><option value="ja">Japanese</option></select></li>
+      </ul>
     </div>
-</div>
-
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block color-light w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Whipper</a>
-    <a href="whatsnew.html#" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">What's New</a>
-    <a href="items.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Items</a>
-    <a href="enchantments.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Enchantments</a>
-    <a href="monsters.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Monsters</a>
-    <a href="dungeons.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Dungeons</a>
-    <a href="guide.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Guide</a>
-    <a href="buildtest.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Build Tester</a>
-    <a href="itemcompare.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Item Comparison</a>
-    <a href="privacypolicy.html#" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Privacy Policy</a>
-    <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Contact</a>
-</div>
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
-    <div id="Table" class="w3-container w3-center"></div>
-</div>
+  </nav>
+  <main class="main">
+    <div class="container">
+      <header class="page-header"><h1>Monsters</h1><p>Regular dungeon monsters. Click drops to view items.</p></header>
+      <div class="table-controls">
+        <div class="search-box"><input type="text" id="search-input" placeholder="Search..."></div>
+        <span class="text-muted">Showing <span id="result-count">-</span></span>
+      </div>
+      <div class="table-container">
+        <table class="data-table" id="monsters-table">
+          <thead><tr><th data-sort="id">ID</th><th data-sort="nameId_EN">Name</th><th data-sort="hp">HP</th><th data-sort="atk">ATK</th><th data-sort="def">DEF</th><th data-sort="spd">SPD</th><th data-sort="exp">EXP</th><th>Drop 1</th><th>Drop 2</th></tr></thead>
+          <tbody><tr><td colspan="9" class="loading">Loading...</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"><div class="footer-content"><p>Whipper Wiki v6.0</p></div></footer>
+  <script src="js/wiki.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", initMonstersPage);</script>
 </body>
-<script>
-    let monsters;
-    let equips;
-    let materials;
-
-    function getTable() {
-        let request = new XMLHttpRequest();
-        request.open("GET","json/monsters_EN.json",false);
-        request.send(null);
-        monsters = JSON.parse(request.responseText)["monsters"];
-
-        request = new XMLHttpRequest();
-        request.open("GET","json/equips_EN.json",false);
-        request.send(null);
-        equips = JSON.parse(request.responseText)["equips"];
-
-        request = new XMLHttpRequest();
-        request.open("GET","json/materials_EN.json",false);
-        request.send(null);
-        materials = JSON.parse(request.responseText)["materials"];
-
-        loadTable();
-    }
-    function getMonsterByID(id){
-        return monsters.filter(
-            function(monster){return monster.id === id}
-        )[0]
-    }
-    function getItemByID(id){
-        return equips.filter(
-            function(equip){return equip.id === id}
-        )[0]
-    }
-    function getMaterialmById(id){
-        return materials.filter(
-          function(material){return material.id === id}
-        )[0]
-    }
-    function loadTable() {
-        let col = [
-            "ID", "Name", "HP", "ATK", "DEF", "SPD", "EXP", "Item 1", "Drop %", "Item 2", "Drop %"
-        ]
-
-        let table = document.createElement("table");
-        table.className = "styled-table";
-
-        let tr = table.insertRow(-1);
-        for (let i = 0; i < col.length; i++) {
-            let th = document.createElement("th");
-            th.innerHTML = col[i];
-            tr.appendChild(th);
-        }
-        tr.id = "StickyHeader"
-
-        for (let i = 0; i < monsters.length; i++) {
-
-            let tr = table.insertRow(-1);
-            let tabCell_1 = tr.insertCell(-1);
-            tabCell_1.innerHTML = monsters[i]["id"];
-            let tabCell_2 = tr.insertCell(-1);
-            tabCell_2.innerHTML = monsters[i]["nameId_EN"];
-            let tabCell_3 = tr.insertCell(-1);
-            tabCell_3.innerHTML = monsters[i]["hp"];
-            let tabCell_4 = tr.insertCell(-1);
-            tabCell_4.innerHTML = monsters[i]["atk"];
-            let tabCell_5 = tr.insertCell(-1);
-            tabCell_5.innerHTML = monsters[i]["def"];
-            let tabCell_6 = tr.insertCell(-1);
-            tabCell_6.innerHTML = monsters[i]["spd"];
-            let tabCell_7 = tr.insertCell(-1);
-            tabCell_7.innerHTML = monsters[i]["exp"];
-            let tabCell_8 = tr.insertCell(-1);
-            let tabCell_9 = tr.insertCell(-1);
-            if (monsters[i]["item1"] > 10000) {
-                tabCell_8.innerHTML = getMaterialmById(monsters[i]["item1"] - 10000)["nameId_EN"]
-                tabCell_9.innerHTML = monsters[i]["prob1"]
-            }
-            else if (monsters[i]["item1"] > 0) {
-                tabCell_8.innerHTML = getItemByID(monsters[i]["item1"])["nameId_EN"]
-                tabCell_9.innerHTML = monsters[i]["prob1"]
-            } else {
-                tabCell_8.innerHTML = ''
-                tabCell_9.innerHTML = ''
-            }
-            let tabCell_10 = tr.insertCell(-1);
-            let tabCell_11 = tr.insertCell(-1);
-            if (monsters[i]["item2"] > 0) {
-                tabCell_10.innerHTML = getItemByID(monsters[i]["item2"])["nameId_EN"]
-                tabCell_11.innerHTML = monsters[i]["prob2"]
-            } else {
-                tabCell_10.innerHTML = ''
-                tabCell_11.innerHTML = ''
-            }
-
-        }
-
-        let divContainer = document.getElementById("Table")
-        divContainer.innerHTML = "";
-        divContainer.appendChild(table)
-    }
-</script>
 </html>

@@ -1,176 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Whipper - Idle RPG</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <meta content="Whipper - Idle RPG" property="og:title">
-    <meta content="An idle RPG game for those who are busy" property="og:description">
-    <meta content="Whipper" property="og:site_name">
-    <meta content='https://jaymcarthur.github.io/Whipper-IdleRPG/assets/images/logo.png' property='og:image'>
-    <script src="https://kit.fontawesome.com/3fe7bed0c0.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whipper Wiki - Idle RPG Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-<div class="w3-top">
-    <div class="w3-bar color-medium w3-card">
-        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
-           href="javascript:void(0)" onclick="toggleMenu()" title="Toggle Navigation Menu"><i
-                class="fa fa-bars"></i></a>
-        <img class="w3-bar-item" height="48" alt='' src='assets/images/logo.png'/>
-        <a href="index.html#" class="w3-bar-item w3-button w3-padding-large text-bold">Whipper</a>
-        <a href="whatsnew.html#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">What's New</a>
-        <div class="w3-dropdown-hover" style="outline: none;">
-            <button class="w3-button w3-padding-large w3-hide-small" style="outline: none;">Wiki</button>
-            <div class="w3-dropdown-content w3-bar-block w3-card-4 color-medium">
-                <a href="items.html" class="w3-bar-item w3-button">Items</a>
-                <a href="enchantments.html" class="w3-bar-item w3-button">Enchantments</a>
-                <a href="monsters.html" class="w3-bar-item w3-button">Monsters</a>
-                <a href="dungeons.html" class="w3-bar-item w3-button">Dungeons</a>
-                <a href="guide.html" class="w3-bar-item w3-button">Guide</a>
-            </div>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/images/logo.png" alt="Whipper">
+        <span>Whipper Wiki</span>
+      </a>
+      <button class="nav-toggle">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#">Equipment ▾</a>
+          <div class="nav-dropdown-content">
+            <a href="weapons.html">Weapons</a>
+            <a href="armor.html">Armor</a>
+            <a href="rings.html">Rings</a>
+          </div>
+        </li>
+        <li><a href="monsters.html">Monsters</a></li>
+        <li><a href="bosses.html">Bosses</a></li>
+        <li><a href="dungeons.html">Dungeons</a></li>
+        <li><a href="enchantments.html">Enchantments</a></li>
+        <li><a href="materials.html">Materials</a></li>
+        <li><a href="analysis.html">Analysis</a></li>
+        <li class="lang-picker">
+          <select id="lang-select">
+            <option value="en">English</option>
+            <option value="ja">日本語</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <img src="assets/images/logo.png" alt="Whipper" class="hero-logo">
+      <h1>Whipper Wiki</h1>
+      <p class="hero-subtitle">Your complete guide to the Idle RPG dungeon crawler</p>
+      <div class="hero-links">
+        <a href="https://play.google.com/store/apps/details?id=jp.haappss.whipper" class="btn btn-primary" target="_blank">📱 Google Play</a>
+        <a href="https://apps.apple.com/us/app/whipper-idle-rpg/id1602383020" class="btn btn-primary" target="_blank">🍎 App Store</a>
+        <a href="https://discord.gg/EftbkxxRxe" class="btn btn-secondary" target="_blank">💬 Discord</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="main" style="padding-top: 0;">
+    <div class="container">
+      <section>
+        <h2 class="mb-3">Browse the Wiki</h2>
+        <div class="quick-links">
+          <a href="weapons.html" class="quick-link">
+            <span class="quick-link-icon">⚔️</span>
+            <div class="quick-link-text"><h3>Weapons</h3><p>90 weapons with stats & evolutions</p></div>
+          </a>
+          <a href="armor.html" class="quick-link">
+            <span class="quick-link-icon">🛡️</span>
+            <div class="quick-link-text"><h3>Armor</h3><p>53 armor pieces & shields</p></div>
+          </a>
+          <a href="rings.html" class="quick-link">
+            <span class="quick-link-icon">💍</span>
+            <div class="quick-link-text"><h3>Rings</h3><p>24 rings with abilities</p></div>
+          </a>
+          <a href="monsters.html" class="quick-link">
+            <span class="quick-link-icon">👾</span>
+            <div class="quick-link-text"><h3>Monsters</h3><p>Regular dungeon enemies</p></div>
+          </a>
+          <a href="bosses.html" class="quick-link">
+            <span class="quick-link-icon">💀</span>
+            <div class="quick-link-text"><h3>Bosses</h3><p>Special boss encounters</p></div>
+          </a>
+          <a href="dungeons.html" class="quick-link">
+            <span class="quick-link-icon">🏰</span>
+            <div class="quick-link-text"><h3>Dungeons</h3><p>13 dungeons with floor details</p></div>
+          </a>
+          <a href="enchantments.html" class="quick-link">
+            <span class="quick-link-icon">✨</span>
+            <div class="quick-link-text"><h3>Enchantments</h3><p>All enchantments & values</p></div>
+          </a>
+          <a href="materials.html" class="quick-link">
+            <span class="quick-link-icon">🧪</span>
+            <div class="quick-link-text"><h3>Materials</h3><p>67 crafting materials</p></div>
+          </a>
+          <a href="analysis.html" class="quick-link">
+            <span class="quick-link-icon">📊</span>
+            <div class="quick-link-text"><h3>Analysis</h3><p>Level progression & bonuses</p></div>
+          </a>
         </div>
-        <div class="w3-dropdown-hover" style="outline: none;">
-            <button class="w3-button w3-padding-large w3-hide-small" style="outline: none;">Tools</button>
-            <div class="w3-dropdown-content w3-bar-block w3-card-4 color-medium">
-                <a href="buildtest.html" class="w3-bar-item w3-button">Build Tester</a>
-                <a href="itemcompare.html" class="w3-bar-item w3-button">Item Comparison</a>
-            </div>
+      </section>
+
+      <section class="mt-4">
+        <h2 class="mb-3">Game Database Stats</h2>
+        <div class="stats-grid">
+          <div class="stat-card"><div class="stat-card-value">167</div><div class="stat-card-label">Equipment Items</div></div>
+          <div class="stat-card"><div class="stat-card-value">138</div><div class="stat-card-label">Monsters</div></div>
+          <div class="stat-card"><div class="stat-card-value">13</div><div class="stat-card-label">Dungeons</div></div>
+          <div class="stat-card"><div class="stat-card-value">67</div><div class="stat-card-label">Materials</div></div>
         </div>
-        <a href="privacypolicy.html#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Privacy Policy</a>
-        <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contact</a>
-    </div>
-</div>
+      </section>
 
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block color-light w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Whipper</a>
-    <a href="whatsnew.html#" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">What's New</a>
-    <a href="items.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Items</a>
-    <a href="enchantments.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Enchantments</a>
-    <a href="monsters.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Monsters</a>
-    <a href="dungeons.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Dungeons</a>
-    <a href="guide.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Guide</a>
-    <a href="buildtest.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Build Tester</a>
-    <a href="itemcompare.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Item Comparison</a>
-    <a href="privacypolicy.html#" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Privacy Policy</a>
-    <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Contact</a>
-</div>
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
-    <!-- Whipper Idle RPG Section -->
-    <div class="w3-container w3-content w3-center w3-padding-16" style="max-width:800px">
-        <h1 class="text-color text-bold">Whipper - Idle RPG</h1>
-        <p class="w3-opacity text-color"><i>An idle RPG game for those who are busy</i></p>
-        <p class="w3-justify text-color">Send your adventurer out to explore a dungeon. Wait for them to return with
-            loot.
-            After returning from a dungeon, the adventurer's level will revert to 1! Therefore, to conquer difficult
-            dungeons, it is essential to upgrade your equipment!
-        </p>
-        <p class="w3-justify text-color">
-            If you have any comments or suggestions for this app, contact me though email or Twitter DM.
-            The in-game text is machine translated (DeepL).
-            If you find any errors in the translation, or would like to help translate, please contact me.</p>
-    </div>
-
-    <!-- Screenshots -->
-    <div class="w3-content w3-display-container" id="screenshots">
-        <div class="screenshots w3-display-container w3-center"><img class="top-images" src="assets/images/Screenshot 1.7.0-0.png" alt="Screenshot 1"></div>
-        <div class="screenshots w3-display-container w3-center"><img class="top-images" src="assets/images/Screenshot 1.7.0-1.png" alt="Screenshot 2"></div>
-        <div class="screenshots w3-display-container w3-center"><img class="top-images" src="assets/images/Screenshot 1.7.0-2.png" alt="Screenshot 3"></div>
-        <div class="screenshots w3-display-container w3-center"><img class="top-images" src="assets/images/Screenshot 1.7.0-3.png" alt="Screenshot 4"></div>
-
-        <button class="w3-button w3-dark-gray w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-dark-gray w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-    </div>
-
-    <!-- Download Section -->
-    <div class="w3-container w3-content w3-center w3-padding-32" style="max-width:800px" id="download">
-        <h2 class="text-color w3-wide w3-center">DOWNLOAD</h2>
-        <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-            <div class="w3-half w3-margin-bottom">
-                <a href='https://play.google.com/store/apps/details?id=jp.haappss.whipper'><img width="60%" alt='Get it on Google Play' src='assets/images/googleplay.png'/></a>
-            </div>
-            <div class="w3-half w3-margin-bottom">
-                <a href='https://apps.apple.com/us/app/whipper-idle-rpg/id1602383020'><img width="60%" alt='Get it on the App Store' src='assets/images/appstore.png'/></a>
-            </div>
+      <section class="mt-4">
+        <div class="card">
+          <h2>About Whipper</h2>
+          <p class="mt-2"><strong>Whipper - Idle RPG</strong> is an idle dungeon crawler game for mobile devices. Send your adventurer into dungeons to battle monsters and collect loot. After each expedition, your adventurer's level resets to 1, so upgrading your equipment is key to conquering harder dungeons!</p>
+          <p class="mt-2">This wiki contains data extracted from game version 6.0.</p>
         </div>
+      </section>
     </div>
+  </main>
 
-    <!-- Contact Section -->
-    <div class="w3-container w3-content w3-padding-32" style="max-width:800px" id="contact">
-        <h2 class="text-color w3-wide w3-center">CONTACT</h2>
-        <p class="w3-opacity w3-center text-color"><i>Join the community on Discord! If you encountered any issue, do
-            not hesitate to contact me by email.</i></p>
-        <div class="w3-container w3-center w3-opacity w3-xxxlarge">
-            <a href="https://discord.gg/EftbkxxRxe" style="margin-right: 30px"><i class="fab fa-discord w3-hover-opacity icon-color"></i></a>
-            <a href="https://twitter.com/HAappss" style="margin-right: 30px"><i class="fab fa-twitter w3-hover-opacity icon-color"></i></a>
-            <a href="mailto:haappss@gmail.com"><i class="fa fa-envelope w3-hover-opacity icon-color"></i></a>
-        </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="https://discord.gg/EftbkxxRxe" title="Discord">💬</a>
+        <a href="https://twitter.com/HAappss" title="Twitter">🐦</a>
+        <a href="mailto:haappss@gmail.com" title="Email">✉️</a>
+      </div>
+      <p>Whipper Wiki • Game by HAappss • Data from version 6.0</p>
     </div>
+  </footer>
 
-</div>
-
-<!-- Footer -->
-<footer class="w3-container w3-center w3-opacity color-light w3-medium">
-    <p class="w3-opacity w3-center" style="margin:4px">© 2022 HAappss & Jay McArthur</p>
-</footer>
-
-<script src='js/script.js'></script>
-<script>
-    // Automatic Slideshow - change image every 6 seconds
-    let carouselIndex = 0;
-    carousel();
-
-    function carousel() {
-        let i;
-        let x = document.getElementsByClassName("screenshots");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        carouselIndex++;
-        if (carouselIndex > x.length) {
-            carouselIndex = 1
-        }
-        x[carouselIndex - 1].style.display = "block";
-        setTimeout(carousel, 6000);
-    }
-
-    let slideIndex = 1;
-    showDivs(slideIndex);
-
-    function plusDivs(n) {
-        showDivs(slideIndex += n);
-    }
-
-    function showDivs(n) {
-        let i;
-        let x = document.getElementsByClassName("screenshots");
-        if (n > x.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = x.length
-        }
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        x[slideIndex - 1].style.display = "block";
-    }
-</script>
-
+  <script src="js/wiki.js"></script>
 </body>
 </html>
