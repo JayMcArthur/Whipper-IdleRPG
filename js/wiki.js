@@ -1,18 +1,33 @@
-/* Whipper Wiki - Core JavaScript v2 */
+/* Whipper Wiki - Core JavaScript v3 */
 
 // Global state
 const WikiData = {
   equips: [], monsters: [], dungeons: [], customs: [], materials: [],
+  translations: {},
   loaded: false
+};
+
+// Language column mapping: str,en_US,ja_JP,zh_CN,ko,zh_TW,es,th,pt,de,fr
+const LANG_COLUMNS = {
+  'en': 1,    // en_US
+  'ja': 2,    // ja_JP  
+  'zh_CN': 3, // zh_CN (Simplified)
+  'ko': 4,    // ko
+  'zh_TW': 5, // zh_TW (Traditional)
+  'es': 6,    // es
+  'th': 7,    // th
+  'pt': 8,    // pt
+  'de': 9,    // de
+  'fr': 10    // fr
 };
 
 let currentLang = localStorage.getItem('wiki-lang') || 'en';
 
 // Boss monster IDs
-const BOSS_IDS = [100, 108, 109, 122, 123, 129, 133, 134, 200, 201, 202];
-const JUNKYARD_BOSS_IDS = [200, 201, 202];
+const BOSS_IDS = [129, 133, 134, 200, 201, 202, 203];
+const JUNKYARD_BOSS_IDS = [200, 201, 202, 203];
 
-// Analysis data
+// Analysis data (level progression)
 const ANALYSIS_DATA = [
   { level: 1, corrosion: 0, cost: 1, total: 1, weapon: 'See Upgrade Limit', armor: 'See Upgrade Limit', ring: 'See Upgrade Limit' },
   { level: 2, corrosion: 0, cost: 2, total: 3, weapon: 'See Base Stats', armor: 'See Base Stats', ring: 'See Base Stats' },
@@ -36,57 +51,67 @@ const ANALYSIS_DATA = [
   { level: 20, corrosion: 2000, cost: 128, total: 1231, weapon: '+19000 Upgrade Limit', armor: '+19000 Upgrade Limit', ring: 'Better Enchants' }
 ];
 
-// Enchantment definitions with effects
-const ENCHANT_DEFS = [
-  { name: 'Endurance', effect: 'Increases the HP base value by {value}.', hasLevels: true },
-  { name: 'Strength', effect: 'Increases the STR base value by {value}.', hasLevels: true },
-  { name: 'Sturdy', effect: 'Increases the VIT base value by {value}.', hasLevels: true },
-  { name: 'Agility', effect: 'Increases the SPD base value by {value}.', hasLevels: true },
-  { name: 'Lucky', effect: 'Increases the LUK base value by {value}.', hasLevels: true },
-  { name: 'Strength Training', effect: 'Increases the STR growth value by {value}.', hasLevels: true },
-  { name: 'Defense Training', effect: 'Increases the VIT growth value by {value}.', hasLevels: true },
-  { name: 'Endurance Training', effect: 'Increases the HP growth value by {value}.', hasLevels: true },
-  { name: 'First Strike', effect: 'Can always attack first in battle.', hasLevels: false },
-  { name: 'Double Strike', effect: 'Chance of consecutive attacks increases by {value}%', hasLevels: true },
-  { name: 'One Strike', effect: 'Critical hit chance increases by {value}%', hasLevels: true },
-  { name: 'Three Paths', effect: '{value}% chance for critical damage to be tripled', hasLevels: true },
-  { name: 'Four Leaves', effect: '{value}% chance for enemy drops to double', hasLevels: true },
-  { name: 'Five Lights', effect: '{value}% chance to double experience points', hasLevels: true },
-  { name: 'Sixth Sense', effect: '{value}% chance to dodge an attack', hasLevels: true },
-  { name: 'Seven Blessings', effect: 'The probability of probability-based abilities is doubled.', hasLevels: false },
-  { name: 'Mastery of Slashing', effect: 'Equip a slashing weapon', hasLevels: true },
-  { name: 'Mastery of Bludgeoning', effect: 'Equip a bludgeoning weapon', hasLevels: true },
-  { name: 'Mastery of Piercing', effect: 'Equip a piercing weapon', hasLevels: true },
-  { name: 'Mastery of Projectiles', effect: 'Equip a projectile weapon', hasLevels: true },
-  { name: 'Poison', effect: 'Inflict poison with each attack', hasLevels: false },
-  { name: 'Solitude', effect: 'Increase all abilities when not equipping a set', hasLevels: true },
-  { name: 'Unyielding', effect: 'Stay at 1 HP once during an adventure and deliver a critical hit on the next attack', hasLevels: false },
-  { name: 'Attack Power Boost', effect: 'Weapon attack power increased by {value}%', hasLevels: true },
-  { name: 'Defense Power Boost', effect: 'Shield defense power increased by {value}%', hasLevels: true },
-  { name: 'Upgrade Boost', effect: 'Upgrade increase by {value} times', hasLevels: true },
-  { name: 'Exceed upgrade limit', effect: 'Upgrade limit increased by {value}', hasLevels: true },
-  { name: 'Corrosion Level Boost', effect: 'N/A', hasLevels: false },
-  { name: 'HP Boost', effect: 'HP increased by {value}%', hasLevels: true },
-  { name: 'STR Boost', effect: 'STR increased by {value}%', hasLevels: true },
-  { name: 'VIT Boost', effect: 'VIT increased by {value}%', hasLevels: true },
-  { name: 'SPD Boost', effect: 'SPD increased by {value}%', hasLevels: true },
-  { name: 'LUK Boost', effect: 'LUK increased by {value}%', hasLevels: true },
-  { name: 'All Stats Boost', effect: 'All stats increased by {value}%', hasLevels: true },
-  { name: 'Ability Level Boost', effect: 'This item is more likely to gain high-level abilities', hasLevels: false },
-  { name: 'Set Boost', effect: 'Increases the effect of set equipment', hasLevels: true }
-];
+// Parse CSV text into rows
+function parseCSV(text) {
+  const lines = text.split('\n');
+  const result = {};
+  
+  for (let i = 1; i < lines.length; i++) { // Skip header
+    const line = lines[i].trim();
+    if (!line) continue;
+    
+    // Handle CSV with potential commas in quoted fields
+    const fields = [];
+    let current = '';
+    let inQuotes = false;
+    
+    for (let j = 0; j < line.length; j++) {
+      const char = line[j];
+      if (char === '"') {
+        inQuotes = !inQuotes;
+      } else if (char === ',' && !inQuotes) {
+        fields.push(current.trim());
+        current = '';
+      } else {
+        current += char;
+      }
+    }
+    fields.push(current.trim());
+    
+    if (fields.length > 1 && fields[0]) {
+      // Key is the Japanese string (column 0)
+      const key = fields[0].replace(/"/g, '').replace(/'/g, '').trim();
+      result[key] = fields;
+    }
+  }
+  
+  return result;
+}
 
-// Load game data
+// Translate a string using langs.csv
+function translate(key) {
+  if (!key || key === '') return '';
+  
+  const row = WikiData.translations[key];
+  if (row) {
+    const colIndex = LANG_COLUMNS[currentLang] || 1;
+    return row[colIndex] || row[1] || key; // Fallback to English, then original
+  }
+  return key; // Return original if not found
+}
+
+// Load all game data
 async function loadGameData() {
   if (WikiData.loaded) return WikiData;
   
   try {
-    const [equipsRes, monstersRes, dungeonsRes, customsRes, materialsRes] = await Promise.all([
+    const [equipsRes, monstersRes, dungeonsRes, customsRes, materialsRes, langsRes] = await Promise.all([
       fetch('data/equips.json'),
       fetch('data/monsters.json'),
       fetch('data/dungeons.json'),
       fetch('data/customs.json'),
-      fetch('data/materials.json')
+      fetch('data/materials.json'),
+      fetch('data/langs.csv')
     ]);
     
     WikiData.equips = (await equipsRes.json()).equips || [];
@@ -94,7 +119,17 @@ async function loadGameData() {
     WikiData.dungeons = (await dungeonsRes.json()).dungeons || [];
     WikiData.customs = (await customsRes.json()).customs || [];
     WikiData.materials = (await materialsRes.json()).materials || [];
+    WikiData.translations = parseCSV(await langsRes.text());
     WikiData.loaded = true;
+    
+    console.log('Game data loaded:', {
+      equips: WikiData.equips.length,
+      monsters: WikiData.monsters.length,
+      dungeons: WikiData.dungeons.length,
+      customs: WikiData.customs.length,
+      materials: WikiData.materials.length,
+      translations: Object.keys(WikiData.translations).length
+    });
     
     return WikiData;
   } catch (error) {
@@ -108,9 +143,28 @@ function getEquipById(id) { return WikiData.equips.find(e => e.id === id); }
 function getMonsterById(id) { return WikiData.monsters.find(m => m.id === id); }
 function getCustomById(id) { return WikiData.customs.find(c => c.id === id); }
 
+// Get translated name for any item
 function getName(item) {
   if (!item) return '-';
-  return currentLang === 'ja' ? (item.nameId || item.nameId_EN) : (item.nameId_EN || item.nameId);
+  return translate(item.nameId) || item.nameId || '-';
+}
+
+// Get translated set name
+function getSetName(item) {
+  if (!item || !item.set) return '-';
+  return translate(item.set) || item.set;
+}
+
+// Get translated effect/summary
+function getSummary(item) {
+  if (!item || !item.summaryId) return '';
+  return translate(item.summaryId) || item.summaryId;
+}
+
+// Get translated efficacy (for materials)
+function getEfficacy(item) {
+  if (!item || !item.efficacyId) return '-';
+  return translate(item.efficacyId) || item.efficacyId;
 }
 
 function formatNumber(num) {
@@ -131,7 +185,7 @@ function formatStat(base, growth) {
   }
   
   if (growth && growth > 0) {
-    html += `<br><span class="stat-growth">↑${growth}</span>`;
+    html += `<br><span class="stat-growth">+${growth}</span>`;
   }
   return html;
 }
@@ -140,7 +194,7 @@ function isBoss(monsterId) {
   return BOSS_IDS.includes(monsterId);
 }
 
-// Navigation to item/monster pages
+// Navigation functions
 function goToItem(itemId, itemType) {
   let page = 'weapons.html';
   if (itemType === 2) page = 'armor.html';
@@ -156,13 +210,11 @@ function goToMonster(monsterId) {
   }
 }
 
-// Get URL parameter
 function getUrlParam(param) {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(param);
 }
 
-// Highlight item by ID from URL
 function highlightItemFromUrl(tableId) {
   const id = getUrlParam('id');
   if (!id) return;
@@ -209,9 +261,12 @@ class DataTable {
   applyFilters() {
     this.filteredData = this.data.filter(item => {
       if (this.searchTerm) {
-        const searchFields = this.options.searchFields || ['nameId_EN', 'nameId'];
+        const searchFields = this.options.searchFields || ['nameId'];
         const matches = searchFields.some(field => {
-          const value = item[field];
+          let value = item[field];
+          // Also search translated value
+          if (field === 'nameId') value = getName(item);
+          else if (field === 'set') value = getSetName(item);
           return value && value.toString().toLowerCase().includes(this.searchTerm);
         });
         if (!matches) return false;
@@ -237,6 +292,12 @@ class DataTable {
     this.filteredData.sort((a, b) => {
       let aVal = a[column] ?? '';
       let bVal = b[column] ?? '';
+      
+      // For nameId, sort by translated value
+      if (column === 'nameId') {
+        aVal = getName(a);
+        bVal = getName(b);
+      }
       
       if (typeof aVal === 'number' && typeof bVal === 'number') {
         return this.sortDirection === 'asc' ? aVal - bVal : bVal - aVal;
@@ -315,7 +376,7 @@ async function initWeaponsPage() {
   const weapons = data.equips.filter(e => e.itemType === 1);
   
   const table = new DataTable('weapons-table', {
-    searchFields: ['nameId_EN', 'nameId', 'set_EN', 'equipKind', 'attackKind'],
+    searchFields: ['nameId', 'set', 'equipKind', 'attackKind'],
     renderRow: (item) => {
       const nextItem = item.next ? getEquipById(item.next) : null;
       return `
@@ -328,7 +389,7 @@ async function initWeaponsPage() {
           <td class="stat-col">${item.maxLv}</td>
           <td><span class="badge">${item.equipKind || '-'}</span></td>
           <td>${item.attackKind || '-'}</td>
-          <td>${item.set_EN || '-'}</td>
+          <td>${getSetName(item)}</td>
           <td>${nextItem ? `<span class="item-link" onclick="goToItem(${nextItem.id}, ${nextItem.itemType})">${getName(nextItem)}</span>` : '-'}</td>
         </tr>
       `;
@@ -363,7 +424,7 @@ async function initArmorPage() {
   const armor = data.equips.filter(e => e.itemType === 2);
   
   const table = new DataTable('armor-table', {
-    searchFields: ['nameId_EN', 'nameId', 'equipKind', 'specialized'],
+    searchFields: ['nameId', 'equipKind', 'specialized'],
     renderRow: (item) => {
       const nextItem = item.next ? getEquipById(item.next) : null;
       return `
@@ -402,11 +463,11 @@ async function initRingsPage() {
   const rings = data.equips.filter(e => e.itemType === 3);
   
   const table = new DataTable('rings-table', {
-    searchFields: ['nameId_EN', 'nameId', 'specialized'],
+    searchFields: ['nameId', 'specialized'],
     renderRow: (item) => {
       const ability = item.ability ? getCustomById(item.ability) : null;
-      const abilityText = ability ? `${getName(ability)}` : '-';
-      const abilitySummary = ability ? (ability.summaryId_EN || ability.summaryId || '') : '';
+      const abilityName = ability ? getName(ability) : '-';
+      const abilitySummary = ability ? getSummary(ability) : '';
       
       return `
         <tr data-id="${item.id}">
@@ -415,7 +476,7 @@ async function initRingsPage() {
           <td class="stat-col">${formatStat(item.atk, item.lvAtk)}</td>
           <td class="stat-col">${formatStat(item.def, item.lvDef)}</td>
           <td>${item.specialized || '-'}</td>
-          <td><span class="text-gold">${abilityText}</span>${abilitySummary ? `<br><span class="text-muted" style="font-size:0.75em">${abilitySummary}</span>` : ''}</td>
+          <td><span class="text-gold">${abilityName}</span>${abilitySummary ? `<br><span class="text-muted" style="font-size:0.75em">${abilitySummary}</span>` : ''}</td>
         </tr>
       `;
     }
@@ -430,10 +491,10 @@ async function initRingsPage() {
 // Monsters Page (non-bosses)
 async function initMonstersPage() {
   const data = await loadGameData();
-  const monsters = data.monsters.filter(m => !BOSS_IDS.includes(m.id));
+  const monsters = data.monsters;
   
   const table = new DataTable('monsters-table', {
-    searchFields: ['nameId_EN', 'nameId'],
+    searchFields: ['nameId'],
     renderRow: (monster) => {
       const drop1 = monster.item1 ? getEquipById(monster.item1) : null;
       const drop2 = monster.item2 ? getEquipById(monster.item2) : null;
@@ -467,7 +528,7 @@ async function initBossesPage() {
   if (!container) return;
   
   const bosses = data.monsters.filter(m => BOSS_IDS.includes(m.id));
-  const bossImages = { 200: 'adam_256', 201: 'pano_256', 202: 'fox_256' };
+  const bossImages = { 200: 'adam_256', 201: 'pano_256', 202: 'fox_256', 203: 'orochi_256' };
   
   container.innerHTML = bosses.map(boss => {
     const drop1 = boss.item1 ? getEquipById(boss.item1) : null;
@@ -519,9 +580,9 @@ async function initDungeonsPage() {
           <div class="dungeon-title">
             <h3>${getName(dungeon)}</h3>
             <div class="dungeon-meta">
-              <span>📊 ${dungeon.maxFloor} Floors</span>
-              <span>⏱️ ${dungeon.minutesPerFloor} min/floor</span>
-              <span>⚔️ Mod Lv ${dungeon.modLv}</span>
+              <span>${dungeon.maxFloor} Floors</span>
+              <span>${dungeon.minutesPerFloor} min/floor</span>
+              <span>Mod Lv ${dungeon.modLv}</span>
             </div>
           </div>
         </div>
@@ -531,57 +592,59 @@ async function initDungeonsPage() {
   }).join('');
 }
 
-// Enchantments Page
+// Enchantments Page - Built from customs.json
 async function initEnchantmentsPage() {
   const data = await loadGameData();
   const container = document.getElementById('enchantments-container');
   if (!container) return;
   
-  // Group by name
+  // Group customs by nameId
   const enchantGroups = {};
   data.customs.forEach(c => {
-    const name = getName(c);
-    if (!enchantGroups[name]) enchantGroups[name] = [];
-    enchantGroups[name].push({ level: c.dispLv, value: c.value, modLv: c.modLv });
+    const key = c.nameId;
+    if (!enchantGroups[key]) {
+      enchantGroups[key] = {
+        nameId: c.nameId,
+        summaryId: c.summaryId,
+        levels: {}
+      };
+    }
+    enchantGroups[key].levels[c.dispLv] = c.value;
   });
   
-  // Sort by level
-  Object.values(enchantGroups).forEach(arr => arr.sort((a, b) => a.level - b.level));
+  // Build levels array 1-100
+  const levelCols = [];
+  for (let i = 1; i <= 100; i++) levelCols.push(i);
   
-  // Find matching definition
-  const getEffect = (name) => {
-    const def = ENCHANT_DEFS.find(d => d.name === name);
-    return def ? def.effect : '';
-  };
-  
-  // Build table with levels 1-18
-  const levels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
-  
+  // Build table
   let html = `
-    <div class="table-container">
+    <div class="table-container" style="max-height: 80vh;">
       <table class="enchant-table">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Effect</th>
-            ${levels.map(l => `<th>Lv ${l}</th>`).join('')}
+            <th style="position: sticky; left: 0; z-index: 20; background: var(--accent-teal);">Name</th>
+            <th style="min-width: 200px;">Effect</th>
+            ${levelCols.map(l => `<th>Lv${l}</th>`).join('')}
           </tr>
         </thead>
         <tbody>
   `;
   
-  const sortedNames = Object.keys(enchantGroups).sort();
+  // Sort by translated name
+  const sortedGroups = Object.values(enchantGroups).sort((a, b) => {
+    return getName({nameId: a.nameId}).localeCompare(getName({nameId: b.nameId}));
+  });
   
-  sortedNames.forEach(name => {
-    const group = enchantGroups[name];
-    const effect = getEffect(name);
+  sortedGroups.forEach(group => {
+    const name = translate(group.nameId) || group.nameId;
+    const effect = translate(group.summaryId) || group.summaryId || '';
     
     html += `<tr>
-      <td class="enchant-name">${name}</td>
+      <td class="enchant-name" style="position: sticky; left: 0; background: var(--bg-card); z-index: 5;">${name}</td>
       <td class="enchant-effect">${effect}</td>
-      ${levels.map(l => {
-        const lvData = group.find(g => g.level === l);
-        return `<td>${lvData ? formatNumber(lvData.value) : '-'}</td>`;
+      ${levelCols.map(l => {
+        const val = group.levels[l];
+        return `<td>${val !== undefined ? formatNumber(val) : '0'}</td>`;
       }).join('')}
     </tr>`;
   });
@@ -595,11 +658,11 @@ async function initMaterialsPage() {
   const data = await loadGameData();
   
   const table = new DataTable('materials-table', {
-    searchFields: ['nameId_EN', 'nameId', 'efficacyId_EN'],
+    searchFields: ['nameId', 'efficacyId'],
     renderRow: (material) => `
       <tr>
         <td><div class="item-cell"><img src="assets/icons/${material.icon}.png" class="item-icon" alt=""><span class="item-name">${getName(material)}</span></div></td>
-        <td>${material.efficacyId_EN || material.efficacyId || '-'}</td>
+        <td>${getEfficacy(material)}</td>
       </tr>
     `
   });
