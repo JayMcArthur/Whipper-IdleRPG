@@ -1801,6 +1801,26 @@
       "ability": 0
     },
     {
+      "id": 191,
+      "itemType": 1,
+      "nameId": "むらくも",
+      "param": 888,
+      "hp": 1000,
+      "atk": 200,
+      "def": 0,
+      "lvHp": 100,
+      "lvAtk": 0,
+      "lvDef": 0,
+      "maxLv": 1000,
+      "icon": "we70",
+      "next": 0,
+      "equipKind": "Sword",
+      "attackKind": "Piercing",
+      "set": "イージス",
+      "specialized": "None",
+      "ability": 0
+    },
+    {
       "id": 201,
       "itemType": 2,
       "nameId": "なべのふた",
@@ -2933,12 +2953,12 @@
       "lvDef": 0,
       "maxLv": 0,
       "icon": "ri02",
-      "next": 806,
+      "next": 901,
       "equipKind": "Ring",
       "attackKind": "Ring",
       "set": "",
       "specialized": "SPD",
-      "ability": 2403
+      "ability": 901
     },
     {
       "id": 305,
@@ -3253,12 +3273,12 @@
       "lvDef": 2,
       "maxLv": 0,
       "icon": "ri15",
-      "next": 901,
+      "next": 911,
       "equipKind": "Ring",
       "attackKind": "Ring",
       "set": "",
-      "specialized": "VIT",
-      "ability": 901
+      "specialized": "STR",
+      "ability": 911
     },
     {
       "id": 321,

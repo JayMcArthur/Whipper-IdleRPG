@@ -2229,7 +2229,7 @@
       "summaryId": "HPの基礎値がアップ",
       "modLv": 690,
       "dispLv": 190,
-      "value": 96490,
+      "value": 96500,
       "nextModId": 10191
     },
     {
@@ -2238,7 +2238,7 @@
       "summaryId": "HPの基礎値がアップ",
       "modLv": 694,
       "dispLv": 191,
-      "value": 96810,
+      "value": 97500,
       "nextModId": 10192
     },
     {
@@ -2247,7 +2247,7 @@
       "summaryId": "HPの基礎値がアップ",
       "modLv": 698,
       "dispLv": 192,
-      "value": 97130,
+      "value": 99000,
       "nextModId": 10193
     },
     {
@@ -2256,7 +2256,7 @@
       "summaryId": "HPの基礎値がアップ",
       "modLv": 702,
       "dispLv": 193,
-      "value": 97450,
+      "value": 101000,
       "nextModId": 10194
     },
     {
@@ -2265,7 +2265,7 @@
       "summaryId": "HPの基礎値がアップ",
       "modLv": 706,
       "dispLv": 194,
-      "value": 97770,
+      "value": 105000,
       "nextModId": 10195
     },
     {
@@ -2274,7 +2274,7 @@
       "summaryId": "HPの基礎値がアップ",
       "modLv": 710,
       "dispLv": 195,
-      "value": 98090,
+      "value": 112000,
       "nextModId": 10196
     },
     {
@@ -2283,7 +2283,7 @@
       "summaryId": "HPの基礎値がアップ",
       "modLv": 714,
       "dispLv": 196,
-      "value": 98410,
+      "value": 122000,
       "nextModId": 10197
     },
     {
@@ -2292,7 +2292,7 @@
       "summaryId": "HPの基礎値がアップ",
       "modLv": 718,
       "dispLv": 197,
-      "value": 98730,
+      "value": 140000,
       "nextModId": 10198
     },
     {
@@ -2301,7 +2301,7 @@
       "summaryId": "HPの基礎値がアップ",
       "modLv": 722,
       "dispLv": 198,
-      "value": 99050,
+      "value": 170000,
       "nextModId": 10199
     },
     {
@@ -2310,7 +2310,7 @@
       "summaryId": "HPの基礎値がアップ",
       "modLv": 726,
       "dispLv": 199,
-      "value": 99370,
+      "value": 220000,
       "nextModId": 10200
     },
     {
@@ -2319,7 +2319,7 @@
       "summaryId": "HPの基礎値がアップ",
       "modLv": 730,
       "dispLv": 200,
-      "value": 100000,
+      "value": 300000,
       "nextModId": 10201
     },
     {
@@ -3939,7 +3939,7 @@
       "summaryId": "STRの基礎値がアップ",
       "modLv": 690,
       "dispLv": 190,
-      "value": 96490,
+      "value": 96500,
       "nextModId": 20191
     },
     {
@@ -3948,7 +3948,7 @@
       "summaryId": "STRの基礎値がアップ",
       "modLv": 694,
       "dispLv": 191,
-      "value": 96810,
+      "value": 97500,
       "nextModId": 20192
     },
     {
@@ -3957,7 +3957,7 @@
       "summaryId": "STRの基礎値がアップ",
       "modLv": 698,
       "dispLv": 192,
-      "value": 97130,
+      "value": 99000,
       "nextModId": 20193
     },
     {
@@ -3966,7 +3966,7 @@
       "summaryId": "STRの基礎値がアップ",
       "modLv": 702,
       "dispLv": 193,
-      "value": 97450,
+      "value": 101000,
       "nextModId": 20194
     },
     {
@@ -3975,7 +3975,7 @@
       "summaryId": "STRの基礎値がアップ",
       "modLv": 706,
       "dispLv": 194,
-      "value": 97770,
+      "value": 105000,
       "nextModId": 20195
     },
     {
@@ -3984,7 +3984,7 @@
       "summaryId": "STRの基礎値がアップ",
       "modLv": 710,
       "dispLv": 195,
-      "value": 98090,
+      "value": 112000,
       "nextModId": 20196
     },
     {
@@ -3993,7 +3993,7 @@
       "summaryId": "STRの基礎値がアップ",
       "modLv": 714,
       "dispLv": 196,
-      "value": 98410,
+      "value": 122000,
       "nextModId": 20197
     },
     {
@@ -4002,7 +4002,7 @@
       "summaryId": "STRの基礎値がアップ",
       "modLv": 718,
       "dispLv": 197,
-      "value": 98730,
+      "value": 140000,
       "nextModId": 20198
     },
     {
@@ -4011,7 +4011,7 @@
       "summaryId": "STRの基礎値がアップ",
       "modLv": 722,
       "dispLv": 198,
-      "value": 99050,
+      "value": 170000,
       "nextModId": 20199
     },
     {
@@ -4020,7 +4020,7 @@
       "summaryId": "STRの基礎値がアップ",
       "modLv": 726,
       "dispLv": 199,
-      "value": 99370,
+      "value": 220000,
       "nextModId": 20200
     },
     {
@@ -4029,7 +4029,7 @@
       "summaryId": "STRの基礎値がアップ",
       "modLv": 730,
       "dispLv": 200,
-      "value": 100000,
+      "value": 300000,
       "nextModId": 20201
     },
     {
@@ -5649,7 +5649,7 @@
       "summaryId": "VITの基礎値がアップ",
       "modLv": 690,
       "dispLv": 190,
-      "value": 96490,
+      "value": 96500,
       "nextModId": 30191
     },
     {
@@ -5658,7 +5658,7 @@
       "summaryId": "VITの基礎値がアップ",
       "modLv": 694,
       "dispLv": 191,
-      "value": 96810,
+      "value": 97500,
       "nextModId": 30192
     },
     {
@@ -5667,7 +5667,7 @@
       "summaryId": "VITの基礎値がアップ",
       "modLv": 698,
       "dispLv": 192,
-      "value": 97130,
+      "value": 99000,
       "nextModId": 30193
     },
     {
@@ -5676,7 +5676,7 @@
       "summaryId": "VITの基礎値がアップ",
       "modLv": 702,
       "dispLv": 193,
-      "value": 97450,
+      "value": 101000,
       "nextModId": 30194
     },
     {
@@ -5685,7 +5685,7 @@
       "summaryId": "VITの基礎値がアップ",
       "modLv": 706,
       "dispLv": 194,
-      "value": 97770,
+      "value": 105000,
       "nextModId": 30195
     },
     {
@@ -5694,7 +5694,7 @@
       "summaryId": "VITの基礎値がアップ",
       "modLv": 710,
       "dispLv": 195,
-      "value": 98090,
+      "value": 112000,
       "nextModId": 30196
     },
     {
@@ -5703,7 +5703,7 @@
       "summaryId": "VITの基礎値がアップ",
       "modLv": 714,
       "dispLv": 196,
-      "value": 98410,
+      "value": 122000,
       "nextModId": 30197
     },
     {
@@ -5712,7 +5712,7 @@
       "summaryId": "VITの基礎値がアップ",
       "modLv": 718,
       "dispLv": 197,
-      "value": 98730,
+      "value": 140000,
       "nextModId": 30198
     },
     {
@@ -5721,7 +5721,7 @@
       "summaryId": "VITの基礎値がアップ",
       "modLv": 722,
       "dispLv": 198,
-      "value": 99050,
+      "value": 170000,
       "nextModId": 30199
     },
     {
@@ -5730,7 +5730,7 @@
       "summaryId": "VITの基礎値がアップ",
       "modLv": 726,
       "dispLv": 199,
-      "value": 99370,
+      "value": 220000,
       "nextModId": 30200
     },
     {
@@ -5739,7 +5739,7 @@
       "summaryId": "VITの基礎値がアップ",
       "modLv": 730,
       "dispLv": 200,
-      "value": 100000,
+      "value": 300000,
       "nextModId": 30201
     },
     {
@@ -7386,7 +7386,7 @@
       "summaryId": "SPDの基礎値がアップ",
       "modLv": 702,
       "dispLv": 191,
-      "value": 18970,
+      "value": 19070,
       "nextModId": 40192
     },
     {
@@ -7395,7 +7395,7 @@
       "summaryId": "SPDの基礎値がアップ",
       "modLv": 706,
       "dispLv": 192,
-      "value": 19070,
+      "value": 19400,
       "nextModId": 40193
     },
     {
@@ -7404,7 +7404,7 @@
       "summaryId": "SPDの基礎値がアップ",
       "modLv": 710,
       "dispLv": 193,
-      "value": 19170,
+      "value": 20000,
       "nextModId": 40194
     },
     {
@@ -7413,7 +7413,7 @@
       "summaryId": "SPDの基礎値がアップ",
       "modLv": 714,
       "dispLv": 194,
-      "value": 19270,
+      "value": 20800,
       "nextModId": 40195
     },
     {
@@ -7422,7 +7422,7 @@
       "summaryId": "SPDの基礎値がアップ",
       "modLv": 718,
       "dispLv": 195,
-      "value": 19370,
+      "value": 22000,
       "nextModId": 40196
     },
     {
@@ -7431,7 +7431,7 @@
       "summaryId": "SPDの基礎値がアップ",
       "modLv": 722,
       "dispLv": 196,
-      "value": 19470,
+      "value": 24000,
       "nextModId": 40197
     },
     {
@@ -7440,7 +7440,7 @@
       "summaryId": "SPDの基礎値がアップ",
       "modLv": 726,
       "dispLv": 197,
-      "value": 19570,
+      "value": 27500,
       "nextModId": 40198
     },
     {
@@ -7449,7 +7449,7 @@
       "summaryId": "SPDの基礎値がアップ",
       "modLv": 730,
       "dispLv": 198,
-      "value": 19670,
+      "value": 32500,
       "nextModId": 40199
     },
     {
@@ -7458,7 +7458,7 @@
       "summaryId": "SPDの基礎値がアップ",
       "modLv": 734,
       "dispLv": 199,
-      "value": 19770,
+      "value": 40000,
       "nextModId": 40200
     },
     {
@@ -7467,7 +7467,7 @@
       "summaryId": "SPDの基礎値がアップ",
       "modLv": 738,
       "dispLv": 200,
-      "value": 20000,
+      "value": 50000,
       "nextModId": 40201
     },
     {
@@ -9105,7 +9105,7 @@
       "summaryId": "HPの成長力がアップ",
       "modLv": 701,
       "dispLv": 190,
-      "value": 4690,
+      "value": 4700,
       "nextModId": 50191
     },
     {
@@ -9114,7 +9114,7 @@
       "summaryId": "HPの成長力がアップ",
       "modLv": 705,
       "dispLv": 191,
-      "value": 4715,
+      "value": 4780,
       "nextModId": 50192
     },
     {
@@ -9123,7 +9123,7 @@
       "summaryId": "HPの成長力がアップ",
       "modLv": 709,
       "dispLv": 192,
-      "value": 4740,
+      "value": 4900,
       "nextModId": 50193
     },
     {
@@ -9132,7 +9132,7 @@
       "summaryId": "HPの成長力がアップ",
       "modLv": 713,
       "dispLv": 193,
-      "value": 4765,
+      "value": 5100,
       "nextModId": 50194
     },
     {
@@ -9141,7 +9141,7 @@
       "summaryId": "HPの成長力がアップ",
       "modLv": 717,
       "dispLv": 194,
-      "value": 4790,
+      "value": 5400,
       "nextModId": 50195
     },
     {
@@ -9150,7 +9150,7 @@
       "summaryId": "HPの成長力がアップ",
       "modLv": 721,
       "dispLv": 195,
-      "value": 4815,
+      "value": 5800,
       "nextModId": 50196
     },
     {
@@ -9159,7 +9159,7 @@
       "summaryId": "HPの成長力がアップ",
       "modLv": 725,
       "dispLv": 196,
-      "value": 4840,
+      "value": 6500,
       "nextModId": 50197
     },
     {
@@ -9168,7 +9168,7 @@
       "summaryId": "HPの成長力がアップ",
       "modLv": 729,
       "dispLv": 197,
-      "value": 4865,
+      "value": 7500,
       "nextModId": 50198
     },
     {
@@ -9177,7 +9177,7 @@
       "summaryId": "HPの成長力がアップ",
       "modLv": 733,
       "dispLv": 198,
-      "value": 4890,
+      "value": 9000,
       "nextModId": 50199
     },
     {
@@ -9186,7 +9186,7 @@
       "summaryId": "HPの成長力がアップ",
       "modLv": 737,
       "dispLv": 199,
-      "value": 4915,
+      "value": 11000,
       "nextModId": 50200
     },
     {
@@ -9195,7 +9195,7 @@
       "summaryId": "HPの成長力がアップ",
       "modLv": 741,
       "dispLv": 200,
-      "value": 5000,
+      "value": 15000,
       "nextModId": 50201
     },
     {
@@ -10833,7 +10833,7 @@
       "summaryId": "STRの成長力がアップ",
       "modLv": 701,
       "dispLv": 190,
-      "value": 4690,
+      "value": 4700,
       "nextModId": 60191
     },
     {
@@ -10842,7 +10842,7 @@
       "summaryId": "STRの成長力がアップ",
       "modLv": 705,
       "dispLv": 191,
-      "value": 4715,
+      "value": 4780,
       "nextModId": 60192
     },
     {
@@ -10851,7 +10851,7 @@
       "summaryId": "STRの成長力がアップ",
       "modLv": 709,
       "dispLv": 192,
-      "value": 4740,
+      "value": 4900,
       "nextModId": 60193
     },
     {
@@ -10860,7 +10860,7 @@
       "summaryId": "STRの成長力がアップ",
       "modLv": 713,
       "dispLv": 193,
-      "value": 4765,
+      "value": 5100,
       "nextModId": 60194
     },
     {
@@ -10869,7 +10869,7 @@
       "summaryId": "STRの成長力がアップ",
       "modLv": 717,
       "dispLv": 194,
-      "value": 4790,
+      "value": 5400,
       "nextModId": 60195
     },
     {
@@ -10878,7 +10878,7 @@
       "summaryId": "STRの成長力がアップ",
       "modLv": 721,
       "dispLv": 195,
-      "value": 4815,
+      "value": 5800,
       "nextModId": 60196
     },
     {
@@ -10887,7 +10887,7 @@
       "summaryId": "STRの成長力がアップ",
       "modLv": 725,
       "dispLv": 196,
-      "value": 4840,
+      "value": 6500,
       "nextModId": 60197
     },
     {
@@ -10896,7 +10896,7 @@
       "summaryId": "STRの成長力がアップ",
       "modLv": 729,
       "dispLv": 197,
-      "value": 4865,
+      "value": 7500,
       "nextModId": 60198
     },
     {
@@ -10905,7 +10905,7 @@
       "summaryId": "STRの成長力がアップ",
       "modLv": 733,
       "dispLv": 198,
-      "value": 4890,
+      "value": 9000,
       "nextModId": 60199
     },
     {
@@ -10914,7 +10914,7 @@
       "summaryId": "STRの成長力がアップ",
       "modLv": 737,
       "dispLv": 199,
-      "value": 4915,
+      "value": 11000,
       "nextModId": 60200
     },
     {
@@ -10923,7 +10923,7 @@
       "summaryId": "STRの成長力がアップ",
       "modLv": 741,
       "dispLv": 200,
-      "value": 5000,
+      "value": 15000,
       "nextModId": 60201
     },
     {
@@ -12561,7 +12561,7 @@
       "summaryId": "VITの成長力がアップ",
       "modLv": 701,
       "dispLv": 190,
-      "value": 4690,
+      "value": 4700,
       "nextModId": 70191
     },
     {
@@ -12570,7 +12570,7 @@
       "summaryId": "VITの成長力がアップ",
       "modLv": 705,
       "dispLv": 191,
-      "value": 4715,
+      "value": 4780,
       "nextModId": 70192
     },
     {
@@ -12579,7 +12579,7 @@
       "summaryId": "VITの成長力がアップ",
       "modLv": 709,
       "dispLv": 192,
-      "value": 4740,
+      "value": 4900,
       "nextModId": 70193
     },
     {
@@ -12588,7 +12588,7 @@
       "summaryId": "VITの成長力がアップ",
       "modLv": 713,
       "dispLv": 193,
-      "value": 4765,
+      "value": 5100,
       "nextModId": 70194
     },
     {
@@ -12597,7 +12597,7 @@
       "summaryId": "VITの成長力がアップ",
       "modLv": 717,
       "dispLv": 194,
-      "value": 4790,
+      "value": 5400,
       "nextModId": 70195
     },
     {
@@ -12606,7 +12606,7 @@
       "summaryId": "VITの成長力がアップ",
       "modLv": 721,
       "dispLv": 195,
-      "value": 4815,
+      "value": 5800,
       "nextModId": 70196
     },
     {
@@ -12615,7 +12615,7 @@
       "summaryId": "VITの成長力がアップ",
       "modLv": 725,
       "dispLv": 196,
-      "value": 4840,
+      "value": 6500,
       "nextModId": 70197
     },
     {
@@ -12624,7 +12624,7 @@
       "summaryId": "VITの成長力がアップ",
       "modLv": 729,
       "dispLv": 197,
-      "value": 4865,
+      "value": 7500,
       "nextModId": 70198
     },
     {
@@ -12633,7 +12633,7 @@
       "summaryId": "VITの成長力がアップ",
       "modLv": 733,
       "dispLv": 198,
-      "value": 4890,
+      "value": 9000,
       "nextModId": 70199
     },
     {
@@ -12642,7 +12642,7 @@
       "summaryId": "VITの成長力がアップ",
       "modLv": 737,
       "dispLv": 199,
-      "value": 4915,
+      "value": 11000,
       "nextModId": 70200
     },
     {
@@ -12651,7 +12651,7 @@
       "summaryId": "VITの成長力がアップ",
       "modLv": 741,
       "dispLv": 200,
-      "value": 5000,
+      "value": 15000,
       "nextModId": 70201
     },
     {
@@ -12804,7 +12804,7 @@
       "summaryId": "セットを装備していない場合に全能力アップ",
       "modLv": 9999,
       "dispLv": 0,
-      "value": 20,
+      "value": 25,
       "nextModId": 0
     },
     {
@@ -12958,6 +12958,15 @@
       "modLv": 9999,
       "dispLv": 9,
       "value": 19000,
+      "nextModId": 0
+    },
+    {
+      "id": 1110,
+      "nameId": "強化上限アップ",
+      "summaryId": "強化上限アップ説明",
+      "modLv": 9999,
+      "dispLv": 9,
+      "value": 10000,
       "nextModId": 0
     },
     {
@@ -13246,6 +13255,24 @@
       "modLv": 9999,
       "dispLv": 3,
       "value": 40,
+      "nextModId": 0
+    },
+    {
+      "id": 2605,
+      "nameId": "全能力値ブースト",
+      "summaryId": "全能力値ブースト説明",
+      "modLv": 9999,
+      "dispLv": 2,
+      "value": 25,
+      "nextModId": 0
+    },
+    {
+      "id": 2606,
+      "nameId": "全能力値ブースト",
+      "summaryId": "全能力値ブースト説明",
+      "modLv": 9999,
+      "dispLv": 3,
+      "value": 50,
       "nextModId": 0
     },
     {

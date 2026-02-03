@@ -386,6 +386,90 @@
       "use": 100
     },
     {
+      "id": 511,
+      "nameId": "被験体記録 アダム #01",
+      "icon": "log_paper",
+      "efficacyId": "黄昏の洋館",
+      "use": 500
+    },
+    {
+      "id": 512,
+      "nameId": "被験体記録 アダム #02",
+      "icon": "log_paper",
+      "efficacyId": "黄昏の洋館",
+      "use": 500
+    },
+    {
+      "id": 513,
+      "nameId": "被験体記録 アダム #03",
+      "icon": "log_paper",
+      "efficacyId": "黄昏の洋館",
+      "use": 500
+    },
+    {
+      "id": 521,
+      "nameId": "被験体記録 パノプテス #01",
+      "icon": "log_paper",
+      "efficacyId": "次元の裂け目",
+      "use": 500
+    },
+    {
+      "id": 522,
+      "nameId": "被験体記録 パノプテス #02",
+      "icon": "log_paper",
+      "efficacyId": "次元の裂け目",
+      "use": 500
+    },
+    {
+      "id": 523,
+      "nameId": "被験体記録 パノプテス #03",
+      "icon": "log_paper",
+      "efficacyId": "次元の裂け目",
+      "use": 500
+    },
+    {
+      "id": 531,
+      "nameId": "被験体記録 九尾 #01",
+      "icon": "log_paper",
+      "efficacyId": "濃霧の古戦場",
+      "use": 500
+    },
+    {
+      "id": 532,
+      "nameId": "被験体記録 九尾 #02",
+      "icon": "log_paper",
+      "efficacyId": "濃霧の古戦場",
+      "use": 500
+    },
+    {
+      "id": 533,
+      "nameId": "被験体記録 九尾 #03",
+      "icon": "log_paper",
+      "efficacyId": "濃霧の古戦場",
+      "use": 500
+    },
+    {
+      "id": 541,
+      "nameId": "被験体記録 やまたのおろち #01",
+      "icon": "log_paper",
+      "efficacyId": "正義の巨塔",
+      "use": 500
+    },
+    {
+      "id": 542,
+      "nameId": "被験体記録 やまたのおろち #02",
+      "icon": "log_paper",
+      "efficacyId": "正義の巨塔",
+      "use": 500
+    },
+    {
+      "id": 543,
+      "nameId": "被験体記録 やまたのおろち #03",
+      "icon": "log_paper",
+      "efficacyId": "正義の巨塔",
+      "use": 500
+    },
+    {
       "id": 1001,
       "nameId": "幽世の栞",
       "icon": "shiori",
@@ -459,13 +543,27 @@
       "id": 1501,
       "nameId": "殺生石",
       "icon": "sesshoseki",
-      "efficacyId": "【討伐の証】妖狐が姿を変えた魔石。砥石による侵蝕度強化の上限が上がる(+500/Lv)",
+      "efficacyId": "【討伐の証】妖狐が姿を変えた魔石。砥石による侵蝕度強化の上限が上がる",
       "use": 110
     },
     {
       "id": 1502,
       "nameId": "殺生石がレベルアップ",
       "icon": "sesshoseki",
+      "efficacyId": "",
+      "use": 200
+    },
+    {
+      "id": 1601,
+      "nameId": "まがたま",
+      "icon": "magatama",
+      "efficacyId": "【討伐の証】大蛇の依り代になっていた宝玉。伝説級アイテムの出現率が上がる",
+      "use": 110
+    },
+    {
+      "id": 1602,
+      "nameId": "まがたまがレベルアップ",
+      "icon": "magatama",
       "efficacyId": "",
       "use": 200
     }
