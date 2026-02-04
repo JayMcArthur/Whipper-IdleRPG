@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Whipper Wiki - Idle RPG Guide</title>
+  <script src="https://kit.fontawesome.com/3fe7bed0c0.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -21,7 +22,7 @@
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li class="nav-dropdown">
-          <a href="#">Equipment ▾</a>
+          <a href="#">Equipment</a>
           <div class="nav-dropdown-content">
             <a href="weapons.html">Weapons</a>
             <a href="armor.html">Armor</a>
@@ -34,10 +35,26 @@
         <li><a href="enchantments.html">Enchantments</a></li>
         <li><a href="materials.html">Materials</a></li>
         <li><a href="analysis.html">Analysis</a></li>
+        <li class="nav-dropdown">
+          <a href="#">Tools</a>
+          <div class="nav-dropdown-content">
+            <a href="calculator.html">Build Calculator</a>
+            <a href="compare.html">Item Comparison</a>
+            <a href="damage.html">Damage Calculator</a>
+          </div>
+        </li>
         <li class="lang-picker">
           <select id="lang-select">
             <option value="en">English</option>
             <option value="ja">日本語</option>
+            <option value="zh_CN">简体中文</option>
+            <option value="zh_TW">繁體中文</option>
+            <option value="ko">한국어</option>
+            <option value="es">Español</option>
+            <option value="pt">Português</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="th">ไทย</option>
           </select>
         </li>
       </ul>
@@ -50,15 +67,30 @@
       <h1>Whipper Wiki</h1>
       <p class="hero-subtitle">Your complete guide to the Idle RPG dungeon crawler</p>
       <div class="hero-links">
-        <a href="https://play.google.com/store/apps/details?id=jp.haappss.whipper" class="btn btn-primary" target="_blank">📱 Google Play</a>
-        <a href="https://apps.apple.com/us/app/whipper-idle-rpg/id1602383020" class="btn btn-primary" target="_blank">🍎 App Store</a>
-        <a href="https://discord.gg/EftbkxxRxe" class="btn btn-secondary" target="_blank">💬 Discord</a>
+        <a href='https://play.google.com/store/apps/details?id=jp.haappss.whipper'><img width="60%" alt='Get it on Google Play' src='../assets/images/googleplay.png'/></a>
+        <a href='https://apps.apple.com/us/app/whipper-idle-rpg/id1602383020'><img width="60%" alt='Get it on the App Store' src='../assets/images/appstore.png'/></a>
       </div>
     </div>
   </section>
 
   <main class="main" style="padding-top: 0;">
     <div class="container">
+
+      <section class="mt-4">
+        <div class="card">
+          <h2>Whipper - Idle RPG</h2>
+          <p class="mt-2"><i>An idle RPG game for those who are busy</i></p>
+          <p class="mt-2">Send your adventurer out to explore a dungeon. Wait for them to return with loot.</p>
+          <p class="mt-2">After returning from a dungeon, the adventurer's level will revert to 1! Therefore, to conquer difficult dungeons, it is essential to upgrade your equipment!</p>
+          <p class="mt-2">If you have any comments or suggestions for this app, contact me though email or Twitter DM.</p>
+          <p class="mt-2">The in-game text is machine translated (DeepL).</p>
+          <p class="mt-2">If you find any errors in the translation, or would like to help translate, please contact me.</p>
+          <p class="mt-2">This wiki currently contains data extracted from game version 6.3.4 Build 126</p>
+        </div>
+      </section>
+
+      <br>
+
       <section>
         <h2 class="mb-3">Browse the Wiki</h2>
         <div class="quick-links">
@@ -98,24 +130,18 @@
             <span class="quick-link-icon">📊</span>
             <div class="quick-link-text"><h3>Analysis</h3><p>Level progression & bonuses</p></div>
           </a>
-        </div>
-      </section>
-
-      <section class="mt-4">
-        <h2 class="mb-3">Game Database Stats</h2>
-        <div class="stats-grid">
-          <div class="stat-card"><div class="stat-card-value">167</div><div class="stat-card-label">Equipment Items</div></div>
-          <div class="stat-card"><div class="stat-card-value">138</div><div class="stat-card-label">Monsters</div></div>
-          <div class="stat-card"><div class="stat-card-value">13</div><div class="stat-card-label">Dungeons</div></div>
-          <div class="stat-card"><div class="stat-card-value">67</div><div class="stat-card-label">Materials</div></div>
-        </div>
-      </section>
-
-      <section class="mt-4">
-        <div class="card">
-          <h2>About Whipper</h2>
-          <p class="mt-2"><strong>Whipper - Idle RPG</strong> is an idle dungeon crawler game for mobile devices. Send your adventurer into dungeons to battle monsters and collect loot. After each expedition, your adventurer's level resets to 1, so upgrading your equipment is key to conquering harder dungeons!</p>
-          <p class="mt-2">This wiki contains data extracted from game version 6.0.</p>
+          <a href="calculator.html" class="quick-link">
+            <span class="quick-link-icon">🧮</span>
+            <div class="quick-link-text"><h3>Build Calculator</h3><p>Plan your equipment build</p></div>
+          </a>
+          <a href="compare.html" class="quick-link">
+            <span class="quick-link-icon">⚖️</span>
+            <div class="quick-link-text"><h3>Item Comparison</h3><p>Compare items side-by-side</p></div>
+          </a>
+          <a href="damage.html" class="quick-link">
+            <span class="quick-link-icon">💥</span>
+            <div class="quick-link-text"><h3>Damage Calculator</h3><p>Test damage vs monsters</p></div>
+          </a>
         </div>
       </section>
     </div>
@@ -124,11 +150,11 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-links">
-        <a href="https://discord.gg/EftbkxxRxe" title="Discord">💬</a>
-        <a href="https://twitter.com/HAappss" title="Twitter">🐦</a>
-        <a href="mailto:haappss@gmail.com" title="Email">✉️</a>
+        <a href="https://discord.gg/EftbkxxRxe" style="margin-right: 30px"><i class="fab fa-discord w3-hover-opacity icon-color"></i></a>
+        <a href="https://twitter.com/HAappss" style="margin-right: 30px"><i class="fab fa-twitter w3-hover-opacity icon-color"></i></a>
+        <a href="mailto:haappss@gmail.com"><i class="fa fa-envelope w3-hover-opacity icon-color"></i></a>
       </div>
-      <p>Whipper Wiki • Game by HAappss • Data from version 6.0</p>
+      <p>Whipper Wiki - Game by HAappss - Wiki by Jay McArthur</p>
     </div>
   </footer>
 

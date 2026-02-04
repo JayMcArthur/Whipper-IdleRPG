@@ -10,15 +10,14 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <nav class="nav">
+<body><nav class="nav">
     <div class="nav-container">
       <a href="index.html" class="nav-brand"><img src="assets/images/logo.png" alt=""><span>Whipper Wiki</span></a>
       <button class="nav-toggle">☰</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li class="nav-dropdown">
-          <a href="#" class="active">Equipment ▾</a>
+          <a href="#" class="active">Equipment</a>
           <div class="nav-dropdown-content">
             <a href="weapons.html">Weapons</a>
             <a href="armor.html">Armor</a>
@@ -31,48 +30,50 @@
         <li><a href="enchantments.html">Enchantments</a></li>
         <li><a href="materials.html">Materials</a></li>
         <li><a href="analysis.html">Analysis</a></li>
-        <li class="lang-picker"><select id="lang-select"><option value="en">English</option><option value="ja">日本語</option></select></li>
+        <li class="nav-dropdown">
+          <a href="#">Tools</a>
+          <div class="nav-dropdown-content">
+            <a href="calculator.html">Build Calculator</a>
+            <a href="compare.html">Item Comparison</a>
+            <a href="damage.html">Damage Calculator</a>
+          </div>
+        </li>
+        <li class="lang-picker"><select id="lang-select"><option value="en">English</option>
+            <option value="ja">日本語</option>
+            <option value="zh_CN">简体中文</option>
+            <option value="zh_TW">繁體中文</option>
+            <option value="ko">한국어</option>
+            <option value="es">Español</option>
+            <option value="pt">Português</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="th">ไทย</option></select></li>
       </ul>
     </div>
   </nav>
-
   <main class="main">
     <div class="container">
-      <header class="page-header">
-        <h1>💍 Rings</h1>
-        <p>All rings with stats and special abilities (Analysis).</p>
-      </header>
-
+      <header class="page-header"><h1>Rings</h1><p>All rings with stats and special abilities (Analysis).</p></header>
       <div class="table-controls">
         <div class="search-box"><input type="text" id="search-input" placeholder="Search rings..."></div>
         <span class="text-muted">Showing <span id="result-count">-</span> rings</span>
       </div>
-
       <div class="table-container">
         <table class="data-table" id="rings-table">
-          <thead>
-            <tr>
-              <th data-sort="nameId_EN">Name</th>
-              <th data-sort="hp" class="stat-col">HP</th>
-              <th data-sort="atk" class="stat-col">STR</th>
-              <th data-sort="def" class="stat-col">VIT</th>
-              <th data-sort="specialized">Specialization</th>
-              <th>Ability (Analysis)</th>
-            </tr>
-          </thead>
+          <thead><tr>
+            <th data-sort="nameId">Name</th>
+            <th data-sort="hp" class="stat-col">HP</th>
+            <th data-sort="atk" class="stat-col">STR</th>
+            <th data-sort="def" class="stat-col">VIT</th>
+            <th data-sort="specialized">Specialization</th>
+            <th>Ability (Analysis)</th>
+          </tr></thead>
           <tbody><tr><td colspan="6" class="loading">Loading rings...</td></tr></tbody>
         </table>
       </div>
-
-      <div class="card mt-3">
-        <h3>About Rings</h3>
-        <p class="mt-1">Rings provide passive stat bonuses and special abilities. The Ability column shows the ring's unique effect, which can significantly impact your build strategy.</p>
-      </div>
     </div>
   </main>
-
-  <footer class="footer"><div class="footer-content"><p>Whipper Wiki • Data from version 6.0</p></div></footer>
+<footer class="footer"><div class="footer-content"><p>Whipper Wiki - Data from version 6.0</p></div></footer>
   <script src="js/wiki.js"></script>
-  <script>document.addEventListener('DOMContentLoaded', initRingsPage);</script>
-</body>
-</html>
+  <script>document.addEventListener("DOMContentLoaded", initRingsPage);</script>
+</body></html>

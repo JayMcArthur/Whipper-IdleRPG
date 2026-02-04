@@ -399,6 +399,8 @@ best_vitality_with_enchants = {
 #  Rainbow Slime Drop Changes
 #  Max Corrosion Level Change (Drop 1500, Enhancement 2500)
 
+
+
 # TODO - Whipper v4.6, 4.7, 4.9, 5.0, 5.1, 5.2, 5.3, 5.4, 5.6
 #  A lot.. I am so behind
 

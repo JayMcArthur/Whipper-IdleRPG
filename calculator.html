@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build Calculator - Whipper Wiki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .tool-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .tool-section { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.5rem; }
+    .tool-section h3 { margin-bottom: 1rem; color: var(--accent-gold); }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.85rem; }
+    .form-group select, .form-group input { width: 100%; padding: 0.625rem; background: var(--bg-input); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 0.9rem; }
+    .form-group input[type="number"] { max-width: 120px; }
+    .form-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .form-row .form-group { flex: 1; min-width: 100px; }
+    .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 1rem; }
+    .result-item { text-align: center; padding: 1rem; background: var(--bg-surface); border-radius: var(--radius-md); }
+    .result-value { font-size: 1.5rem; font-weight: 700; color: var(--accent-gold); }
+    .result-label { font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; }
+    .compare-table { width: 100%; }
+    .compare-table th, .compare-table td { padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--border-subtle); }
+    .compare-table th { background: var(--bg-card); color: var(--text-secondary); font-size: 0.75rem; text-transform: uppercase; }
+    .compare-table td { background: var(--bg-surface); }
+    .enchant-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+    .enchant-grid select { font-size: 0.8rem; padding: 0.5rem; }
+    @media (max-width: 768px) { .tool-grid { grid-template-columns: 1fr; } .enchant-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body><nav class="nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand"><img src="assets/images/logo.png" alt=""><span>Whipper Wiki</span></a>
+      <button class="nav-toggle">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#">Equipment</a>
+          <div class="nav-dropdown-content">
+            <a href="weapons.html">Weapons</a>
+            <a href="armor.html">Armor</a>
+            <a href="rings.html">Rings</a>
+          </div>
+        </li>
+        <li><a href="monsters.html">Monsters</a></li>
+        <li><a href="bosses.html">Bosses</a></li>
+        <li><a href="dungeons.html">Dungeons</a></li>
+        <li><a href="enchantments.html">Enchantments</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="active">Tools</a>
+          <div class="nav-dropdown-content">
+            <a href="calculator.html" class="active">Build Calculator</a>
+            <a href="compare.html">Item Comparison</a>
+            <a href="damage.html">Damage Calculator</a>
+          </div>
+        </li>
+        <li class="lang-picker"><select id="lang-select"><option value="en">English</option>
+            <option value="ja">日本語</option>
+            <option value="zh_CN">简体中文</option>
+            <option value="zh_TW">繁體中文</option>
+            <option value="ko">한국어</option>
+            <option value="es">Español</option>
+            <option value="pt">Português</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="th">ไทย</option></select></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="main">
+    <div class="container">
+      <header class="page-header"><h1>Build Calculator</h1><p>Select equipment, upgrades, and enchantments to calculate your stats.</p></header>
+      
+      <div class="tool-grid">
+        <div class="tool-section">
+          <h3>Equipment</h3>
+          <div class="form-group">
+            <label>Weapon</label>
+            <select id="weapon-select"></select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Upgrade Level</label>
+              <input type="number" id="weapon-upgrade" value="0" min="0" max="50000">
+            </div>
+            <div class="form-group">
+              <label>Corrosion</label>
+              <input type="number" id="weapon-corrosion" value="0" min="0" max="2500">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Armor</label>
+            <select id="armor-select"></select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Upgrade Level</label>
+              <input type="number" id="armor-upgrade" value="0" min="0" max="50000">
+            </div>
+            <div class="form-group">
+              <label>Corrosion</label>
+              <input type="number" id="armor-corrosion" value="0" min="0" max="2500">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Ring</label>
+            <select id="ring-select"></select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Corrosion</label>
+              <input type="number" id="ring-corrosion" value="0" min="0" max="2500">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Player Level</label>
+            <input type="number" id="player-level" value="50" min="1" max="999">
+          </div>
+        </div>
+        
+        <div class="tool-section">
+          <h3>Enchantments</h3>
+          <p class="text-muted mb-2">Weapon Enchantments</p>
+          <div class="enchant-grid">
+            <select id="enchant-1" class="enchant-select"></select>
+            <select id="enchant-2" class="enchant-select"></select>
+            <select id="enchant-3" class="enchant-select"></select>
+          </div>
+          <p class="text-muted mb-2 mt-2">Armor Enchantments</p>
+          <div class="enchant-grid">
+            <select id="enchant-4" class="enchant-select"></select>
+            <select id="enchant-5" class="enchant-select"></select>
+            <select id="enchant-6" class="enchant-select"></select>
+          </div>
+          <p class="text-muted mb-2 mt-2">Ring Enchantments</p>
+          <div class="enchant-grid">
+            <select id="enchant-7" class="enchant-select"></select>
+            <select id="enchant-8" class="enchant-select"></select>
+            <select id="enchant-9" class="enchant-select"></select>
+          </div>
+          
+          <button id="calculate-btn" class="btn btn-primary mt-3" style="width:100%">Calculate</button>
+        </div>
+      </div>
+      
+      <div class="tool-section mt-3">
+        <h3>Results</h3>
+        <div class="results-grid">
+          <div class="result-item"><div class="result-value" id="result-hp">-</div><div class="result-label">HP</div></div>
+          <div class="result-item"><div class="result-value" id="result-str">-</div><div class="result-label">STR</div></div>
+          <div class="result-item"><div class="result-value" id="result-vit">-</div><div class="result-label">VIT</div></div>
+          <div class="result-item"><div class="result-value" id="result-spd">-</div><div class="result-label">SPD</div></div>
+          <div class="result-item"><div class="result-value" id="result-luk">-</div><div class="result-label">LUK</div></div>
+          <div class="result-item"><div class="result-value" id="result-attack">-</div><div class="result-label">Attack</div></div>
+          <div class="result-item"><div class="result-value" id="result-defense">-</div><div class="result-label">Defense</div></div>
+          <div class="result-item"><div class="result-value" id="result-set">-</div><div class="result-label">Set Bonus</div></div>
+        </div>
+        <div class="mt-2 text-muted">
+          <small>Weapon Max Upgrade: <span id="result-weapon-max">-</span> | Armor Max Upgrade: <span id="result-armor-max">-</span></small>
+        </div>
+      </div>
+    </div>
+  </main>
+<footer class="footer"><div class="footer-content"><p>Whipper Wiki - Data from version 6.0</p></div></footer>
+  <script src="js/wiki.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", initBuildCalculatorPage);</script>
+</body></html>

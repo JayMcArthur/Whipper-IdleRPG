@@ -24,8 +24,8 @@ const LANG_COLUMNS = {
 let currentLang = localStorage.getItem('wiki-lang') || 'en';
 
 // Boss monster IDs
-const BOSS_IDS = [129, 133, 134, 200, 201, 202, 203];
-const JUNKYARD_BOSS_IDS = [200, 201, 202, 203];
+const BOSS_IDS = [100, 108, 109, 122, 123, 129, 133, 134, 200, 201, 202];
+const JUNKYARD_BOSS_IDS = [200, 201, 202];
 
 // Analysis data (level progression)
 const ANALYSIS_DATA = [
@@ -185,7 +185,7 @@ function formatStat(base, growth) {
   }
   
   if (growth && growth > 0) {
-    html += `<br><span class="stat-growth">+${growth}</span>`;
+    html += `<br><span class="stat-growth">+${growth}/lv</span>`;
   }
   return html;
 }
@@ -389,7 +389,7 @@ async function initWeaponsPage() {
           <td class="stat-col">${item.maxLv}</td>
           <td><span class="badge">${item.equipKind || '-'}</span></td>
           <td>${item.attackKind || '-'}</td>
-          <td>${getSetName(item)}</td>
+          <td><span class="item-link" onclick="goToItem(${nextItem.id}, ${nextItem.itemType})">${getName(nextItem)}</span> ${getSetName(item)}</td>
           <td>${nextItem ? `<span class="item-link" onclick="goToItem(${nextItem.id}, ${nextItem.itemType})">${getName(nextItem)}</span>` : '-'}</td>
         </tr>
       `;
@@ -491,7 +491,7 @@ async function initRingsPage() {
 // Monsters Page (non-bosses)
 async function initMonstersPage() {
   const data = await loadGameData();
-  const monsters = data.monsters;
+  const monsters = data.monsters.filter(m => !BOSS_IDS.includes(m.id));
   
   const table = new DataTable('monsters-table', {
     searchFields: ['nameId'],
@@ -528,7 +528,7 @@ async function initBossesPage() {
   if (!container) return;
   
   const bosses = data.monsters.filter(m => BOSS_IDS.includes(m.id));
-  const bossImages = { 200: 'adam_256', 201: 'pano_256', 202: 'fox_256', 203: 'orochi_256' };
+  const bossImages = { 200: 'adam_256', 201: 'pano_256', 202: 'fox_256' };
   
   container.innerHTML = bosses.map(boss => {
     const drop1 = boss.item1 ? getEquipById(boss.item1) : null;
@@ -710,6 +710,285 @@ function initAnalysisPage() {
   
   html += '</tbody></table></div>';
   container.innerHTML = html;
+}
+
+// === TOOL PAGE INITIALIZERS ===
+
+// Build Calculator Page
+async function initBuildCalculatorPage() {
+  const data = await loadGameData();
+  
+  // Populate weapon select
+  const weaponSelect = document.getElementById('weapon-select');
+  const armorSelect = document.getElementById('armor-select');
+  const ringSelect = document.getElementById('ring-select');
+  
+  const weapons = data.equips.filter(e => e.itemType === 1).sort((a, b) => getName(a).localeCompare(getName(b)));
+  const armors = data.equips.filter(e => e.itemType === 2).sort((a, b) => getName(a).localeCompare(getName(b)));
+  const rings = data.equips.filter(e => e.itemType === 3).sort((a, b) => getName(a).localeCompare(getName(b)));
+  
+  weaponSelect.innerHTML = weapons.map(w => `<option value="${w.id}">${getName(w)} (ATK: ${w.param})</option>`).join('');
+  armorSelect.innerHTML = armors.map(a => `<option value="${a.id}">${getName(a)} (DEF: ${a.param})</option>`).join('');
+  ringSelect.innerHTML = rings.map(r => `<option value="${r.id}">${getName(r)}</option>`).join('');
+  
+  // Populate enchantment selects
+  const enchantSelects = document.querySelectorAll('.enchant-select');
+  const enchantGroups = {};
+  data.customs.forEach(c => {
+    const name = translate(c.nameId) || c.nameId;
+    if (!enchantGroups[name]) enchantGroups[name] = [];
+    enchantGroups[name].push(c);
+  });
+  
+  const enchantOptions = '<option value="0">None</option>' + 
+    Object.entries(enchantGroups)
+      .sort((a, b) => a[0].localeCompare(b[0]))
+      .map(([name, levels]) => {
+        const maxLevel = Math.max(...levels.map(l => l.dispLv));
+        return `<optgroup label="${name}">${
+          levels.sort((a, b) => a.dispLv - b.dispLv)
+            .map(l => `<option value="${l.id}">${name} Lv${l.dispLv} (${l.value})</option>`)
+            .join('')
+        }</optgroup>`;
+      }).join('');
+  
+  enchantSelects.forEach(sel => sel.innerHTML = enchantOptions);
+  
+  // Calculate button
+  document.getElementById('calculate-btn').addEventListener('click', () => calculateBuild(data));
+  
+  // Auto-calculate on change
+  document.querySelectorAll('select, input').forEach(el => {
+    el.addEventListener('change', () => calculateBuild(data));
+  });
+  
+  // Initial calculation
+  calculateBuild(data);
+}
+
+function calculateBuild(data) {
+  const weaponId = parseInt(document.getElementById('weapon-select').value);
+  const armorId = parseInt(document.getElementById('armor-select').value);
+  const ringId = parseInt(document.getElementById('ring-select').value);
+  
+  const weapon = data.equips.find(e => e.id === weaponId);
+  const armor = data.equips.find(e => e.id === armorId);
+  const ring = data.equips.find(e => e.id === ringId);
+  
+  const playerLevel = parseInt(document.getElementById('player-level').value) || 1;
+  
+  const weaponUpgrade = parseInt(document.getElementById('weapon-upgrade').value) || 0;
+  const armorUpgrade = parseInt(document.getElementById('armor-upgrade').value) || 0;
+  
+  const weaponCorrosion = parseInt(document.getElementById('weapon-corrosion').value) || 0;
+  const armorCorrosion = parseInt(document.getElementById('armor-corrosion').value) || 0;
+  const ringCorrosion = parseInt(document.getElementById('ring-corrosion').value) || 0;
+  
+  // Get enchantments
+  const getEnchantValue = (id) => {
+    if (!id) return { hp: 0, str: 0, vit: 0, hpUp: 0, strUp: 0, vitUp: 0 };
+    const custom = data.customs.find(c => c.id === id);
+    if (!custom) return { hp: 0, str: 0, vit: 0, hpUp: 0, strUp: 0, vitUp: 0 };
+    
+    const name = custom.nameId;
+    const val = custom.value;
+    
+    // Map enchantment types to stat boosts
+    if (name === '耐久') return { hp: val, str: 0, vit: 0, hpUp: 0, strUp: 0, vitUp: 0 };
+    if (name === '腕力') return { hp: 0, str: val, vit: 0, hpUp: 0, strUp: 0, vitUp: 0 };
+    if (name === '頑丈') return { hp: 0, str: 0, vit: val, hpUp: 0, strUp: 0, vitUp: 0 };
+    if (name === '腕力の鍛錬') return { hp: 0, str: 0, vit: 0, hpUp: 0, strUp: val, vitUp: 0 };
+    if (name === '防御の鍛錬') return { hp: 0, str: 0, vit: 0, hpUp: 0, strUp: 0, vitUp: val };
+    if (name === '体力の鍛錬') return { hp: 0, str: 0, vit: 0, hpUp: val, strUp: 0, vitUp: 0 };
+    
+    return { hp: 0, str: 0, vit: 0, hpUp: 0, strUp: 0, vitUp: 0 };
+  };
+  
+  // Collect all enchantment bonuses
+  let enchantBonus = { hp: 0, str: 0, vit: 0, hpUp: 0, strUp: 0, vitUp: 0 };
+  for (let i = 1; i <= 9; i++) {
+    const sel = document.getElementById(`enchant-${i}`);
+    if (sel) {
+      const bonus = getEnchantValue(parseInt(sel.value));
+      enchantBonus.hp += bonus.hp;
+      enchantBonus.str += bonus.str;
+      enchantBonus.vit += bonus.vit;
+      enchantBonus.hpUp += bonus.hpUp;
+      enchantBonus.strUp += bonus.strUp;
+      enchantBonus.vitUp += bonus.vitUp;
+    }
+  }
+  
+  // Base stats at level 1
+  const baseHP = 30 + weapon.hp + armor.hp + ring.hp + enchantBonus.hp;
+  const baseSTR = 10 + weapon.atk + armor.atk + ring.atk + enchantBonus.str;
+  const baseVIT = 10 + weapon.def + armor.def + ring.def + enchantBonus.vit;
+  const baseSPD = 1;
+  const baseLUK = 1;
+  
+  // Level up stats per level
+  const lvUpHP = 10 + weapon.lvHp + armor.lvHp + ring.lvHp + enchantBonus.hpUp;
+  const lvUpSTR = 1 + weapon.lvAtk + armor.lvAtk + ring.lvAtk + enchantBonus.strUp;
+  const lvUpVIT = 1 + weapon.lvDef + armor.lvDef + ring.lvDef + enchantBonus.vitUp;
+  const lvUpSPD = 1;
+  
+  // Final stats
+  const finalHP = baseHP + (lvUpHP * (playerLevel - 1));
+  const finalSTR = baseSTR + (lvUpSTR * (playerLevel - 1));
+  const finalVIT = baseVIT + (lvUpVIT * (playerLevel - 1));
+  const finalSPD = baseSPD + (lvUpSPD * (playerLevel - 1));
+  const finalLUK = baseLUK;
+  
+  // Calculate attack and defense
+  const weaponPower = weapon.param + Math.min(weaponUpgrade, weapon.maxLv) + (weaponCorrosion * 10);
+  const armorPower = armor.param + Math.min(armorUpgrade, armor.maxLv) + (armorCorrosion * 10);
+  
+  const attack = finalSTR + weaponPower;
+  const defense = finalVIT + armorPower;
+  
+  // Check for set bonus
+  const hasSet = weapon.set && (translate(weapon.set) === getName(armor) || translate(weapon.set) === getName(ring));
+  
+  // Display results
+  document.getElementById('result-hp').textContent = formatNumber(Math.floor(finalHP));
+  document.getElementById('result-str').textContent = formatNumber(Math.floor(finalSTR));
+  document.getElementById('result-vit').textContent = formatNumber(Math.floor(finalVIT));
+  document.getElementById('result-spd').textContent = formatNumber(Math.floor(finalSPD));
+  document.getElementById('result-luk').textContent = formatNumber(Math.floor(finalLUK));
+  document.getElementById('result-attack').textContent = formatNumber(Math.floor(attack));
+  document.getElementById('result-defense').textContent = formatNumber(Math.floor(defense));
+  document.getElementById('result-set').textContent = hasSet ? `Yes (${translate(weapon.set)})` : 'No';
+  document.getElementById('result-weapon-max').textContent = weapon.maxLv;
+  document.getElementById('result-armor-max').textContent = armor.maxLv;
+}
+
+// Item Comparison Page
+async function initComparisonPage() {
+  const data = await loadGameData();
+  
+  const allEquips = data.equips.sort((a, b) => {
+    if (a.itemType !== b.itemType) return a.itemType - b.itemType;
+    return getName(a).localeCompare(getName(b));
+  });
+  
+  const typeLabels = { 1: 'Weapon', 2: 'Armor', 3: 'Ring' };
+  const optionsHTML = '<option value="">Select item...</option>' +
+    allEquips.map(e => `<option value="${e.id}">[${typeLabels[e.itemType]}] ${getName(e)}</option>`).join('');
+  
+  for (let i = 1; i <= 3; i++) {
+    document.getElementById(`compare-item-${i}`).innerHTML = optionsHTML;
+    document.getElementById(`compare-item-${i}`).addEventListener('change', () => updateComparison(data));
+  }
+}
+
+function updateComparison(data) {
+  const items = [];
+  for (let i = 1; i <= 3; i++) {
+    const id = parseInt(document.getElementById(`compare-item-${i}`).value);
+    if (id) {
+      const item = data.equips.find(e => e.id === id);
+      if (item) items.push({ item, col: i });
+    }
+  }
+  
+  // Clear all columns first
+  for (let i = 1; i <= 3; i++) {
+    document.getElementById(`compare-icon-${i}`).innerHTML = '';
+    document.getElementById(`compare-name-${i}`).textContent = '-';
+    document.getElementById(`compare-type-${i}`).textContent = '-';
+    document.getElementById(`compare-param-${i}`).textContent = '-';
+    document.getElementById(`compare-hp-${i}`).textContent = '-';
+    document.getElementById(`compare-str-${i}`).textContent = '-';
+    document.getElementById(`compare-vit-${i}`).textContent = '-';
+    document.getElementById(`compare-maxlv-${i}`).textContent = '-';
+    document.getElementById(`compare-set-${i}`).textContent = '-';
+    document.getElementById(`compare-special-${i}`).textContent = '-';
+  }
+  
+  // Fill in selected items
+  items.forEach(({ item, col }) => {
+    const typeLabels = { 1: 'Weapon', 2: 'Armor', 3: 'Ring' };
+    document.getElementById(`compare-icon-${col}`).innerHTML = `<img src="assets/icons/${item.icon}.png" class="item-icon-lg">`;
+    document.getElementById(`compare-name-${col}`).textContent = getName(item);
+    document.getElementById(`compare-type-${col}`).textContent = typeLabels[item.itemType];
+    document.getElementById(`compare-param-${col}`).textContent = item.param;
+    document.getElementById(`compare-hp-${col}`).innerHTML = formatStat(item.hp, item.lvHp);
+    document.getElementById(`compare-str-${col}`).innerHTML = formatStat(item.atk, item.lvAtk);
+    document.getElementById(`compare-vit-${col}`).innerHTML = formatStat(item.def, item.lvDef);
+    document.getElementById(`compare-maxlv-${col}`).textContent = item.maxLv;
+    document.getElementById(`compare-set-${col}`).textContent = getSetName(item);
+    
+    if (item.itemType === 1) {
+      document.getElementById(`compare-special-${col}`).textContent = item.attackKind || '-';
+    } else if (item.itemType === 2 || item.itemType === 3) {
+      document.getElementById(`compare-special-${col}`).textContent = item.specialized || '-';
+    }
+  });
+}
+
+// Damage Calculator Page
+async function initDamageCalculatorPage() {
+  const data = await loadGameData();
+  
+  // Populate monster select
+  const monsterSelect = document.getElementById('monster-select');
+  const monsters = data.monsters.sort((a, b) => getName(a).localeCompare(getName(b)));
+  monsterSelect.innerHTML = monsters.map(m => `<option value="${m.id}">${getName(m)} (HP: ${formatNumber(m.hp)})</option>`).join('');
+  
+  // Populate dungeon select for miasma
+  const dungeonSelect = document.getElementById('dungeon-select');
+  dungeonSelect.innerHTML = data.dungeons.map(d => `<option value="${d.id}">${getName(d)}</option>`).join('');
+  
+  document.getElementById('calc-damage-btn').addEventListener('click', () => calculateDamage(data));
+  
+  // Auto-calculate
+  document.querySelectorAll('input, select').forEach(el => {
+    el.addEventListener('change', () => calculateDamage(data));
+  });
+  
+  calculateDamage(data);
+}
+
+function calculateDamage(data) {
+  const monsterId = parseInt(document.getElementById('monster-select').value);
+  const dungeonId = parseInt(document.getElementById('dungeon-select').value);
+  const miasmaLevel = parseInt(document.getElementById('miasma-level').value) || 1;
+  const playerAttack = parseInt(document.getElementById('player-attack').value) || 100;
+  const playerDefense = parseInt(document.getElementById('player-defense').value) || 50;
+  const playerHP = parseInt(document.getElementById('player-hp').value) || 500;
+  
+  const monster = data.monsters.find(m => m.id === monsterId);
+  if (!monster) return;
+  
+  // Calculate monster stats with miasma
+  // Formula from Python: base_param = (((500 * round(1 + dungeon_id / 4)) + (100 * dungeon_id)) + min(2500 * (miasma_level - 1), 10000))
+  const baseParam = ((500 * Math.round(1 + dungeonId / 4)) + (100 * dungeonId)) + Math.min(2500 * (miasmaLevel - 1), 10000);
+  const morePercent = (10 + (dungeonId * 2)) * miasmaLevel;
+  
+  const monsterHP = Math.floor((monster.hp + baseParam) * ((morePercent * 2 + 100) / 100));
+  const monsterATK = Math.floor((monster.atk + baseParam) * ((morePercent + 100) / 100));
+  const monsterDEF = Math.floor((monster.def + baseParam) * ((morePercent + 100) / 100));
+  
+  // Simple damage formula: damage = max(1, attack - defense)
+  const playerDamage = Math.max(1, playerAttack - monsterDEF);
+  const monsterDamage = Math.max(1, monsterATK - playerDefense);
+  
+  // Turns to kill
+  const turnsToKillMonster = Math.ceil(monsterHP / playerDamage);
+  const turnsToKillPlayer = Math.ceil(playerHP / monsterDamage);
+  
+  const canWin = turnsToKillMonster <= turnsToKillPlayer;
+  
+  // Display results
+  document.getElementById('dmg-monster-hp').textContent = formatNumber(monsterHP);
+  document.getElementById('dmg-monster-atk').textContent = formatNumber(monsterATK);
+  document.getElementById('dmg-monster-def').textContent = formatNumber(monsterDEF);
+  document.getElementById('dmg-player-deals').textContent = formatNumber(playerDamage);
+  document.getElementById('dmg-monster-deals').textContent = formatNumber(monsterDamage);
+  document.getElementById('dmg-turns-kill').textContent = turnsToKillMonster;
+  document.getElementById('dmg-turns-die').textContent = turnsToKillPlayer;
+  document.getElementById('dmg-result').textContent = canWin ? 'WIN' : 'LOSE';
+  document.getElementById('dmg-result').className = canWin ? 'stat-positive' : 'stat-negative';
 }
 
 // Initialize on page load
