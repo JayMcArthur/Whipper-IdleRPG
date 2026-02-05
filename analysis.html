@@ -9,62 +9,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
+  
 </head>
-<body><nav class="nav">
-    <div class="nav-container">
-      <a href="index.html" class="nav-brand"><img src="assets/images/logo.png" alt=""><span>Whipper Wiki</span></a>
-      <button class="nav-toggle">☰</button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li class="nav-dropdown">
-          <a href="#">Equipment</a>
-          <div class="nav-dropdown-content">
-            <a href="weapons.html">Weapons</a>
-            <a href="armor.html">Armor</a>
-            <a href="rings.html">Rings</a>
-          </div>
-        </li>
-        <li><a href="monsters.html">Monsters</a></li>
-        <li><a href="bosses.html">Bosses</a></li>
-        <li><a href="dungeons.html">Dungeons</a></li>
-        <li><a href="enchantments.html">Enchantments</a></li>
-        <li><a href="materials.html">Materials</a></li>
-        <li><a href="analysis.html" class="active">Analysis</a></li>
-        <li class="nav-dropdown">
-          <a href="#">Tools</a>
-          <div class="nav-dropdown-content">
-            <a href="calculator.html">Build Calculator</a>
-            <a href="compare.html">Item Comparison</a>
-            <a href="damage.html">Damage Calculator</a>
-          </div>
-        </li>
-        <li class="lang-picker"><select id="lang-select"><option value="en">English</option>
-            <option value="ja">日本語</option>
-            <option value="zh_CN">简体中文</option>
-            <option value="zh_TW">繁體中文</option>
-            <option value="ko">한국어</option>
-            <option value="es">Español</option>
-            <option value="pt">Português</option>
-            <option value="de">Deutsch</option>
-            <option value="fr">Français</option>
-            <option value="th">ไทย</option></select></li>
-      </ul>
-    </div>
-  </nav>
+<body>
+  <div id="wiki-header"></div>
+
   <main class="main">
     <div class="container">
       <header class="page-header"><h1>Level Analysis</h1><p>Equipment level progression showing corrosion costs and bonuses at each level.</p></header>
       <div id="analysis-container"><div class="loading">Loading...</div></div>
       <div class="card mt-3">
         <h3>How to Read</h3>
-        <p class="mt-1"><strong>Corrosion:</strong> Amount of corrosion needed to level up</p>
-        <p><strong>Cost:</strong> Corrosion cost for this level</p>
-        <p><strong>Total:</strong> Cumulative corrosion spent</p>
+        <p class="mt-1"><strong>Corrosion Req:</strong> Amount of corrosion needed on item to unlock this level</p>
+        <p><strong>Cost:</strong> Analysis points to reach this level</p>
+        <p><strong>Total:</strong> Cumulative analysis points spent</p>
         <p><strong>Weapon/Armor/Ring:</strong> Bonus unlocked at this level</p>
       </div>
     </div>
   </main>
-<footer class="footer"><div class="footer-content"><p>Whipper Wiki - Data from version 6.0</p></div></footer>
-  <script src="js/wiki.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", initAnalysisPage);</script>
-</body></html>
+
+  <div id="wiki-footer"></div>
+  <script src="js/helpers.js"></script>
+  <script src="js/pages/analysis.js"></script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fight Simulator - Whipper Wiki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .sim-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 900px) {
+      .sim-grid { grid-template-columns: 1fr; }
+    }
+    
+    .sim-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .section-header {
+      background: var(--accent-gold);
+      color: var(--bg-dark);
+      padding: 0.75rem 1rem;
+      font-weight: 600;
+      font-family: var(--font-heading);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .section-body {
+      padding: 1.5rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+    .form-group select,
+    .form-group input {
+      width: 100%;
+      padding: 0.625rem;
+      background: var(--bg-input);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      font-size: 0.9rem;
+    }
+    
+    .form-row {
+      display: flex;
+      gap: 1rem;
+    }
+    .form-row .form-group {
+      flex: 1;
+    }
+    
+    .radio-group {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .radio-option {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .radio-option:hover {
+      border-color: var(--accent-gold);
+    }
+    .radio-option input[type="radio"] {
+      accent-color: var(--accent-gold);
+    }
+    .radio-option.active {
+      border-color: var(--accent-gold);
+      background: rgba(245, 166, 35, 0.1);
+    }
+    
+    .key-input-row {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .key-input-row input {
+      flex: 1;
+    }
+    .key-input-row button {
+      white-space: nowrap;
+    }
+    
+    .key-info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      padding: 1rem;
+      background: var(--bg-surface);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .key-info-grid div {
+      padding: 0.25rem 0;
+    }
+    
+    .run-btn {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+    
+    /* Results */
+    .sim-summary {
+      margin-bottom: 1.5rem;
+    }
+    .sim-summary h3 {
+      margin-bottom: 1rem;
+      color: var(--accent-gold);
+    }
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 600px) {
+      .results-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .result-item {
+      text-align: center;
+      padding: 1rem;
+      background: var(--bg-surface);
+      border-radius: var(--radius-md);
+    }
+    .result-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+    }
+    .result-value.text-positive { color: #4ade80; }
+    .result-value.text-negative { color: #ff6b6b; }
+    .result-label {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      margin-top: 0.25rem;
+    }
+    
+    .sim-details h4 {
+      margin-bottom: 0.75rem;
+      color: var(--text-secondary);
+    }
+    .run-list {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .run-row {
+      display: flex;
+      gap: 1rem;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.85rem;
+    }
+    .run-row:hover {
+      background: rgba(245, 166, 35, 0.05);
+    }
+    .run-row.run-win {
+      background: rgba(74, 222, 128, 0.05);
+    }
+    .run-row.run-loss {
+      background: rgba(255, 107, 107, 0.05);
+    }
+    .run-row span {
+      flex: 1;
+    }
+    .text-positive { color: #4ade80; }
+    .text-negative { color: #ff6b6b; }
+    
+    /* No build warning */
+    .no-build-warning {
+      background: rgba(255, 107, 107, 0.1);
+      border: 1px solid #ff6b6b;
+      padding: 1rem;
+      border-radius: var(--radius-sm);
+      margin-bottom: 1rem;
+    }
+    .no-build-warning a {
+      color: var(--accent-gold);
+    }
+  </style>
+</head>
+<body>
+  <div id="wiki-header"></div>
+
+  <main class="main">
+    <div class="container">
+      <header class="page-header">
+        <h1>Fight Simulator</h1>
+        <p>Test your builds against dungeons. Select a story dungeon or enter a key for random dungeons.</p>
+      </header>
+
+      <div class="sim-grid">
+        <!-- Left: Setup -->
+        <div>
+          <div class="sim-section">
+            <div class="section-header">Build Selection</div>
+            <div class="section-body">
+              <div class="form-group">
+                <label>Select Saved Build</label>
+                <select id="build-select"></select>
+              </div>
+              <p class="text-muted" style="font-size:0.8rem">Create builds in the <a href="build-maker.html">Build Maker</a> tool.</p>
+            </div>
+          </div>
+
+          <div class="sim-section mt-2">
+            <div class="section-header">Dungeon Selection</div>
+            <div class="section-body">
+              <div class="form-group">
+                <label>Dungeon Type</label>
+                <select id="dungeon-type">
+                  <option value="story">Story Dungeon</option>
+                  <option value="random">Random Dungeon (Key)</option>
+                </select>
+              </div>
+
+              <div id="story-dungeon-group" class="form-group">
+                <label>Story Dungeon</label>
+                <select id="story-dungeon"></select>
+              </div>
+
+              <div id="random-dungeon-group" style="display: none;">
+                <div class="form-group">
+                  <label>Dungeon Key</label>
+                  <div class="key-input-row">
+                    <input type="number" id="dungeon-key" placeholder="Enter key (0-999999999)">
+                    <button id="generate-key-btn" class="btn btn-secondary">Random</button>
+                    <button id="parse-key-btn" class="btn btn-primary">Parse</button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Key Info</label>
+                  <div id="key-info">
+                    <span class="text-muted">Enter a key and click Parse to see dungeon details.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Miasma Level</label>
+                  <input type="number" id="miasma-level" value="50" min="0" max="100">
+                </div>
+                <div class="form-group">
+                  <label>Simulation Runs</label>
+                  <input type="number" id="num-runs" value="10" min="1" max="100">
+                </div>
+              </div>
+
+              <button id="run-sim-btn" class="btn btn-primary run-btn">Run Simulation</button>
+            </div>
+          </div>
+
+          <div class="card mt-2">
+            <h3>Random Dungeon Keys</h3>
+            <p class="text-muted mt-1" style="font-size:0.85rem">
+              Keys generate dungeons with varying difficulty and monster layouts. The key determines:
+            </p>
+            <ul class="text-muted mt-1" style="font-size:0.85rem; padding-left: 1.5rem;">
+              <li><strong>Front (0-2):</strong> Difficulty tier - Courage (skip 2), Judgment (skip 3), Wisdom (skip 4)</li>
+              <li><strong>Behind (0-3):</strong> Location - Canyon, Fortress, Mausoleum, Ancient Citadel</li>
+              <li><strong>MaxFloor (10-24):</strong> Total floors</li>
+              <li><strong>FloorTime (5-20):</strong> Minutes per floor</li>
+              <li><strong>StartNum (1-5):</strong> Starting monster position offset</li>
+            </ul>
+            <p class="text-muted mt-1" style="font-size:0.85rem">
+              For optimal farming, look for keys with MaxFloor=24 and FloorTime=20.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Results -->
+        <div>
+          <div class="sim-section">
+            <div class="section-header">Simulation Results</div>
+            <div class="section-body">
+              <div id="sim-results">
+                <p class="text-muted">Run a simulation to see results here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="wiki-footer"></div>
+  <script src="js/helpers.js"></script>
+  <script src="js/pages/fight-sim.js"></script>
+</body>
+</html>

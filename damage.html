@@ -32,45 +32,9 @@
     @media (max-width: 768px) { .tool-grid { grid-template-columns: 1fr; } .enchant-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
-<body><nav class="nav">
-    <div class="nav-container">
-      <a href="index.html" class="nav-brand"><img src="assets/images/logo.png" alt=""><span>Whipper Wiki</span></a>
-      <button class="nav-toggle">☰</button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li class="nav-dropdown">
-          <a href="#">Equipment</a>
-          <div class="nav-dropdown-content">
-            <a href="weapons.html">Weapons</a>
-            <a href="armor.html">Armor</a>
-            <a href="rings.html">Rings</a>
-          </div>
-        </li>
-        <li><a href="monsters.html">Monsters</a></li>
-        <li><a href="bosses.html">Bosses</a></li>
-        <li><a href="dungeons.html">Dungeons</a></li>
-        <li><a href="enchantments.html">Enchantments</a></li>
-        <li class="nav-dropdown">
-          <a href="#" class="active">Tools</a>
-          <div class="nav-dropdown-content">
-            <a href="calculator.html">Build Calculator</a>
-            <a href="compare.html">Item Comparison</a>
-            <a href="damage.html" class="active">Damage Calculator</a>
-          </div>
-        </li>
-        <li class="lang-picker"><select id="lang-select"><option value="en">English</option>
-            <option value="ja">日本語</option>
-            <option value="zh_CN">简体中文</option>
-            <option value="zh_TW">繁體中文</option>
-            <option value="ko">한국어</option>
-            <option value="es">Español</option>
-            <option value="pt">Português</option>
-            <option value="de">Deutsch</option>
-            <option value="fr">Français</option>
-            <option value="th">ไทย</option></select></li>
-      </ul>
-    </div>
-  </nav>
+<body>
+  <div id="wiki-header"></div>
+
   <main class="main">
     <div class="container">
       <header class="page-header"><h1>Damage Calculator</h1><p>Calculate damage against monsters with miasma scaling.</p></header>
@@ -78,34 +42,16 @@
       <div class="tool-grid">
         <div class="tool-section">
           <h3>Monster</h3>
-          <div class="form-group">
-            <label>Select Monster</label>
-            <select id="monster-select"></select>
-          </div>
-          <div class="form-group">
-            <label>Dungeon</label>
-            <select id="dungeon-select"></select>
-          </div>
-          <div class="form-group">
-            <label>Miasma Level</label>
-            <input type="number" id="miasma-level" value="50" min="0" max="100">
-          </div>
+          <div class="form-group"><label>Select Monster</label><select id="monster-select"></select></div>
+          <div class="form-group"><label>Dungeon</label><select id="dungeon-select"></select></div>
+          <div class="form-group"><label>Miasma Level</label><input type="number" id="miasma-level" value="50" min="0" max="100"></div>
         </div>
         
         <div class="tool-section">
           <h3>Your Stats</h3>
-          <div class="form-group">
-            <label>Attack</label>
-            <input type="number" id="player-attack" value="10000" min="1">
-          </div>
-          <div class="form-group">
-            <label>Defense</label>
-            <input type="number" id="player-defense" value="5000" min="1">
-          </div>
-          <div class="form-group">
-            <label>HP</label>
-            <input type="number" id="player-hp" value="50000" min="1">
-          </div>
+          <div class="form-group"><label>Attack</label><input type="number" id="player-attack" value="10000" min="1"></div>
+          <div class="form-group"><label>Defense</label><input type="number" id="player-defense" value="5000" min="1"></div>
+          <div class="form-group"><label>HP</label><input type="number" id="player-hp" value="50000" min="1"></div>
           <button id="calc-damage-btn" class="btn btn-primary mt-2" style="width:100%">Calculate</button>
         </div>
       </div>
@@ -126,7 +72,9 @@
       </div>
     </div>
   </main>
-<footer class="footer"><div class="footer-content"><p>Whipper Wiki - Data from version 6.0</p></div></footer>
-  <script src="js/wiki.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", initDamageCalculatorPage);</script>
-</body></html>
+
+  <div id="wiki-footer"></div>
+  <script src="js/helpers.js"></script>
+  <script src="js/pages/damage.js"></script>
+</body>
+</html>

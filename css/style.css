@@ -78,13 +78,14 @@ a:hover { color: var(--accent-amber); }
 .search-box input:focus { outline: none; border-color: var(--accent-gold); }
 .search-box::before { content: "🔍"; position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); font-size: 0.9rem; opacity: 0.5; }
 .filter-select { padding: 0.75rem 2rem 0.75rem 1rem; background: var(--bg-input); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); color: var(--text-primary); font-size: 0.9rem; cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2394a1b2' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.75rem center; }
-.table-container { overflow-x: auto; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); }
+.table-container { overflow-x: visible; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); }
 .data-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
 .data-table th, .data-table td { padding: 0.625rem 0.75rem; text-align: left; border-bottom: 1px solid var(--border-subtle); white-space: nowrap; }
-.data-table th { background: var(--bg-card); color: var(--text-secondary); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; cursor: pointer; user-select: none; position: sticky; top: 0; z-index: 10; }
+.data-table th { background: var(--bg-card); color: var(--text-secondary); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; cursor: pointer; user-select: none; top:0 ; z-index: 10; }
 .data-table th:hover { color: var(--accent-gold); }
 .data-table th.sorted-asc::after { content: " ▲"; font-size: 0.7em; }
 .data-table th.sorted-desc::after { content: " ▼"; font-size: 0.7em; }
+.data-table thead th { position: sticky; top: calc(var(--nav-height)); z-index: 20;}
 .data-table tbody tr { background: var(--bg-surface); transition: background var(--transition-fast); }
 .data-table tbody tr:nth-child(even) { background: var(--bg-card); }
 .data-table tbody tr:hover { background: var(--bg-card-hover); }
@@ -102,7 +103,8 @@ a:hover { color: var(--accent-amber); }
 .stat-positive { color: #22c55e; }
 .stat-negative { color: #ef4444; }
 .stat-zero { color: var(--text-muted); }
-.stat-growth { color: var(--accent-teal); font-size: 0.75em; }
+.stat-growth-positive { color: #22c55e; }
+.stat-growth-negative { color: #ef4444; }
 
 /* Badges */
 .badge { display: inline-block; padding: 0.2rem 0.5rem; font-size: 0.7rem; font-weight: 600; border-radius: var(--radius-sm); text-transform: uppercase; }
@@ -215,3 +217,104 @@ a:hover { color: var(--accent-amber); }
 .tab-btn.active { color: var(--accent-gold); background: var(--bg-card); }
 .tab-content { display: none; }
 .tab-content.active { display: block; }
+
+/* Random Dungeon Styles */
+.random-dungeon {
+  border-left: 3px solid var(--accent-teal);
+}
+
+.badge-random {
+  background: var(--accent-teal);
+  color: var(--bg-dark);
+  font-size: 0.65rem;
+  padding: 0.15rem 0.4rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.dungeon-details {
+  margin-top: 1rem;
+}
+
+.dungeon-details summary {
+  cursor: pointer;
+  color: var(--accent-teal);
+  font-size: 0.85rem;
+  padding: 0.5rem 0;
+}
+
+.dungeon-details summary:hover {
+  color: var(--accent-gold);
+}
+
+.dungeon-details[open] summary {
+  margin-bottom: 0.5rem;
+}
+
+/* Store link images */
+.store-link {
+  display: inline-block;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.store-link:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.store-link img {
+  height: 40px;
+  width: auto;
+}
+
+.hero-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Item icon large for comparison */
+.item-icon-lg {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* Highlighted row animation */
+tr.highlighted {
+  animation: highlight-pulse 2s ease-in-out;
+  background: rgba(245, 166, 35, 0.2);
+}
+
+@keyframes highlight-pulse {
+  0%, 100% { background: rgba(245, 166, 35, 0.2); }
+  50% { background: rgba(245, 166, 35, 0.4); }
+}
+
+/* Button danger style */
+.btn-danger {
+  background: #ff6b6b;
+  border-color: #ff6b6b;
+  color: white;
+}
+.btn-danger:hover {
+  background: #ee5a5a;
+  border-color: #ee5a5a;
+}
+
+/* Text colors */
+.text-positive {
+  color: #4ade80;
+}
+.text-negative {
+  color: #ff6b6b;
+}
+
+/* Tab content loading state */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+}
