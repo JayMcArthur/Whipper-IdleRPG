@@ -1,0 +1,86 @@
+{
+  "_meta": {
+    "description": "UI translations for the Whipper Wiki. These are separate from the game's langs.csv and can be hosted independently. If a translation is missing, it falls back to English (en).",
+    "languages": ["en", "ja", "zh_CN", "zh_TW", "ko", "es", "pt", "de", "fr", "th"],
+    "lastUpdated": "2026-02-05"
+  },
+  "nav": {
+    "home": { "en": "Home" },
+    "equipment": { "en": "Equipment" },
+    "weapons": { "en": "Weapons" },
+    "armor": { "en": "Armor" },
+    "rings": { "en": "Rings" },
+    "monsters": { "en": "Monsters" },
+    "bosses": { "en": "Bosses" },
+    "dungeons": { "en": "Dungeons" },
+    "enchantments": { "en": "Enchantments" },
+    "materials": { "en": "Materials" },
+    "analysis": { "en": "Analysis" },
+    "tools": { "en": "Tools" },
+    "guides": { "en": "Guides" },
+    "itemBook": { "en": "Item Book" },
+    "buildMaker": { "en": "Build Maker" },
+    "fightSim": { "en": "Fight Simulator" }
+  },
+  "guides": {
+    "buildBuilding": { "en": "Build Building" },
+    "statsForDummies": { "en": "Stats for Dummies" },
+    "itemsGuide": { "en": "Items & Where to Get Them" },
+    "storyProgression": { "en": "Story Progression" },
+    "enchantmentsGuide": { "en": "Enchantments Guide" },
+    "junkyardBosses": { "en": "Junkyard Boss Guide" }
+  },
+  "bosses": {
+    "storyBosses": { "en": "Story Bosses" },
+    "royalTombBosses": { "en": "Royal Tomb Bosses" },
+    "junkyardBosses": { "en": "Junkyard Bosses" },
+    "dungeonBosses": { "en": "Dungeon Bosses" },
+    "specialEffects": { "en": "Special Effects" },
+    "phases": { "en": "Phases" },
+    "drops": { "en": "Drops" },
+    "recommendations": { "en": "Recommendations" },
+    "attackType": { "en": "Attack Type" },
+    "vulnerability": { "en": "Vulnerability" },
+    "keyCost": { "en": "Key Cost" },
+    "proofOfSubjugation": { "en": "Proof of Subjugation" }
+  },
+  "dungeons": {
+    "storyDungeons": { "en": "Story Dungeons" },
+    "randomDungeons": { "en": "Random Dungeons" },
+    "recommendedKeys": { "en": "Recommended Keys" },
+    "key": { "en": "Key" },
+    "shortKey": { "en": "Short Key" },
+    "floors": { "en": "Floors" },
+    "startingMonster": { "en": "Starting Monster" },
+    "monsterProgression": { "en": "Monster Progression" }
+  },
+  "enchantments": {
+    "statEnchantments": { "en": "Stat Enchantments" },
+    "trainingEnchantments": { "en": "Training Enchantments" },
+    "skillEnchantments": { "en": "Skill Enchantments" },
+    "boostEnchantments": { "en": "Boost Enchantments" },
+    "otherEnchantments": { "en": "Other Enchantments" },
+    "levelRange": { "en": "Level Range" }
+  },
+  "common": {
+    "search": { "en": "Search..." },
+    "showing": { "en": "Showing" },
+    "of": { "en": "of" },
+    "all": { "en": "All" },
+    "name": { "en": "Name" },
+    "effect": { "en": "Effect" },
+    "level": { "en": "Level" },
+    "type": { "en": "Type" },
+    "stats": { "en": "Stats" },
+    "hp": { "en": "HP" },
+    "atk": { "en": "ATK" },
+    "def": { "en": "DEF" },
+    "spd": { "en": "SPD" },
+    "exp": { "en": "EXP" },
+    "luk": { "en": "LUK" },
+    "str": { "en": "STR" },
+    "vit": { "en": "VIT" },
+    "noResults": { "en": "No results found" },
+    "loading": { "en": "Loading..." }
+  }
+}

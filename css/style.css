@@ -186,14 +186,17 @@ a:hover { color: var(--accent-amber); }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .nav-links { display: none; }
+  .nav-links { display: none; flex-direction: column; position: absolute; top: var(--nav-height); left: 0; right: 0; background: var(--bg-card); border-bottom: 1px solid var(--border-subtle); padding: 1rem; gap: 0.25rem; z-index: 999; }
+  .nav-links.active { display: flex; }
   .nav-toggle { display: block; }
+  .nav-dropdown-content { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; padding-left: 1rem; background: transparent; }
   h1 { font-size: 1.75rem; }
   .hero h1 { font-size: 2rem; }
   .data-table { font-size: 0.75rem; }
   .data-table th, .data-table td { padding: 0.5rem; }
   .item-cell { min-width: 140px; }
   .boss-card { flex-direction: column; }
+  .lang-picker { margin-left: 0; }
 }
 
 /* Utilities */

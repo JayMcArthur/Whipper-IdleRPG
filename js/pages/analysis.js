@@ -1,6 +1,5 @@
-/* Whipper Wiki - Analysis Page */
+/* Whipper Wiki - Analysis Page (Reworked with DataTable formatting) */
 
-// Analysis data (level progression)
 const ANALYSIS_DATA = [
   { level: 1, corrosion: 0, cost: 1, total: 1, weapon: 'See Upgrade Limit', armor: 'See Upgrade Limit', ring: 'See Upgrade Limit' },
   { level: 2, corrosion: 0, cost: 2, total: 3, weapon: 'See Base Stats', armor: 'See Base Stats', ring: 'See Base Stats' },
@@ -25,42 +24,28 @@ const ANALYSIS_DATA = [
 ];
 
 function initAnalysisPage() {
-  const container = document.getElementById('analysis-container');
-  if (!container) return;
-  
-  let html = `
-    <div class="table-container">
-      <table class="analysis-table">
-        <thead>
-          <tr>
-            <th>Level</th>
-            <th>Corrosion Req</th>
-            <th>Cost</th>
-            <th>Total</th>
-            <th>Weapon</th>
-            <th>Armor</th>
-            <th>Ring</th>
-          </tr>
-        </thead>
-        <tbody>
-  `;
-  
-  ANALYSIS_DATA.forEach(row => {
-    html += `
-      <tr>
-        <td>LVL ${row.level}</td>
-        <td>${row.corrosion}</td>
-        <td>${row.cost}</td>
-        <td>${row.total}</td>
-        <td>${row.weapon}</td>
-        <td>${row.armor}</td>
-        <td>${row.ring}</td>
-      </tr>
-    `;
+  const table = new DataTable('analysis-table', {
+    renderRow: (row) => {
+      const isKeyLevel = [5, 7, 9, 13, 20].includes(row.level);
+      const rowStyle = isKeyLevel ? 'style="background:rgba(245,166,35,0.08);"' : '';
+      return `
+        <tr ${rowStyle}>
+          <td class="stat-col" style="font-weight:600;${isKeyLevel ? 'color:var(--accent-gold);' : ''}">LVL ${row.level}</td>
+          <td class="stat-col">${row.corrosion > 0 ? formatNumber(row.corrosion) : '<span class="stat-zero">-</span>'}</td>
+          <td class="stat-col">${row.cost}</td>
+          <td class="stat-col">${row.total}</td>
+          <td>${row.weapon}</td>
+          <td>${row.armor}</td>
+          <td>${row.ring}</td>
+        </tr>
+      `;
+    }
   });
   
-  html += '</tbody></table></div>';
-  container.innerHTML = html;
+  // Add nameId for sorting compatibility
+  const data = ANALYSIS_DATA.map(d => ({ ...d, nameId: `LVL ${d.level}` }));
+  table.setData(data);
+  table.bindSortHeaders();
 }
 
 document.addEventListener('DOMContentLoaded', initAnalysisPage);

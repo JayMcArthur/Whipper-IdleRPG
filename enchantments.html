@@ -9,15 +9,113 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
-  
 </head>
 <body>
   <div id="wiki-header"></div>
 
   <main class="main">
     <div class="container">
-      <header class="page-header"><h1>Enchantments</h1><p>All enchantments with effects and values at each level (1-100).</p></header>
-      <div id="enchantments-container"><div class="loading">Loading enchantments...</div></div>
+      <header class="page-header"><h1>Enchantments</h1></header>
+
+      <div class="table-controls">
+        <div class="search-box"><input type="text" id="search-input" placeholder="Search enchantments..."></div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="stat">Stat (Lv1-200)</button>
+        <button class="tab-btn" data-tab="skill">Skills (Single Level)</button>
+        <button class="tab-btn" data-tab="boost">Boosts</button>
+        <button class="tab-btn" data-tab="other">Other</button>
+      </div>
+
+      <div id="tab-stat" class="tab-content active">
+        <div class="card mb-3">
+          <p>Flat stat enchantments (Strength, Sturdy, Endurance, Agility) and training enchantments scale from Lv1 to 200. Levels above 190 can only be obtained through synthesis. Lucky caps at Lv8 (+8 Luck).</p>
+        </div>
+        <div class="table-container">
+          <table class="data-table" id="stat-enchant-table">
+            <thead><tr>
+              <th data-sort="nameId">Name</th>
+              <th>Effect</th>
+              <th data-sort="maxLv" class="stat-col">Max Lv</th>
+              <th class="stat-col">Lv1</th>
+              <th class="stat-col">Lv10</th>
+              <th class="stat-col">Lv50</th>
+              <th class="stat-col">Lv100</th>
+              <th class="stat-col">Lv150</th>
+              <th class="stat-col">Lv190</th>
+              <th class="stat-col">Lv195</th>
+              <th class="stat-col">Lv200</th>
+            </tr></thead>
+            <tbody><tr><td colspan="11" class="loading">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="tab-skill" class="tab-content">
+        <div class="card mb-3">
+          <p>Single-level abilities that can be placed on equipment via synthesis or acquired by investing 50 BP. Since they only cost 50 BP, an enchantment slot is typically better used for stat enchantments.</p>
+        </div>
+        <div class="table-container">
+          <table class="data-table" id="skill-enchant-table">
+            <thead><tr>
+              <th data-sort="nameId">Name</th>
+              <th>Effect</th>
+              <th data-sort="value" class="stat-col">Value</th>
+              <th>BP Alternative</th>
+            </tr></thead>
+            <tbody><tr><td colspan="4" class="loading">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="tab-boost" class="tab-content">
+        <div class="card mb-3">
+          <p>Boost enchantments are legendary abilities that appear on Legendary+ rarity equipment. They cannot be changed through synthesis. They augment the boost section of the stat page.</p>
+        </div>
+        <div class="table-container">
+          <table class="data-table" id="boost-enchant-table">
+            <thead><tr>
+              <th data-sort="nameId">Name</th>
+              <th>Effect</th>
+              <th data-sort="maxLv" class="stat-col">Max Lv</th>
+              <th>Values</th>
+            </tr></thead>
+            <tbody><tr><td colspan="4" class="loading">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="tab-other" class="tab-content">
+        <div class="card mb-3">
+          <p>Other enchantments that don't fit neatly into other categories, including upgrade limit increases.</p>
+        </div>
+        <div class="table-container">
+          <table class="data-table" id="other-enchant-table">
+            <thead><tr>
+              <th data-sort="nameId">Name</th>
+              <th>Effect</th>
+              <th data-sort="maxLv" class="stat-col">Max Lv</th>
+              <th>Values</th>
+            </tr></thead>
+            <tbody><tr><td colspan="4" class="loading">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!--div class="card mt-3">
+        <h3>High-Level Enchantment Stats (Lv190-200)</h3>
+        <p class="mt-1 text-muted">Levels above 190 require synthesis. Each Lv200 enchantment costs 1023 silver essences and 1024 base enchantments.</p>
+        <div class="table-container mt-2">
+          <table class="data-table" id="highlevel-table">
+            <thead><tr>
+              <th>Level</th><th>Flat (STR/VIT/HP)</th><th>Training</th><th>Agility</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div-->
+
     </div>
   </main>
 

@@ -4,6 +4,8 @@
 const WikiData = {
   equips: [], monsters: [], dungeons: [], customs: [], materials: [],
   translations: {},
+  uiTranslations: {},
+  randomKeys: { keys: [], specialKeys: [] },
   loaded: false
 };
 
@@ -65,6 +67,23 @@ function translate(key) {
     return row[colIndex] || row[1] || key;
   }
   return key;
+}
+
+// Translate a UI string using ui-translations.json
+// Usage: translateUI('nav.home') or translateUI('bosses.storyBosses')
+function translateUI(path) {
+  if (!path) return '';
+  const parts = path.split('.');
+  let obj = WikiData.uiTranslations;
+  for (const part of parts) {
+    if (!obj || !obj[part]) return path;
+    obj = obj[part];
+  }
+  // obj should now be { en: '...', ja: '...', ... }
+  if (typeof obj === 'object') {
+    return obj[currentLang] || obj['en'] || path;
+  }
+  return obj || path;
 }
 
 // Generate random dungeons
@@ -137,13 +156,15 @@ async function loadGameData() {
   if (WikiData.loaded) return WikiData;
   
   try {
-    const [equipsRes, monstersRes, dungeonsRes, customsRes, materialsRes, langsRes] = await Promise.all([
+    const [equipsRes, monstersRes, dungeonsRes, customsRes, materialsRes, langsRes, uiTransRes, randomKeysRes] = await Promise.all([
       fetch('data/equips.json'),
       fetch('data/monsters.json'),
       fetch('data/dungeons.json'),
       fetch('data/customs.json'),
       fetch('data/materials.json'),
-      fetch('data/langs.csv')
+      fetch('data/langs.csv'),
+      fetch('data/ui-translations.json').catch(() => ({ json: () => ({}) })),
+      fetch('data/random-keys.json').catch(() => ({ json: () => ({ keys: [], specialKeys: [] }) }))
     ]);
     
     WikiData.equips = (await equipsRes.json()).equips || [];
@@ -152,6 +173,9 @@ async function loadGameData() {
     WikiData.customs = (await customsRes.json()).customs || [];
     WikiData.materials = (await materialsRes.json()).materials || [];
     WikiData.translations = parseCSV(await langsRes.text());
+    WikiData.uiTranslations = await uiTransRes.json();
+    const keysData = await randomKeysRes.json();
+    WikiData.randomKeys = { keys: keysData.keys || [], specialKeys: keysData.specialKeys || [] };
     
     // Add random dungeons
     WikiData.randomDungeons = generateRandomDungeons();
@@ -216,7 +240,7 @@ function formatNumber(num) {
 }
 
 function formatStat(base, growth) {
-  let html;
+  let html = '';
   if (base === 0 && (!growth || growth === 0)) {
     html = '<span class="stat-zero">0</span>';
   } else if (base > 0) {
@@ -463,6 +487,7 @@ function injectHeaderFooter() {
   
   const isEquipPage = ['weapons', 'armor', 'rings'].includes(currentPage);
   const isToolPage = ['compare', 'damage', 'item-book', 'build-maker', 'fight-sim'].includes(currentPage);
+  const isGuidePage = ['guide-builds', 'guide-stats', 'guide-items', 'guide-story', 'guide-enchantments'].includes(currentPage);
   
   const header = `
     <nav class="nav">
@@ -485,6 +510,15 @@ function injectHeaderFooter() {
           <li><a href="enchantments.html"${currentPage === 'enchantments' ? ' class="active"' : ''}>Enchantments</a></li>
           <li><a href="materials.html"${currentPage === 'materials' ? ' class="active"' : ''}>Materials</a></li>
           <li><a href="analysis.html"${currentPage === 'analysis' ? ' class="active"' : ''}>Analysis</a></li>
+          <li class="nav-dropdown">
+            <a href="#"${isGuidePage ? ' class="active"' : ''}>Guides</a>
+            <div class="nav-dropdown-content">
+              <a href="guide-builds.html"${currentPage === 'guide-builds' ? ' class="active"' : ''}>Build Building</a>
+              <a href="guide-stats.html"${currentPage === 'guide-stats' ? ' class="active"' : ''}>Stats for Dummies</a>
+              <a href="guide-items.html"${currentPage === 'guide-items' ? ' class="active"' : ''}>Items Guide</a>
+              <a href="guide-story.html"${currentPage === 'guide-story' ? ' class="active"' : ''}>Story Progression</a>
+            </div>
+          </li>
           <li class="nav-dropdown">
             <a href="#"${isToolPage ? ' class="active"' : ''}>Tools</a>
             <div class="nav-dropdown-content">

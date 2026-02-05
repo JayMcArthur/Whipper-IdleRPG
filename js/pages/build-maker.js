@@ -2,20 +2,20 @@
 
 // Analysis Book boost types
 const BOOST_TYPES = [
-  { id: 0, name: 'HP', rate: 0.005, max: 300, effect: '0.5%/BP' },
-  { id: 1, name: 'STR', rate: 0.005, max: 300, effect: '0.5%/BP' },
-  { id: 2, name: 'VIT', rate: 0.005, max: 300, effect: '0.5%/BP' },
-  { id: 3, name: 'SPD', rate: 0.005, max: 300, effect: '0.5%/BP' },
-  { id: 4, name: 'LUK', rate: 0.005, max: 300, effect: '0.5%/BP' },
-  { id: 5, name: 'Drop Rate', rate: 0.0002, max: 300, effect: '0.02%/BP' },
-  { id: 6, name: 'Crit Rate', rate: 0.002, max: 300, effect: '0.2%/BP' },
-  { id: 7, name: 'Crit Damage', rate: 0.005, max: 300, effect: '0.5%/BP' },
-  { id: 8, name: 'Slashing Damage', rate: 0.005, max: 300, effect: '0.5%/BP' },
-  { id: 9, name: 'Bludgeoning Damage', rate: 0.005, max: 300, effect: '0.5%/BP' },
-  { id: 10, name: 'Piercing Damage', rate: 0.005, max: 300, effect: '0.5%/BP' },
-  { id: 11, name: 'Projectile Damage', rate: 0.005, max: 300, effect: '0.5%/BP' },
-  { id: 12, name: 'Poison Damage', rate: 0.0001, max: 300, effect: '0.01%/BP' },
-  { id: 13, name: 'XP Gain', rate: 0.005, max: 300, effect: '0.5%/BP' },
+  { id: 0, name: 'HP', rate: 0.005, max: 200, effect: '0.5%/BP' },
+  { id: 1, name: 'STR', rate: 0.005, max: 200, effect: '0.5%/BP' },
+  { id: 2, name: 'VIT', rate: 0.005, max: 200, effect: '0.5%/BP' },
+  { id: 3, name: 'SPD', rate: 0.005, max: 200, effect: '0.5%/BP' },
+  { id: 4, name: 'LUK', rate: 0.005, max: 200, effect: '0.5%/BP' },
+  { id: 5, name: 'Drop Rate', rate: 0.0002, max: 200, effect: '0.02%/BP' },
+  { id: 6, name: 'Crit Rate', rate: 0.002, max: 200, effect: '0.2%/BP' },
+  { id: 7, name: 'Crit Damage', rate: 0.005, max: 200, effect: '0.5%/BP' },
+  { id: 8, name: 'Slashing Damage', rate: 0.005, max: 200, effect: '0.5%/BP' },
+  { id: 9, name: 'Bludgeoning Damage', rate: 0.005, max: 200, effect: '0.5%/BP' },
+  { id: 10, name: 'Piercing Damage', rate: 0.005, max: 200, effect: '0.5%/BP' },
+  { id: 11, name: 'Projectile Damage', rate: 0.005, max: 200, effect: '0.5%/BP' },
+  { id: 12, name: 'Poison Damage', rate: 0.0001, max: 200, effect: '0.01%/BP' },
+  { id: 13, name: 'XP Gain', rate: 0.005, max: 200, effect: '0.5%/BP' },
   { id: 14, name: 'First Strike', rate: 0, max: 50, effect: '50BP = Always first', toggle: true },
   { id: 15, name: 'Poison', rate: 0, max: 50, effect: '50BP = Inflict poison', toggle: true },
   { id: 16, name: 'Unyielding', rate: 0, max: 50, effect: '50BP = Revive once', toggle: true },
@@ -25,9 +25,7 @@ const BOOST_TYPES = [
   { id: 20, name: 'Four Leaves', rate: 0, max: 50, effect: '50BP = 20% 2x drops', toggle: true },
   { id: 21, name: 'Five Lights', rate: 0, max: 50, effect: '50BP = 20% 2x XP', toggle: true },
   { id: 22, name: 'Sixth Sense', rate: 0, max: 50, effect: '50BP = 20% dodge', toggle: true },
-  { id: 23, name: 'Seven Blessings', rate: 0, max: 50, effect: '50BP = Double procs', toggle: true },
-  { id: 24, name: 'Treasure Hunter', rate: 0, max: 50, effect: '50BP = Easier top find treasure chests', toggle: true },
-  { id: 25, name: 'Water Source Detection', rate: 0, max: 50, effect: '50BP = Easier top find springs', toggle: true }
+  { id: 23, name: 'Seven Blessings', rate: 0, max: 50, effect: '50BP = Double procs', toggle: true }
 ];
 
 // Enchantment categories (Japanese nameId -> English)
