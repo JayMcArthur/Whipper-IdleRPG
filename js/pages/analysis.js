@@ -20,13 +20,18 @@ const ANALYSIS_DATA = [
   { level: 17, corrosion: 800, cost: 128, total: 847, weapon: '+5000 Upgrade Limit', armor: '+5000 Upgrade Limit', ring: 'x1.1 All Stats' },
   { level: 18, corrosion: 1100, cost: 128, total: 975, weapon: '+6000 Upgrade Limit', armor: '+6000 Upgrade Limit', ring: 'x1.2 All Stats' },
   { level: 19, corrosion: 1500, cost: 128, total: 1103, weapon: '+9900 Upgrade Limit', armor: '+9900 Upgrade Limit', ring: 'x1.3 All Stats' },
-  { level: 20, corrosion: 2000, cost: 128, total: 1231, weapon: '+19000 Upgrade Limit', armor: '+19000 Upgrade Limit', ring: 'Better Enchants' }
+  { level: 20, corrosion: 2000, cost: 128, total: 1231, weapon: '+19000 Upgrade Limit', armor: '+19000 Upgrade Limit', ring: 'Better Enchants' },
+  { level: 21, corrosion: 2000, cost: 128, total: 1359, weapon: '+10000 Upgrade Limit', armor: '+10000 Upgrade Limit', ring: 'x1.3 HP Boost' },
+  { level: 22, corrosion: 2000, cost: 128, total: 1487, weapon: '+10000 Upgrade Limit', armor: '+10000 Upgrade Limit', ring: 'x1.2 All Stats' },
+  { level: 23, corrosion: 2000, cost: 128, total: 1615, weapon: '+10000 Upgrade Limit', armor: '+10000 Upgrade Limit', ring: '1.3 VIT Boost' },
+  { level: 24, corrosion: 2000, cost: 128, total: 1743, weapon: '+10000 Upgrade Limit', armor: '+10000 Upgrade Limit', ring: 'x1.3 All Stats' },
+  { level: 25, corrosion: 2000, cost: 128, total: 1871, weapon: '+10000 Upgrade Limit', armor: '+10000 Upgrade Limit', ring: 'x1.3 STR Boost' }
 ];
 
 function initAnalysisPage() {
   const table = new DataTable('analysis-table', {
     renderRow: (row) => {
-      const isKeyLevel = [5, 7, 9, 13, 20].includes(row.level);
+      const isKeyLevel = [10, 15, 20].includes(row.level);
       const rowStyle = isKeyLevel ? 'style="background:rgba(245,166,35,0.08);"' : '';
       return `
         <tr ${rowStyle}>
