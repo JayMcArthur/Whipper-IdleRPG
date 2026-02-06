@@ -1,8 +1,8 @@
-/* Whipper Wiki - Dungeons Page (Reworked) */
+/* Whipper Wiki - Dungeons Page */
 
 async function initDungeonsPage() {
   const data = await loadGameData();
-  
+
   // Tab switching
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -12,7 +12,7 @@ async function initDungeonsPage() {
       document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
     });
   });
-  
+
   // Render story dungeons
   const container = document.getElementById('dungeons-container');
   if (container) {
@@ -21,9 +21,6 @@ async function initDungeonsPage() {
   
   // Render recommended keys
   renderKeysTable(data);
-  
-  // Render special keys
-  renderSpecialKeys(data);
 }
 
 function renderDungeonCard(dungeon, data) {
@@ -78,52 +75,30 @@ function renderKeysTable(data) {
       `;
     }
   });
-  
+
   // If no keys filled in yet, show all as placeholders
   const displayKeys = filledKeys.length > 0 ? filledKeys : keys;
-  
+
   // Add nameId to each key for DataTable compatibility
   const tableData = displayKeys.map(k => ({ ...k, nameId: k.dungeon || '' }));
   keysTable.setData(tableData);
   keysTable.bindSortHeaders();
-  
+
   // Search
   document.getElementById('key-search')?.addEventListener('input', (e) => keysTable.setSearch(e.target.value));
-  
+
   // Dungeon filter
   const dungeonFilter = document.getElementById('filter-dungeon');
   if (dungeonFilter) {
     const dungeonNames = [...new Set(displayKeys.map(k => k.dungeon).filter(Boolean))].sort();
-    dungeonFilter.innerHTML = '<option value="">All Dungeons</option>' + 
+    dungeonFilter.innerHTML = '<option value="">All Dungeons</option>' +
       dungeonNames.map(d => `<option value="${d}">${d}</option>`).join('');
     dungeonFilter.addEventListener('change', (e) => keysTable.setFilter('dungeon', e.target.value));
   }
-  
+
   // Update count
   const countEl = document.getElementById('key-count');
   if (countEl) countEl.textContent = `${displayKeys.length} of ${keys.length}`;
-}
-
-function renderSpecialKeys(data) {
-  const container = document.getElementById('special-keys-container');
-  if (!container) return;
-  
-  const specialKeys = data.randomKeys.specialKeys || [];
-  
-  container.innerHTML = specialKeys.map(key => `
-    <div class="card mb-2">
-      <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
-        <code style="background:var(--accent-gold);color:var(--bg-dark);padding:0.3rem 0.75rem;border-radius:4px;font-size:1rem;font-weight:600;">${key.key}</code>
-        <h3 style="font-size:1.1rem;">${key.dungeon}</h3>
-        <span class="text-muted">${key.floors}F • ${key.minutesPerFloor} min/floor</span>
-      </div>
-      <p class="mt-1" style="color:var(--text-secondary);">${key.notes}</p>
-    </div>
-  `).join('');
-  
-  if (specialKeys.length === 0) {
-    container.innerHTML = '<p class="text-muted">No special keys defined yet.</p>';
-  }
 }
 
 document.addEventListener('DOMContentLoaded', initDungeonsPage);

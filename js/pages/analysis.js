@@ -1,4 +1,4 @@
-/* Whipper Wiki - Analysis Page (Reworked with DataTable formatting) */
+/* Whipper Wiki - Analysis Page */
 
 const ANALYSIS_DATA = [
   { level: 1, corrosion: 0, cost: 1, total: 1, weapon: 'See Upgrade Limit', armor: 'See Upgrade Limit', ring: 'See Upgrade Limit' },

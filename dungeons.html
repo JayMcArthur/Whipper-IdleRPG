@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
+  
 </head>
 <body>
   <div id="wiki-header"></div>
@@ -16,11 +17,10 @@
   <main class="main">
     <div class="container">
       <header class="page-header"><h1>Dungeons</h1></header>
-      
+
       <div class="tabs">
         <button class="tab-btn active" data-tab="story">Story Dungeons</button>
         <button class="tab-btn" data-tab="random">Recommended Keys</button>
-        <button class="tab-btn" data-tab="special">Special Keys</button>
       </div>
 
       <div id="tab-story" class="tab-content active">
@@ -43,8 +43,8 @@
             <thead><tr>
               <th data-sort="id" class="stat-col">#</th>
               <th data-sort="dungeon">Dungeon</th>
-              <th data-sort="longKey">Long Key</th>
-              <th data-sort="shortKey">Short Key</th>
+              <th data-sort="shortKey">5min Key</th>
+              <th data-sort="longKey">20min Key</th>
               <th data-sort="startingMonster">Starting Monster</th>
               <th>Monster Progression</th>
               <th class="stat-col">Floors</th>
@@ -54,14 +54,6 @@
             <tbody><tr><td colspan="9" class="loading">Loading keys...</td></tr></tbody>
           </table>
         </div>
-      </div>
-
-      <div id="tab-special" class="tab-content">
-        <div class="card mb-3">
-          <h3>Special Keys</h3>
-          <p class="mt-1">Keys with special purposes beyond standard random dungeons.</p>
-        </div>
-        <div id="special-keys-container"></div>
       </div>
     </div>
   </main>

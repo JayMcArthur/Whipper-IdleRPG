@@ -10,468 +10,221 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .build-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }
-    @media (max-width: 1024px) {
-      .build-grid { grid-template-columns: 1fr; }
-    }
-    
-    .build-section {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-    }
-    .section-header {
-      background: var(--accent-gold);
-      color: var(--bg-dark);
-      padding: 0.75rem 1rem;
-      font-weight: 600;
-      font-family: var(--font-heading);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .section-body {
-      padding: 1rem;
-    }
-    
-    /* Item Designer */
-    .item-row {
-      display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 1rem;
-      margin-bottom: 1rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-    .item-row:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
-    }
-    .item-label {
-      font-weight: 600;
-      color: var(--accent-teal);
-      padding-top: 0.5rem;
-    }
-    .item-controls {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.5rem;
-    }
-    .item-controls select,
-    .item-controls input {
-      width: 100%;
-      padding: 0.5rem;
-      background: var(--bg-input);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-primary);
-      font-size: 0.85rem;
-    }
-    .item-controls select {
-      grid-column: span 2;
-    }
-    .item-controls label {
-      font-size: 0.7rem;
-      color: var(--text-secondary);
-      display: block;
-      margin-bottom: 0.25rem;
-    }
-    .max-upgrade-display {
-      font-size: 0.75rem;
-      color: var(--accent-gold);
-      margin-top: 0.25rem;
-    }
-    
-    /* Enchants Grid */
-    .enchant-row {
-      display: grid;
-      grid-template-columns: 1fr 80px;
-      gap: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .enchant-row select {
-      padding: 0.375rem;
-      background: var(--bg-input);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-primary);
-      font-size: 0.8rem;
-    }
-    
-    /* Analysis Book */
-    .boost-table {
-      width: 100%;
-      font-size: 0.85rem;
-    }
-    .boost-table th {
-      text-align: left;
-      padding: 0.5rem;
-      background: var(--bg-surface);
-      color: var(--text-secondary);
-      font-size: 0.7rem;
-      text-transform: uppercase;
-    }
-    .boost-table td {
-      padding: 0.375rem 0.5rem;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-    .boost-table .boost-effect {
-      font-size: 0.75rem;
-      color: var(--text-secondary);
-    }
-    .boost-table .boost-total {
-      color: var(--accent-gold);
-      font-weight: 600;
-      text-align: right;
-    }
-    .boost-input {
-      width: 60px;
-      padding: 0.25rem;
-      background: var(--bg-input);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-primary);
-      text-align: center;
-    }
-    .boost-toggle {
-      width: 18px;
-      height: 18px;
-      accent-color: var(--accent-gold);
-    }
-    
-    /* BP Display */
-    .bp-display {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.75rem;
-      background: var(--bg-surface);
-      border-radius: var(--radius-sm);
-      margin-bottom: 1rem;
-    }
-    .bp-item {
-      text-align: center;
-    }
-    .bp-value {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--accent-gold);
-    }
-    .bp-label {
-      font-size: 0.65rem;
-      color: var(--text-secondary);
-      text-transform: uppercase;
-    }
-    .text-negative {
-      color: #ff6b6b;
-    }
-    
-    /* Character Stats */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.75rem;
-    }
-    .stat-box {
-      background: var(--bg-surface);
-      border-radius: var(--radius-md);
-      padding: 1rem;
-      text-align: center;
-    }
-    .stat-value {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--accent-gold);
-    }
-    .stat-label {
-      font-size: 0.7rem;
-      color: var(--text-secondary);
-      text-transform: uppercase;
-    }
-    .stat-box.stat-main {
-      grid-column: span 1;
-    }
-    
-    /* Combat Stats */
-    .combat-stats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.75rem;
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--border-subtle);
-    }
-    .combat-stat {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.5rem;
-      background: var(--bg-surface);
-      border-radius: var(--radius-sm);
-    }
-    .combat-stat-label {
-      color: var(--text-secondary);
-      font-size: 0.85rem;
-    }
-    .combat-stat-value {
-      font-weight: 600;
-      color: var(--text-primary);
-    }
-    
-    /* Saved Builds */
-    .saved-build {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.75rem;
-      background: var(--bg-surface);
-      border-radius: var(--radius-sm);
-      margin-bottom: 0.5rem;
-    }
-    .build-info strong {
-      display: block;
-      color: var(--text-primary);
-    }
-    .build-info small {
-      color: var(--text-secondary);
-    }
-    .build-actions {
-      display: flex;
-      gap: 0.5rem;
-    }
-    .btn-sm {
-      padding: 0.25rem 0.5rem;
-      font-size: 0.75rem;
-    }
-    .btn-danger {
-      background: #ff6b6b;
-      border-color: #ff6b6b;
-    }
-    
-    /* Level input */
-    .level-input-section {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-      padding: 1rem;
-      background: var(--bg-surface);
-      border-radius: var(--radius-md);
-    }
-    .level-input-section label {
-      font-weight: 600;
-    }
-    .level-input-section input {
-      width: 100px;
-      padding: 0.5rem;
-      background: var(--bg-input);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-primary);
-      font-size: 1rem;
-    }
+    .build-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
+    @media (max-width:1024px) { .build-grid { grid-template-columns:1fr; } }
+    .build-section { background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-lg); overflow:hidden; }
+    .section-header { background:var(--accent-gold); color:var(--bg-dark); padding:0.75rem 1rem; font-weight:600; font-family:var(--font-heading); text-transform:uppercase; letter-spacing:0.05em; font-size:0.9rem; }
+    .section-body { padding:1rem; }
+
+    /* Autocomplete search */
+    .auto-wrap { position:relative; }
+    .auto-wrap input { width:100%; padding:0.5rem 0.75rem; background:var(--bg-input); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); color:var(--text-primary); font-size:0.85rem; }
+    .auto-wrap input:focus { outline:none; border-color:var(--accent-gold); }
+    .auto-list { position:absolute; top:100%; left:0; right:0; max-height:200px; overflow-y:auto; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:0 0 var(--radius-sm) var(--radius-sm); z-index:100; display:none; }
+    .auto-list.open { display:block; }
+    .auto-option { padding:0.5rem 0.75rem; cursor:pointer; font-size:0.85rem; display:flex; align-items:center; gap:0.5rem; }
+    .auto-option:hover, .auto-option.highlighted { background:var(--bg-card-hover); color:var(--accent-gold); }
+    .auto-option img { width:20px; height:20px; image-rendering:pixelated; }
+    .selected-item { display:flex; align-items:center; gap:0.5rem; padding:0.4rem 0; font-size:0.85rem; color:var(--accent-gold); font-weight:500; }
+    .selected-item img { width:24px; height:24px; image-rendering:pixelated; }
+
+    /* Equipment panels */
+    .equip-panel { margin-bottom:1rem; padding-bottom:1rem; border-bottom:1px solid var(--border-subtle); }
+    .equip-panel:last-child { margin-bottom:0; padding-bottom:0; border-bottom:none; }
+    .equip-label { font-weight:600; color:var(--accent-teal); margin-bottom:0.5rem; font-size:0.9rem; }
+    .equip-fields { display:grid; grid-template-columns:repeat(3,1fr); gap:0.5rem; margin-top:0.5rem; }
+    .equip-fields label { font-size:0.65rem; color:var(--text-secondary); display:block; margin-bottom:0.15rem; text-transform:uppercase; }
+    .equip-fields input, .equip-fields select { width:100%; padding:0.4rem; background:var(--bg-input); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); color:var(--text-primary); font-size:0.85rem; }
+    .max-upgrade-display { font-size:0.7rem; color:var(--accent-gold); margin-top:0.15rem; }
+
+    /* Enchants */
+    .enchant-slot { display:grid; grid-template-columns:1fr 80px; gap:0.5rem; margin-bottom:0.5rem; }
+    .enchant-slot select { padding:0.35rem; background:var(--bg-input); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); color:var(--text-primary); font-size:0.8rem; }
+    .enchant-group-label { font-size:0.7rem; color:var(--text-muted); text-transform:uppercase; margin:0.75rem 0 0.25rem; }
+    .enchant-group-label:first-child { margin-top:0; }
+
+    /* Stats display - game-like */
+    .game-stats { background:var(--bg-surface); border-radius:var(--radius-md); padding:1rem; }
+    .stat-row { display:flex; justify-content:space-between; padding:0.4rem 0; border-bottom:1px solid rgba(255,255,255,0.05); font-size:0.9rem; }
+    .stat-row:last-child { border-bottom:none; }
+    .stat-row .label { color:var(--text-secondary); }
+    .stat-row .val { font-weight:600; color:var(--text-primary); }
+    .stat-row .val.gold { color:var(--accent-gold); }
+    .stat-row .val.teal { color:var(--accent-teal); }
+    .stat-section-title { font-size:0.7rem; text-transform:uppercase; color:var(--accent-gold); margin:0.75rem 0 0.25rem; letter-spacing:0.05em; font-weight:600; }
+    .stat-section-title:first-child { margin-top:0; }
+
+    /* Boost table */
+    .boost-table { width:100%; font-size:0.85rem; border-collapse:collapse; }
+    .boost-table th { text-align:left; padding:0.5rem; background:var(--bg-surface); color:var(--text-secondary); font-size:0.7rem; text-transform:uppercase; }
+    .boost-table td { padding:0.375rem 0.5rem; border-bottom:1px solid var(--border-subtle); }
+    .boost-table .boost-effect { font-size:0.75rem; color:var(--text-secondary); }
+    .boost-table .boost-total { color:var(--accent-gold); font-weight:600; text-align:right; }
+    .boost-input { width:60px; padding:0.25rem; background:var(--bg-input); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); color:var(--text-primary); text-align:center; }
+    .boost-toggle { width:18px; height:18px; accent-color:var(--accent-gold); }
+
+    /* BP display */
+    .bp-display { display:flex; justify-content:space-between; padding:0.75rem; background:var(--bg-surface); border-radius:var(--radius-sm); margin-bottom:1rem; }
+    .bp-item { text-align:center; }
+    .bp-value { font-size:1.25rem; font-weight:700; color:var(--accent-gold); }
+    .bp-label { font-size:0.65rem; color:var(--text-secondary); text-transform:uppercase; }
+    .text-negative { color:#ff6b6b; }
+
+    /* Saved builds */
+    .saved-build { display:flex; justify-content:space-between; align-items:center; padding:0.75rem; background:var(--bg-surface); border-radius:var(--radius-sm); margin-bottom:0.5rem; }
+    .build-info strong { display:block; color:var(--text-primary); }
+    .build-info small { color:var(--text-secondary); font-size:0.75rem; }
+    .build-actions { display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; }
+    .btn-sm { padding:0.25rem 0.5rem; font-size:0.75rem; }
+    .btn-danger { background:#ff6b6b; border-color:#ff6b6b; }
+
+    .save-bar { display:flex; gap:0.75rem; margin-bottom:1rem; flex-wrap:wrap; align-items:center; }
+    .save-bar .btn { padding:0.5rem 1rem; }
+
+    #import-build-file { display:none; }
   </style>
 </head>
 <body>
   <div id="wiki-header"></div>
-
   <main class="main">
     <div class="container">
       <header class="page-header">
         <h1>Build Maker</h1>
-        <p>Design your equipment loadout with enchantments and analysis boosts. Save builds for the Fight Simulator.</p>
+        <p>Design your equipment loadout with enchantments and analysis boosts. Level always starts at 1.</p>
       </header>
 
-      <div class="level-input-section">
-        <label>Player Level:</label>
-        <input type="number" id="player-level" value="50" min="1" max="999">
+      <div class="save-bar">
         <button id="save-build-btn" class="btn btn-primary">Save Build</button>
+        <button id="import-build-btn" class="btn btn-secondary">Import Build</button>
+        <input type="file" id="import-build-file" accept=".json">
+        <span style="flex:1;"></span>
       </div>
 
       <div class="build-grid">
-        <!-- Left Column: Item Designer -->
+        <!-- Left: Equipment & Enchantments -->
         <div>
           <div class="build-section">
-            <div class="section-header">Item Designer</div>
+            <div class="section-header">Equipment</div>
             <div class="section-body">
               <!-- Weapon -->
-              <div class="item-row">
-                <div class="item-label">Weapon</div>
-                <div class="item-controls">
-                  <select id="weapon-select" class="equip-select"></select>
-                  <div>
-                    <label>Upgrade Cap</label>
-                    <input type="number" id="weapon-upgrade" class="equip-input" value="0" min="0">
-                    <div class="max-upgrade-display">Max: <span id="weapon-max-upgrade">0</span></div>
-                  </div>
-                  <div>
-                    <label>Analysis</label>
-                    <input type="number" id="weapon-analysis" class="equip-input" value="1" min="1" max="20">
-                  </div>
-                  <div>
-                    <label>Corrosion</label>
-                    <input type="number" id="weapon-corrosion" class="equip-input" value="0" min="0" max="2500">
-                  </div>
+              <div class="equip-panel" id="weapon-panel">
+                <div class="equip-label">Weapon</div>
+                <div class="auto-wrap">
+                  <input type="text" id="weapon-input" placeholder="Type weapon name..." autocomplete="off">
+                  <div class="auto-list" id="weapon-list"></div>
+                </div>
+                <div class="selected-item" id="weapon-selected"></div>
+                <div class="equip-fields">
+                  <div><label>Upgrade Cap</label><input type="number" id="weapon-upgrade" class="equip-input" value="0" min="0"><div class="max-upgrade-display">Max: <span id="weapon-max-upgrade">0</span></div></div>
+                  <div><label>Analysis</label><input type="number" id="weapon-analysis" class="equip-input" value="1" min="1" max="20"></div>
+                  <div><label>Corrosion</label><input type="number" id="weapon-corrosion" class="equip-input" value="0" min="0" max="2500"></div>
                 </div>
               </div>
               <!-- Armor -->
-              <div class="item-row">
-                <div class="item-label">Armor</div>
-                <div class="item-controls">
-                  <select id="armor-select" class="equip-select"></select>
-                  <div>
-                    <label>Upgrade Cap</label>
-                    <input type="number" id="armor-upgrade" class="equip-input" value="0" min="0">
-                    <div class="max-upgrade-display">Max: <span id="armor-max-upgrade">0</span></div>
-                  </div>
-                  <div>
-                    <label>Analysis</label>
-                    <input type="number" id="armor-analysis" class="equip-input" value="1" min="1" max="20">
-                  </div>
-                  <div>
-                    <label>Corrosion</label>
-                    <input type="number" id="armor-corrosion" class="equip-input" value="0" min="0" max="2500">
-                  </div>
+              <div class="equip-panel" id="armor-panel">
+                <div class="equip-label">Armor</div>
+                <div class="auto-wrap">
+                  <input type="text" id="armor-input" placeholder="Type armor name..." autocomplete="off">
+                  <div class="auto-list" id="armor-list"></div>
+                </div>
+                <div class="selected-item" id="armor-selected"></div>
+                <div class="equip-fields">
+                  <div><label>Upgrade Cap</label><input type="number" id="armor-upgrade" class="equip-input" value="0" min="0"><div class="max-upgrade-display">Max: <span id="armor-max-upgrade">0</span></div></div>
+                  <div><label>Analysis</label><input type="number" id="armor-analysis" class="equip-input" value="1" min="1" max="20"></div>
+                  <div><label>Corrosion</label><input type="number" id="armor-corrosion" class="equip-input" value="0" min="0" max="2500"></div>
                 </div>
               </div>
               <!-- Ring -->
-              <div class="item-row">
-                <div class="item-label">Ring</div>
-                <div class="item-controls">
-                  <select id="ring-select" class="equip-select"></select>
-                  <div>
-                    <label>Analysis</label>
-                    <input type="number" id="ring-analysis" class="equip-input" value="1" min="1" max="20">
-                  </div>
-                  <div>
-                    <label>Corrosion</label>
-                    <input type="number" id="ring-corrosion" class="equip-input" value="0" min="0" max="2500">
-                  </div>
+              <div class="equip-panel" id="ring-panel">
+                <div class="equip-label">Ring</div>
+                <div class="auto-wrap">
+                  <input type="text" id="ring-input" placeholder="Type ring name..." autocomplete="off">
+                  <div class="auto-list" id="ring-list"></div>
+                </div>
+                <div class="selected-item" id="ring-selected"></div>
+                <div class="equip-fields" style="grid-template-columns:1fr 1fr;">
+                  <div><label>Analysis</label><input type="number" id="ring-analysis" class="equip-input" value="1" min="1" max="20"></div>
+                  <div><label>Corrosion</label><input type="number" id="ring-corrosion" class="equip-input" value="0" min="0" max="2500"></div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="build-section mt-2">
+          <div class="build-section" style="margin-top:1rem;">
             <div class="section-header">Enchantments</div>
             <div class="section-body">
-              <p class="text-muted mb-1" style="font-size:0.75rem">Weapon Enchants</p>
-              <div class="enchant-row"><select id="enchant-cat-1"></select><select id="enchant-lvl-1" disabled></select></div>
-              <div class="enchant-row"><select id="enchant-cat-2"></select><select id="enchant-lvl-2" disabled></select></div>
-              <div class="enchant-row"><select id="enchant-cat-3"></select><select id="enchant-lvl-3" disabled></select></div>
-              <p class="text-muted mb-1 mt-2" style="font-size:0.75rem">Armor Enchants</p>
-              <div class="enchant-row"><select id="enchant-cat-4"></select><select id="enchant-lvl-4" disabled></select></div>
-              <div class="enchant-row"><select id="enchant-cat-5"></select><select id="enchant-lvl-5" disabled></select></div>
-              <div class="enchant-row"><select id="enchant-cat-6"></select><select id="enchant-lvl-6" disabled></select></div>
-              <p class="text-muted mb-1 mt-2" style="font-size:0.75rem">Ring Enchants</p>
-              <div class="enchant-row"><select id="enchant-cat-7"></select><select id="enchant-lvl-7" disabled></select></div>
-              <div class="enchant-row"><select id="enchant-cat-8"></select><select id="enchant-lvl-8" disabled></select></div>
-              <div class="enchant-row"><select id="enchant-cat-9"></select><select id="enchant-lvl-9" disabled></select></div>
+              <div class="enchant-group-label">Weapon Enchants</div>
+              <div class="enchant-slot"><select id="enchant-cat-1"></select><select id="enchant-lvl-1" disabled></select></div>
+              <div class="enchant-slot"><select id="enchant-cat-2"></select><select id="enchant-lvl-2" disabled></select></div>
+              <div class="enchant-slot"><select id="enchant-cat-3"></select><select id="enchant-lvl-3" disabled></select></div>
+              <div class="enchant-group-label">Armor Enchants</div>
+              <div class="enchant-slot"><select id="enchant-cat-4"></select><select id="enchant-lvl-4" disabled></select></div>
+              <div class="enchant-slot"><select id="enchant-cat-5"></select><select id="enchant-lvl-5" disabled></select></div>
+              <div class="enchant-slot"><select id="enchant-cat-6"></select><select id="enchant-lvl-6" disabled></select></div>
+              <div class="enchant-group-label">Ring Enchants</div>
+              <div class="enchant-slot"><select id="enchant-cat-7"></select><select id="enchant-lvl-7" disabled></select></div>
+              <div class="enchant-slot"><select id="enchant-cat-8"></select><select id="enchant-lvl-8" disabled></select></div>
+              <div class="enchant-slot"><select id="enchant-cat-9"></select><select id="enchant-lvl-9" disabled></select></div>
             </div>
           </div>
         </div>
 
-        <!-- Right Column: Analysis Book & Stats -->
+        <!-- Right: Stats & Boosts -->
         <div>
           <div class="build-section">
+            <div class="section-header">Character Stats (Lv 1)</div>
+            <div class="section-body">
+              <div class="game-stats" id="stat-display">
+                <div class="stat-section-title">Base Stats</div>
+                <div class="stat-row"><span class="label">HP</span><span class="val gold" id="r-hp">0</span></div>
+                <div class="stat-row"><span class="label">STR</span><span class="val gold" id="r-str">0</span></div>
+                <div class="stat-row"><span class="label">VIT</span><span class="val gold" id="r-vit">0</span></div>
+                <div class="stat-row"><span class="label">SPD</span><span class="val" id="r-spd">0</span></div>
+                <div class="stat-row"><span class="label">LUK</span><span class="val" id="r-luk">0</span></div>
+                <div class="stat-section-title">Per Level</div>
+                <div class="stat-row"><span class="label">HP / Lv</span><span class="val teal" id="r-hplv">0</span></div>
+                <div class="stat-row"><span class="label">STR / Lv</span><span class="val teal" id="r-strlv">0</span></div>
+                <div class="stat-row"><span class="label">VIT / Lv</span><span class="val teal" id="r-vitlv">0</span></div>
+                <div class="stat-section-title">Combat</div>
+                <div class="stat-row"><span class="label">Attack (Lv 1)</span><span class="val gold" id="r-attack">0</span></div>
+                <div class="stat-row"><span class="label">Defense (Lv 1)</span><span class="val gold" id="r-defense">0</span></div>
+                <div class="stat-row"><span class="label">Weapon Power</span><span class="val" id="r-wpow">0</span></div>
+                <div class="stat-row"><span class="label">Armor Power</span><span class="val" id="r-apow">0</span></div>
+                <div class="stat-row"><span class="label">Attack Kind</span><span class="val" id="r-atkind">-</span></div>
+                <div class="stat-row"><span class="label">Set Bonus</span><span class="val" id="r-set">No</span></div>
+                <div class="stat-row"><span class="label">Ring Ability</span><span class="val" id="r-ringability">-</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="build-section" style="margin-top:1rem;">
             <div class="section-header">Analysis Book</div>
             <div class="section-body">
               <div class="bp-display">
-                <div class="bp-item">
-                  <div class="bp-value" id="available-bp">0</div>
-                  <div class="bp-label">Available BP</div>
-                </div>
-                <div class="bp-item">
-                  <div class="bp-value" id="used-bp">0</div>
-                  <div class="bp-label">Used BP</div>
-                </div>
-                <div class="bp-item">
-                  <div class="bp-value" id="remaining-bp">0</div>
-                  <div class="bp-label">Remaining</div>
-                </div>
+                <div class="bp-item"><div class="bp-value" id="available-bp">0</div><div class="bp-label">Available BP</div></div>
+                <div class="bp-item"><div class="bp-value" id="used-bp">0</div><div class="bp-label">Used BP</div></div>
+                <div class="bp-item"><div class="bp-value" id="remaining-bp">0</div><div class="bp-label">Remaining</div></div>
               </div>
-              <button id="clear-boosts-btn" class="btn btn-secondary btn-sm mb-2">Clear All</button>
-              <div style="max-height: 400px; overflow-y: auto;">
+              <button id="clear-boosts-btn" class="btn btn-secondary btn-sm" style="margin-bottom:0.75rem;">Clear All</button>
+              <div style="max-height:400px;overflow-y:auto;">
                 <table class="boost-table">
-                  <thead>
-                    <tr><th>Boost Type</th><th>Rate</th><th>BP</th><th>Total</th></tr>
-                  </thead>
+                  <thead><tr><th>Boost</th><th>Rate</th><th>BP</th><th>Total</th></tr></thead>
                   <tbody id="boost-table"></tbody>
                 </table>
               </div>
             </div>
           </div>
-
-          <div class="build-section mt-2">
-            <div class="section-header">Character Stats</div>
-            <div class="section-body">
-              <div class="stats-grid">
-                <div class="stat-box stat-main">
-                  <div class="stat-value" id="result-hp">0</div>
-                  <div class="stat-label">HP</div>
-                </div>
-                <div class="stat-box stat-main">
-                  <div class="stat-value" id="result-str">0</div>
-                  <div class="stat-label">STR</div>
-                </div>
-                <div class="stat-box stat-main">
-                  <div class="stat-value" id="result-vit">0</div>
-                  <div class="stat-label">VIT</div>
-                </div>
-                <div class="stat-box">
-                  <div class="stat-value" id="result-spd">0</div>
-                  <div class="stat-label">SPD</div>
-                </div>
-                <div class="stat-box">
-                  <div class="stat-value" id="result-luk">0</div>
-                  <div class="stat-label">LUK</div>
-                </div>
-                <div class="stat-box">
-                  <div class="stat-value" id="result-set">No</div>
-                  <div class="stat-label">Set Bonus</div>
-                </div>
-              </div>
-              <div class="combat-stats">
-                <div class="combat-stat">
-                  <span class="combat-stat-label">Total Attack</span>
-                  <span class="combat-stat-value" id="result-attack">0</span>
-                </div>
-                <div class="combat-stat">
-                  <span class="combat-stat-label">Total Defense</span>
-                  <span class="combat-stat-value" id="result-defense">0</span>
-                </div>
-                <div class="combat-stat">
-                  <span class="combat-stat-label">Weapon Power</span>
-                  <span class="combat-stat-value" id="result-weapon-power">0</span>
-                </div>
-                <div class="combat-stat">
-                  <span class="combat-stat-label">Armor Power</span>
-                  <span class="combat-stat-value" id="result-armor-power">0</span>
-                </div>
-                <div class="combat-stat">
-                  <span class="combat-stat-label">Attack Kind</span>
-                  <span class="combat-stat-value" id="result-attack-kind">-</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
-      <div class="build-section mt-3">
+      <div class="build-section" style="margin-top:1.5rem;">
         <div class="section-header">Saved Builds</div>
         <div class="section-body">
-          <div id="saved-builds-list">
-            <p class="text-muted">No saved builds yet.</p>
-          </div>
+          <div id="saved-builds-list"><p class="text-muted">No saved builds yet.</p></div>
         </div>
       </div>
     </div>
   </main>
-
   <div id="wiki-footer"></div>
   <script src="js/helpers.js"></script>
   <script src="js/pages/build-maker.js"></script>

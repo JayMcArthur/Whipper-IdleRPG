@@ -10,290 +10,129 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .book-summary {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    .summary-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 1.5rem;
-      text-align: center;
-    }
-    .summary-value {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--accent-gold);
-    }
-    .summary-label {
-      font-size: 0.75rem;
-      color: var(--text-secondary);
-      text-transform: uppercase;
-      margin-top: 0.25rem;
-    }
-    
-    .tab-nav {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid var(--border-subtle);
-      padding-bottom: 0.5rem;
-    }
-    .tab-btn {
-      padding: 0.75rem 1.5rem;
-      background: transparent;
-      border: none;
-      color: var(--text-secondary);
-      cursor: pointer;
-      border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-      transition: all 0.2s;
-    }
-    .tab-btn:hover {
-      color: var(--text-primary);
-      background: var(--bg-card);
-    }
-    .tab-btn.active {
-      color: var(--accent-gold);
-      background: var(--bg-card);
-      border-bottom: 2px solid var(--accent-gold);
-    }
-    .tab-content {
-      display: none;
-    }
-    .tab-content.active {
-      display: block;
-    }
-    
-    .item-book-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .item-book-table th {
-      background: var(--accent-teal);
-      color: var(--bg-dark);
-      padding: 0.75rem;
-      text-align: left;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .item-book-table td {
-      padding: 0.5rem 0.75rem;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-    .item-book-table tr:hover {
-      background: rgba(245, 166, 35, 0.05);
-    }
-    .item-book-table tr.item-complete {
-      background: rgba(0, 200, 150, 0.1);
-    }
-    
-    .level-select {
-      width: 80px;
-      padding: 0.375rem;
-      background: var(--bg-input);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-primary);
-    }
-    .xp-input {
-      width: 60px;
-      padding: 0.375rem;
-      background: var(--bg-input);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-primary);
-      text-align: right;
-    }
-    .xp-max {
-      color: var(--text-secondary);
-      font-size: 0.85rem;
-    }
-    .bp-value {
-      font-weight: 600;
-      color: var(--text-secondary);
-    }
-    .bp-value.has-bp {
-      color: var(--accent-gold);
-    }
-    
-    .book-actions {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1rem;
-      flex-wrap: wrap;
-    }
-    .book-actions .btn {
-      padding: 0.5rem 1rem;
-    }
-    
-    .dungeon-row {
-      display: grid;
-      grid-template-columns: 1fr 100px 100px 80px;
-      gap: 0.5rem;
-      align-items: center;
-      padding: 0.5rem;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-    .dungeon-row:hover {
-      background: rgba(245, 166, 35, 0.05);
-    }
-    .dungeon-name {
-      font-weight: 500;
-    }
-    .dungeon-xp {
-      width: 80px;
-      padding: 0.375rem;
-      background: var(--bg-input);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-primary);
-      text-align: right;
-    }
-    .dungeon-total {
-      color: var(--text-secondary);
-      font-size: 0.85rem;
-    }
-    .dungeon-percent {
-      color: var(--accent-teal);
-      font-weight: 600;
-    }
-    
-    .table-scroll {
-      max-height: 60vh;
-      overflow-y: auto;
-    }
-    
-    #import-file {
-      display: none;
-    }
+    .book-summary { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1rem; margin-bottom:2rem; }
+    .summary-card { background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:1.5rem; text-align:center; }
+    .summary-value { font-size:2rem; font-weight:700; color:var(--accent-gold); }
+    .summary-label { font-size:0.75rem; color:var(--text-secondary); text-transform:uppercase; margin-top:0.25rem; }
+    .tab-nav { display:flex; gap:0.5rem; margin-bottom:1rem; border-bottom:1px solid var(--border-subtle); padding-bottom:0.5rem; flex-wrap:wrap; }
+    .tab-btn { padding:0.75rem 1.5rem; background:transparent; border:none; color:var(--text-secondary); cursor:pointer; border-radius:var(--radius-sm) var(--radius-sm) 0 0; transition:all 0.2s; font-size:0.9rem; }
+    .tab-btn:hover { color:var(--text-primary); background:var(--bg-card); }
+    .tab-btn.active { color:var(--accent-gold); background:var(--bg-card); border-bottom:2px solid var(--accent-gold); }
+    .tab-content { display:none; }
+    .tab-content.active { display:block; }
+    .book-actions { display:flex; gap:1rem; margin-bottom:1rem; flex-wrap:wrap; }
+    .book-actions .btn { padding:0.5rem 1rem; }
+    .level-select { width:75px; padding:0.3rem; background:var(--bg-input); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); color:var(--text-primary); font-size:0.8rem; }
+    .xp-input { width:55px; padding:0.3rem; background:var(--bg-input); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); color:var(--text-primary); text-align:right; font-size:0.8rem; }
+    .xp-max { color:var(--text-secondary); font-size:0.8rem; }
+    .bp-badge { display:inline-block; padding:0.15rem 0.5rem; border-radius:10px; font-weight:600; font-size:0.8rem; color:var(--text-secondary); }
+    .bp-badge.has-bp { color:var(--accent-gold); background:rgba(245,166,35,0.1); }
+    .data-table tr.item-complete { background:rgba(0,200,150,0.08)!important; }
+    .data-table tr.item-complete:hover { background:rgba(0,200,150,0.14)!important; }
+    .dungeon-card { background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-lg); margin-bottom:0.75rem; overflow:hidden; }
+    .dungeon-card-header { display:flex; justify-content:space-between; align-items:center; padding:0.75rem 1rem; background:var(--bg-surface); cursor:pointer; user-select:none; }
+    .dungeon-card-header:hover { background:var(--bg-card-hover); }
+    .dungeon-card-title { font-weight:600; font-size:0.95rem; }
+    .dungeon-card-meta { display:flex; gap:1rem; align-items:center; font-size:0.8rem; color:var(--text-secondary); }
+    .dungeon-completion { font-weight:700; padding:0.2rem 0.6rem; border-radius:10px; font-size:0.8rem; }
+    .completion-0 { color:var(--text-secondary); }
+    .completion-partial { color:var(--accent-gold); background:rgba(245,166,35,0.1); }
+    .completion-full { color:#4ade80; background:rgba(74,222,128,0.1); }
+    .dungeon-card-body { display:none; padding:0.75rem 1rem; border-top:1px solid var(--border-subtle); }
+    .dungeon-card.open .dungeon-card-body { display:block; }
+    .dungeon-card.open .toggle-icon { transform:rotate(90deg); }
+    .toggle-icon { transition:transform 0.2s; display:inline-block; }
+    .drop-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:0.5rem; }
+    .drop-item { display:flex; align-items:center; gap:0.5rem; padding:0.4rem 0.6rem; border-radius:var(--radius-sm); font-size:0.8rem; background:var(--bg-surface); }
+    .drop-item.collected { background:rgba(0,200,150,0.1); }
+    .drop-item .check { color:#4ade80; font-weight:700; }
+    .drop-item .unchecked { color:var(--text-muted); }
+    .dungeon-section-title { font-family:'Cinzel',serif; font-size:1.1rem; color:var(--accent-gold); margin:1.5rem 0 0.75rem; padding-bottom:0.5rem; border-bottom:1px solid var(--border-subtle); }
+    .dungeon-section-title:first-child { margin-top:0; }
+    #import-file { display:none; }
+    .btn-danger { background:#ff6b6b; border-color:#ff6b6b; }
   </style>
 </head>
 <body>
   <div id="wiki-header"></div>
-
   <main class="main">
     <div class="container">
       <header class="page-header">
         <h1>Item Book</h1>
         <p>Track your item analysis progress. Earn 1 BP for every 5 analysis levels. Data saves to your browser.</p>
       </header>
-
       <div class="book-summary">
-        <div class="summary-card">
-          <div class="summary-value"><span id="total-bp">0</span> / <span id="max-bp">664</span></div>
-          <div class="summary-label">Total BP</div>
-        </div>
-        <div class="summary-card">
-          <div class="summary-value" id="completion-percent">0.00%</div>
-          <div class="summary-label">Book Completion</div>
-        </div>
-        <div class="summary-card">
-          <div class="summary-value"><span id="items-completed">0</span> / <span id="total-items">166</span></div>
-          <div class="summary-label">Items Maxed</div>
-        </div>
-        <div class="summary-card">
-          <div class="summary-value" id="xp-progress">0 / 0</div>
-          <div class="summary-label">Total XP</div>
-        </div>
+        <div class="summary-card"><div class="summary-value"><span id="total-bp">0</span> / <span id="max-bp">0</span></div><div class="summary-label">Total BP</div></div>
+        <div class="summary-card"><div class="summary-value" id="completion-percent">0.00%</div><div class="summary-label">Book Completion</div></div>
+        <div class="summary-card"><div class="summary-value"><span id="items-completed">0</span> / <span id="total-items">0</span></div><div class="summary-label">Items Maxed</div></div>
+        <div class="summary-card"><div class="summary-value" id="xp-progress">0 / 0</div><div class="summary-label">Total XP</div></div>
       </div>
-
       <div class="book-actions">
         <button id="export-btn" class="btn btn-secondary">Export Data</button>
         <button id="import-btn" class="btn btn-secondary">Import Data</button>
         <input type="file" id="import-file" accept=".json">
         <button id="reset-btn" class="btn btn-danger">Reset All</button>
       </div>
-
       <div class="tab-nav">
         <button class="tab-btn active" data-tab="weapons-tab">Weapons</button>
         <button class="tab-btn" data-tab="armor-tab">Armor</button>
         <button class="tab-btn" data-tab="rings-tab">Rings</button>
         <button class="tab-btn" data-tab="dungeons-tab">Dungeons</button>
       </div>
-
       <div id="weapons-tab" class="tab-content active">
-        <div class="table-scroll">
-          <table class="item-book-table" id="weapons-table">
-            <thead>
-              <tr>
-                <th>Weapon</th>
-                <th>Level</th>
-                <th>XP to Next</th>
-                <th>BP</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td colspan="4" class="loading">Loading...</td></tr>
-            </tbody>
+        <div class="table-controls">
+          <div class="search-box"><input type="text" id="weapon-search" placeholder="Search weapons..."></div>
+          <span class="text-muted">Showing <span id="weapon-count">-</span></span>
+        </div>
+        <div class="table-container">
+          <table class="data-table" id="weapons-table">
+            <thead><tr><th data-sort="id" class="stat-col">ID</th><th data-sort="nameId">Weapon</th><th data-sort="equipKind">Type</th><th class="stat-col">Level</th><th>XP</th><th data-sort="_bp" class="stat-col">BP</th></tr></thead>
+            <tbody><tr><td colspan="6" class="loading">Loading...</td></tr></tbody>
           </table>
         </div>
       </div>
-
       <div id="armor-tab" class="tab-content">
-        <div class="table-scroll">
-          <table class="item-book-table" id="armor-table">
-            <thead>
-              <tr>
-                <th>Armor</th>
-                <th>Level</th>
-                <th>XP to Next</th>
-                <th>BP</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td colspan="4" class="loading">Loading...</td></tr>
-            </tbody>
+        <div class="table-controls">
+          <div class="search-box"><input type="text" id="armor-search" placeholder="Search armor..."></div>
+          <span class="text-muted">Showing <span id="armor-count">-</span></span>
+        </div>
+        <div class="table-container">
+          <table class="data-table" id="armor-table">
+            <thead><tr><th data-sort="id" class="stat-col">ID</th><th data-sort="nameId">Armor</th><th data-sort="equipKind">Type</th><th class="stat-col">Level</th><th>XP</th><th data-sort="_bp" class="stat-col">BP</th></tr></thead>
+            <tbody><tr><td colspan="6" class="loading">Loading...</td></tr></tbody>
           </table>
         </div>
       </div>
-
       <div id="rings-tab" class="tab-content">
-        <div class="table-scroll">
-          <table class="item-book-table" id="rings-table">
-            <thead>
-              <tr>
-                <th>Ring</th>
-                <th>Level</th>
-                <th>XP to Next</th>
-                <th>BP</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td colspan="4" class="loading">Loading...</td></tr>
-            </tbody>
+        <div class="table-controls">
+          <div class="search-box"><input type="text" id="ring-search" placeholder="Search rings..."></div>
+          <span class="text-muted">Showing <span id="ring-count">-</span></span>
+        </div>
+        <div class="table-container">
+          <table class="data-table" id="rings-table">
+            <thead><tr><th data-sort="id" class="stat-col">ID</th><th data-sort="nameId">Ring</th><th class="stat-col">Level</th><th>XP</th><th data-sort="_bp" class="stat-col">BP</th></tr></thead>
+            <tbody><tr><td colspan="5" class="loading">Loading...</td></tr></tbody>
           </table>
         </div>
       </div>
-
       <div id="dungeons-tab" class="tab-content">
-        <div class="card">
-          <h3>Dungeon XP Progress</h3>
-          <p class="text-muted mb-2">Track your exploration progress per dungeon.</p>
-          <div id="dungeon-progress">
-            <div class="loading">Loading...</div>
-          </div>
+        <div class="table-controls">
+          <div class="search-box"><input type="text" id="dungeon-search" placeholder="Search dungeons..."></div>
         </div>
+        <div id="dungeon-list"><div class="loading">Loading...</div></div>
       </div>
-
-      <div class="card mt-3">
+      <div class="card" style="margin-top:1.5rem;">
         <h3>XP Chart</h3>
-        <p class="text-muted mb-1">XP required to reach each analysis level:</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.5rem; font-size: 0.85rem;">
-          <div>Lv 1: 1</div><div>Lv 2: 3</div><div>Lv 3: 7</div><div>Lv 4: 15</div><div>Lv 5: 31 (+1 BP)</div>
-          <div>Lv 6: 63</div><div>Lv 7: 103</div><div>Lv 8: 151</div><div>Lv 9: 207</div><div>Lv 10: 271 (+1 BP)</div>
-          <div>Lv 11: 335</div><div>Lv 12: 399</div><div>Lv 13: 463</div><div>Lv 14: 527</div><div>Lv 15: 591 (+1 BP)</div>
-          <div>Lv 16: 719</div><div>Lv 17: 847</div><div>Lv 18: 975</div><div>Lv 19: 1103</div><div>Lv 20: 1231 (+1 BP)</div>
+        <p class="text-muted" style="margin-top:0.5rem;">XP required to reach each analysis level:</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:0.5rem;font-size:0.85rem;margin-top:0.5rem;">
+          <div>Lv 1: 1</div><div>Lv 2: 3</div><div>Lv 3: 7</div><div>Lv 4: 15</div><div style="color:var(--accent-gold)">Lv 5: 31 (+1 BP)</div>
+          <div>Lv 6: 63</div><div>Lv 7: 103</div><div>Lv 8: 151</div><div>Lv 9: 207</div><div style="color:var(--accent-gold)">Lv 10: 271 (+1 BP)</div>
+          <div>Lv 11: 335</div><div>Lv 12: 399</div><div>Lv 13: 463</div><div>Lv 14: 527</div><div style="color:var(--accent-gold)">Lv 15: 591 (+1 BP)</div>
+          <div>Lv 16: 719</div><div>Lv 17: 847</div><div>Lv 18: 975</div><div>Lv 19: 1103</div><div style="color:var(--accent-gold)">Lv 20: 1231 (+1 BP)</div>
         </div>
       </div>
     </div>
   </main>
-
   <div id="wiki-footer"></div>
   <script src="js/helpers.js"></script>
   <script src="js/pages/item-book.js"></script>
