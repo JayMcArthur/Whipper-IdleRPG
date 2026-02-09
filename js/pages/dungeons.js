@@ -56,7 +56,7 @@ function renderKeysTable(data) {
   const keys = data.randomKeys.keys || [];
   // Filter to only show keys that have been filled in
   const filledKeys = keys.filter(k => k.longKey || k.shortKey);
-  
+
   const keysTable = new DataTable('keys-table', {
     searchFields: ['dungeon', 'longKey', 'shortKey', 'startingMonster', 'monsterProgression', 'notes'],
     renderRow: (key) => {
@@ -66,7 +66,7 @@ function renderKeysTable(data) {
           <td><span class="item-name">${key.dungeon || '<span class="text-muted">-</span>'}</span></td>
           <td><code style="background:var(--bg-surface);padding:0.2rem 0.4rem;border-radius:3px;font-size:0.85rem;">${key.longKey || '-'}</code></td>
           <td><code style="background:var(--bg-surface);padding:0.2rem 0.4rem;border-radius:3px;font-size:0.85rem;">${key.shortKey || '-'}</code></td>
-          <td>${key.startingMonster || '<span class="text-muted">-</span>'}</td>
+          <td><span class="'monster-link" onclick="goToMonster(${key.startingMonster})">${getName(getMonsterById(key.startingMonster))}</span></td> 
           <td style="font-size:0.8rem;color:var(--text-secondary);white-space:normal;max-width:200px;">${key.monsterProgression || '-'}</td>
           <td class="stat-col">${key.floors}</td>
           <td class="stat-col">${key.hasBoss ? '<span class="text-gold">✓</span>' : '-'}</td>

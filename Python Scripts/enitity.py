@@ -7,7 +7,7 @@ from json_to_python import monster_list, equip_list, custom_list, exp_to_level, 
 UPGRADE_MAX = 50000
 ANALYSIS_LEVEL_MAX = 20
 COMBAT_CHIP_BP = 50 * 5
-ANALYSIS_BOOST_MAX = (166 * (20/5)) + COMBAT_CHIP_BP  # 914
+ANALYSIS_BOOST_MAX = (166 * (25/5)) + COMBAT_CHIP_BP  # 914
 # We give max to All damage types as I assume you will change boost to weapon type
 ANALYSIS_BOOST_DEFAULT = [
     # Points Given, Possible, Name, Effect

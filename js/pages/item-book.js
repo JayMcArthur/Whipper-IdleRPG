@@ -1,6 +1,6 @@
 /* Whipper Wiki - Item Book Tool (Reworked) */
 
-const ANALYSIS_XP = [0, 1, 3, 7, 15, 31, 63, 103, 151, 207, 271, 335, 399, 463, 527, 591, 719, 847, 975, 1103, 1231];
+const ANALYSIS_XP = [0, 1, 3, 7, 15, 31, 63, 103, 151, 207, 271, 335, 399, 463, 527, 591, 719, 847, 975, 1103, 1231, 1359, 1487, 1615, 1743, 1871];
 
 function getBpFromLevel(level) { return Math.floor(level / 5); }
 
@@ -27,7 +27,7 @@ function getItemData(itemId, type) {
 
 function setItemData(itemId, type, level, xp) {
   const cat = type === 1 ? 'weapons' : type === 2 ? 'armor' : 'rings';
-  itemBook[cat][itemId] = { level: Math.min(level, 20), xp };
+  itemBook[cat][itemId] = { level: Math.min(level, 25), xp };
   saveItemBook();
 }
 
@@ -38,12 +38,12 @@ function calculateTotals() {
     const items = WikiData.equips.filter(e => e.itemType === typeNum);
     items.forEach(item => {
       totalItems++;
-      totalMaxBp += 4;
-      totalXpNeeded += ANALYSIS_XP[20];
+      totalMaxBp += 5;
+      totalXpNeeded += ANALYSIS_XP[25];
       const data = itemBook[cat][item.id] || { level: 0, xp: 0 };
       totalBp += getBpFromLevel(data.level);
       totalXpEarned += ANALYSIS_XP[data.level] + (data.xp || 0);
-      if (data.level >= 20) itemsCompleted++;
+      if (data.level >= 25) itemsCompleted++;
     });
   });
   return { totalBp, totalMaxBp, itemsCompleted, totalItems, totalXpEarned, totalXpNeeded,
@@ -68,8 +68,8 @@ function buildItemTable(tableId, items, itemType, searchId, countId) {
     renderRow: (item) => {
       const d = getItemData(item.id, itemType);
       const bp = getBpFromLevel(d.level);
-      const isComplete = d.level >= 20;
-      const nextXp = d.level < 20 ? (ANALYSIS_XP[d.level + 1] - ANALYSIS_XP[d.level]) : 0;
+      const isComplete = d.level >= 25;
+      const nextXp = d.level < 25 ? (ANALYSIS_XP[d.level + 1] - ANALYSIS_XP[d.level]) : 0;
       const isRing = itemType === 3;
       return `
         <tr data-id="${item.id}" class="${isComplete ? 'item-complete' : ''}">
@@ -78,7 +78,7 @@ function buildItemTable(tableId, items, itemType, searchId, countId) {
           ${!isRing ? `<td><span class="badge">${item.equipKind || '-'}</span></td>` : ''}
           <td class="stat-col">
             <select class="level-select" data-id="${item.id}" data-type="${itemType}">
-              ${Array.from({length: 21}, (_, i) => `<option value="${i}" ${i === d.level ? 'selected' : ''}>Lv ${i}</option>`).join('')}
+              ${Array.from({length: 26}, (_, i) => `<option value="${i}" ${i === d.level ? 'selected' : ''}>Lv ${i}</option>`).join('')}
             </select>
           </td>
           <td>
@@ -139,7 +139,7 @@ function bindTableEvents(tableId, itemType, table, items) {
       const d = getItemData(id, itemType);
       let xp = parseInt(e.target.value) || 0;
       const nextXp = ANALYSIS_XP[d.level + 1] - ANALYSIS_XP[d.level];
-      if (xp >= nextXp && d.level < 20) {
+      if (xp >= nextXp && d.level < 25) {
         setItemData(id, itemType, d.level + 1, 0);
         items.forEach(item => { if (item.id === id) item._bp = getBpFromLevel(d.level + 1); });
       } else {
