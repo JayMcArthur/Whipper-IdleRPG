@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analysis - Whipper Wiki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+  <div id="wiki-header"></div>
+
+  <main class="main">
+    <div class="container">
+      <header class="page-header"><h1>Analysis Levels</h1><p>Equipment analysis progression showing corrosion requirements and bonuses at each level.</p></header>
+
+      <div class="card mb-3">
+        <h3>How Analysis Works</h3>
+        <p class="mt-1">Analyzing equipment unlocks bonuses at each level. Higher analysis levels require higher corrosion levels on the item. Each equipment type (Weapon, Armor, Ring) gains different bonuses at each level.</p>
+        <p class="mt-1">Base analysis limit is 15 (from The Lost Nation's Magnifying Glass). Panoptes' Eye proof of subjugation increases the limit by +1 per level (max Lv10 = Lv25 analysis).</p>
+      </div>
+
+      <div class="table-controls">
+        <span class="text-muted">Analysis data for levels 1-20. Higher levels follow the same pattern with increasing costs.</span>
+      </div>
+
+      <div class="table-container">
+        <table class="data-table" id="analysis-table">
+          <thead><tr>
+            <th data-sort="level" class="stat-col">Level</th>
+            <th data-sort="corrosion" class="stat-col">Corrosion Req</th>
+            <th data-sort="cost" class="stat-col">Cost</th>
+            <th data-sort="total" class="stat-col">Total</th>
+            <th>Weapon Bonus</th>
+            <th>Armor Bonus</th>
+            <th>Ring Bonus</th>
+          </tr></thead>
+          <tbody><tr><td colspan="7" class="loading">Loading...</td></tr></tbody>
+        </table>
+      </div>
+
+      <!--div class="card mt-3">
+        <h3>Key Milestones</h3>
+        <p class="mt-1"><strong style="color:var(--accent-gold);">Level 5:</strong> First upgrade limit increase (+100). Ring gets specialization boost.</p>
+        <p class="mt-1"><strong style="color:var(--accent-gold);">Level 7:</strong> +1000 upgrade limit. Ring unique effect unlocked.</p>
+        <p class="mt-1"><strong style="color:var(--accent-gold);">Level 9:</strong> Weapon set bonus (x1.5 STR). Requires Corrosion 200.</p>
+        <p class="mt-1"><strong style="color:var(--accent-gold);">Level 13:</strong> Second weapon set bonus (x1.5 STR). Armor HP boost. Requires Corrosion 400.</p>
+        <p class="mt-1"><strong style="color:var(--accent-gold);">Level 20:</strong> +19000 upgrade limit. Requires Corrosion 2000.</p>
+      </div-->
+    </div>
+  </main>
+
+  <div id="wiki-footer"></div>
+  <script src="js/helpers.js"></script>
+  <script src="js/pages/analysis.js"></script>
+</body>
+</html>

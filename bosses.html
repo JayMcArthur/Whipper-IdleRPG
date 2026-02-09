@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bosses - Whipper Wiki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+  <div id="wiki-header"></div>
+
+  <main class="main">
+    <div class="container">
+      <header class="page-header"><h1>Boss Monsters</h1></header>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="story">Story Bosses</button>
+        <button class="tab-btn" data-tab="tomb">Royal Tomb</button>
+        <button class="tab-btn" data-tab="junkyard">Junkyard Bosses</button>
+      </div>
+
+      <div id="tab-story" class="tab-content active">
+        <div class="card mb-3">
+          <h3>Story Bosses</h3>
+          <p class="mt-1">Bosses encountered at the end of main story dungeons.</p>
+        </div>
+        <div id="story-bosses" class="card-grid"></div>
+      </div>
+
+      <div id="tab-tomb" class="tab-content">
+        <div class="card mb-3">
+          <h3>Illusory Royal Tomb Bosses</h3>
+          <p class="mt-1">Bosses found in The Illusory Royal Tomb. They become elite versions at higher floors.</p>
+        </div>
+        <div id="tomb-bosses" class="card-grid"></div>
+      </div>
+
+      <div id="tab-junkyard" class="tab-content">
+        <div class="card mb-3">
+          <h3>The Fallen Junkyard</h3>
+          <p class="mt-1">Unlocks upon gaining access to M2 and acquiring a Black Key. Home to 4 bosses that scale from Lv1 to Lv10. Each boss has limited vulnerability to some Attack Types.</p>
+          <p class="mt-1">Entering a fight consumes Black Keys proportional to the level you fight. Combat ends upon death of either party. If the player dies, damage dealt carries over to the next combat.</p>
+          <p class="mt-1">You enter each boss fight at Lv50, so training stats can be useful here. Bosses are immune to or reduce poison damage.</p>
+          <div class="mt-2">
+            <h4 style="font-family:'DM Sans',sans-serif;font-size:0.9rem;color:var(--text-secondary);">Key Costs by Level</h4>
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.5rem;">
+              <span class="badge" style="background:var(--bg-surface);">Lv1: 1</span>
+              <span class="badge" style="background:var(--bg-surface);">Lv2: 5</span>
+              <span class="badge" style="background:var(--bg-surface);">Lv3: 10</span>
+              <span class="badge" style="background:var(--bg-surface);">Lv4: 15</span>
+              <span class="badge" style="background:var(--bg-surface);">Lv5: 20</span>
+              <span class="badge" style="background:var(--bg-surface);">Lv6: 25</span>
+              <span class="badge" style="background:var(--bg-surface);">Lv7: 30</span>
+              <span class="badge" style="background:var(--bg-surface);">Lv8: 35</span>
+              <span class="badge" style="background:var(--bg-surface);">Lv9: 40</span>
+              <span class="badge" style="background:var(--bg-surface);">Lv10: 50</span>
+            </div>
+          </div>
+        </div>
+        <div id="junkyard-bosses" class="card-grid"></div>
+      </div>
+    </div>
+  </main>
+
+  <div id="wiki-footer"></div>
+  <script src="js/helpers.js"></script>
+  <script src="js/pages/bosses.js"></script>
+</body>
+</html>

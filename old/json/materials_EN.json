@@ -1,0 +1,601 @@
+{
+  "materials": [
+    {
+      "id": 1,
+      "nameId": "カタクナール",
+      "icon": "mate01",
+      "efficacyId": "強化値を+1できる緑色の液体",
+      "use": 1,
+      "nameId_EN": "Hardener",
+      "efficacyId_EN": "A green liquid with +1 upgrade value"
+    },
+    {
+      "id": 2,
+      "nameId": "カタクナールX",
+      "icon": "mate02",
+      "efficacyId": "強化値を+3できる橙色の液体",
+      "use": 1,
+      "nameId_EN": "HardenerX",
+      "efficacyId_EN": "An orange liquid with +3 upgrade value"
+    },
+    {
+      "id": 3,
+      "nameId": "カタクナールZ",
+      "icon": "mate03",
+      "efficacyId": "強化値を+5できる紫色の液体",
+      "use": 1,
+      "nameId_EN": "HardenerZ",
+      "efficacyId_EN": "A purple liquid with +5 upgrade value"
+    },
+    {
+      "id": 4,
+      "nameId": "銀の組成液",
+      "icon": "mate04",
+      "efficacyId": "装備品同士を結合できる銀色の液体",
+      "use": 2,
+      "nameId_EN": "Silver Essence",
+      "efficacyId_EN": "A silver liquid that binds equipment together"
+    },
+    {
+      "id": 5,
+      "nameId": "金の組成液",
+      "icon": "mate05",
+      "efficacyId": "装備品同士を無傷で結合できる金色の液体",
+      "use": 2,
+      "nameId_EN": "Gold Essence",
+      "efficacyId_EN": "A golden liquid that binds equipment together without damaging them"
+    },
+    {
+      "id": 6,
+      "nameId": "星の組成液",
+      "icon": "mate06",
+      "efficacyId": "指輪同士を無傷で結合できる幻の液体",
+      "use": 2,
+      "nameId_EN": "Star Essence",
+      "efficacyId_EN": "A mythical liquid that binds rings together without damaging them"
+    },
+    {
+      "id": 10,
+      "nameId": "白の鍵",
+      "icon": "mate10",
+      "efficacyId": "異世界への扉を開く鍵",
+      "use": 3,
+      "nameId_EN": "White Key",
+      "efficacyId_EN": "A key that opens the door to another world"
+    },
+    {
+      "id": 11,
+      "nameId": "朽ちかけた紙切れ 1",
+      "icon": "log_paper",
+      "efficacyId": "はじめの草むら",
+      "use": 6,
+      "nameId_EN": "Decaying piece of paper 1",
+      "efficacyId_EN": "The First Grassy Knoll"
+    },
+    {
+      "id": 12,
+      "nameId": "朽ちかけた紙切れ 2",
+      "icon": "log_paper",
+      "efficacyId": "深い洞穴",
+      "use": 6,
+      "nameId_EN": "Decaying piece of paper 2",
+      "efficacyId_EN": "Deep Cave"
+    },
+    {
+      "id": 13,
+      "nameId": "朽ちかけた紙切れ 3",
+      "icon": "log_paper",
+      "efficacyId": "秘密の抜け道",
+      "use": 6,
+      "nameId_EN": "Decaying piece of paper 3",
+      "efficacyId_EN": "The Secret Passage"
+    },
+    {
+      "id": 14,
+      "nameId": "朽ちかけた紙切れ 4",
+      "icon": "log_paper",
+      "efficacyId": "正義の巨塔",
+      "use": 6,
+      "nameId_EN": "Decaying piece of paper 4",
+      "efficacyId_EN": "Giant Tower of Justice"
+    },
+    {
+      "id": 20,
+      "nameId": "アイテム図鑑",
+      "icon": "log_book",
+      "efficacyId": "アイテムの解析結果を記録できる図鑑",
+      "use": 4,
+      "nameId_EN": "Item book",
+      "efficacyId_EN": "A book that can record the analysis results of items"
+    },
+    {
+      "id": 21,
+      "nameId": "ボイドレポート",
+      "icon": "mate21",
+      "efficacyId": "解析値を+3できる科学者の遺文",
+      "use": 5,
+      "nameId_EN": "Boid report",
+      "efficacyId_EN": "Scientist's will with +3 analysis value"
+    },
+    {
+      "id": 22,
+      "nameId": "ロゼッタストーン",
+      "icon": "mate22",
+      "efficacyId": "解析値を+10できる古代文明の遺物",
+      "use": 5,
+      "nameId_EN": "Rosetta Stone",
+      "efficacyId_EN": "Relics of ancient civilization with +10 analysis value"
+    },
+    {
+      "id": 25,
+      "nameId": "鑑定士の心得",
+      "icon": "tips",
+      "efficacyId": "下級アイテムの自動解析ができるようになる巻物",
+      "use": 4,
+      "nameId_EN": "Appraiser's Guide",
+      "efficacyId_EN": "A scroll that enables automatic analysis of low-level items"
+    },
+    {
+      "id": 26,
+      "nameId": "逆行の懐中時計",
+      "icon": "watch",
+      "efficacyId": "失ったアイテムを取り戻すことができる古びた懐中時計",
+      "use": 4,
+      "nameId_EN": "Counterclockwise Watch",
+      "efficacyId_EN": "An old pocket watch that can retrieve lost items"
+    },
+    {
+      "id": 30,
+      "nameId": "亡国の拡大鏡",
+      "icon": "mate30",
+      "efficacyId": "解析上限が上がる亡国の研究道具",
+      "use": 7,
+      "nameId_EN": "The Lost Nation's Magnifying Glass",
+      "efficacyId_EN": "Research tool of the Lost Nation that increases analysis limit"
+    },
+    {
+      "id": 40,
+      "nameId": "古代の鍛冶ハンマー",
+      "icon": "mate40",
+      "efficacyId": "能力合成上限が上がる鍛冶道具",
+      "use": 8,
+      "nameId_EN": "Ancient Blacksmith Hammer",
+      "efficacyId_EN": "Blacksmith tool that increases the synthesis limit of abilities"
+    },
+    {
+      "id": 50,
+      "nameId": "霧の首飾り",
+      "icon": "mate50",
+      "efficacyId": "瘴気濃度を増減できる古代の首飾り",
+      "use": 9,
+      "nameId_EN": "Necklace of Mist",
+      "efficacyId_EN": "Ancient necklace that can adjust miasma concentration"
+    },
+    {
+      "id": 51,
+      "nameId": "伝言の鈴",
+      "icon": "suzu",
+      "efficacyId": "離れた場所からでも指示を伝えられる鈴",
+      "use": 30,
+      "nameId_EN": "Message Bell",
+      "efficacyId_EN": "Bell that can convey instructions from afar"
+    },
+    {
+      "id": 61,
+      "nameId": "カタクナールG",
+      "icon": "mate61",
+      "efficacyId": "強化値を+10できる大容量の緑色の液体",
+      "use": 1,
+      "nameId_EN": "HardenerG",
+      "efficacyId_EN": "A large amount of green liquid with +10 upgrade value"
+    },
+    {
+      "id": 62,
+      "nameId": "カタクナールXG",
+      "icon": "mate62",
+      "efficacyId": "強化値を+30できる大容量の橙色の液体",
+      "use": 1,
+      "nameId_EN": "HardenerXG",
+      "efficacyId_EN": "A large amount of orange liquid with +30 upgrade value"
+    },
+    {
+      "id": 63,
+      "nameId": "カタクナールZG",
+      "icon": "mate63",
+      "efficacyId": "強化値を+50できる大容量の紫色の液体",
+      "use": 1,
+      "nameId_EN": "HardenerZG",
+      "efficacyId_EN": "A large amount of purple liquid with +50 upgrade value"
+    },
+    {
+      "id": 80,
+      "nameId": "地図の断片",
+      "icon": "map",
+      "efficacyId": "財宝のありかが印されている",
+      "use": 88,
+      "nameId_EN": "Map Fragment",
+      "efficacyId_EN": "The location of the treasure is marked"
+    },
+    {
+      "id": 81,
+      "nameId": "儀式の燈火",
+      "icon": "candle",
+      "efficacyId": "錬金術師の島の霧を払い、探索時間を延ばすことができる",
+      "use": 4,
+      "nameId_EN": "Ritual's Flame",
+      "efficacyId_EN": "Clears the mist of the Alchemist's Island and extends the exploration time"
+    },
+    {
+      "id": 85,
+      "nameId": "逆転の砂時計",
+      "icon": "hourglass",
+      "efficacyId": "隠者の秘宝。ロストしたアイテムを全て取り戻すことができる",
+      "use": 88,
+      "nameId_EN": "Reversal Hourglass",
+      "efficacyId_EN": "Hermit's Treasure. Allows you to recover all lost items"
+    },
+    {
+      "id": 88,
+      "nameId": "瞬足の羽飾り",
+      "icon": "feather",
+      "efficacyId": "隠者の秘宝。足が速くなり、いつもの冒険を1/2の時間でこなすことができる",
+      "use": 88,
+      "nameId_EN": "Swiftfoot's Feather",
+      "efficacyId_EN": "\"Hermit's Treasure. Increases speed"
+    },
+    {
+      "id": 90,
+      "nameId": "黒の鍵",
+      "icon": "blackkey",
+      "efficacyId": "廃棄場への扉を開く鍵",
+      "use": 95,
+      "nameId_EN": "The Black Key",
+      "efficacyId_EN": "The key that opens the door to the junkyard"
+    },
+    {
+      "id": 91,
+      "nameId": "ライラック",
+      "icon": "lilac",
+      "efficacyId": "迷いの森に咲く紫色の花木。花言葉は「大切な友達」",
+      "use": 90,
+      "nameId_EN": "Lilac",
+      "efficacyId_EN": "A purple flower tree that blooms in the Lost Forest. Flower language is “precious friend”"
+    },
+    {
+      "id": 92,
+      "nameId": "コアのかけら",
+      "icon": "corefragment",
+      "efficacyId": "砕け散ったコアのかけら。瘴気濃度の上限が上がる",
+      "use": 9,
+      "nameId_EN": "Core Fragment",
+      "efficacyId_EN": "Shattered core fragment. Increases the maximum miasma concentration."
+    },
+    {
+      "id": 93,
+      "nameId": "幻鉱の砥石",
+      "icon": "sharpening",
+      "efficacyId": "侵蝕度を+10できる砥石",
+      "use": 1,
+      "nameId_EN": "Illusory Ore Whetstone",
+      "efficacyId_EN": "A whetstone that can increase Corrosion Level by +10"
+    },
+    {
+      "id": 94,
+      "nameId": "コアの塊",
+      "icon": "unobtainium1",
+      "efficacyId": "砕け散ったコアの大きな塊。全4種集めると…",
+      "use": 9,
+      "nameId_EN": "Core Shard",
+      "efficacyId_EN": "A large shard of a shattered core. Collect all 4 types to..."
+    },
+    {
+      "id": 95,
+      "nameId": "コアの塊",
+      "icon": "unobtainium2",
+      "efficacyId": "砕け散ったコアの大きな塊。全4種集めると…",
+      "use": 9,
+      "nameId_EN": "Core Shard",
+      "efficacyId_EN": "A large shard of a shattered core. Collect all 4 types to..."
+    },
+    {
+      "id": 96,
+      "nameId": "コアの塊",
+      "icon": "unobtainium3",
+      "efficacyId": "砕け散ったコアの大きな塊。全4種集めると…",
+      "use": 9,
+      "nameId_EN": "Core Shard",
+      "efficacyId_EN": "A large shard of a shattered core. Collect all 4 types to..."
+    },
+    {
+      "id": 97,
+      "nameId": "コアの塊",
+      "icon": "unobtainium4",
+      "efficacyId": "砕け散ったコアの大きな塊。全4種集めると…",
+      "use": 9,
+      "nameId_EN": "Core Shard",
+      "efficacyId_EN": "A large shard of a shattered core. Collect all 4 types to..."
+    },
+    {
+      "id": 98,
+      "nameId": "オリジンコア",
+      "icon": "unobtainium",
+      "efficacyId": "コアの塊を集めて復元した、テバの動力源だったモノ。瘴気濃度の上限がさらに上がる",
+      "use": 9,
+      "nameId_EN": "Origin Core",
+      "efficacyId_EN": "\"A restored Core Shard"
+    },
+    {
+      "id": 99,
+      "nameId": "りんご",
+      "icon": "apple",
+      "efficacyId": "高濃度の瘴気に汚染された果実。持っているだけで永続的にLUK+1",
+      "use": 99,
+      "nameId_EN": "Apple",
+      "efficacyId_EN": "A fruit contaminated with high concentrations of miasma. Grants a permanent LUK +1 just by holding it (Up to +20)"
+    },
+    {
+      "id": 101,
+      "nameId": "遭難者の手記",
+      "icon": "log_paper",
+      "efficacyId": "迷いの森",
+      "use": 100,
+      "nameId_EN": "Survivor's Log",
+      "efficacyId_EN": "The Lost Forest"
+    },
+    {
+      "id": 102,
+      "nameId": "研究所長の書き置き",
+      "icon": "log_paper",
+      "efficacyId": "黄昏の洋館",
+      "use": 100,
+      "nameId_EN": "Director's Note",
+      "efficacyId_EN": "Twilight House"
+    },
+    {
+      "id": 103,
+      "nameId": "偽霊媒師の独白",
+      "icon": "log_paper",
+      "efficacyId": "濃霧の古戦場",
+      "use": 100,
+      "nameId_EN": "Impostor Medium's Monologue",
+      "efficacyId_EN": "Old Battlefield of Fog"
+    },
+    {
+      "id": 104,
+      "nameId": "戦況報告書",
+      "icon": "log_scroll",
+      "efficacyId": "終わりの魔城",
+      "use": 100,
+      "nameId_EN": "Combat Report",
+      "efficacyId_EN": "The Magic Castle of the End"
+    },
+    {
+      "id": 105,
+      "nameId": "生存者の日記",
+      "icon": "log_newmemo",
+      "efficacyId": "はじめの草むら",
+      "use": 100,
+      "nameId_EN": "Survivor's Diary",
+      "efficacyId_EN": "The First Grassy Knoll"
+    },
+    {
+      "id": 106,
+      "nameId": "看守の回想",
+      "icon": "log_newmemo",
+      "efficacyId": "迷いの森",
+      "use": 100,
+      "nameId_EN": "Guard's Recollection",
+      "efficacyId_EN": "The Lost Forest"
+    },
+    {
+      "id": 107,
+      "nameId": "生き残るために、Vault-0へ",
+      "icon": "log_newmemo",
+      "efficacyId": "深い洞穴",
+      "use": 100,
+      "nameId_EN": "\"To survive",
+      "efficacyId_EN": "Deep Cave"
+    },
+    {
+      "id": 108,
+      "nameId": "瘴気中毒に関する研究報告",
+      "icon": "log_paper",
+      "efficacyId": "黄昏の洋館",
+      "use": 100,
+      "nameId_EN": "Research Report on Miasma Poisoning",
+      "efficacyId_EN": "Twilight House"
+    },
+    {
+      "id": 109,
+      "nameId": "合成獣に関する研究報告",
+      "icon": "log_paper",
+      "efficacyId": "秘密の抜け道",
+      "use": 100,
+      "nameId_EN": "Effects and Promotion of Synthetic Beast Research",
+      "efficacyId_EN": "The Secret Passage"
+    },
+    {
+      "id": 110,
+      "nameId": "よくわかる鉱物図鑑",
+      "icon": "log_paper",
+      "efficacyId": "濃霧の古戦場",
+      "use": 100,
+      "nameId_EN": "\"Well-understood Mineral Guide",
+      "efficacyId_EN": "Old Battlefield of Fog"
+    },
+    {
+      "id": 111,
+      "nameId": "初代王の遺書",
+      "icon": "log_paper",
+      "efficacyId": "正義の巨塔",
+      "use": 100,
+      "nameId_EN": "The First King's Testament",
+      "efficacyId_EN": "Giant Tower of Justice"
+    },
+    {
+      "id": 112,
+      "nameId": "テバの基本性能",
+      "icon": "log_newmemo",
+      "efficacyId": "異世界への扉",
+      "use": 100,
+      "nameId_EN": "Teba's Basic Capabilities",
+      "efficacyId_EN": "The Door to Another World"
+    },
+    {
+      "id": 113,
+      "nameId": "量産型アンドロイドの特性",
+      "icon": "log_newmemo",
+      "efficacyId": "異世界への扉",
+      "use": 100,
+      "nameId_EN": "Characteristics of Mass-Produced Androids",
+      "efficacyId_EN": "The Door to Another World"
+    },
+    {
+      "id": 114,
+      "nameId": "テバの思考",
+      "icon": "log_newmemo",
+      "efficacyId": "異世界への扉",
+      "use": 100,
+      "nameId_EN": "Teba's Thinking",
+      "efficacyId_EN": "The Door to Another World"
+    },
+    {
+      "id": 115,
+      "nameId": "テバの制止手段",
+      "icon": "log_newmemo",
+      "efficacyId": "異世界への扉",
+      "use": 100,
+      "nameId_EN": "Teba's Restraint Methods",
+      "efficacyId_EN": "The Door to Another World"
+    },
+    {
+      "id": 116,
+      "nameId": "号外",
+      "icon": "log_newmemo",
+      "efficacyId": "異世界への扉",
+      "use": 100,
+      "nameId_EN": "Extra Edition A.D. 2207 Winter",
+      "efficacyId_EN": "The Door to Another World"
+    },
+    {
+      "id": 117,
+      "nameId": "遺物について",
+      "icon": "log_newmemo",
+      "efficacyId": "異世界への扉",
+      "use": 100,
+      "nameId_EN": "Relics",
+      "efficacyId_EN": "The Door to Another World"
+    },
+    {
+      "id": 118,
+      "nameId": "巨人の腕について",
+      "icon": "log_newmemo",
+      "efficacyId": "異世界への扉",
+      "use": 100,
+      "nameId_EN": "Giant's Arm",
+      "efficacyId_EN": "The Door to Another World"
+    },
+    {
+      "id": 1001,
+      "nameId": "幽世の栞",
+      "icon": "shiori",
+      "efficacyId": "【討伐の証】禁書に命を芽吹かせた栞。未だ微かに脈打っている。HPが増える(+1000/Lv)",
+      "use": 110,
+      "nameId_EN": "Bookmark of the Netherworld",
+      "efficacyId_EN": "[Proof of Subjugation] A bookmark that gave life to a forbidden book. It still faintly pulses. HP increases (+1000/Lv)"
+    },
+    {
+      "id": 1002,
+      "nameId": "幽世の栞がレベルアップ",
+      "icon": "shiori",
+      "efficacyId": "",
+      "use": 200,
+      "nameId_EN": "Bookmark of the Netherworld Level Up"
+    },
+    {
+      "id": 1101,
+      "nameId": "戦闘用チップ",
+      "icon": "tebachip",
+      "efficacyId": "【討伐の証】テバの学習データが記録されたチップ。Lvが上がるごとに、割り振り可能BPが増える(+5/Lv)",
+      "use": 110,
+      "nameId_EN": "Combat Chip",
+      "efficacyId_EN": "[Proof of Subjugation] A chip containing Teba's learning data. Assignable BP increases by +5 per level."
+    },
+    {
+      "id": 1102,
+      "nameId": "戦闘用チップがレベルアップ",
+      "icon": "tebachip",
+      "efficacyId": "",
+      "use": 200,
+      "nameId_EN": "Combat Chip Level Up"
+    },
+    {
+      "id": 1201,
+      "nameId": "千手核",
+      "icon": "senjukaku",
+      "efficacyId": "【討伐の証】千手の動力源。消えることのない炎を内包している。Lvが上がるごとに、アイテム能力の合成上限が上がる",
+      "use": 110,
+      "nameId_EN": "Thousand-Hand Core",
+      "efficacyId_EN": "[Proof of Subjugation] The power source of Thousand Hands. Contains an eternal flame. Increases item synthesis limits with each level."
+    },
+    {
+      "id": 1202,
+      "nameId": "千手核がレベルアップ",
+      "icon": "senjukaku",
+      "efficacyId": "",
+      "use": 200,
+      "nameId_EN": "Thousand-Hand Core Level Up"
+    },
+    {
+      "id": 1301,
+      "nameId": "アダムの心臓",
+      "icon": "adamheart",
+      "efficacyId": "【討伐の証】脈打つ心臓は力の象徴。Lvが上がるごとに、永続ブーストの上限が上がる",
+      "use": 110,
+      "nameId_EN": "Adam's Heart",
+      "efficacyId_EN": "[Proof of Subjugation] The pulsating heart is a symbol of power. Increases the limit of permanent boosts with each level."
+    },
+    {
+      "id": 1302,
+      "nameId": "アダムの心臓がレベルアップ",
+      "icon": "adamheart",
+      "efficacyId": "",
+      "use": 200,
+      "nameId_EN": "Adam's Heart Level Up"
+    },
+    {
+      "id": 1401,
+      "nameId": "パノプテスの瞳",
+      "icon": "panopteseye",
+      "efficacyId": "【討伐の証】その瞳は過去・現在・未来を見通す。Lvが上がるごとに、アイテムの解析上限が上がる",
+      "use": 110,
+      "nameId_EN": "Panoptes' Eye",
+      "efficacyId_EN": "\"[Proof of Subjugation] This eye sees the past"
+    },
+    {
+      "id": 1402,
+      "nameId": "パノプテスの瞳がレベルアップ",
+      "icon": "panopteseye",
+      "efficacyId": "",
+      "use": 200,
+      "nameId_EN": "Panoptes' Eye Level Up"
+    },
+    {
+      "id": 1501,
+      "nameId": "殺生石",
+      "icon": "sesshoseki",
+      "efficacyId": "【討伐の証】妖狐が姿を変えた魔石。砥石による侵蝕度強化の上限が上がる(+500/Lv)",
+      "use": 110,
+      "nameId_EN": "Killing Stone",
+      "efficacyId_EN": "[Proof of Subjugation] A magical stone transformed by a mystic fox. Increases the maximum limit for Corrosion Level reinforcement via whetstone stones (+500/Lv)"
+    },
+    {
+      "id": 1502,
+      "nameId": "殺生石がレベルアップ",
+      "icon": "sesshoseki",
+      "efficacyId": "",
+      "use": 200,
+      "nameId_EN": "Killing Stone Level Up"
+    }
+  ]
+}

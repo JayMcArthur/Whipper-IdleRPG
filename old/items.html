@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Whipper - Idle RPG</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://kit.fontawesome.com/3fe7bed0c0.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="getTable()">
+<div class="w3-top">
+    <div class="w3-bar color-medium w3-card">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+           href="javascript:void(0)" onclick="toggleMenu()" title="Toggle Navigation Menu"><i
+                class="fa fa-bars"></i></a>
+        <img class="w3-bar-item" height="48" alt='' src='../assets/images/logo.png'/>
+        <a href="index.html#" class="w3-bar-item w3-button w3-padding-large text-bold">Whipper</a>
+        <a href="../whatsnew.html#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">What's New</a>
+        <div class="w3-dropdown-hover" style="outline: none;">
+            <button class="w3-button w3-padding-large w3-hide-small" style="outline: none;">Wiki</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4 color-medium">
+                <a href="items.html" class="w3-bar-item w3-button">Items</a>
+                <a href="enchantments.html" class="w3-bar-item w3-button">Enchantments</a>
+                <a href="monsters.html" class="w3-bar-item w3-button">Monsters</a>
+                <a href="dungeons.html" class="w3-bar-item w3-button">Dungeons</a>
+                <a href="guide.html" class="w3-bar-item w3-button">Guide</a>
+            </div>
+        </div>
+        <div class="w3-dropdown-hover" style="outline: none;">
+            <button class="w3-button w3-padding-large w3-hide-small" style="outline: none;">Tools</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4 color-medium">
+                <a href="buildtest.html" class="w3-bar-item w3-button">Build Tester</a>
+                <a href="itemcompare.html" class="w3-bar-item w3-button">Item Comparison</a>
+            </div>
+        </div>
+        <a href="privacypolicy.html#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Privacy Policy</a>
+        <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contact</a>
+    </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block color-light w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Whipper</a>
+    <a href="../whatsnew.html#" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">What's New</a>
+    <a href="items.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Items</a>
+    <a href="enchantments.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Enchantments</a>
+    <a href="monsters.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Monsters</a>
+    <a href="dungeons.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Dungeons</a>
+    <a href="guide.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Guide</a>
+    <a href="buildtest.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Build Tester</a>
+    <a href="itemcompare.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Item Comparison</a>
+    <a href="privacypolicy.html#" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Privacy Policy</a>
+    <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+    <div class="w3-container w3-content w3-center w3-padding-16" style="max-width:1300px">
+        <select class="text-color color-medium" id="itemtype" onchange="change_item_type(this.value)">
+            <option value="">Choose an option</option>
+            <option value="1">Weapons</option>
+            <option value="2">Armor</option>
+            <option value="3">Rings</option>
+            <option value="4">Materials</option>
+        </select>
+    </div>
+    <div id="Table" class="w3-container w3-center"/>
+</div>
+
+</body>
+<script>
+    let equips;
+    let customs;
+    let materials;
+
+    function getTable() {
+        let request = new XMLHttpRequest();
+        request.open("GET","json/equips_EN.json",false);
+        request.send(null);
+        equips = JSON.parse(request.responseText)["equips"];
+
+        request = new XMLHttpRequest();
+        request.open("GET","json/customs_EN.json",false);
+        request.send(null);
+        customs = JSON.parse(request.responseText)["customs"];
+
+        request = new XMLHttpRequest();
+        request.open("GET","json/materials_EN.json",false);
+        request.send(null);
+        materials = JSON.parse(request.responseText)["materials"];
+    }
+    function getItemByID(id){
+        return equips.filter(
+            function(equip){return equip.id === id}
+        )[0]
+    }
+    function getCustomById(id){
+        return customs.filter(
+            function(custom){return custom.id === id}
+        )[0]
+    }
+    function getMaterialmById(id){
+        return materials.filter(
+            function(material){return material.id === id}
+        )[0]
+    }
+    function change_item_type(sel) {
+        let col
+        if (parseInt(sel) === 4) {
+            col = [
+                "ID", "Icon", "Name", "Efficacy", "Use"
+            ]
+        } else {
+            col = [
+                "ID", "Icon", "Name", "Evolution", "ATK / DEF", "Upgrade limit", "HP", "HP_↑", "STR", "STR_↑", "VIT", "VIT_↑", 'equipKind', 'attackKind', 'SET', 'specialized', 'ability'
+            ]
+        }
+
+
+        let table = document.createElement("table");
+        table.className = "styled-table";
+
+        let tr = table.insertRow(-1);
+        for (let i = 0; i < col.length; i++) {
+            let th = document.createElement("th");
+            th.innerHTML = col[i];
+            tr.appendChild(th);
+        }
+        tr.id = "StickyHeader"
+
+        if (parseInt(sel) === 4) {
+            for (let i = 0; i < materials.length; i++) {
+                let tr = table.insertRow(-1);
+                let tabCell_1 = tr.insertCell(-1);
+                tabCell_1.innerHTML = materials[i]["id"];
+                let tabCell_2 = tr.insertCell(-1);
+                let img = document.createElement('img');
+                img.src = "assets/icons/" + materials[i]["icon"] + ".png";
+                tabCell_2.appendChild(img)
+                let tabCell_3 = tr.insertCell(-1);
+                tabCell_3.innerHTML = materials[i]["nameId_EN"];
+                let tabCell_4 = tr.insertCell(-1);
+                tabCell_4.innerHTML = materials[i]["efficacyId_EN"];
+                let tabCell_5 = tr.insertCell(-1);
+                tabCell_5.innerHTML = materials[i]["use"];
+            }
+        } else {
+            for (let i = 0; i < equips.length; i++) {
+                if (equips[i]["itemType"] !== parseInt(sel)) {
+                    continue;
+                }
+
+                let tr = table.insertRow(-1);
+                let tabCell_1 = tr.insertCell(-1);
+                tabCell_1.innerHTML = equips[i]["id"];
+                let tabCell_2 = tr.insertCell(-1);
+                let img = document.createElement('img');
+                img.src = "assets/icons/" + equips[i]["icon"] + ".png";
+                tabCell_2.appendChild(img)
+                let tabCell_3 = tr.insertCell(-1);
+                tabCell_3.innerHTML = equips[i]["nameId_EN"];
+                let tabCell_4 = tr.insertCell(-1);
+                if (equips[i]["next"] === 0){
+                    tabCell_4.innerHTML = "None";
+                } else {
+                    if (parseInt(sel) === 3) {
+                        tabCell_4.innerHTML = getCustomById(equips[i]["next"])["nameId_EN"];
+                    } else {
+                        tabCell_4.innerHTML = getItemByID(equips[i]["next"])["nameId_EN"] + " (" + equips[i]["next"] + ")";
+                    }
+                }
+                let tabCell_5 = tr.insertCell(-1);
+                tabCell_5.innerHTML = equips[i]["param"];
+                let tabCell_6 = tr.insertCell(-1);
+                tabCell_6.innerHTML = equips[i]["maxLv"];
+                let tabCell_7 = tr.insertCell(-1);
+                tabCell_7.innerHTML = equips[i]["hp"];
+                let tabCell_8 = tr.insertCell(-1);
+                tabCell_8.innerHTML = equips[i]["lvHp"];
+                let tabCell_9 = tr.insertCell(-1);
+                tabCell_9.innerHTML = equips[i]["atk"];
+                let tabCell_10 = tr.insertCell(-1);
+                tabCell_10.innerHTML = equips[i]["lvAtk"];
+                let tabCell_11 = tr.insertCell(-1);
+                tabCell_11.innerHTML = equips[i]["def"];
+                let tabCell_12 = tr.insertCell(-1);
+                tabCell_12.innerHTML = equips[i]["lvDef"];
+                let tabCell_13 = tr.insertCell(-1);
+                tabCell_13.innerHTML = equips[i]["equipKind"];
+                let tabCell_14 = tr.insertCell(-1);
+                tabCell_14.innerHTML = equips[i]["attackKind"];
+                let tabCell_15 = tr.insertCell(-1);
+                if (equips[i]["set_EN"] !== undefined) {
+                    tabCell_15.innerHTML = equips[i]["set_EN"];
+                } else {
+                    tabCell_15.innerHTML = "N/A";
+                }
+                let tabCell_16 = tr.insertCell(-1);
+                tabCell_16.innerHTML = equips[i]["specialized"];
+                let tabCell_17 = tr.insertCell(-1);
+                if (equips[i]["ability"] > 0) {
+                    tabCell_17.innerHTML = getCustomById(equips[i]["ability"])["nameId_EN"];
+                } else {
+                    tabCell_17.innerHTML = "None";
+                }
+            }
+        }
+
+
+        let divContainer = document.getElementById("Table")
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table)
+    }
+</script>
+</html>

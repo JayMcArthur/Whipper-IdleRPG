@@ -1,0 +1,571 @@
+{
+  "materials": [
+    {
+      "id": 1,
+      "nameId": "カタクナール",
+      "icon": "mate01",
+      "efficacyId": "強化値を+1できる緑色の液体",
+      "use": 1
+    },
+    {
+      "id": 2,
+      "nameId": "カタクナールX",
+      "icon": "mate02",
+      "efficacyId": "強化値を+3できる橙色の液体",
+      "use": 1
+    },
+    {
+      "id": 3,
+      "nameId": "カタクナールZ",
+      "icon": "mate03",
+      "efficacyId": "強化値を+5できる紫色の液体",
+      "use": 1
+    },
+    {
+      "id": 4,
+      "nameId": "銀の組成液",
+      "icon": "mate04",
+      "efficacyId": "装備品同士を結合できる銀色の液体",
+      "use": 2
+    },
+    {
+      "id": 5,
+      "nameId": "金の組成液",
+      "icon": "mate05",
+      "efficacyId": "装備品同士を無傷で結合できる金色の液体",
+      "use": 2
+    },
+    {
+      "id": 6,
+      "nameId": "星の組成液",
+      "icon": "mate06",
+      "efficacyId": "指輪同士を無傷で結合できる幻の液体",
+      "use": 2
+    },
+    {
+      "id": 10,
+      "nameId": "白の鍵",
+      "icon": "mate10",
+      "efficacyId": "異世界への扉を開く鍵",
+      "use": 3
+    },
+    {
+      "id": 11,
+      "nameId": "朽ちかけた紙切れ 1",
+      "icon": "log_paper",
+      "efficacyId": "はじめの草むら",
+      "use": 6
+    },
+    {
+      "id": 12,
+      "nameId": "朽ちかけた紙切れ 2",
+      "icon": "log_paper",
+      "efficacyId": "深い洞穴",
+      "use": 6
+    },
+    {
+      "id": 13,
+      "nameId": "朽ちかけた紙切れ 3",
+      "icon": "log_paper",
+      "efficacyId": "秘密の抜け道",
+      "use": 6
+    },
+    {
+      "id": 14,
+      "nameId": "朽ちかけた紙切れ 4",
+      "icon": "log_paper",
+      "efficacyId": "正義の巨塔",
+      "use": 6
+    },
+    {
+      "id": 20,
+      "nameId": "アイテム図鑑",
+      "icon": "log_book",
+      "efficacyId": "アイテムの解析結果を記録できる図鑑",
+      "use": 4
+    },
+    {
+      "id": 21,
+      "nameId": "ボイドレポート",
+      "icon": "mate21",
+      "efficacyId": "解析値を+3できる科学者の遺文",
+      "use": 5
+    },
+    {
+      "id": 22,
+      "nameId": "ロゼッタストーン",
+      "icon": "mate22",
+      "efficacyId": "解析値を+10できる古代文明の遺物",
+      "use": 5
+    },
+    {
+      "id": 25,
+      "nameId": "鑑定士の心得",
+      "icon": "tips",
+      "efficacyId": "下級アイテムの自動解析ができるようになる巻物",
+      "use": 4
+    },
+    {
+      "id": 26,
+      "nameId": "逆行の懐中時計",
+      "icon": "watch",
+      "efficacyId": "失ったアイテムを取り戻すことができる古びた懐中時計",
+      "use": 4
+    },
+    {
+      "id": 30,
+      "nameId": "亡国の拡大鏡",
+      "icon": "mate30",
+      "efficacyId": "解析上限が上がる亡国の研究道具",
+      "use": 7
+    },
+    {
+      "id": 40,
+      "nameId": "古代の鍛冶ハンマー",
+      "icon": "mate40",
+      "efficacyId": "能力合成上限が上がる鍛冶道具",
+      "use": 8
+    },
+    {
+      "id": 50,
+      "nameId": "霧の首飾り",
+      "icon": "mate50",
+      "efficacyId": "瘴気濃度を増減できる古代の首飾り",
+      "use": 9
+    },
+    {
+      "id": 51,
+      "nameId": "伝言の鈴",
+      "icon": "suzu",
+      "efficacyId": "離れた場所からでも指示を伝えられる鈴",
+      "use": 30
+    },
+    {
+      "id": 61,
+      "nameId": "カタクナールG",
+      "icon": "mate61",
+      "efficacyId": "強化値を+10できる大容量の緑色の液体",
+      "use": 1
+    },
+    {
+      "id": 62,
+      "nameId": "カタクナールXG",
+      "icon": "mate62",
+      "efficacyId": "強化値を+30できる大容量の橙色の液体",
+      "use": 1
+    },
+    {
+      "id": 63,
+      "nameId": "カタクナールZG",
+      "icon": "mate63",
+      "efficacyId": "強化値を+50できる大容量の紫色の液体",
+      "use": 1
+    },
+    {
+      "id": 80,
+      "nameId": "地図の断片",
+      "icon": "map",
+      "efficacyId": "財宝のありかが印されている",
+      "use": 88
+    },
+    {
+      "id": 81,
+      "nameId": "儀式の燈火",
+      "icon": "candle",
+      "efficacyId": "錬金術師の島の霧を払い、探索時間を延ばすことができる",
+      "use": 4
+    },
+    {
+      "id": 85,
+      "nameId": "逆転の砂時計",
+      "icon": "hourglass",
+      "efficacyId": "隠者の秘宝。ロストしたアイテムを全て取り戻すことができる",
+      "use": 88
+    },
+    {
+      "id": 88,
+      "nameId": "瞬足の羽飾り",
+      "icon": "feather",
+      "efficacyId": "隠者の秘宝。足が速くなり、いつもの冒険を1/2の時間でこなすことができる",
+      "use": 88
+    },
+    {
+      "id": 90,
+      "nameId": "黒の鍵",
+      "icon": "blackkey",
+      "efficacyId": "廃棄場への扉を開く鍵",
+      "use": 95
+    },
+    {
+      "id": 91,
+      "nameId": "ライラック",
+      "icon": "lilac",
+      "efficacyId": "迷いの森に咲く紫色の花木。花言葉は「大切な友達」",
+      "use": 90
+    },
+    {
+      "id": 92,
+      "nameId": "コアのかけら",
+      "icon": "corefragment",
+      "efficacyId": "砕け散ったコアのかけら。瘴気濃度の上限が上がる",
+      "use": 9
+    },
+    {
+      "id": 93,
+      "nameId": "幻鉱の砥石",
+      "icon": "sharpening",
+      "efficacyId": "侵蝕度を+10できる砥石",
+      "use": 1
+    },
+    {
+      "id": 94,
+      "nameId": "コアの塊",
+      "icon": "unobtainium1",
+      "efficacyId": "砕け散ったコアの大きな塊。全4種集めると…",
+      "use": 9
+    },
+    {
+      "id": 95,
+      "nameId": "コアの塊",
+      "icon": "unobtainium2",
+      "efficacyId": "砕け散ったコアの大きな塊。全4種集めると…",
+      "use": 9
+    },
+    {
+      "id": 96,
+      "nameId": "コアの塊",
+      "icon": "unobtainium3",
+      "efficacyId": "砕け散ったコアの大きな塊。全4種集めると…",
+      "use": 9
+    },
+    {
+      "id": 97,
+      "nameId": "コアの塊",
+      "icon": "unobtainium4",
+      "efficacyId": "砕け散ったコアの大きな塊。全4種集めると…",
+      "use": 9
+    },
+    {
+      "id": 98,
+      "nameId": "オリジンコア",
+      "icon": "unobtainium",
+      "efficacyId": "コアの塊を集めて復元した、テバの動力源だったモノ。瘴気濃度の上限がさらに上がる",
+      "use": 9
+    },
+    {
+      "id": 99,
+      "nameId": "りんご",
+      "icon": "apple",
+      "efficacyId": "高濃度の瘴気に汚染された果実。持っているだけで永続的にLUK+1",
+      "use": 99
+    },
+    {
+      "id": 101,
+      "nameId": "遭難者の手記",
+      "icon": "log_paper",
+      "efficacyId": "迷いの森",
+      "use": 100
+    },
+    {
+      "id": 102,
+      "nameId": "研究所長の書き置き",
+      "icon": "log_paper",
+      "efficacyId": "黄昏の洋館",
+      "use": 100
+    },
+    {
+      "id": 103,
+      "nameId": "偽霊媒師の独白",
+      "icon": "log_paper",
+      "efficacyId": "濃霧の古戦場",
+      "use": 100
+    },
+    {
+      "id": 104,
+      "nameId": "戦況報告書",
+      "icon": "log_scroll",
+      "efficacyId": "終わりの魔城",
+      "use": 100
+    },
+    {
+      "id": 105,
+      "nameId": "生存者の日記",
+      "icon": "log_newmemo",
+      "efficacyId": "はじめの草むら",
+      "use": 100
+    },
+    {
+      "id": 106,
+      "nameId": "看守の回想",
+      "icon": "log_newmemo",
+      "efficacyId": "迷いの森",
+      "use": 100
+    },
+    {
+      "id": 107,
+      "nameId": "生き残るために、Vault-0へ",
+      "icon": "log_newmemo",
+      "efficacyId": "深い洞穴",
+      "use": 100
+    },
+    {
+      "id": 108,
+      "nameId": "瘴気中毒に関する研究報告",
+      "icon": "log_paper",
+      "efficacyId": "黄昏の洋館",
+      "use": 100
+    },
+    {
+      "id": 109,
+      "nameId": "合成獣に関する研究報告",
+      "icon": "log_paper",
+      "efficacyId": "秘密の抜け道",
+      "use": 100
+    },
+    {
+      "id": 110,
+      "nameId": "よくわかる鉱物図鑑",
+      "icon": "log_paper",
+      "efficacyId": "濃霧の古戦場",
+      "use": 100
+    },
+    {
+      "id": 111,
+      "nameId": "初代王の遺書",
+      "icon": "log_paper",
+      "efficacyId": "正義の巨塔",
+      "use": 100
+    },
+    {
+      "id": 112,
+      "nameId": "テバの基本性能",
+      "icon": "log_newmemo",
+      "efficacyId": "異世界への扉",
+      "use": 100
+    },
+    {
+      "id": 113,
+      "nameId": "量産型アンドロイドの特性",
+      "icon": "log_newmemo",
+      "efficacyId": "異世界への扉",
+      "use": 100
+    },
+    {
+      "id": 114,
+      "nameId": "テバの思考",
+      "icon": "log_newmemo",
+      "efficacyId": "異世界への扉",
+      "use": 100
+    },
+    {
+      "id": 115,
+      "nameId": "テバの制止手段",
+      "icon": "log_newmemo",
+      "efficacyId": "異世界への扉",
+      "use": 100
+    },
+    {
+      "id": 116,
+      "nameId": "号外",
+      "icon": "log_newmemo",
+      "efficacyId": "異世界への扉",
+      "use": 100
+    },
+    {
+      "id": 117,
+      "nameId": "遺物について",
+      "icon": "log_newmemo",
+      "efficacyId": "異世界への扉",
+      "use": 100
+    },
+    {
+      "id": 118,
+      "nameId": "巨人の腕について",
+      "icon": "log_newmemo",
+      "efficacyId": "異世界への扉",
+      "use": 100
+    },
+    {
+      "id": 511,
+      "nameId": "被験体記録 アダム #01",
+      "icon": "log_paper",
+      "efficacyId": "黄昏の洋館",
+      "use": 500
+    },
+    {
+      "id": 512,
+      "nameId": "被験体記録 アダム #02",
+      "icon": "log_paper",
+      "efficacyId": "黄昏の洋館",
+      "use": 500
+    },
+    {
+      "id": 513,
+      "nameId": "被験体記録 アダム #03",
+      "icon": "log_paper",
+      "efficacyId": "黄昏の洋館",
+      "use": 500
+    },
+    {
+      "id": 521,
+      "nameId": "被験体記録 パノプテス #01",
+      "icon": "log_paper",
+      "efficacyId": "次元の裂け目",
+      "use": 500
+    },
+    {
+      "id": 522,
+      "nameId": "被験体記録 パノプテス #02",
+      "icon": "log_paper",
+      "efficacyId": "次元の裂け目",
+      "use": 500
+    },
+    {
+      "id": 523,
+      "nameId": "被験体記録 パノプテス #03",
+      "icon": "log_paper",
+      "efficacyId": "次元の裂け目",
+      "use": 500
+    },
+    {
+      "id": 531,
+      "nameId": "被験体記録 九尾 #01",
+      "icon": "log_paper",
+      "efficacyId": "濃霧の古戦場",
+      "use": 500
+    },
+    {
+      "id": 532,
+      "nameId": "被験体記録 九尾 #02",
+      "icon": "log_paper",
+      "efficacyId": "濃霧の古戦場",
+      "use": 500
+    },
+    {
+      "id": 533,
+      "nameId": "被験体記録 九尾 #03",
+      "icon": "log_paper",
+      "efficacyId": "濃霧の古戦場",
+      "use": 500
+    },
+    {
+      "id": 541,
+      "nameId": "被験体記録 やまたのおろち #01",
+      "icon": "log_paper",
+      "efficacyId": "正義の巨塔",
+      "use": 500
+    },
+    {
+      "id": 542,
+      "nameId": "被験体記録 やまたのおろち #02",
+      "icon": "log_paper",
+      "efficacyId": "正義の巨塔",
+      "use": 500
+    },
+    {
+      "id": 543,
+      "nameId": "被験体記録 やまたのおろち #03",
+      "icon": "log_paper",
+      "efficacyId": "正義の巨塔",
+      "use": 500
+    },
+    {
+      "id": 1001,
+      "nameId": "幽世の栞",
+      "icon": "shiori",
+      "efficacyId": "【討伐の証】禁書に命を芽吹かせた栞。未だ微かに脈打っている。HPが増える(+1000/Lv)",
+      "use": 110
+    },
+    {
+      "id": 1002,
+      "nameId": "幽世の栞がレベルアップ",
+      "icon": "shiori",
+      "efficacyId": "",
+      "use": 200
+    },
+    {
+      "id": 1101,
+      "nameId": "戦闘用チップ",
+      "icon": "tebachip",
+      "efficacyId": "【討伐の証】テバの学習データが記録されたチップ。Lvが上がるごとに、割り振り可能BPが増える(+5/Lv)",
+      "use": 110
+    },
+    {
+      "id": 1102,
+      "nameId": "戦闘用チップがレベルアップ",
+      "icon": "tebachip",
+      "efficacyId": "",
+      "use": 200
+    },
+    {
+      "id": 1201,
+      "nameId": "千手核",
+      "icon": "senjukaku",
+      "efficacyId": "【討伐の証】千手の動力源。消えることのない炎を内包している。Lvが上がるごとに、アイテム能力の合成上限が上がる",
+      "use": 110
+    },
+    {
+      "id": 1202,
+      "nameId": "千手核がレベルアップ",
+      "icon": "senjukaku",
+      "efficacyId": "",
+      "use": 200
+    },
+    {
+      "id": 1301,
+      "nameId": "アダムの心臓",
+      "icon": "adamheart",
+      "efficacyId": "【討伐の証】脈打つ心臓は力の象徴。Lvが上がるごとに、永続ブーストの上限が上がる",
+      "use": 110
+    },
+    {
+      "id": 1302,
+      "nameId": "アダムの心臓がレベルアップ",
+      "icon": "adamheart",
+      "efficacyId": "",
+      "use": 200
+    },
+    {
+      "id": 1401,
+      "nameId": "パノプテスの瞳",
+      "icon": "panopteseye",
+      "efficacyId": "【討伐の証】その瞳は過去・現在・未来を見通す。Lvが上がるごとに、アイテムの解析上限が上がる",
+      "use": 110
+    },
+    {
+      "id": 1402,
+      "nameId": "パノプテスの瞳がレベルアップ",
+      "icon": "panopteseye",
+      "efficacyId": "",
+      "use": 200
+    },
+    {
+      "id": 1501,
+      "nameId": "殺生石",
+      "icon": "sesshoseki",
+      "efficacyId": "【討伐の証】妖狐が姿を変えた魔石。砥石による侵蝕度強化の上限が上がる",
+      "use": 110
+    },
+    {
+      "id": 1502,
+      "nameId": "殺生石がレベルアップ",
+      "icon": "sesshoseki",
+      "efficacyId": "",
+      "use": 200
+    },
+    {
+      "id": 1601,
+      "nameId": "まがたま",
+      "icon": "magatama",
+      "efficacyId": "【討伐の証】大蛇の依り代になっていた宝玉。伝説級アイテムの出現率が上がる",
+      "use": 110
+    },
+    {
+      "id": 1602,
+      "nameId": "まがたまがレベルアップ",
+      "icon": "magatama",
+      "efficacyId": "",
+      "use": 200
+    }
+  ]
+}

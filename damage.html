@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Damage Calculator - Whipper Wiki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .tool-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .tool-section { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.5rem; }
+    .tool-section h3 { margin-bottom: 1rem; color: var(--accent-gold); }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.85rem; }
+    .form-group select, .form-group input { width: 100%; padding: 0.625rem; background: var(--bg-input); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 0.9rem; }
+    .form-group input[type="number"] { max-width: 120px; }
+    .form-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .form-row .form-group { flex: 1; min-width: 100px; }
+    .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 1rem; }
+    .result-item { text-align: center; padding: 1rem; background: var(--bg-surface); border-radius: var(--radius-md); }
+    .result-value { font-size: 1.5rem; font-weight: 700; color: var(--accent-gold); }
+    .result-label { font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; }
+    .compare-table { width: 100%; }
+    .compare-table th, .compare-table td { padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--border-subtle); }
+    .compare-table th { background: var(--bg-card); color: var(--text-secondary); font-size: 0.75rem; text-transform: uppercase; }
+    .compare-table td { background: var(--bg-surface); }
+    .enchant-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+    .enchant-grid select { font-size: 0.8rem; padding: 0.5rem; }
+    @media (max-width: 768px) { .tool-grid { grid-template-columns: 1fr; } .enchant-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div id="wiki-header"></div>
+
+  <main class="main">
+    <div class="container">
+      <header class="page-header"><h1>Damage Calculator</h1><p>Calculate damage against monsters with miasma scaling.</p></header>
+      
+      <div class="tool-grid">
+        <div class="tool-section">
+          <h3>Monster</h3>
+          <div class="form-group"><label>Select Monster</label><select id="monster-select"></select></div>
+          <div class="form-group"><label>Dungeon</label><select id="dungeon-select"></select></div>
+          <div class="form-group"><label>Miasma Level</label><input type="number" id="miasma-level" value="50" min="0" max="100"></div>
+        </div>
+        
+        <div class="tool-section">
+          <h3>Your Stats</h3>
+          <div class="form-group"><label>Attack</label><input type="number" id="player-attack" value="10000" min="1"></div>
+          <div class="form-group"><label>Defense</label><input type="number" id="player-defense" value="5000" min="1"></div>
+          <div class="form-group"><label>HP</label><input type="number" id="player-hp" value="50000" min="1"></div>
+          <button id="calc-damage-btn" class="btn btn-primary mt-2" style="width:100%">Calculate</button>
+        </div>
+      </div>
+      
+      <div class="tool-section mt-3">
+        <h3>Results</h3>
+        <div class="results-grid">
+          <div class="result-item"><div class="result-value" id="dmg-monster-hp">-</div><div class="result-label">Monster HP</div></div>
+          <div class="result-item"><div class="result-value" id="dmg-monster-atk">-</div><div class="result-label">Monster ATK</div></div>
+          <div class="result-item"><div class="result-value" id="dmg-monster-def">-</div><div class="result-label">Monster DEF</div></div>
+          <div class="result-item"><div class="result-value" id="dmg-player-deals">-</div><div class="result-label">You Deal</div></div>
+          <div class="result-item"><div class="result-value" id="dmg-monster-deals">-</div><div class="result-label">Monster Deals</div></div>
+          <div class="result-item"><div class="result-value" id="dmg-turns-kill">-</div><div class="result-label">Turns to Kill</div></div>
+          <div class="result-item"><div class="result-value" id="dmg-turns-die">-</div><div class="result-label">Turns to Die</div></div>
+          <div class="result-item"><div class="result-value" id="dmg-result">-</div><div class="result-label">Result</div></div>
+        </div>
+        <p class="text-muted mt-2">Note: This is a simplified calculation. Actual combat includes crits, dodges, and special abilities.</p>
+      </div>
+    </div>
+  </main>
+
+  <div id="wiki-footer"></div>
+  <script src="js/helpers.js"></script>
+  <script src="js/pages/damage.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Comparison - Whipper Wiki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .tool-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .tool-section { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.5rem; }
+    .tool-section h3 { margin-bottom: 1rem; color: var(--accent-gold); }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.85rem; }
+    .form-group select, .form-group input { width: 100%; padding: 0.625rem; background: var(--bg-input); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 0.9rem; }
+    .form-group input[type="number"] { max-width: 120px; }
+    .form-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .form-row .form-group { flex: 1; min-width: 100px; }
+    .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 1rem; }
+    .result-item { text-align: center; padding: 1rem; background: var(--bg-surface); border-radius: var(--radius-md); }
+    .result-value { font-size: 1.5rem; font-weight: 700; color: var(--accent-gold); }
+    .result-label { font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; }
+    .compare-table { width: 100%; }
+    .compare-table th, .compare-table td { padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--border-subtle); }
+    .compare-table th { background: var(--bg-card); color: var(--text-secondary); font-size: 0.75rem; text-transform: uppercase; }
+    .compare-table td { background: var(--bg-surface); }
+    .enchant-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+    .enchant-grid select { font-size: 0.8rem; padding: 0.5rem; }
+    @media (max-width: 768px) { .tool-grid { grid-template-columns: 1fr; } .enchant-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div id="wiki-header"></div>
+
+  <main class="main">
+    <div class="container">
+      <header class="page-header"><h1>Item Comparison</h1><p>Compare up to 3 items side by side.</p></header>
+      
+      <div class="tool-section">
+        <div class="form-row">
+          <div class="form-group"><label>Item 1</label><select id="compare-item-1"></select></div>
+          <div class="form-group"><label>Item 2</label><select id="compare-item-2"></select></div>
+          <div class="form-group"><label>Item 3</label><select id="compare-item-3"></select></div>
+        </div>
+      </div>
+      
+      <div class="table-container mt-3">
+        <table class="compare-table">
+          <thead><tr><th>Stat</th><th>Item 1</th><th>Item 2</th><th>Item 3</th></tr></thead>
+          <tbody>
+            <tr><td>Icon</td><td id="compare-icon-1">-</td><td id="compare-icon-2">-</td><td id="compare-icon-3">-</td></tr>
+            <tr><td>Name</td><td id="compare-name-1">-</td><td id="compare-name-2">-</td><td id="compare-name-3">-</td></tr>
+            <tr><td>Type</td><td id="compare-type-1">-</td><td id="compare-type-2">-</td><td id="compare-type-3">-</td></tr>
+            <tr><td>ATK/DEF</td><td id="compare-param-1">-</td><td id="compare-param-2">-</td><td id="compare-param-3">-</td></tr>
+            <tr><td>HP</td><td id="compare-hp-1">-</td><td id="compare-hp-2">-</td><td id="compare-hp-3">-</td></tr>
+            <tr><td>STR</td><td id="compare-str-1">-</td><td id="compare-str-2">-</td><td id="compare-str-3">-</td></tr>
+            <tr><td>VIT</td><td id="compare-vit-1">-</td><td id="compare-vit-2">-</td><td id="compare-vit-3">-</td></tr>
+            <tr><td>Max Level</td><td id="compare-maxlv-1">-</td><td id="compare-maxlv-2">-</td><td id="compare-maxlv-3">-</td></tr>
+            <tr><td>Set</td><td id="compare-set-1">-</td><td id="compare-set-2">-</td><td id="compare-set-3">-</td></tr>
+            <tr><td>Special</td><td id="compare-special-1">-</td><td id="compare-special-2">-</td><td id="compare-special-3">-</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <div id="wiki-footer"></div>
+  <script src="js/helpers.js"></script>
+  <script src="js/pages/compare.js"></script>
+</body>
+</html>

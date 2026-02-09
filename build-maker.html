@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build Maker - Whipper Wiki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .build-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 1024px) {
+      .build-layout { grid-template-columns: 1fr; }
+    }
+    
+    .build-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+    .section-header {
+      background: var(--accent-gold);
+      color: var(--bg-dark);
+      padding: 0.6rem 1rem;
+      font-weight: 600;
+      font-family: var(--font-heading);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+    .section-header .header-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .section-header .btn-sm {
+      background: var(--bg-dark);
+      color: var(--accent-gold);
+      font-size: 0.65rem;
+      padding: 0.2rem 0.4rem;
+    }
+    .section-body {
+      padding: 1rem;
+    }
+
+    /* Equipment Cards */
+    .equip-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-md);
+      padding: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .equip-card:last-child { margin-bottom: 0; }
+    
+    .equip-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .equip-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-input);
+    }
+    .equip-name {
+      flex: 1;
+      font-weight: 600;
+      color: var(--accent-gold);
+      font-size: 0.9rem;
+    }
+    .equip-type {
+      font-size: 0.65rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+    }
+    
+    /* Search autocomplete */
+    .item-search-wrapper {
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+    .item-search {
+      width: 100%;
+      padding: 0.4rem 0.6rem;
+      background: var(--bg-input);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      font-size: 0.85rem;
+    }
+    .item-search:focus {
+      border-color: var(--accent-gold);
+      outline: none;
+    }
+    .autocomplete-list {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      max-height: 180px;
+      overflow-y: auto;
+      z-index: 100;
+      display: none;
+    }
+    .autocomplete-list.active { display: block; }
+    .autocomplete-item {
+      padding: 0.4rem 0.6rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.8rem;
+    }
+    .autocomplete-item:hover, .autocomplete-item.selected {
+      background: var(--bg-surface);
+    }
+    .autocomplete-item img { width: 20px; height: 20px; }
+    .autocomplete-item .item-id {
+      color: var(--text-secondary);
+      font-size: 0.7rem;
+      margin-left: auto;
+    }
+
+    /* Input grids */
+    .input-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .input-group {
+      text-align: center;
+    }
+    .input-group label {
+      display: block;
+      font-size: 0.6rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      margin-bottom: 0.15rem;
+    }
+    .input-group input, .input-group select {
+      width: 100%;
+      padding: 0.3rem;
+      background: var(--bg-input);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      font-size: 0.8rem;
+      text-align: center;
+    }
+    .input-group .max-display {
+      font-size: 0.6rem;
+      color: var(--accent-teal);
+      margin-top: 0.1rem;
+    }
+
+    /* Rarity selector */
+    .rarity-row {
+      display: flex;
+      gap: 0.2rem;
+      margin-top: 0.5rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .rarity-btn {
+      flex: 1;
+      padding: 0.3rem 0.2rem;
+      font-size: 0.55rem;
+      text-transform: uppercase;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      background: var(--bg-input);
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+    .rarity-btn:hover { border-color: var(--accent-gold); }
+    .rarity-btn.active { font-weight: 600; }
+    .rarity-btn[data-rarity="red"].active { background: #8B0000; color: white; }
+    .rarity-btn[data-rarity="legendary"].active { background: #FFD700; color: black; }
+    .rarity-btn[data-rarity="mythical"].active { background: #FF69B4; color: white; }
+    .rarity-btn[data-rarity="noir"].active { background: #1a1a1a; color: white; border-color: #444; }
+    .rarity-btn[data-rarity="omega"].active { background: linear-gradient(135deg, #667eea, #764ba2); color: white; }
+
+    /* Enchantments */
+    .enchant-section { margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--border-subtle); }
+    .enchant-label { font-size: 0.6rem; color: var(--accent-teal); text-transform: uppercase; margin-bottom: 0.3rem; }
+    .enchant-row {
+      display: grid;
+      grid-template-columns: 1fr 70px;
+      gap: 0.3rem;
+      margin-bottom: 0.3rem;
+    }
+    .enchant-row select, .enchant-row input {
+      padding: 0.25rem;
+      background: var(--bg-input);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      font-size: 0.75rem;
+    }
+
+    /* Proofs section */
+    .proofs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--bg-surface);
+      padding: 0.4rem;
+      border-radius: var(--radius-sm);
+    }
+    .proof-item label {
+      flex: 1;
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+    }
+    .proof-item input {
+      width: 50px;
+      padding: 0.2rem;
+      background: var(--bg-input);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      text-align: center;
+      font-size: 0.75rem;
+    }
+    .proof-effect {
+      font-size: 0.6rem;
+      color: var(--accent-gold);
+    }
+
+    /* Boost table */
+    .boost-scroll { max-height: 300px; overflow-y: auto; }
+    .boost-table { width: 100%; font-size: 0.75rem; }
+    .boost-table th {
+      text-align: left;
+      padding: 0.3rem;
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      position: sticky;
+      top: 0;
+    }
+    .boost-table td {
+      padding: 0.25rem 0.3rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .boost-input {
+      width: 45px;
+      padding: 0.15rem;
+      background: var(--bg-input);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      text-align: center;
+      font-size: 0.75rem;
+    }
+    .boost-toggle { width: 14px; height: 14px; accent-color: var(--accent-gold); }
+    .boost-total { color: var(--accent-gold); font-weight: 600; text-align: right; }
+
+    /* BP Display */
+    .bp-display {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem;
+      background: var(--bg-surface);
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.75rem;
+    }
+    .bp-item { text-align: center; }
+    .bp-value { font-size: 1rem; font-weight: 700; color: var(--accent-gold); }
+    .bp-value.negative { color: #ff6b6b; }
+    .bp-label { font-size: 0.55rem; color: var(--text-secondary); text-transform: uppercase; }
+
+    /* Stats display */
+    .stats-display { background: var(--bg-surface); border-radius: var(--radius-md); padding: 0.75rem; }
+    .stats-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.3rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.8rem;
+    }
+    .stats-row:last-child { border-bottom: none; }
+    .stats-label { color: var(--text-secondary); }
+    .stats-value { font-weight: 600; color: var(--text-primary); }
+    .stats-value.highlight { color: var(--accent-gold); }
+    .stats-section-title {
+      font-size: 0.65rem;
+      color: var(--accent-teal);
+      text-transform: uppercase;
+      margin: 0.5rem 0 0.3rem 0;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .stats-section-title:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+
+    /* Boost summary */
+    .boost-summary {
+      background: var(--bg-dark);
+      padding: 0.5rem;
+      border-radius: var(--radius-sm);
+      margin-top: 0.5rem;
+    }
+    .boost-summary-title { font-size: 0.6rem; color: var(--accent-teal); text-transform: uppercase; margin-bottom: 0.3rem; }
+    .boost-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.2rem;
+      font-size: 0.7rem;
+    }
+    .boost-summary-item { display: flex; justify-content: space-between; }
+    .boost-summary-item .label { color: var(--text-secondary); }
+    .boost-summary-item .value { color: var(--accent-gold); }
+
+    /* Saved builds */
+    .saved-build {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem;
+      background: var(--bg-surface);
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.4rem;
+    }
+    .saved-build.active { border: 1px solid var(--accent-gold); }
+    .build-info strong { display: block; color: var(--text-primary); font-size: 0.85rem; }
+    .build-info small { color: var(--text-secondary); font-size: 0.65rem; }
+    .build-actions { display: flex; gap: 0.2rem; }
+    .btn-sm { padding: 0.2rem 0.4rem; font-size: 0.65rem; }
+    .btn-danger { background: #ff6b6b; border-color: #ff6b6b; }
+  </style>
+</head>
+<body>
+  <div id="wiki-header"></div>
+
+  <main class="main">
+    <div class="container">
+      <header class="page-header">
+        <h1>Build Maker (WIP)</h1>
+        <p>Design equipment loadouts matching in-game calculations.</p>
+      </header>
+
+      <div class="build-layout">
+        <!-- Left Column -->
+        <div>
+          <!-- Equipment Section -->
+          <div class="build-section">
+            <div class="section-header">Equipment</div>
+            <div class="section-body">
+              <!-- Weapon -->
+              <div class="equip-card" data-slot="weapon">
+                <div class="item-search-wrapper">
+                  <input type="text" class="item-search" id="weapon-search" placeholder="Search weapon..." autocomplete="off">
+                  <div class="autocomplete-list" id="weapon-autocomplete"></div>
+                </div>
+                <div class="equip-header">
+                  <img class="equip-icon" id="weapon-icon" src="assets/icons/none.png" alt="">
+                  <div>
+                    <div class="equip-name" id="weapon-name">Long Sword</div>
+                    <div class="equip-type" id="weapon-type">Slashing</div>
+                  </div>
+                </div>
+                <div class="input-row">
+                  <div class="input-group">
+                    <label>Upgrade</label>
+                    <input type="number" id="weapon-upgrade" value="0" min="0">
+                    <div class="max-display">Max: <span id="weapon-max-upgrade">100</span></div>
+                  </div>
+                  <div class="input-group">
+                    <label>Corrosion</label>
+                    <input type="number" id="weapon-corrosion" value="0" min="0">
+                  </div>
+                  <div class="input-group">
+                    <label>Analysis</label>
+                    <input type="number" id="weapon-analysis" value="1" min="1" max="25">
+                  </div>
+                </div>
+                <div class="rarity-row">
+                  <button class="rarity-btn active" data-rarity="red" data-slot="weapon">Red</button>
+                  <button class="rarity-btn" data-rarity="legendary" data-slot="weapon">Leg</button>
+                  <button class="rarity-btn" data-rarity="mythical" data-slot="weapon">Myth</button>
+                  <button class="rarity-btn" data-rarity="noir" data-slot="weapon">Noir</button>
+                  <button class="rarity-btn" data-rarity="omega" data-slot="weapon">Ω</button>
+                </div>
+                <div class="enchant-section">
+                  <div class="enchant-label">Enchantments</div>
+                  <div class="enchant-row"><select id="weapon-enc-1"></select><input type="number" id="weapon-enc-1-lv" value="1" min="1" max="200"></div>
+                  <div class="enchant-row"><select id="weapon-enc-2"></select><input type="number" id="weapon-enc-2-lv" value="1" min="1" max="200"></div>
+                  <div class="enchant-row"><select id="weapon-enc-3"></select><input type="number" id="weapon-enc-3-lv" value="1" min="1" max="200"></div>
+                </div>
+              </div>
+
+              <!-- Armor -->
+              <div class="equip-card" data-slot="armor">
+                <div class="item-search-wrapper">
+                  <input type="text" class="item-search" id="armor-search" placeholder="Search shield..." autocomplete="off">
+                  <div class="autocomplete-list" id="armor-autocomplete"></div>
+                </div>
+                <div class="equip-header">
+                  <img class="equip-icon" id="armor-icon" src="assets/icons/none.png" alt="">
+                  <div>
+                    <div class="equip-name" id="armor-name">Tower Shield</div>
+                    <div class="equip-type" id="armor-type">Shield</div>
+                  </div>
+                </div>
+                <div class="input-row">
+                  <div class="input-group">
+                    <label>Upgrade</label>
+                    <input type="number" id="armor-upgrade" value="0" min="0">
+                    <div class="max-display">Max: <span id="armor-max-upgrade">100</span></div>
+                  </div>
+                  <div class="input-group">
+                    <label>Corrosion</label>
+                    <input type="number" id="armor-corrosion" value="0" min="0">
+                  </div>
+                  <div class="input-group">
+                    <label>Analysis</label>
+                    <input type="number" id="armor-analysis" value="1" min="1" max="25">
+                  </div>
+                </div>
+                <div class="rarity-row">
+                  <button class="rarity-btn active" data-rarity="red" data-slot="armor">Red</button>
+                  <button class="rarity-btn" data-rarity="legendary" data-slot="armor">Leg</button>
+                  <button class="rarity-btn" data-rarity="mythical" data-slot="armor">Myth</button>
+                  <button class="rarity-btn" data-rarity="noir" data-slot="armor">Noir</button>
+                  <button class="rarity-btn" data-rarity="omega" data-slot="armor">Ω</button>
+                </div>
+                <div class="enchant-section">
+                  <div class="enchant-label">Enchantments</div>
+                  <div class="enchant-row"><select id="armor-enc-1"></select><input type="number" id="armor-enc-1-lv" value="1" min="1" max="200"></div>
+                  <div class="enchant-row"><select id="armor-enc-2"></select><input type="number" id="armor-enc-2-lv" value="1" min="1" max="200"></div>
+                  <div class="enchant-row"><select id="armor-enc-3"></select><input type="number" id="armor-enc-3-lv" value="1" min="1" max="200"></div>
+                </div>
+              </div>
+
+              <!-- Ring -->
+              <div class="equip-card" data-slot="ring">
+                <div class="item-search-wrapper">
+                  <input type="text" class="item-search" id="ring-search" placeholder="Search ring..." autocomplete="off">
+                  <div class="autocomplete-list" id="ring-autocomplete"></div>
+                </div>
+                <div class="equip-header">
+                  <img class="equip-icon" id="ring-icon" src="assets/icons/none.png" alt="">
+                  <div>
+                    <div class="equip-name" id="ring-name">Ring of Power</div>
+                    <div class="equip-type" id="ring-type">Ring</div>
+                  </div>
+                </div>
+                <div class="input-row">
+                  <div class="input-group">
+                    <label>Corrosion</label>
+                    <input type="number" id="ring-corrosion" value="0" min="0">
+                  </div>
+                  <div class="input-group">
+                    <label>Analysis</label>
+                    <input type="number" id="ring-analysis" value="1" min="1" max="25">
+                  </div>
+                </div>
+                <div class="rarity-row">
+                  <button class="rarity-btn active" data-rarity="red" data-slot="ring">Red</button>
+                  <button class="rarity-btn" data-rarity="legendary" data-slot="ring">Leg</button>
+                  <button class="rarity-btn" data-rarity="mythical" data-slot="ring">Myth</button>
+                  <button class="rarity-btn" data-rarity="noir" data-slot="ring">Noir</button>
+                  <button class="rarity-btn" data-rarity="omega" data-slot="ring">Ω</button>
+                </div>
+                <div class="enchant-section">
+                  <div class="enchant-label">Enchantments</div>
+                  <div class="enchant-row"><select id="ring-enc-1"></select><input type="number" id="ring-enc-1-lv" value="1" min="1" max="200"></div>
+                  <div class="enchant-row"><select id="ring-enc-2"></select><input type="number" id="ring-enc-2-lv" value="1" min="1" max="200"></div>
+                  <div class="enchant-row"><select id="ring-enc-3"></select><input type="number" id="ring-enc-3-lv" value="1" min="1" max="200"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proofs Section -->
+          <div class="build-section">
+            <div class="section-header">Proofs of Subjugation</div>
+            <div class="section-body">
+              <div class="proofs-grid" id="proofs-container"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div>
+          <!-- Stats Section -->
+          <div class="build-section">
+            <div class="section-header">Calculated Stats (Lv1)</div>
+            <div class="section-body">
+              <div class="stats-display">
+                <div class="stats-section-title">Base Stats</div>
+                <div class="stats-row">
+                  <span class="stats-label">HP</span>
+                  <span class="stats-value highlight" id="result-hp">0</span>
+                </div>
+                <div class="stats-row">
+                  <span class="stats-label">STR</span>
+                  <span class="stats-value highlight" id="result-str">0</span>
+                </div>
+                <div class="stats-row">
+                  <span class="stats-label">VIT</span>
+                  <span class="stats-value" id="result-vit">0</span>
+                </div>
+                <div class="stats-row">
+                  <span class="stats-label">SPD</span>
+                  <span class="stats-value" id="result-spd">0</span>
+                </div>
+                <div class="stats-row">
+                  <span class="stats-label">LUK</span>
+                  <span class="stats-value" id="result-luk">0</span>
+                </div>
+
+                <div class="stats-section-title">Per Level</div>
+                <div class="stats-row">
+                  <span class="stats-label">HP/Lv</span>
+                  <span class="stats-value" id="result-hp-lv">+10</span>
+                </div>
+                <div class="stats-row">
+                  <span class="stats-label">STR/Lv</span>
+                  <span class="stats-value" id="result-str-lv">+1</span>
+                </div>
+                <div class="stats-row">
+                  <span class="stats-label">VIT/Lv</span>
+                  <span class="stats-value" id="result-vit-lv">+1</span>
+                </div>
+
+                <div class="stats-section-title">Combat</div>
+                <div class="stats-row">
+                  <span class="stats-label">Weapon ATK</span>
+                  <span class="stats-value highlight" id="result-weapon-atk">0</span>
+                </div>
+                <div class="stats-row">
+                  <span class="stats-label">Shield DEF</span>
+                  <span class="stats-value highlight" id="result-shield-def">0</span>
+                </div>
+                <div class="stats-row">
+                  <span class="stats-label">Total ATK</span>
+                  <span class="stats-value" id="result-attack">0</span>
+                </div>
+                <div class="stats-row">
+                  <span class="stats-label">Total DEF</span>
+                  <span class="stats-value" id="result-defense">0</span>
+                </div>
+                <div class="stats-row">
+                  <span class="stats-label">Attack Type</span>
+                  <span class="stats-value" id="result-attack-kind">-</span>
+                </div>
+                <div class="stats-row">
+                  <span class="stats-label">Set Bonus</span>
+                  <span class="stats-value" id="result-set">No</span>
+                </div>
+                <div class="stats-row">
+                  <span class="stats-label">Power Rating</span>
+                  <span class="stats-value highlight" id="result-power">0</span>
+                </div>
+              </div>
+
+              <div class="boost-summary">
+                <div class="boost-summary-title">Stat Multipliers</div>
+                <div class="boost-summary-grid">
+                  <div class="boost-summary-item"><span class="label">HP</span><span class="value" id="boost-hp">×1.0</span></div>
+                  <div class="boost-summary-item"><span class="label">STR</span><span class="value" id="boost-str">×1.0</span></div>
+                  <div class="boost-summary-item"><span class="label">VIT</span><span class="value" id="boost-vit">×1.0</span></div>
+                  <div class="boost-summary-item"><span class="label">SPD</span><span class="value" id="boost-spd">×1.0</span></div>
+                  <div class="boost-summary-item"><span class="label">LUK</span><span class="value" id="boost-luk">×1.0</span></div>
+                  <div class="boost-summary-item"><span class="label">Slash</span><span class="value" id="boost-slash">×1.0</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Permanent Boosts -->
+          <div class="build-section">
+            <div class="section-header">
+              Permanent Boosts
+              <div class="header-actions">
+                <button id="clear-boosts-btn" class="btn btn-sm">Clear</button>
+              </div>
+            </div>
+            <div class="section-body">
+              <div class="bp-display">
+                <div class="bp-item">
+                  <div class="bp-value" id="available-bp">0</div>
+                  <div class="bp-label">Available</div>
+                </div>
+                <div class="bp-item">
+                  <div class="bp-value" id="used-bp">0</div>
+                  <div class="bp-label">Used</div>
+                </div>
+                <div class="bp-item">
+                  <div class="bp-value" id="remaining-bp">0</div>
+                  <div class="bp-label">Remaining</div>
+                </div>
+              </div>
+              <div class="boost-scroll">
+                <table class="boost-table">
+                  <thead><tr><th>Boost</th><th>Effect</th><th>BP</th><th>Total</th></tr></thead>
+                  <tbody id="boost-table"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Saved Builds -->
+          <div class="build-section">
+            <div class="section-header">
+              Saved Builds
+              <div class="header-actions">
+                <button id="import-btn" class="btn btn-sm">Import</button>
+                <button id="save-build-btn" class="btn btn-sm">Save</button>
+              </div>
+            </div>
+            <div class="section-body">
+              <div id="saved-builds-list">
+                <p class="text-muted" style="font-size:0.8rem">No saved builds.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="wiki-footer"></div>
+  <input type="file" id="import-file" accept=".json" style="display:none">
+  <script src="js/helpers.js"></script>
+  <script src="js/pages/build-maker.js"></script>
+</body>
+</html>

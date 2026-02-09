@@ -1,0 +1,100 @@
+{
+  "_info": "UI translations for wiki interface. Falls back to English (en) if translation missing.",
+  "nav": {
+    "home": { "en": "Home", "ja": "ホーム", "zh_CN": "首页", "ko": "홈", "es": "Inicio", "de": "Startseite", "fr": "Accueil", "pt": "Início", "th": "หน้าแรก", "zh_TW": "首頁" },
+    "equipment": { "en": "Equipment", "ja": "装備", "zh_CN": "装备", "ko": "장비", "es": "Equipo", "de": "Ausrüstung", "fr": "Équipement", "pt": "Equipamento", "th": "อุปกรณ์", "zh_TW": "裝備" },
+    "weapons": { "en": "Weapons", "ja": "武器", "zh_CN": "武器", "ko": "무기", "es": "Armas", "de": "Waffen", "fr": "Armes", "pt": "Armas", "th": "อาวุธ", "zh_TW": "武器" },
+    "armor": { "en": "Armor", "ja": "盾", "zh_CN": "盾牌", "ko": "방패", "es": "Escudo", "de": "Schild", "fr": "Bouclier", "pt": "Escudo", "th": "โล่", "zh_TW": "盾牌" },
+    "rings": { "en": "Rings", "ja": "指輪", "zh_CN": "戒指", "ko": "반지", "es": "Anillos", "de": "Ringe", "fr": "Anneaux", "pt": "Anéis", "th": "แหวน", "zh_TW": "戒指" },
+    "monsters": { "en": "Monsters", "ja": "モンスター", "zh_CN": "怪物", "ko": "몬스터", "es": "Monstruos", "de": "Monster", "fr": "Monstres", "pt": "Monstros", "th": "มอนสเตอร์", "zh_TW": "怪物" },
+    "bosses": { "en": "Bosses", "ja": "ボス", "zh_CN": "Boss", "ko": "보스", "es": "Jefes", "de": "Bosse", "fr": "Boss", "pt": "Chefes", "th": "บอส", "zh_TW": "Boss" },
+    "dungeons": { "en": "Dungeons", "ja": "ダンジョン", "zh_CN": "地下城", "ko": "던전", "es": "Mazmorras", "de": "Dungeons", "fr": "Donjons", "pt": "Masmorras", "th": "ดันเจี้ยน", "zh_TW": "地下城" },
+    "enchantments": { "en": "Enchantments", "ja": "エンチャント", "zh_CN": "附魔", "ko": "인챈트", "es": "Encantamientos", "de": "Verzauberungen", "fr": "Enchantements", "pt": "Encantamentos", "th": "เสน่ห์", "zh_TW": "附魔" },
+    "materials": { "en": "Materials", "ja": "素材", "zh_CN": "材料", "ko": "재료", "es": "Materiales", "de": "Materialien", "fr": "Matériaux", "pt": "Materiais", "th": "วัสดุ", "zh_TW": "材料" },
+    "analysis": { "en": "Analysis", "ja": "解析", "zh_CN": "解析", "ko": "분석", "es": "Análisis", "de": "Analyse", "fr": "Analyse", "pt": "Análise", "th": "วิเคราะห์", "zh_TW": "解析" },
+    "tools": { "en": "Tools", "ja": "ツール", "zh_CN": "工具", "ko": "도구", "es": "Herramientas", "de": "Werkzeuge", "fr": "Outils", "pt": "Ferramentas", "th": "เครื่องมือ", "zh_TW": "工具" },
+    "itemBook": { "en": "Item Book", "ja": "アイテム図鑑", "zh_CN": "物品图鉴", "ko": "아이템 도감", "es": "Libro de Objetos", "de": "Gegenstandsbuch", "fr": "Livre d'Objets", "pt": "Livro de Itens", "th": "สมุดไอเทม", "zh_TW": "物品圖鑑" },
+    "buildMaker": { "en": "Build Maker", "ja": "ビルドメーカー", "zh_CN": "配装工具", "ko": "빌드 메이커", "es": "Creador de Builds", "de": "Build-Ersteller", "fr": "Créateur de Build", "pt": "Criador de Build", "th": "สร้างบิลด์", "zh_TW": "配裝工具" },
+    "fightSim": { "en": "Fight Simulator", "ja": "戦闘シミュレーター", "zh_CN": "战斗模拟器", "ko": "전투 시뮬레이터", "es": "Simulador de Combate", "de": "Kampfsimulator", "fr": "Simulateur de Combat", "pt": "Simulador de Combate", "th": "จำลองการต่อสู้", "zh_TW": "戰鬥模擬器" },
+    "guides": { "en": "Guides", "ja": "ガイド", "zh_CN": "攻略", "ko": "가이드", "es": "Guías", "de": "Anleitungen", "fr": "Guides", "pt": "Guias", "th": "คู่มือ", "zh_TW": "攻略" }
+  },
+  "common": {
+    "search": { "en": "Search...", "ja": "検索...", "zh_CN": "搜索...", "ko": "검색...", "es": "Buscar...", "de": "Suchen...", "fr": "Rechercher...", "pt": "Pesquisar...", "th": "ค้นหา...", "zh_TW": "搜尋..." },
+    "filter": { "en": "Filter", "ja": "フィルター", "zh_CN": "筛选", "ko": "필터", "es": "Filtrar", "de": "Filter", "fr": "Filtrer", "pt": "Filtrar", "th": "กรอง", "zh_TW": "篩選" },
+    "all": { "en": "All", "ja": "全て", "zh_CN": "全部", "ko": "전체", "es": "Todos", "de": "Alle", "fr": "Tous", "pt": "Todos", "th": "ทั้งหมด", "zh_TW": "全部" },
+    "none": { "en": "None", "ja": "なし", "zh_CN": "无", "ko": "없음", "es": "Ninguno", "de": "Keine", "fr": "Aucun", "pt": "Nenhum", "th": "ไม่มี", "zh_TW": "無" },
+    "save": { "en": "Save", "ja": "保存", "zh_CN": "保存", "ko": "저장", "es": "Guardar", "de": "Speichern", "fr": "Sauvegarder", "pt": "Salvar", "th": "บันทึก", "zh_TW": "儲存" },
+    "load": { "en": "Load", "ja": "読込", "zh_CN": "读取", "ko": "불러오기", "es": "Cargar", "de": "Laden", "fr": "Charger", "pt": "Carregar", "th": "โหลด", "zh_TW": "讀取" },
+    "export": { "en": "Export", "ja": "エクスポート", "zh_CN": "导出", "ko": "내보내기", "es": "Exportar", "de": "Exportieren", "fr": "Exporter", "pt": "Exportar", "th": "ส่งออก", "zh_TW": "匯出" },
+    "import": { "en": "Import", "ja": "インポート", "zh_CN": "导入", "ko": "가져오기", "es": "Importar", "de": "Importieren", "fr": "Importer", "pt": "Importar", "th": "นำเข้า", "zh_TW": "匯入" },
+    "delete": { "en": "Delete", "ja": "削除", "zh_CN": "删除", "ko": "삭제", "es": "Eliminar", "de": "Löschen", "fr": "Supprimer", "pt": "Excluir", "th": "ลบ", "zh_TW": "刪除" },
+    "clear": { "en": "Clear", "ja": "クリア", "zh_CN": "清除", "ko": "초기화", "es": "Limpiar", "de": "Löschen", "fr": "Effacer", "pt": "Limpar", "th": "ล้าง", "zh_TW": "清除" },
+    "reset": { "en": "Reset", "ja": "リセット", "zh_CN": "重置", "ko": "리셋", "es": "Reiniciar", "de": "Zurücksetzen", "fr": "Réinitialiser", "pt": "Redefinir", "th": "รีเซ็ต", "zh_TW": "重置" },
+    "results": { "en": "results", "ja": "件", "zh_CN": "个结果", "ko": "개 결과", "es": "resultados", "de": "Ergebnisse", "fr": "résultats", "pt": "resultados", "th": "ผลลัพธ์", "zh_TW": "個結果" },
+    "of": { "en": "of", "ja": "/", "zh_CN": "/", "ko": "/", "es": "de", "de": "von", "fr": "sur", "pt": "de", "th": "จาก", "zh_TW": "/" },
+    "level": { "en": "Level", "ja": "レベル", "zh_CN": "等级", "ko": "레벨", "es": "Nivel", "de": "Stufe", "fr": "Niveau", "pt": "Nível", "th": "เลเวล", "zh_TW": "等級" },
+    "name": { "en": "Name", "ja": "名前", "zh_CN": "名称", "ko": "이름", "es": "Nombre", "de": "Name", "fr": "Nom", "pt": "Nome", "th": "ชื่อ", "zh_TW": "名稱" },
+    "type": { "en": "Type", "ja": "種類", "zh_CN": "类型", "ko": "유형", "es": "Tipo", "de": "Typ", "fr": "Type", "pt": "Tipo", "th": "ประเภท", "zh_TW": "類型" },
+    "effect": { "en": "Effect", "ja": "効果", "zh_CN": "效果", "ko": "효과", "es": "Efecto", "de": "Effekt", "fr": "Effet", "pt": "Efeito", "th": "เอฟเฟกต์", "zh_TW": "效果" }
+  },
+  "stats": {
+    "hp": { "en": "HP", "ja": "HP", "zh_CN": "HP", "ko": "HP", "es": "HP", "de": "HP", "fr": "HP", "pt": "HP", "th": "HP", "zh_TW": "HP" },
+    "str": { "en": "STR", "ja": "STR", "zh_CN": "力量", "ko": "힘", "es": "FUE", "de": "STR", "fr": "FOR", "pt": "FOR", "th": "พลัง", "zh_TW": "力量" },
+    "vit": { "en": "VIT", "ja": "VIT", "zh_CN": "体力", "ko": "체력", "es": "VIT", "de": "VIT", "fr": "VIT", "pt": "VIT", "th": "พละ", "zh_TW": "體力" },
+    "spd": { "en": "SPD", "ja": "SPD", "zh_CN": "速度", "ko": "속도", "es": "VEL", "de": "GES", "fr": "VIT", "pt": "VEL", "th": "ความเร็ว", "zh_TW": "速度" },
+    "luk": { "en": "LUK", "ja": "LUK", "zh_CN": "幸运", "ko": "운", "es": "SUE", "de": "GLÜ", "fr": "CHA", "pt": "SOR", "th": "โชค", "zh_TW": "幸運" },
+    "atk": { "en": "ATK", "ja": "ATK", "zh_CN": "攻击", "ko": "공격", "es": "ATQ", "de": "ANG", "fr": "ATQ", "pt": "ATQ", "th": "โจมตี", "zh_TW": "攻擊" },
+    "def": { "en": "DEF", "ja": "DEF", "zh_CN": "防御", "ko": "방어", "es": "DEF", "de": "VER", "fr": "DÉF", "pt": "DEF", "th": "ป้องกัน", "zh_TW": "防禦" },
+    "exp": { "en": "EXP", "ja": "EXP", "zh_CN": "经验", "ko": "경험치", "es": "EXP", "de": "ERF", "fr": "EXP", "pt": "EXP", "th": "ค่าประสบการณ์", "zh_TW": "經驗" }
+  },
+  "equipment": {
+    "upgrade": { "en": "Upgrade", "ja": "強化値", "zh_CN": "强化", "ko": "강화", "es": "Mejora", "de": "Upgrade", "fr": "Amélioration", "pt": "Melhoria", "th": "อัพเกรด", "zh_TW": "強化" },
+    "corrosion": { "en": "Corrosion", "ja": "侵食", "zh_CN": "侵蚀", "ko": "부식", "es": "Corrosión", "de": "Korrosion", "fr": "Corrosion", "pt": "Corrosão", "th": "กัดกร่อน", "zh_TW": "侵蝕" },
+    "analysis": { "en": "Analysis", "ja": "解析", "zh_CN": "解析", "ko": "분석", "es": "Análisis", "de": "Analyse", "fr": "Analyse", "pt": "Análise", "th": "วิเคราะห์", "zh_TW": "解析" },
+    "setBonus": { "en": "Set Bonus", "ja": "セットボーナス", "zh_CN": "套装加成", "ko": "세트 보너스", "es": "Bonus de Set", "de": "Set-Bonus", "fr": "Bonus d'Ensemble", "pt": "Bônus de Conjunto", "th": "โบนัสชุด", "zh_TW": "套裝加成" },
+    "attackType": { "en": "Attack Type", "ja": "攻撃タイプ", "zh_CN": "攻击类型", "ko": "공격 유형", "es": "Tipo de Ataque", "de": "Angriffstyp", "fr": "Type d'Attaque", "pt": "Tipo de Ataque", "th": "ประเภทโจมตี", "zh_TW": "攻擊類型" },
+    "slashing": { "en": "Slashing", "ja": "斬撃", "zh_CN": "斩击", "ko": "참격", "es": "Cortante", "de": "Hieb", "fr": "Tranchant", "pt": "Cortante", "th": "ฟัน", "zh_TW": "斬擊" },
+    "bludgeoning": { "en": "Bludgeoning", "ja": "打撃", "zh_CN": "钝击", "ko": "타격", "es": "Contundente", "de": "Wucht", "fr": "Contondant", "pt": "Contundente", "th": "ทุบ", "zh_TW": "打擊" },
+    "piercing": { "en": "Piercing", "ja": "刺突", "zh_CN": "穿刺", "ko": "자상", "es": "Perforante", "de": "Stich", "fr": "Perçant", "pt": "Perfurante", "th": "แทง", "zh_TW": "刺突" },
+    "projectile": { "en": "Projectile", "ja": "射撃", "zh_CN": "投射", "ko": "투사체", "es": "Proyectil", "de": "Geschoss", "fr": "Projectile", "pt": "Projétil", "th": "ยิง", "zh_TW": "射擊" },
+    "rarity": { "en": "Rarity", "ja": "レア度", "zh_CN": "稀有度", "ko": "희귀도", "es": "Rareza", "de": "Seltenheit", "fr": "Rareté", "pt": "Raridade", "th": "ความหายาก", "zh_TW": "稀有度" },
+    "legendary": { "en": "Legendary", "ja": "レジェンダリー", "zh_CN": "传奇", "ko": "전설", "es": "Legendario", "de": "Legendär", "fr": "Légendaire", "pt": "Lendário", "th": "ตำนาน", "zh_TW": "傳奇" },
+    "mythical": { "en": "Mythical", "ja": "ミシカル", "zh_CN": "神话", "ko": "신화", "es": "Mítico", "de": "Mythisch", "fr": "Mythique", "pt": "Mítico", "th": "เทพนิยาย", "zh_TW": "神話" },
+    "noir": { "en": "Noir", "ja": "ノワール", "zh_CN": "暗黑", "ko": "누아르", "es": "Noir", "de": "Noir", "fr": "Noir", "pt": "Noir", "th": "มืด", "zh_TW": "暗黑" },
+    "omega": { "en": "Omega", "ja": "オメガ", "zh_CN": "欧米伽", "ko": "오메가", "es": "Omega", "de": "Omega", "fr": "Oméga", "pt": "Ômega", "th": "โอเมก้า", "zh_TW": "歐米伽" }
+  },
+  "bosses": {
+    "storyBosses": { "en": "Story Bosses", "ja": "ストーリーボス", "zh_CN": "剧情Boss", "ko": "스토리 보스", "es": "Jefes de Historia", "de": "Story-Bosse", "fr": "Boss d'Histoire", "pt": "Chefes de História", "th": "บอสเนื้อเรื่อง", "zh_TW": "劇情Boss" },
+    "royalTombBosses": { "en": "Royal Tomb Bosses", "ja": "王墓ボス", "zh_CN": "王墓Boss", "ko": "왕묘 보스", "es": "Jefes de la Tumba Real", "de": "Königsgrab-Bosse", "fr": "Boss de la Tombe Royale", "pt": "Chefes da Tumba Real", "th": "บอสสุสานหลวง", "zh_TW": "王墓Boss" },
+    "junkyardBosses": { "en": "Fallen Junkyard Bosses", "ja": "廃棄場ボス", "zh_CN": "废弃场Boss", "ko": "폐기장 보스", "es": "Jefes del Vertedero", "de": "Schrottplatz-Bosse", "fr": "Boss de la Décharge", "pt": "Chefes do Ferro-velho", "th": "บอสลานขยะ", "zh_TW": "廢棄場Boss" },
+    "attackTypes": { "en": "Vulnerable to", "ja": "有効攻撃", "zh_CN": "弱点", "ko": "유효 공격", "es": "Vulnerable a", "de": "Anfällig für", "fr": "Vulnérable à", "pt": "Vulnerável a", "th": "อ่อนแอต่อ", "zh_TW": "弱點" },
+    "drops": { "en": "Drops", "ja": "ドロップ", "zh_CN": "掉落", "ko": "드롭", "es": "Objetos", "de": "Beute", "fr": "Butin", "pt": "Drops", "th": "ของดรอป", "zh_TW": "掉落" },
+    "proof": { "en": "Proof of Subjugation", "ja": "討伐の証", "zh_CN": "讨伐证明", "ko": "토벌의 증거", "es": "Prueba de Sometimiento", "de": "Unterwerfungsbeweis", "fr": "Preuve de Soumission", "pt": "Prova de Subjugação", "th": "หลักฐานการปราบ", "zh_TW": "討伐證明" },
+    "phases": { "en": "Phases", "ja": "フェーズ", "zh_CN": "阶段", "ko": "페이즈", "es": "Fases", "de": "Phasen", "fr": "Phases", "pt": "Fases", "th": "เฟส", "zh_TW": "階段" },
+    "keyCost": { "en": "Key Cost", "ja": "鍵コスト", "zh_CN": "钥匙消耗", "ko": "열쇠 비용", "es": "Coste de Llaves", "de": "Schlüsselkosten", "fr": "Coût en Clés", "pt": "Custo de Chaves", "th": "ค่ากุญแจ", "zh_TW": "鑰匙消耗" }
+  },
+  "buildMaker": {
+    "title": { "en": "Build Maker", "ja": "ビルドメーカー", "zh_CN": "配装工具", "ko": "빌드 메이커", "es": "Creador de Builds", "de": "Build-Ersteller", "fr": "Créateur de Build", "pt": "Criador de Build", "th": "สร้างบิลด์", "zh_TW": "配裝工具" },
+    "availableBP": { "en": "Available BP", "ja": "利用可能BP", "zh_CN": "可用BP", "ko": "사용 가능 BP", "es": "BP Disponible", "de": "Verfügbare BP", "fr": "BP Disponible", "pt": "BP Disponível", "th": "BP ที่ใช้ได้", "zh_TW": "可用BP" },
+    "usedBP": { "en": "Used BP", "ja": "使用BP", "zh_CN": "已用BP", "ko": "사용된 BP", "es": "BP Usado", "de": "Verwendete BP", "fr": "BP Utilisé", "pt": "BP Usado", "th": "BP ที่ใช้", "zh_TW": "已用BP" },
+    "savedBuilds": { "en": "Saved Builds", "ja": "保存済みビルド", "zh_CN": "已保存配装", "ko": "저장된 빌드", "es": "Builds Guardados", "de": "Gespeicherte Builds", "fr": "Builds Sauvegardés", "pt": "Builds Salvos", "th": "บิลด์ที่บันทึก", "zh_TW": "已儲存配裝" },
+    "calculatedStats": { "en": "Calculated Stats", "ja": "計算結果", "zh_CN": "计算结果", "ko": "계산된 스탯", "es": "Stats Calculadas", "de": "Berechnete Stats", "fr": "Stats Calculées", "pt": "Stats Calculadas", "th": "สถิติที่คำนวณ", "zh_TW": "計算結果" },
+    "permanentBoosts": { "en": "Permanent Boosts", "ja": "恒久ブースト", "zh_CN": "永久加成", "ko": "영구 부스트", "es": "Bonificaciones Permanentes", "de": "Dauerhafte Boosts", "fr": "Bonus Permanents", "pt": "Boosts Permanentes", "th": "บัฟถาวร", "zh_TW": "永久加成" },
+    "enchantments": { "en": "Enchantments", "ja": "エンチャント", "zh_CN": "附魔", "ko": "인챈트", "es": "Encantamientos", "de": "Verzauberungen", "fr": "Enchantements", "pt": "Encantamentos", "th": "เสน่ห์", "zh_TW": "附魔" }
+  },
+  "itemBook": {
+    "title": { "en": "Item Book", "ja": "アイテム図鑑", "zh_CN": "物品图鉴", "ko": "아이템 도감", "es": "Libro de Objetos", "de": "Gegenstandsbuch", "fr": "Livre d'Objets", "pt": "Livro de Itens", "th": "สมุดไอเทม", "zh_TW": "物品圖鑑" },
+    "totalBP": { "en": "Total BP", "ja": "合計BP", "zh_CN": "总BP", "ko": "총 BP", "es": "BP Total", "de": "Gesamt-BP", "fr": "BP Total", "pt": "BP Total", "th": "BP รวม", "zh_TW": "總BP" },
+    "completion": { "en": "Completion", "ja": "達成率", "zh_CN": "完成度", "ko": "완료율", "es": "Completado", "de": "Abschluss", "fr": "Achèvement", "pt": "Conclusão", "th": "ความสำเร็จ", "zh_TW": "完成度" },
+    "dungeonProgress": { "en": "Dungeon Progress", "ja": "ダンジョン進捗", "zh_CN": "地下城进度", "ko": "던전 진행도", "es": "Progreso de Mazmorra", "de": "Dungeon-Fortschritt", "fr": "Progrès de Donjon", "pt": "Progresso de Masmorra", "th": "ความคืบหน้าดันเจี้ยน", "zh_TW": "地下城進度" }
+  },
+  "fightSim": {
+    "title": { "en": "Fight Simulator", "ja": "戦闘シミュレーター", "zh_CN": "战斗模拟器", "ko": "전투 시뮬레이터", "es": "Simulador de Combate", "de": "Kampfsimulator", "fr": "Simulateur de Combat", "pt": "Simulador de Combate", "th": "จำลองการต่อสู้", "zh_TW": "戰鬥模擬器" },
+    "selectDungeon": { "en": "Select Dungeon", "ja": "ダンジョン選択", "zh_CN": "选择地下城", "ko": "던전 선택", "es": "Seleccionar Mazmorra", "de": "Dungeon auswählen", "fr": "Sélectionner Donjon", "pt": "Selecionar Masmorra", "th": "เลือกดันเจี้ยน", "zh_TW": "選擇地下城" },
+    "miasmaLevel": { "en": "Miasma Level", "ja": "瘴気レベル", "zh_CN": "瘴气等级", "ko": "장기 레벨", "es": "Nivel de Miasma", "de": "Miasma-Stufe", "fr": "Niveau de Miasme", "pt": "Nível de Miasma", "th": "ระดับมลพิษ", "zh_TW": "瘴氣等級" },
+    "runSimulation": { "en": "Run Simulation", "ja": "シミュレーション開始", "zh_CN": "开始模拟", "ko": "시뮬레이션 시작", "es": "Ejecutar Simulación", "de": "Simulation starten", "fr": "Lancer la Simulation", "pt": "Executar Simulação", "th": "รันการจำลอง", "zh_TW": "開始模擬" },
+    "results": { "en": "Results", "ja": "結果", "zh_CN": "结果", "ko": "결과", "es": "Resultados", "de": "Ergebnisse", "fr": "Résultats", "pt": "Resultados", "th": "ผลลัพธ์", "zh_TW": "結果" },
+    "victory": { "en": "Victory", "ja": "勝利", "zh_CN": "胜利", "ko": "승리", "es": "Victoria", "de": "Sieg", "fr": "Victoire", "pt": "Vitória", "th": "ชัยชนะ", "zh_TW": "勝利" },
+    "defeat": { "en": "Defeat", "ja": "敗北", "zh_CN": "失败", "ko": "패배", "es": "Derrota", "de": "Niederlage", "fr": "Défaite", "pt": "Derrota", "th": "พ่ายแพ้", "zh_TW": "失敗" }
+  }
+}

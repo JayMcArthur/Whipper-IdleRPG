@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materials - Whipper Wiki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+  <div id="wiki-header"></div>
+
+  <main class="main">
+    <div class="container">
+      <header class="page-header"><h1>Materials</h1><p>Crafting and upgrade materials.</p></header>
+      <div class="table-controls">
+        <div class="search-box"><input type="text" id="search-input" placeholder="Search materials..."></div>
+        <span class="text-muted">Showing <span id="result-count">-</span></span>
+      </div>
+      <div class="table-container">
+        <table class="data-table" id="materials-table">
+          <thead><tr><th data-sort="nameId">Name</th><th>Effect</th></tr></thead>
+          <tbody><tr><td colspan="2" class="loading">Loading...</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <div id="wiki-footer"></div>
+  <script src="js/helpers.js"></script>
+  <script src="js/pages/materials.js"></script>
+</body>
+</html>

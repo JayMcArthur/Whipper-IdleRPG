@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weapons - Whipper Wiki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+  <div id="wiki-header"></div>
+
+  <main class="main">
+    <div class="container">
+      <header class="page-header"><h1>Weapons</h1></header>
+      <div class="table-controls">
+        <div class="search-box"><input type="text" id="search-input" placeholder="Search weapons..."></div>
+        <select id="filter-equipKind" class="filter-select"><option value="">All Types</option></select>
+        <select id="filter-attackKind" class="filter-select"><option value="">All Damage</option></select>
+        <span class="text-muted">Showing <span id="result-count">-</span> weapons</span>
+      </div>
+      <div class="table-container">
+        <table class="data-table" id="weapons-table">
+          <thead><tr>
+            <th data-sort="id" class="stat-col">ID</th>
+            <th data-sort="nameId">Name</th>
+            <th data-sort="param" class="stat-col">ATK</th>
+            <th data-sort="hp" class="stat-col">HP</th>
+            <th data-sort="atk" class="stat-col">STR</th>
+            <th data-sort="def" class="stat-col">VIT</th>
+            <th data-sort="maxLv" class="stat-col">Max Upgrade</th>
+            <th data-sort="equipKind">Type</th>
+            <th data-sort="attackKind">Damage</th>
+            <th data-sort="set">Set</th>
+            <th>Evolves To</th>
+          </tr></thead>
+          <tbody><tr><td colspan="10" class="loading">Loading weapons...</td></tr></tbody>
+        </table>
+      </div>
+      <div id="stat-legend" class="card mt-3">
+        <h3>Stats Legend</h3>
+        <p class="mt-1 text-muted">Base values shown with <span class="stat-growth">+X/lv</span> growth per level below.</p>
+      </div>
+    </div>
+  </main>
+
+  <div id="wiki-footer"></div>
+  <script src="js/helpers.js"></script>
+  <script src="js/pages/weapons.js"></script>
+</body>
+</html>

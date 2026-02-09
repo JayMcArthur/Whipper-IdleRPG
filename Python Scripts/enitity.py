@@ -5,34 +5,36 @@ from json_to_python import monster_list, equip_list, custom_list, exp_to_level, 
 
 # This is the defaults of items
 UPGRADE_MAX = 50000
-ANALYSIS_LEVEL_MAX = 15
-ANALYSIS_BOOST_MAX = 495 + (50 * 5)
+ANALYSIS_LEVEL_MAX = 20
+COMBAT_CHIP_BP = 50 * 5
+ANALYSIS_BOOST_MAX = (166 * (25/5)) + COMBAT_CHIP_BP  # 914
 # We give max to All damage types as I assume you will change boost to weapon type
 ANALYSIS_BOOST_DEFAULT = [
-    0,  # HP
-    100,  # STR
-    100,  # VIT
-    0,  # SPD
-    0,  # LUK
-    0,  # Drop Rate
-    100,  # Crit Rate
-    0,  # Crit Dmg
-    100,  # Slash Dmg
-    100,  # Bludgeon Dmg
-    100,  # Pierce Dmg
-    100,  # Projectile Dmg
-    0,  # Poison Dmg
-    0,  # Xp Gain
-    50,  # First Strike
-    0,  # Poison
-    50,  # Unyielding
-    50,  # One Strike
-    50,  # Double Strike
-    50,  # Three Paths
-    0,  # Four Leaves
-    0,  # Five Lights
-    50,  # Sixth Sense
-    50,  # Seven Blessings
+    # Points Given, Possible, Name, Effect
+    0,  # _ 0-200 | HP              | 0.5%/BP
+    100,  # 0-200 | STR             | 0.5%/BP
+    100,  # 0-200 | VIT             | 0.5%/BP
+    0,  # _ 0-200 | SPD             | 0.5%/BP
+    0,  # _ 0-200 | LUK             | 0.5%/BP
+    0,  # _ 0-200 | Drop Rate       | 0.02%/BP
+    100,  # 0-200 | Crit Rate       | 0.2%/BP
+    0,  # _ 0-200 | Crit Dmg        | 0.5%/BP
+    100,  # 0-200 | Slash Dmg       | 0.5%/BP
+    100,  # 0-200 | Bludgeon Dmg    | 0.5%/BP
+    100,  # 0-200 | Pierce Dmg      | 0.5%/BP
+    100,  # 0-200 | Projectile Dmg  | 0.5%/BP
+    0,  # _ 0-200 | Poison Dmg      | 0.01%/BP
+    0,  # _ 0-200 | Xp Gain         | 0.5%/BP
+    50,  #_ 00/50 | First Strike    | 50BP > Always attack first
+    0,  # _ 00/50 | Poison          | 50BP > inflict poison
+    50,  #_ 00/50 | Unyielding      | 50BP > revive at 1 hp
+    50,  #_ 00/50 | One Strike      | 50BP > Crit chance increases by 20%
+    50,  #_ 00/50 | Double Strike   | 50BP > Chance of double attacks 20%
+    50,  #_ 00/50 | Three Paths     | 50BP > 50% chance for 3x crit damage
+    0,  # _ 00/50 | Four Leaves     | 50BP > 20% chance for 2x drops
+    0,  # _ 00/50 | Five Lights     | 50BP > 20% chance for 2x exp
+    50,  #_ 00/50 | Sixth Sense     | 50BP > 20% chance to dodge attack
+    50,  #_ 00/50 | Seven Blessings | 50BP > chance amounts are doubled
 ]
 CORROSION_MAX = 2500
 
