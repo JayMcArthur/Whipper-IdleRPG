@@ -330,8 +330,13 @@ function resetData() {
   }
 }
 
-// async function maxItemBook() {
-//   if (!confirm('Are you sure you want to max all Item Book data? This cannot be undone.')) return;
+function maxItemBook() {
+  if (confirm('Are you sure you want to max all Item Book data? This cannot be undone.')) {
+    const fullBook = fetch('data/whipper-full-item-book.json');
+    itemBook = fullBook;
+    saveItemBook();
+    location.reload();
+  }
 
 //   try {
 //     const res = await fetch('data/whipper-full-item-book.json');
@@ -383,7 +388,7 @@ async function initItemBookPage() {
   document.getElementById('import-btn')?.addEventListener('click', () => document.getElementById('import-file').click());
   document.getElementById('import-file')?.addEventListener('change', importData);
   document.getElementById('reset-btn')?.addEventListener('click', resetData);
-  // document.getElementById('max-all-btn')?.addEventListener('click', maxItemBook);
+  document.getElementById('max-all-btn')?.addEventListener('click', maxItemBook);
 }
 
 document.addEventListener('DOMContentLoaded', initItemBookPage);
