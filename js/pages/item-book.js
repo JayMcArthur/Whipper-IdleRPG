@@ -383,7 +383,7 @@ async function initItemBookPage() {
   document.getElementById('import-btn')?.addEventListener('click', () => document.getElementById('import-file').click());
   document.getElementById('import-file')?.addEventListener('change', importData);
   document.getElementById('reset-btn')?.addEventListener('click', resetData);
-  document.getElementById('max-all-btn')?.addEventListener('click', maxItemBook);
+  // document.getElementById('max-all-btn')?.addEventListener('click', maxItemBook);
 }
 
 document.addEventListener('DOMContentLoaded', initItemBookPage);
