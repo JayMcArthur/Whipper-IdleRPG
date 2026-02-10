@@ -330,6 +330,19 @@ function resetData() {
   }
 }
 
+function maxItemBook() {
+  if (confirm('Are you sure you want to max all Item Book data? This cannot be undone.')) {
+    try{
+    const res = await fetch('data/whipper-full-item-book.json');
+    if (!res.ok) throw new Error('Failed to load full item book');
+    const fullBook = await res.json();
+    }
+    itemBook = fullBook;
+    saveItemBook();
+    location.reload();
+  }
+}
+
 // ========== Init ==========
 
 async function initItemBookPage() {
@@ -365,6 +378,7 @@ async function initItemBookPage() {
   document.getElementById('import-btn')?.addEventListener('click', () => document.getElementById('import-file').click());
   document.getElementById('import-file')?.addEventListener('change', importData);
   document.getElementById('reset-btn')?.addEventListener('click', resetData);
+  document.getElementById('max-all-btn')?.addEventListener('click', maxItemBook);
 }
 
 document.addEventListener('DOMContentLoaded', initItemBookPage);
