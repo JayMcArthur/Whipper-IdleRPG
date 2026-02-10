@@ -330,9 +330,9 @@ function resetData() {
   }
 }
 
-function maxItemBook() {
+async function maxItemBook() {
   if (confirm('Are you sure you want to max all Item Book data? This cannot be undone.')) {
-    const fullBook = fetch('data/whipper-full-item-book.json');
+    const fullBook = await fetch('data/whipper-full-item-book.json');
     itemBook = fullBook;
     saveItemBook();
     location.reload();
