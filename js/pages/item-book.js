@@ -330,23 +330,23 @@ function resetData() {
   }
 }
 
-async function maxItemBook() {
-  if (!confirm('Are you sure you want to max all Item Book data? This cannot be undone.')) return;
+// async function maxItemBook() {
+//   if (!confirm('Are you sure you want to max all Item Book data? This cannot be undone.')) return;
 
-  try {
-    const res = await fetch('data/whipper-full-item-book.json');
-    if (!res.ok) throw new Error('Failed to load full item book');
+//   try {
+//     const res = await fetch('data/whipper-full-item-book.json');
+//     if (!res.ok) throw new Error('Failed to load full item book');
 
-    const fullBook = await res.json();
+//     const fullBook = await res.json();
 
-    itemBook = fullBook;
-    saveItemBook();
-    location.reload();
-  } catch (err) {
-    console.error(err);
-    alert('Failed to load maxed item book.');
-  }
-}
+//     itemBook = fullBook;
+//     saveItemBook();
+//     location.reload();
+//   } catch (err) {
+//     console.error(err);
+//     alert('Failed to load maxed item book.');
+//   }
+// }
 
 // ========== Init ==========
 
