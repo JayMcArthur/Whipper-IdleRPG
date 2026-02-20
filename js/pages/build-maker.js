@@ -374,7 +374,9 @@ function calculateStats(data) {
   const wBaseUpgrade = (weapon.maxLv || 0);
   const wAnalysisUpgrade = (UPGRADE_LIMITS[wAnalysis] || 0);
   const wMaxUpgrade = wBaseUpgrade + wAnalysisUpgrade;
-  const aMaxUpgrade = (UPGRADE_LIMITS[aAnalysis] || 10);
+  const aBaseUpgrade = (armor.maxLv || 0);
+  const aAnalysisUpgrade = (UPGRADE_LIMITS[aAnalysis] || 0)
+  const aMaxUpgrade = aBaseUpgrade + aAnalysisUpgrade;
   document.getElementById('weapon-max-upgrade').textContent = formatNumber(wMaxUpgrade);
   document.getElementById('armor-max-upgrade').textContent = formatNumber(aMaxUpgrade);
   
