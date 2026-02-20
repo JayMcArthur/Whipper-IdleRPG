@@ -371,7 +371,9 @@ function calculateStats(data) {
   currentBuild.ring = { ...currentBuild.ring, corrosion: rCorrosion, analysis: rAnalysis };
   
   // Upgrade limits
-  const wMaxUpgrade = ((UPGRADE_LIMITS[wAnalysis] + weapon.maxLv) || 10);
+  const wBaseUpgrade = (weapon.maxLv || 0);
+  const wAnalysisUpgrade = (UPGRADE_LIMITS[wAnalysis] || 0);
+  const wMaxUpgrade = wBaseUpgrade + wAnalysisUpgrade;
   const aMaxUpgrade = (UPGRADE_LIMITS[aAnalysis] || 10);
   document.getElementById('weapon-max-upgrade').textContent = formatNumber(wMaxUpgrade);
   document.getElementById('armor-max-upgrade').textContent = formatNumber(aMaxUpgrade);
