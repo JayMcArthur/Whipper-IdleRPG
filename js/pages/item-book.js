@@ -330,6 +330,34 @@ function resetData() {
   }
 }
 
+function maxItemBook() {
+  if (!confirm('Are you sure you want to max all Item Book data? This cannot be undone.')) {
+    return;
+  }
+
+  // Reset first to avoid legacy junk
+  itemBook = { weapons: {}, armor: {}, rings: {} };
+
+  WikiData.equips.forEach(equip => {
+    const cat =
+      equip.itemType === 1 ? 'weapons' :
+      equip.itemType === 2 ? 'armor' :
+      equip.itemType === 3 ? 'rings' :
+      null;
+
+    if (!cat) return;
+
+    itemBook[cat][equip.id] = {
+      level: 25,
+      xp: 0
+    };
+  });
+
+  saveItemBook();
+  location.reload();
+}
+
+
 // ========== Init ==========
 
 async function initItemBookPage() {
@@ -365,6 +393,7 @@ async function initItemBookPage() {
   document.getElementById('import-btn')?.addEventListener('click', () => document.getElementById('import-file').click());
   document.getElementById('import-file')?.addEventListener('change', importData);
   document.getElementById('reset-btn')?.addEventListener('click', resetData);
+  document.getElementById('max-all-btn')?.addEventListener('click', maxItemBook);
 }
 
 document.addEventListener('DOMContentLoaded', initItemBookPage);
