@@ -178,14 +178,32 @@ const UPGRADE_LIMITS = {
 
 // Ring analysis stat boosts (at analysis 25 max corrosion - from screenshot)
 // These are the "Break through the limit" bonuses shown on ring
-const RING_ANALYSIS_BOOSTS = {
+const RING_THRESHOLDS = [
   // Analysis level thresholds and their boosts
-  strBoost: 1.3,      // ×2.3 total = 1 + 1.3
-  allStatsBoost: 1.7, // ×2.7 total = 1 + 1.7
-  hpBoost: 0.8,       // ×1.8 total
-  vitBoost: 0.3,      // ×1.3 total
-  masteryBoost: 0.6   // ×1.6 = +0.6 when using matching attack type
-};
+  //strBoost: 1.3,      // ×2.3 total = 1 + 1.3
+  //allStatsBoost: 1.7, // ×2.7 total = 1 + 1.7
+  //hpBoost: 0.8,       // ×1.8 total
+  //vitBoost: 0.3,      // ×1.3 total
+  //masteryBoost: 0.6   // ×1.6 = +0.6 when using matching attack type
+  { analysis: 5,  corrosion: 0,    type: 'specialty', value: 0.1 },
+  { analysis: 6,  corrosion: 50,   type: 'all',       value: 0.1 },
+  { analysis: 7,  corrosion: 100,  type: 'skill1' },
+  { analysis: 8,  corrosion: 150,  type: 'specialty', value: 0.2 },
+  { analysis: 9,  corrosion: 200,  type: 'all',       value: 0.2 },
+  { analysis: 11, corrosion: 300,  type: 'specialty', value: 0.3 },
+  { analysis: 12, corrosion: 350,  type: 'all',       value: 0.3 },
+  { analysis: 13, corrosion: 400,  type: 'skill2' },
+  { analysis: 14, corrosion: 450,  type: 'specialty', value: 0.4 },
+  { analysis: 16, corrosion: 600,  type: 'specialty', value: 0.5 },
+  { analysis: 17, corrosion: 800,  type: 'all',       value: 0.1 },
+  { analysis: 18, corrosion: 1100, type: 'all',       value: 0.2 },
+  { analysis: 19, corrosion: 1500, type: 'all',       value: 0.3 },
+  { analysis: 21, corrosion: 2000, type: 'hp',        value: 0.3 },
+  { analysis: 22, corrosion: 2000, type: 'all',       value: 0.2 },
+  { analysis: 23, corrosion: 2000, type: 'vit',       value: 0.3 },
+  { analysis: 24, corrosion: 2000, type: 'all',       value: 0.3 },
+  { analysis: 25, corrosion: 2000, type: 'str',       value: 0.3 }
+];
 
 // Rarity stat boosts
 const RARITY_BOOSTS = {
