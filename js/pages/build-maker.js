@@ -194,7 +194,7 @@ const RING_THRESHOLDS = [
   { analysis: 12, corrosion: 350,  type: 'all',       value: 0.3 },
   { analysis: 13, corrosion: 400,  type: 'skill2' },
   { analysis: 14, corrosion: 450,  type: 'specialty', value: 0.4 },
-  { analysis: 16, corrosion: 600,  type: 'specialty', value: 0.5 },
+  { analysis: 16, corrosion: 600,  type: 'hp', value: 0.5 },
   { analysis: 17, corrosion: 800,  type: 'all',       value: 0.1 },
   { analysis: 18, corrosion: 1100, type: 'all',       value: 0.2 },
   { analysis: 19, corrosion: 1500, type: 'all',       value: 0.3 },
@@ -442,6 +442,7 @@ function setupProofsSection() {
   });
 }
 
+//WIP
 function updateLimits() {
   const proofs = currentBuild.proofs;
   const maxAnalysis = 15 + 10 + proofs.panoptesEye; // base + magnifying glass + proofs
@@ -498,6 +499,65 @@ function clearBoosts() {
 }
 
 // ============ STAT CALCULATIONS ============
+
+function calculateRingBoost(ring) {
+  const boosts = {
+    strBoost: 0,
+    hpBoost: 0,
+    vitBoost: 0,
+    spdBoost: 0,
+    lukBoost: 0,
+    skill1: false,
+    skill2: false
+  };
+
+  RING_THRESHOLDS.forEach(threshold => {
+    if (
+      ring.analysis >= threshold.analysis &&
+      ring.corrosion >= threshold.corrosion
+    ) {
+      switch (threshold.type) {
+        case 'specialty':
+          const key = ring.specialized.toLowerCase() + 'Boost';
+          if (boosts[key] !== undefined) {
+            boosts[key] += threshold.value;
+          }
+          break;
+
+        case 'all':
+          boosts.strBoost += threshold.value;
+          boosts.hpBoost  += threshold.value;
+          boosts.vitBoost += threshold.value;
+          boosts.spdBoost += threshold.value;
+          boosts.lukBoost += threshold.value;
+          break;
+
+        case 'hp':
+          boosts.hpBoost += threshold.value;
+          break;
+
+        case 'vit':
+          boosts.vitBoost += threshold.value;
+          break;
+
+        case 'str':
+          boosts.strBoost += threshold.value;
+          break;
+
+        case 'skill1':
+          boosts.skill1 = ring.ability;
+          break;
+
+        case 'skill2':
+          boosts.skill2 = ring.next;
+          break;
+      }
+    }
+  });
+
+  return boosts;
+}
+
 
 function calculateStats(data) {
   const weapon = data.equips.find(e => e.id === currentBuild.weapon.id) || {};
@@ -569,16 +629,15 @@ function calculateStats(data) {
   let lukBoost = 1 + bp[4] * 0.005;
   
   // Ring analysis boosts (at high analysis levels with sufficient corrosion)
-  if (rAnalysis >= 25 && rCorrosion >= 50) {
-    strBoost += RING_ANALYSIS_BOOSTS.strBoost;
-    hpBoost += RING_ANALYSIS_BOOSTS.allStatsBoost;
-    strBoost += RING_ANALYSIS_BOOSTS.allStatsBoost;
-    vitBoost += RING_ANALYSIS_BOOSTS.allStatsBoost;
-    spdBoost += RING_ANALYSIS_BOOSTS.allStatsBoost;
-    lukBoost += RING_ANALYSIS_BOOSTS.allStatsBoost;
-    hpBoost += RING_ANALYSIS_BOOSTS.hpBoost;
-    vitBoost += RING_ANALYSIS_BOOSTS.vitBoost;
-  }
+
+  const ringAnalysisBoosts = calculateRingBoost(ring);
+ 
+  strBoost += ringAnalysisBoosts.strBoost;
+  hpBoost += ringAnalysisBoosts.hpBoost;
+  vitBoost += ringAnalysisBoosts.vitBoost;
+  spdBoost += ringAnalysisBoosts.spdBoost;
+  lukBoost += ringAnalysisBoosts.lukBoost;
+  
   
   // Rarity boosts per item
   [currentBuild.weapon, currentBuild.armor, currentBuild.ring].forEach(item => {
