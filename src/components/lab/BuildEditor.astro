@@ -25,11 +25,11 @@ const {locale}=Astro.props as {locale:Locale};
         <label>Analysis<input name={`${slot}-analysis`} type="number" min="1" max="25" value="1" required /></label>
       </div>
       {[0,1,2,3].map(i => <div class:list={['ability-row',{'extra-ability':i===3}]} data-ability-row data-slot={slot} data-index={i}>
-        <label>{i===3?'Additional ability':'Ability '+(i+1)}<select data-ability-group aria-label={`${slot} ability ${i+1}`}><option value="">None</option></select></label>
-        <label>Level<select data-ability-level aria-label={`${slot} ability ${i+1} level`}><option value="0">—</option></select></label>
+        <label>{i===3?'Tiered bonus':'Ability '+(i+1)}<select data-ability-group aria-label={i===3?`${slot} tiered bonus`:`${slot} ability ${i+1}`}><option value="">None</option></select></label>
+        <label>Level<select data-ability-level aria-label={i===3?`${slot} tiered bonus level`:`${slot} ability ${i+1} level`}><option value="0">—</option></select></label>
         <p data-ability-description class="small-note"></p>
       </div>)}
-      <p class="small-note">The additional slot represents an ability actually present on your item. A rarity name alone does not add an assumed stat bonus.</p>
+      <p class="small-note">Fusion and shifting let you rearrange the three ordinary abilities. The separate tiered bonus uses the Legendary, Mythic, Noir or Omega boost pool.</p>
     </fieldset>)}</div>
     <details class="lab-details"><summary>Permanent boosts · <span data-used-bp>0</span> BP allocated</summary><p>Enter your actual allocations. This editor can also hold theoretical builds; it does not read an inventory or infer your available BP.</p><div class="boost-grid">{boostDefinitions.map(([name,rate],i) => <label>{name}{i>=14 ? <select name={`bp-${i}`}><option value="0">Off</option><option value="50">On · 50 BP</option></select> : <input name={`bp-${i}`} type="number" min="0" max="1000000" value="0" />}<small>{rate ? `${rate*100}% per BP` : 'Ability unlock'}</small></label>)}</div></details>
   </form>

@@ -1,4 +1,5 @@
 import { equipById, customById, customs, type Equipment } from './data';
+import { abilityFitsSlot } from './abilities';
 
 export const slots = ['weapon','armor','ring'] as const;
 export type Slot = typeof slots[number];
@@ -39,7 +40,7 @@ export function validateBuild(value: unknown): asserts value is Build {
     if (!item || equipById.get(item.id)?.itemType!==i+1) throw new Error(`Choose a valid ${slot}.`);
     integer(item.upgrade,`${slot} upgrade`,1e9); integer(item.corrosion,`${slot} corrosion`,1e7); integer(item.analysis,`${slot} analysis`,25);
     if (!item.analysis) throw new Error('Analysis starts at level 1.');
-    if (!Array.isArray(item.enchants) || item.enchants.length<3 || item.enchants.length>4) throw new Error(`${slot} requires three ability slots and an optional additional ability.`);
+    if (!Array.isArray(item.enchants) || item.enchants.length<3 || item.enchants.length>4) throw new Error(`${slot} requires three ordinary ability slots and an optional tiered bonus.`);
     for (const id of item.enchants) if (id!==0 && !customById.has(id)) throw new Error(`Unknown ability record ${id}.`);
   }
 }
@@ -105,7 +106,13 @@ export function evaluateItem(setup: ItemSetup, context: { attackKind?: string; h
     if (active(7,100)) apply(item.ability);
     if (active(13,400)) apply(item.next);
   }
-  setup.enchants.forEach(apply);
+  setup.enchants.forEach((id,index) => {
+    if (!abilityFitsSlot(id,index)) {
+      result.notes.push(`${index===3?'Tiered bonus':`Ability ${index+1}`} #${id} cannot be used in this slot and is excluded from stats. Choose a supported effect.`);
+      return;
+    }
+    apply(id);
+  });
   result.power=(item.param+setup.upgrade*upgradeFactor+setup.corrosion*10*corrosionFactor)*powerBoost;
   if (item.itemType!==3 && setup.upgrade>result.upgradeLimit) result.notes.push(`${setup.upgrade} upgrade exceeds the modeled ${result.upgradeLimit} limit for equipment #${item.id}.`);
   if (setup.analysis>20) result.notes.push('Analysis 21–25 uses the retained community extension; current runtime parity remains unverified.');
@@ -136,7 +143,7 @@ export function evaluateBuild(build: Build, level=build.level): BuildEvaluation 
   const typeBoost=1+(kindIndex>=0 ? build.boostPoints[kindIndex+8]!*.005 : 0);
   const notes=[...new Set(items.flatMap(item => item.notes))];
   if (Object.values(build.proofs||{}).some(value=>value>0)) notes.push('Legacy proof counts were retained as metadata. Enter the actual permanent HP bonus from the game; current proof stat/cap bonuses are not inferred from the older calculator.');
-  if (slots.some(slot=>build[slot].rarity!=='red')) notes.push('Rarity labels were retained. Select the actual additional item ability; no automatic rarity stat bonus is assumed.');
+  if (slots.some(slot=>build[slot].rarity!=='red')) notes.push('Saved rarity labels were retained. The selected tiered bonus determines the modeled rarity effect.');
   return { values,base,growth,boost,attack:Math.floor((values.str+items[0]!.power)*typeBoost),defense:Math.floor(values.vit+items[1]!.power),weaponPower:items[0]!.power,armorPower:items[1]!.power,
     hasSet,attackKind:weapon.attackKind,effects:[...new Set(effects)],items,notes,usedBP:build.boostPoints.reduce((a,b) => a+b,0) };
 }

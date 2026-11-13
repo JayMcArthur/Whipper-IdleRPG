@@ -8,6 +8,7 @@ import { monsterById } from '../src/lib/game/data';
 import { duel, defaultCombatOptions } from '../src/lib/game/combat';
 import { compareItem,compareBuild } from '../src/lib/game/comparison';
 import { emptyBook,parseBook,normalizeProgress,bookSummary } from '../src/lib/game/item-book';
+import { ordinaryAbilities,tieredAbilities,abilityTier } from '../src/lib/game/abilities';
 
 test('one stat model includes character level, real equipment, abilities and zero apples correctly', () => {
   const build=defaultBuild();
@@ -17,6 +18,30 @@ test('one stat model includes character level, real equipment, abilities and zer
   assert.deepEqual(evaluateBuild(build,11).values,{hp:135,str:20,vit:20,spd:11,luk:1});
   build.weapon.enchants=[9,1,0];build.apples=20;
   assert.deepEqual(evaluateBuild(build).values,{hp:40,str:11,vit:10,spd:1,luk:21});
+});
+test('fusion permits rare combat effects in every ordinary position and tier follows the bonus record', () => {
+  for(const index of [0,1,2]) {
+    const build=defaultBuild();build.weapon.enchants[index]=66;
+    assert.ok(evaluateBuild(build).effects.includes(66));
+    assert.deepEqual(evaluateBuild(build).notes,[]);
+  }
+  assert.ok(ordinaryAbilities.some(item=>item.id===961));
+  assert.ok(!ordinaryAbilities.some(item=>item.id===2101)); // Intrinsic analysis effect.
+  assert.ok(!tieredAbilities.some(item=>item.id===66));
+  assert.equal(abilityTier(2206),'Noir');assert.equal(abilityTier(2603),'Omega');
+  const item={...defaultItem(101),enchants:[66,9,0,2206]};
+  assert.equal(evaluateItem(item).boost.str,1.6);
+  assert.ok(evaluateItem(item).effects.includes(66));
+});
+test('older unsupported slot selections remain intact and cannot contribute an invalid bonus', () => {
+  const build=defaultBuild();build.weapon.enchants=[0,0,0,9];
+  const result=evaluateBuild(build);
+  assert.equal(result.attack,15);
+  assert.match(result.notes.join(' '),/Tiered bonus #9.*excluded from stats/);
+  assert.deepEqual(build.weapon.enchants,[0,0,0,9]);
+  build.weapon.enchants=[2206,0,0];
+  assert.equal(evaluateBuild(build).attack,15);
+  assert.match(evaluateBuild(build).notes.join(' '),/Ability 1 #2206/);
 });
 test('analysis needs both its level and corrosion; upgrade cap adds to the actual equipment limit', () => {
   const item={...defaultItem(101),analysis:6,upgrade:10,corrosion:49};

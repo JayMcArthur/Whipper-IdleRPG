@@ -24,6 +24,35 @@ test('build editor uses actual effect values, persists presets and exports the s
   await expect(page.locator('[data-saved-builds] option').last()).toHaveText('My first preset');
 });
 
+test('ordinary slots allow shifted combat effects while tiered bonuses have their own pool and numeric levels',async({page})=>{
+  await page.goto('en/tools/#build');
+  for(const index of [1,2,3])await page.getByRole('combobox',{name:`weapon ability ${index}`,exact:true}).selectOption('先制');
+  const bonus=page.getByRole('combobox',{name:'weapon tiered bonus',exact:true});
+  expect(await bonus.locator('option').evaluateAll(nodes=>nodes.map(node=>(node as HTMLOptionElement).value))).not.toContain('先制');
+  await bonus.selectOption('STRブースト');
+  const level=page.getByRole('combobox',{name:'weapon tiered bonus level',exact:true});
+  expect(await level.locator('option').allTextContents()).toEqual(['0','2','3']);
+  await level.selectOption('2206');
+  await expect(page.locator('[data-gear=weapon] [data-ability-description]').last()).toContainText('Noir');
+  await expect(page.locator('[data-gear=weapon] [data-ability-description]').last()).toContainText('60%');
+  await bonus.selectOption('全能力値ブースト');await level.selectOption('2603');
+  await expect(page.locator('[data-gear=weapon] [data-ability-description]').last()).toContainText('Omega');
+  await page.getByRole('button',{name:'Save preset',exact:true}).click();
+  await page.evaluate(()=>{
+    const builds=JSON.parse(localStorage.getItem('whipper-builds-v5')!);builds[0].weapon.enchants[3]=9;
+    localStorage.setItem('whipper-builds-v5',JSON.stringify(builds));
+    localStorage.setItem('whipper-build-draft-v1',JSON.stringify(builds[0]));
+  });
+  await page.reload();
+  await expect(level).toHaveValue('9');
+  await expect(page.locator('[data-gear=weapon] [data-ability-description]').last()).toContainText('excluded from stats');
+  await expect(page.locator('[data-build-stats] > div').nth(1).locator('strong')).toHaveText('15');
+  await expect(page.locator('[data-lab-error]')).toBeHidden();
+  const [download]=await Promise.all([page.waitForEvent('download'),page.getByRole('button',{name:'Export JSON',exact:true}).click()]);
+  const exported=JSON.parse(await readFile((await download.path())!,'utf8'));
+  expect(exported.builds[0].weapon.enchants).toEqual([66,66,66,9]);
+});
+
 test('item curves are interactive, filterable, exportable and can equip a candidate',async({page})=>{
   await page.goto('en/tools/#items');
   const chart=page.locator('.growth-chart');

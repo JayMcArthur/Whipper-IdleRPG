@@ -1,5 +1,6 @@
 import { defaultBuild,evaluateBuild,slots,stats,type Build,type Slot } from '../lib/game/build';
 import { equipById,customs,customById } from '../lib/game/data';
+import { ordinaryAbilities,tieredAbilities,abilityFitsSlot,abilityTier } from '../lib/game/abilities';
 import { formatEffect } from '../lib/effects';
 import { canonicalBuild,readPresets,parseBuildFile,presetKey,draftKey } from './lab/storage';
 import { control,numeric,element,cell,list,formatted,translated,download,errorText,type LabData,type LabContext } from './lab/shared';
@@ -17,24 +18,34 @@ export function mountLab() {
   let build=defaultBuild(),presets:Build[]=[];
   const fail=(value:unknown)=>{error.textContent=errorText(value);error.hidden=false;};
   const attempt=(fn:()=>void)=>{try{fn();error.hidden=true;}catch(e){fail(e);}};
-  const groups=new Map<string,typeof customs>();
-  for(const ability of customs){const group=groups.get(ability.nameId)||[];group.push(ability);groups.set(ability.nameId,group);}
+  const pools=[ordinaryAbilities,tieredAbilities].map(abilities=>{
+    const groups=new Map<string,typeof customs>();
+    for(const ability of abilities){const group=groups.get(ability.nameId)||[];group.push(ability);groups.set(ability.nameId,group);}
+    return groups;
+  });
+  const groupsFor=(row:HTMLElement)=>pools[Number(row.dataset.index)===3?1:0]!;
   const rows=[...root.querySelectorAll<HTMLElement>('[data-ability-row]')];
   const describe=(row:HTMLElement)=> {
     const selected=customById.get(Number(row.querySelector<HTMLSelectElement>('[data-ability-level]')!.value));
-    row.querySelector('[data-ability-description]')!.textContent=selected?formatEffect(translated(data,selected.summaryId),selected.value,data.htmlLocale):'';
+    const tier=selected&&abilityTier(selected.id);
+    const effect=selected?formatEffect(translated(data,selected.summaryId),selected.value,data.htmlLocale):'';
+    const unsupported=selected&&!abilityFitsSlot(selected.id,Number(row.dataset.index));
+    row.querySelector('[data-ability-description]')!.textContent=`${tier?`${tier} · `:''}${effect}${unsupported?' This saved effect cannot be used in this slot and is excluded from stats. Choose a supported effect.':''}`;
   };
   const levels=(row:HTMLElement,id?:number)=> {
     const name=row.querySelector<HTMLSelectElement>('[data-ability-group]')!.value;
     const level=row.querySelector<HTMLSelectElement>('[data-ability-level]')!;
-    level.replaceChildren(...(groups.get(name)||[]).map(item=>new Option(`${item.dispLv} · ${formatted(data,item.value)} · #${item.id}`,String(item.id))));
+    const records=groupsFor(row).get(name)||[];
+    level.replaceChildren(...records.map(item=>new Option(String(item.dispLv),String(item.id))));
+    // Keep an older unsupported selection visible so loading a preset never silently changes it.
+    const stored=id&&customById.get(id);
+    if(stored&&!records.some(item=>item.id===id))level.add(new Option(String(stored.dispLv),String(id)));
     if(!level.options.length)level.add(new Option('—','0'));
     if(id!==undefined)level.value=String(id);
     describe(row);
   };
   for(const row of rows) {
     const group=row.querySelector<HTMLSelectElement>('[data-ability-group]')!;
-    for(const [name] of groups)group.add(new Option(translated(data,name),name));
     group.addEventListener('change',()=>levels(row));
     row.querySelector('[data-ability-level]')!.addEventListener('change',()=>describe(row));
   }
@@ -46,7 +57,11 @@ export function mountLab() {
     build.boostPoints.forEach((points,i)=>control(form,`bp-${i}`).value=String(points));
     for(const row of rows) {
       const id=build[row.dataset.slot as Slot].enchants[Number(row.dataset.index)]||0;
-      row.querySelector<HTMLSelectElement>('[data-ability-group]')!.value=customById.get(id)?.nameId||'';
+      const group=row.querySelector<HTMLSelectElement>('[data-ability-group]')!;
+      const groups=groupsFor(row),stored=customById.get(id);
+      group.replaceChildren(new Option('None',''),...[...groups.keys()].map(name=>new Option(translated(data,name),name)));
+      if(stored&&!groups.has(stored.nameId))group.add(new Option(translated(data,stored.nameId),stored.nameId));
+      group.value=stored?.nameId||'';
       levels(row,id);
     }
   };
