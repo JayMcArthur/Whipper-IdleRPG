@@ -186,7 +186,9 @@ a:hover { color: var(--accent-amber); }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .nav-links { display: none; }
+  .nav-container { position: relative; }
+  .nav-links { display: none; position: absolute; top: var(--nav-height); left: 0; right: 0; flex-direction: column; background: var(--bg-card); border-bottom: 1px solid var(--border-subtle); padding: .75rem 1rem; z-index: 1001; }
+  .nav-links.active { display: flex; }
   .nav-toggle { display: block; }
   h1 { font-size: 1.75rem; }
   .hero h1 { font-size: 2rem; }
@@ -318,3 +320,6 @@ tr.highlighted {
   padding: 2rem;
   color: var(--text-secondary);
 }
+
+.tool-notice { padding: 12px 20px; background: #302b1e; color: #f4e7c7; border-bottom: 1px solid #756646; font-size: .85rem; }
+.tool-notice a { color: #e6c781; text-decoration: underline; }

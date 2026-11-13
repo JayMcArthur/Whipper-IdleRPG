@@ -1,0 +1,15 @@
+---
+import Wiki from '../layouts/Wiki.astro';
+import { href } from '../lib/site';
+---
+<Wiki locale="en" title="Page not found" description="Find the game reference or beginner guides in Whipper Wiki." notFound>
+<section class="wrap section">
+<p class="eyebrow">404</p>
+<h1>That page isn't here.</h1>
+<p>Try the reference search or start with the beginner guide.</p>
+<div class="hero-actions">
+<a class="button primary" href={href('en','search')}>Search the wiki</a>
+<a class="button secondary" href={href('en','guides/getting-started')}>Start here</a>
+</div>
+</section>
+</Wiki>

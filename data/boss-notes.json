@@ -1,0 +1,150 @@
+{
+  "200": {
+    "attackType": "Slashing / Bludgeoning",
+    "dropItem": "Apple (+1 Luck, 20 max)",
+    "proofName": "Adam's Heart",
+    "proofIcon": "adamheart",
+    "proofEffect": "+20 max BP in permanent boosts per level",
+    "phases": [
+      {
+        "hpThreshold": "100%",
+        "effects": [
+          "30% chance to attack"
+        ]
+      },
+      {
+        "hpThreshold": "70%",
+        "effects": [
+          "50% chance to attack",
+          "Nullifies Piercing and Projectile weapon types"
+        ]
+      },
+      {
+        "hpThreshold": "40%",
+        "effects": [
+          "Lowers player level to 1",
+          "Counters critical hits — takes no crit damage and instead hits you with an undodgeable crit"
+        ]
+      }
+    ],
+    "recommendations": [
+      "Use flat stat enchantments over training if you can kill in 1 combat. Use training to get to 40%, then switch to flat.",
+      "Use crits in the first half, but switch away below 40% HP. Put BP into slashing damage, dodge rate, or consecutive attack chance instead.",
+      "Kill Lv1 Adam 20 times for apples to boost base luck stat. Should be easy by M5."
+    ]
+  },
+  "201": {
+    "attackType": "Projectile",
+    "dropItem": "Aegis (Shield No. 53)",
+    "proofName": "Panoptes' Eye",
+    "proofIcon": "panopteseye",
+    "proofEffect": "+1 max analysis level per level",
+    "phases": [
+      {
+        "hpThreshold": "100%",
+        "effects": [
+          "Immune to preemptive strikes"
+        ]
+      },
+      {
+        "hpThreshold": "70%",
+        "effects": [
+          "15% dodge rate"
+        ]
+      },
+      {
+        "hpThreshold": "40%",
+        "effects": [
+          "30% dodge rate"
+        ]
+      }
+    ],
+    "recommendations": [
+      "Do not use First Strike — Panoptes is immune.",
+      "Put BP into Projectile damage.",
+      "Crits are reliable additional damage. Use crit rate/damage BP.",
+      "Dodge rate and consecutive attack probability are helpful.",
+      "Panoptes does not reduce player to Lv1, so training enchants are better than flat enchants."
+    ]
+  },
+  "202": {
+    "attackType": "Piercing",
+    "dropItem": "Foxfire (Ring No. 24)",
+    "proofName": "Killing Stone",
+    "proofIcon": "sesshoseki",
+    "proofEffect": "+500-1000 max corrosion per level",
+    "phases": [
+      {
+        "hpThreshold": "100%",
+        "effects": [
+          "Inflicts poison — 1 stack per turn end + 1 stack per hit",
+          "Poison: 1% max HP per stack"
+        ]
+      },
+      {
+        "hpThreshold": "70%",
+        "effects": [
+          "Poison: 2% max HP per stack (new stacks only)"
+        ]
+      },
+      {
+        "hpThreshold": "40%",
+        "effects": [
+          "Poison: 3% max HP per stack (new stacks only)"
+        ]
+      }
+    ],
+    "recommendations": [
+      "Finish the fight quickly — poison stacks indefinitely.",
+      "First Strike is optional but helpful. Fox SPD is relatively low so high agility may suffice at lower levels.",
+      "Put BP into Piercing damage.",
+      "Crits are reliable. Dodge rate and consecutive attack help.",
+      "Fox does not reduce player to Lv1, so training enchants are better than flat enchants.",
+      "Existing stacks do not upgrade when Fox drops below HP thresholds."
+    ]
+  },
+  "203": {
+    "attackType": "Any",
+    "dropItem": "Murakumo (Weapon No. 91)",
+    "proofName": "Magatama",
+    "proofIcon": "magatama",
+    "proofEffect": "Increases rate of legendary equipment",
+    "phases": [
+      {
+        "hpThreshold": "Magatama",
+        "effects": [
+          "Upon receiving 2 heart attacks (crits), the Magatama shatters dealing 16% of max HP. It then regenerates.",
+          "Magatama shattering can only bring Orochi to 1 HP — you must deal the finishing blow.",
+          "Shattering resets all applied poison stacks."
+        ]
+      },
+      {
+        "hpThreshold": "Healing",
+        "effects": [
+          "Upon successfully hitting the adventurer, heals 10% of max HP (20% on crit).",
+          "Healing also decreases poison stacks."
+        ]
+      },
+      {
+        "hpThreshold": "Poison",
+        "effects": [
+          "Upon being poisoned, cuts off the poisoned head.",
+          "At 1 remaining head, takes full poison damage."
+        ]
+      },
+      {
+        "hpThreshold": "Intimidate",
+        "effects": [
+          "Can intimidate you, reducing evasion rate to 1/3.",
+          "Example: 80% → 26% → 8%"
+        ]
+      }
+    ],
+    "recommendations": [
+      "Two routes: Crit build (high crit rate to shatter Magatama repeatedly) or Poison build (low crit rate to avoid shattering).",
+      "Consecutive strike chance is important for both routes.",
+      "First Strike helps get a free hit in.",
+      "Dodge rate is greatly reduced by intimidation, so may not be worth investing in Sixth Sense directly."
+    ]
+  }
+}

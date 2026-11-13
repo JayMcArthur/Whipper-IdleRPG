@@ -1,0 +1,77 @@
+---
+import SearchIcon from './SearchIcon.astro';
+import { categories, searchIndex, type Category } from '../lib/catalog';
+import { href, ui, type Locale } from '../lib/site';
+interface Props { locale: Locale; category?: Category; compact?: boolean; }
+const { locale, category, compact = false } = Astro.props;
+const entries = searchIndex(locale).filter(entry => !category || entry.category === category);
+const initial = compact ? [] : entries.slice(0, category ? entries.length : 60);
+---
+<section class:list={['reference-search', { compact }]} data-reference-search data-compact={compact} data-limit={category ? entries.length : 60} data-category={category || ''} data-result-label={ui(locale, 'results')} data-no-results={ui(locale, 'noResults')}>
+  <form action={href(locale, 'search')} class="search-form" role="search">
+    <label class="sr-only" for={`query-${category || (compact ? 'home' : 'all')}`}>{ui(locale, 'search')}</label>
+    <div class="search-field">
+<span aria-hidden="true"><SearchIcon /></span>
+<input id={`query-${category || (compact ? 'home' : 'all')}`} type="search" name="q" placeholder={ui(locale, 'searchHint')} autocomplete="off" />
+<button type="submit">{ui(locale, 'search')} <span aria-hidden="true">↗</span>
+</button>
+</div>
+    {!compact && !category && <label class="filter-label">{ui(locale, 'type')}<select name="category">
+<option value="">{ui(locale, 'all')}</option>{categories.map(kind => <option value={kind}>{ui(locale, kind)}</option>)}</select>
+</label>}
+  </form>
+  <p class="search-status" role="status" aria-live="polite">{compact ? '' : `${initial.length} / ${entries.length} ${ui(locale, 'results')}`}</p>
+  <div class="entry-grid" data-search-results>{initial.map(entry => <a class="entry-card" href={entry.href}>{entry.icon ? <img src={entry.icon} alt="" width="40" height="40" loading="lazy" /> : <span class="entry-glyph" aria-hidden="true">◇</span>}<span>
+<span class="entry-category">{entry.categoryName}</span>
+<strong>{entry.name}</strong>
+</span>
+<span class="entry-arrow" aria-hidden="true">↗</span>
+</a>)}</div>
+  <script type="application/json" data-search-data set:html={JSON.stringify(entries).replace(/</g, '\\u003c')} />
+</section>
+<script>
+  import { findEntries } from '../lib/search';
+  import type { SearchEntry } from '../lib/catalog';
+  for (const root of document.querySelectorAll<HTMLElement>('[data-reference-search]')) {
+    const input = root.querySelector<HTMLInputElement>('input[type="search"]')!;
+    const select = root.querySelector<HTMLSelectElement>('select');
+    const form = root.querySelector('form')!;
+    const results = root.querySelector<HTMLElement>('[data-search-results]')!;
+    const status = root.querySelector<HTMLElement>('[role="status"]')!;
+    const entries: SearchEntry[] = JSON.parse(root.querySelector('[data-search-data]')!.textContent!);
+    const compact = root.dataset.compact === 'true';
+    const params = new URLSearchParams(location.search);
+    input.value = params.get('q') || '';
+    if (select) select.value = params.get('category') || '';
+    function renderResults() {
+      const category = select?.value || root.dataset.category!;
+      const matches = findEntries(entries, input.value, category);
+      const visible = compact && !input.value.trim() ? [] : matches.slice(0, Number(root.dataset.limit));
+      results.replaceChildren();
+      for (const entry of visible) {
+        const link = document.createElement('a'); link.className = 'entry-card'; link.href = entry.href;
+        if (entry.icon) { const img = document.createElement('img'); img.src = entry.icon; img.alt = ''; img.width = 40; img.height = 40; img.loading = 'lazy'; link.append(img); }
+        else { const glyph = document.createElement('span'); glyph.className = 'entry-glyph'; glyph.textContent = '◇'; glyph.setAttribute('aria-hidden', 'true'); link.append(glyph); }
+        const copy = document.createElement('span');
+        const kind = document.createElement('span'); kind.className = 'entry-category'; kind.textContent = entry.categoryName;
+        const name = document.createElement('strong'); name.textContent = entry.name; copy.append(kind, name); link.append(copy);
+        const arrow = document.createElement('span'); arrow.className = 'entry-arrow'; arrow.textContent = '↗'; arrow.setAttribute('aria-hidden','true'); link.append(arrow);
+        results.append(link);
+      }
+      status.textContent = compact && !input.value.trim() ? '' : matches.length ? `${visible.length} / ${matches.length} ${root.dataset.resultLabel}` : root.dataset.noResults!;
+    }
+    input.addEventListener('input', renderResults);
+    select?.addEventListener('change', renderResults);
+    form.addEventListener('submit', event => {
+      if (!compact) {
+        event.preventDefault();
+        const url = new URL(location.href);
+        input.value.trim() ? url.searchParams.set('q', input.value.trim()) : url.searchParams.delete('q');
+        select?.value ? url.searchParams.set('category', select.value) : url.searchParams.delete('category');
+        history.replaceState(null, '', url);
+        renderResults();
+      }
+    });
+    if (input.value || select?.value) renderResults();
+  }
+</script>

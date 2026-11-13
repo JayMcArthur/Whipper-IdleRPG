@@ -1,0 +1,30 @@
+{
+  "gameVersion": "7.3.1",
+  "build": 142,
+  "platform": "Android",
+  "capturedAt": "2026-11-13",
+  "source": "Public data tables from the installed game",
+  "tables": {
+    "equips": {
+      "records": 168,
+      "sha256": "14dd8a68129a6ebe5b827d83363301be4cc9d57b7899a787455f5d2306cd7e85"
+    },
+    "monsters": {
+      "records": 139,
+      "sha256": "990229eb8008fbbcc16dcc5f8b68b58aa7a820739ab75baf8384cb93def25bc0"
+    },
+    "dungeons": {
+      "records": 13,
+      "sha256": "20f3ff6eef32a637ef2af7f8b3ac2e2c1931cd3566cfa6ca7449b6d6643ff1c2"
+    },
+    "materials": {
+      "records": 82,
+      "sha256": "099f6b2612f362a43b971bc910e2df52d3abf4bf4d5d460911991cfc75a1d118"
+    },
+    "customs": {
+      "records": 1479,
+      "sha256": "005e4ef2d77853bf83af134960d490fdb124f00441e653ec3530ae6780743f05"
+    }
+  },
+  "translationsSha256": "f1c30fbcdba5f60a4ca53c1b1bb7d4a08672104a5a2c05400e34726d86b25ec7"
+}

@@ -83,7 +83,7 @@ function buildItemTable(tableId, items, itemType, searchId, countId) {
           </td>
           <td>
             <input type="number" class="xp-input" data-id="${item.id}" data-type="${itemType}"
-              value="${d.xp || 0}" min="0" max="${nextXp}" ${isComplete ? 'disabled' : ''}>
+              value="${escapeHTML(d.xp || 0)}" min="0" max="${nextXp}" ${isComplete ? 'disabled' : ''}>
             <span class="xp-max">/ ${nextXp || '—'}</span>
           </td>
           <td class="stat-col"><span class="bp-badge ${bp > 0 ? 'has-bp' : ''}">${bp}</span></td>

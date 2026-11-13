@@ -648,8 +648,8 @@ function handleImport(e) {
   reader.onload = (event) => {
     try {
       const build = JSON.parse(event.target.result);
-      if (!build.weapon || !build.armor) throw new Error('Invalid');
-      build.name = build.name || 'Imported';
+      if (!build.weapon || !build.armor || !build.ring || !Array.isArray(build.boostPoints) || !build.boostPoints.every(Number.isFinite) || !['weapon', 'armor', 'ring'].every(slot => getEquipById(build[slot].id) && Array.isArray(build[slot].enchants))) throw new Error('Select a Build Maker JSON export.');
+      build.name = typeof build.name === 'string' && build.name.trim() ? build.name : 'Imported';
       build.timestamp = Date.now();
       savedBuilds.push(build);
       saveSavedBuilds();
@@ -675,7 +675,7 @@ function renderSavedBuilds() {
   container.innerHTML = savedBuilds.map((build, idx) => `
     <div class="saved-build${idx === currentBuildSlot ? ' active' : ''}">
       <div class="build-info">
-        <strong>${build.name}</strong>
+        <strong>${escapeHTML(build.name)}</strong>
         <small>${new Date(build.timestamp).toLocaleDateString()}</small>
       </div>
       <div class="build-actions">

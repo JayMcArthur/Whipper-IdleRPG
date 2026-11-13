@@ -1,5 +1,9 @@
 /* Whipper Wiki - Shared Helpers */
 
+function escapeHTML(value) {
+  return String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
+}
+
 // Global state
 const WikiData = {
   equips: [], monsters: [], dungeons: [], customs: [], materials: [],
@@ -22,41 +26,6 @@ const BOSS_IDS = [100, 109, 129, 130, 131, 133, 134, 200, 201, 202, 203];
 const STORY_BOSS_IDS = [100, 109, 129, 130, 131];
 const ROYAL_TOMB_BOSS_IDS = [133, 134];
 const JUNKYARD_BOSS_IDS = [200, 201, 202, 203];
-
-// Parse CSV text into lookup object
-function parseCSV(text) {
-  const lines = text.split('\n');
-  const result = {};
-  
-  for (let i = 1; i < lines.length; i++) {
-    const line = lines[i].trim();
-    if (!line) continue;
-    
-    const fields = [];
-    let current = '';
-    let inQuotes = false;
-    
-    for (let j = 0; j < line.length; j++) {
-      const char = line[j];
-      if (char === '"') {
-        inQuotes = !inQuotes;
-      } else if (char === ',' && !inQuotes) {
-        fields.push(current.trim());
-        current = '';
-      } else {
-        current += char;
-      }
-    }
-    fields.push(current.trim());
-    
-    if (fields.length > 1 && fields[0]) {
-      const key = fields[0].replace(/"/g, '').replace(/'/g, '').trim();
-      result[key] = fields;
-    }
-  }
-  
-  return result;
-}
 
 // Translate a string using langs.csv
 function translate(key) {
@@ -162,7 +131,7 @@ async function loadGameData() {
       fetch('data/dungeons.json'),
       fetch('data/customs.json'),
       fetch('data/materials.json'),
-      fetch('data/langs.csv'),
+      fetch('data/langs.json'),
       fetch('data/ui-translations.json').catch(() => ({ json: () => ({}) })),
       fetch('data/random-keys.json').catch(() => ({ json: () => ({ keys: [], specialKeys: [] }) }))
     ]);
@@ -172,7 +141,7 @@ async function loadGameData() {
     WikiData.dungeons = (await dungeonsRes.json()).dungeons || [];
     WikiData.customs = (await customsRes.json()).customs || [];
     WikiData.materials = (await materialsRes.json()).materials || [];
-    WikiData.translations = parseCSV(await langsRes.text());
+    WikiData.translations = await langsRes.json();
     WikiData.uiTranslations = await uiTransRes.json();
     const keysData = await randomKeysRes.json();
     WikiData.randomKeys = { keys: keysData.keys || [], specialKeys: keysData.specialKeys || [] };

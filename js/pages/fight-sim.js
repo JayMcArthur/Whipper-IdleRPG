@@ -329,20 +329,20 @@ function populateDungeonSelect(data) {
 }
 
 function populateBuildSelect() {
-  const saved = localStorage.getItem('whipper-builds');
+  const saved = localStorage.getItem('whipper-builds-v4');
   const builds = saved ? JSON.parse(saved) : [];
   const sel = document.getElementById('build-select');
   if (builds.length === 0) {
     sel.innerHTML = '<option value="">No builds — create one in Build Maker</option>';
     return;
   }
-  sel.innerHTML = builds.map((b, i) => `<option value="${i}">${b.name}</option>`).join('');
+  sel.innerHTML = builds.map((b, i) => `<option value="${i}">${escapeHTML(b.name)}</option>`).join('');
 }
 
 function showBuildPreview() {
   const idx = parseInt(document.getElementById('build-select').value);
   const container = document.getElementById('build-preview');
-  const saved = localStorage.getItem('whipper-builds');
+  const saved = localStorage.getItem('whipper-builds-v4');
   const builds = saved ? JSON.parse(saved) : [];
   const build = builds[idx];
 
@@ -388,7 +388,7 @@ function runSimulation(data) {
   const numRuns = Math.min(parseInt(document.getElementById('num-runs').value) || 10, 100);
   const dungeonType = document.getElementById('dungeon-type').value;
 
-  const saved = localStorage.getItem('whipper-builds');
+  const saved = localStorage.getItem('whipper-builds-v4');
   const builds = saved ? JSON.parse(saved) : [];
   const build = builds[buildIdx];
   if (!build) { alert('Please select a build.'); return; }
