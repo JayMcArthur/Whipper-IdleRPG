@@ -1,0 +1,99 @@
+---
+import SearchIcon from '../components/SearchIcon.astro';
+import { href, asset, site, localeCodes, languages, ui, type Locale } from '../lib/site';
+import { snapshot } from '../lib/catalog';
+import '../styles/wiki.css';
+interface Props { locale: Locale; title: string; description: string; path?: string; guide?: boolean; notFound?: boolean; }
+const { locale, title, description, path = '', guide = false, notFound = false } = Astro.props;
+const englishFallback = guide && locale !== 'en';
+const canonical = `${site}${href(englishFallback ? 'en' : locale, path)}`;
+const navigation = [ ['tools', 'tools'], ['reference', 'reference'], ['guides', 'guides'], ['start', 'guides/getting-started'] ] as const;
+---
+<!doctype html>
+<html lang={languages[locale].html}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title === 'Whipper Wiki' ? title : `${title} · Whipper Wiki`}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#151b1c" />
+    <link rel="icon" href={asset('assets/favicon/favicon-32x32.png')} />
+    {!notFound && <link rel="canonical" href={canonical} />}
+    {(englishFallback || notFound) && <meta name="robots" content="noindex,follow" />}
+    {!notFound && (guide ? ['en'] as const : localeCodes).map(code => <link rel="alternate" hreflang={languages[code].html} href={`${site}${href(code, path)}`} />)}
+    {!notFound && <link rel="alternate" hreflang="x-default" href={`${site}${href('en', path)}`} />}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    {!notFound && <meta property="og:url" content={canonical} />}
+    <noscript><style is:inline>
+      @media (max-width:760px) {
+        html .site-header { position:relative; }
+        html .header-inner { flex-wrap:wrap; }
+        html .menu-toggle { display:none; }
+        #site-navigation { display:flex; position:static; flex-basis:100%; max-height:none; }
+      }
+    </style></noscript>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{ui(locale, 'skip')}</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href={href(locale)}>
+<span class="brand-mark" aria-hidden="true">W</span>
+<span>WHIPPER <span class="brand-light">WIKI</span>
+</span>
+</a>
+        <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false">{ui(locale, 'menu')} <span aria-hidden="true">☰</span>
+</button>
+        <nav id="site-navigation" aria-label={ui(locale, 'menu')}>
+          {navigation.map(([label, target]) => <a href={href(locale, target)} aria-current={path === target || (label === 'reference' && ['weapons','armor','rings','monsters','bosses','dungeons','enchantments','materials'].some(kind => path.startsWith(kind))) ? 'page' : undefined}>{ui(locale, label)}</a>)}
+          <a class="nav-search" href={href(locale, 'search')}>{ui(locale, 'search')} <span aria-hidden="true"><SearchIcon /></span>
+</a>
+          <details class="language-menu">
+            <summary>{languages[locale].name} <span aria-hidden="true">⌄</span>
+</summary>
+            <div class="language-options">
+              {localeCodes.map(code => <a href={href(code, path)} lang={languages[code].html} hreflang={languages[code].html} aria-current={code === locale ? 'true' : undefined}>{languages[code].name}</a>)}
+            </div>
+          </details>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+<slot />
+</main>
+    <footer class="site-footer">
+      <div class="footer-top">
+<a class="footer-brand" href={href(locale)}>Whipper Wiki</a>
+<p lang="en">An independent guide to Whipper, by Jay McArthur.</p>
+</div>
+      <div class="footer-bottom">
+<span>{ui(locale, 'gameData')}: Android {snapshot.gameVersion} · {snapshot.build}</span>
+<div>
+<a href={href(locale, 'coverage')}>{ui(locale, 'coverage')}</a>
+<a href="https://play.google.com/store/apps/details?id=jp.haappss.whipper">Google Play</a>
+<a href="https://apps.apple.com/us/app/whipper-idle-rpg/id1602383020">App Store</a>
+<a href="https://github.com/JayMcArthur/Whipper-IdleRPG">GitHub</a>
+</div>
+</div>
+    </footer>
+    <script define:vars={{ locale }}>
+      const button = document.querySelector('.menu-toggle');
+      const navigation = document.getElementById('site-navigation');
+      button.addEventListener('click', () => {
+        const open = button.getAttribute('aria-expanded') !== 'true';
+        button.setAttribute('aria-expanded', String(open));
+        navigation.classList.toggle('is-open', open);
+      });
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') {
+          button.setAttribute('aria-expanded', 'false');
+          navigation.classList.remove('is-open');
+          button.focus();
+        }
+      });
+      try { localStorage.setItem('wiki-lang', ({'zh-cn':'zh_CN','zh-tw':'zh_TW'})[locale] || locale); } catch {}
+    </script>
+  </body>
+</html>

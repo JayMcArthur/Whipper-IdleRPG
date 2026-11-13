@@ -1,0 +1,6 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "src/**/*", "tests/**/*", "playwright.config.ts"],
+  "exclude": ["agent-output", "node_modules"],
+  "compilerOptions": { "noUncheckedIndexedAccess": true, "types": ["node", "astro/client"] }
+}

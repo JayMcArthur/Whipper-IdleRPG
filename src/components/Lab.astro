@@ -1,0 +1,27 @@
+---
+import BuildEditor from './lab/BuildEditor.astro';
+import ItemGraphs from './lab/ItemGraphs.astro';
+import ItemBook from './lab/ItemBook.astro';
+import DungeonTester from './lab/DungeonTester.astro';
+import { equips,customs,monsters,dungeons } from '../lib/game/data';
+import { translate,snapshot } from '../lib/catalog';
+import { languages,base,href,type Locale } from '../lib/site';
+import '../styles/lab.css';
+const {locale}=Astro.props as {locale:Locale};
+const keys=[...equips.map(item=>item.nameId),...customs.flatMap(item=>[item.nameId,item.summaryId]),...monsters.map(item=>item.nameId),...dungeons.map(item=>item.nameId)];
+const payload={locale,htmlLocale:languages[locale].html,base,version:snapshot.gameVersion,build:snapshot.build,translations:Object.fromEntries([...new Set(keys)].map(key=>[key,translate(key,locale)]))};
+---
+<div class="lab" data-lab lang="en">
+  <p class="lab-intro">Build a preset, compare equipment curves, then test the enemies in your next dungeon. All three tools use the same imported game tables and stat model.</p>
+  {locale!=='en' && <p class="translation-note" lang="en">Tool controls are currently English. Game names and ability effects follow the selected language.</p>}
+  <div class="lab-toolbar"><nav class="lab-tabs" aria-label="Build tools"><a href="#build" aria-current="page">Build editor</a><a href="#items">Item graphs &amp; comparison</a><a href="#dungeon">Build vs dungeon</a><a href="#book">Item Book</a></nav><a class="text-link" href={href(locale,'coverage')}>Data &amp; model coverage ↗</a></div>
+  <p data-lab-error class="lab-error" role="alert" hidden></p>
+  <noscript><div class="notice">These interactive tools need JavaScript. The game reference and guides remain available without it.</div></noscript>
+  <BuildEditor locale={locale} /><ItemGraphs /><DungeonTester locale={locale} /><ItemBook />
+  <p class="small-note"><a class="text-link" href={`${base}/assets/licenses/dart-sdk.txt`}>Dart SDK random-generator attribution</a></p>
+  <script type="application/json" data-lab-data set:html={JSON.stringify(payload).replace(/</g,'\\u003c')} />
+</div>
+<script>
+  import { mountLab } from '../client/lab';
+  mountLab();
+</script>

@@ -1,0 +1,128 @@
+---
+import Search from './Search.astro';
+import { categories, catalog, snapshot } from '../lib/catalog';
+import { href, asset, ui, type Locale } from '../lib/site';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const symbols = { weapons: '⚔', armor: '◈', rings: '○', monsters: '♟', bosses: '♜', dungeons: '⌂', enchantments: '✧', materials: '⬡' };
+---
+<section class="hero wrap">
+  <div class="hero-copy">
+<p class="eyebrow">WHIPPER · IDLE RPG</p>
+<h1>{ui(locale, 'heroLead')}<br />
+<span>{ui(locale, 'heroAccent')}</span>
+</h1>
+<p class="hero-description">{ui(locale, 'intro')}</p>
+<p class="hero-explainer" lang="en">Evaluate a build, explore item growth curves and inspect your next dungeon’s encounters. Keep presets and compare changes in one place.</p>
+<div class="hero-actions">
+<a class="button primary" href={`${href(locale,'tools')}#build`}>{ui(locale, 'buildLab')} <span aria-hidden="true">→</span>
+</a>
+<a class="button secondary" href={href(locale, 'guides/getting-started')}>{ui(locale, 'start')}</a>
+</div>
+</div>
+  <div class="expedition-card">
+<span class="card-kicker">{ui(locale, 'firstExpedition')}</span>
+<img class="hero-logo" src={asset('assets/images/logo.png')} alt="Whipper" width="240" height="100" />
+<ol>
+<li>
+<span>01</span>
+<div>
+<strong>{ui(locale, 'equipStep')}</strong>
+<p>{ui(locale, 'equipDetail')}</p>
+</div>
+</li>
+<li>
+<span>02</span>
+<div>
+<strong>{ui(locale, 'dungeonStep')}</strong>
+<p>{ui(locale, 'dungeonDetail')}</p>
+</div>
+</li>
+<li>
+<span>03</span>
+<div>
+<strong>{ui(locale, 'returnStep')}</strong>
+<p>{ui(locale, 'returnDetail')}</p>
+</div>
+</li>
+</ol>
+<a href={href(locale, 'guides/getting-started')}>{ui(locale, 'next')} <span aria-hidden="true">↗</span>
+</a>
+</div>
+</section>
+<section class="wrap tool-entry-grid" lang="en" aria-label="Build tools">
+<a class="tool-entry" href={`${href(locale,'tools')}#build`}><span>01 / BUILD</span><h2>Build editor</h2><p>Equipment, abilities, corrosion, analysis and BP—with one stat breakdown and local presets.</p><strong>Build your loadout →</strong></a>
+<a class="tool-entry" href={`${href(locale,'tools')}#items`}><span>02 / COMPARE</span><h2>Item graphs</h2><p>Compare growth curves, swap equipment into a build and choose the weights that matter to you.</p><strong>Explore the curves →</strong></a>
+<a class="tool-entry" href={`${href(locale,'tools')}#dungeon`}><span>03 / TEST</span><h2>Build vs dungeon</h2><p>Predict normal code layouts, inspect floor pools and test your build against their enemies.</p><strong>Inspect your next dungeon →</strong></a>
+</section>
+<section class="search-band">
+<div class="wrap">
+<div class="section-heading">
+<div>
+<p class="eyebrow">THE FIELD GUIDE</p>
+<h2>{ui(locale, 'search')}</h2>
+</div>
+<a class="text-link" href={href(locale, 'search')}>{ui(locale, 'all')} <span aria-hidden="true">↗</span>
+</a>
+</div>
+<Search locale={locale} compact />
+</div>
+</section>
+<section class="wrap section">
+<div class="section-heading">
+<div>
+<p class="eyebrow">EQUIPMENT, ENEMIES & EVERY DETAIL</p>
+<h2>{ui(locale, 'reference')}</h2>
+</div>
+<span class="version-badge">Android {snapshot.gameVersion} · {snapshot.build}</span>
+</div>
+<div class="category-grid">{categories.map(category => <a class="category-card" href={href(locale, category)}>
+<span class="category-symbol" aria-hidden="true">{symbols[category]}</span>
+<div>
+<h3>{ui(locale, category)}</h3>
+<span>{catalog(category).length} {ui(locale, 'results')}</span>
+</div>
+<span class="entry-arrow" aria-hidden="true">↗</span>
+</a>)}</div>
+</section>
+<section class="wrap section">
+<div class="section-heading">
+<div>
+<p class="eyebrow">ONE STEP AT A TIME</p>
+<h2>{ui(locale, 'guides')}</h2>
+</div>
+<a class="text-link" href={href(locale, 'guides')}>{ui(locale, 'all')} <span aria-hidden="true">↗</span>
+</a>
+</div>{locale !== 'en' && <p class="translation-note">{ui(locale, 'englishGuide')}</p>}<div class="guide-grid" lang="en">
+<a class="guide-card" href={href(locale, 'guides/getting-started')}>
+<span class="guide-number">01 / START</span>
+<h3>Your first adventures</h3>
+<p>The idle loop, your first equipment, and what to do when you return.</p>
+<span>Start playing <span aria-hidden="true">↗</span>
+</span>
+</a>
+<a class="guide-card" href={href(locale, 'guides/equipment')}>
+<span class="guide-number">02 / IMPROVE</span>
+<h3>Make your gear work together</h3>
+<p>Upgrades, evolution, sets and abilities—without a one-build-fits-all promise.</p>
+<span>Build with purpose <span aria-hidden="true">↗</span>
+</span>
+</a>
+<a class="guide-card" href={href(locale, 'guides/progression')}>
+<span class="guide-number">03 / EXPLORE</span>
+<h3>Find your next goal</h3>
+<p>Follow the story, then explore miasma, the Royal Tomb and later modes.</p>
+<span>Plan the next step <span aria-hidden="true">↗</span>
+</span>
+</a>
+</div>
+</section>
+<section class="wrap tools-callout" lang="en">
+<div>
+<p class="eyebrow">TRY A BUILD</p>
+<h2>New to Whipper?<br />Start with your first adventure.</h2>
+<p>Learn the adventure loop, choose your equipment and find the next dungeon. The guides connect each step to the reference and tools.</p>
+</div>
+<a class="button secondary" href={href(locale, 'guides/getting-started')}>{ui(locale, 'start')} <span aria-hidden="true">↗</span>
+</a>
+</section>
