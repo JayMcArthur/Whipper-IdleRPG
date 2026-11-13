@@ -13,11 +13,11 @@ const symbols = { weapons: '⚔', armor: '◈', rings: '○', monsters: '♟', b
 <span>{ui(locale, 'heroAccent')}</span>
 </h1>
 <p class="hero-description">{ui(locale, 'intro')}</p>
-<p class="hero-explainer" lang="en">Every expedition starts at level one. What you learn—and the equipment you bring—makes the difference.</p>
+<p class="hero-explainer" lang="en">Evaluate a build, explore item growth curves and inspect your next dungeon’s encounters. Keep presets and compare changes in one place.</p>
 <div class="hero-actions">
-<a class="button primary" href={href(locale, 'guides/getting-started')}>{ui(locale, 'start')} <span aria-hidden="true">→</span>
+<a class="button primary" href={`${href(locale,'tools')}#build`}>{ui(locale, 'buildLab')} <span aria-hidden="true">→</span>
 </a>
-<a class="button secondary" href={href(locale, 'reference')}>{ui(locale, 'reference')}</a>
+<a class="button secondary" href={href(locale, 'guides/getting-started')}>{ui(locale, 'start')}</a>
 </div>
 </div>
   <div class="expedition-card">
@@ -49,6 +49,11 @@ const symbols = { weapons: '⚔', armor: '◈', rings: '○', monsters: '♟', b
 <a href={href(locale, 'guides/getting-started')}>{ui(locale, 'next')} <span aria-hidden="true">↗</span>
 </a>
 </div>
+</section>
+<section class="wrap tool-entry-grid" lang="en" aria-label="Build tools">
+<a class="tool-entry" href={`${href(locale,'tools')}#build`}><span>01 / BUILD</span><h2>Build editor</h2><p>Equipment, abilities, corrosion, analysis and BP—with one stat breakdown and local presets.</p><strong>Build your loadout →</strong></a>
+<a class="tool-entry" href={`${href(locale,'tools')}#items`}><span>02 / COMPARE</span><h2>Item graphs</h2><p>Compare growth curves, swap equipment into a build and choose the weights that matter to you.</p><strong>Explore the curves →</strong></a>
+<a class="tool-entry" href={`${href(locale,'tools')}#dungeon`}><span>03 / TEST</span><h2>Build vs dungeon</h2><p>Predict normal code layouts, inspect floor pools and test your build against their enemies.</p><strong>Inspect your next dungeon →</strong></a>
 </section>
 <section class="search-band">
 <div class="wrap">
@@ -115,9 +120,9 @@ const symbols = { weapons: '⚔', armor: '◈', rings: '○', monsters: '♟', b
 <section class="wrap tools-callout" lang="en">
 <div>
 <p class="eyebrow">TRY A BUILD</p>
-<h2>A reference first.<br />A workshop when you need it.</h2>
-<p>Track analysis and keep local build ideas. The existing calculators are experimental; use the game to verify predictions.</p>
+<h2>New to Whipper?<br />Start with your first adventure.</h2>
+<p>Learn the adventure loop, choose your equipment and find the next dungeon. The guides connect each step to the reference and tools.</p>
 </div>
-<a class="button secondary" href={href(locale, 'tools')}>{ui(locale, 'tools')} <span aria-hidden="true">↗</span>
+<a class="button secondary" href={href(locale, 'guides/getting-started')}>{ui(locale, 'start')} <span aria-hidden="true">↗</span>
 </a>
 </section>

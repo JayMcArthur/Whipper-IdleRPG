@@ -51,7 +51,7 @@ Do not use an old universal synthesis recipe if it conflicts with the current ap
 4. Check whether the improvement is available with your current materials and progress.
 5. Try it and read the result.
 
-The existing [Build Maker](../../tools/) can store local ideas, but it is experimental. A larger calculated power score does not establish that a build is legal for your inventory or better against a particular boss.
+Use the [Build lab](../../tools/#build) to edit a preset and inspect its stat breakdown. [Item graphs](../../tools/#items) compare level curves and equipment swaps with the same model. Their adjustable weighted score is a comparison you choose, not proof of inventory legality or a dungeon clear.
 
 ## Earlier community reference
 

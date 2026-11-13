@@ -1,0 +1,35 @@
+---
+import { dungeons } from '../../lib/game/data';
+import { translate } from '../../lib/catalog';
+import type { Locale } from '../../lib/site';
+const {locale}=Astro.props as {locale:Locale};
+---
+<section id="dungeon" class="lab-panel" aria-labelledby="dungeon-heading" hidden>
+  <div class="section-heading"><div><p class="eyebrow">03 / DUNGEON</p><h2 id="dungeon-heading">Test the encounters ahead.</h2></div><a class="text-link" href="#build">Edit current build →</a></div>
+  <p>Predict normal dungeon-code layouts, inspect listed floor pools, and benchmark your current build against their enemies. Every test starts at full HP and the build’s chosen level.</p>
+  <form data-dungeon-form>
+    <div class="lab-settings">
+      <label>Dungeon source<select name="kind"><option value="fixed">Listed dungeon</option><option value="random">Dungeon code</option></select></label>
+      <label>Dungeon<select name="dungeon">{dungeons.map(dungeon => <option value={dungeon.id}>{translate(dungeon.nameId,locale)}</option>)}</select></label>
+      <label>Dungeon code<input name="code" value="㕍" autocomplete="off" /></label>
+      <label>Code interpretation<select name="codeMode"><option value="text">Game text code</option><option value="seed">Numeric seed</option></select></label>
+      <label>Miasma<input name="miasma" type="number" min="0" max="10000" value="0" required /></label>
+      <label>First floor<input name="start" type="number" min="1" max="1000000000" value="1" required /></label>
+      <label>Floors to inspect<input name="count" type="number" min="1" max="200" value="50" required /></label>
+    </div>
+    <details class="lab-details"><summary>Observed pools for special or custom areas</summary><p>Some areas generate encounters at runtime. Paste their observed monster IDs here to replace the automatic pools; one floor per line. Example: <code>1: 1, 2, 3</code>. An empty source table is not a prediction of no enemies.</p><label>Observed floor pools<textarea name="observed" rows="4" placeholder="1: 1, 2, 3&#10;2: 2, 3"></textarea></label></details>
+    <details class="lab-details"><summary>Combat model and scenario settings</summary><p>Base-stat encounter tests include the selected item abilities. Boss phases, enemy special abilities, adventure events, cumulative HP and XP progression need additional rules. Unknown boss-phase results stay unmodeled.</p><div class="lab-settings">
+      <label>Tests per encounter<input name="trials" type="number" min="1" max="200" value="30" required /></label>
+      <label>Test seed<input name="seed" type="number" min="0" max="1000000000" value="1" required /></label>
+      <label>Damage roll<select name="damageRoll"><option value="on">Uniform 0–5</option><option value="off">No random addition</option></select></label>
+      <label>Speed evasion bonus (%)<input name="speedDodge" type="number" min="0" max="100" value="0" /></label>
+      <label>Speed extra-hit bonus (%)<input name="speedDouble" type="number" min="0" max="100" value="0" /></label>
+      <label>Poison damage / stack (%)<input name="poison" type="number" min="0" max="100" step="0.1" value="0.5" /></label>
+      <label>Deadly poison / stack (%)<input name="deadlyPoison" type="number" min="0" max="100" step="0.1" value="1" /></label>
+    </div><p class="small-note">Speed determines initiative; its current evasion/extra-hit curve is not established by these sources, so those bonuses are explicit inputs. Critical damage is modeled after defense (2×, or 3× with Three Paths); ability probabilities use their imported values. Poison settings are model assumptions you can change.</p></details>
+    <div class="lab-toolbar"><button type="submit" class="button primary">Run encounter tests</button><button type="button" data-cancel-benchmark class="button secondary" hidden>Cancel</button><p class="lab-status" role="status" data-dungeon-status></p></div>
+  </form>
+  <div class="dungeon-overview panel"><h3 data-dungeon-name>Dungeon layout</h3><p data-dungeon-description></p><ul data-dungeon-notes class="model-notes"></ul></div>
+  <div class="table-scroll" tabindex="0"><table><caption>Floor encounter pools</caption><thead><tr><th>Floor</th><th>Miasma</th><th>Possible enemies</th></tr></thead><tbody data-floor-pools></tbody></table></div>
+  <section data-benchmark-results hidden><h3>Encounter benchmarks</h3><p data-benchmark-summary></p><p class="small-note">Wins below are modeled independent fights. They do not measure the probability of finishing an adventure.</p><div class="table-scroll" tabindex="0"><table><caption>Results at the current build level</caption><thead><tr><th>Floor</th><th>Enemy</th><th>HP / ATK / DEF</th><th>Model wins</th><th>Draws</th><th>Mean HP left</th><th>Mean rounds</th><th>Trace</th></tr></thead><tbody data-benchmark-rows></tbody></table></div><ul data-benchmark-notes class="model-notes"></ul><section data-combat-trace hidden><h3>One repeatable fight</h3><p data-trace-summary></p><div class="table-scroll" tabindex="0"><table><caption>First 80 recorded actions, ending immediately at defeat</caption><thead><tr><th>Round</th><th>Actor</th><th>Action</th><th>Damage</th><th>Your HP</th><th>Enemy HP</th></tr></thead><tbody data-trace-rows></tbody></table></div></section></section>
+</section>

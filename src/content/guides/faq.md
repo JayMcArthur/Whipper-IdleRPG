@@ -35,7 +35,7 @@ Yes. Every reference page and guide is public. The manual item-book and build to
 
 ## Are the calculators accurate?
 
-They are experimental. Their calculations and combat coverage are not fully validated against 7.3.1. A simulated win is not a promise that a real adventure will clear. See the [tools page](../../tools/) before relying on an output.
+The [Build lab](../../tools/) uses one stat model for editing, equipment curves and encounter tests. Normal code layouts match the recorded code fixtures; later analysis and some combat interactions still need current runtime verification. Encounter tests start independently at full HP and a chosen level. They do not simulate complete adventure progression or boss phases, so a modeled win is not a promise of a dungeon clear.
 
 ## Why are the guides in English after I change language?
 

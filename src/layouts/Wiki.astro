@@ -7,7 +7,7 @@ interface Props { locale: Locale; title: string; description: string; path?: str
 const { locale, title, description, path = '', guide = false, notFound = false } = Astro.props;
 const englishFallback = guide && locale !== 'en';
 const canonical = `${site}${href(englishFallback ? 'en' : locale, path)}`;
-const navigation = [ ['start', 'guides/getting-started'], ['reference', 'reference'], ['guides', 'guides'], ['tools', 'tools'] ] as const;
+const navigation = [ ['tools', 'tools'], ['reference', 'reference'], ['guides', 'guides'], ['start', 'guides/getting-started'] ] as const;
 ---
 <!doctype html>
 <html lang={languages[locale].html}>

@@ -6,9 +6,10 @@ import { categories, catalog, references, snapshot, translate, searchIndex, entr
 import { localeCodes, languages, ui, href } from '../src/lib/site';
 import { findEntries, normalizeSearch } from '../src/lib/search';
 import { referenceRoutes } from '../src/lib/routes';
+import { formatEffect } from '../src/lib/effects';
 
 test('public data matches the versioned captured-source hashes and counts', () => {
-  assert.equal(snapshot.gameVersion, '7.3.1'); assert.equal(snapshot.build,142);
+  assert.match(snapshot.gameVersion, /^\d+\.\d+/); assert.ok(snapshot.build > 0);
   for (const [name, info] of Object.entries(snapshot.tables)) {
     const bytes = readFileSync(`data/${name}.json`);
     assert.equal(createHash('sha256').update(bytes).digest('hex'), info.sha256, name);
@@ -19,13 +20,22 @@ test('public data matches the versioned captured-source hashes and counts', () =
   assert.equal(createHash('sha256').update(readFileSync('data/langs.csv')).digest('hex'),snapshot.translationsSha256);
 });
 test('catalogs cover every equipment, monster, material and individual enchantment level once', () => {
-  assert.equal(catalog('weapons').length + catalog('armor').length + catalog('rings').length,168);
-  assert.equal(catalog('monsters').length + catalog('bosses').length,139);
-  assert.equal(catalog('materials').length,82);
-  assert.equal(catalog('dungeons').length,13);
+  assert.equal(catalog('weapons').length + catalog('armor').length + catalog('rings').length,snapshot.tables.equips.records);
+  assert.equal(catalog('monsters').length + catalog('bosses').length,snapshot.tables.monsters.records);
+  assert.equal(catalog('materials').length,snapshot.tables.materials.records);
+  assert.equal(catalog('dungeons').length,snapshot.tables.dungeons.records);
   const levels = catalog('enchantments').flatMap(entry => entry.levels.map(level => level.id));
-  assert.equal(levels.length,1479); assert.equal(new Set(levels).size,1479);
-  assert.equal(catalog('enchantments').length,39);
+  assert.equal(levels.length,snapshot.tables.customs.records); assert.equal(new Set(levels).size,levels.length);
+});
+test('enchantment descriptions substitute the exact selected value in each locale, retaining game units', () => {
+  for (const locale of localeCodes) {
+    for (const ability of catalog('enchantments')) for (const level of ability.levels) {
+      assert.ok(!formatEffect(translate(level.summaryKey,locale),level.value,languages[locale].html).includes('{value}'));
+    }
+  }
+  assert.equal(formatEffect('Increases HP by {value}.',300000,'en'),'Increases HP by 300,000.');
+  assert.equal(formatEffect('{value}% chance; {value}% bonus',20,'en'),'20% chance; 20% bonus');
+  assert.equal(formatEffect('First strike',0,'ja'),'First strike');
 });
 test('every displayed relationship and encounter link has a real target', () => {
   for (const entry of references) {

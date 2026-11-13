@@ -23,12 +23,13 @@ const index: Record<Locale, 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9> = {
   en: 0, ja: 1, 'zh-cn': 2, ko: 3, 'zh-tw': 4, es: 5, th: 6, pt: 7, de: 8, fr: 9,
 };
 const text = {
+  buildLab: ['Build lab','ビルドラボ','配装工具','빌드 도구','配裝工具','Laboratorio de builds','เครื่องมือจัดบิลด์','Laboratório de builds','Build-Labor','Atelier de builds'],
   specialization: ['Specialization', '特化', '专精', '특화', '專精', 'Especialización', 'ความเชี่ยวชาญ', 'Especialização', 'Spezialisierung', 'Spécialisation'],
   laterAbility: ['Later ability', '上位能力', '后续能力', '후속 능력', '後續能力', 'Habilidad posterior', 'ความสามารถถัดไป', 'Habilidade posterior', 'Spätere Fähigkeit', 'Talent ultérieur'],
   floorCount: ['Base floor count', '基礎階層数', '基础层数', '기본 층수', '基礎層數', 'Pisos base', 'จำนวนชั้นพื้นฐาน', 'Andares base', 'Grundanzahl Ebenen', 'Nombre d’étages de base'],
   encounterGroups: ['Encounter groups', '出現グループ', '遭遇组', '조우 그룹', '遭遇群組', 'Grupos de encuentros', 'กลุ่มการเผชิญหน้า', 'Grupos de encontros', 'Begegnungsgruppen', 'Groupes de rencontres'],
-  heroLead: ['Small steps.', '少しずつ、', '一步一步，', '작은 발걸음으로,', '一步一步，', 'Paso a paso.', 'ก้าวทีละน้อย', 'Passo a passo.', 'Schritt für Schritt.', 'Pas à pas.'],
-  heroAccent: ['Stronger adventures.', 'もっと強い冒険者へ。', '迎接更强的挑战。', '더 강한 모험으로.', '迎接更強的挑戰。', 'Aventuras más fuertes.', 'สู่การผจญภัยที่แข็งแกร่งขึ้น', 'Aventuras mais fortes.', 'Stärker ins Abenteuer.', 'Des aventures plus solides.'],
+  heroLead: ['Your build.', 'ビルドを組み、', '你的配装，', '나의 빌드,', '你的配裝，', 'Tu build.', 'บิลด์ของคุณ', 'Sua build.', 'Dein Build.', 'Votre build.'],
+  heroAccent: ['Your next dungeon.', '次のダンジョンへ。', '下一座地下城。', '다음 던전.', '下一座地下城。', 'Tu próxima mazmorra.', 'ดันเจี้ยนถัดไป', 'Sua próxima masmorra.', 'Dein nächster Dungeon.', 'Votre prochain donjon.'],
   firstExpedition: ['YOUR FIRST EXPEDITION', 'はじめての冒険', '第一次冒险', '첫 번째 모험', '第一次冒險', 'TU PRIMERA EXPEDICIÓN', 'การสำรวจครั้งแรก', 'SUA PRIMEIRA EXPEDIÇÃO', 'DEINE ERSTE EXPEDITION', 'VOTRE PREMIÈRE EXPÉDITION'],
   equipStep: ['Equip your adventurer', '装備を整えよう', '装备冒险者', '모험가에게 장비 착용', '裝備冒險者', 'Equipa a tu aventurero', 'สวมอุปกรณ์ให้นักผจญภัย', 'Equipe seu aventureiro', 'Rüste deinen Abenteurer aus', 'Équipez votre aventurier'],
   equipDetail: ['A weapon, armor and a ring.', '武器・防具・指輪を選ぼう。', '选择武器、防具和戒指。', '무기, 방어구, 반지를 선택하세요.', '選擇武器、防具和戒指。', 'Un arma, armadura y un anillo.', 'อาวุธ เกราะ และแหวน', 'Uma arma, armadura e um anel.', 'Waffe, Rüstung und Ring.', 'Une arme, une armure et un anneau.'],

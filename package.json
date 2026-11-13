@@ -7,10 +7,11 @@
   "packageManager": "npm@11.19.0",
   "scripts": {
     "dev": "node scripts/prepare.mjs && astro dev --host 127.0.0.1 --ignore-lock",
-    "check": "astro check && tsx --test tests/catalog.test.ts",
+    "check": "astro check && tsx --test tests/*.test.ts tests/*.test.mjs",
     "build": "node scripts/prepare.mjs && astro build && node scripts/check-site.mjs",
     "preview": "astro preview --host 127.0.0.1 --ignore-lock",
-    "test:browser": "node scripts/browser-tests.mjs"
+    "test:browser": "node scripts/browser-tests.mjs",
+    "import:game": "node scripts/game-import.mjs"
   },
   "dependencies": { "astro": "7.4.11", "csv-parse": "7.0.3" },
   "devDependencies": {

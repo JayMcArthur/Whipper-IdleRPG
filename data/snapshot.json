@@ -26,5 +26,47 @@
       "sha256": "005e4ef2d77853bf83af134960d490fdb124f00441e653ec3530ae6780743f05"
     }
   },
-  "translationsSha256": "f1c30fbcdba5f60a4ca53c1b1bb7d4a08672104a5a2c05400e34726d86b25ec7"
+  "translationsSha256": "f1c30fbcdba5f60a4ca53c1b1bb7d4a08672104a5a2c05400e34726d86b25ec7",
+  "previousLabel": "Earlier wiki tables (labelled 6.3.4)",
+  "changes": {
+    "equips": {
+      "added": [],
+      "removed": [],
+      "changed": []
+    },
+    "monsters": {
+      "added": [],
+      "removed": [],
+      "changed": [
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        134,
+        200,
+        201,
+        202,
+        203
+      ]
+    },
+    "dungeons": {
+      "added": [],
+      "removed": [],
+      "changed": []
+    },
+    "materials": {
+      "added": [
+        200
+      ],
+      "removed": [],
+      "changed": []
+    },
+    "customs": {
+      "added": [],
+      "removed": [],
+      "changed": []
+    }
+  }
 }

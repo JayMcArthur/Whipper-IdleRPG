@@ -52,7 +52,7 @@
   line-height:1.85
 }
 .prose a{
-  color:var(--teal);
+  color:var(--link);
   text-decoration:underline;
   text-underline-offset:3px
 }

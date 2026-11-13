@@ -34,4 +34,4 @@ Treat these as questions to check in the current app, not a verified numerical r
 
 Keep most of the build fixed and change the part that addresses the observed threat. Record what improved and what still failed. Repeated outcomes are more informative than one unusually lucky clear.
 
-The existing fight simulator does not implement every boss interaction. Use it as an experiment, not as proof that a boss-ready build has been found.
+The [dungeon tester](../../tools/#dungeon) shows base-stat encounter benchmarks. Encounters needing additional boss-phase rules remain unmodeled. Use actual battle results when a phase, resistance or special ability changes the fight.

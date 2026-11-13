@@ -29,11 +29,37 @@ The dev/preview commands use Astro’s foreground mode (`--ignore-lock`) so proc
 - `src/content/guides/`: English editorial guides. Other language interfaces identify English guide text explicitly.
 - `data/`: public game tables and translations; `data/snapshot.json` records provenance and coverage.
 - `assets/`: public game artwork/icons and branding.
-- `tools/`: existing experimental calculators and local item-book/preset UI. They are separate from the verified reference, and their calculations remain unvalidated.
+- `src/lib/game/`: one public stat, comparison, dungeon-layout and encounter-benchmark model.
+- `src/client/lab/` and `src/components/lab/`: build editor, item graphs, dungeon tester and browser-local Item Book.
+- `scripts/game-import.mjs`: validated JSON/CSV updates, change review and snapshot provenance.
 - `scripts/prepare.mjs`: explicit publication allowlist and redirects for old `.html` links.
 - `old/` and `Python Scripts/`: historical reference; excluded from the published site.
 
 The wiki has no save upload, decoder, encoder, private keys, raw app packages or real player saves. Those belong to a separate private processor project. Keep confidential material out of source, build artifacts and browser code.
+
+## Updating game tables and spreadsheet exports
+
+Put changed public tables in a directory outside source, such as `agent-output/game-import/`. Supported filenames are `equips`, `customs`, `monsters`, `materials` and `dungeons`, each as `.json` or `.csv`, plus optional `langs.csv`. A JSON file has the game's normal top-level table name. CSV exports use the exact game field names as headers; a dungeon's `monsters` cell contains a JSON floor-to-IDs object. Export spreadsheet **data tabs**, not calculated display tables. Formula text is never executed. Import one changed table or a complete export; unchanged tables remain in the validated combined snapshot.
+
+```sh
+./scripts/dev.sh -- npm run import:game -- --input agent-output/game-import --version 7.3.2 --build 143 --captured-at 2026-11-14
+# Review added/changed/removed IDs and warnings, then apply the same import:
+./scripts/dev.sh -- npm run import:game -- --input agent-output/game-import --version 7.3.2 --build 143 --captured-at 2026-11-14 --apply
+./scripts/dev.sh -- npm run check
+./scripts/dev.sh -- npm run build
+```
+
+The version/build/date above are examples; use the actual captured version. The default command is a dry run. Required fields, types, duplicate IDs, equipment kinds, ability/evolution/set/drop links and prerequisite references are checked before any source write. Unknown columns require an explicit public-data contract review. Source terminal enchantment pointers beyond the last recorded level produce a warning rather than a fabricated level.
+
+For new images, add `--assets DIRECTORY` with public PNGs under `icons/` or `dungeons/`. Required images must already exist or be supplied; icons cannot reference arbitrary filesystem paths. Only required public PNGs are copied. Import metadata records counts, hashes, previous version and changed IDs in `data/snapshot.json`; the coverage page reads it directly.
+
+New item records automatically appear in reference routes/search, build selectors, graphs/comparison and the Item Book. New effect values/descriptions use the selected actual record, including localized `{value}` substitution. New gameplay mechanics still need a reviewed model rule; a new numeric row cannot establish an unknown combat behavior.
+
+## Tool model and local records
+
+See [the model contract](docs/game-model.md) for supported arithmetic, workbook sources and encounter-test limits. Graphs regenerate from the current imported tables, not historical spreadsheet chart caches. Their score weights are visible and editable.
+
+Old `.html` tool URLs redirect into the shared lab. Existing `whipper-builds-v4` and `whipper-item-book` records are read once into their respective current keys; the originals remain unchanged. New presets store actual game ability IDs. Export JSON from the lab before clearing browser data. This preset JSON is separate from a native game save.
 
 ## Publishing
 

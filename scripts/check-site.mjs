@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { base, localeCodes } from '../src/lib/site.ts';
 
 const root = resolve('agent-output/dist');
-const publicDirectories = new Set(['_astro','assets','data','css','js',...localeCodes]);
+const publicDirectories = new Set(['_astro','assets','data',...localeCodes]);
 const rootFiles = new Set(['index.html','404.html','sitemap.xml','robots.txt','.nojekyll', ...['weapons','armor','rings','monsters','bosses','dungeons','enchantments','materials','analysis','guide-builds','guide-items','guide-stats','guide-story','whatsnew','build-maker','fight-sim','item-book','compare','damage'].map(name => `${name}.html`)]);
 async function files(directory) {
   const result = [];

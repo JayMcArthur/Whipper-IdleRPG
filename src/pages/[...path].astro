@@ -3,9 +3,11 @@ import { getCollection, render } from 'astro:content';
 import Wiki from '../layouts/Wiki.astro';
 import Home from '../components/Home.astro';
 import Search from '../components/Search.astro';
+import Lab from '../components/Lab.astro';
+import { formatEffect } from '../lib/effects';
 import { referenceRoutes, type Route } from '../lib/routes';
 import { categories, catalog, snapshot, translationRows, duplicateTranslationKeys, number, entryHref, entryName, translate, factLabel, icon } from '../lib/catalog';
-import { href, base, ui } from '../lib/site';
+import { href, base, ui, languages } from '../lib/site';
 import analysisNotes from '../../data/analysis-notes.json';
 import rawBossNotes from '../../data/boss-notes.json';
 import dungeonCodes from '../../data/random-keys.json';
@@ -25,18 +27,14 @@ const title = page.kind === 'home' ? 'Whipper Wiki'
   : page.kind === 'entry' ? translate(page.entry.nameKey, locale)
   : page.kind === 'guide' ? guide!.data.title
   : page.kind === 'dungeon-codes' ? 'Dungeon codes'
+  : page.kind === 'tools' ? ui(locale,'buildLab')
   : page.kind === 'analysis' ? 'Analysis reference'
   : ui(locale, page.kind);
 const description = guide?.data.description || (page.kind === 'entry' && page.entry.summaryKey ? translate(page.entry.summaryKey, locale) : `${title} — Whipper ${snapshot.gameVersion} game reference, related equipment, enemies and beginner guides.`);
 const bossNotes: Record<string, typeof rawBossNotes['200']> = rawBossNotes;
+const equipmentSlots: Record<string,string> = {weapons:'weapon',armor:'armor',rings:'ring'};
 const boss = page.kind === 'entry' && page.entry.category === 'bosses' ? bossNotes[String(page.entry.id)] : undefined;
-const tools = [
-  { file: 'item-book', title: 'Item Book', text: 'Manually track equipment analysis and BP. Browser-local records; no automatic game connection.' },
-  { file: 'build-maker', title: 'Build Maker', text: 'Create and export local build ideas. Calculations are experimental and do not check your owned inventory.' },
-  { file: 'fight-sim', title: 'Fight Simulator', text: 'Explore dungeon runs. XP, encounters and special effects are incomplete; a simulated clear is not a reliable prediction.' },
-  { file: 'compare', title: 'Equipment Comparison', text: 'Compare base equipment properties. Treat derived ratings as exploratory.' },
-  { file: 'damage', title: 'Damage Calculator', text: 'Explore the older damage model. Formula order and current-version parity remain unverified.' },
-];
+
 ---
 <Wiki locale={locale} title={title} description={description} path={path} guide={page.kind === 'guide'}>
   {page.kind === 'home' ? <Home locale={locale} /> : <div class="wrap page-content">
@@ -83,7 +81,8 @@ const tools = [
 <div>
       {page.entry.summaryKey && <div class="panel">
 <h2>{ui(locale,'effect')}</h2>
-<p class="entity-description">{translate(page.entry.summaryKey,locale)}</p>
+{page.entry.levels.length > 0 && <p class="small-note">{ui(locale,'level')} {page.entry.levels[0]!.level}</p>}
+<p class="entity-description">{page.entry.levels.length ? formatEffect(translate(page.entry.summaryKey,locale),page.entry.levels[0]!.value,languages[locale].html) : translate(page.entry.summaryKey,locale)}</p>
 </div>}
       {page.entry.facts.length > 0 && <section class="panel">
 <h2>{ui(locale,'gameData')}</h2>
@@ -92,7 +91,7 @@ const tools = [
 <dd>{typeof fact.value === 'number' ? number(fact.value,locale) : fact.translate ? translate(fact.value,locale) : fact.value}</dd>
 </div>)}</dl>
 </section>}
-      {page.entry.levels.length > 0 && <div class="table-scroll">
+      {page.entry.levels.length > 0 && <div class="table-scroll" tabindex="0">
 <table>
 <caption class="sr-only">{title} — {ui(locale,'level')}</caption>
 <thead>
@@ -106,14 +105,14 @@ const tools = [
 <tbody>{page.entry.levels.map(level => <tr id={`level-${level.id}`}>
 <th scope="row">{number(level.level,locale)}</th>
 <td>{number(level.value,locale)}</td>
-<td>{translate(level.summaryKey,locale)}</td>
+<td>{formatEffect(translate(level.summaryKey,locale),level.value,languages[locale].html)}</td>
 <td>{level.id}</td>
 </tr>)}</tbody>
 </table>
 </div>}
       {page.entry.category === 'dungeons' && <>
 <div class="notice" lang="en">Listed base encounter data, not a complete generated adventure. Boss placement, repeating Royal Tomb groups, random dungeons and special events can follow additional rules.</div>
-<div class="table-scroll">
+<div class="table-scroll" tabindex="0">
 <table>
 <caption class="sr-only">{title} — {ui(locale,page.entry.category === 'dungeons' && page.entry.id === 12 ? 'encounterGroups' : 'floors')}</caption>
 <thead>
@@ -150,6 +149,9 @@ const tools = [
       <p class="small-note" lang="en">Source: Android {snapshot.gameVersion}, build {snapshot.build}, captured {snapshot.capturedAt}. Values are base definitions; the game may apply additional modifiers. Listed drops are not guaranteed and may not describe every reward source.</p>
     </div>
 <aside>
+{['weapons','armor','rings'].includes(page.entry.category) && <section class="panel" lang="en"><h2>Try this equipment</h2><a class="button primary" href={`${href(locale,'tools')}?slot=${equipmentSlots[page.entry.category]}&id=${page.entry.id}#build`}>Equip in build</a><p><a class="text-link" href={`${href(locale,'tools')}?category=${equipmentSlots[page.entry.category]}&graph=${page.entry.id}#items`}>Graph and compare ↗</a></p></section>}
+{page.entry.category === 'dungeons' && <section class="panel" lang="en"><h2>Test a build here</h2><a class="button primary" href={`${href(locale,'tools')}?dungeon=${page.entry.id}#dungeon`}>Open dungeon tester</a></section>}
+{['monsters','bosses'].includes(page.entry.category) && <section class="panel" lang="en"><h2>Test an encounter</h2><a class="button primary" href={`${href(locale,'tools')}?enemy=${page.entry.id}#dungeon`}>Use current build</a></section>}
 <section class="panel">
 <h2>{ui(locale,'sources')}</h2>{page.entry.relations.length ? <ul class="relation-list">{page.entry.relations.map(relation => <li>
 <small>{ui(locale,relation.label)}</small>
@@ -182,26 +184,12 @@ const tools = [
 </article>
 </div>}
 
-    {page.kind === 'tools' && <div lang="en">
-<div class="notice">These are the existing browser-local tools. Combat and derived-stat calculations remain experimental. They do not import game saves or recommend verified owned-gear builds.</div>
-<div class="guide-grid">{tools.map(tool => <a class="guide-card" href={`${base}/${tool.file}.html`}>
-<span class="guide-number">{tool.file === 'item-book' ? 'MANUAL TRACKER' : 'EXPERIMENTAL'}</span>
-<h2>{tool.title}</h2>
-<p>{tool.text}</p>
-<span>Open tool <span aria-hidden="true">↗</span>
-</span>
-</a>)}</div>
-<div class="panel" style="margin-top:24px">
-<h2>Your local records</h2>
-<p>Builds and item-book records stay in this browser. Clearing site data, using a private browsing window or changing devices can remove access to them. Export important records before clearing browser storage.</p>
-<p>For a reliable comparison today, use the reference and your actual battle results. The shared validated evaluator and save-assisted recommendations are a later phase.</p>
-</div>
-</div>}
+    {page.kind === 'tools' && <Lab locale={locale} />}
 
     {page.kind === 'analysis' && <div lang="en">
 <div class="notice">Community reference retained from the earlier wiki. These thresholds/effects are not independently verified for 7.3.1 and do not establish a universal maximum level. <a href={href(locale,'guides/analysis')}>Read the analysis guide.</a>
 </div>
-<div class="table-scroll">
+<div class="table-scroll" tabindex="0">
 <table>
 <caption class="sr-only">Retained community analysis observations</caption>
 <thead>
@@ -230,7 +218,7 @@ const tools = [
 
     {page.kind === 'dungeon-codes' && <div lang="en">
 <div class="notice">Retained community code list, last recorded {dungeonCodes._meta.lastUpdated}. Codes and descriptions are not revalidated for 7.3.1. Copy unusual characters exactly; check the actual dungeon preview in the game.</div>
-<div class="table-scroll">
+<div class="table-scroll" tabindex="0">
 <table>
 <caption class="sr-only">Community dungeon codes</caption>
 <thead>
@@ -284,15 +272,15 @@ const tools = [
 <p>Special boss placement, random dungeon generation, repeating Tomb groups and mode-specific mechanics can live outside the fixed encounter tables. A catalog entry is not a complete executable specification.</p>
 </section>
 <section class="panel">
-<span class="badge">Experimental tools</span>
+<span class="badge">Build lab</span>
 <h2>Predictions need validation</h2>
-<p>Existing calculators use older and incomplete models. Their outputs are not a verified 7.3.1 clear chance or best-build ranking. No save upload or native preset editing is enabled in this wiki release.</p>
+<p>Build editing, item curves and encounter tests now share one calculation model and the current imported tables. Normal code layouts match the recorded code fixtures. Combat results are independent base-stat encounter benchmarks; they do not include complete adventure progression, enemy special abilities or boss phases. Native save processing remains separate.</p>
 <a class="text-link" href={href(locale,'tools')}>Read tool limitations ↗</a>
 </section>
 </div>
 <section class="panel">
 <h2>What changed in the captured data</h2>
-<p>Compared with the earlier 6.3.4-labelled snapshot: equipment, ability and fixed-dungeon definitions are identical; material 200 was added; eleven monster EXP values changed; the game translation table grew from 1,301 to 1,470 rows. Matching tables do not prove unchanged combat rules.</p>
+<p>Previous data: {snapshot.previousLabel}. The importer records changes when a new public table or spreadsheet export is applied. Matching tables do not prove unchanged combat rules.</p><div class="table-scroll" tabindex="0"><table><caption>Changes from the previous public data snapshot</caption><thead><tr><th>Table</th><th>Added</th><th>Changed</th><th>Removed</th></tr></thead><tbody>{Object.entries(snapshot.changes).map(([name,change]) => <tr><th scope="row">{name}</th><td>{change.added.length}</td><td>{change.changed.length}</td><td>{change.removed.length}</td></tr>)}</tbody></table></div><a class="text-link" href={`${base}/data/snapshot.json`}>Download version, hashes and changed IDs ↗</a>
 <h2>Corrections and official sources</h2>
 <ul class="list-links">
 <li>

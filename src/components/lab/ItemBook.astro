@@ -1,0 +1,14 @@
+<section id="book" class="lab-panel" aria-labelledby="book-heading" hidden>
+  <div class="section-heading"><div><p class="eyebrow">04 / TRACK</p><h2 id="book-heading">Keep track of your analysis.</h2></div><a href="#dungeon" class="text-link">Choose a dungeon →</a></div>
+  <p>This is your manual browser-local Item Book. Existing records are preserved. It does not read a native save or change the game.</p>
+  <div data-book-summary class="stat-strip"></div>
+  <div class="lab-settings">
+    <label>Equipment category<select data-book-category><option value="weapons">Weapons</option><option value="armor">Armor &amp; shields</option><option value="rings">Rings</option></select></label>
+    <label>Find equipment<input type="search" data-book-query placeholder="Name or ID" /></label>
+    <label>Show<select data-book-filter><option value="all">All items</option><option value="missing">Not recorded</option><option value="recorded">Recorded</option></select></label>
+  </div>
+  <div class="lab-toolbar"><button type="button" data-export-book class="button secondary">Export Item Book JSON</button><label class="button secondary file-button">Import Item Book JSON<input type="file" accept="application/json,.json" data-import-book /></label><p data-book-status class="lab-status" role="status"></p></div>
+  <div class="table-scroll" tabindex="0"><table><caption>Manual analysis records</caption><thead><tr><th>Equipment</th><th>Analysis level</th><th>XP toward next level</th><th>Book BP estimate</th></tr></thead><tbody data-book-rows></tbody></table></div>
+  <p class="small-note">XP thresholds through level 25 and floor(analysis / 5) BP are retained community rules. Higher recorded levels are preserved; unknown thresholds are not guessed. Your actual game slot determines available BP and analysis limits.</p>
+  <section class="panel"><h3>Equipment from the selected dungeon</h3><p data-book-dungeon></p><div data-book-drops class="book-drops"></div><p class="small-note">Listed equipment drops only, not guaranteed rewards or a complete special-area loot table. Select a dungeon or code in the dungeon tester to update this list.</p></section>
+</section>

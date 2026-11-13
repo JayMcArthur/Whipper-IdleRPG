@@ -1,0 +1,47 @@
+---
+import { equips } from '../../lib/game/data';
+import { slots, boostDefinitions } from '../../lib/game/build';
+import { translate } from '../../lib/catalog';
+import type { Locale } from '../../lib/site';
+const {locale}=Astro.props as {locale:Locale};
+---
+<section id="build" class="lab-panel" aria-labelledby="build-heading">
+  <div class="section-heading"><div><p class="eyebrow">01 / BUILD</p><h2 id="build-heading">Your equipment. One calculation.</h2></div><a class="text-link" href="#items">Compare items →</a></div>
+  <p>Choose the items and abilities shown in your game. Analysis bonuses activate only when their corrosion requirement is met.</p>
+  <form data-build-form>
+    <div class="lab-settings">
+      <label>Build name<input name="name" value="My build" maxlength="160" required /></label>
+      <label>Character level<input name="level" type="number" min="1" max="10000" value="1" required /></label>
+      <label>Apples<input name="apples" type="number" min="0" max="20" value="0" required /></label>
+      <label>Permanent HP bonus<input name="permanentHP" type="number" min="0" max="1000000000000" value="0" required /></label>
+    </div>
+    <div class="gear-grid">{slots.map((slot,index) => <fieldset class="gear-card" data-gear={slot}>
+      <legend>{slot[0]!.toUpperCase()+slot.slice(1)}</legend>
+      <label>Equipment<select name={`${slot}-id`} aria-label={`${slot} equipment`}>{equips.filter(item => item.itemType===index+1).map(item => <option value={item.id}>{translate(item.nameId,locale)} · #{item.id}</option>)}</select></label>
+      <a data-item-reference={slot} class="text-link">View item details ↗</a>
+      <div class="gear-numbers">
+        {slot!=='ring' && <label>Upgrade<input name={`${slot}-upgrade`} type="number" min="0" max="1000000000" value="0" required /></label>}
+        <label>Corrosion<input name={`${slot}-corrosion`} type="number" min="0" max="10000000" value="0" required /></label>
+        <label>Analysis<input name={`${slot}-analysis`} type="number" min="1" max="25" value="1" required /></label>
+      </div>
+      {[0,1,2,3].map(i => <div class:list={['ability-row',{'extra-ability':i===3}]} data-ability-row data-slot={slot} data-index={i}>
+        <label>{i===3?'Additional ability':'Ability '+(i+1)}<select data-ability-group aria-label={`${slot} ability ${i+1}`}><option value="">None</option></select></label>
+        <label>Level<select data-ability-level aria-label={`${slot} ability ${i+1} level`}><option value="0">—</option></select></label>
+        <p data-ability-description class="small-note"></p>
+      </div>)}
+      <p class="small-note">The additional slot represents an ability actually present on your item. A rarity name alone does not add an assumed stat bonus.</p>
+    </fieldset>)}</div>
+    <details class="lab-details"><summary>Permanent boosts · <span data-used-bp>0</span> BP allocated</summary><p>Enter your actual allocations. This editor can also hold theoretical builds; it does not read an inventory or infer your available BP.</p><div class="boost-grid">{boostDefinitions.map(([name,rate],i) => <label>{name}{i>=14 ? <select name={`bp-${i}`}><option value="0">Off</option><option value="50">On · 50 BP</option></select> : <input name={`bp-${i}`} type="number" min="0" max="1000000" value="0" />}<small>{rate ? `${rate*100}% per BP` : 'Ability unlock'}</small></label>)}</div></details>
+  </form>
+  <div class="lab-result" aria-live="polite"><div class="stat-strip" data-build-stats></div><div class="table-scroll" tabindex="0"><table><caption>Stat breakdown at the selected character level</caption><thead><tr><th>Stat</th><th>Base</th><th>Growth / level</th><th>Multiplier</th><th>Result</th></tr></thead><tbody data-stat-breakdown></tbody></table></div><p data-build-summary class="small-note"></p><ul data-model-notes class="model-notes"></ul></div>
+  <div class="preset-bar">
+    <button type="button" data-save-build class="button primary">Save preset</button>
+    <label>Saved presets<select data-saved-builds aria-label="Saved presets"><option value="">Choose a preset</option></select></label>
+    <button type="button" data-load-build class="button secondary">Load</button>
+    <button type="button" data-delete-build class="button secondary">Delete selected</button>
+    <button type="button" data-export-builds class="button secondary">Export JSON</button>
+    <label class="button secondary file-button">Import build JSON<input type="file" accept="application/json,.json" data-import-builds /></label>
+  </div>
+  <p class="small-note">Draft and presets stay in this browser. JSON import is for tool presets, not a native game save.</p>
+  <p class="lab-status" role="status" data-preset-status></p>
+</section>

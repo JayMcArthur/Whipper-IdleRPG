@@ -92,10 +92,11 @@ test('local builds survive the wiki refresh and imported names stay text', async
   const build={ name, timestamp:1, weapon:item(101), armor:item(201), ring:item(301), boostPoints:Array(26).fill(0), proofs:{ bookmark:0, combatChip:0, thousandHand:0, adamHeart:0, panoptesEye:0, killingStone:0, magatama:0 }, apples:0 };
   await page.evaluate(build => localStorage.setItem('whipper-builds-v4',JSON.stringify([build])), build);
   await page.goto('build-maker.html');
-  await expect(page.locator('#saved-builds-list strong')).toHaveText(name);
-  await expect(page.locator('#saved-builds-list img')).toHaveCount(0);
-  await expect(page.locator('.tool-notice')).toContainText('Experimental');
+  await expect(page).toHaveURL(/\/en\/tools\/#build$/);
+  await expect(page.locator('[data-saved-builds] option').last()).toHaveText(name);
+  await expect(page.locator('[data-saved-builds] img')).toHaveCount(0);
   await page.goto('fight-sim.html');
-  await expect(page.locator('#build-select option')).toHaveText(name);
+  await expect(page).toHaveURL(/\/en\/tools\/#dungeon$/);
+  await expect(page.locator('[data-saved-builds] option').last()).toHaveText(name);
   expect(await page.evaluate(() => localStorage.getItem('whipper-builds-v4'))).toContain(name.replaceAll('"','\\"'));
 });

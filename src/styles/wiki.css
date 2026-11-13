@@ -2,14 +2,14 @@
 @import url('./prose.css');
 :root{
   color-scheme:dark;
-  --bg:#121819;
-  --surface:#1b2324;
-  --surface-raised:#222d2d;
-  --ink:#f1f0e8;
-  --muted:#b4c0bb;
-  --gold:#dfba72;
-  --line:#364343;
-  --teal:#a6d7c8;
+  --bg:#0d0d0f;
+  --surface:#16161a;
+  --surface-raised:#1e1e24;
+  --ink:#e8e6e3;
+  --muted:#aab2bf;
+  --gold:#f5a623;
+  --line:#2a2a32;
+  --link:#eac17d;
   --radius:10px;
   font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   line-height:1.65;
@@ -37,7 +37,7 @@ button,a,input,select,summary{
   -webkit-tap-highlight-color:transparent
 }
 :focus-visible{
-  outline:3px solid var(--teal);
+  outline:3px solid var(--link);
   outline-offset:5px
 }
 h1,h2,h3,p{
@@ -93,7 +93,7 @@ main:focus{
 }
 .text-link{
   font-size:.85rem;
-  color:var(--teal)
+  color:var(--link)
 }
 .text-link span{
   margin-left:12px
@@ -176,27 +176,27 @@ main:focus{
 }
 .button.primary{
   background:var(--gold);
-  color:#192021
+  color:#111114
 }
 .button.primary:hover{
-  background:#edcc8b
+  background:#ffc469
 }
 .button.secondary{
-  border:1px solid #677772;
+  border:1px solid #596170;
   background:transparent;
   color:var(--ink)
 }
 .expedition-card{
-  border:1px solid #64705a;
-  background:linear-gradient(155deg,#29322c,#1a2424);
+  border:1px solid #34343f;
+  background:linear-gradient(155deg,#202025,#141418);
   border-radius:var(--radius);
   padding:25px 29px;
-  box-shadow:12px 12px 0 #1c2523
+  box-shadow:12px 12px 0 #09090c
 }
 .card-kicker{
   font-size:.63rem;
   letter-spacing:.18em;
-  color:#c0c9a5
+  color:#c1b494
 }
 .hero-logo{
   display:block;
@@ -214,7 +214,7 @@ main:focus{
   display:flex;
   gap:18px;
   padding:12px 0;
-  border-bottom:1px solid #465344
+  border-bottom:1px solid #34343e
 }
 .expedition-card li>span{
   color:var(--gold);
@@ -235,7 +235,7 @@ main:focus{
   font-size:.78rem
 }
 .search-band{
-  background:#1a2223;
+  background:#141418;
   border-block:1px solid var(--line);
   padding:32px 0 24px
 }
@@ -253,7 +253,7 @@ main:focus{
 .search-field{
   display:flex;
   align-items:center;
-  border:1px solid #61706a;
+  border:1px solid #50505f;
   background:var(--bg);
   border-radius:6px;
   flex:1;
@@ -301,7 +301,7 @@ main:focus{
   padding:15px 12px;
   background:var(--surface);
   color:var(--ink);
-  border:1px solid #61706a;
+  border:1px solid #50505f;
   border-radius:6px;
   font-size:.82rem
 }
@@ -335,8 +335,8 @@ main:focus{
   min-width:0
 }
 .entry-card:hover{
-  border-color:#87967c;
-  background:#222c29
+  border-color:#9b8d72;
+  background:#1e1e24
 }
 .entry-card img{
   width:40px;
@@ -371,14 +371,14 @@ main:focus{
   height:40px;
   flex-shrink:0;
   color:var(--gold);
-  background:#2e3830;
+  background:#24242d;
   border-radius:5px;
   font-size:1.5rem
 }
 .version-badge,.badge{
   font-size:.65rem;
-  color:var(--teal);
-  border:1px solid #466256;
+  color:var(--link);
+  border:1px solid #5f594b;
   border-radius:20px;
   padding:5px 10px;
   white-space:nowrap
@@ -399,7 +399,7 @@ main:focus{
   background:var(--surface)
 }
 .category-card:hover{
-  border-color:#8b987c
+  border-color:#a68f69
 }
 .category-symbol{
   font-size:1.7rem;
@@ -450,7 +450,7 @@ main:focus{
 .guide-card>span:last-child{
   margin-top:auto;
   padding-top:22px;
-  color:var(--teal);
+  color:var(--link);
   font-size:.75rem;
   display:flex;
   justify-content:space-between
@@ -504,7 +504,7 @@ main:focus{
   margin-bottom:25px
 }
 .breadcrumb a{
-  color:var(--teal)
+  color:var(--link)
 }
 .page-content{
   padding-bottom:70px
@@ -591,7 +591,7 @@ main:focus{
   font-size:.65rem
 }
 .relation-list a{
-  color:var(--teal);
+  color:var(--link);
   font-size:.85rem
 }
 .entity-description{
@@ -617,7 +617,7 @@ th,td{
   vertical-align:top
 }
 th{
-  background:#26312d;
+  background:#23232b;
   color:var(--ink);
   font-weight:550
 }
@@ -628,7 +628,7 @@ tr:last-child td{
   border-bottom:none
 }
 td a{
-  color:var(--teal)
+  color:var(--link)
 }
 .floor-links{
   display:flex;
@@ -637,9 +637,9 @@ td a{
 }
 .notice{
   padding:15px 20px;
-  border:1px solid #756646;
+  border:1px solid #827052;
   border-radius:6px;
-  background:#28271f;
+  background:#24211b;
   font-size:.85rem;
   color:#e0d9c9;
   margin:20px 0
@@ -665,7 +665,7 @@ td a{
   padding:5px 0
 }
 .list-links a{
-  color:var(--teal);
+  color:var(--link);
   text-decoration:underline;
   text-underline-offset:3px
 }
@@ -710,7 +710,7 @@ td a{
     max-width:470px
   }
   .expedition-card{
-    box-shadow:6px 6px 0 #1c2523;
+    box-shadow:6px 6px 0 #09090c;
     padding:20px 24px
   }
   .hero-logo{
@@ -844,3 +844,12 @@ td a{
 
 
 [id^="level-"] { scroll-margin-top: 100px; }
+
+.tool-entry-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-bottom:44px}
+.tool-entry{padding:25px;background:var(--surface);border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:7px;display:flex;flex-direction:column;gap:12px}
+.tool-entry>span{font-size:.7rem;color:var(--gold);letter-spacing:.12em}
+.tool-entry h2{font-size:1.6rem;margin:0}
+.tool-entry p{color:var(--muted);font-size:.87rem;flex:1}
+.tool-entry strong{font-size:.8rem;color:var(--link)}
+.tool-entry:hover{border-color:var(--gold);background:var(--surface-raised)}
+@media(max-width:760px){.tool-entry-grid{grid-template-columns:1fr}.tool-entry{padding:22px}}
